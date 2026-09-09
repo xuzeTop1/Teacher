@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- Learning sessions, diary text and app-usage records are private and stay on-device. -->
+    <exclude domain="database" path="." />
+</full-backup-content>

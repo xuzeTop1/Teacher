@@ -1,0 +1,296 @@
+{
+  "subject": "math",
+  "course": "calculus",
+  "chapter": "definite-integrals",
+  "status": "approved",
+  "nodes": [
+    {
+      "id": "math-defint-riemann",
+      "title": "黎曼和与定积分定义",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "定积分 $\\int_a^b f(x)dx$的严格定义通过黎曼和给出：将区间 $[a,b]$分割为 $n$个子区间，在每个子区间上取一点，作乘积 $f(\\xi_i)\\cdot\\Delta x_i$的和，当最大子区间长度趋于零时，若极限存在则称 $f(x)$在 $[a,b]$上黎曼可积，该极限值即为定积分。几何意义是有向面积（$x$轴上方为正，下方为负）。可积的充分条件包括：$f(x)$在 $[a,b]$上连续，或仅有有限个第一类间断点。",
+      "prerequisites": [
+        "math-limit-basic-definition",
+        "math-continuity-point"
+      ],
+      "misconceptions": [
+        "认为定积分一定表示面积——实际上是有向面积，x 轴下方的部分为负值",
+        "混淆不定积分和定积分：不定积分是一个函数族，定积分是一个确定的数值",
+        "认为不连续函数一定不可积——实际上有限个第一类间断点的函数仍然是可积的"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "如果要估算一块不规则田地的面积，你会怎么把它分成小块来近似计算？"
+        },
+        {
+          "level": "L2",
+          "text": "把区间分成 n 小段，每段上用矩形近似——当 n 趋向无穷时，矩形面积之和趋向什么？"
+        },
+        {
+          "level": "L3",
+          "text": "黎曼和取极限就是定积分的定义。分得越细，近似越精确，极限就是精确值。这是「以直代曲」思想的严格数学表述。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-defint-properties",
+      "title": "定积分的性质",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "定积分的基本性质包括：$(1)$线性性：$\\int(af + bg) = a\\int f + b\\int g$；$(2)$区间可加性：$\\int_a^b f = \\int_a^c f + \\int_c^b f$；$(3)$比较性质：若 $f(x) \\ge g(x)$则 $\\int_a^b f \\ge \\int_a^b g$；$(4)$估值定理：$m(b-a) \\le \\int_a^b f(x)dx \\le M(b-a)$，其中 $m$、$M$是 $f$的最小值和最大值；$(5)$积分中值定理：存在 $\\xi\\in[a,b]$使得 $\\int_a^b f(x)dx = f(\\xi)(b-a)$。这些性质是定积分计算和证明的理论基础。",
+      "prerequisites": [
+        "math-defint-riemann"
+      ],
+      "misconceptions": [
+        "区间可加性中搞错积分上下限的对应关系",
+        "比较性质要求被积函数在同一区间上满足大小关系，忽略这个前提条件",
+        "积分中值定理中误认为 $\\xi$一定在开区间 $(a,b)$内取到（实际上对于连续函数可以保证在开区间内取到）"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "如果在区间 $[a,b]$上 $f(x) \\ge 0$，那么 $\\int_a^b f(x)dx$的几何意义是什么？这个值一定是非负的吗？"
+        },
+        {
+          "level": "L2",
+          "text": "如果把 [a,b] 从中间点 c 分成两段，整个区间上的积分和两个子区间上的积分有什么关系？"
+        },
+        {
+          "level": "L3",
+          "text": "定积分的性质本质上都来自黎曼和的极限运算。线性性来自求和的线性，可加性来自分割的合并，比较性质来自不等式在极限下的保持。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-defint-ftc",
+      "title": "微积分基本定理（牛顿-莱布尼茨公式）",
+      "level": "theorem",
+      "difficulty": 2,
+      "summary": "微积分基本定理有两个部分。第一部分（FTC1）：若 $f(x)$在 $[a,b]$上连续，则变上限积分 $\\Phi(x) = \\int_a^x f(t)dt$可导，且 $\\Phi'(x) = f(x)$。第二部分（FTC2）：若 $F(x)$是 $f(x)$的一个原函数，则 $\\int_a^b f(x)dx = F(b) - F(a)$。FTC2将定积分的计算转化为求原函数在端点处的差值，是定积分计算的核心工具，也建立了微分与积分之间的桥梁。",
+      "prerequisites": [
+        "math-defint-riemann",
+        "math-defint-properties",
+        "math-integral-antiderivative"
+      ],
+      "misconceptions": [
+        "认为 FTC2中的 $F(x)$可以是任意函数——它必须是 $f(x)$的原函数",
+        "变上限积分函数 $\\Phi(x) = \\int_a^x f(t)dt$中混淆积分变量 $t$和上限变量 $x$",
+        "忘记 FTC2需要 $f(x)$在 $[a,b]$上连续的条件"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "不定积分帮你找到原函数，定积分需要计算面积。有没有一个公式能把这两件事联系起来？"
+        },
+        {
+          "level": "L2",
+          "text": "如果 $F(x)$是 $f(x)$的原函数，那么 $\\int_a^b f(x)dx$可以用 $F(a)$和 $F(b)$怎么表示？"
+        },
+        {
+          "level": "L3",
+          "text": "牛顿-莱布尼茨公式说的是：定积分 = 原函数在上限的值 - 原函数在下限的值。这就是为什么原函数如此重要——它让定积分的计算变得可操作。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-defint-substitution",
+      "title": "定积分换元法",
+      "level": "technique",
+      "difficulty": 3,
+      "summary": "定积分换元法在不定积分换元的基础上增加了一个关键步骤：换元时必须同步改变积分上下限。若令 $x = \\varphi(t)$，则 $\\int_a^b f(x)dx = \\int_\\alpha^\\beta f(\\varphi(t))\\cdot\\varphi'(t)dt$，其中 $\\alpha = \\varphi^{-1}(a)$，$\\beta = \\varphi^{-1}(b)$。换元后有两种处理方式：$(1)$换限法——直接用新变量 $t$的积分限，不再回代；$(2)$回代法——先求不定积分再回代 $x$，然后用原来的 $x$积分限。",
+      "prerequisites": [
+        "math-defint-ftc",
+        "math-integral-substitution"
+      ],
+      "misconceptions": [
+        "换元后忘记改变积分上下限，仍然使用原变量 x 的积分限",
+        "换元函数 $x = \\varphi(t)$不满足单调性，导致上下限对应关系混乱",
+        "对定积分使用换元法时忘记乘上 $\\frac{dx}{dt} = \\varphi'(t)$"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "在不定积分中换元后，最后要回代到变量 x。但在定积分中，有没有更简便的做法？"
+        },
+        {
+          "level": "L2",
+          "text": "如果令 $x = \\varphi(t)$，那么当 $x = a$时 $t = ?$当 $x = b$时 $t = ?$这些就是新的积分上下限。"
+        },
+        {
+          "level": "L3",
+          "text": "定积分换元的关键优势：换元时同步换限，计算完直接得到数值结果，不需要回代。这比不定积分换元更简洁。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-defint-by-parts",
+      "title": "定积分分部积分",
+      "level": "technique",
+      "difficulty": 3,
+      "summary": "定积分的分部积分公式为 $\\int_a^b u dv = [$uv$]_a^b - \\int_a^b v du$，其中 [uv$]_a^b = u(b)v(b) - u(a)v(a)$。与不定积分分部积分的区别在于：每一步都直接得到数值结果，不需要最后回代。在处理含变上限积分的导数问题时，分部积分也常与 FTC1结合使用。特别注意：某些定积分通过分部积分后会出现与原积分相等的情况，可以建立方程求解。",
+      "prerequisites": [
+        "math-defint-ftc",
+        "math-integral-by-parts"
+      ],
+      "misconceptions": [
+        "忘记计算 [uv$]_a^b$这个边界项，直接写成了 $-\\int_a^b v du$",
+        "将 u 和 v 在 a、b 处的值计算错误",
+        "误以为定积分分部积分和不定积分分部积分的公式完全不同——核心思想是一致的"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "不定积分分部积分公式是 $\\int u dv =$uv $- \\int v du$。如果加上积分限 $a$和 $b$，公式会变成什么？"
+        },
+        {
+          "level": "L2",
+          "text": "[uv$]_a^b = u(b)v(b) - u(a)v(a)$，这是把 uv 在上下限处的值做差。加上这个边界项，就是定积分的分部积分公式。"
+        },
+        {
+          "level": "L3",
+          "text": "定积分分部积分的优势：每一步都代入具体数值，避免了不定积分中常数 C 的处理和最后的回代步骤。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-defint-improper",
+      "title": "反常积分",
+      "level": "technique",
+      "difficulty": 3,
+      "summary": "反常积分分为两类：$(1)$无穷限反常积分——积分区间无限，如 $\\int_a^+\\infty f(x)dx = \\lim_{b \\to +\\infty} \\int_a^b f(x)dx$；$(2)$瑕积分——被积函数在积分区间内有无穷间断点（瑕点），如 $\\int_0^1 (1/\\sqrt{x})\\,dx = \\lim_{t \\to 0^+} \\int_t^1 (1/\\sqrt{x})\\,dx$。若极限存在则称反常积分收敛，否则称发散。计算时先按正常积分求原函数，再取极限判断。常见公式：$\\int_1^+\\infty (\\frac{1}{x}^p)dx$当 $p > 1$时收敛，$p \\le 1$时发散。",
+      "prerequisites": [
+        "math-defint-ftc",
+        "math-integral-basic-formulas"
+      ],
+      "misconceptions": [
+        "把反常积分当普通定积分计算，忘记取极限——直接代入无穷大或瑕点处的值",
+        "对瑕积分判断瑕点位置错误，没有发现被积函数在积分区间内部的无穷间断",
+        "混淆无穷限反常积分和瑕积分的敛散性判别标准"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "$\\int_1^+\\infty (\\frac{1}{x}^2) dx$的积分上限是无穷大，你能直接代入无穷大吗？应该怎么做？"
+        },
+        {
+          "level": "L2",
+          "text": "先把无穷上限换成有限的 $b$，计算 $\\int_1^b (\\frac{1}{x}^2)dx$，然后令 $b \\to +\\infty$看极限是否存在。"
+        },
+        {
+          "level": "L3",
+          "text": "反常积分的本质是「先正常积分，再取极限」。存在极限就收敛，不存在就发散。这是处理无穷和奇异的统一框架。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-defint-convergence",
+      "title": "反常积分的敛散性判别",
+      "level": "theorem",
+      "difficulty": 3,
+      "summary": "反常积分敛散性判别方法：$(1)$比较判别法——若 $0 \\le f(x) \\le g(x)$，则 $\\int g$收敛蕴含 $\\int f$收敛，$\\int f$发散蕴含 $\\int g$发散；$(2)$极限比较判别法——计算 $\\lim_{x \\to \\infty} \\frac{f(x)}{g(x)}$，若极限为正有限数则两者同敛散；$(3)$ p-积分判别——$\\int_1^+\\infty (\\frac{1}{x}^p)dx$当 $p > 1$收敛，$p \\le 1$发散；$\\int_0^1 (\\frac{1}{x}^p)dx$当 $p < 1$收敛，$p \\ge 1$发散。对变号函数，需考虑绝对收敛与条件收敛。",
+      "prerequisites": [
+        "math-defint-improper",
+        "math-limit-basic-definition"
+      ],
+      "misconceptions": [
+        "对变号函数直接用比较判别法——比较判别法只适用于非负函数",
+        "将无穷限 p-积分和瑕积分 p-积分的收敛条件记反",
+        "认为绝对收敛和条件收敛是一回事——条件收敛是指积分收敛但不绝对收敛"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "$\\int_1^+\\infty (\\frac{1}{x}^3) dx$和 $\\int_1^+\\infty (\\frac{1}{x}) dx$，一个收敛一个发散。它们的区别在哪里？"
+        },
+        {
+          "level": "L2",
+          "text": "对于 $\\int_1^+\\infty (\\frac{1}{x}^p)dx$，当 $p > 1$时原函数 $\\frac{x^{1-p}}{1-p}$在 $x\\to\\infty$时趋于 0（因为 $1-p < 0$），所以收敛；当 $p \\le 1$时呢？"
+        },
+        {
+          "level": "L3",
+          "text": "敛散性判别的核心是比较：把未知的积分和已知敛散性的标准积分（如 p-积分）做比较。非负函数用比较判别法，变号函数先考察绝对收敛。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-defint-absolute",
+      "title": "绝对值函数与分段函数积分",
+      "level": "technique",
+      "difficulty": 3,
+      "summary": "含绝对值的被积函数积分核心思路是「去绝对值」：找到绝对值内部表达式的零点，将积分区间按零点分段，在每一段上确定绝对值内部的正负号，去掉绝对值后分别积分。类似地，分段函数的定积分也需要按分段点拆分区间。关键步骤：$(1)$解方程找零点/分段点；$(2)$在每个子区间上确定函数表达式；$(3)$利用区间可加性分别积分后求和。",
+      "prerequisites": [
+        "math-defint-properties",
+        "math-defint-ftc"
+      ],
+      "misconceptions": [
+        "直接对含绝对值的函数积分，没有先分段去掉绝对值",
+        "分段后搞错每段上绝对值内部的正负号",
+        "忘记利用定积分的区间可加性，试图在整个区间上直接处理"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "$\\int_{-1}^2 |x| dx$这个积分中，$|x|$在 $x < 0$和 $x > 0$时分别等于什么？"
+        },
+        {
+          "level": "L2",
+          "text": "$|x|$在 $[-1, 0]$上等于 $-x$，在 [0, 2]上等于 $x$。所以可以拆成 $\\int_{-1}^0 (-x)dx + \\int_0^2 x dx$分别计算。"
+        },
+        {
+          "level": "L3",
+          "text": "处理绝对值积分的标准流程：找零点$\\to$分区段$\\to$去绝对值$\\to$分别积分$\\to$求和。这本质上是利用了定积分的区间可加性。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    }
+  ]
+}

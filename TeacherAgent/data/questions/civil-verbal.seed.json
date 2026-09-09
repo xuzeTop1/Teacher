@@ -1,0 +1,166 @@
+{
+  "subject": "xingce",
+  "course": "xingce",
+  "chapter": "civil-verbal",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "xingce-verbal-q001-cloze-context",
+      "title": "逻辑填空：语境转折",
+      "knowledgeNodeIds": [
+        "xingce-verbal-cloze-context",
+        "xingce-verbal-cloze-contentword"
+      ],
+      "type": "verbal_cloze",
+      "difficulty": 1,
+      "content": "面对突发舆情，相关部门不能____（推诿 / 敷衍 / 挺身），而应及时回应、主动发声，把真相讲在前面。",
+      "answer": "应选「推诿」或「敷衍」。后文「及时回应、主动发声」是积极面对，前文用转折「不能」说明应填消极回避义的词。",
+      "solutionSteps": [
+        "读前后文，发现「不能…而应…」是转折关系。",
+        "后文「及时回应、主动发声」表示积极面对。",
+        "因此前文应填与积极面对相反的消极回避义：推诿/敷衍。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "空前后有没有「不能…而应…」这样的转折？"
+        },
+        {
+          "level": "L2",
+          "text": "后文说的是积极面对，那前文应该是什么态度？"
+        },
+        {
+          "level": "L3",
+          "text": "在选项里挑一个和「积极面对」意思相反的词。"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "xingce-verbal-q002-cloze-idiom",
+      "title": "逻辑填空：成语辨析",
+      "knowledgeNodeIds": [
+        "xingce-verbal-cloze-idiom"
+      ],
+      "type": "verbal_cloze",
+      "difficulty": 2,
+      "content": "这位老匠人几十年如一日钻研技艺，其精神令人____（耳濡目染 / 钦佩不已 / 蔚然成风）。",
+      "answer": "应选「钦佩不已」。语境强调对匠人精神的敬佩；「耳濡目染」指长期受影响，主语通常是受影响者本人；「蔚然成风」形容一种风气盛行，均不贴合「令人…」的搭配。",
+      "solutionSteps": [
+        "判断空格要表达「让人产生什么感受」。",
+        "「耳濡目染」主语是被熏陶者，不用于「令人…」。",
+        "「蔚然成风」指风气形成，不接「令人」。故「钦佩不已」最贴合。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "空格前面是「令人」，要填一个表示感受的词。"
+        },
+        {
+          "level": "L2",
+          "text": "「耳濡目染」「蔚然成风」一般怎么用，主语是谁？"
+        },
+        {
+          "level": "L3",
+          "text": "哪个成语既能接「令人」又符合敬佩的语境？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "xingce-verbal-q003-reading-mainidea",
+      "title": "片段阅读：主旨概括",
+      "knowledgeNodeIds": [
+        "xingce-verbal-reading-mainidea"
+      ],
+      "type": "verbal_reading",
+      "difficulty": 2,
+      "content": "近年来，一些城市把老旧社区改造与数字化治理结合，既保留了街巷烟火气，又提升了服务效率。这说明基层治理的关键，不在于推倒重来，而在于因地制宜地盘活存量。这段文字意在说明：",
+      "answer": "意在说明：基层治理应因地制宜盘活存量，而非推倒重来。（对应尾句转折后的结论：治理关键在「因地制宜盘活存量」。）",
+      "solutionSteps": [
+        "读结构：前文举例子，尾句「这说明…」引出结论。",
+        "结论重点在「不在于…而在于…」的后半句。",
+        "提炼核心：因地制宜盘活存量，不推倒重来。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "哪一句是作者真正想表达的结论，例子还是尾句？"
+        },
+        {
+          "level": "L2",
+          "text": "「不在于…而在于…」重点落在哪一半？"
+        },
+        {
+          "level": "L3",
+          "text": "用一句话概括这个结论，注意别选成例子细节。"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "xingce-verbal-q004-sentence-order",
+      "title": "语句排序：行文逻辑",
+      "knowledgeNodeIds": [
+        "xingce-verbal-sentence-order"
+      ],
+      "type": "verbal_order",
+      "difficulty": 2,
+      "content": "下列句子排序最恰当的一项是：①这正是公共文化服务要解决的课题。②许多乡村地区文化设施薄弱。③如何让优质文化资源下沉到基层？④补齐短板，需要机制与投入双轮驱动。",
+      "answer": "顺序：②③①④。先提出现象（②乡村设施薄弱），再设问（③如何下沉），接着点明课题（①这正是…课题），最后给方向（④补齐短板…）。",
+      "solutionSteps": [
+        "②介绍背景现象，适合做首句。",
+        "③用「如何…」承接②的问题，形成设问。",
+        "①「这」指代③的问题，承接设问。",
+        "④给出解决方向，收尾。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "哪一句在介绍背景，最适合开头？"
+        },
+        {
+          "level": "L2",
+          "text": "哪两句靠「问题—这」的指代绑在一起？"
+        },
+        {
+          "level": "L3",
+          "text": "对比选项的首尾差异，能不能直接排除？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。"
+      },
+      "reviewStatus": "draft"
+    }
+  ]
+}

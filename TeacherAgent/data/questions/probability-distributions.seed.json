@@ -1,0 +1,371 @@
+{
+  "subject": "math",
+  "course": "probability",
+  "chapter": "probability-distributions",
+  "status": "approved",
+  "questions": [
+    {
+      "id": "prob-q001-binomial",
+      "title": "二项分布概率计算",
+      "knowledgeNodeIds": [
+        "prob-bernoulli-binomial"
+      ],
+      "type": "solution",
+      "difficulty": 2,
+      "content": "抛 5 次公平硬币，恰好出现 3 次正面的概率是多少？",
+      "answer": "$\\frac{10}{32} = \\frac{5}{16}$",
+      "solutionSteps": [
+        "$X \\sim B(5, 0.5)$，求 $P(X = 3)$。",
+        "$P(X=3) = C(5,3) \\times (0.5)^3 \\times (0.5)^2 = 10 \\times 0.125 \\times 0.25 = \\frac{10}{32} = \\frac{5}{16}$。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "这是什么分布？参数 n 和 p 分别是多少？"
+        },
+        {
+          "level": "L2",
+          "text": "用二项分布公式 $P(X=k) = C(n,k) p^k (1-p)^{n-k}$计算。"
+        },
+        {
+          "level": "L3",
+          "text": "$C(5,3) = 5!/(3!\\times2!) = 10$。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original probability questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "prob-q002-poisson",
+      "title": "泊松分布应用",
+      "knowledgeNodeIds": [
+        "prob-poisson"
+      ],
+      "type": "solution",
+      "difficulty": 2,
+      "content": "某呼叫中心平均每分钟接到 2 个电话。求 1 分钟内恰好接到 4 个电话的概率。",
+      "answer": "$\\frac{16e^{-2}}{24} = \\frac{2e^{-2}}{3} \\approx 0.0902$",
+      "solutionSteps": [
+        "$X \\sim \\text{Poisson}(\\lambda=2)$，求 $P(X = 4)$。",
+        "$P(X=4) = e^{-2} \\times \\frac{2^4}{4!} = e^{-2} \\times \\frac{16}{24} = \\frac{2e^{-2}}{3}$。",
+        "$e^{-2} \\approx 0.1353$，所以 $P(X=4) \\approx 0.1353 \\times \\frac{16}{24} \\approx 0.0902$。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "泊松分布的公式是什么？参数 $\\lambda$代表什么？"
+        },
+        {
+          "level": "L2",
+          "text": "$P(X=k) = e^{-\\lambda} \\lambda^k / k!$，代入 $\\lambda=2, k=4$。"
+        },
+        {
+          "level": "L3",
+          "text": "泊松分布的期望和方差都等于 $\\lambda = 2$，所以平均每分钟 2个电话。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original probability questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "prob-q003-geometric",
+      "title": "几何分布首次成功",
+      "knowledgeNodeIds": [
+        "prob-geometric"
+      ],
+      "type": "solution",
+      "difficulty": 2,
+      "content": "某射击手每次命中目标的概率为 0.6。他第 3 次射击才首次命中的概率是多少？",
+      "answer": "0.096",
+      "solutionSteps": [
+        "$X \\sim \\text{Geometric}(p=0.6)$，求 $P(X = 3)$。",
+        "$P(X=3) = (1-0.6)^2 \\times 0.6 = 0.4^2 \\times 0.6 = 0.16 \\times 0.6 = 0.096$。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "几何分布的公式是什么？k=3 意味着什么？"
+        },
+        {
+          "level": "L2",
+          "text": "$P(X=k) = (1-p)^{k-1} p$，前两次失败、第三次成功。"
+        },
+        {
+          "level": "L3",
+          "text": "几何分布的期望 $E(X) = \\frac{1}{p} = \\frac{1}{0.6} \\approx 1.67$，平均不到 2次就命中。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original probability questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "prob-q004-normal",
+      "title": "正态分布标准化",
+      "knowledgeNodeIds": [
+        "prob-normal"
+      ],
+      "type": "solution",
+      "difficulty": 3,
+      "content": "某次考试成绩 $X \\sim N(70, 100)$（均值 70，方差 100）。求 $P(X > 80)$。",
+      "answer": "约 0.1587",
+      "solutionSteps": [
+        "$X \\sim N(70, 10^2)$，$\\sigma = 10$。",
+        "标准化：$Z = \\frac{X - 70}{10} \\sim N(0,1)$。",
+        "$P(X > 80) = P(Z > \\frac{80-70}{10}) = P(Z > 1)$。",
+        "查标准正态表：$P(Z > 1) = 1 - \\Phi(1) \\approx 1 - 0.8413 = 0.1587$。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先确认 $\\sigma = \\sqrt{100} = 10$，然后做标准化变换。"
+        },
+        {
+          "level": "L2",
+          "text": "$Z = (X - \\mu)/\\sigma$，代入 $\\mu=70, \\sigma=10, X=80$。"
+        },
+        {
+          "level": "L3",
+          "text": "$68-95-99.7$法则：约 68%的数据在 $\\mu\\pm\\sigma$内，所以 $P(Z>1) \\approx \\frac{(1-0.68)}{2} = 0.16$。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original probability questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "prob-q005-expectation-variance",
+      "title": "期望与方差的线性性质",
+      "knowledgeNodeIds": [
+        "prob-expectation-variance-properties"
+      ],
+      "type": "solution",
+      "difficulty": 2,
+      "content": "设 $X$ 和 $Y$ 独立，$E(X) = 3, \\text{Var}(X) = 2, E(Y) = 5, \\text{Var}(Y) = 4$。求 $\\text{Var}(2X - Y + 1)$。",
+      "answer": "12",
+      "solutionSteps": [
+        "$\\text{Var}(aX + bY + c) = a^2\\text{Var}(X) + b^2\\text{Var}(Y)$（常数 $c$ 不影响方差）。",
+        "$\\text{Var}(2X - Y + 1) = 4\\cdot\\text{Var}(X) + 1\\cdot\\text{Var}(Y) = 4\\times2 + 1\\times4 = 8 + 4 = 12$。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "常数加减对方差有影响吗？"
+        },
+        {
+          "level": "L2",
+          "text": "$\\text{Var}(aX) = a^2\\text{Var}(X)$，$\\text{Var}(X+Y) = \\text{Var}(X) + \\text{Var}(Y)$（独立时）。"
+        },
+        {
+          "level": "L3",
+          "text": "$\\text{Var}(2X - Y + 1) = 4\\text{Var}(X) + \\text{Var}(Y)$，常数 $+1$ 不影响方差。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original probability questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "prob-q006-bayes",
+      "title": "贝叶斯公式应用",
+      "knowledgeNodeIds": [
+        "prob-bayes"
+      ],
+      "type": "diagnostic",
+      "difficulty": 3,
+      "content": "某种疾病的患病率为 1%。检测试剂的灵敏度（患病者检测为阳性的概率）为 99%，特异度（未患病者检测为阴性的概率）为 95%。某人检测为阳性，他实际患病的概率是多少？",
+      "answer": "约 16.7%",
+      "solutionSteps": [
+        "设 A = 患病，B = 检测阳性。",
+        "$P(A) = 0.01, P(B|A) = 0.99, P(\\bar{B}|\\bar{A}) = 0.95$，所以 $P(B|\\bar{A}) = 0.05$。",
+        "$P(B) = P(B|A)P(A) + P(B|\\bar{A})P(\\bar{A}) = 0.99\\times0.01 + 0.05\\times0.99 = 0.0099 + 0.0495 = 0.0594$。",
+        "$P(A|B) = \\frac{P(B|A)P(A)}{P(B)} = \\frac{0.0099}{0.0594} \\approx 0.1667 \\approx 16.7\\%$。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先用全概率公式算出 $P$(阳性)。"
+        },
+        {
+          "level": "L2",
+          "text": "$P$(阳性) $= P$(阳性|患病)$\\times P$(患病) $+ P$(阳性|未患病)$\\times P$(未患病)。"
+        },
+        {
+          "level": "L3",
+          "text": "即使检测准确率很高，由于患病率很低（1%），假阳性的数量远多于真阳性。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original probability questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "prob-q007-clt",
+      "title": "中心极限定理近似",
+      "knowledgeNodeIds": [
+        "prob-central-limit-theorem",
+        "prob-bernoulli-binomial"
+      ],
+      "type": "solution",
+      "difficulty": 3,
+      "content": "抛 100 次公平硬币，正面次数在 45 到 55 之间的概率大约是多少？（用正态近似，含连续性校正）",
+      "answer": "约 0.7287",
+      "solutionSteps": [
+        "$X \\sim B(100, 0.5)$，$E(X) = 50, \\text{Var}(X) = 25, \\sigma = 5$。",
+        "由中心极限定理，$X$ 近似服从 $N(50, 25)$。",
+        "连续性校正：$P(45 \\le X \\le 55) \\approx P(\\frac{44.5-50}{5} < Z < \\frac{55.5-50}{5}) = P(-1.1 < Z < 1.1)$。",
+        "查标准正态分布表：$P(-1.1 < Z < 1.1) = 2\\Phi(1.1) - 1 \\approx 2 \\times 0.8643 - 1 = 0.7287$。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "$X \\sim B(100, 0.5)$，均值和方差分别是多少？"
+        },
+        {
+          "level": "L2",
+          "text": "用正态分布近似：$Z = (X - 50) / 5$。离散变量用连续分布近似时需要连续性校正。"
+        },
+        {
+          "level": "L3",
+          "text": "$P(-1.1 < Z < 1.1)$ 就是标准正态分布在 $-1.1$ 到 $1.1$ 之间的面积。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original probability questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "prob-q008-lln",
+      "title": "大数定律理解",
+      "knowledgeNodeIds": [
+        "prob-law-large-numbers"
+      ],
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "连续抛 10 次硬币都出现正面，第 11 次出现反面的概率是否大于 0.5？为什么？",
+      "answer": "不是。第 11 次出现反面的概率仍然是 0.5。",
+      "solutionSteps": [
+        "每次抛硬币是独立的伯努利试验。",
+        "前面的结果不影响后面的概率——这就是独立性。",
+        "大数定律说的是大量试验中频率趋近概率，而不是「补偿」前面的偏差。",
+        "认为「连续正面后反面更可能出现」是赌徒谬误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "每次抛硬币是独立事件吗？前面的结果会影响后面吗？"
+        },
+        {
+          "level": "L2",
+          "text": "大数定律说的是频率趋近概率，不是说结果会「补偿」。"
+        },
+        {
+          "level": "L3",
+          "text": "赌徒谬误：认为随机事件的过去结果会影响未来概率。实际上每次抛掷都是独立的。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original probability questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "prob-q009-uniform",
+      "title": "均匀分布概率",
+      "knowledgeNodeIds": [
+        "prob-uniform-continuous"
+      ],
+      "type": "solution",
+      "difficulty": 1,
+      "content": "在区间 [2, 8]上均匀分布的随机变量 $X$，求 $P(3 < X < 6)$。",
+      "answer": "$\\frac{1}{2}$",
+      "solutionSteps": [
+        "$X \\sim U(2, 8)$，密度 $f(x) = \\frac{1}{(8-2)} = \\frac{1}{6}$。",
+        "$P(3 < X < 6) = \\int_3^6 (\\frac{1}{6}) dx = \\frac{(6-3)}{6} = \\frac{3}{6} = \\frac{1}{2}$。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "均匀分布的概率就是区间长度之比。"
+        },
+        {
+          "level": "L2",
+          "text": "$P(a < X < b) = \\frac{b-a}{B-A}$，其中 $X \\sim U(A, B)$。"
+        },
+        {
+          "level": "L3",
+          "text": "$\\frac{(6-3)}{(8-2)} = \\frac{3}{6} = \\frac{1}{2}$。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original probability questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "prob-q010-poisson-approx",
+      "title": "泊松近似二项分布",
+      "knowledgeNodeIds": [
+        "prob-poisson",
+        "prob-bernoulli-binomial"
+      ],
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "某工厂产品的次品率为 0.5%。在 200 件产品中，用泊松近似求恰好有 2 件次品的概率。",
+      "answer": "用泊松近似：$\\lambda = np = 200 \\times 0.005 = 1$，$P(X=2) = e^{-1} \\cdot 1^2 / 2! = 1/(2e) \\approx 0.1839$",
+      "solutionSteps": [
+        "$X \\sim B(200, 0.005)$，$n=200$ 很大，$p=0.005$ 很小，$np = 1$。",
+        "用泊松近似：$X \\approx \\text{Poisson}(\\lambda=1)$。",
+        "$P(X=2) = e^{-1} \\times \\frac{1^2}{2!} = \\frac{e^{-1}}{2} \\approx \\frac{0.3679}{2} \\approx 0.1839$。",
+        "（精确值为 $C(200,2)(0.005)^2(0.995)^198 \\approx 0.1804$）"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "n=200 很大，p=0.005 很小，np=1。用泊松近似。"
+        },
+        {
+          "level": "L2",
+          "text": "$\\lambda = np = 1$，代入泊松公式 $P(X=k) = e^{-\\lambda}\\lambda^k/k!$。"
+        },
+        {
+          "level": "L3",
+          "text": "泊松近似的条件：n 大、p 小、np 适中。这里 np=1 完全满足。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original probability questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    }
+  ]
+}

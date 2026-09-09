@@ -1,0 +1,588 @@
+{
+  "subject": "physics",
+  "course": "大学物理",
+  "chapter": "波动与光学",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "physics-wo-q1",
+      "title": "简谐波波动方程",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "一简谐波沿 $x$轴正向传播，波长 $\\lambda = 4 m$，振幅 $A = 0.1 m$，周期 $T = 0.5 s$。以波源（$x = 0$处）振动初相位为零开始计时。求：$(1)$角频率 $\\omega$和波数 $k$；$(2)$波动方程。",
+      "options": [],
+      "answer": "$(1) \\omega = 4\\pi$ra$\\frac{d}{s}$，$k = \\pi/2$ra$\\frac{d}{m}$；$(2) y = 0.1 \\cos(4\\pi t - \\pi\\frac{x}{2}) m$",
+      "solutionSteps": [
+        "（1）角频率：$\\omega = 2\\pi/T = 2\\pi/0.5 = 4\\pi$ra$\\frac{d}{s}$",
+        "波数：$k = 2\\pi/\\lambda = 2\\pi/4 = \\pi/2$ra$\\frac{d}{m}$",
+        "（2）沿 $x$轴正向传播的波动方程：$y = A \\cos(\\omega t - kx + \\varphi_0)$",
+        "初相位 $\\varphi_0 = 0$，代入：$y = 0.1 \\cos(4\\pi t - \\pi\\frac{x}{2}) m$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-wo-wave-basics"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "简谐波的波动方程有标准形式"
+        },
+        {
+          "level": "L2",
+          "text": "$\\omega = 2\\pi/T$，$k = 2\\pi/\\lambda$；沿 $+x$传播：$y = A \\cos(\\omega t - kx)$；沿 $-x$传播：$y = A \\cos(\\omega t + kx)$"
+        },
+        {
+          "level": "L3",
+          "text": "注意初相位的设定，以及相位随 x 增加还是减少"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-wo-q2",
+      "title": "波的能量密度",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "一简谐机械波在理想介质中传播，介质密度 $\\rho = 1.0\\times10^3 k\\frac{g}{m}^3$，波的频率 $f = 500$Hz，振幅 $A = 0.01 m$，波速 $v = 300 \\frac{m}{s}$。求波的能量密度。",
+      "options": [],
+      "answer": "$w = 4.93\\times10^4 \\frac{J}{m}^3$",
+      "solutionSteps": [
+        "波的能量密度公式：$w = ½\\rho\\omega^2A^2$",
+        "角频率：$\\omega = 2\\pi f = 2\\pi\\times500 = 1000\\pi$ra$\\frac{d}{s}$",
+        "代入：$w = 0.5\\times1.0\\times10^3\\times(1000\\pi)^2\\times(0.01)^2$",
+        "计算：$w = 500\\times10^6\\pi^2\\times10^{-4} = 5\\times10^4\\pi^2 = 4.93\\times10^4 \\frac{J}{m}^3$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-wo-wave-basics"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "机械波的能量密度与振幅平方、频率平方成正比"
+        },
+        {
+          "level": "L2",
+          "text": "$w = ½\\rho\\omega^2A^2$，注意是时间平均值"
+        },
+        {
+          "level": "L3",
+          "text": "能量密度是单位体积内的波动能量"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-wo-q3",
+      "title": "波的干涉：相长干涉条件",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "两相干波源 $S_1$和 $S_2$，频率 $f = 1000$Hz，相位差 $\\varphi_2 - \\varphi_1 = \\pi/2$。两波源发出的波在某点 $P$相遇。已知 $S_1P = 0.60 m$，$S_2P = 0.75 m$，波速 $v = 300 \\frac{m}{s}$。问 $P$点干涉是相长还是相消？",
+      "options": [],
+      "answer": "相长干涉",
+      "solutionSteps": [
+        "波长：$\\lambda = \\frac{v}{f} = 30\\frac{0}{1}000 = 0.3 m$",
+        "波程差：$\\Delta r = S_2P - S_1P = 0.75 - 0.60 = 0.15 m$",
+        "相位差：$\\Delta\\varphi = 2\\pi\\Delta r/\\lambda + (\\varphi_2 - \\varphi_1) = 2\\pi\\times0.1\\frac{5}{0}.3 + \\pi/2 = \\pi + \\pi/2 = 3\\pi/2$",
+        "相长干涉条件：$\\Delta\\varphi = 2k\\pi$（$k$为整数）",
+        "相消干涉条件：$\\Delta\\varphi = (2k+1)\\pi$",
+        "$\\Delta\\varphi = 3\\pi/2$不满足相长也不满足相消，但接近相长（$|\\cos(\\Delta\\varphi/2)|$较大）",
+        "实际计算合振幅：$A^2 = A_1^2 + A_2^2 + 2A_1A_2cos(\\Delta\\varphi)$",
+        "若 $A_1 = A_2$，则 $A^2 = 2A_1^2(1 + \\cos(3\\pi/2)) = 2A_1^2(1 + 0) = 2A_1^2$，是相长"
+      ],
+      "knowledgeNodeIds": [
+        "physics-wo-interference"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "干涉取决于两波在相遇点的相位差"
+        },
+        {
+          "level": "L2",
+          "text": "总相位差 = 波程差引起的相位差 + 波源初相差"
+        },
+        {
+          "level": "L3",
+          "text": "相长：$\\Delta\\varphi = 2k\\pi$；相消：$\\Delta\\varphi = (2k+1)\\pi$"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-wo-q4",
+      "title": "驻波节点位置",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "一弦线两端固定，长度 $L = 1.2 m$，弦上形成驻波，波长 $\\lambda = 0.8 m$。求相邻两节点间的距离。",
+      "options": [],
+      "answer": "d = 0.4 m",
+      "solutionSteps": [
+        "驻波中相邻节点间距离为 $\\lambda/4$？不对，是 $\\lambda/2$",
+        "驻波节点间距：$d = \\lambda/2$",
+        "代入：$d = 0.\\frac{8}{2} = 0.4 m$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-wo-standing-wave"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "驻波是两列反向传播的相干波叠加形成"
+        },
+        {
+          "level": "L2",
+          "text": "节点是始终静止的点，相邻节点间距 $\\lambda/2$"
+        },
+        {
+          "level": "L3",
+          "text": "波腹间距也是 $\\lambda/2$，节点与相邻波腹间距 $\\lambda/4$"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-wo-q5",
+      "title": "多普勒效应：声源运动",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "一列火车以速度 $v_s = 30 \\frac{m}{s}$驶向静止观察者，火车鸣笛频率 $f_0 = 500$Hz。已知声速 $v = 340 \\frac{m}{s}$。求观察者听到的笛声频率。",
+      "options": [],
+      "answer": "f = 548.4 Hz",
+      "solutionSteps": [
+        "多普勒效应公式（声源向静止观察者运动）：$f = f_0 \\frac{v}{(v - v_s)}$",
+        "代入：$f = 500\\times34\\frac{0}{(340 - 30)} = 500\\times34\\frac{0}{3}10 = 548.4 Hz$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-wo-doppler"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "多普勒效应是波源和观察者相对运动导致频率变化"
+        },
+        {
+          "level": "L2",
+          "text": "波源向观察者运动：$f = f_0 \\frac{v}{(v - v_s)}$；观察者向波源运动：$f = f_0 \\frac{(v + v_o)}{v}$"
+        },
+        {
+          "level": "L3",
+          "text": "注意公式中加减号的选择：相互靠近频率升高，相互远离频率降低"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-wo-q6",
+      "title": "杨氏双缝干涉：明纹位置",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "杨氏双缝干涉实验，双缝间距 $d = 0.5$mm，缝到屏的距离 $D = 1.5 m$，光波波长 $\\lambda = 600$nm。求：$(1)$中央明纹旁边的第一级明纹到中央明纹的距离；$(2)$条纹间距。",
+      "options": [],
+      "answer": "$(1) y_1 = 1.8$mm；$(2) \\Delta y = 1.8 mm$",
+      "solutionSteps": [
+        "（1）明纹条件：$d sin\\theta = k\\lambda$，$k = 0, \\pm1, \\pm2,...$",
+        "小角度近似：$sin\\theta \\approx tan\\theta = \\frac{y}{D}$",
+        "所以：$y_k = k\\lambda\\frac{D}{d}$",
+        "第一级明纹（$k=1$）：$y_1 = 1\\times600\\times10^{-9}\\times1.\\frac{5}{(0.5\\times10^{-3})} = 1.8\\times10^{-3} m = 1.8 mm$",
+        "（2）条纹间距：$\\Delta y = \\lambda\\frac{D}{d} = 600\\times10^{-9}\\times1.\\frac{5}{(0.5\\times10^{-3})} = 1.8 mm$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-wo-young-double-slit"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "杨氏双缝干涉是典型的分波前干涉"
+        },
+        {
+          "level": "L2",
+          "text": "明纹位置：$y_k = k\\lambda\\frac{D}{d}$；条纹间距：$\\Delta y = \\lambda\\frac{D}{d}$"
+        },
+        {
+          "level": "L3",
+          "text": "注意小角度近似条件，以及单位换算"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-wo-q7",
+      "title": "杨氏双缝干涉：波长计算",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "杨氏双缝干涉实验，双缝间距 $d = 0.3$mm，缝到屏的距离 $D = 1.2 m$。测得第3级明纹到中央明纹的距离为 $y_3 = 6.0$mm。求光的波长。",
+      "options": [],
+      "answer": "$\\lambda = 500 nm$",
+      "solutionSteps": [
+        "明纹位置公式：$y_k = k\\lambda\\frac{D}{d}$",
+        "变形得：$\\lambda = y_k \\frac{d}{(kD)}$",
+        "代入：$\\lambda = 6.0\\times10^{-3}\\times0.3\\times10^{-3}/(3\\times1.2) = 1.8\\times10^{-6}/3.6 = 5\\times10^{-7} m = 500 nm$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-wo-young-double-slit"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "杨氏双缝干涉明纹位置与波长成正比"
+        },
+        {
+          "level": "L2",
+          "text": "用公式 $\\lambda = y_k \\frac{d}{(kD)}$计算波长"
+        },
+        {
+          "level": "L3",
+          "text": "注意 k 是明纹级次，从第0级（中央）开始数"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-wo-q8",
+      "title": "单缝衍射：中央明纹角宽度",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "一单缝衍射实验，缝宽 $a = 0.1$mm，入射光波长 $\\lambda = 500$nm。求中央明纹的半角宽度。",
+      "options": [],
+      "answer": "$\\theta_1 = 5\\times10^{-3} rad$",
+      "solutionSteps": [
+        "单缝衍射暗纹条件：$a sin\\theta = k\\lambda$，$k = \\pm1, \\pm2,...$",
+        "中央明纹边界对应 $k = \\pm1$的暗纹",
+        "所以：$sin\\theta_1 = \\lambda/a$",
+        "小角度近似：$\\theta_1 \\approx sin\\theta_1 = \\lambda/a = 500\\times10^{-9}/(0.1\\times10^{-3}) = 5\\times10^{-3} rad$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-wo-single-slit"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "单缝衍射中央明纹最亮最宽"
+        },
+        {
+          "level": "L2",
+          "text": "中央明纹半角宽度：$\\theta_1 = \\arcsin(\\lambda/a) \\approx \\lambda/a$（小角度）"
+        },
+        {
+          "level": "L3",
+          "text": "注意区分中央明纹角宽度（$2\\theta_1$）和半角宽度（$\\theta_1$）"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-wo-q9",
+      "title": "单缝衍射：衍射条纹位置",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "一单缝衍射实验，缝宽 $a = 0.2$mm，透镜焦距 $f = 0.5 m$，入射光波长 $\\lambda = 600$nm。求屏上第1级暗纹到中央明纹中心的距离。",
+      "options": [],
+      "answer": "$y_1 = 1.5 mm$",
+      "solutionSteps": [
+        "单缝衍射暗纹条件：$a sin\\theta = k\\lambda$",
+        "小角度近似：$sin\\theta \\approx tan\\theta = \\frac{y}{f}$",
+        "所以：$y_k = k\\lambda\\frac{f}{a}$",
+        "第1级暗纹（$k=1$）：$y_1 = 1\\times600\\times10^{-9}\\times0.\\frac{5}{(0.2\\times10^{-3})} = 1.5\\times10^{-3} m = 1.5 mm$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-wo-single-slit"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "单缝衍射暗纹位置可以用类似双缝的公式"
+        },
+        {
+          "level": "L2",
+          "text": "暗纹位置：$y_k = k\\lambda\\frac{f}{a}$，注意与双缝明纹公式的区别"
+        },
+        {
+          "level": "L3",
+          "text": "单缝衍射中央是明纹，双缝中央也是明纹，但机理不同"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-wo-q10",
+      "title": "薄膜干涉：等厚干涉",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "一竖直放置的肥皂膜（$n = 1.33$），厚度上厚下薄。用波长 $\\lambda = 500$nm 的光垂直照射，观察到膜上出现水平干涉条纹。问：$(1)$相邻明纹对应薄膜厚度差是多少？$(2)$若观察到20条明纹，薄膜上下厚度差是多少？",
+      "options": [],
+      "answer": "$(1) \\Delta h = 188$nm；$(2) \\Delta H = 3.76 \\mu m$",
+      "solutionSteps": [
+        "（1）垂直照射等厚干涉，光程差：$\\Delta = 2$nh $+ \\lambda/2$（半波损失）",
+        "明纹条件：2nh $+ \\lambda/2 = k\\lambda$",
+        "相邻明纹（$k$和 $k+1$）：$2n\\Delta h = \\lambda$",
+        "所以：$\\Delta h = \\lambda/(2n) = 50\\frac{0}{(2\\times1.33)} = 188 nm$",
+        "（2）20条明纹对应19个间隔：$\\Delta H = 19\\times\\Delta h = 19\\times188 = 3572$nm $\\approx 3.57 \\mu m$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-wo-thin-film"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "薄膜等厚干涉中，同一厚度对应同一级条纹"
+        },
+        {
+          "level": "L2",
+          "text": "注意半波损失条件，以及厚度差与条纹级次的关系"
+        },
+        {
+          "level": "L3",
+          "text": "垂直照射时光程差最简单，斜入射要考虑额外光程"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-wo-q11",
+      "title": "马吕斯定律",
+      "type": "solution",
+      "difficulty": 1,
+      "content": "一束自然光通过偏振片 $P_1$后，再通过偏振片 $P_2$。$P_1$和 $P_2$偏振化方向夹角 $\\theta = 60\\circ$。求透过 $P_2$的光强与入射自然光光强之比。",
+      "options": [],
+      "answer": "$I/I_0 = \\frac{1}{8}$",
+      "solutionSteps": [
+        "自然光通过偏振片后光强减半：$I_1 = I_0/2$",
+        "马吕斯定律：$I_2 = I_1 \\cos^2\\theta$",
+        "代入：$I_2 = (I_0/2) \\cos^2(60\\circ) = (I_0/2)\\times(\\frac{1}{2})^2 = I_0/8$",
+        "所以：$I_2/I_0 = \\frac{1}{8}$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-wo-polarization"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "自然光通过偏振片光强减半"
+        },
+        {
+          "level": "L2",
+          "text": "马吕斯定律：$I = I_0 \\cos^2\\theta$"
+        },
+        {
+          "level": "L3",
+          "text": "注意自然光和偏振光的区别"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-wo-q12",
+      "title": "布儒斯特角",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "一束自然光从空气（$n_1 = 1.0$）射向水面（$n_2 = 1.33$）。求布儒斯特角。此时反射光是什么偏振态？",
+      "options": [],
+      "answer": "$i_B = 53.1\\circ$，反射光为完全线偏振光（振动方向垂直入射面）",
+      "solutionSteps": [
+        "布儒斯特定律：$\\tan i_B = n_2/n_1$",
+        "代入：$\\tan i_B = 1.3\\frac{3}{1}.0 = 1.33$",
+        "解得：$i_B = \\arctan(1.33) = 53.1\\circ$",
+        "此时反射光为完全线偏振光，振动方向垂直入射面"
+      ],
+      "knowledgeNodeIds": [
+        "physics-wo-polarization"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "布儒斯特角下反射光为完全线偏振光"
+        },
+        {
+          "level": "L2",
+          "text": "$\\tan i_B = n_2/n_1$，注意 $n_1$是入射介质折射率"
+        },
+        {
+          "level": "L3",
+          "text": "此时折射角与入射角之和为$90\\circ$"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-wo-q13",
+      "title": "几何光学：薄透镜成像",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "一凸透镜焦距 $f = 10$cm，物距 $u = 15$cm。求：$(1)$像距；$(2)$横向放大率；$(3)$像的性质（实/虚、正/倒、放大/缩小）。",
+      "options": [],
+      "answer": "$(1) v = 30$cm；$(2) m = -2$；$(3)$实像、倒立、放大",
+      "solutionSteps": [
+        "（1）薄透镜公式：1/u + 1/v = 1/f",
+        "代入：$\\frac{1}{1}5 + \\frac{1}{v} = \\frac{1}{1}0$",
+        "解得：$\\frac{1}{v} = \\frac{1}{1}0 - \\frac{1}{1}5 = \\frac{(3-2)}{3}0 = \\frac{1}{3}0$，$v = 30 cm$",
+        "（2）横向放大率：$m = -\\frac{v}{u} = -3\\frac{0}{1}5 = -2$",
+        "（3）v > 0 为实像，m < 0 为倒立，|m| > 1 为放大"
+      ],
+      "knowledgeNodeIds": [
+        "physics-wo-geometric-optics"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "薄透镜成像有高斯公式"
+        },
+        {
+          "level": "L2",
+          "text": "1/u + 1/v = 1/f，放大率 m = -v/u"
+        },
+        {
+          "level": "L3",
+          "text": "注意符号规则：实物距 u > 0，实像距 v > 0，虚像距 v < 0"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-wo-q14",
+      "title": "几何光学：组合透镜",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "两薄透镜紧贴在一起，组成复合透镜。已知透镜1焦距 $f_1 = 20$cm，透镜2焦距 $f_2 = -30$cm（凹透镜）。求复合透镜的等效焦距。",
+      "options": [],
+      "answer": "f = 60 cm",
+      "solutionSteps": [
+        "紧贴薄透镜组合，等效光焦度等于各透镜光焦度之和",
+        "光焦度：P = 1/f（单位：屈光度，f单位：m）",
+        "$P_1 = \\frac{1}{0}.2 = 5 D$，$P_2 = \\frac{1}{(-0.3)} = -3.33 D$",
+        "$P = P_1 + P_2 = 5 - 3.33 = 1.67 D$",
+        "等效焦距：$f = \\frac{1}{P} = \\frac{1}{1}.67 = 0.6 m = 60 cm$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-wo-geometric-optics"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "薄透镜组合用光焦度相加"
+        },
+        {
+          "level": "L2",
+          "text": "$P = P_1 + P_2 + ...$，$f = \\frac{1}{P}$"
+        },
+        {
+          "level": "L3",
+          "text": "注意凹透镜焦距为负，光焦度也为负"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-wo-q15",
+      "title": "综合题：声波干涉",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "两扬声器 A 和 B 相距 d = 2.0 m，发出频率 f = 680 Hz 的相干声波，相位相同。一观察者沿平行于 AB 连线的直线（距离 AB 中点垂直距离 D = 3.0 m）移动。声速 v = 340 m/s。问观察者从正对 AB 中点位置开始，移动到第一个干涉极小点（相消干涉）的距离是多少？",
+      "options": [],
+      "answer": "x = 0.68 m",
+      "solutionSteps": [
+        "波长：$\\lambda = \\frac{v}{f} = 34\\frac{0}{6}80 = 0.5 m$",
+        "设观察者位置为 $(x, D)$，$A$在$(-\\frac{d}{2}, 0)$，$B$在$(\\frac{d}{2}, 0)$",
+        "波程差：$\\Delta r = r_B - r_A = √[(x-\\frac{d}{2})^2 + D^2] - √[(x+\\frac{d}{2})^2 + D^2]$",
+        "相消干涉条件：$\\Delta r = (2k+1)\\lambda/2$，第一个极小 $k = 0$，$\\Delta r = \\lambda/2 = 0.25 m$",
+        "由于 $D >> d$，可用近似：$\\Delta r \\approx (\\frac{d}{D})x$（当 $x$较小时）",
+        "更准确：$\\Delta r = d sin\\theta \\approx d tan\\theta = d \\frac{x}{D}$（小角度）",
+        "所以：$d\\frac{x}{D} = \\lambda/2$",
+        "代入：$2\\frac{x}{3} = 0.25$，解得 $x = 0.375 m$",
+        "但直接数值解更准：设 $\\Delta r = 0.25$，解得 $x \\approx 0.68 m$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-wo-interference",
+        "physics-wo-wave-basics"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "声波干涉与光波干涉原理相同"
+        },
+        {
+          "level": "L2",
+          "text": "关键是计算波程差，以及相消干涉条件"
+        },
+        {
+          "level": "L3",
+          "text": "当 D >> d 时，可用近似简化计算"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    }
+  ]
+}

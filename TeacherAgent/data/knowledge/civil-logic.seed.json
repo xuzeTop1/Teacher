@@ -1,0 +1,180 @@
+{
+  "subject": "xingce",
+  "course": "xingce",
+  "chapter": "civil-logic",
+  "status": "draft",
+  "nodes": [
+    {
+      "id": "xingce-logic-translate",
+      "title": "翻译推理：逻辑关联词",
+      "level": "method",
+      "summary": "先把题干的「如果…那么…」「只有…才…」「且/或/否」翻译成逻辑表达式，再用推理规则（肯前必肯后、否后必否前）推导。选项要回到表达式验证，不凭语义直觉。",
+      "prerequisites": [],
+      "misconceptions": [
+        "把充分条件与必要条件方向搞反",
+        "否前或肯后后错误推出确定结论"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这句话是充分条件还是必要条件？箭头方向应该怎么画？"
+        },
+        {
+          "level": "L2",
+          "text": "已知前提，能肯前还是否后？对应哪条推理规则？"
+        },
+        {
+          "level": "L3",
+          "text": "把选项翻译成表达式，它和你的推导链一致吗？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "xingce-logic-strengthen",
+      "title": "加强削弱：论证结构",
+      "level": "method",
+      "summary": "先找论点和论据，区分论据到论点的推理跳跃。削弱优先拆桥（断开论据与论点联系）或削弱论据；加强优先搭桥或举正面例子。看话题是否一致。",
+      "prerequisites": [
+        "xingce-logic-translate"
+      ],
+      "misconceptions": [
+        "不分论点和论据，对着无关细节加强或削弱",
+        "选了与题干话题不一致的选项"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "题干的论点（结论）是什么，支撑它的论据又是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "论据到论点之间有没有隐含的跳跃？"
+        },
+        {
+          "level": "L3",
+          "text": "哪个选项直接打在论据和论点的连接处？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "xingce-logic-analogy",
+      "title": "类比推理：词项关系",
+      "level": "method",
+      "summary": "先看题干两词的逻辑关系（并列、包容、交叉、对应、属性、因果），再横向比较选项。优先选关系最贴近且词性/顺序一致的选项，注意二级辨析（必然/或然、主要/次要）。",
+      "prerequisites": [],
+      "misconceptions": [
+        "只凭语义相近就选，忽略词项间的逻辑关系",
+        "忽略词语顺序和二级属性差异"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "题干两个词之间是什么关系：包容、对应还是其他？"
+        },
+        {
+          "level": "L2",
+          "text": "选项里哪个关系最一致，且先后顺序也对？"
+        },
+        {
+          "level": "L3",
+          "text": "如果多个选项关系接近，用必然/或然等二级辨析怎么排除？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "xingce-logic-definition",
+      "title": "定义判断：要件拆分",
+      "level": "method",
+      "summary": "把定义拆成主体、客体、方式、目的、条件等要件，带着要件逐一核对选项。出现「应当/不得/以…为目的」等限定词是高频考点，选项有一处不符合即排除。",
+      "prerequisites": [],
+      "misconceptions": [
+        "不拆分要件，整体感觉式判断",
+        "忽略限定词导致把不符合的选项判为符合"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个定义能拆出哪些要件：主体、方式、目的、条件？"
+        },
+        {
+          "level": "L2",
+          "text": "这个选项哪一个要件对不上定义？"
+        },
+        {
+          "level": "L3",
+          "text": "定义里的「应当/不得」这类限定，选项有没有违反？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "xingce-logic-graph",
+      "title": "图形推理：规律识别",
+      "level": "method",
+      "summary": "按「属性—数量—位置—样式」顺序排查：对称、曲直、封闭；点线角面素数量；平移旋转翻转；遍历与叠加。先宏观定类，再定具体规律，一组图看变化、两组图看对应。",
+      "prerequisites": [],
+      "misconceptions": [
+        "想到哪算哪，没有固定的排查顺序",
+        "只看单个图形，忽略图形间的变化关系"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这组图先看属性（对称/曲直/封闭）还是数量？"
+        },
+        {
+          "level": "L2",
+          "text": "图形之间是平移、旋转还是样式叠加？"
+        },
+        {
+          "level": "L3",
+          "text": "把规律套到问号处，预测应该是什么图形？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。"
+      },
+      "reviewStatus": "draft"
+    }
+  ]
+}

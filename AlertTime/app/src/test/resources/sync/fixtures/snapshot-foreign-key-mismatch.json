@@ -1,0 +1,41 @@
+{
+  "format": "alerttime-teacher-sync",
+  "schemaVersion": 1,
+  "messageType": "snapshot",
+  "deviceId": "f0a24c19-0f8e-4b6d-9a3c-77e1b2d4c5a6",
+  "snapshotId": "8b1c5d4e-3f6a-4b7c-9d8e-9f0a1b2c3d4e",
+  "generatedAt": 1785600000000,
+  "appVersion": "0.1.0",
+  "protocolCapabilities": { "fullSnapshotV1": true, "proposalsV1": true },
+  "cursor": null,
+  "payload": {
+    "subjects": [],
+    "weeklyGoals": [],
+    "tasks": [
+      {
+        "remoteId": "c9d0e1f2-a3b4-4c5d-9e6f-7a8b9c0d1e2f",
+        "subjectRemoteId": "ffffffff-ffff-4fff-8fff-ffffffffffff",
+        "title": "引用了不存在的科目",
+        "type": 1,
+        "priority": 0,
+        "status": 0,
+        "sortOrder": 0,
+        "createdAt": 1785371000000,
+        "updatedAt": 1785371000000
+      }
+    ],
+    "studySessions": [
+      {
+        "remoteId": "a3b4c5d6-e7f8-4a9b-9c0d-1e2f3a4b5c6d",
+        "taskRemoteId": "99999999-9999-4999-8999-999999999999",
+        "title": "引用了不存在的任务",
+        "startTime": 1785490000000,
+        "durationSeconds": 3000,
+        "pauseSeconds": 0,
+        "status": 0,
+        "createdAt": 1785490000000,
+        "updatedAt": 1785493600000
+      }
+    ]
+  }
+}

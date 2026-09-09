@@ -1,0 +1,186 @@
+{
+  "subject": "shenlun",
+  "course": "shenlun",
+  "chapter": "civil-shenlun-implementation",
+  "status": "draft",
+  "nodes": [
+    {
+      "id": "shenlun-impl-format",
+      "title": "公文格式要素",
+      "level": "method",
+      "summary": "贯彻执行题先看文种要求的格式：标题、称谓（主送机关/对象）、正文、落款（发文机关+日期）是否齐全。提纲类可省略称谓落款，但标题和要点框架不能少。",
+      "prerequisites": [],
+      "misconceptions": [
+        "不分文种一律写全格式，或该写的漏写",
+        "把「提纲」当成完整公文来写"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个文种一般需要标题、称谓、落款中的哪些？"
+        },
+        {
+          "level": "L2",
+          "text": "题目说的是「写一份」还是「列提纲」，格式要求一样吗？"
+        },
+        {
+          "level": "L3",
+          "text": "落款和日期在这种公文中要不要写？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲申论五大题型（归纳概括 / 综合分析 / 提出对策 / 贯彻执行 / 申发论述）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；申论辅导以材料拆解、结构、改写为核心，不默认代写整篇；具体题目与表述待人工复核（review_status=draft）。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "shenlun-impl-types",
+      "title": "常见文种写法",
+      "level": "method",
+      "summary": "倡议书重号召与具体行动；讲话稿重场合与对象、有开场白和结语；宣传稿重通俗易懂；提纲重要点罗列不展开。先定文种再定语气与内容重心。",
+      "prerequisites": [
+        "shenlun-impl-format"
+      ],
+      "misconceptions": [
+        "不同文种用同一种语气和写法",
+        "倡议书写成枯燥的工作汇报"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这是给谁看的，什么场合用？"
+        },
+        {
+          "level": "L2",
+          "text": "这个文种最该突出的内容重心是什么？"
+        },
+        {
+          "level": "L3",
+          "text": "它的开场和结尾通常怎么处理？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲申论五大题型（归纳概括 / 综合分析 / 提出对策 / 贯彻执行 / 申发论述）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；申论辅导以材料拆解、结构、改写为核心，不默认代写整篇；具体题目与表述待人工复核（review_status=draft）。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "shenlun-impl-language",
+      "title": "语言得体与对象意识",
+      "level": "method",
+      "summary": "公文语言要符合发文身份和受众：对群众要亲切易懂，对上级要规范严谨，对外宣传要凝练有号召力。避免口语化过重或官腔空话。",
+      "prerequisites": [
+        "shenlun-impl-types"
+      ],
+      "misconceptions": [
+        "不分对象统一用书面官话",
+        "过度口语化失去公文庄重感"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这段话的读者是谁，他们关心什么？"
+        },
+        {
+          "level": "L2",
+          "text": "现在的措辞对这个对象会不会太生硬或太随意？"
+        },
+        {
+          "level": "L3",
+          "text": "换一种更贴对象的称呼和语气，会怎么改？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲申论五大题型（归纳概括 / 综合分析 / 提出对策 / 贯彻执行 / 申发论述）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；申论辅导以材料拆解、结构、改写为核心，不默认代写整篇；具体题目与表述待人工复核（review_status=draft）。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "shenlun-impl-content",
+      "title": "正文内容结构",
+      "level": "method",
+      "summary": "公文正文常见结构：背景/目的 → 核心要点（分条） → 呼吁/结语。要点来自材料，按逻辑排序；不写与目的无关的内容，也不漏关键要点。",
+      "prerequisites": [
+        "shenlun-impl-types"
+      ],
+      "misconceptions": [
+        "背景写太长，挤占核心要点",
+        "要点顺序混乱，读者抓不住重点"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "开头用几句话把背景和目的说清就够了？"
+        },
+        {
+          "level": "L2",
+          "text": "核心要点按什么逻辑排列更顺：轻重、先后还是主体？"
+        },
+        {
+          "level": "L3",
+          "text": "结尾是呼吁、总结还是留白，跟文种匹配吗？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲申论五大题型（归纳概括 / 综合分析 / 提出对策 / 贯彻执行 / 申发论述）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；申论辅导以材料拆解、结构、改写为核心，不默认代写整篇；具体题目与表述待人工复核（review_status=draft）。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "shenlun-impl-outline",
+      "title": "提纲类写法",
+      "level": "method",
+      "summary": "提纲只需呈现「标题 + 分条要点框架」，不展开成段落。每条用核心词点出内容方向即可，便于阅卷快速看到结构完整、要点齐全。",
+      "prerequisites": [
+        "shenlun-impl-format"
+      ],
+      "misconceptions": [
+        "把提纲写成完整文章，超字数失焦",
+        "只有标题没有分条要点"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "提纲要不要展开成段落？"
+        },
+        {
+          "level": "L2",
+          "text": "每条用几个关键词点出内容方向就够了？"
+        },
+        {
+          "level": "L3",
+          "text": "你的提纲框架，阅卷能一眼看到结构和要点吗？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲申论五大题型（归纳概括 / 综合分析 / 提出对策 / 贯彻执行 / 申发论述）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；申论辅导以材料拆解、结构、改写为核心，不默认代写整篇；具体题目与表述待人工复核（review_status=draft）。"
+      },
+      "reviewStatus": "draft"
+    }
+  ]
+}

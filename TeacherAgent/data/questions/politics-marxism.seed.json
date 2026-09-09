@@ -1,0 +1,885 @@
+{
+  "subject": "politics",
+  "course": "marxism",
+  "chapter": "politics-marxism",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "politics-marxism-q001",
+      "title": "马克思主义科学内涵理解",
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "马克思主义作为一个完整的科学理论体系，包含若干基本组成部分。下列关于马克思主义组成部分的理解，正确的是：",
+      "options": [
+        "A. 马克思主义哲学是关于自然、社会和思维发展普遍规律的科学",
+        "B. 马克思主义政治经济学以资本主义生产方式为研究对象，不涉及其他社会形态",
+        "C. 科学社会主义是关于社会主义如何取代资本主义的具体操作方案",
+        "D. 马克思主义三个组成部分各自独立，互不相干"
+      ],
+      "answer": "A",
+      "solutionSteps": [
+        "马克思主义哲学是马克思主义的世界观和方法论基础，它揭示了自然、社会和思维发展的普遍规律，A选项表述正确。",
+        "马克思主义政治经济学虽然以资本主义生产方式为主要研究对象，但其方法和分析框架也适用于分析其他社会形态的经济关系，B选项表述错误。",
+        "科学社会主义是马克思主义的结论和归宿，它论证了社会主义代替资本主义的历史必然性，但不提供具体的操作方案，C选项表述错误。",
+        "马克思主义三个组成部分是一个有机整体：哲学是方法论基础，政治经济学是实证分析，科学社会主义是结论和归宿，三者相互联系、相互支撑，D选项表述错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "注意区分：马克思主义的'组成部分'和'分析对象'是两个不同问题。三个组成部分是理论结构，不是研究对象。"
+        },
+        {
+          "level": "L2",
+          "text": "马克思主义是一个完整的科学体系，三个组成部分有机统一，不能割裂理解。"
+        },
+        {
+          "level": "L3",
+          "text": "判断选项时，抓住'普遍性'和'特殊性'的关系：马克思主义哲学研究普遍规律，政治经济学研究资本主义这个特殊形态，但方法具有普遍意义。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-marxism-001"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-marxism-q002",
+      "title": "哲学基本问题第一方面",
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "哲学基本问题的第一方面是思维和存在何者为第一性的问题。根据对这一问题的不同回答，哲学可以划分为两大基本派别。这两大基本派别是：",
+      "options": [
+        "A. 辩证法和形而上学",
+        "B. 唯物主义和唯心主义",
+        "C. 可知论和不可知论",
+        "D. 辩证唯物主义和历史唯物主义"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "哲学基本问题包含两个方面：第一方面是思维和存在何者为第一性，据此划分唯物主义和唯心主义，B选项正确。",
+        "辩证法和形而上学是回答'世界怎么样'（是否联系、是否发展）的问题，不是哲学基本问题的第一方面，A选项错误。",
+        "可知论和不可知论是哲学基本问题第二方面（思维能否认识存在）的划分结果，C选项错误。",
+        "辩证唯物主义和历史唯物主义是马克思主义哲学的两个组成部分，不是对哲学基本问题第一方面的回答，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "注意问题问的是'第一方面'（何者第一性），不要和第二方面（能否认识）混淆。"
+        },
+        {
+          "level": "L2",
+          "text": "哲学基本问题的'第一方面'对应'本体论'问题，'第二方面'对应'认识论'问题。"
+        },
+        {
+          "level": "L3",
+          "text": "划分唯物主义和唯心主义的唯一标准是：对思维和存在何者第一性的回答。除此之外的任何标准都是错误的。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-marxism-002"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-marxism-q003",
+      "title": "物质概念的理解",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "马克思主义哲学的物质概念是一个高度抽象的哲学范畴。下列对马克思主义哲学物质概念的理解，正确的是：",
+      "options": [
+        "A. 物质就是指看得见、摸得着的实体性的东西",
+        "B. 物质的唯一特性是客观实在性",
+        "C. 物质是意识的根源，但意识可以脱离物质独立存在",
+        "D. 物质概念和自然科学的物质结构理论是完全相同的"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "马克思主义哲学认为，物质的唯一特性是客观实在性，即不依赖于人的意识而存在，又能为人的意识所反映，B选项正确。",
+        "马克思主义哲学的物质概念是对一切客观存在的共同本质的抽象概括，不仅仅指看得见摸得着的实体，还包括不能直接感知但客观存在的事物，A选项错误。",
+        "意识是人脑的机能和属性，不能脱离物质独立存在，C选项错误。",
+        "哲学的物质概念和自然科学的物质结构理论是共性和个性的关系，不是完全相同的，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "马克思主义哲学的物质概念是最抽象的共性，自然科学的物质概念是具体的个性。两者关系如何？"
+        },
+        {
+          "level": "L2",
+          "text": "理解物质概念的关键是'客观实在性'这个唯一特性，它不是指某种具体的物质形态或结构。"
+        },
+        {
+          "level": "L3",
+          "text": "判断有关物质的表述是否正确，抓住'客观实在性'这个标准：凡是客观存在的，都是物质；凡是依赖于意识存在的，都是意识现象。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-marxism-003"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-marxism-q004",
+      "title": "意识的本质",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "意识是物质世界长期发展的产物，是人脑的机能和属性。下列关于意识本质的理解，正确的是：",
+      "options": [
+        "A. 意识是人脑分泌的特殊物质，就像肝脏分泌胆汁一样",
+        "B. 人工智能的发展证明意识可以脱离人脑而产生",
+        "C. 意识是客观世界的主观映象，内容上客观的，形式上主观的",
+        "D. 语言在意识产生过程中不起重要作用"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "意识是客观世界的主观映象，这意味着意识的内容来自客观世界（内容客观），但意识以主观的形式反映客观世界（形式主观），C选项正确。",
+        "意识不是实体性的物质，而是人脑的机能和属性，不能把意识等同于分泌物，A选项错误。",
+        "人工智能是人类意识的物化表现，它模拟人的某些思维功能，但不具有真正的意识，意识必须依赖于人脑这个物质器官，B选项错误。",
+        "语言是意识的物质外壳，在意识产生和发展过程中起着重要作用，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "意识有'内容'和'形式'两个方面，分别来自哪里？这是理解意识本质的关键。"
+        },
+        {
+          "level": "L2",
+          "text": "意识内容上客观、形式上主观，这说明意识既不像唯心主义说的那样是纯主观的，也不像旧唯物主义说的那样是纯客观的。"
+        },
+        {
+          "level": "L3",
+          "text": "判断有关意识本质的表述，抓住三个要点：起源（物质世界长期发展产物）、生理基础（人脑机能）、内容（客观世界主观映象）。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-marxism-004"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-marxism-q005",
+      "title": "对立统一规律是唯物辩证法的实质和核心",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "唯物辩证法包含一系列规律和范畴，其中对立统一规律是唯物辩证法的实质和核心。下列关于对立统一规律地位的理解，正确的是：",
+      "options": [
+        "A. 对立统一规律揭示了事物发展的形式和状态",
+        "B. 对立统一规律揭示了事物发展的方向和道路",
+        "C. 对立统一规律揭示了事物普遍联系的根本内容和永恒发展的内在动力",
+        "D. 对立统一规律是唯物辩证法的最次要规律"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "对立统一规律揭示了事物普遍联系的根本内容（一切联系都是对立统一的关系）和永恒发展的内在动力（矛盾是事物发展的动力），因此它是唯物辩证法的实质和核心，C选项正确。",
+        "揭示事物发展的形式和状态的是质量互变规律，不是对立统一规律，A选项错误。",
+        "揭示事物发展的方向和道路的是否定之否定规律，不是对立统一规律，B选项错误。",
+        "对立统一规律是唯物辩证法的实质和核心，不是最次要规律，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "唯物辩证法的三个基本规律分别回答什么问题？不要把三个规律回答的问题搞混了。"
+        },
+        {
+          "level": "L2",
+          "text": "对立统一规律的核心地位体现在：它贯穿唯物辩证法其他规律和范畴的始终，是理解唯物辩证法的关键。"
+        },
+        {
+          "level": "L3",
+          "text": "判断选项时，把三个规律回答的问题对应起来：对立统一$\\to$动力；质量互变$\\to$状态；否定之否定$\\to$道路。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-marxism-005"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-marxism-q006",
+      "title": "矛盾的同一性和斗争性",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "矛盾是反映事物内部和事物之间对立统一关系的哲学范畴，具有同一性和斗争性两种基本属性。下列关于矛盾同一性和斗争性的理解，正确的是：",
+      "options": [
+        "A. 矛盾的同一性是相对的、有条件的，斗争性是绝对的、无条件的",
+        "B. 矛盾的同一性就是矛盾双方完全一样、没有差别",
+        "C. 矛盾的斗争性就是矛盾双方你死我活的对抗",
+        "D. 矛盾的同一性和斗争性互不相关，可以单独存在"
+      ],
+      "answer": "A",
+      "solutionSteps": [
+        "矛盾的同一性是指矛盾双方相互依存、相互贯通，这种依存和贯通需要一定条件，因而是相对的、有条件的；矛盾的斗争性是指矛盾双方相互排斥、相互分离，这种趋势是绝对的、无条件的，A选项正确。",
+        "矛盾的同一性不是指矛盾双方完全一样，而是指双方相互依存、在一定条件下相互转化，B选项错误。",
+        "矛盾的斗争性是十分广泛的哲学范畴，不只是你死我活的对抗，还包括差异、竞争、批评等多种形式的排斥，C选项错误。",
+        "矛盾的同一性和斗争性是相辅相成的，同一性以斗争性为前提，斗争性寓于同一性之中，不能单独存在，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "注意区分：矛盾的'斗争性'是哲学范畴（广泛），不是日常生活中'争吵打架'的意思。"
+        },
+        {
+          "level": "L2",
+          "text": "理解矛盾的两种属性，要抓住'相对'和'绝对'这个关键点：同一性需要条件（相对），斗争性是永恒趋势（绝对）。"
+        },
+        {
+          "level": "L3",
+          "text": "判断有关矛盾属性的表述，记住：同一性=相互依存+相互贯通（有条件、相对）；斗争性=相互排斥（无条件、绝对）。两者结合推动事物发展。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-marxism-005"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-marxism-q007",
+      "title": "量变和质变的辩证关系",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "质量互变规律是唯物辩证法的基本规律之一。下列关于量变和质变辩证关系的理解，正确的是：",
+      "options": [
+        "A. 量变就是缓慢的变化，质变就是快速的变化",
+        "B. 量变是质变的必要准备，质变是量变的必然结果",
+        "C. 量变和质变是完全独立、互不相干的两个过程",
+        "D. 只有质变才有意义，量变微不足道"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "量变是质变的必要准备，质变是量变的必然结果，量变和质变相互渗透，这体现了二者的辩证关系，B选项正确。",
+        "量变和质变的区别不在于变化的快慢，而在于是否引起事物的根本性质变化，A选项错误。",
+        "量变和质变是相互联系、相互转化的，不是互不相关的，C选项错误。",
+        "量变和质变都有重要意义，量变积累到一定程度引起质变，没有量变就没有质变，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "想一想'不积跬步无以至千里'这句话，它说明了量变和质变之间的什么关系？"
+        },
+        {
+          "level": "L2",
+          "text": "量变和质变的辩证关系可以概括为：量变是准备，质变是结果，质变巩固量变成果并为新的量变开辟道路。"
+        },
+        {
+          "level": "L3",
+          "text": "判断量变和质变的关系，抓住'必要准备'和'必然结果'这两个关键词，同时注意'相互渗透'（总的量变中有部分质变，质变中有量的扩张）。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-marxism-006"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-marxism-q008",
+      "title": "辩证否定观",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "否定之否定规律揭示了事物发展的方向和道路。马克思主义辩证否定观是关于否定的科学看法。下列表述符合辩证否定观的是：",
+      "options": [
+        "A. 否定就是完全抛弃、彻底消灭旧事物",
+        "B. 否定是事物的自我否定，其实质是扬弃",
+        "C. 否定是外力强加给事物的，不是事物内部矛盾运动的结果",
+        "D. 否定之否定就是回到原来的出发点，事物发展是循环往复的"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "辩证否定观认为，否定是事物的自我否定，是事物发展和联系的环节，其实质是'扬弃'，即既克服又保留，B选项符合辩证否定观。",
+        "完全抛弃、彻底消灭是形而上学的否定观，不是辩证否定观，A选项错误。",
+        "辩证否定是事物的自我否定，来自事物内部矛盾运动，不是外力强加的，C选项错误。",
+        "否定之否定不是简单回到原点，而是发展的前进性和曲折性的统一，事物发展是螺旋式上升、波浪式前进的，不是循环往复的，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "想一想：我们对待传统文化应该采取什么态度？是全部继承，全部抛弃，还是有分析地继承？"
+        },
+        {
+          "level": "L2",
+          "text": "辩证否定的实质是'扬弃'，这是理解辩证否定观的关键词。扬弃=克服+保留。"
+        },
+        {
+          "level": "L3",
+          "text": "判断有关否定的表述，区分形而上学否定观（外力的、全盘抛弃或全盘肯定）和辩证否定观（自我的、扬弃）。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-marxism-007"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-marxism-q009",
+      "title": "实践在认识中的决定作用",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "马克思主义认识论是能动的革命的反映论，它强调实践在认识中的决定作用。下列关于实践对认识决定作用的表述，正确的是：",
+      "options": [
+        "A. 实践是认识的来源，一切认识归根到底都来自实践",
+        "B. 实践是认识发展的动力，但认识可以脱离实践独立发展",
+        "C. 实践是检验认识真理性的标准之一，但不是唯一标准",
+        "D. 实践只是认识的目的，对认识的产生不起决定作用"
+      ],
+      "answer": "A",
+      "solutionSteps": [
+        "实践是认识的来源，这是实践决定认识的首要表现，一切真知都来源于实践，A选项正确。",
+        "实践是认识发展的动力，认识不能脱离实践独立发展，实践不断提出新课题、提供新经验、提高人的认识能力，B选项错误。",
+        "实践是检验认识真理性的唯一标准，不是标准之一，C选项错误。",
+        "实践是认识的目的，同时实践也是认识的来源、动力和检验标准，对认识全过程起决定作用，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "想一想：如果你从来没有吃过榴莲，别人怎么描述，你能真正知道榴莲是什么味道吗？"
+        },
+        {
+          "level": "L2",
+          "text": "实践对认识的决定作用体现在四个环节：来源、动力、标准、目的。这四个环节缺一不可。"
+        },
+        {
+          "level": "L3",
+          "text": "判断实践与认识关系的表述，坚持'实践第一'的观点：实践是认识的起点，也是认识的归宿，认识必须回到实践中去。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-marxism-008"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-marxism-q010",
+      "title": "感性认识和理性认识的辩证关系",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "认识运动是一个辩证发展过程，经历了从实践到认识、再从认识到实践的飞跃。在从实践到认识的过程中，认识经历了从感性认识到理性认识的发展。下列关于感性认识和理性认识辩证关系的理解，正确的是：",
+      "options": [
+        "A. 感性认识是可靠的，理性认识是不可靠的",
+        "B. 感性认识是理性认识的基础，理性认识依赖于感性认识",
+        "C. 感性认识和理性认识是毫不相干的两种认识",
+        "D. 理性认识是感性认识的简单相加"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "感性认识是认识的初级阶段，理性认识是认识的高级阶段，理性认识依赖于感性认识，感性认识有待于发展为理性认识，两者是辩证统一的，B选项正确。",
+        "感性认识和理性认识都有可靠和不可靠的可能，不能简单地说哪个可靠哪个不可靠，A选项错误。",
+        "感性认识和理性认识是认识过程中的两个不同阶段，相互依存、相互渗透，不是毫不相干的，C选项错误。",
+        "理性认识不是感性认识的简单相加，而是对感性材料进行抽象概括形成的本质认识，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "想一想：我们认识一个陌生人，先看到外貌（感性），再了解性格品行（理性）。这两个阶段是什么关系？"
+        },
+        {
+          "level": "L2",
+          "text": "感性认识和理性认识的辩证关系是：理性认识依赖于感性认识（唯物论），感性认识有待发展为理性认识（辩证法）。"
+        },
+        {
+          "level": "L3",
+          "text": "判断感性认识和理性认识的关系，反对两种错误倾向：唯理论（夸大理性、贬低感性）和经验论（夸大感性、贬低理性）。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-marxism-008"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-marxism-q011",
+      "title": "真理的客观性",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "真理是标志主观与客观相符合的哲学范畴，是人们对客观事物及其规律的正确反映。下列关于真理客观性的理解，正确的是：",
+      "options": [
+        "A. 真理是客观存在的，不包含任何主观因素",
+        "B. 真理的内容是客观的，检验真理的标准（实践）也是客观的",
+        "C. 真理是因人而异的，没有客观标准",
+        "D. 有用就是真理，真理就是对人有用的认识"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "真理的客观性指真理的内容来自客观世界，是不依赖于主体意识的客观内容，同时检验真理的标准（实践）也是客观的，B选项正确。",
+        "真理是主观认识与客观实际相符合，它本身是认识形式，包含主观因素（以观念形式存在），但内容是客观的，A选项表述不准确。",
+        "真理是客观的，不以人的意志为转移，不是因人而异的，C选项错误。",
+        "'有用就是真理'是实用主义的真理观，否定了真理的客观性，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "如果一个认识对你有用，但它是错误的（不符合客观实际），我们能说它是真理吗？"
+        },
+        {
+          "level": "L2",
+          "text": "真理的客观性包含两个要点：内容客观（来自客观世界）、标准客观（实践是客观的物质活动）。"
+        },
+        {
+          "level": "L3",
+          "text": "判断真理客观性的表述，反对主观真理论（'仁者见仁智者见智'就是真理）和实用主义真理观（'有用即真理'）。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-marxism-009"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-marxism-q012",
+      "title": "真理的绝对性和相对性的辩证关系",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "真理具有绝对性和相对性，这是真理的两重属性。下列关于真理绝对性和相对性辩证关系的理解，正确的是：",
+      "options": [
+        "A. 真理的绝对性和相对性是两种不同的真理",
+        "B. 真理的绝对性和相对性是同一真理的两重属性",
+        "C. 真理的绝对性是指真理永远不变",
+        "D. 真理的相对性是指真理中包含错误"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "真理的绝对性和相对性是同一真理的两个方面，不是两种不同的真理，任何真理都既是绝对的又是相对的，B选项正确，A选项错误。",
+        "真理的绝对性是指真理的内容具有客观性（这一点绝对），以及人类认识按其本性能够正确认识无限发展着的世界（这一点绝对），不是指真理永远不变，C选项错误。",
+        "真理的相对性是指真理的有条件性、有限性，即真理在一定条件下正确，不是指真理包含错误，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "想一想：牛顿力学在宏观低速条件下是正确的，但在微观高速条件下就不适用了。这说明真理具有什么属性？"
+        },
+        {
+          "level": "L2",
+          "text": "真理的绝对性和相对性是辩证统一的：绝对真理寓于相对真理之中，相对真理包含着绝对真理的颗粒，无数相对真理的总和构成绝对真理。"
+        },
+        {
+          "level": "L3",
+          "text": "判断真理两重属性的表述，反对两种错误：绝对主义（真理永恒不变）和相对主义（没有客观真理）。正确态度是：坚持和发展统一。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-marxism-009"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-marxism-q013",
+      "title": "社会基本矛盾及其运动规律",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "社会基本矛盾是生产力和生产关系、经济基础和上层建筑的矛盾，它是社会发展的根本动力。下列关于社会基本矛盾运动规律的理解，正确的是：",
+      "options": [
+        "A. 生产力决定生产关系，生产关系对生产力不具有反作用",
+        "B. 经济基础决定上层建筑，上层建筑对经济基础不具有反作用",
+        "C. 生产关系一定要适合生产力状况，上层建筑一定要适合经济基础状况",
+        "D. 社会基本矛盾只存在于阶级社会"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "生产关系一定要适合生产力状况的规律、上层建筑一定要适合经济基础状况的规律，是社会基本矛盾运动的两个基本规律，C选项正确。",
+        "生产力决定生产关系，同时生产关系对生产力具有反作用（促进或阻碍），A选项错误。",
+        "经济基础决定上层建筑，同时上层建筑对经济基础具有反作用（服务于自己的经济基础），B选项错误。",
+        "社会基本矛盾存在于一切社会形态，不仅仅存在于阶级社会，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "生产力、生产关系、经济基础、上层建筑，这四者之间是什么关系？可以用箭头把它们的决定关系画出来吗？"
+        },
+        {
+          "level": "L2",
+          "text": "社会基本矛盾运动规律可以概括为两对'决定+反作用'关系：生产力↔生产关系（经济基础）↔上层建筑。"
+        },
+        {
+          "level": "L3",
+          "text": "判断社会基本矛盾的表述，抓住'一定要适合'这个关键词：不适合就会引发社会矛盾，进而推动社会变革。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-marxism-010"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-marxism-q014",
+      "title": "人民群众是历史的创造者",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "唯物史观认为，人民群众是社会历史的主体，是历史的创造者。下列关于人民群众历史创造作用的理解，正确的是：",
+      "options": [
+        "A. 人民群众是历史的创造者，所以杰出人物对历史发展不起任何作用",
+        "B. 人民群众创造历史的作用不受任何社会历史条件限制",
+        "C. 人民群众是社会物质财富和精神财富的创造者，是社会变革的决定力量",
+        "D. 人民群众创造历史就是指每个人都平等地创造了历史"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "人民群众是历史的创造者，具体表现在三个方面：创造物质财富、创造精神财富、推动社会变革，C选项正确。",
+        "杰出人物对历史发展起重要作用，但不能决定历史发展的总方向，A选项表述错误。",
+        "人民群众创造历史的作用受到社会历史条件（经济、政治、精神文化条件）的制约，不是不受限制的，B选项错误。",
+        "'人民群众'是历史的主体，不是指每个个人都平等创造历史，而是指从整体上人民群众起决定作用，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "想一想：如果没有广大人民群众的劳动，社会能存在吗？人民群众通过什么方式创造历史？"
+        },
+        {
+          "level": "L2",
+          "text": "人民群众创造历史的作用体现在三个维度：物质财富（吃穿用）、精神财富（科学文化）、社会变革（推动社会进步）。"
+        },
+        {
+          "level": "L3",
+          "text": "判断人民群众历史作用，坚持唯物史观：既肯定人民群众的决定作用，也承认个人作用，但个人作用不能改变历史总方向。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-marxism-011"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-marxism-q015",
+      "title": "商品二因素理论",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "商品是用于交换的劳动产品，具有使用价值和价值两个因素。下列关于商品二因素的理解，正确的是：",
+      "options": [
+        "A. 使用价值是商品特有的属性，其他物品都没有使用价值",
+        "B. 价值是商品特有的社会属性，体现商品生产者之间的社会关系",
+        "C. 使用价值和价值可以兼得，商品生产者既能占有使用价值也能实现价值",
+        "D. 商品二因素反映了资本主义社会的特有矛盾"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "价值是凝结在商品中的无差别的一般人类劳动，它体现商品生产者之间相互交换劳动的社会关系，是商品特有的社会属性，B选项正确。",
+        "使用价值是商品的自然属性，不是商品特有的，许多不是商品的物品也有使用价值，A选项错误。",
+        "使用价值和价值是相互排斥的，商品生产者要实现价值就必须让渡使用价值，要获得使用价值就必须支付价值，不能兼得，C选项错误。",
+        "商品二因素反映商品经济的一般矛盾，不限于资本主义社会，只要存在商品经济就有这个矛盾，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "同样一件商品，对卖的人和买的人，意义一样吗？卖的人关心什么？买的人关心什么？"
+        },
+        {
+          "level": "L2",
+          "text": "商品二因素体现了商品的内在矛盾：使用价值和价值的矛盾、具体劳动和抽象劳动的矛盾、私人劳动和社会劳动的矛盾。"
+        },
+        {
+          "level": "L3",
+          "text": "判断商品二因素的表述，区分'自然属性'（使用价值，一切有用物品都有）和'社会属性'（价值，只有商品才有）。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-marxism-012"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-marxism-q016",
+      "title": "劳动二重性理论",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "生产商品的劳动具有二重性：具体劳动和抽象劳动。劳动二重性理论是理解马克思主义政治经济学的枢纽。下列关于劳动二重性的理解，正确的是：",
+      "options": [
+        "A. 具体劳动和抽象劳动是商品生产者的两次不同劳动",
+        "B. 具体劳动创造商品的价值，抽象劳动创造商品的使用价值",
+        "C. 具体劳动和抽象劳动是同一劳动过程的两个方面",
+        "D. 抽象劳动就是体力劳动，具体劳动就是脑力劳动"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "具体劳动和抽象劳动是同一劳动过程的两个方面，不是两次劳动，在任何商品生产中，劳动者的劳动同时具有具体形式和抽象的一般人类劳动，C选项正确，A选项错误。",
+        "具体劳动创造商品的使用价值，抽象劳动形成商品的价值，B选项说反了，错误。",
+        "抽象劳动是指撇开具体形式的无差别的人类劳动，不是特指体力劳动；具体劳动也不是特指脑力劳动，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "木匠做桌子，他的劳动在'具体形式'上和'抽象一般'上分别指什么？这是同一个劳动过程，还是两个劳动过程？"
+        },
+        {
+          "level": "L2",
+          "text": "理解劳动二重性的关键是：它是'一个劳动、两个方面'，不是'两个劳动'。就像一枚硬币的两面。"
+        },
+        {
+          "level": "L3",
+          "text": "判断劳动二重性的表述，记住对应关系：具体劳动$\\to$使用价值；抽象劳动$\\to$价值。不要搞反了。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-marxism-013"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-marxism-q017",
+      "title": "价值规律的基本内容和作用",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "价值规律是商品经济的基本规律。下列关于价值规律基本内容和作用的理解，正确的是：",
+      "options": [
+        "A. 价值规律的内容是价格与价值始终完全一致",
+        "B. 价值规律的表现形式是价格围绕价值自发波动",
+        "C. 价值规律只在资本主义商品经济中起作用",
+        "D. 价值规律能自动实现资源的最优配置，不会产生负面作用"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "价值规律的表现形式是价格围绕价值上下波动，这是价值规律在现实中的实现形式，B选项正确。",
+        "价格与价值始终完全一致是不可能的，价格受供求关系影响围绕价值波动，A选项错误。",
+        "价值规律是商品经济的普遍规律，不是资本主义特有的，只要存在商品经济，价值规律就起作用，C选项错误。",
+        "价值规律的自发作用会导致收入两极分化，也会造成资源浪费，不是自动实现最优配置，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "市场上商品价格时高时低，这是否说明价值规律失效了？价格为什么不能始终等于价值？"
+        },
+        {
+          "level": "L2",
+          "text": "价格围绕价值波动不是对价值规律的否定，恰恰是价值规律的表现形式。因为价格归根到底由价值决定。"
+        },
+        {
+          "level": "L3",
+          "text": "判断价值规律相关表述，区分'内容'（价值量由社会必要劳动时间决定、等价交换）和'表现形式'（价格围绕价值波动）。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-marxism-014"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-marxism-q018",
+      "title": "剩余价值的生产过程",
+      "type": "diagnostic",
+      "difficulty": 3,
+      "content": "资本主义生产过程具有两重性：一方面是生产使用价值的劳动过程，另一方面是生产剩余价值的价值增殖过程。下列对资本主义生产过程两重性的理解，正确的是：",
+      "options": [
+        "A. 资本主义生产过程的本质是使用价值的生产过程",
+        "B. 资本主义生产过程的本质是价值形成过程",
+        "C. 资本主义生产过程的本质是价值增殖过程，即剩余价值的生产过程",
+        "D. 资本主义生产过程中，工人的劳动全部用于创造自己的工资"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "资本主义生产过程的本质是价值增殖过程，即剩余价值的生产过程。资本家购买劳动力商品，消费这种商品（即让工人劳动），劳动创造的价值大于劳动力自身的价值，差额就是剩余价值，C选项正确。",
+        "使用价值生产是一般劳动过程，不是资本主义生产过程的本质特征，A选项错误。",
+        "价值形成过程是所有商品生产都有的，资本主义生产过程不仅是价值形成过程，更是价值增殖过程，B选项不准确。",
+        "工人的劳动时间分为必要劳动时间（创造工资对应的价值）和剩余劳动时间（创造剩余价值），不是全部用于创造工资，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "资本家开工厂的目的是什么？是为了生产有用物品，还是为了赚钱？这决定了资本主义生产过程的本质。"
+        },
+        {
+          "level": "L2",
+          "text": "理解资本主义生产过程的两重性，关键抓住：劳动过程（使用价值）$\\to$手段；价值增殖过程（剩余价值）$\\to$目的。"
+        },
+        {
+          "level": "L3",
+          "text": "分析剩余价值生产，要画清'必要劳动时间'和'剩余劳动时间'这条线：这条线之前工人为自己劳动，之后为资本家无偿劳动。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-marxism-015"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-marxism-q019",
+      "title": "资本有机构成提高的趋势",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "资本有机构成是由资本技术构成决定并反映技术构成变化的资本价值构成。在资本主义发展过程中，资本有机构成存在提高的趋势。下列关于资本有机构成提高的理解，正确的是：",
+      "options": [
+        "A. 资本有机构成提高意味着不变资本比重下降、可变资本比重上升",
+        "B. 资本有机构成提高会导致相对过剩人口的形成",
+        "C. 资本有机构成提高对工人阶级的就业状况没有影响",
+        "D. 资本有机构成是一个固定不变的数值"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "资本有机构成提高意味着不变资本（用于购买生产资料的资本）比重上升，可变资本（用于购买劳动力的资本）比重下降，这会导致对劳动力需求的相对减少，形成相对过剩人口，B选项正确，A选项错误。",
+        "资本有机构成提高会对工人阶级就业产生重大影响，产生相对过剩人口（产业后备军），C选项错误。",
+        "资本有机构成随着技术进步不断提高，不是固定不变的，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "随着技术进步，工厂里机器越来越多，工人越来越少。这反映了资本构成的什么变化？对工人就业有什么影响？"
+        },
+        {
+          "level": "L2",
+          "text": "资本有机构成 =不变资本 /可变资本。技术进步$\\to$机器替代人力$\\to$不变资本比重上升$\\to$有机构成提高。"
+        },
+        {
+          "level": "L3",
+          "text": "判断资本有机构成相关表述，区分'技术构成'（生产资料/劳动力，物质比例）和'价值构成'（不变资本/可变资本，价值比例），以及两者的关系。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-marxism-016"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-marxism-q020",
+      "title": "经济危机的实质和根源",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "经济危机是资本主义制度的伴生现象，具有周期性。下列关于资本主义经济危机实质和根源的理解，正确的是：",
+      "options": [
+        "A. 经济危机的实质是生产绝对过剩",
+        "B. 经济危机的根源是资本主义基本矛盾",
+        "C. 经济危机可以通过资本主义自身调节彻底消除",
+        "D. 经济危机期间，所有商品都供不应求"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "资本主义基本矛盾（生产社会化和生产资料资本主义私人占有之间的矛盾）是经济危机的根源，只要资本主义制度存在，基本矛盾就无法根本解决，经济危机就不可避免，B选项正确。",
+        "经济危机的实质是生产相对过剩，即相对于劳动人民有支付能力的需求来说过剩，不是绝对过剩，A选项错误。",
+        "经济危机是制度性的，资本主义自身调节可以缓和但不能根除经济危机，C选项错误。",
+        "经济危机期间的特征是生产相对过剩，商品积压卖不出去，不是供不应求，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "经济危机时，一方面商品大量积压，另一方面很多人买不起生活必需品。这是'太多'还是'相对太多'？"
+        },
+        {
+          "level": "L2",
+          "text": "资本主义经济危机是'相对过剩'危机，过剩是相对于购买能力而言的，不是相对于实际需要而言的。"
+        },
+        {
+          "level": "L3",
+          "text": "判断经济危机的实质，抓住'相对'二字：不是生产太多（绝对过剩），而是人民买不起（相对过剩）。根源在基本矛盾。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-marxism-020"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    }
+  ]
+}

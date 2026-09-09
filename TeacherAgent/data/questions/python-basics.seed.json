@@ -1,0 +1,217 @@
+{
+  "subject": "programming",
+  "course": "python-basics",
+  "chapter": "foundations",
+  "status": "approved",
+  "questions": [
+    {
+      "id": "py-q001-type-check",
+      "title": "类型判断",
+      "knowledgeNodeIds": ["py-variables-types"],
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "下面代码的输出是什么？为什么？\n\n```python\nx = \"123\"\ny = 123\nprint(x + y)\n```",
+      "answer": "会抛出 TypeError: can only concatenate str (not \"int\") to str。因为 x 是字符串，y 是整数，Python 不会自动类型转换。",
+      "solutionSteps": [
+        "x = \"123\" 赋值了一个字符串",
+        "y = 123 赋值了一个整数",
+        "字符串 + 整数会触发 TypeError",
+        "修复方法：str(y) 转字符串，或 int(x) 转整数"
+      ],
+      "hints": [
+        { "level": "L1", "text": "x 和 y 分别是什么类型？" },
+        { "level": "L2", "text": "Python 允许字符串和整数直接相加吗？试试看。" },
+        { "level": "L3", "text": "用 type(x) 和 type(y) 分别检查，再想想 + 操作符对不同类型的行为。" }
+      ],
+      "source": {
+        "title": "TeacherAgent original Python questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "py-q002-indentation",
+      "title": "缩进错误定位",
+      "knowledgeNodeIds": ["py-conditionals"],
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "下面代码运行时报 IndentationError，找出问题并修复：\n\n```python\ndef greet(name):\nif name:\nprint(f\"Hello, {name}!\")\nelse:\nprint(\"Hello, stranger!\")\n```",
+      "answer": "if/else 语句缺少缩进。Python 用缩进表示代码块，函数体内的代码必须缩进。",
+      "solutionSteps": [
+        "def greet(name): 下面的代码需要缩进",
+        "if name: 应该缩进 4 个空格",
+        "print() 语句应该在 if/else 内部再缩进 4 个空格",
+        "修复后：def greet(name): 后面所有行都要缩进"
+      ],
+      "hints": [
+        { "level": "L1", "text": "def 行末尾有冒号吗？冒号后的下一行应该怎样？" },
+        { "level": "L2", "text": "Python 用什么来表示代码块？if 语句和它下面的 print 是否在同一个缩进层级？" },
+        { "level": "L3", "text": "函数体内的所有语句都需要统一缩进（通常 4 空格），检查每一行的缩进是否一致。" }
+      ],
+      "source": {
+        "title": "TeacherAgent original Python questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "py-q003-loop-range",
+      "title": "range() 与循环理解",
+      "knowledgeNodeIds": ["py-loops"],
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "下面代码的输出是什么？\n\n```python\nfor i in range(3):\n    print(i)\n```",
+      "answer": "输出 0、1、2（每行一个）。range(3) 生成 0, 1, 2，不包含 3。",
+      "solutionSteps": [
+        "range(3) 生成序列 [0, 1, 2]",
+        "for 循环依次将 i 赋值为 0, 1, 2",
+        "每次迭代打印当前的 i 值",
+        "注意：range(n) 不包含 n 本身"
+      ],
+      "hints": [
+        { "level": "L1", "text": "range(3) 会生成哪些数字？包含 3 吗？" },
+        { "level": "L2", "text": "for 循环每次迭代，i 的值分别是什么？" },
+        { "level": "L3", "text": "如果改成 range(1, 4)，输出会变成什么？" }
+      ],
+      "source": {
+        "title": "TeacherAgent original Python questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "py-q004-function-return",
+      "title": "函数返回值",
+      "knowledgeNodeIds": ["py-functions"],
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "下面代码的输出是什么？为什么？\n\n```python\ndef add(a, b):\n    result = a + b\n\nprint(add(3, 5))\n```",
+      "answer": "输出 None。因为函数没有 return 语句，Python 默认返回 None。",
+      "solutionSteps": [
+        "函数 add 计算 a + b 并赋值给 result",
+        "但函数没有 return 语句",
+        "没有 return 的函数默认返回 None",
+        "print(add(3, 5)) 打印的是 None 而不是 8",
+        "修复：在 result = a + b 后加 return result"
+      ],
+      "hints": [
+        { "level": "L1", "text": "函数里有 return 语句吗？" },
+        { "level": "L2", "text": "没有 return 的函数，调用后会返回什么？" },
+        { "level": "L3", "text": "在函数里加一行 return result，看看输出是否变化。" }
+      ],
+      "source": {
+        "title": "TeacherAgent original Python questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "py-q005-list-index",
+      "title": "列表索引越界",
+      "knowledgeNodeIds": ["py-lists-dicts"],
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "下面代码报错，找出问题：\n\n```python\nfruits = [\"apple\", \"banana\", \"cherry\"]\nprint(fruits[3])\n```",
+      "answer": "IndexError: list index out of range。列表有 3 个元素，索引是 0, 1, 2，没有索引 3。",
+      "solutionSteps": [
+        "列表 fruits 有 3 个元素",
+        "Python 索引从 0 开始：fruits[0]='apple', fruits[1]='banana', fruits[2]='cherry'",
+        "fruits[3] 超出范围，触发 IndexError",
+        "修复：用 fruits[2] 访问最后一个元素，或用 fruits[-1]"
+      ],
+      "hints": [
+        { "level": "L1", "text": "这个列表有几个元素？索引从几开始？" },
+        { "level": "L2", "text": "3 个元素的列表，最大有效索引是几？" },
+        { "level": "L3", "text": "用 len(fruits) 看长度，再想想最后一个元素的索引是什么。" }
+      ],
+      "source": {
+        "title": "TeacherAgent original Python questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "py-q006-string-method",
+      "title": "字符串方法辨析",
+      "knowledgeNodeIds": ["py-strings"],
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "下面代码的输出是什么？\n\n```python\ns = \"Hello World\"\ns.replace(\"World\", \"Python\")\nprint(s)\n```",
+      "answer": "输出 \"Hello World\"。字符串方法返回新字符串，不修改原字符串。s 没有被重新赋值。",
+      "solutionSteps": [
+        "s = \"Hello World\" 创建字符串",
+        "s.replace(\"World\", \"Python\") 返回新字符串 \"Hello Python\"",
+        "但返回值没有被保存，s 仍然是 \"Hello World\"",
+        "修复：s = s.replace(\"World\", \"Python\")"
+      ],
+      "hints": [
+        { "level": "L1", "text": "s.replace() 之后，s 的值变了吗？" },
+        { "level": "L2", "text": "字符串是可变的还是不可变的？方法调用会修改原字符串吗？" },
+        { "level": "L3", "text": "要让 s 指向新字符串，需要怎样写？" }
+      ],
+      "source": {
+        "title": "TeacherAgent original Python questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "py-q007-traceback-read",
+      "title": "阅读 Traceback 定位错误",
+      "knowledgeNodeIds": ["py-common-errors"],
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "阅读以下错误信息，回答：(1) 错误类型是什么？(2) 哪一行出错？(3) 怎么修复？\n\n```\nTraceback (most recent call last):\n  File \"main.py\", line 3, in <module>\n    result = 10 / 0\nZeroDivisionError: division by zero\n```",
+      "answer": "(1) ZeroDivisionError (2) 第 3 行 (3) 确保除数不为 0，或用 try/except 捕获",
+      "solutionSteps": [
+        "最后一行显示错误类型：ZeroDivisionError",
+        "File \"main.py\", line 3 指出出错位置",
+        "10 / 0 试图除以零，Python 不允许",
+        "修复：检查除数是否为 0，或用 if 判断，或用 try/except"
+      ],
+      "hints": [
+        { "level": "L1", "text": "Traceback 最后一行是什么错误类型？" },
+        { "level": "L2", "text": "错误信息中的 line 3 指的是哪一行代码？" },
+        { "level": "L3", "text": "在除法之前加一个 if 判断除数是否为 0，怎么写？" }
+      ],
+      "source": {
+        "title": "TeacherAgent original Python questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "py-q008-exception-handling",
+      "title": "异常处理实践",
+      "knowledgeNodeIds": ["py-exceptions"],
+      "type": "solution",
+      "difficulty": 2,
+      "content": "写一个函数 safe_int(s)，把字符串 s 转换为整数。如果 s 不能转换（如 \"abc\"），返回默认值 0。要求使用 try/except。",
+      "answer": "def safe_int(s):\n    try:\n        return int(s)\n    except (ValueError, TypeError):\n        return 0",
+      "solutionSteps": [
+        "定义函数 safe_int(s)",
+        "在 try 块中尝试 return int(s)",
+        "在 except 中捕获 ValueError 和 TypeError",
+        "捕获异常时返回默认值 0"
+      ],
+      "hints": [
+        { "level": "L1", "text": "int(\"abc\") 会抛出什么类型的异常？" },
+        { "level": "L2", "text": "try 块里放 int(s)，except 里捕获对应的异常类型。" },
+        { "level": "L3", "text": "除了 ValueError，还有哪些异常类型可能在类型转换时出现？" }
+      ],
+      "source": {
+        "title": "TeacherAgent original Python questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    }
+  ]
+}

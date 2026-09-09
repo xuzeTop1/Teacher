@@ -1,0 +1,868 @@
+{
+  "subject": "management",
+  "course": "writing",
+  "chapter": "management-writing",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "management-writing-q001",
+      "title": "任务辨析",
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "论证有效性分析的核心任务是：",
+      "answer": "B",
+      "solutionSteps": [
+        "该题型要求评析原论证漏洞，而非另立主张。",
+        "A是论说文任务。",
+        "C、D不符。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "任务=分析原论证缺陷。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "落笔前用'观点—论据—逻辑'三问自检。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-writing-001"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 表达自己对话题的看法",
+        "B. 指出并分析原论证的逻辑缺陷",
+        "C. 支持原文结论",
+        "D. 改写原文"
+      ]
+    },
+    {
+      "id": "management-writing-q002",
+      "title": "缺陷识别",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "原文：'某城去年游客增，今年酒店扩建必赚。'最明显的缺陷是：",
+      "answer": "B",
+      "solutionSteps": [
+        "把游客增与酒店盈利的相关当必然，且'必'字绝对化。",
+        "属因果不当+绝对化。",
+        "非样本问题。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "漏洞在因果推断过度+绝对化。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "先确认文体：分析重评析，立论重论证。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-writing-002"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 用词不当",
+        "B. 由游客增跳跃到酒店必赚，忽略竞争与成本",
+        "C. 样本小",
+        "D. 概念不清"
+      ]
+    },
+    {
+      "id": "management-writing-q003",
+      "title": "缺陷概括",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "分析缺陷时，最佳概括句式是：",
+      "answer": "B",
+      "solutionSteps": [
+        "具体指出推理断裂处更有力。",
+        "空泛评价无效。",
+        "B点明推理步骤。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "概括要具体到推理断裂。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "每段只攻一个分论点，避免混杂。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-writing-003"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. '这个论证不好'",
+        "B. '由A推不出B，因为……'",
+        "C. '作者错了'",
+        "D. '显然有误'"
+      ]
+    },
+    {
+      "id": "management-writing-q004",
+      "title": "段落结构",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "分析一个缺陷的段落，合理的展开顺序是：",
+      "answer": "B",
+      "solutionSteps": [
+        "三段式：引、析、果最清晰。",
+        "缺分析或后果都单薄。",
+        "结构清晰得分高。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "每段三步走。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "引用材料要简，亮观点要快。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-writing-004"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 结论—引述—分析",
+        "B. 引述缺陷—分析理由—指出后果",
+        "C. 只写后果",
+        "D. 只引述"
+      ]
+    },
+    {
+      "id": "management-writing-q005",
+      "title": "审题立意",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "材料讨论'快与慢'，最佳立意是：",
+      "answer": "C",
+      "solutionSteps": [
+        "二元话题宜辩证，避免绝对化。",
+        "A、B绝对化，D跑题。",
+        "C扣核心且可展开。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "辩证立意优于极端。"
+        },
+        {
+          "level": "L2",
+          "text": "选C。"
+        },
+        {
+          "level": "L3",
+          "text": "结尾回扣观点，不要另开新话题。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-writing-005"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. '快一定好'",
+        "B. '慢一定好'",
+        "C. '因事制宜，快慢各有其用'",
+        "D. '时间不存在'"
+      ]
+    },
+    {
+      "id": "management-writing-q006",
+      "title": "论据相关",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "论点为'阅读提升思辨力'，下列最适合作论据的是：",
+      "answer": "B",
+      "solutionSteps": [
+        "论据需典型、相关、有支撑力。",
+        "B直接相关且具研究支撑。",
+        "其余无关。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "选相关且典型的论据。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "落笔前用'观点—论据—逻辑'三问自检。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-writing-006"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 某人爱看电影",
+        "B. 一项研究显示深度阅读者更善多角度思考",
+        "C. 今天天气好",
+        "D. 书很贵"
+      ]
+    },
+    {
+      "id": "management-writing-q007",
+      "title": "论证方法",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "要说明'逆境促人成长'，最贴合的论证方法是：",
+      "answer": "B",
+      "solutionSteps": [
+        "对比+举例最有说服力。",
+        "单一方法偏弱。",
+        "B组合方法。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "方法要贴合论点。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "先确认文体：分析重评析，立论重论证。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-writing-007"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 仅引用名言",
+        "B. 对比顺境与逆境中人的差异并举例",
+        "C. 只抒情",
+        "D. 重复论点"
+      ]
+    },
+    {
+      "id": "management-writing-q008",
+      "title": "文章结构",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "论说文的标准结构通常是：",
+      "answer": "B",
+      "solutionSteps": [
+        "标准三段：引、本、结。",
+        "开头亮观点，本论分点，结尾收束。",
+        "结构清晰。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "三段式结构。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "每段只攻一个分论点，避免混杂。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-writing-008"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 本论—引论—结论",
+        "B. 引论（亮观点）—本论（分层论证）—结论",
+        "C. 只写开头",
+        "D. 随意分段"
+      ]
+    },
+    {
+      "id": "management-writing-q009",
+      "title": "语言连贯",
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "保证段落连贯最关键是：",
+      "answer": "B",
+      "solutionSteps": [
+        "连贯靠逻辑与过渡词。",
+        "华丽不保证连贯。",
+        "B是核心。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "连贯=逻辑+过渡。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "引用材料要简，亮观点要快。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-writing-009"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 多用成语",
+        "B. 逻辑衔接与过渡",
+        "C. 句子长",
+        "D. 辞藻华丽"
+      ]
+    },
+    {
+      "id": "management-writing-q010",
+      "title": "概念辨析",
+      "type": "diagnostic",
+      "difficulty": 3,
+      "content": "材料中'自由'与'无序'被混用，写作时应先：",
+      "answer": "B",
+      "solutionSteps": [
+        "近义易混概念先界定再论，防偷换。",
+        "界定是前提。",
+        "B正确。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先界定概念。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "结尾回扣观点，不要另开新话题。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-writing-010"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 直接反驳",
+        "B. 界定二词含义再讨论关系",
+        "C. 忽略",
+        "D. 当同义用"
+      ]
+    },
+    {
+      "id": "management-writing-q011",
+      "title": "让步反驳",
+      "type": "diagnostic",
+      "difficulty": 3,
+      "content": "写反驳段，最佳策略是：",
+      "answer": "B",
+      "solutionSteps": [
+        "让步显公允，反驳打核心。",
+        "全盘否定显得偏激。",
+        "B最佳。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "让步+反驳核心。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "落笔前用'观点—论据—逻辑'三问自检。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-writing-011"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 全盘否定对方",
+        "B. 先承认合理处再反驳核心",
+        "C. 只骂对方",
+        "D. 不提对方"
+      ]
+    },
+    {
+      "id": "management-writing-q012",
+      "title": "数据论据",
+      "type": "diagnostic",
+      "difficulty": 3,
+      "content": "引用'某调查显示80%人支持'时，最需注意：",
+      "answer": "B",
+      "solutionSteps": [
+        "数据需可溯源、明口径。",
+        "孤百分比易被误读。",
+        "B正确。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "数据要可溯源。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "先确认文体：分析重评析，立论重论证。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-writing-012"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 数字够大",
+        "B. 说明来源与口径，避免断章取义",
+        "C. 只写百分比",
+        "D. 不必溯源"
+      ]
+    },
+    {
+      "id": "management-writing-q013",
+      "title": "立意偏差",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "下列哪种最可能是立意偏差？",
+      "answer": "B",
+      "solutionSteps": [
+        "二元对立是常见偏差。",
+        "绝对化失分。",
+        "B偏差。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "避免非黑即白。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "每段只攻一个分论点，避免混杂。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-writing-013"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 紧扣材料",
+        "B. 把材料当非黑即白对立",
+        "C. 分点论证",
+        "D. 回扣观点"
+      ]
+    },
+    {
+      "id": "management-writing-q014",
+      "title": "标题开头",
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "开头部分最应避免：",
+      "answer": "B",
+      "solutionSteps": [
+        "开头宜简引材料即亮观点。",
+        "照抄浪费篇幅。",
+        "B避免。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "开头忌抄材料。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "引用材料要简，亮观点要快。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-writing-014"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 亮明观点",
+        "B. 大段照抄材料",
+        "C. 简引材料",
+        "D. 点题"
+      ]
+    },
+    {
+      "id": "management-writing-q015",
+      "title": "结尾",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "结尾升华应：",
+      "answer": "B",
+      "solutionSteps": [
+        "结尾回扣+适度升华。",
+        "照抄或跑题均差。",
+        "B正确。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "结尾回扣并升华。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "结尾回扣观点，不要另开新话题。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-writing-015"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 照抄开头",
+        "B. 回扣论点并上升到普遍意义",
+        "C. 突然换题",
+        "D. 不写结尾"
+      ]
+    },
+    {
+      "id": "management-writing-q016",
+      "title": "时间篇幅",
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "写作前花几分钟列提纲的主要目的是：",
+      "answer": "B",
+      "solutionSteps": [
+        "提纲防跑题控篇幅。",
+        "先结构后填充。",
+        "B正确。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "提纲保结构。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "落笔前用'观点—论据—逻辑'三问自检。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-writing-016"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 拖延时间",
+        "B. 防止跑题并控制篇幅",
+        "C. 凑字数",
+        "D. 应付格式"
+      ]
+    },
+    {
+      "id": "management-writing-q017",
+      "title": "谬误识别",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "对方说'大家都在用，所以肯定好'，可反驳其：",
+      "answer": "B",
+      "solutionSteps": [
+        "以众人之行代替理由，是诉诸大众。",
+        "属论证方式谬误。",
+        "B正确。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "识别诉诸大众。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "先确认文体：分析重评析，立论重论证。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-writing-017"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 用词",
+        "B. 诉诸大众的谬误",
+        "C. 语法",
+        "D. 标点"
+      ]
+    },
+    {
+      "id": "management-writing-q018",
+      "title": "比喻边界",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "把'市场如战场'的比喻直接当作事实论据，问题是：",
+      "answer": "B",
+      "solutionSteps": [
+        "类比/比喻用于修辞或推理需检验可比性，不能直接当事实。",
+        "B正确。",
+        "修辞$\\neq$证据。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "比喻非证据。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "每段只攻一个分论点，避免混杂。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-writing-018"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 比喻生动",
+        "B. 修辞不能替代可检验的证据",
+        "C. 比喻太长",
+        "D. 无关紧要"
+      ]
+    },
+    {
+      "id": "management-writing-q019",
+      "title": "文体立场",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "论证有效性分析写作应保持：",
+      "answer": "B",
+      "solutionSteps": [
+        "分析体重评析不重表态。",
+        "立场要求因文体而异。",
+        "B正确。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "分析体重评析。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "引用材料要简，亮观点要快。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-writing-019"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 强烈个人立场",
+        "B. 对原论证的中立评析",
+        "C. 情绪化",
+        "D. 只赞美"
+      ]
+    },
+    {
+      "id": "management-writing-q020",
+      "title": "自查清单",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "写完文章自查，最该先查的是：",
+      "answer": "B",
+      "solutionSteps": [
+        "结构逻辑优先于文法细节。",
+        "B是核心自查项。",
+        "先逻辑后辞藻。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "自查先看逻辑。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "结尾回扣观点，不要另开新话题。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-writing-020"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 错别字",
+        "B. 观点是否明确、逻辑是否断裂",
+        "C. 标点",
+        "D. 字数格式"
+      ]
+    }
+  ]
+}

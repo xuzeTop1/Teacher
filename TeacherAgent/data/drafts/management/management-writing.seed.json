@@ -1,0 +1,682 @@
+{
+  "subject": "management",
+  "course": "writing",
+  "chapter": "management-writing",
+  "status": "draft",
+  "nodes": [
+    {
+      "id": "management-writing-001",
+      "title": "论证有效性分析的任务",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "论证有效性分析要求识别给定论证中的逻辑缺陷并分析其为何削弱结论，而非发表自己观点。",
+      "prerequisites": [],
+      "misconceptions": [
+        "把它写成驳论文",
+        "只说结论不对不分析"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这道题让你'分析'而不是'反对'，区别在哪？"
+        },
+        {
+          "level": "L2",
+          "text": "任务是评析原论证的漏洞，不是另立主张。"
+        },
+        {
+          "level": "L3",
+          "text": "先找论证结构再找漏洞。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-writing-002",
+      "title": "常见论证缺陷类型",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "常见缺陷：以偏概全、因果不当、概念混淆、类比失当、非黑即白、滑坡等。",
+      "prerequisites": [
+        "management-writing-001"
+      ],
+      "misconceptions": [
+        "只列名称不分析",
+        "把合理推理当缺陷"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "原文最可能被从哪类漏洞攻破？"
+        },
+        {
+          "level": "L2",
+          "text": "指出缺陷后要说明它如何削弱结论。"
+        },
+        {
+          "level": "L3",
+          "text": "先归类再评析。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-writing-003",
+      "title": "缺陷的定位与概括",
+      "level": "method",
+      "difficulty": 2,
+      "summary": "定位缺陷要引用原文关键句，概括时用'XX推不出YY'的句式点明推理断裂处。",
+      "prerequisites": [
+        "management-writing-002"
+      ],
+      "misconceptions": [
+        "概括空泛",
+        "不引用原文"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "用原文哪句话能证明这里断了？"
+        },
+        {
+          "level": "L2",
+          "text": "概括要具体到推理步骤。"
+        },
+        {
+          "level": "L3",
+          "text": "'由A推B不成立'比'有问题'有力。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-writing-004",
+      "title": "分析的层次结构",
+      "level": "method",
+      "difficulty": 2,
+      "summary": "行文按'引述缺陷—分析理由—指出后果'展开，每段聚焦一个缺陷，条理清晰。",
+      "prerequisites": [
+        "management-writing-003"
+      ],
+      "misconceptions": [
+        "一段堆多个缺陷",
+        "缺乏分析只下结论"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "一段最好只解决一个缺陷，为什么？便于深入。"
+        },
+        {
+          "level": "L2",
+          "text": "每段三步走：引、析、果。"
+        },
+        {
+          "level": "L3",
+          "text": "结构清晰评分更高。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-writing-005",
+      "title": "论说文的审题立意",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "论说文先审清材料的核心矛盾与价值取向，再确立明确、可展开的论点。",
+      "prerequisites": [],
+      "misconceptions": [
+        "立意偏题",
+        "论点过大无从下手"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "材料真正想讨论的矛盾是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "立意要扣材料核心，不另起炉灶。"
+        },
+        {
+          "level": "L3",
+          "text": "论点宜小宜深。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-writing-006",
+      "title": "论点与论据",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "论点是文章主张，论据是用以支撑的材料；论据需典型、真实且与论点相关。",
+      "prerequisites": [
+        "management-writing-005"
+      ],
+      "misconceptions": [
+        "论据与论点无关",
+        "用孤例代替论证"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个例子到底在支撑哪句话？"
+        },
+        {
+          "level": "L2",
+          "text": "论据相关且典型才有效。"
+        },
+        {
+          "level": "L3",
+          "text": "避免以个例代替普遍论证。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-writing-007",
+      "title": "论证方法",
+      "level": "method",
+      "difficulty": 2,
+      "summary": "常用论证：举例、对比、因果、引用、类比；根据论点选择最贴合的方法。",
+      "prerequisites": [
+        "management-writing-006"
+      ],
+      "misconceptions": [
+        "方法单一",
+        "方法与方法间无过渡"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个论点用对比还是举例更有力？"
+        },
+        {
+          "level": "L2",
+          "text": "多种方法组合增强说服力。"
+        },
+        {
+          "level": "L3",
+          "text": "段落间要有过渡。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-writing-008",
+      "title": "结构布局",
+      "level": "method",
+      "difficulty": 2,
+      "summary": "常见结构：引论（亮明观点）—本论（分层论证）—结论（升华收束）。",
+      "prerequisites": [
+        "management-writing-005"
+      ],
+      "misconceptions": [
+        "无明确结论",
+        "本论不分点"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "文章开头是否亮明了观点？"
+        },
+        {
+          "level": "L2",
+          "text": "本论分$2-3$个分论点最稳。"
+        },
+        {
+          "level": "L3",
+          "text": "结尾回扣观点。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-writing-009",
+      "title": "语言表达与逻辑连贯",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "写作语言应准确、简练、连贯；过渡词与逻辑连接保证段落间脉络清晰。",
+      "prerequisites": [
+        "management-writing-007"
+      ],
+      "misconceptions": [
+        "堆砌辞藻",
+        "段间断裂"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这段和上段靠什么连起来？"
+        },
+        {
+          "level": "L2",
+          "text": "连贯靠逻辑而非华丽词。"
+        },
+        {
+          "level": "L3",
+          "text": "删掉不服务论点的修饰。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-writing-010",
+      "title": "审题中的概念辨析",
+      "level": "method",
+      "difficulty": 3,
+      "summary": "材料含近义或易混概念时，先界定各自含义再讨论关系，避免偷换。",
+      "prerequisites": [
+        "management-writing-005"
+      ],
+      "misconceptions": [
+        "不界定就混用",
+        "把比喻当定义"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "材料里的'自由'和'秩序'你界定清楚了吗？"
+        },
+        {
+          "level": "L2",
+          "text": "先界定再论证。"
+        },
+        {
+          "level": "L3",
+          "text": "比喻不能直接当定义用。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-writing-011",
+      "title": "反驳与让步",
+      "level": "method",
+      "difficulty": 3,
+      "summary": "先承认对方合理之处再反驳，能增强公允性；反驳要针对核心而非枝节。",
+      "prerequisites": [
+        "management-writing-007"
+      ],
+      "misconceptions": [
+        "全盘否定对方",
+        "反驳枝节"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "对方有没有一点道理可以先承认？"
+        },
+        {
+          "level": "L2",
+          "text": "让步显公允，但反驳要打核心。"
+        },
+        {
+          "level": "L3",
+          "text": "针对要害。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-writing-012",
+      "title": "数据型论据的使用",
+      "level": "method",
+      "difficulty": 3,
+      "summary": "引用数据要说明来源与口径，避免断章取义；用数据支撑趋势而非孤点。",
+      "prerequisites": [
+        "management-writing-006"
+      ],
+      "misconceptions": [
+        "滥用无源数据",
+        "用孤点代表趋势"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个数据出处和口径清楚吗？"
+        },
+        {
+          "level": "L2",
+          "text": "数据需可溯源。"
+        },
+        {
+          "level": "L3",
+          "text": "用趋势而非单个数字下结论。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-writing-013",
+      "title": "常见立意偏差",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "偏差包括跑题、二元对立、绝对化；审题时主动列出反面观点可纠偏。",
+      "prerequisites": [
+        "management-writing-005"
+      ],
+      "misconceptions": [
+        "写作中转向",
+        "观点绝对化"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "有没有可能我对材料理解偏了？先列反方。"
+        },
+        {
+          "level": "L2",
+          "text": "避免非黑即白。"
+        },
+        {
+          "level": "L3",
+          "text": "绝对化表述易失分。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-writing-014",
+      "title": "标题与开头",
+      "level": "method",
+      "difficulty": 1,
+      "summary": "标题应点明论点或核心词；开头简要引述材料并亮明观点，避免冗长复述。",
+      "prerequisites": [
+        "management-writing-008"
+      ],
+      "misconceptions": [
+        "标题空泛",
+        "开头大段抄材料"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "你的标题让人一眼看出论点吗？"
+        },
+        {
+          "level": "L2",
+          "text": "开头亮观点胜过复述材料。"
+        },
+        {
+          "level": "L3",
+          "text": "简引材料即入题。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-writing-015",
+      "title": "结尾升华",
+      "level": "method",
+      "difficulty": 2,
+      "summary": "结尾回扣论点并适度升华到普遍意义或价值层面，避免简单重复开头。",
+      "prerequisites": [
+        "management-writing-008"
+      ],
+      "misconceptions": [
+        "结尾跑题",
+        "完全重复开头"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "结尾比开头多了什么？普遍意义。"
+        },
+        {
+          "level": "L2",
+          "text": "升华要自然不空洞。"
+        },
+        {
+          "level": "L3",
+          "text": "回扣而非照抄。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-writing-016",
+      "title": "时间管理与篇幅",
+      "level": "method",
+      "difficulty": 1,
+      "summary": "论证有效性分析约600字、论说文约700字；先列提纲再写，避免中途跑题。",
+      "prerequisites": [],
+      "misconceptions": [
+        "提笔就写无提纲",
+        "篇幅失控"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "动笔前用2分钟列提纲值不值？值。"
+        },
+        {
+          "level": "L2",
+          "text": "提纲防跑题控篇幅。"
+        },
+        {
+          "level": "L3",
+          "text": "先结构后填充。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-writing-017",
+      "title": "谬误在写作中的识别",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "写作中识别对方可能使用的谬误（如诉诸情感），可成为有力反驳点。",
+      "prerequisites": [
+        "management-writing-002"
+      ],
+      "misconceptions": [
+        "只反驳结论",
+        "忽视论证方式"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "对方是在讲理还是煽动情绪？"
+        },
+        {
+          "level": "L2",
+          "text": "攻击论证方式也是反驳。"
+        },
+        {
+          "level": "L3",
+          "text": "识别谬误即找到突破口。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-writing-018",
+      "title": "比喻与类比的边界",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "比喻用于增强表达，类比用于推理；把比喻当事实论据是逻辑错误。",
+      "prerequisites": [
+        "management-writing-007"
+      ],
+      "misconceptions": [
+        "把修辞当证据",
+        "类比失当不察"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个比喻是在说理还是在修饰？"
+        },
+        {
+          "level": "L2",
+          "text": "类比推理要检验可比性。"
+        },
+        {
+          "level": "L3",
+          "text": "修辞不能替代证据。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-writing-019",
+      "title": "价值中立与立场",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "分析类写作保持对原论证的中立评析；论说文才需明确立场并论证。",
+      "prerequisites": [
+        "management-writing-001"
+      ],
+      "misconceptions": [
+        "两体混淆立场",
+        "评析带情绪"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这篇是'分析'还是'立论'？立场要求不同。"
+        },
+        {
+          "level": "L2",
+          "text": "有效性分析重评析不重表态。"
+        },
+        {
+          "level": "L3",
+          "text": "分清文体再定语气。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-writing-020",
+      "title": "修改与自查清单",
+      "level": "method",
+      "difficulty": 2,
+      "summary": "写完自查：观点是否明确、每段是否一个分论点、论据是否相关、有无逻辑断裂。",
+      "prerequisites": [
+        "management-writing-008"
+      ],
+      "misconceptions": [
+        "写完不检查",
+        "只查错别字"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "用清单过一遍结构比只改字更有用。"
+        },
+        {
+          "level": "L2",
+          "text": "自查看逻辑而非仅文法。"
+        },
+        {
+          "level": "L3",
+          "text": "结构优先于辞藻。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    }
+  ]
+}

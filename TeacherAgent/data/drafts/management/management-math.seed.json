@@ -1,0 +1,684 @@
+{
+  "subject": "management",
+  "course": "math",
+  "chapter": "management-math",
+  "status": "draft",
+  "nodes": [
+    {
+      "id": "management-math-001",
+      "title": "整数与整除",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "整除指a除以b余数为0；公约数、公倍数与最大公约数、最小公倍数常用于比例与分组问题。",
+      "prerequisites": [],
+      "misconceptions": [
+        "混淆整除与除尽",
+        "忽略0的特殊性"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "两个数'整除'和'除尽'有什么区别？"
+        },
+        {
+          "level": "L2",
+          "text": "整除要求余数为0且一般为整数间。"
+        },
+        {
+          "level": "L3",
+          "text": "最大公约数用来化简比例最高效。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-math-002",
+      "title": "分数、比例与百分数",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "比例是数量间的倍数关系；百分数便于比较；统一基数后才能比较不同总体的百分比。",
+      "prerequisites": [
+        "management-math-001"
+      ],
+      "misconceptions": [
+        "直接比较不同基数百分比",
+        "把增长率当绝对量"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "比较百分比前，先确认它们是不是同一总体。"
+        },
+        {
+          "level": "L2",
+          "text": "比例可转化为分数运算。"
+        },
+        {
+          "level": "L3",
+          "text": "增长率是相对量，不等于绝对增量。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-math-003",
+      "title": "平均值与加权",
+      "level": "method",
+      "difficulty": 2,
+      "summary": "算术平均是总和除以个数；加权平均按权重计算，权重不同结果可能偏向权重大的一组。",
+      "prerequisites": [
+        "management-math-002"
+      ],
+      "misconceptions": [
+        "把分组平均直接再平均",
+        "忽略权重"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "两组平均数不同，总平均等于简单平均吗？"
+        },
+        {
+          "level": "L2",
+          "text": "加权要在总平均中考虑各组人数。"
+        },
+        {
+          "level": "L3",
+          "text": "先乘权重再加总再除权重和。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-math-004",
+      "title": "行程问题",
+      "level": "method",
+      "difficulty": 2,
+      "summary": "基本关系：路程=速度$\\times$时间；相遇、追及分别用速度和与速度差列式。",
+      "prerequisites": [
+        "management-math-001"
+      ],
+      "misconceptions": [
+        "混淆相遇与追及公式",
+        "单位不统一就代入"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "两人相向，用速度和还是速度差？"
+        },
+        {
+          "level": "L2",
+          "text": "相遇用速度和$\\times$时间=路程和。"
+        },
+        {
+          "level": "L3",
+          "text": "追及用速度差$\\times$时间=路程差。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-math-005",
+      "title": "工程问题",
+      "level": "method",
+      "difficulty": 2,
+      "summary": "设工作总量为1，效率=1/时间；多人合作效率相加，合作时间=1/总效率。",
+      "prerequisites": [
+        "management-math-001"
+      ],
+      "misconceptions": [
+        "直接加时间",
+        "忘记总量归一"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "把总工作量设为1，效率就是每天做几分之一。"
+        },
+        {
+          "level": "L2",
+          "text": "合作时把效率相加而非时间相加。"
+        },
+        {
+          "level": "L3",
+          "text": "时间=总量$\\div$总效率。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-math-006",
+      "title": "浓度问题",
+      "level": "method",
+      "difficulty": 3,
+      "summary": "浓度=溶质/溶液；稀释或混合用溶质守恒列方程，十字交叉法可快速配比。",
+      "prerequisites": [
+        "management-math-002"
+      ],
+      "misconceptions": [
+        "用溶液量代替溶质量",
+        "忽略体积是否可加"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "混合前后什么量不变？溶质质量。"
+        },
+        {
+          "level": "L2",
+          "text": "用溶质守恒列式最稳妥。"
+        },
+        {
+          "level": "L3",
+          "text": "十字交叉法适合两种浓度混合。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-math-007",
+      "title": "排列与组合基础",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "排列考虑顺序，组合不考虑；从$n$取$k$排列数$A(n,k)$，组合数$C(n,k)=A\\frac{(n,k)}{k}!$。",
+      "prerequisites": [
+        "management-math-001"
+      ],
+      "misconceptions": [
+        "混淆排列与组合",
+        "忘记0!=1"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "选人和排座位，哪个要管顺序？"
+        },
+        {
+          "level": "L2",
+          "text": "顺序有关用排列，无关用组合。"
+        },
+        {
+          "level": "L3",
+          "text": "先判断是否计顺序再套公式。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-math-008",
+      "title": "概率初步",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "古典概型概率=有利数/总数；独立事件概率相乘，互斥事件概率相加。",
+      "prerequisites": [
+        "management-math-007"
+      ],
+      "misconceptions": [
+        "把独立当互斥",
+        "忽略样本空间变化"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "两次抽奖互不影响，概率怎么算？相乘。"
+        },
+        {
+          "level": "L2",
+          "text": "互斥指不能同时发生，概率相加。"
+        },
+        {
+          "level": "L3",
+          "text": "先明确样本空间再数有利情况。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-math-009",
+      "title": "集合与容斥原理",
+      "level": "method",
+      "difficulty": 2,
+      "summary": "容斥原理：$|A\\cup B|=|A|+|B|-|A\\cap B|$；三集合再加减相应交集，用于计数去重。",
+      "prerequisites": [
+        "management-math-007"
+      ],
+      "misconceptions": [
+        "直接相加导致重复计数",
+        "漏掉三交集项"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "两群人有重叠，总数能直接相加吗？不能，要减交集。"
+        },
+        {
+          "level": "L2",
+          "text": "容斥本质是加总后剔除重复。"
+        },
+        {
+          "level": "L3",
+          "text": "三集合公式注意加减符号。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-math-010",
+      "title": "数列基础",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "等差数列公差恒定，等比数列公比恒定；求和公式分别依赖首项、项数、公差/公比。",
+      "prerequisites": [
+        "management-math-001"
+      ],
+      "misconceptions": [
+        "混淆等差与等比",
+        "代错求和公式"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "相邻项差恒定还是比恒定？决定数列类型。"
+        },
+        {
+          "level": "L2",
+          "text": "等差用公差d，等比用公比q。"
+        },
+        {
+          "level": "L3",
+          "text": "求和前先判类型。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-math-011",
+      "title": "方程与不等式",
+      "level": "method",
+      "difficulty": 2,
+      "summary": "一元一次与一次方程组通过消元求解；不等式注意乘以负数要变号。",
+      "prerequisites": [
+        "management-math-001"
+      ],
+      "misconceptions": [
+        "不等式乘负数不变号",
+        "移项符号错"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "不等式两边乘负数，不等号方向要翻转。"
+        },
+        {
+          "level": "L2",
+          "text": "方程组消元先对齐变量。"
+        },
+        {
+          "level": "L3",
+          "text": "检验解可代回原式。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-math-012",
+      "title": "函数与图像",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "函数描述自变量到因变量的映射；图像上单调性、交点、截距反映函数性质。",
+      "prerequisites": [
+        "management-math-010"
+      ],
+      "misconceptions": [
+        "把图像当几何图形",
+        "混淆自变量因变量"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "横坐标代表什么？自变量。"
+        },
+        {
+          "level": "L2",
+          "text": "单调性看图像升降。"
+        },
+        {
+          "level": "L3",
+          "text": "交点对应方程解。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-math-013",
+      "title": "平面几何基础",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "三角形内角和$180\\circ$，相似看角等或边成比例，勾股定理适用于直角三角形。",
+      "prerequisites": [],
+      "misconceptions": [
+        "把相似当全等",
+        "非直角用勾股定理"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "两个三角形角都对应相等，它们全等吗？不一定，可能只是相似。"
+        },
+        {
+          "level": "L2",
+          "text": "勾股定理只在直角三角形成立。"
+        },
+        {
+          "level": "L3",
+          "text": "先判定图形类型再选公式。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-math-014",
+      "title": "面积与体积",
+      "level": "method",
+      "difficulty": 2,
+      "summary": "常见图形面积公式与柱体体积=底面积$\\times$高；不规则图形可分割或补全后再算。",
+      "prerequisites": [
+        "management-math-013"
+      ],
+      "misconceptions": [
+        "单位不平方/立方",
+        "直接套错图形公式"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "面积是二维用平方单位，体积是三维。"
+        },
+        {
+          "level": "L2",
+          "text": "不规则图形拆成熟悉图形求和。"
+        },
+        {
+          "level": "L3",
+          "text": "先统一单位再计算。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-math-015",
+      "title": "数据与图表",
+      "level": "method",
+      "difficulty": 1,
+      "summary": "条形图比大小、折线图看趋势、饼图看占比；读图先看清坐标与单位。",
+      "prerequisites": [
+        "management-math-003"
+      ],
+      "misconceptions": [
+        "混淆图表用途",
+        "忽略坐标轴刻度"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "想看变化趋势该用哪种图？折线图。"
+        },
+        {
+          "level": "L2",
+          "text": "饼图适合展示构成比例。"
+        },
+        {
+          "level": "L3",
+          "text": "先读坐标轴和单位再下结论。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-math-016",
+      "title": "最值问题",
+      "level": "method",
+      "difficulty": 3,
+      "summary": "最值常在边界或取等条件取得；用均值不等式需满足正、定、等三条件。",
+      "prerequisites": [
+        "management-math-011"
+      ],
+      "misconceptions": [
+        "滥用均值不等式",
+        "忽略取等条件"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "用$a+b\\ge2\\\\sqrt{a}b$前，三项条件满足吗？"
+        },
+        {
+          "level": "L2",
+          "text": "最值多在约束边界出现。"
+        },
+        {
+          "level": "L3",
+          "text": "检查能否取到等号。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-math-017",
+      "title": "比例应用题",
+      "level": "method",
+      "difficulty": 2,
+      "summary": "比例分配按份额拆分总量；连比可设公共倍数k统一表示各量。",
+      "prerequisites": [
+        "management-math-002"
+      ],
+      "misconceptions": [
+        "份额算错总数",
+        "连比不设k"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "总量按2:3:5分，先求总份数再算每份。"
+        },
+        {
+          "level": "L2",
+          "text": "连比设k能避免混乱。"
+        },
+        {
+          "level": "L3",
+          "text": "先总份后每份。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-math-018",
+      "title": "日期与周期",
+      "level": "method",
+      "difficulty": 1,
+      "summary": "星期以7为周期；平年365天、闰年366天，周期问题用除以周期取余数定位。",
+      "prerequisites": [
+        "management-math-001"
+      ],
+      "misconceptions": [
+        "忽略闰年",
+        "余数对应错"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "过n天后是星期几？用n mod 7。"
+        },
+        {
+          "level": "L2",
+          "text": "闰年2月多1天要计入。"
+        },
+        {
+          "level": "L3",
+          "text": "余数是偏移量，注意起点。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-math-019",
+      "title": "逻辑推理与数学结合",
+      "level": "method",
+      "difficulty": 3,
+      "summary": "将逻辑条件转化为代数或表格约束，用枚举与排除求解最值或匹配。",
+      "prerequisites": [
+        "management-math-009"
+      ],
+      "misconceptions": [
+        "条件多时乱试",
+        "不建表"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "把每个条件写成约束，再系统地排除。"
+        },
+        {
+          "level": "L2",
+          "text": "表格法能把隐形条件显式化。"
+        },
+        {
+          "level": "L3",
+          "text": "数学与逻辑结合题先结构化条件。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-math-020",
+      "title": "估算与近似",
+      "level": "method",
+      "difficulty": 2,
+      "summary": "估算用数量级与四舍五入快速判断数量关系，适合选项差距大的选择题。",
+      "prerequisites": [
+        "management-math-002"
+      ],
+      "misconceptions": [
+        "估算当精确值",
+        "舍入方向错"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "选项差很多时，需要精确算吗？往往估算即可。"
+        },
+        {
+          "level": "L2",
+          "text": "估算先抓数量级。"
+        },
+        {
+          "level": "L3",
+          "text": "注意舍入带来的方向偏差。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    }
+  ]
+}

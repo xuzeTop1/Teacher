@@ -1,0 +1,304 @@
+{
+  "subject": "math",
+  "course": "calculus",
+  "chapter": "indefinite-integrals",
+  "status": "approved",
+  "questions": [
+    {
+      "id": "math-integ-q001-basic",
+      "title": "基本积分计算",
+      "knowledgeNodeIds": [
+        "math-integral-basic-formulas"
+      ],
+      "type": "solution",
+      "difficulty": 1,
+      "content": "求 $\\int(3x^2 - 2\\sin x + e^x)dx$。",
+      "answer": "$x^3 + 2\\cos x + e^x + C$",
+      "solutionSteps": [
+        "$\\int 3x^2\\,dx = x^3$",
+        "$\\int(-2\\sin x)dx = 2\\cos x$",
+        "$\\int e^x\\,dx = e^x$",
+        "合并：$x^3 + 2\\cos x + e^x + C$"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "用线性性质逐项积分。"
+        },
+        {
+          "level": "L2",
+          "text": "$\\int\\sin x dx$是什么？注意符号。"
+        },
+        {
+          "level": "L3",
+          "text": "积分常数 C 在定积分中为什么不需要？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-integ-q002-substitution",
+      "title": "换元积分",
+      "knowledgeNodeIds": [
+        "math-integral-substitution"
+      ],
+      "type": "solution",
+      "difficulty": 2,
+      "content": "求 $\\int x\\cdot\\cos(x^2)dx$。",
+      "answer": "$\\frac{1}{2}\\sin(x^2) + C$",
+      "solutionSteps": [
+        "令 $u = x^2$，$du = 2x\\,dx$，即 $x\\,dx = \\frac{du}{2}$",
+        "$\\int x\\cos(x^2)dx = \\int\\cos u\\cdot\\frac{du}{2} = \\frac{1}{2}\\sin u + C$",
+        "回代：$\\frac{1}{2}\\sin(x^2) + C$"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "被积函数中哪部分是另一部分的导数（差常数）？"
+        },
+        {
+          "level": "L2",
+          "text": "令 $u = x^2$，$du = ?$，原积分变成什么？"
+        },
+        {
+          "level": "L3",
+          "text": "如果被积函数是 $x^2*e^(x^3)$，换元 $u=x^3$后 $du$是多少？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-integ-q003-parts",
+      "title": "分部积分",
+      "knowledgeNodeIds": [
+        "math-integral-by-parts"
+      ],
+      "type": "solution",
+      "difficulty": 2,
+      "content": "求 $\\int x\\cdot e^xdx$。",
+      "answer": "$xe^x - e^x + C = e^x(x-1) + C$",
+      "solutionSteps": [
+        "令 $u = x, dv = e^xdx$",
+        "$du = dx, v = e^x$",
+        "$\\int x\\cdot e^xdx = x\\cdot e^x - \\int e^xdx = xe^x - e^x + C$",
+        "化简：$e^x(x-1) + C$"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "用 LIATE 法则选 u，剩下的作为 dv。"
+        },
+        {
+          "level": "L2",
+          "text": "分部公式 $\\int u\\,dv = uv - \\int v\\,du$，代入试试。"
+        },
+        {
+          "level": "L3",
+          "text": "x*ln x 用分部积分时 u 选 ln x 还是 x？为什么？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-integ-q004-trig-half-angle",
+      "title": "三角函数降幂积分",
+      "knowledgeNodeIds": [
+        "math-integral-trig-reduction"
+      ],
+      "type": "solution",
+      "difficulty": 2,
+      "content": "求 $\\int \\sin^2 x \\, dx$。",
+      "answer": "$\\frac{x}{2} - \\frac{\\sin(2x)}{4} + C$",
+      "solutionSteps": [
+        "用半角公式：$\\sin^2 x = \\frac{1 - \\cos 2x}{2}$",
+        "$\\int \\sin^2 x \\, dx = \\int \\frac{1 - \\cos 2x}{2} dx$",
+        "$= \\frac{1}{2}\\int dx - \\frac{1}{2}\\int \\cos 2x \\, dx$",
+        "$= \\frac{x}{2} - \\frac{\\sin(2x)}{4} + C$"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "$\\sin^2x$能直接积分吗？需要用什么恒等式？"
+        },
+        {
+          "level": "L2",
+          "text": "半角公式 $\\sin^2 x = \\frac{1 - \\cos 2x}{2}$，代入后逐项积分。"
+        },
+        {
+          "level": "L3",
+          "text": "$\\cos^2 x$也能用半角公式，结果和 $\\sin^2 x$有什么对称关系？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-integ-q005-partial-fraction",
+      "title": "部分分式积分",
+      "knowledgeNodeIds": [
+        "math-integral-rational"
+      ],
+      "type": "solution",
+      "difficulty": 3,
+      "content": "求 $\\int\\frac{1}{x^2-1}dx$。",
+      "answer": "$\\frac{1}{2}\\ln\\left|\\frac{x-1}{x+1}\\right| + C$",
+      "solutionSteps": [
+        "$x^2 - 1 = (x-1)(x+1)$",
+        "$\\frac{1}{x^2-1} = \\frac{A}{x-1} + \\frac{B}{x+1}$",
+        "$1 = A(x+1) + B(x-1)$，令 $x=1$得 $A=\\frac{1}{2}$，令 $x=-1$得 $B=-\\frac{1}{2}$",
+        "$\\int\\frac{1}{x^2-1}dx = \\frac{1}{2}\\int\\frac{1}{x-1}dx - \\frac{1}{2}\\int\\frac{1}{x+1}dx$",
+        "$= \\frac{1}{2}\\ln|x-1| - \\frac{1}{2}\\ln|x+1| + C = \\frac{1}{2}\\ln\\left|\\frac{x-1}{x+1}\\right| + C$"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "分母能因式分解吗？分解后怎么拆？"
+        },
+        {
+          "level": "L2",
+          "text": "用待定系数法或赋值法求 A 和 B。"
+        },
+        {
+          "level": "L3",
+          "text": "分母有不可约二次因子如 $x^2+1$时，部分分式怎么设？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-integ-q006-substitution-complex",
+      "title": "根号换元",
+      "knowledgeNodeIds": [
+        "math-integral-substitution"
+      ],
+      "type": "solution",
+      "difficulty": 3,
+      "content": "求 $\\int\\frac{1}{1+\\sqrt{x}}dx$。",
+      "answer": "$2\\sqrt{x} - 2\\ln|1+\\sqrt{x}| + C$",
+      "solutionSteps": [
+        "令 $t = \\sqrt{x}$，$x = t^2$，$dx = 2t\\,dt$",
+        "$\\int\\frac{1}{1+t}\\cdot 2t\\,dt = 2\\int\\frac{t}{1+t}dt$",
+        "$= 2\\int\\left(1 - \\frac{1}{1+t}\\right)dt = 2t - 2\\ln|1+t| + C$",
+        "回代：$2\\sqrt{x} - 2\\ln|1+\\sqrt{x}| + C$"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "根号让积分困难，令 t = √x 能消去根号吗？"
+        },
+        {
+          "level": "L2",
+          "text": "换元后 dx = 2t dt，被积函数变成什么？"
+        },
+        {
+          "level": "L3",
+          "text": "根号下 $\\frac{x}{1-x}$能用三角换元吗？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-integ-q007-parts-cyclic",
+      "title": "循环分部积分",
+      "knowledgeNodeIds": [
+        "math-integral-by-parts"
+      ],
+      "type": "solution",
+      "difficulty": 3,
+      "content": "求 $\\int e^x\\cdot\\sin x dx$。",
+      "answer": "$\\frac{e^x(\\sin x - \\cos x)}{2} + C$",
+      "solutionSteps": [
+        "令 $u = \\sin x$，$dv = e^x dx$，得 $\\int e^x\\sin x\\,dx = e^x\\sin x - \\int e^x\\cos x\\,dx$",
+        "对 $\\int e^x\\cos x\\,dx$再分部：令 $u = \\cos x$，$dv = e^x dx$",
+        "$= e^x\\cos x + \\int e^x\\sin x\\,dx$",
+        "代入：$I = e^x\\sin x - e^x\\cos x - I$",
+        "$2I = e^x(\\sin x - \\cos x)$，$I = \\frac{e^x(\\sin x - \\cos x)}{2} + C$"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "分部两次后会出现什么？原来的积分又回来了！"
+        },
+        {
+          "level": "L2",
+          "text": "设原积分为 I，分部两次后得到 I = ... - I，解方程。"
+        },
+        {
+          "level": "L3",
+          "text": "$\\sec^3 x$也能用分部积分得到循环方程，你试试？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-integ-q008-antiderivative-concept",
+      "title": "原函数概念辨析",
+      "knowledgeNodeIds": [
+        "math-integral-antiderivative"
+      ],
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "已知 $F(x) = x^3$是 $f(x)$的一个原函数，且 $f(1) = 3$，求 $f(x)$和 $\\int f(x)dx$。",
+      "answer": "$f(x) = 3x^2, \\int f(x)dx = x^3 + C$",
+      "solutionSteps": [
+        "$F(x) = x^3$是 $f(x)$的原函数，所以 $f(x) = F'(x) = 3x^2$",
+        "验证：$f(1) = 3\\cdot1^2 = 3 ✓$",
+        "$\\int f(x)dx = \\int3x^2dx = x^3 + C$"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "原函数和导数是什么关系？"
+        },
+        {
+          "level": "L2",
+          "text": "$f(x)$是 $F(x)$的导数还是 $F(x)$是 $f(x)$的导数？"
+        },
+        {
+          "level": "L3",
+          "text": "$f(x)=|x|$在整个 $R$上有原函数吗？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    }
+  ]
+}

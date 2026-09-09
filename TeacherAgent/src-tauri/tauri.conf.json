@@ -1,0 +1,37 @@
+{
+  "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
+  "productName": "TeacherAgent",
+  "version": "0.1.0",
+  "identifier": "com.teacheragent.app",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://127.0.0.1:1420",
+    "beforeBuildCommand": "npm run build:tauri-pre",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "TeacherAgent",
+        "width": 1200,
+        "height": 780,
+        "minWidth": 960,
+        "minHeight": 640,
+        "backgroundColor": "#f7f3eb",
+        "visible": false
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; base-uri 'none'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data: blob:; connect-src ipc: http://ipc.localhost; worker-src 'self' blob:",
+      "devCsp": "default-src 'self' http://127.0.0.1:1420; base-uri 'none'; script-src 'self' 'wasm-unsafe-eval' http://127.0.0.1:1420; style-src 'self' 'unsafe-inline' http://127.0.0.1:1420; font-src 'self' data: http://127.0.0.1:1420; img-src 'self' data: blob: http://127.0.0.1:1420; connect-src ipc: http://ipc.localhost http://127.0.0.1:1420 ws://127.0.0.1:1420; worker-src 'self' blob: http://127.0.0.1:1420"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": ["icons/icon.ico"],
+    "externalBin": ["binaries/document-worker", "binaries/code-worker"],
+    "resources": ["sidecar-hashes.json"]
+  }
+}

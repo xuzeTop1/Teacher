@@ -1,0 +1,299 @@
+{
+  "subject": "math",
+  "course": "calculus",
+  "chapter": "indefinite-integrals",
+  "status": "approved",
+  "nodes": [
+    {
+      "id": "math-integral-antiderivative",
+      "title": "原函数与不定积分概念",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "若在区间 $I$上 $F'(x) = f(x)$，则称 $F(x)$是 $f(x)$的一个原函数。同一函数的任意两个原函数之间相差一个常数 $C$。不定积分 $\\int f(x)dx = F(x) + C$表示 $f(x)$的全体原函数。理解原函数的存在性（连续函数必有原函数）是后续所有积分技巧的基础。",
+      "prerequisites": [
+        "math-deriv-definition"
+      ],
+      "misconceptions": [
+        "误认为每个函数都有原函数——实际上只有连续函数（或满足某些条件的函数）才保证存在原函数",
+        "忘记加常数 C，将不定积分等同于某一个特定原函数",
+        "混淆导数与原函数的关系：认为 $f(x)$的原函数就是 $f(x)$的导数"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "如果一辆车的速度函数是 $v(t)$，那么它的位移函数 $s(t)$和 $v(t)$之间是什么关系？"
+        },
+        {
+          "level": "L2",
+          "text": "已知 $F'(x) = f(x)$，那 $G(x) = F(x) + 5$的导数是什么？这说明 $G(x)$和 $F(x)$都是 $f(x)$的什么？"
+        },
+        {
+          "level": "L3",
+          "text": "原函数之间只差一个常数。所以不定积分要用 $F(x) + C$来表示全体原函数，而不是只写 $F(x)$。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-integral-basic-formulas",
+      "title": "基本积分公式",
+      "level": "method",
+      "difficulty": 1,
+      "summary": "由基本导数公式反推得到的基本积分公式表，包括：幂函数积分 $\\int x^n \\, dx = \\frac{x^{n+1}}{n+1} + C$（$n \\neq -1$）、指数函数 $\\int e^x \\, dx = e^x + C$、三角函数积分（$\\int\\sin x\\,dx$、$\\int\\cos x\\,dx$等）、$\\int \\frac{1}{x} \\, dx = \\ln|x| + C$。这些公式是所有积分计算的起点，需熟记并能正反互推。",
+      "prerequisites": [
+        "math-integral-antiderivative",
+        "math-deriv-power",
+        "math-deriv-trig",
+        "math-deriv-exp-log"
+      ],
+      "misconceptions": [
+        "对 $\\int x^n \\, dx$套用公式时忘记 $n \\neq -1$的限制条件",
+        "$\\int\\cos x dx = \\sin x + C$而非 $-\\sin x + C$（与求导混淆）",
+        "$\\int \\frac{1}{x} \\, dx = \\ln|x| + C$中忘记加绝对值"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "$\\frac{d}{dx}[\\sin x] = \\cos x$，那么反过来，$\\int\\cos x\\,dx$等于什么？"
+        },
+        {
+          "level": "L2",
+          "text": "幂函数求导会降一次幂，那积分呢？$\\int x^3 dx$应该得到几次幂的函数？"
+        },
+        {
+          "level": "L3",
+          "text": "基本积分公式其实就是导数公式的逆运算。把导数表倒过来看，每一条都对应一个积分公式。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-integral-substitution",
+      "title": "第一类换元法（凑微分法）",
+      "level": "technique",
+      "difficulty": 2,
+      "summary": "第一类换元法的核心思想是将被积表达式中的一部分凑成某个中间变量 $u = g(x)$的微分 $du = g'(x)dx$，从而把复杂积分化为基本积分公式的形式。关键步骤：识别被积函数中是否存在「函数与其导数」的乘积结构，如 $\\int f(g(x))\\cdot g'(x)dx = \\int f(u)du$。常见凑微分模式包括：凑 $x^n dx$、凑 $e^x dx$、凑 $\\cos x dx$等。",
+      "prerequisites": [
+        "math-integral-basic-formulas",
+        "math-deriv-chain"
+      ],
+      "misconceptions": [
+        "换元后忘记将 dx 也换成 du，导致微分形式不匹配",
+        "只做了变量替换但没有改变积分变量，形式上仍是关于 x 的积分",
+        "凑微分时忽略系数，如 $\\int 2x e^{x^2} \\, dx$中忘记 $2x$正好是 $(x^2)'$"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "观察 $\\int 2x \\cos(x^2) \\, dx$，其中 $2x$和 $x^2$之间有什么导数关系？"
+        },
+        {
+          "level": "L2",
+          "text": "如果令 $u = x^2$，那么 $du = ?$这样原积分能化成关于 $u$的什么形式？"
+        },
+        {
+          "level": "L3",
+          "text": "第一类换元的本质是反向使用链式法则。看到 $f(g(x))\\cdot g'(x)$的结构，就令 $u = g(x)$来简化。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-integral-substitution-reverse",
+      "title": "第二类换元法（三角换元）",
+      "level": "technique",
+      "difficulty": 3,
+      "summary": "第二类换元法适用于被积函数含 $\\sqrt{a^2-x^2}$、$\\sqrt{a^2+x^2}$、$\\sqrt{x^2-a^2}$等根式的情况。通过令 $x = a \\sin t$、$x = a \\tan t$、$x = a \\sec t$等三角代换，利用三角恒等式消去根号。换元后需注意：计算 $\\frac{dx}{dt}$、变换积分限（定积分时）、以及回代时用辅助三角形将三角函数表达式还原为关于 $x$的形式。",
+      "prerequisites": [
+        "math-integral-substitution",
+        "math-integral-basic-formulas"
+      ],
+      "misconceptions": [
+        "选错三角代换类型：对 $\\sqrt{a^2-x^2}$应使用 $x = a \\sin t$而非 $x = a \\tan t$",
+        "回代时没有画辅助三角形，导致三角函数还原错误",
+        "忘记计算 dx = ... dt，直接把 dx 当作 dt 来处理"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "看到 $\\sqrt{9 - x^2}$这个根式，你能联想到哪个三角恒等式？$\\sin^2 t + \\cos^2 t = 1$能帮你消去根号吗？"
+        },
+        {
+          "level": "L2",
+          "text": "如果令 $x = 3 \\sin t$，那么 $\\sqrt{9 - x^2} = \\sqrt{9 - 9\\sin^2 t} = ?$这个表达式能简化吗？"
+        },
+        {
+          "level": "L3",
+          "text": "三种根式对应三种代换：$\\sqrt{a^2-x^2}$用正弦、$\\sqrt{a^2+x^2}$用正切、$\\sqrt{x^2-a^2}$用正割。记住这个对应关系，再配合辅助三角形回代。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-integral-by-parts",
+      "title": "分部积分法",
+      "level": "technique",
+      "difficulty": 3,
+      "summary": "分部积分公式 $\\int u\\,dv = uv - \\int v\\,du$源自乘积求导法则 $(uv)' = u'v + uv'$的变形。关键是正确选择 $u$和 $dv$：通常遵循「反对幂指三」（反三角、对数、幂函数、指数、三角）的优先顺序来选取 $u$，使得 $v\\,du$比原积分更简单。适用于两类不同性质函数乘积的积分，如 $\\int x e^x \\, dx$、$\\int x \\ln x\\,dx$、$\\int e^x\\sin x\\,dx$等。",
+      "prerequisites": [
+        "math-integral-basic-formulas",
+        "math-integral-substitution"
+      ],
+      "misconceptions": [
+        "$u$和 $dv$选反了，导致新积分 $\\int v du$比原积分更复杂",
+        "忘记分部积分公式中的 uv 项，只写了 $-\\int v du$",
+        "对需要多次分部积分或出现循环的情况（如 $\\int e^x\\cdot\\sin x dx$）不知道如何处理"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "$\\int x e^x \\, dx$中，$x$是幂函数，$e^x$是指数函数。如果把 $x$选为 $u$、$e^x dx$选为 $dv$，求导后 $u$会变得更简单吗？"
+        },
+        {
+          "level": "L2",
+          "text": "令 $u = x$，$dv = e^x dx$，则 $du = ?$，$v = ?$代入公式 $\\int u\\,dv = uv - \\int v\\,du$看看结果。"
+        },
+        {
+          "level": "L3",
+          "text": "分部积分的口诀「反对幂指三」：排在前面的优先选为 u。这样求导后 u 会降级简化，新积分就更容易了。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-integral-rational",
+      "title": "有理函数积分",
+      "level": "technique",
+      "difficulty": 3,
+      "summary": "有理函数 $\\frac{P(x)}{Q(x)}$的积分核心方法是部分分式分解：当分子次数 $\\ge$分母次数时先做多项式除法化为真分式，再将真分式分解为最简分式之和。分解规则：$Q(x)$的每个单因式 $(x-a)$对应 $\\frac{A}{x-a}$；每个重因式 $(x-a)^k$对应 $k$项；每个不可约二次因式 $(x^2+px+q)$对应 $\\frac{Ax+B}{x^2+px+q}$。分解后各项可直接用基本公式积分。",
+      "prerequisites": [
+        "math-integral-basic-formulas",
+        "math-integral-substitution",
+        "math-integral-by-parts"
+      ],
+      "misconceptions": [
+        "对非真分式直接做部分分式分解，忘记先做多项式除法",
+        "不可约二次因式对应的分子只写了常数 A 而遗漏了一次项 Bx",
+        "分解后得到的对数项和反正切项忘记合并或简化"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "对于 $\\int \\frac{3x+5}{(x-1)(x+2)} \\, dx$，你能把被积函数拆成两个更简单的分式之和吗？"
+        },
+        {
+          "level": "L2",
+          "text": "设 $\\frac{3x+5}{(x-1)(x+2)} = \\frac{A}{x-1} + \\frac{B}{x+2}$，通分后比较分子系数，能解出 $A$和 $B$吗？"
+        },
+        {
+          "level": "L3",
+          "text": "部分分式分解的关键：先判断真假分式，再根据分母因式类型对应写出待定形式，最后通分比较系数求解。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-integral-trig-reduction",
+      "title": "三角函数积分与递推",
+      "level": "technique",
+      "difficulty": 3,
+      "summary": "三角函数积分的常用策略：$(1)$利用倍角公式降幂，如 $\\sin^2 x = \\frac{1 - \\cos 2x}{2}$；$(2)$对 $\\int\\sin^n x\\,dx$和 $\\int\\cos^n x\\,dx$建立递推公式，通过分部积分将 $n$次幂的积分化为 $n-2$次幂的积分；$(3)$对 $\\sin^m x\\cdot\\cos^n x$的乘积，若 $m$或 $n$为奇数则拆出一个一次因子用换元法，若均为偶数则用降幂公式。递推公式的推导是本节难点。",
+      "prerequisites": [
+        "math-integral-basic-formulas",
+        "math-integral-substitution",
+        "math-integral-by-parts"
+      ],
+      "misconceptions": [
+        "对 $\\sin^n x$直接套幂函数积分公式，忘记三角函数不能简单用幂函数法则",
+        "递推公式推导时搞错分部积分的 u 和 dv 选择",
+        "降幂后忘记处理新的积分变量（如 $2x$）导致结果缺少系数 $\\frac{1}{2}$"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "$\\int \\sin^2 x \\, dx$不能直接用幂函数公式。你能用三角恒等式把 $\\sin^2 x$变成更容易积分的形式吗？"
+        },
+        {
+          "level": "L2",
+          "text": "$\\sin^2 x = \\frac{1 - \\cos 2x}{2}$，这样积分就拆成了两个简单积分。那 $\\sin^4 x$呢？能不能先拆成 $(\\sin^2 x)^2$？"
+        },
+        {
+          "level": "L3",
+          "text": "三角函数积分的核心思路：降幂和递推。偶数次幂用倍角公式降幂，奇数次幂拆出一个一次因子换元，高次幂用递推公式逐步降阶。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-integral-special",
+      "title": "特殊类型积分（含根号等）",
+      "level": "technique",
+      "difficulty": 3,
+      "summary": "特殊类型积分包括：$(1)$含 $\\sqrt{ax+b}$的积分——令 $t = \\sqrt{ax+b}$整体换元；$(2)$含 $\\sqrt{x^2\\pm a^2}$的积分——可用三角换元或双曲换元；$(3)$ $\\int \\sqrt{1-x^2} \\, dx$等几何意义明显的积分可直接利用面积公式；$(4)$某些特殊形式如 $\\int \\frac{dx}{x^2+a^2} = \\frac{1}{a}\\arctan\\frac{x}{a} + C$、$\\int \\frac{dx}{\\sqrt{a^2-x^2}} = \\arcsin\\frac{x}{a} + C$应作为常用公式熟记。关键是根据被积函数的结构选择合适的处理策略。",
+      "prerequisites": [
+        "math-integral-substitution-reverse",
+        "math-integral-by-parts"
+      ],
+      "misconceptions": [
+        "对含根号的积分一律使用三角换元，而忽略了更简单的整体代换 $t = \\sqrt{ax+b}$",
+        "忘记 $\\int \\frac{dx}{\\sqrt{a^2-x^2}} = \\arcsin\\frac{x}{a} + C$中的系数",
+        "对 $\\int \\frac{dx}{x^2+a^2}$和 $\\int \\frac{dx}{x^2-a^2}$混淆——前者用反正切，后者用部分分式"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "对于 $\\int \\frac{dx}{\\sqrt{4-x^2}}$，被积函数的分母是 $\\sqrt{a^2-x^2}$的形式，你能想到哪个反三角函数的导数恰好是这个形式？"
+        },
+        {
+          "level": "L2",
+          "text": "如果被积函数含有 $\\sqrt{2x+1}$，令 $t = \\sqrt{2x+1}$会怎样？$x = \\frac{t^2-1}{2}$，$dx = t\\,dt$，根号就消掉了。"
+        },
+        {
+          "level": "L3",
+          "text": "特殊积分的关键是模式识别：看到 $\\sqrt{a^2-x^2}$想到 $\\arcsin$，看到 $\\sqrt{a^2+x^2}$想到三角换元或 $\\ln$形式，看到 $\\sqrt{ax+b}$想到整体代换。建立模式库后就能快速匹配。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    }
+  ]
+}

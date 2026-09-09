@@ -1,0 +1,814 @@
+{
+  "subject": "psychology",
+  "course": "psychology-developmental",
+  "chapter": "psychology-developmental",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "psychology-developmental-q-001",
+      "title": "守恒出现阶段",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "儿童获得'守恒'概念通常出现在（ ）。",
+      "options": [
+        "具体运算阶段",
+        "感知运动阶段",
+        "前运算阶段",
+        "形式运算阶段"
+      ],
+      "answer": "具体运算阶段",
+      "solutionSteps": [
+        "$7-11$岁具体运算阶段获得守恒与可逆性。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先回忆相关概念的定义。"
+        },
+        {
+          "level": "L2",
+          "text": "再结合题干情境分析。"
+        },
+        {
+          "level": "L3",
+          "text": "分步骤写出推理链条。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "psychology-developmental-005"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "psychology-developmental-q-002",
+      "title": "客体永久性",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "客体永久性（物体消失仍存在）主要在哪一阶段末期获得（ ）。",
+      "options": [
+        "感知运动阶段",
+        "前运算阶段",
+        "具体运算",
+        "形式运算"
+      ],
+      "answer": "感知运动阶段",
+      "solutionSteps": [
+        "$0-2$岁感知运动阶段末期出现客体永久性。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "题干给了哪些线索？"
+        },
+        {
+          "level": "L2",
+          "text": "这些线索指向哪个理论？"
+        },
+        {
+          "level": "L3",
+          "text": "用理论框架组织答案。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "psychology-developmental-003"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "psychology-developmental-q-003",
+      "title": "ZPD定义",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "维果茨基的'最近发展区'指（ ）。",
+      "options": [
+        "实际水平与潜在水平之差",
+        "现有水平",
+        "生理成熟区",
+        "语言区"
+      ],
+      "answer": "实际水平与潜在水平之差",
+      "solutionSteps": [
+        "ZPD=独立解决问题的实际水平与在帮助下可达潜在水平之差。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "这是记忆类还是理解类问题？"
+        },
+        {
+          "level": "L2",
+          "text": "若是理解，画个关系图。"
+        },
+        {
+          "level": "L3",
+          "text": "把要点编号，避免漏项。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "psychology-developmental-007"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "psychology-developmental-q-004",
+      "title": "埃里克森青年期",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "埃里克森理论中青年期（青少年）的核心危机是（ ）。",
+      "options": [
+        "同一性对角色混乱",
+        "信任对不信任",
+        "亲密对孤独",
+        "勤奋对自卑"
+      ],
+      "answer": "同一性对角色混乱",
+      "solutionSteps": [
+        "青少年期危机为自我同一性对角色混乱。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判定问题类型（概念/应用/辨析）。"
+        },
+        {
+          "level": "L2",
+          "text": "再调用对应知识点。"
+        },
+        {
+          "level": "L3",
+          "text": "结论后要有一句总结。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "psychology-developmental-008"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "psychology-developmental-q-005",
+      "title": "科尔伯格后习俗",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "科尔伯格道德发展最高水平'后习俗'以（ ）为依据。",
+      "options": [
+        "普遍伦理原则",
+        "惩罚回避",
+        "人际取悦",
+        "法律秩序"
+      ],
+      "answer": "普遍伦理原则",
+      "solutionSteps": [
+        "后习俗水平依据社会契约与普遍伦理原则。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "有没有反例可以检验？"
+        },
+        {
+          "level": "L2",
+          "text": "反例能框定边界。"
+        },
+        {
+          "level": "L3",
+          "text": "边界条件常是考点。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "psychology-developmental-012"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "psychology-developmental-q-006",
+      "title": "依恋类型",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "安斯沃斯陌生情境中，母亲离开又回来后儿童平静被安慰，属于（ ）。",
+      "options": [
+        "安全型依恋",
+        "回避型",
+        "抗拒型",
+        "混乱型"
+      ],
+      "answer": "安全型依恋",
+      "solutionSteps": [
+        "安全型依恋儿童在重聚时易被安抚。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先写出公式或定理。"
+        },
+        {
+          "level": "L2",
+          "text": "代入题干数值。"
+        },
+        {
+          "level": "L3",
+          "text": "检查单位与方向是否合理。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "psychology-developmental-010"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "psychology-developmental-q-007",
+      "title": "同化与顺应",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "儿童见蝙蝠喊'小鸟'，成人纠正后他调整了认知。请用皮亚杰概念解释这个微过程。",
+      "options": null,
+      "answer": "初见归为已有图式=同化（称小鸟）。",
+      "solutionSteps": [
+        "初见归为已有图式=同化（称小鸟）。",
+        "纠正后修改图式=顺应（知蝙蝠非鸟）。",
+        "两者在平衡中推进认知发展。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "区分自变量与因变量。"
+        },
+        {
+          "level": "L2",
+          "text": "想想控制变量怎么处理。"
+        },
+        {
+          "level": "L3",
+          "text": "用实验逻辑组织作答。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "psychology-developmental-002"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "psychology-developmental-q-008",
+      "title": "晶体vs流体智力",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "为何老年人下棋（经验）可能仍强，但心算反应变慢？用智力分类解释。",
+      "options": null,
+      "answer": "下棋靠晶体智力（经验），随龄可保持甚至增。",
+      "solutionSteps": [
+        "下棋靠晶体智力（经验），随龄可保持甚至增。",
+        "心算靠流体智力（加工速度），随龄缓降。",
+        "二者轨迹不同是卡特尔分类的核心。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先答'是什么'，再答'为什么'。"
+        },
+        {
+          "level": "L2",
+          "text": "最后给一个例子。"
+        },
+        {
+          "level": "L3",
+          "text": "结构化作答不易失分。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "psychology-developmental-014"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "psychology-developmental-q-009",
+      "title": "教养方式",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "高要求且高回应、鼓励自主的教养方式是（ ）。",
+      "options": [
+        "权威型",
+        "专制型",
+        "放任型",
+        "忽视型"
+      ],
+      "answer": "权威型",
+      "solutionSteps": [
+        "权威型=高要求高回应，常伴更好适应。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先回忆相关概念的定义。"
+        },
+        {
+          "level": "L2",
+          "text": "再结合题干情境分析。"
+        },
+        {
+          "level": "L3",
+          "text": "分步骤写出推理链条。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "psychology-developmental-017"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "psychology-developmental-q-010",
+      "title": "前运算自我中心",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "前运算阶段儿童难以从他人角度看问题，称为（ ）。",
+      "options": [
+        "自我中心",
+        "守恒缺失",
+        "泛灵论",
+        "中心化"
+      ],
+      "answer": "自我中心",
+      "solutionSteps": [
+        "自我中心指难以采择他人观点。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "题干给了哪些线索？"
+        },
+        {
+          "level": "L2",
+          "text": "这些线索指向哪个理论？"
+        },
+        {
+          "level": "L3",
+          "text": "用理论框架组织答案。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "psychology-developmental-004"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "psychology-developmental-q-011",
+      "title": "横向与纵向设计",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "想研究'记忆力是否随年龄下降'，横断与纵向设计各有什么局限？",
+      "options": null,
+      "answer": "横断可能被 cohort 效应混淆（不同代差异）。",
+      "solutionSteps": [
+        "横断可能被 cohort 效应混淆（不同代差异）。",
+        "纵向耗时且易被试流失。",
+        "聚合交叉可兼顾二者。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "这是记忆类还是理解类问题？"
+        },
+        {
+          "level": "L2",
+          "text": "若是理解，画个关系图。"
+        },
+        {
+          "level": "L3",
+          "text": "把要点编号，避免漏项。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "psychology-developmental-001"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "psychology-developmental-q-012",
+      "title": "形式运算特征",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "能进行假设-演绎推理，通常出现在（ ）。",
+      "options": [
+        "形式运算阶段",
+        "具体运算阶段",
+        "前运算阶段",
+        "感知运动阶段"
+      ],
+      "answer": "形式运算阶段",
+      "solutionSteps": [
+        "11岁后形式运算具假设-演绎与命题思维。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判定问题类型（概念/应用/辨析）。"
+        },
+        {
+          "level": "L2",
+          "text": "再调用对应知识点。"
+        },
+        {
+          "level": "L3",
+          "text": "结论后要有一句总结。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "psychology-developmental-006"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "psychology-developmental-q-013",
+      "title": "脚手架概念",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "'脚手架'教学支持应（ ）。",
+      "options": [
+        "随掌握逐步撤去",
+        "一直提供",
+        "越多越好",
+        "仅用于幼儿"
+      ],
+      "answer": "随掌握逐步撤去",
+      "solutionSteps": [
+        "脚手架应随学习者能力提高而逐步撤除。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "有没有反例可以检验？"
+        },
+        {
+          "level": "L2",
+          "text": "反例能框定边界。"
+        },
+        {
+          "level": "L3",
+          "text": "边界条件常是考点。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "psychology-developmental-007"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "psychology-developmental-q-014",
+      "title": "毕生发展可塑性",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "毕生发展观认为发展（ ）。",
+      "options": [
+        "终生可塑、受文化影响",
+        "仅童年期定型",
+        "成年后不可变",
+        "只受生物决定"
+      ],
+      "answer": "终生可塑、受文化影响",
+      "solutionSteps": [
+        "毕生发展强调终生、多维、可塑、受历史文化影响。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先写出公式或定理。"
+        },
+        {
+          "level": "L2",
+          "text": "代入题干数值。"
+        },
+        {
+          "level": "L3",
+          "text": "检查单位与方向是否合理。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "psychology-developmental-015"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "psychology-developmental-q-015",
+      "title": "马西娅同一性",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "马西娅区分同一性状态所依据的两个维度是（ ）。",
+      "options": [
+        "探索与承诺",
+        "年龄与性别",
+        "智商与情商",
+        "家庭与同伴"
+      ],
+      "answer": "探索与承诺",
+      "solutionSteps": [
+        "同一性状态由探索（危机）与承诺两维度划分。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "区分自变量与因变量。"
+        },
+        {
+          "level": "L2",
+          "text": "想想控制变量怎么处理。"
+        },
+        {
+          "level": "L3",
+          "text": "用实验逻辑组织作答。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "psychology-developmental-013"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "psychology-developmental-q-016",
+      "title": "语言关键期",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "关于语言获得，'关键期'假设强调（ ）。",
+      "options": [
+        "特定年龄窗口内更易习得",
+        "成年后完全不能",
+        "仅依赖强化",
+        "与文化无关"
+      ],
+      "answer": "特定年龄窗口内更易习得",
+      "solutionSteps": [
+        "关键期指某年龄段内语言习得更高效，非绝对不可学。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先答'是什么'，再答'为什么'。"
+        },
+        {
+          "level": "L2",
+          "text": "最后给一个例子。"
+        },
+        {
+          "level": "L3",
+          "text": "结构化作答不易失分。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "psychology-developmental-019"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "psychology-developmental-q-017",
+      "title": "习惯化意义",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "研究者用'习惯化-去习惯化'范式能推断婴儿具备什么能力？",
+      "options": null,
+      "answer": "习惯化=对重复刺激反应下降，示记忆存在。",
+      "solutionSteps": [
+        "习惯化=对重复刺激反应下降，示记忆存在。",
+        "去习惯化=对新刺激反应回升，示能区分。",
+        "二者结合证明婴儿早期有分辨与记忆。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先回忆相关概念的定义。"
+        },
+        {
+          "level": "L2",
+          "text": "再结合题干情境分析。"
+        },
+        {
+          "level": "L3",
+          "text": "分步骤写出推理链条。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "psychology-developmental-009"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "psychology-developmental-q-018",
+      "title": "攻击行为分类",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "为获取物品而伤人属于（ ）。",
+      "options": [
+        "工具性攻击",
+        "敌意性攻击",
+        "亲社会行为",
+        "自我中心"
+      ],
+      "answer": "工具性攻击",
+      "solutionSteps": [
+        "工具性攻击以达成目标为导向，非单纯发泄愤怒。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "题干给了哪些线索？"
+        },
+        {
+          "level": "L2",
+          "text": "这些线索指向哪个理论？"
+        },
+        {
+          "level": "L3",
+          "text": "用理论框架组织答案。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "psychology-developmental-018"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "psychology-developmental-q-019",
+      "title": "成功老龄化SOC",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "成功老龄化的SOC模型指（ ）。",
+      "options": [
+        "选择、优化、补偿",
+        "睡眠、饮食、运动",
+        "社交、认知、情绪",
+        "刺激、反应、强化"
+      ],
+      "answer": "选择、优化、补偿",
+      "solutionSteps": [
+        "SOC=Selection, Optimization, Compensation。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "这是记忆类还是理解类问题？"
+        },
+        {
+          "level": "L2",
+          "text": "若是理解，画个关系图。"
+        },
+        {
+          "level": "L3",
+          "text": "把要点编号，避免漏项。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "psychology-developmental-020"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "psychology-developmental-q-020",
+      "title": "综合辨析：皮亚杰vs维果茨基",
+      "type": "diagnostic",
+      "difficulty": 3,
+      "content": "皮亚杰与维果茨基对认知发展的看法有何根本分歧？对教学各有什么启示？",
+      "options": null,
+      "answer": "皮亚杰重个体自发生成，教学顺其自然。",
+      "solutionSteps": [
+        "皮亚杰重个体自发生成，教学顺其自然。",
+        "维果茨基重社会文化中介，教学应走在发展前（ZPD）。",
+        "二者互补：个体建构+社会支架。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判定问题类型（概念/应用/辨析）。"
+        },
+        {
+          "level": "L2",
+          "text": "再调用对应知识点。"
+        },
+        {
+          "level": "L3",
+          "text": "结论后要有一句总结。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "psychology-developmental-002",
+        "psychology-developmental-007"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    }
+  ]
+}

@@ -1,0 +1,813 @@
+{
+  "subject": "lawmaster",
+  "course": "lawmaster-civil",
+  "chapter": "lawmaster-civil",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "lawmaster-civil-q-001",
+      "title": "民法调整对象",
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "民法主要调整（ ）。",
+      "options": [
+        "平等主体间人身与财产关系",
+        "纵向行政管理关系",
+        "犯罪与刑罚",
+        "国家预算"
+      ],
+      "answer": "平等主体间人身与财产关系",
+      "solutionSteps": [
+        "民法调整平等主体之间的人身与财产关系。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先定性：这是民法还是刑法问题？"
+        },
+        {
+          "level": "L2",
+          "text": "再定位具体制度。"
+        },
+        {
+          "level": "L3",
+          "text": "按'定性—要件—结论'作答。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "lawmaster-civil-001"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "lawmaster-civil-q-002",
+      "title": "限制行为能力年龄",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "在我国，限制民事行为能力人的年龄起点一般为（ ）。",
+      "options": [
+        "8周岁",
+        "6周岁",
+        "10周岁",
+        "18周岁"
+      ],
+      "answer": "8周岁",
+      "solutionSteps": [
+        "不满8岁为无，$8-18$为限制民事行为能力。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "列出构成要件。"
+        },
+        {
+          "level": "L2",
+          "text": "逐条对应案情。"
+        },
+        {
+          "level": "L3",
+          "text": "缺哪条就不成立。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "lawmaster-civil-004"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "lawmaster-civil-q-003",
+      "title": "表见代理",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "无权代理人有权利外观、善意相对人相信其有代理权，该代理效果（ ）。",
+      "options": [
+        "归被代理人（表见代理）",
+        "无效",
+        "仅代理人负责",
+        "须法院批准"
+      ],
+      "answer": "归被代理人（表见代理）",
+      "solutionSteps": [
+        "表见代理保护善意相对人，效果归被代理人。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断行为性质。"
+        },
+        {
+          "level": "L2",
+          "text": "再谈违法性与有责性。"
+        },
+        {
+          "level": "L3",
+          "text": "结论要有法律根据。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "lawmaster-civil-008"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "lawmaster-civil-q-004",
+      "title": "普通诉讼时效",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "我国普通诉讼时效期间为（ ）。",
+      "options": [
+        "三年",
+        "两年",
+        "一年",
+        "五年"
+      ],
+      "answer": "三年",
+      "solutionSteps": [
+        "《民法典》规定普通诉讼时效为三年。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "区分此罪与彼罪的界限。"
+        },
+        {
+          "level": "L2",
+          "text": "关键区别事实是什么？"
+        },
+        {
+          "level": "L3",
+          "text": "用构成要件比对。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "lawmaster-civil-009"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "lawmaster-civil-q-005",
+      "title": "善意取得要件",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "动产善意取得一般不要求（ ）。",
+      "options": [
+        "登记",
+        "受让善意",
+        "合理对价",
+        "已交付"
+      ],
+      "answer": "登记",
+      "solutionSteps": [
+        "动产善意取得以交付为公示，不要求登记（登记是不动产）。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先答概念，再举法条。"
+        },
+        {
+          "level": "L2",
+          "text": "最后结合案情。"
+        },
+        {
+          "level": "L3",
+          "text": "法条+事实+结论三步走。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "lawmaster-civil-011"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "lawmaster-civil-q-006",
+      "title": "抵押权特征",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "抵押权区别于质权的关键点是（ ）。",
+      "options": [
+        "不转移占有",
+        "转移占有",
+        "是债权",
+        "无须公示"
+      ],
+      "answer": "不转移占有",
+      "solutionSteps": [
+        "抵押权不转移抵押物占有，质权转移占有。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "谁的主张需要举证？"
+        },
+        {
+          "level": "L2",
+          "text": "举证责任在哪一方？"
+        },
+        {
+          "level": "L3",
+          "text": "归责原则决定举证。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "lawmaster-civil-013"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "lawmaster-civil-q-007",
+      "title": "要约vs要约邀请",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "商店橱窗标价商品与超市货架上贴价签，何者构成要约？请说明区别。",
+      "options": null,
+      "answer": "标价陈列通常视为要约（内容确定、愿受约束）。",
+      "solutionSteps": [
+        "标价陈列通常视为要约（内容确定、愿受约束）。",
+        "要约邀请（如广告）是引诱对方发出要约。",
+        "承诺到达即合同成立。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判定合同/行为效力。"
+        },
+        {
+          "level": "L2",
+          "text": "再分析后果。"
+        },
+        {
+          "level": "L3",
+          "text": "效力状态决定救济方式。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "lawmaster-civil-014"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "lawmaster-civil-q-008",
+      "title": "合同可撤销情形",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "甲因乙欺诈以明显低价售出古董，甲可如何救济？属于效力何种状态？",
+      "options": null,
+      "answer": "受欺诈属可撤销，甲可请求法院/仲裁撤销。",
+      "solutionSteps": [
+        "受欺诈属可撤销，甲可请求法院/仲裁撤销。",
+        "撤销后自始无效，可返还财产。",
+        "须在知道撤销事由一年内行使。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先说原则，再给例外。"
+        },
+        {
+          "level": "L2",
+          "text": "例外要有法条支撑。"
+        },
+        {
+          "level": "L3",
+          "text": "原则—例外结构最稳。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "lawmaster-civil-015"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "lawmaster-civil-q-009",
+      "title": "侵权归责原则",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "一般侵权责任的归责原则是（ ）。",
+      "options": [
+        "过错责任",
+        "无过错责任",
+        "公平责任",
+        "绝对责任"
+      ],
+      "answer": "过错责任",
+      "solutionSteps": [
+        "一般侵权适用过错责任原则。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先定性：这是民法还是刑法问题？"
+        },
+        {
+          "level": "L2",
+          "text": "再定位具体制度。"
+        },
+        {
+          "level": "L3",
+          "text": "按'定性—要件—结论'作答。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "lawmaster-civil-017"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "lawmaster-civil-q-010",
+      "title": "产品责任归责",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "缺陷产品致害，生产者通常承担（ ）。",
+      "options": [
+        "无过错责任",
+        "过错责任",
+        "公平责任",
+        "不承担责任"
+      ],
+      "answer": "无过错责任",
+      "solutionSteps": [
+        "产品责任属特殊侵权，生产者多承担无过错责任。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "列出构成要件。"
+        },
+        {
+          "level": "L2",
+          "text": "逐条对应案情。"
+        },
+        {
+          "level": "L3",
+          "text": "缺哪条就不成立。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "lawmaster-civil-018"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "lawmaster-civil-q-011",
+      "title": "法定继承顺序",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "第一顺序法定继承人不包括（ ）。",
+      "options": [
+        "兄弟姐妹",
+        "配偶",
+        "子女",
+        "父母"
+      ],
+      "answer": "兄弟姐妹",
+      "solutionSteps": [
+        "兄弟姐妹为第二顺序继承人。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断行为性质。"
+        },
+        {
+          "level": "L2",
+          "text": "再谈违法性与有责性。"
+        },
+        {
+          "level": "L3",
+          "text": "结论要有法律根据。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "lawmaster-civil-019"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "lawmaster-civil-q-012",
+      "title": "民法典施行",
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "《民法典》施行日期是（ ）。",
+      "options": [
+        "2021年1月1日",
+        "2020年5月28日",
+        "2020年1月1日",
+        "2021年5月28日"
+      ],
+      "answer": "2021年1月1日",
+      "solutionSteps": [
+        "民法典2020.5.28通过，2021.1.1施行。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "区分此罪与彼罪的界限。"
+        },
+        {
+          "level": "L2",
+          "text": "关键区别事实是什么？"
+        },
+        {
+          "level": "L3",
+          "text": "用构成要件比对。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "lawmaster-civil-020"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "lawmaster-civil-q-013",
+      "title": "用益物权类型",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "下列属用益物权的是（ ）。",
+      "options": [
+        "建设用地使用权",
+        "抵押权",
+        "质权",
+        "留置权"
+      ],
+      "answer": "建设用地使用权",
+      "solutionSteps": [
+        "建设用地使用权是对他人之物的用益物权。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先答概念，再举法条。"
+        },
+        {
+          "level": "L2",
+          "text": "最后结合案情。"
+        },
+        {
+          "level": "L3",
+          "text": "法条+事实+结论三步走。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "lawmaster-civil-012"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "lawmaster-civil-q-014",
+      "title": "违约责任范围",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "乙迟延交货致甲转售利润损失，甲能否就全部可得利益索赔？说明限制。",
+      "options": null,
+      "answer": "违约赔偿含可得利益（履行利益）。",
+      "solutionSteps": [
+        "违约赔偿含可得利益（履行利益）。",
+        "但以订立时可预见为限，且受损方有减损义务。",
+        "超标的部分不予支持。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "谁的主张需要举证？"
+        },
+        {
+          "level": "L2",
+          "text": "举证责任在哪一方？"
+        },
+        {
+          "level": "L3",
+          "text": "归责原则决定举证。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "lawmaster-civil-016"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "lawmaster-civil-q-015",
+      "title": "法人分类",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "机关法人属于（ ）。",
+      "options": [
+        "特别法人",
+        "营利法人",
+        "非营利法人",
+        "非法人组织"
+      ],
+      "answer": "特别法人",
+      "solutionSteps": [
+        "机关法人归入特别法人。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判定合同/行为效力。"
+        },
+        {
+          "level": "L2",
+          "text": "再分析后果。"
+        },
+        {
+          "level": "L3",
+          "text": "效力状态决定救济方式。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "lawmaster-civil-006"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "lawmaster-civil-q-016",
+      "title": "效力待定情形",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "限制行为能力人订立超出其能力的合同，效力为（ ）。",
+      "options": [
+        "效力待定",
+        "无效",
+        "有效",
+        "可撤销"
+      ],
+      "answer": "效力待定",
+      "solutionSteps": [
+        "限人超能力订立的合同为效力待定，待追认。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先说原则，再给例外。"
+        },
+        {
+          "level": "L2",
+          "text": "例外要有法条支撑。"
+        },
+        {
+          "level": "L3",
+          "text": "原则—例外结构最稳。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "lawmaster-civil-015"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "lawmaster-civil-q-017",
+      "title": "监护与抚养",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "未成年人父母双亡，监护应如何确定？监护与抚养有何不同？",
+      "options": null,
+      "answer": "先由祖父母外祖父母等近亲属按顺序担任。",
+      "solutionSteps": [
+        "先由祖父母外祖父母等近亲属按顺序担任。",
+        "监护重在保护人身财产权益。",
+        "抚养偏生活供养，二者常重合但概念不同。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先定性：这是民法还是刑法问题？"
+        },
+        {
+          "level": "L2",
+          "text": "再定位具体制度。"
+        },
+        {
+          "level": "L3",
+          "text": "按'定性—要件—结论'作答。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "lawmaster-civil-005"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "lawmaster-civil-q-018",
+      "title": "物权排他性",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "物权的核心特征之一是（ ）。",
+      "options": [
+        "直接支配与排他",
+        "仅对人效力",
+        "须他人协助",
+        "可任意放弃"
+      ],
+      "answer": "直接支配与排他",
+      "solutionSteps": [
+        "物权是对物的直接支配与排他权利。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "列出构成要件。"
+        },
+        {
+          "level": "L2",
+          "text": "逐条对应案情。"
+        },
+        {
+          "level": "L3",
+          "text": "缺哪条就不成立。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "lawmaster-civil-010"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "lawmaster-civil-q-019",
+      "title": "公平责任定位",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "双方均无过错、依法律规定分担损失，属于（ ）。",
+      "options": [
+        "公平责任",
+        "过错责任",
+        "无过错责任",
+        "违约责任"
+      ],
+      "answer": "公平责任",
+      "solutionSteps": [
+        "公平责任在无过错情形依法律公平分担。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断行为性质。"
+        },
+        {
+          "level": "L2",
+          "text": "再谈违法性与有责性。"
+        },
+        {
+          "level": "L3",
+          "text": "结论要有法律根据。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "lawmaster-civil-017"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "lawmaster-civil-q-020",
+      "title": "综合辨析：物权vs债权",
+      "type": "diagnostic",
+      "difficulty": 3,
+      "content": "请从客体、效力与对抗第三人三方面比较物权与债权。",
+      "options": null,
+      "answer": "客体：物权为特定物，债权为行为（给付）。",
+      "solutionSteps": [
+        "客体：物权为特定物，债权为行为（给付）。",
+        "效力：物权具排他、优先与追及，债权为相对性。",
+        "对抗：物权经公示可对抗第三人，债权一般仅约束当事人。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "区分此罪与彼罪的界限。"
+        },
+        {
+          "level": "L2",
+          "text": "关键区别事实是什么？"
+        },
+        {
+          "level": "L3",
+          "text": "用构成要件比对。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "lawmaster-civil-010"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    }
+  ]
+}

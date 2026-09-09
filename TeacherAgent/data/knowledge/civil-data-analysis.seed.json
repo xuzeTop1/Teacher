@@ -1,0 +1,184 @@
+{
+  "subject": "xingce",
+  "course": "xingce",
+  "chapter": "civil-data-analysis",
+  "status": "draft",
+  "nodes": [
+    {
+      "id": "xingce-data-growth",
+      "title": "资料分析：增长率",
+      "level": "method",
+      "summary": "增长率 = (现期 - 基期) / 基期。识别「比上年/同比/增长百分之几」即为求增长率。注意百分点（作差）与百分数（相除）的区别，以及隔年增长率的近似算法。",
+      "prerequisites": [],
+      "misconceptions": [
+        "把百分点差误当百分数增长率",
+        "现期和基期方向搞反，得到负号错误"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "题目问的是增长率还是增长量？现期和基期分别是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "公式是 (现期-基期)/基期 还是直接相减？"
+        },
+        {
+          "level": "L3",
+          "text": "选项差距大时，能用近似估算代替精确除吗？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "xingce-data-proportion",
+      "title": "资料分析：比重",
+      "level": "method",
+      "summary": "比重 = 部分 / 整体。比重变化看部分增速与整体增速的差：部分增速大于整体则比重上升。避免把「部分」和「整体」张冠李戴。",
+      "prerequisites": [
+        "xingce-data-growth"
+      ],
+      "misconceptions": [
+        "把部分当作整体、整体当作部分",
+        "用现期比重直接判断比重升降"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "谁是部分、谁是整体？题目问的是比重还是比重变化？"
+        },
+        {
+          "level": "L2",
+          "text": "部分增速和整体增速谁大？比重升还是降？"
+        },
+        {
+          "level": "L3",
+          "text": "比重变化的近似公式怎么用，要不要考虑基数？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "xingce-data-multiple",
+      "title": "资料分析：倍数与平均数",
+      "level": "method",
+      "summary": "倍数 = A / B（「A 是 B 的 N 倍」）。平均数 = 总量 / 份数。注意「多 N 倍」等于「是 N+1 倍」。平均数增长率用 (a-b)/(1+b) 估算。",
+      "prerequisites": [
+        "xingce-data-growth"
+      ],
+      "misconceptions": [
+        "把「多 N 倍」当成「是 N 倍」",
+        "平均数增长率与增长率混淆"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "题目是「是几倍」还是「多几倍」？"
+        },
+        {
+          "level": "L2",
+          "text": "平均数 = 总量 / 份数，这里总量和份数分别是什么？"
+        },
+        {
+          "level": "L3",
+          "text": "平均数的增长率用哪个公式，分子分母增速怎么放？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "xingce-data-estimate",
+      "title": "资料分析：估算技巧（截位估算）",
+      "level": "method",
+      "summary": "选项差距大时先做截位（保留前两位或三位）再估算，可大幅减少计算量。先看选项数量级和首位，决定截位精度，避免无谓的精确除法。",
+      "prerequisites": [],
+      "misconceptions": [
+        "无论选项差距都做精确除法，浪费时间",
+        "截位过度导致结果落入相邻选项区间"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "四个选项的首位或数量级差距大吗？"
+        },
+        {
+          "level": "L2",
+          "text": "能不能只保留前两位就判断出答案区间？"
+        },
+        {
+          "level": "L3",
+          "text": "如果估算结果在边界，是再精确一位还是换种算法？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "xingce-data-directdiv",
+      "title": "资料分析：直除法",
+      "level": "method",
+      "summary": "除法比较时，用被除数除以除数首位（或前两位）直接看商的首位，从而快速排序或选答案。配合截位，能在不精确计算的情况下定位正确选项。",
+      "prerequisites": [
+        "xingce-data-estimate"
+      ],
+      "misconceptions": [
+        "直除时不截位，反而比完整除法还慢",
+        "只看被除数忽略除数对商的影响"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "要比较几个除法的大小，直接看商的首位够不够？"
+        },
+        {
+          "level": "L2",
+          "text": "除数截到前两位后，商的首位大概是多少？"
+        },
+        {
+          "level": "L3",
+          "text": "哪几个选项的首位相同，需要进一步看第二位？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。"
+      },
+      "reviewStatus": "draft"
+    }
+  ]
+}

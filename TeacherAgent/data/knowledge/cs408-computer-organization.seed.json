@@ -1,0 +1,1627 @@
+{
+  "subject": "cs408",
+  "course": "computer_organization",
+  "chapter": "cs408-computer-organization",
+  "status": "draft",
+  "nodes": [
+    {
+      "id": "cs408-co-system-overview",
+      "title": "计算机系统概述",
+      "summary": "现代计算机基于冯$\\cdot$诺依曼体系结构，由运算器、控制器、存储器、输入设备和输出设备五大部件组成，以存储程序为核心思想。计算机硬件系统按功能可分为 CPU（运算器+控制器）、主存和 $I/O$设备，通过总线互连。软件分为系统软件和应用软件。",
+      "prerequisites": [],
+      "keyPoints": [
+        "冯$\\cdot$诺依曼五大部件：运算器、控制器、存储器、输入设备、输出设备",
+        "存储程序原理：程序和数据以二进制形式存储，计算机自动逐条取出执行",
+        "CPU = 运算器 + 控制器，是计算机的核心",
+        "总线是连接各部件的公共信息通路，分为数据总线、地址总线和控制总线"
+      ],
+      "misconceptions": [
+        "冯$\\cdot$诺依曼结构和哈佛结构的区别只在于外观——核心区别是哈佛结构将指令和数据分开存储",
+        "控制器负责执行运算——控制器负责指挥协调，运算器负责算术逻辑运算"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "从五大部件的分工和协作来理解计算机工作过程"
+        },
+        {
+          "level": "L2",
+          "text": "存储程序的关键在于程序和数据同等对待，都存放在存储器中"
+        },
+        {
+          "level": "L3",
+          "text": "冯$\\cdot$诺依曼结构的瓶颈在于 CPU 和存储器之间的速度差距（冯$\\cdot$诺依曼瓶颈）"
+        }
+      ],
+      "difficulty": 1,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-performance",
+      "title": "计算机性能指标",
+      "summary": "计算机性能通过多个指标衡量：主频是 CPU 时钟频率，CPI 是每条指令的平均时钟周期数，MIPS 是每秒百万条指令数，FLOPS 是每秒浮点运算次数。CPU 执行时间 =指令数 $\\times$CPI $\\times$时钟周期。此外还有可靠性指标 MTBF（平均无故障时间）和 MTTR（平均修复时间）。",
+      "prerequisites": [
+        "cs408-co-system-overview"
+      ],
+      "keyPoints": [
+        "CPU执行时间 =指令条数 $\\times$CPI /主频",
+        "$MIPS =$主频 $/ (CPI \\times 10^6)$，不同程序 MIPS 可能不同",
+        "CPI：每条指令平均时钟周期数，与指令集和流水线设计有关",
+        "可靠性：MTBF 越长越可靠，MTTR 越短可维护性越好"
+      ],
+      "misconceptions": [
+        "主频越高性能一定越好——还取决于 CPI 和指令数，不同架构不能单看主频",
+        "MIPS 可以作为不同架构间的性能比较标准——MIPS 与指令集相关，不同架构的 MIPS 不可直接比较"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "性能的本质是执行时间，所有指标最终都归结于时间"
+        },
+        {
+          "level": "L2",
+          "text": "执行时间 =IC $\\times$CPI $\\times T$（$IC=$指令数，$T=$时钟周期）"
+        },
+        {
+          "level": "L3",
+          "text": "提高性能可以从三个方面入手：减少指令数、降低 CPI、提高主频"
+        }
+      ],
+      "difficulty": 2,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-number-representation",
+      "title": "数制与编码",
+      "summary": "计算机内部用二进制表示数据，常见的机器数编码方式有原码、反码、补码和移码。原码直观但加减运算复杂，补码将符号位和数值位统一处理，使加减法可统一用加法器实现。移码主要用于浮点数的阶码表示，方便比较大小。",
+      "prerequisites": [],
+      "keyPoints": [
+        "原码：最高位为符号位，其余为数值位。$[+0]$原 $\\neq [-0]$原",
+        "补码：正数不变，负数 = 反码+1。[+0]补 = [-0]补，唯一表示零",
+        "补码表示范围：$n$位补码可表示 $-2^(n-1) ~ 2^(n-1)-1$",
+        "移码 = 补码符号位取反，主要用于浮点数阶码"
+      ],
+      "misconceptions": [
+        "补码和原码的表示范围相同——补码比原码多表示一个负数（$-2^(n-1)$）",
+        "反码和补码的转换方法对所有数都一样——只有负数需要取反加1，正数不变"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "补码的设计目的是什么？为了简化硬件中的加减运算"
+        },
+        {
+          "level": "L2",
+          "text": "补码的加法运算不需要额外判断符号，溢出通过最高位进位判断"
+        },
+        {
+          "level": "L3",
+          "text": "8 位补码范围 -128~127，其中 -128 的补码为 10000000，没有对应的原码"
+        }
+      ],
+      "difficulty": 2,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-fixed-float",
+      "title": "定点数与浮点数",
+      "summary": "定点数的隐含小数点位置固定（通常在最高位之后或最低位之前），表示范围有限。浮点数用阶码和尾数两部分表示，相当于科学计数法的二进制版本：$N =$尾数 $\\times$基数^阶码。浮点数表示范围大但精度有限，存在规格化和舍入问题。",
+      "prerequisites": [
+        "cs408-co-number-representation"
+      ],
+      "keyPoints": [
+        "浮点数 =阶码 +尾数，$N = M \\times r^E$（$r$为基数，通常为2）",
+        "规格化浮点数：尾数最高位不为0，提高精度利用率",
+        "阶码用移码表示（便于比较大小），尾数用补码或原码",
+        "浮点数表示范围取决于阶码位数，精度取决于尾数位数"
+      ],
+      "misconceptions": [
+        "浮点数能精确表示所有实数——浮点数精度有限，很多十进制小数无法精确表示",
+        "阶码越大浮点数越大——还要看尾数和符号位，负数阶码越大反而越小"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "浮点数类似科学计数法，阶码决定大小范围，尾数决定精度"
+        },
+        {
+          "level": "L2",
+          "text": "规格化要求尾数最高有效位为1，避免前导零浪费精度"
+        },
+        {
+          "level": "L3",
+          "text": "浮点运算可能产生舍入误差，因为尾数位数有限"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-ieee754",
+      "title": "IEEE 754 标准",
+      "summary": "IEEE 754 是浮点数的国际标准。单精度（32位）：1位符号 + 8位阶码（偏移127）+ 23位尾数；双精度（64位）：1位符号 + 11位阶码（偏移1023）+ 52位尾数。尾数隐含最高位1（规格化数），阶码全0和全1有特殊含义（非规格化数、无穷大、NaN）。",
+      "prerequisites": [
+        "cs408-co-fixed-float"
+      ],
+      "keyPoints": [
+        "单精度：$1+8+23$位，阶码偏移 127，隐含位 1，有效精度 24位",
+        "双精度：$1+11+52$位，阶码偏移 1023，隐含位 1，有效精度 53位",
+        "阶码全 0：非规格化数（隐含位 0），用于表示零和接近零的数",
+        "阶码全 1：尾数全 0表示无穷大（$\\pm Inf$），尾数非全 0表示 NaN"
+      ],
+      "misconceptions": [
+        "单精度阶码偏移值是 128——偏移值是 127（$2^(8-1) - 1$），双精度偏移值是 1023（$2^(11-1) - 1$）",
+        "IEEE 754 的尾数直接存储完整数值——规格化数隐含最高位 1，只存储小数部分"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "IEEE 754的阶码用移码，偏移值为 $2^(k-1)-1$（$k$为阶码位数）"
+        },
+        {
+          "level": "L2",
+          "text": "规格化数的真值 $= (-1)^S \\times 1.M \\times 2$^($E-$偏移值)"
+        },
+        {
+          "level": "L3",
+          "text": "单精度可表示的最大正规格化数 $= (2 - 2^-23) \\times 2^127$"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-alu",
+      "title": "运算器与 ALU",
+      "summary": "运算器是 CPU 中执行算术和逻辑运算的部件，核心是算术逻辑单元（ALU）。ALU 由加法器为基础构成，可实现加减运算、逻辑与或非、移位等操作。运算器还包括通用寄存器组、状态寄存器（标志位如进位、溢出、零标志等）和数据通路。",
+      "prerequisites": [
+        "cs408-co-fixed-float"
+      ],
+      "keyPoints": [
+        "ALU 以加法器为核心，减法通过加补码实现",
+        "状态标志位：CF（进位）、OF（溢出）、ZF（零）、SF（符号）",
+        "溢出判断：两个同号数相加结果符号与操作数相反则溢出",
+        "运算器还包含移位器，用于乘除法（左移相当于乘2，右移相当于除2）"
+      ],
+      "misconceptions": [
+        "ALU 只能做加法——ALU 还能做逻辑运算、移位等，减法通过加补码转换",
+        "进位和溢出是一回事——进位针对无符号数，溢出针对有符号数，两者独立"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "ALU 的减法运算本质上是将减数取补后做加法"
+        },
+        {
+          "level": "L2",
+          "text": "溢出只可能发生在两个同号数相加或异号数相减时"
+        },
+        {
+          "level": "L3",
+          "text": "OF = 最高位进位 XOR 次高位进位"
+        }
+      ],
+      "difficulty": 2,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-complement-arith",
+      "title": "补码加减运算与溢出",
+      "summary": "补码加减运算统一为加法：[A+B]补 = [A]补 + [B]补，[A-B]补 = [A]补 + [-B]补。运算结果若超出补码表示范围则溢出。溢出检测方法有双符号位法（变形补码）和单符号位法（最高位进位与次高位进位异或）。",
+      "prerequisites": [
+        "cs408-co-alu"
+      ],
+      "keyPoints": [
+        "[A-B]补 = [A]补 + [-B]补，其中 [-B]补 是对 [B]补 包括符号位全部取反加1",
+        "溢出判断：$V =$Cf XOR $C(n-1)$（最高位进位和次高位进位的异或）",
+        "双符号位法：若结果的两个符号位不同（01 或 10）则溢出",
+        "溢出只发生在同号相加或异号相减时"
+      ],
+      "misconceptions": [
+        "有进位就一定溢出——进位是无符号数越界的标志，溢出是有符号数越界的标志，两者不同",
+        "异号两数相加可能溢出——异号相加结果的绝对值变小，不会溢出"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "先确定运算类型和符号，再判断是否可能溢出"
+        },
+        {
+          "level": "L2",
+          "text": "两个正数相加结果为负，或两个负数相加结果为正，说明溢出了"
+        },
+        {
+          "level": "L3",
+          "text": "用 4位补码做 $5+3$：$0101+0011=1000$，结果 $-8$，显然溢出了"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-multiplier-divider",
+      "title": "乘除运算",
+      "summary": "计算机中的乘法通过移位和加法实现。原码一位乘法逐位判断乘数位，为1则加被乘数并右移。Booth 算法（补码乘法）统一处理符号位。除法通过移位和减法实现，恢复余数法和不恢复余数法是两种主要方法。",
+      "prerequisites": [
+        "cs408-co-complement-arith"
+      ],
+      "keyPoints": [
+        "原码一位乘法：符号位单独异或，数值部分逐位乘加右移",
+        "Booth 算法：根据相邻两位的差值决定加、减或仅移位，统一处理有符号乘法",
+        "不恢复余数除法（加减交替法）：余数为正减除数，余数为负加除数并左移",
+        "硬件乘法器（如阵列乘法器）速度远快于移位加法的软件实现"
+      ],
+      "misconceptions": [
+        "乘法运算只能逐位做加法和移位——现代处理器用 Wallace 树等并行乘法器大大加速",
+        "Booth 算法和原码乘法的结果一定不同——它们计算结果相同，只是实现方式不同"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "原码乘法分离符号和数值，Booth 算法直接用补码运算"
+        },
+        {
+          "level": "L2",
+          "text": "Booth算法检查乘数当前位和前一位：$0\\frac{0}{1}1$仅移位，01加被乘数，10减被乘数"
+        },
+        {
+          "level": "L3",
+          "text": "除法中商的值由余数的符号决定"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-memory-hierarchy",
+      "title": "存储器层次结构",
+      "summary": "计算机存储器按速度、容量和价格构成层次结构：寄存器（最快最小）> Cache > 主存 > 辅存（最慢最大）。这种层次结构的依据是程序访问的局部性原理（时间局部性和空间局部性），通过少量高速存储器与大量低速存储器配合，实现接近高速存储器的平均访问速度。",
+      "prerequisites": [
+        "cs408-co-system-overview"
+      ],
+      "keyPoints": [
+        "存储器层次：寄存器 $\\to$Cache $\\to$主存 $\\to$辅存，速度递减、容量递增、单位成本递减",
+        "时间局部性：刚被访问的数据很可能很快再次被访问",
+        "空间局部性：某地址被访问后，其附近地址也很可能被访问",
+        "Cache-主存层次由硬件自动管理，主存-辅存层次由操作系统管理（虚拟内存）"
+      ],
+      "misconceptions": [
+        "Cache 越大程序运行越快——超过一定容量后边际效果递减，且大 Cache 访问时间也增加",
+        "局部性原理对所有程序都成立——某些访问模式（如随机访问大数组）局部性很差"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "层次结构的核心思想是用少量昂贵的高速存储模拟大量廉价的低速存储"
+        },
+        {
+          "level": "L2",
+          "text": "局部性原理是层次结构能够有效工作的理论基础"
+        },
+        {
+          "level": "L3",
+          "text": "平均访问时间 $= H\\times T_fast + (1-H)\\times T_slow$，命中率 $H$越高越接近高速存储器"
+        }
+      ],
+      "difficulty": 2,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-main-memory",
+      "title": "主存（SRAM、DRAM、Flash）",
+      "summary": "主存采用 $DRAM$（动态随机存储器），以电容充放电存储信息，需要定期刷新。SRAM（静态随机存储器）速度快但成本高，用于 Cache。Flash（闪存）是非易失性存储器，用于 SSD。存储器通过地址总线选择单元，数据总线传输内容，容量 $= 2$^地址线数 $\\times$数据线位宽。",
+      "prerequisites": [
+        "cs408-co-memory-hierarchy"
+      ],
+      "keyPoints": [
+        "SRAM：触发器存储，速度快、功耗低、集成度低、成本高，用于 Cache",
+        "DRAM：电容存储，需刷新（约 2ms 一次），速度慢但集成度高，用于主存",
+        "Flash：非易失性，擦写次数有限（约 10 万次），用于 SSD 和 U 盘",
+        "存储器扩展：字扩展（增加地址线）、位扩展（增加数据线）、字位同时扩展"
+      ],
+      "misconceptions": [
+        "DRAM 比 SRAM 快——DRAM 需要刷新且存取周期更长，SRAM 更快",
+        "存储器扩展只是增加芯片数量——需要正确连接地址线和数据线，以及片选信号"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "SRAM 和 DRAM 的本质区别在于存储单元的物理实现方式"
+        },
+        {
+          "level": "L2",
+          "text": "DRAM 刷新是因为电容会漏电，需要周期性补充"
+        },
+        {
+          "level": "L3",
+          "text": "字扩展用译码器产生片选信号，位扩展将多个芯片的数据线并联"
+        }
+      ],
+      "difficulty": 2,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-cache",
+      "title": "Cache 基本原理",
+      "summary": "Cache 是位于 CPU 和主存之间的高速缓冲存储器，利用局部性原理将主存中频繁访问的数据块复制到 Cache 中。CPU 访存时先查 Cache，命中则直接读取，未命中再从主存读取并将整个数据块调入 Cache。Cache 的命中率是衡量其效率的关键指标。",
+      "prerequisites": [
+        "cs408-co-memory-hierarchy"
+      ],
+      "keyPoints": [
+        "Cache 以块（行）为单位与主存交换数据，块大小通常为 16~256 字节",
+        "Cache 命中率 H 越高，平均访问时间越接近 Cache 访问时间",
+        "平均访问时间 $T_avg = H \\times T_cache + (1-H) \\times T_main$",
+        "Cache 容量、块大小、映射方式、替换算法都影响命中率"
+      ],
+      "misconceptions": [
+        "Cache 中存储的数据和主存完全一致——写回（write-back）策略下 Cache 可能比主存新",
+        "Cache 命中就不需要访问主存——读操作命中时确实不需要，但写操作取决于写策略"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "Cache 解决的是 CPU 和主存之间的速度差距"
+        },
+        {
+          "level": "L2",
+          "text": "命中率是 Cache 效率的核心指标，受多种因素影响"
+        },
+        {
+          "level": "L3",
+          "text": "$T_avg$公式中 $(1-H)$项体现了未命中时的性能惩罚"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-cache-mapping",
+      "title": "Cache 映射方式",
+      "summary": "主存块映射到 Cache 有三种方式：直接映射（每块只能放到固定一行）、全相联映射（可放到任意行）、组相联映射（折中方案，每组可放到组内任意行）。主存地址被划分为标记（Tag）、组索引（Index）和块内偏移（Offset）三部分。",
+      "prerequisites": [
+        "cs408-co-cache"
+      ],
+      "keyPoints": [
+        "直接映射：主存地址 = Tag + Index + Offset，Index = 行号，冲突率高但硬件简单",
+        "全相联映射：主存地址 = Tag + Offset，Tag 需与所有行比较，冲突率低但硬件复杂",
+        "组相联映射：n 路组相联，Cache 分成若干组，每组 n 行。地址 = Tag + 组号 + Offset",
+        "块大小 $= 2^Offset$位数，Cache 行数 $= 2^Index$位数"
+      ],
+      "misconceptions": [
+        "直接映射完全没有冲突——不同主存块可能映射到同一行导致冲突替换",
+        "全相联映射的 Index 位数为 0——全相联没有组索引，整个 Cache 就一个组"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "三种映射方式是灵活性和硬件复杂度之间的折中"
+        },
+        {
+          "level": "L2",
+          "text": "地址划分的关键在于确定各字段的位数：Offset 由块大小决定，Index 由行数/组数决定"
+        },
+        {
+          "level": "L3",
+          "text": "组相联中，组数 =Cache 行数 /路数，Index 位数 $= log2$(组数)"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-cache-replace-write",
+      "title": "Cache 替换算法与写策略",
+      "summary": "当 Cache 满时需要替换某个块，常见算法有 FIFO（先进先出）、LRU（最近最少使用）、LFU（最不经常使用）和随机替换。写策略有两种：写直达（write-through，同时写 Cache 和主存）和写回（write-back，只写 Cache，被替换时再写回主存）。",
+      "prerequisites": [
+        "cs408-co-cache-mapping"
+      ],
+      "keyPoints": [
+        "LRU 替换最近最少使用的块，利用时间局部性，通常命中率最高",
+        "FIFO 替换最早进入的块，实现简单但可能替换掉常用块（Belady 异常不发生在 LRU）",
+        "写直达保证 Cache-主存一致性好，但每次写都要访问主存",
+        "写回减少主存写入次数，但需要为每行设脏位（dirty bit）标记"
+      ],
+      "misconceptions": [
+        "LRU 一定比 FIFO 好——对某些特殊访问模式，FIFO 可能更优",
+        "写回策略下 Cache 和主存数据永远一致——写回策略下 Cache 修改后主存还是旧值，直到块被替换出去"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "替换算法的目标是留下将来最可能被访问的块"
+        },
+        {
+          "level": "L2",
+          "text": "LRU 通常用计数器或栈实现，硬件上近似 LRU 更常见"
+        },
+        {
+          "level": "L3",
+          "text": "写回策略需要脏位标记该行是否被修改过，替换时只回写脏行"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-virtual-memory",
+      "title": "虚拟存储器与页式管理",
+      "summary": "虚拟存储器利用主存和辅存的层次结构，让程序感觉自己拥有比物理内存大得多的地址空间。页式虚拟存储将虚拟地址空间和物理地址空间都划分为固定大小的页（通常 4KB），通过页表实现虚拟页号到物理页号的映射。TLB（快表）加速地址转换。",
+      "prerequisites": [
+        "cs408-co-cache"
+      ],
+      "keyPoints": [
+        "虚拟地址 = 虚拟页号 + 页内偏移，物理地址 = 物理页号 + 页内偏移",
+        "页表项包含：有效位、物理页号、访问权限位、脏位等",
+        "TLB（Translation Lookaside Buffer）缓存最近使用的页表项，加速地址转换",
+        "缺页中断：虚拟页不在主存中时触发，操作系统负责将页面从磁盘调入"
+      ],
+      "misconceptions": [
+        "虚拟内存就是磁盘上的一块空间——虚拟内存是地址空间抽象，磁盘上的交换区只是其后备存储",
+        "TLB 和 Cache 是完全独立的——它们可以并行访问，但 TLB 未命中时需要访问页表（在主存中）"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "虚拟存储的核心思想是用页表将虚拟地址映射为物理地址"
+        },
+        {
+          "level": "L2",
+          "text": "页内偏移不变，变的是页号——虚拟页号查页表得物理页号"
+        },
+        {
+          "level": "L3",
+          "text": "TLB 命中时直接得到物理页号，未命中则查页表并更新 TLB"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-instruction-system",
+      "title": "指令系统与指令格式",
+      "summary": "指令由操作码和地址码组成，操作码指明要执行的操作，地址码给出操作数的来源。根据地址码个数分为零地址、一地址、二地址和三地址指令。指令字长影响编程效率和硬件复杂度。定长指令字译码简单，变长指令字节省存储空间。",
+      "prerequisites": [
+        "cs408-co-system-overview"
+      ],
+      "keyPoints": [
+        "操作码字段决定指令种类数：$k$位操作码最多表示 $2^k$条指令",
+        "扩展操作码技术：短地址码指令用更长操作码，增加指令种类",
+        "二地址指令：OP A1, A2 表示 A1 = A1 OP A2，结果存回 A1",
+        "指令字长通常是字节的整数倍，与机器字长不一定相同"
+      ],
+      "misconceptions": [
+        "三地址指令一定比二地址指令好——三地址指令更长，占用更多存储空间",
+        "操作码位数固定不变——扩展操作码技术可以让不同指令使用不同长度的操作码"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "指令格式设计要在指令长度、地址码位数和操作码位数之间折中"
+        },
+        {
+          "level": "L2",
+          "text": "扩展操作码的思路：地址码少的指令可以把省下的位给操作码用"
+        },
+        {
+          "level": "L3",
+          "text": "操作码字段位数 $k$与可表示指令数 $2^k$的关系是基本约束"
+        }
+      ],
+      "difficulty": 2,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-addressing",
+      "title": "寻址方式",
+      "summary": "寻址方式指确定操作数有效地址的方法。常见方式有：立即寻址（操作数在指令中）、直接寻址（地址码即有效地址）、间接寻址（地址码指向的地址存放操作数）、寄存器寻址、寄存器间接寻址、基址寻址、变址寻址和相对寻址。不同寻址方式影响指令的灵活性和访存次数。",
+      "prerequisites": [
+        "cs408-co-instruction-system"
+      ],
+      "keyPoints": [
+        "立即寻址：操作数直接在指令中，不需要访存取数，速度最快",
+        "直接寻址：有效地址 = 地址码，一次访存取操作数",
+        "基址寻址：有效地址 = 基址寄存器 + 偏移量，用于程序重定位",
+        "变址寻址：有效地址 = 变址寄存器 + 形式地址，适合数组遍历",
+        "相对寻址：有效地址 = PC + 偏移量，用于转移指令"
+      ],
+      "misconceptions": [
+        "基址寻址和变址寻址完全一样——基址寄存器由操作系统管理（重定位），变址寄存器由用户程序管理（遍历）",
+        "间接寻址只需要一次访存——至少两次：一次取地址，一次取数据"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "每种寻址方式的有效地址计算公式不同"
+        },
+        {
+          "level": "L2",
+          "text": "基址寄存器内容一般不变（由 OS 设定），变址寄存器内容由程序修改"
+        },
+        {
+          "level": "L3",
+          "text": "相对寻址中 PC 指向下一条指令地址，所以偏移量是相对于下条指令的"
+        }
+      ],
+      "difficulty": 2,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-cisc-risc",
+      "title": "CISC 与 RISC",
+      "summary": "CISC（复杂指令集）指令条数多、格式复杂、长度可变，一条指令可完成复杂操作，微程序控制为主。RISC（精简指令集）指令条数少、格式规整、等长，大多数指令单周期完成，硬布线控制为主，大量使用寄存器。现代处理器往往融合两者特点。",
+      "prerequisites": [
+        "cs408-co-instruction-system"
+      ],
+      "keyPoints": [
+        "CISC：指令复杂，微程序控制，编译器简单，访存指令多",
+        "RISC：指令简单规整，硬布线控制，编译器复杂，大量 load/store",
+        "RISC 指令大多数在一个时钟周期内完成",
+        "现代处理器内部将 CISC 指令译为 RISC 微操作执行（如 x86）"
+      ],
+      "misconceptions": [
+        "RISC 一定比 CISC 快——性能取决于实现技术和应用场景，不能一概而论",
+        "RISC 没有复杂指令——RISC 通过多条简单指令组合实现复杂操作"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "CISC 和 RISC 代表两种不同的设计哲学"
+        },
+        {
+          "level": "L2",
+          "text": "RISC 的优势在于指令规整便于流水线化"
+        },
+        {
+          "level": "L3",
+          "text": "RISC 的 Load/Store 架构要求运算操作只能在寄存器间进行"
+        }
+      ],
+      "difficulty": 2,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-cpu-pipeline",
+      "title": "CPU 结构与指令流水线",
+      "summary": "指令流水线将一条指令的执行过程分为多个阶段（如取指 IF、译码 ID、执行 EX、访存 MEM、写回 WB），让多条指令在不同阶段重叠执行，提高吞吐率。理想情况下 $k$段流水线执行 $n$条指令需要 $k+n-1$个时钟周期，相比非流水线的 $n\\times k$个周期大幅减少。",
+      "prerequisites": [
+        "cs408-co-instruction-system"
+      ],
+      "keyPoints": [
+        "经典五段流水线：IF（取指）$\\to$ID（译码）$\\to$EX（执行）$\\to$MEM（访存）$\\to$WB（写回）",
+        "流水线吞吐率 =指令数 /总时间，理想接近 $1/$时钟周期",
+        "加速比 =非流水线时间 /流水线时间",
+        "流水线深度越大理论吞吐越高，但冒险问题更严重"
+      ],
+      "misconceptions": [
+        "流水线能减少每条指令的执行时间——流水线减少的是指令之间的等待时间，单条指令时间不变",
+        "流水线一定能达到理想加速比——冒险（hazard）会导致停顿，降低实际加速比"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "流水线的核心思想是空间换时间——用多个功能部件并行工作"
+        },
+        {
+          "level": "L2",
+          "text": "理想情况下每经过一个时钟周期就有一条指令完成"
+        },
+        {
+          "level": "L3",
+          "text": "流水线实际效率受限于最慢的段（瓶颈段）和各种冒险"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-pipeline-hazards",
+      "title": "流水线冒险（结构、数据、控制）",
+      "summary": "流水线冒险指阻碍指令正常重叠执行的情况。结构冒险：多条指令同时竞争同一功能部件（如同时访问存储器）。数据冒险：后续指令需要前面指令尚未写回的结果（RAW、WAR、WAW）。控制冒险：分支指令的目标地址在执行阶段才能确定，导致流水线需要暂停或取错指令。",
+      "prerequisites": [
+        "cs408-co-cpu-pipeline"
+      ],
+      "keyPoints": [
+        "结构冒险：通过增加资源（如分开指令/数据存储器）或插入气泡解决",
+        "数据冒险-RAW（真相关）：后续指令读前面指令要写的寄存器，用数据前推（旁路）解决",
+        "数据冒险：Load-Use 冒险需要插入 stall（前推无法解决，因为数据要到 MEM 后才可用）",
+        "控制冒险：通过分支预测（静态/动态）减少惩罚，预测错误需刷新流水线"
+      ],
+      "misconceptions": [
+        "数据前推能解决所有数据冒险——Load-Use 冒险无法前推，必须 stall 一拍",
+        "分支预测只是软件技术——现代 CPU 用硬件分支预测器（BTB、BHT、返回地址栈）"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "三种冒险分别对应硬件冲突、数据依赖和分支跳转"
+        },
+        {
+          "level": "L2",
+          "text": "数据前推（旁路）将 EX 或 MEM 阶段的结果直接送回 ID 阶段的输入"
+        },
+        {
+          "level": "L3",
+          "text": "Load-Use 冒险中，Load 的数据在 MEM 阶段才得到，但下条指令在 EX 阶段就需要"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-bus-io",
+      "title": "总线与 I/O 控制方式",
+      "summary": "总线是计算机各部件间传输信息的公共通路，按功能分为数据总线、地址总线和控制总线。I/O 控制方式从简单到复杂依次为：程序查询方式（CPU 主动轮询）、程序中断方式（外设准备好后发中断请求）、DMA 方式（硬件直接控制数据在主存和外设间传输）和通道方式。",
+      "prerequisites": [
+        "cs408-co-system-overview"
+      ],
+      "keyPoints": [
+        "程序查询：CPU 不断查询外设状态，简单但效率低（浪费 CPU 时间）",
+        "程序中断：外设准备好后发中断，CPU 暂停当前任务处理 I/O，效率较高",
+        "DMA：由 DMA 控制器接管总线，直接在主存和外设间传数据，不经过 CPU",
+        "DMA 适用于大量数据块传输，中断适用于少量数据或控制信息"
+      ],
+      "misconceptions": [
+        "DMA 完全不需要 CPU 参与——DMA 开始前需要 CPU 初始化（设置传输地址、方向、长度），结束后发中断通知 CPU",
+        "中断方式比 DMA 快——中断每次传输需要 CPU 执行中断服务程序，DMA 由硬件直接传输更快"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "四种 I/O 方式的核心区别在于 CPU 参与程度不同"
+        },
+        {
+          "level": "L2",
+          "text": "DMA 在传输阶段 CPU 可以继续执行其他指令（除非需要访问主存产生冲突）"
+        },
+        {
+          "level": "L3",
+          "text": "DMA 的周期窃取方式：在 CPU 不访问主存时让 DMA 使用总线"
+        }
+      ],
+      "difficulty": 2,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-booth",
+      "title": "Booth算法（补码一位乘法）",
+      "summary": "Booth算法是一种补码乘法算法，通过检查乘数相邻两位（当前位$y_i$和前一位$y_{i-1}$）的差值来决定每步操作：差值为01时加被乘数，差值为10时减被乘数，差值为00或11时仅做算术右移。该算法统一处理符号位，无需单独判断正负，且对连续1序列可大幅减少加法次数。对于$n$位乘数需执行$n$步（含最后一步不移位）。",
+      "prerequisites": [
+        "cs408-co-multiplier-divider"
+      ],
+      "keyPoints": [
+        "Booth算法规则：$y_i y_{i-1} = 01$加$[x]$补，10加$[-x]$补，00或11仅算术右移",
+        "初始时 y_{-1} = 0，被乘数和乘数需进行符号扩展",
+        "部分积采用算术右移（高位补符号位），共执行n步",
+        "Booth算法的优势：连续1序列（如011110）只需首尾各一次加减操作"
+      ],
+      "misconceptions": [
+        "Booth算法只适用于负数乘法——Booth算法对正数和负数乘法都适用，统一用补码运算",
+        "Booth算法每步都需要做加法——只有当相邻两位不同时（01或10）才做加法/减法，否则仅移位"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "Booth算法的核心是观察乘数相邻位的差值，而非当前位的值"
+        },
+        {
+          "level": "L2",
+          "text": "连续$k$个1可以看作 $2^k - 1$，因此只需在首尾做两次操作"
+        },
+        {
+          "level": "L3",
+          "text": "算术右移保持符号位不变，这是补码运算的关键特性"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-array-multiplier",
+      "title": "阵列乘法器原理",
+      "summary": "阵列乘法器是一种并行乘法器，通过二维阵列结构的加法器同时计算所有部分积并并行求和，速度远快于串行的移位加法。对于$n$位$\\times n$位的乘法，阵列乘法器由$n\\times(n-1)$个全加器和$n$个半加器组成，信号从左上到右下传播，延迟与位数成正比（$O(n)$），远快于串行乘法的$O(n^2)$。",
+      "prerequisites": [
+        "cs408-co-multiplier-divider"
+      ],
+      "keyPoints": [
+        "阵列乘法器先生成所有$n\\times n$个部分积（与门产生），再用加法器阵列并行求和",
+        "基本单元：每个单元格用一个全加器将部分积与上一行的进位相加",
+        "信号传播路径：和向下方传递，进位向右下方传递，形成斜向阵列",
+        "时间复杂度$O(n)$，空间复杂度$O(n^2)$，是速度和面积的折中"
+      ],
+      "misconceptions": [
+        "阵列乘法器和串行乘法器结果不同——两者计算结果完全相同，只是速度不同",
+        "阵列乘法器不需要任何移位操作——阵列的空间排列本身就隐含了权值对齐（移位），不需要显式移位"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "阵列乘法器的核心思想是用空间换时间——并行计算所有部分积"
+        },
+        {
+          "level": "L2",
+          "text": "每个全加器处理一位部分积和来自上方的进位"
+        },
+        {
+          "level": "L3",
+          "text": "更高级的Wallace树乘法器进一步减少加法器层数，延迟为$O(\\log n)$"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-float-normalize",
+      "title": "浮点数规格化（左规/右规）",
+      "summary": "浮点数运算后可能需要进行规格化调整。左规：当尾数最高有效位为0时（如补码尾数00.0xxx），将尾数左移并将阶码减1，直到最高位为1，目的是消除前导零以提高精度。右规：当尾数运算结果溢出（双符号位为01或10）时，将尾数右移一位并将阶码加1，以恢复规格化形式。",
+      "prerequisites": [
+        "cs408-co-fixed-float"
+      ],
+      "keyPoints": [
+        "左规条件：尾数最高位与符号位相同（如补码00.0xxx或11.1xxx），需左移直到不同",
+        "左规操作：尾数每左移1位，阶码减1，数值不变",
+        "右规条件：尾数双符号位为01（正溢出）或10（负溢出），说明尾数绝对值>=1",
+        "右规操作：尾数右移1位，阶码加1，恢复规格化"
+      ],
+      "misconceptions": [
+        "左规和右规可以同时进行——必须先判断是哪种情况，左规处理前导零，右规处理溢出",
+        "规格化只是精度优化不影响数值——规格化不改变数值大小，但影响精度和表示唯一性"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "左规消除前导零，右规处理溢出，两者目的不同"
+        },
+        {
+          "level": "L2",
+          "text": "左移尾数相当于乘2，所以阶码要减1来补偿"
+        },
+        {
+          "level": "L3",
+          "text": "用双符号位判断是否需要右规：01.xxxx需要右规，00.1xxx或11.0xxx已是规格化"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-float-round",
+      "title": "浮点数舍入方法",
+      "summary": "浮点数运算中，当尾数位数超出存储限制时需要进行舍入。常见舍入方法有：截断法（直接丢弃多余位，简单但精度低）、恒置1法（将最低有效位恒置为1）、0舍1入法（类似十进制四舍五入，丢弃部分最高位为1则入，为0则舍）和IEEE 754默认的就近舍入（round to nearest even）。",
+      "prerequisites": [
+        "cs408-co-fixed-float"
+      ],
+      "keyPoints": [
+        "截断法（朝零舍入）：直接丢弃超出位，实现简单但总是偏向零方向产生误差",
+        "恒置1法：将保留的最低位恒置为1，统计平均误差较小",
+        "0舍1入法：丢弃部分最高位为0则截断，为1则在最低位加1（类似四舍五入）",
+        "IEEE 754默认舍入：就近舍入到偶数（round to nearest, ties to even），统计偏差最小"
+      ],
+      "misconceptions": [
+        "0舍1入法就是四舍五入——0舍1入是二进制版本，判断标准是丢弃部分最高位（而非所有位的大小）",
+        "截断法精度最高——截断法实现最简单但误差最大，IEEE默认舍入方式精度更高"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "舍入的本质是在有限位数内尽量逼近真实值"
+        },
+        {
+          "level": "L2",
+          "text": "0舍1入类似十进制的四舍五入，但基数是2不是10"
+        },
+        {
+          "level": "L3",
+          "text": "IEEE 754的就近舍入到偶数可以避免统计偏差的积累"
+        }
+      ],
+      "difficulty": 2,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-float-overflow",
+      "title": "浮点数溢出判断",
+      "summary": "浮点数的溢出与定点数不同：浮点数的阶码超出表示范围时才发生溢出。阶码上溢（阶码超过最大可表示值）意味着数值太大无法表示，产生真正的溢出（需中断处理）。阶码下溢（阶码小于最小可表示值）意味着数值太接近零，通常按机器零处理（不视为错误）。尾数溢出通过右规解决，不算真正的溢出。",
+      "prerequisites": [
+        "cs408-co-fixed-float",
+        "cs408-co-float-normalize"
+      ],
+      "keyPoints": [
+        "阶码上溢 = 浮点数真正溢出：数值绝对值太大，无法表示，需Overflow异常处理",
+        "阶码下溢 = 机器零处理：数值绝对值太小，近似为零，不视为错误",
+        "尾数溢出不是浮点数溢出：通过右规（尾数右移、阶码加1）即可解决",
+        "浮点数溢出判断比定点数复杂：需要先规格化再检查阶码是否越界"
+      ],
+      "misconceptions": [
+        "浮点数尾数溢出就是整个浮点数溢出——尾数溢出可通过右规解决，只有阶码上溢才是真正的溢出",
+        "阶码下溢需要报错处理——阶码下溢通常按机器零处理，不产生异常"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "浮点数的溢出取决于阶码，而非尾数"
+        },
+        {
+          "level": "L2",
+          "text": "阶码太大$\\to$数太大$\\to$溢出；阶码太小$\\to$数太小$\\to$机器零"
+        },
+        {
+          "level": "L3",
+          "text": "浮点运算流程：运算$\\to$规格化$\\to$舍入$\\to$检查溢出"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-cache-calc",
+      "title": "Cache地址划分详细计算",
+      "summary": "Cache地址划分是考试重点。给定主存地址位数、Cache容量、块大小和映射方式，需计算Tag、Index、Offset各占多少位。核心公式：Offset位数 = log2(块大小)；Cache行数 = Cache容量/块大小；直接映射时Index位数 = log2(行数)；n路组相联时Index位数 = log2(行数/n)；全相联时Index位数为0。Tag位数 = 主存地址位数 - Index位数 - Offset位数。",
+      "prerequisites": [
+        "cs408-co-cache-mapping"
+      ],
+      "keyPoints": [
+        "Offset位数 = log2(块大小)，与映射方式无关",
+        "直接映射：Index位数 = log2(Cache行数)，Tag位数 = 地址位数 - Index - Offset",
+        "n路组相联：组数 = Cache行数/n，Index位数 = log2(组数)",
+        "全相联映射：Index位数 = 0，Tag位数 = 地址位数 - Offset",
+        "Cache行数 =Cache容量 /块大小（注意单位统一为字节）"
+      ],
+      "misconceptions": [
+        "组相联的Index位数等于log2(Cache行数)——Index位数 = log2(组数) = log2(行数/路数)，比直接映射少",
+        "全相联映射不需要Tag——全相联映射没有Index但仍有Tag，用于与所有行并行比较"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "地址划分的突破口是先确定Offset（由块大小决定）"
+        },
+        {
+          "level": "L2",
+          "text": "Index位数取决于Cache的分组数，而非总行数"
+        },
+        {
+          "level": "L3",
+          "text": "Tag位数是剩余的位数：总地址位数 - Index位数 - Offset位数"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-cache-perf",
+      "title": "Cache性能计算（命中率与AMAT）",
+      "summary": "Cache性能分析的核心指标是平均内存访问时间（AMAT）。AMAT =命中时间 +缺失率 $\\times$缺失惩罚。对于多级Cache：AMAT $= L1$命中时间 $+ L1$缺失率 $\\times$($L2$命中时间 $+ L2$缺失率 $\\times L2$缺失惩罚)。注意区分局部缺失率（本级Cache的缺失率）和全局缺失率（相对于所有访存的缺失率）。提高命中率的方法包括增大Cache容量、减小块大小、提高相联度等。",
+      "prerequisites": [
+        "cs408-co-cache",
+        "cs408-co-cache-mapping"
+      ],
+      "keyPoints": [
+        "$AMAT =$Hit Time +Miss Rate $\\times$Miss Penalty",
+        "两级Cache：AMAT $= T_L1 + MR_L1 \\times (T_L2 + MR_L2 \\times MP_L2)$",
+        "缺失惩罚 = 下一级访问时间（包含传输时间）",
+        "提高命中率的方法：增大Cache、增大块大小（适度）、提高相联度、使用预取技术"
+      ],
+      "misconceptions": [
+        "$AMAT = H\\times T_cache + (1-H)\\times T_main$和 AMAT $= T_cache + (1-H)\\times Miss_Penalty$是同一个公式——前者假设先查Cache再查主存（串行），后者将命中时间单独列出，$Miss_Penalty = T_main - T_cache$（并行时）或 $T_main$（串行时）",
+        "缺失率越低性能一定越好——还需考虑缺失惩罚大小，低缺失率但高惩罚可能不如高缺失率低惩罚"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "AMAT的三个组成部分：命中时间、缺失率、缺失惩罚"
+        },
+        {
+          "level": "L2",
+          "text": "多级Cache的AMAT需要逐级展开计算"
+        },
+        {
+          "level": "L3",
+          "text": "注意区分串行访问（先查Cache再查主存）和并行访问（同时查）的AMAT公式差异"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-tlb",
+      "title": "TLB详细（结构、地址转换与Cache协作）",
+      "summary": "TLB（Translation Lookaside Buffer）是页表的缓存，用相联存储器实现，存放最近使用的虚拟页号到物理页号的映射。CPU发出虚拟地址后，TLB并行查找虚拟页号：命中则直接得到物理页号，未命中则访问主存中的页表并将结果写入TLB。TLB与Cache的协作方式有两种：并行（TLB和Cache同时查找）和串行（先查TLB再查Cache），影响AMAT的计算。",
+      "prerequisites": [
+        "cs408-co-virtual-memory",
+        "cs408-co-cache"
+      ],
+      "keyPoints": [
+        "TLB结构：由相联存储器实现，每个表项包含有效位、虚拟页号（Tag）、物理页号、访问权限位",
+        "地址转换流程：虚拟页号$\\to$TLB查找$\\to$命中得物理页号$\\to$拼接页内偏移得物理地址$\\to$查Cache",
+        "并行访问：TLB和Cache同时启动查找（TLB命中后验证Cache Tag），速度快但硬件复杂",
+        "串行访问：先查TLB得到物理地址，再用物理地址查Cache，速度慢但逻辑清晰",
+        "TLB命中率通常很高（>99%），因为程序具有良好的时间局部性"
+      ],
+      "misconceptions": [
+        "TLB未命中不需要额外代价——TLB未命中需要访问主存中的页表，代价很大（相当于一次主存访问）",
+        "TLB和Cache总是并行访问——具体是并行还是串行取决于CPU设计，两种方式AMAT计算不同"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "TLB本质上是页表的Cache，缓存最近使用的地址映射"
+        },
+        {
+          "level": "L2",
+          "text": "TLB命中$\\to$得到物理页号$\\to$查Cache；TLB未命中$\\to$查页表$\\to$更新TLB$\\to$再查Cache"
+        },
+        {
+          "level": "L3",
+          "text": "并行方式中TLB和Cache同时查找，但TLB未命中时Cache结果无效需重查"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-virtual-calc",
+      "title": "虚拟存储器地址转换计算",
+      "summary": "虚拟存储器地址转换是考试计算重点。虚拟地址分为虚拟页号（VPN）和页内偏移（Offset），通过页表将VPN映射为物理页号（PPN），再拼接Offset得到物理地址。关键计算包括：页表项数 =虚拟地址空间大小/页面大小；页表大小 =页表项数 $\\times$每个页表项大小；多级页表可将大页表分页存放以减少内存占用。",
+      "prerequisites": [
+        "cs408-co-virtual-memory",
+        "cs408-co-tlb"
+      ],
+      "keyPoints": [
+        "虚拟地址 = VPN + Offset，物理地址 = PPN + Offset（页内偏移不变）",
+        "页表项数 $= 2$^(虚拟地址位数 -页大小位数)，如32位地址4KB页 $= 2^20$项",
+        "页表大小 =页表项数 $\\times$每项字节数（通常4~8字节）",
+        "多级页表：将页表再分页，只分配使用的页目录项，减少内存浪费",
+        "倒排页表：以物理页框为索引，每项记录哪个虚拟页映射到此物理页框"
+      ],
+      "misconceptions": [
+        "页表必须连续存放在主存中——多级页表允许页表分散在不同物理页框中",
+        "页内偏移在地址转换时会改变——页内偏移在虚拟地址和物理地址中完全相同"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "地址转换的核心是VPN$\\to$PPN的映射，Offset保持不变"
+        },
+        {
+          "level": "L2",
+          "text": "页表本身也占用主存空间，大页表需要多级页表来优化"
+        },
+        {
+          "level": "L3",
+          "text": "计算页表大小时注意：页表项数 = 虚拟页数，而非物理页数"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-data-path",
+      "title": "数据通路（单总线与专用数据通路）",
+      "summary": "数据通路是CPU内部各功能部件之间传输数据的通路，由总线、寄存器和ALU等组成。单总线结构用一条公共总线连接所有部件，结构简单但同一时刻只能有一个传输。多总线（专用数据通路）结构为ALU、寄存器等设置专用连接，允许并行传输，提高速度。数据通路的设计直接影响指令的执行方式和效率。",
+      "prerequisites": [
+        "cs408-co-cpu-pipeline",
+        "cs408-co-alu"
+      ],
+      "keyPoints": [
+        "单总线结构：所有部件共享一条总线，每个时钟周期只能完成一次数据传输",
+        "双总线/三总线结构：设置多条专用总线，允许同时传输多路数据",
+        "数据通路中的关键寄存器：PC、IR、MAR、MDR、通用寄存器等",
+        "指令执行过程：取指$\\to$间址$\\to$执行$\\to$中断，每个阶段涉及不同的数据通路操作"
+      ],
+      "misconceptions": [
+        "单总线结构速度最快——单总线结构因共享总线产生冲突，速度不如多总线结构",
+        "数据通路只包含总线——数据通路包含总线、寄存器、ALU等所有参与数据传输的部件"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "数据通路决定了CPU内部数据如何在各部件间流动"
+        },
+        {
+          "level": "L2",
+          "text": "单总线每个周期只能做一次传输，复杂操作需要多个周期"
+        },
+        {
+          "level": "L3",
+          "text": "专用数据通路允许ALU的两个操作数同时从寄存器取出"
+        }
+      ],
+      "difficulty": 2,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-hardwire",
+      "title": "硬布线控制器设计",
+      "summary": "硬布线控制器（组合逻辑控制器）用组合逻辑电路产生各种控制信号。输入为指令操作码、时序信号和状态标志，输出为各部件的控制信号。其设计核心是列出每条指令在每个时钟周期需要的所有微操作，然后用逻辑门电路实现。硬布线控制器速度快但设计复杂、不易修改，主要用于RISC处理器。",
+      "prerequisites": [
+        "cs408-co-data-path",
+        "cs408-co-instruction-system"
+      ],
+      "keyPoints": [
+        "硬布线控制器输入：指令操作码、节拍信号（时序）、状态标志位",
+        "硬布线控制器输出：各功能部件的控制信号（如ALU操作、寄存器读写、存储器读写等）",
+        "设计步骤：分析每条指令的微操作序列$\\to$列出真值表$\\to$化简逻辑表达式$\\to$用门电路实现",
+        "优点：速度快（纯组合逻辑，无存储访问延迟）",
+        "缺点：设计复杂、不规整、不易修改和扩展"
+      ],
+      "misconceptions": [
+        "硬布线控制器使用微程序——硬布线控制器用组合逻辑电路，微程序控制器才使用控制存储器存储微指令",
+        "硬布线控制器容易修改——修改硬布线控制器需要重新设计电路，非常困难"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "硬布线控制器的核心是用逻辑门电路直接生成控制信号"
+        },
+        {
+          "level": "L2",
+          "text": "控制信号 $= f$(操作码,时序,状态标志)，是一个组合逻辑函数"
+        },
+        {
+          "level": "L3",
+          "text": "RISC指令规整简单，适合用硬布线实现高速控制"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-microprogram",
+      "title": "微程序控制器",
+      "summary": "微程序控制器将控制信号以微指令的形式存储在控制存储器（CM，通常为ROM）中。每条机器指令对应一段微程序（多条微指令序列），每条微指令包含若干微操作控制信号和下一条微指令的地址。微地址形成方式有：增量方式（PC+1，顺序执行）、断定方式（由微指令中的下地址字段指定）和结合方式。微程序控制器设计规整、易于修改扩展，但速度低于硬布线控制器。",
+      "prerequisites": [
+        "cs408-co-data-path",
+        "cs408-co-instruction-system"
+      ],
+      "keyPoints": [
+        "控制存储器（CM）：存储微程序的高速只读存储器，容量 =微指令条数 $\\times$微指令字长",
+        "微指令格式：水平型（一位对应一个控制信号，宽而短）和垂直型（编码压缩，窄而长）",
+        "微地址形成：取指令微地址固定（通常是0或入口地址），后续微地址由微指令中的下地址字段或条件转移决定",
+        "指令周期开始：将操作码映射为微程序入口地址，然后顺序执行该微程序",
+        "优点：设计规整、易修改扩展；缺点：需访问CM，速度较慢"
+      ],
+      "misconceptions": [
+        "微程序和机器程序是一回事——微程序在控制存储器中运行，对程序员不可见；机器程序在主存中运行",
+        "微程序控制器速度比硬布线快——微程序每条微指令需访问CM，速度低于硬布线的纯组合逻辑"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "微程序控制器用存储逻辑代替组合逻辑，每条微指令产生一组控制信号"
+        },
+        {
+          "level": "L2",
+          "text": "微地址形成是关键：入口地址由操作码决定，后续地址由微指令指定"
+        },
+        {
+          "level": "L3",
+          "text": "水平型微指令并行度高但字长长，垂直型微指令字长短但并行度低"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-micro-vs-hard",
+      "title": "硬布线vs微程序控制器比较",
+      "summary": "硬布线控制器和微程序控制器是两种主要的CPU控制单元实现方式。硬布线用组合逻辑电路直接产生控制信号，速度快但设计复杂、不易修改；微程序将控制信号存储在控制存储器中，设计规整、易于修改扩展但速度较慢。现代处理器中，RISC多用硬布线，CISC多用微程序（或将复杂指令翻译为微操作后再用硬布线执行）。",
+      "prerequisites": [
+        "cs408-co-hardwire",
+        "cs408-co-microprogram"
+      ],
+      "keyPoints": [
+        "速度：硬布线 > 微程序（硬布线是纯组合逻辑，微程序需访问控制存储器）",
+        "灵活性：微程序 > 硬布线（微程序修改只需改ROM内容，硬布线需重新设计电路）",
+        "适用场景：硬布线适合RISC（指令简单规整），微程序适合CISC（指令复杂多变）",
+        "设计复杂度：硬布线设计复杂且不规整，微程序设计规整且系统化",
+        "现代CPU折中：CISC指令先译码为微操作（$\\mu$ops），再用硬布线执行"
+      ],
+      "misconceptions": [
+        "微程序控制器在所有方面都优于硬布线——微程序灵活但速度慢，硬布线快但设计复杂，各有优劣",
+        "现代x86处理器完全使用微程序控制——x86将CISC指令翻译为RISC风格的微操作，微操作由硬布线执行"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "两者的本质区别：控制信号的产生方式不同（组合逻辑 vs 存储逻辑）"
+        },
+        {
+          "level": "L2",
+          "text": "选择取决于场景：追求速度用硬布线，追求灵活性用微程序"
+        },
+        {
+          "level": "L3",
+          "text": "现代CPU融合两者：用微程序处理复杂指令，用硬布线执行简单微操作"
+        }
+      ],
+      "difficulty": 2,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-pipeline-calc",
+      "title": "流水线性能计算（吞吐率、加速比、效率）",
+      "summary": "流水线性能三大指标：吞吐率（单位时间内完成的指令数）、加速比（流水线与非流水线执行时间之比）和效率（流水线各段的实际利用率）。对于$k$段流水线执行$n$条指令：总时间 $= (k+n-1)\\times\\Delta t$（各段时间相等时）；吞吐率TP $= n/$总时间；加速比$S = n\\times k\\times\\Delta t /$总时间 $= n\\times k / (k+n-1)$；效率$\\eta = \\frac{S}{k}$。当$n$远大于$k$时，TP趋近$1/\\Delta t$，$S$趋近$k$。",
+      "prerequisites": [
+        "cs408-co-cpu-pipeline"
+      ],
+      "keyPoints": [
+        "流水线总时间 $= (k + n - 1) \\times \\Delta t$（$k$段、$n$条指令、每段$\\Delta t$）",
+        "吞吐率 TP $= n / [(k+n-1)\\times\\Delta t]$，最大吞吐率 $= 1/\\Delta t$",
+        "加速比 $S = \\frac{n\\times k\\times\\Delta t}{[(k+n-1)\\times\\Delta t]} = \\frac{n\\times k}{(k+n-1)}$",
+        "效率 $\\eta = \\frac{S}{k} = n / (k+n-1)$，表示流水线空间利用率",
+        "各段时间不等时：总时间取决于最慢段（瓶颈段），$\\Delta t$取最大值"
+      ],
+      "misconceptions": [
+        "各段时间不等时总时间 $= (k+n-1)\\times$平均时间——各段时间不等时应取最慢段时间作为时钟周期",
+        "效率$\\eta = S\\times k——$效率$\\eta = \\frac{S}{k}$，是加速比与段数的比值"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "流水线总时间公式 $(k+n-1)\\times\\Delta t$是最基本的计算公式"
+        },
+        {
+          "level": "L2",
+          "text": "当$n>>k$时，$S\\approx k$，TP$\\approx1/\\Delta t$，$\\eta\\approx1$"
+        },
+        {
+          "level": "L3",
+          "text": "各段时间不等时，时钟周期由最慢段决定，其他段存在空闲"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-hazard-detail",
+      "title": "数据冒险详细（Load-Use与前推）",
+      "summary": "数据冒险中最典型的是Load-Use冒险：Load指令从存储器读取数据，数据在MEM阶段末尾才可用，但紧随其后的使用指令在EX阶段就需要该数据，即使数据前推（旁路）也无法消除这个时间差，必须插入1个stall周期。对于ALU-ALU的RAW冒险，数据前推可以将EX阶段的结果直接送到下条指令的EX输入，完全消除stall。",
+      "prerequisites": [
+        "cs408-co-pipeline-hazards"
+      ],
+      "keyPoints": [
+        "Load-Use冒险：Load指令数据在MEM阶段末才得到，下条指令EX阶段需要，差1个周期",
+        "Load-Use冒险必须stall 1拍，数据前推无法解决（因为前推的数据来源是EX或MEM阶段输出）",
+        "$ALU\\to$ALU前推：ALU结果在EX阶段末即可前推到下条指令EX输入，无需stall",
+        "前推路径：EX$\\to$EX前推（ALU结果直接传递）和MEM$\\to$EX前推（Load数据传递）",
+        "编译器优化：通过指令调度（交换无关指令顺序）减少stall"
+      ],
+      "misconceptions": [
+        "数据前推可以解决所有RAW冒险——Load-Use冒险无法通过前推解决，必须stall",
+        "stall会暂停所有流水线阶段——stall只暂停Load后面的指令，Load本身继续执行"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "Load-Use冒险的关键在于Load的数据比ALU指令晚一个周期才可用"
+        },
+        {
+          "level": "L2",
+          "text": "前推的数据来源：EX阶段输出（ALU结果）或MEM阶段输出（Load数据）"
+        },
+        {
+          "level": "L3",
+          "text": "即使有Load$\\to$EX的前推路径，数据在MEM阶段末才准备好，而消费指令在EX阶段初就需要"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-interrupt",
+      "title": "中断系统（请求、响应与处理）",
+      "summary": "中断是计算机处理异常和外部事件的重要机制。中断过程包括：中断请求（外设或异常发出中断信号）$\\to$中断判优（多个中断同时请求时按优先级处理）$\\to$中断响应（CPU保存断点，关中断，跳转到中断服务程序ISR）$\\to$中断处理（执行ISR）$\\to$中断返回（恢复断点和现场，开中断）。中断嵌套允许高优先级中断打断低优先级中断的处理。",
+      "prerequisites": [
+        "cs408-co-system-overview",
+        "cs408-co-bus-io"
+      ],
+      "keyPoints": [
+        "中断请求：外设通过中断请求线向CPU发出信号，CPU在每条指令执行周期末检查",
+        "中断判优：硬件排队链（菊花链）或软件查询方式确定优先级",
+        "中断响应：CPU自动完成——保存PC（断点）到栈中，关中断，加载ISR入口地址",
+        "中断处理：执行ISR保存现场$\\to$处理$\\to$恢复现场$\\to$开中断$\\to$中断返回（IRET）",
+        "中断嵌套：高优先级中断可以打断正在处理的低优先级ISR"
+      ],
+      "misconceptions": [
+        "CPU在任何时刻都能响应中断——CPU只在指令执行周期末（指令边界）检查中断请求",
+        "中断响应不需要保存断点——中断响应必须保存PC（断点）和现场寄存器，否则无法返回"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "中断处理的核心流程：请求$\\to$判优$\\to$响应（保存断点）$\\to$处理$\\to$返回"
+        },
+        {
+          "level": "L2",
+          "text": "中断响应是硬件自动完成的，但ISR的执行需要软件配合"
+        },
+        {
+          "level": "L3",
+          "text": "中断嵌套的关键：ISR中开中断允许高优先级中断嵌套进入"
+        }
+      ],
+      "difficulty": 2,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-dma-detail",
+      "title": "DMA详细（传输方式）",
+      "summary": "DMA（直接存储器存取）有三种传输方式：停止CPU访问主存（DMA独占总线，CPU暂停，简单但效率低）、周期窃取（DMA在CPU不访存的空闲周期窃取一个总线周期传输一个字/块，CPU和DMA交替使用总线）和透明DMA（DMA在总线空闲时传输，对CPU完全透明，但需要数据缓冲）。DMA传输以数据块为单位，传输速率取决于总线带宽和设备速度。",
+      "prerequisites": [
+        "cs408-co-bus-io"
+      ],
+      "keyPoints": [
+        "停止CPU方式：DMA完全独占总线，CPU暂停，适合高速设备但CPU利用率低",
+        "周期窃取方式：DMA每次窃取一个总线周期传输一个数据字，然后归还总线给CPU",
+        "透明DMA方式：利用总线空闲时间传输，需要数据缓冲器配合，对CPU完全透明",
+        "DMA传输速率 =每次传输数据量 /每次传输时间，受限于总线带宽",
+        "DMA控制器寄存器：源地址寄存器、目的地址寄存器、传输计数寄存器、控制寄存器"
+      ],
+      "misconceptions": [
+        "周期窃取方式DMA比CPU快——周期窃取只是让DMA在CPU空闲时使用总线，不影响CPU正常运行",
+        "DMA传输不需要任何CPU干预——传输前CPU需初始化DMA控制器（源地址、目的地址、传输长度），传输后DMA发中断通知CPU"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "三种DMA方式的核心区别在于CPU和DMA如何共享总线"
+        },
+        {
+          "level": "L2",
+          "text": "周期窃取是CPU和DMA交替使用总线，每次窃取一个周期"
+        },
+        {
+          "level": "L3",
+          "text": "DMA传输速率计算：速率 =数据量 /时间，注意单位换算"
+        }
+      ],
+      "difficulty": 2,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-io-interface",
+      "title": "I/O接口与端口编址",
+      "summary": "I/O接口是主机与外设之间的桥梁，包含数据寄存器、状态寄存器和控制寄存器等。端口编址方式有两种：统一编址（存储器映射I/O，将I/O端口作为主存单元统一编址，用访存指令访问）和独立编址（I/O映射，I/O端口有独立地址空间，用专门的I/O指令访问）。统一编址不需要专门的I/O指令但占用主存空间；独立编址I/O空间独立但需要额外I/O指令。",
+      "prerequisites": [
+        "cs408-co-bus-io"
+      ],
+      "keyPoints": [
+        "统一编址（MMIO）：I/O端口映射到主存地址空间，用Load/Store指令访问",
+        "独立编址（I/O映射）：I/O端口有独立地址空间，用IN/OUT等专用I/O指令访问",
+        "I/O接口三大寄存器：数据缓冲寄存器（数据）、状态寄存器（状态）、控制寄存器（控制命令）",
+        "RISC架构通常采用统一编址（Load/Store架构），CISC（如x86）采用独立编址"
+      ],
+      "misconceptions": [
+        "统一编址和独立编址性能相同——统一编址可用所有访存指令但可能占用主存空间，独立编址需要专用指令但地址空间独立",
+        "I/O接口只有数据寄存器——I/O接口还有状态寄存器（查询设备状态）和控制寄存器（发送控制命令）"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "端口编址解决的是CPU如何区分和访问不同I/O设备的问题"
+        },
+        {
+          "level": "L2",
+          "text": "统一编址中I/O端口就是主存的一部分，只是功能不同"
+        },
+        {
+          "level": "L3",
+          "text": "x86用IN/OUT指令访问独立I/O空间，ARM用MMIO统一访问"
+        }
+      ],
+      "difficulty": 2,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-bus-detail",
+      "title": "总线定时与时序",
+      "summary": "总线定时指总线上信息传输的时间控制方式。同步定时：所有设备使用统一的时钟信号同步操作，传输时间固定，速度快但要求设备速度一致。异步定时：通过握手信号（请求/应答）协调传输，不依赖统一时钟，允许不同速度设备互连，但速度较慢。半同步定时：结合同步和异步特点，在同步时钟基础上加入等待周期（Wait State），适应慢速设备。",
+      "prerequisites": [
+        "cs408-co-bus-io"
+      ],
+      "keyPoints": [
+        "同步定时：统一时钟控制，每个总线周期固定长度，速度快但灵活性差",
+        "异步定时：请求-应答握手协议，分为不互锁（请求和应答各自独立撤销）和互锁方式（双方都保持直到对方确认）",
+        "半同步定时：以同步时钟为基础，慢速设备可插入等待周期（Wait），兼顾速度和兼容性",
+        "总线带宽 =总线宽度 $\\times$总线频率，是衡量总线传输能力的关键指标",
+        "分离式总线：将地址和数据分开传输，提高总线利用率"
+      ],
+      "misconceptions": [
+        "同步定时一定比异步定时快——同步定时要求所有设备按最慢设备定周期，异步定时快设备可以更快完成",
+        "异步定时不需要时钟——异步定时不需要统一时钟，但仍需要定时机制（如超时检测）"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "同步和异步的核心区别在于是否使用统一时钟信号"
+        },
+        {
+          "level": "L2",
+          "text": "异步握手的三种方式：互锁、半互锁、不互锁，区别在于信号的撤销时机"
+        },
+        {
+          "level": "L3",
+          "text": "半同步定时 = 同步 + 等待状态，是两者的折中方案"
+        }
+      ],
+      "difficulty": 2,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-complement-overflow-calc",
+      "title": "补码溢出判断详细计算",
+      "summary": "补码溢出判断是考试必考计算点。单符号位法：$V =$Cf $⊕ C(n-1)$（最高位进位与次高位进位异或），$V=1$则溢出。双符号位法（变形补码）：用两位符号位表示数（00正、11负），运算后若两位符号位不同（01正溢出、10负溢出）则溢出。溢出只发生在同号数相加时。注意：双符号位运算时参与运算的位数增加1位，但模不变。",
+      "prerequisites": [
+        "cs408-co-complement-arith",
+        "cs408-co-alu"
+      ],
+      "keyPoints": [
+        "单符号位法：$V =$Cf $⊕ C(n-1)$，Cf为最高位（符号位）进位，$C(n-1)$为次高位进位",
+        "双符号位法：将符号位扩展为两位，$[x]$变补 $= S_f1 S_f2 .$数值部分",
+        "双符号位判断：结果00为正（无溢出），11为负（无溢出），01为正溢出，10为负溢出",
+        "溢出只发生在同号相加：正+正$\\to$负（01），负+负$\\to$正（10）",
+        "异号相加不会溢出（结果绝对值变小）"
+      ],
+      "misconceptions": [
+        "双符号位法需要将整个数扩展为两位——只需将符号位扩展为两位，数值位不变",
+        "有进位就一定溢出——进位（$Cf=1$）不等于溢出（$V=1$），只有$V=Cf⊕C(n-1)=1$时才溢出"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "溢出判断的核心：两个同号数相加，结果符号与操作数相反则溢出"
+        },
+        {
+          "level": "L2",
+          "text": "双符号位法更直观：00和11正常，01和10溢出"
+        },
+        {
+          "level": "L3",
+          "text": "单符号位法中$V=Cf⊕C(n-1)$的本质是检查符号位的进位和数值最高位的进位是否一致"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    }
+  ]
+}

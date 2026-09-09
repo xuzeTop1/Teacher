@@ -1,0 +1,591 @@
+{
+  "subject": "physics",
+  "course": "大学物理",
+  "chapter": "电磁学",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "physics-em-q1",
+      "title": "库仑定律应用",
+      "type": "solution",
+      "difficulty": 1,
+      "content": "真空中两个静止点电荷，电荷量分别为 $q_1 = 2\\times10^{-6} C$，$q_2 = -3\\times10^{-6} C$，相距 $r = 0.1 m$。求两电荷间的库仑力大小和方向。（静电力常量 $k = 9\\times10^9 N\\cdot m^2/C^2$）",
+      "options": [],
+      "answer": "F = 5.4 N，引力，方向沿连线指向对方",
+      "solutionSteps": [
+        "应用库仑定律：$F = k|q_1q_2|/r^2$",
+        "代入数值：$F = 9\\times10^9\\times|2\\times10^{-6}\\times(-3\\times10^{-6})|/0.01$",
+        "计算：$F = 9\\times10^9\\times6\\times10^{-12}/0.01 = 5.4 N$",
+        "$q_1$为正，$q_2$为负，为异种电荷，相互吸引"
+      ],
+      "knowledgeNodeIds": [
+        "physics-em-coulomb"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "库仑定律描述真空中两个静止点电荷之间的相互作用力"
+        },
+        {
+          "level": "L2",
+          "text": "库仑定律公式：$F = k|q_1q_2|/r^2$，注意是绝对值"
+        },
+        {
+          "level": "L3",
+          "text": "异种电荷相吸，同种电荷相斥，判断力的方向"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-em-q2",
+      "title": "点电荷电场强度计算",
+      "type": "solution",
+      "difficulty": 1,
+      "content": "真空中一正点电荷 $q = 5\\times10^{-8} C$。求距点电荷 $r = 0.2 m$处的电场强度大小和方向。（静电力常量 $k = 9\\times10^9 N\\cdot m^2/C^2$）",
+      "options": [],
+      "answer": "E = 1125 N/C，方向沿径向向外",
+      "solutionSteps": [
+        "点电荷电场强度公式：$E = k\\frac{q}{r}^2$",
+        "代入数值：$E = 9\\times10^9\\times5\\times10^{-8}/0.04$",
+        "计算：$E = 45\\times10^1/0.04 = 1125 \\frac{N}{C}$",
+        "正点电荷电场方向沿径向向外"
+      ],
+      "knowledgeNodeIds": [
+        "physics-em-electric-field"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "点电荷产生的电场强度有固定公式"
+        },
+        {
+          "level": "L2",
+          "text": "$E = k\\frac{q}{r}^2$，正电荷电场方向向外，负电荷向内"
+        },
+        {
+          "level": "L3",
+          "text": "注意单位换算和计算过程"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-em-q3",
+      "title": "高斯定理应用：均匀带电球面",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "一半径为 $R$的均匀带电球面，总电荷量为 $Q$。求：$(1)$球面外距球心 $r_1 > R$处的电场强度；$(2)$球面内距球心 $r_2 < R$处的电场强度。",
+      "options": [],
+      "answer": "$(1) E_1 = k\\frac{Q}{r}_1^2$；$(2) E_2 = 0$",
+      "solutionSteps": [
+        "（1）球面外：作半径为 $r_1$的高斯面（球面）",
+        "根据高斯定理：$∮E\\cdot dS = Q/\\varepsilon_0$",
+        "由对称性：$E_1\\times4\\pi r_1^2 = Q/\\varepsilon_0$",
+        "解得：$E_1 = \\frac{Q}{(4\\pi\\varepsilon_0r_1^2)} = k\\frac{Q}{r}_1^2$",
+        "（2）球面内：作半径为 $r_2$的高斯面",
+        "高斯面内电荷为 0，所以 $E_2\\times4\\pi r_2^2 = 0$",
+        "解得：$E_2 = 0$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-em-gauss-law"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "具有对称性的电荷分布可以用高斯定理简便计算电场"
+        },
+        {
+          "level": "L2",
+          "text": "高斯定理：$∮E\\cdot dS = Q$内$/\\varepsilon_0$，关键是选择合适的高斯面"
+        },
+        {
+          "level": "L3",
+          "text": "球面内高斯面内无电荷，电场为零；球面外等效为点电荷"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-em-q4",
+      "title": "无限大均匀带电平面的电场",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "一无限大均匀带电平面，面电荷密度 $\\sigma = 2\\times10^{-6} \\frac{C}{m}^2$。求平面两侧各点处的电场强度。（真空介电常数 $\\varepsilon_0 = 8.85\\times10^{-12} C^2/N\\cdot m^2$）",
+      "options": [],
+      "answer": "$E = 1.13\\times10^5 \\frac{N}{C}$，方向垂直平面向外（两侧都是）",
+      "solutionSteps": [
+        "作圆柱形高斯面，轴线垂直平面，两底面对称分布在平面两侧",
+        "根据高斯定理：$∮E\\cdot dS = \\sigma S/\\varepsilon_0$",
+        "电场线垂直平面，通过侧面电通量为0，只通过两底面",
+        "所以：$2E\\times S = \\sigma S/\\varepsilon_0$",
+        "解得：$E = \\sigma/(2\\varepsilon_0) = 2\\times10^{-6}/(2\\times8.85\\times10^{-12}) = 1.13\\times10^5 \\frac{N}{C}$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-em-gauss-law"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "无限大均匀带电平面具有面对称性，可用高斯定理"
+        },
+        {
+          "level": "L2",
+          "text": "高斯面选择圆柱形，使电场线垂直穿过底面"
+        },
+        {
+          "level": "L3",
+          "text": "注意电场强度与距离无关，是匀强电场"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-em-q5",
+      "title": "点电荷电势计算",
+      "type": "solution",
+      "difficulty": 1,
+      "content": "真空中一正点电荷 $q = 3\\times10^{-8} C$。求距点电荷 $r = 0.3 m$处的电势。（静电力常量 $k = 9\\times10^9 N\\cdot m^2/C^2$，取无穷远处电势为零）",
+      "options": [],
+      "answer": "V = 900 V",
+      "solutionSteps": [
+        "点电荷电势公式：V = kq/r",
+        "代入数值：$V = 9\\times10^9\\times3\\times10^{-8}/0.3$",
+        "计算：$V = 27\\times10^1/0.3 = 900 V$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-em-electric-potential"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "点电荷产生的电势有固定公式"
+        },
+        {
+          "level": "L2",
+          "text": "$V = k\\frac{q}{r}$，注意与电场强度公式 $E = k\\frac{q}{r}^2$的区别"
+        },
+        {
+          "level": "L3",
+          "text": "电势是标量，直接代数运算，不需要考虑方向"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-em-q6",
+      "title": "电势差与电场强度关系",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "两平行金属板构成平行板电容器，板间距离 $d = 0.01 m$，板间电场近似为匀强电场，电场强度 $E = 2\\times10^4 \\frac{V}{m}$。求两板间的电势差。",
+      "options": [],
+      "answer": "U = 200 V",
+      "solutionSteps": [
+        "匀强电场中电势差与电场强度关系：U = Ed",
+        "代入数值：$U = 2\\times10^4\\times0.01 = 200 V$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-em-electric-potential"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "匀强电场中电势差与电场强度有简单关系"
+        },
+        {
+          "level": "L2",
+          "text": "$U =$Ed，或者更准确地说，$U = \\int E\\cdot dl$"
+        },
+        {
+          "level": "L3",
+          "text": "注意单位：E 单位 V/m，d 单位 m，U 单位 V"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-em-q7",
+      "title": "平行板电容器电容计算",
+      "type": "solution",
+      "difficulty": 1,
+      "content": "一平行板电容器，极板面积 $S = 0.02 m^2$，板间距离 $d = 0.001 m$，极板间为真空。求电容器的电容。（真空介电常数 $\\varepsilon_0 = 8.85\\times10^{-12} \\frac{F}{m}$）",
+      "options": [],
+      "answer": "$C = 1.77\\times10^{-10} F = 177 pF$",
+      "solutionSteps": [
+        "平行板电容器电容公式：$C = \\varepsilon_0\\frac{S}{d}$",
+        "代入数值：$C = 8.85\\times10^{-12}\\times0.0\\frac{2}{0}.001$",
+        "计算：$C = 1.77\\times10^{-10} F = 177 pF$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-em-capacitance"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "平行板电容器电容有固定公式"
+        },
+        {
+          "level": "L2",
+          "text": "$C = \\varepsilon_0\\frac{S}{d}$，电容与极板面积成正比，与板间距成反比"
+        },
+        {
+          "level": "L3",
+          "text": "注意单位换算：1pF $= 10^{-12} F$"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-em-q8",
+      "title": "电容器串并联",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "三个电容器，电容分别为 $C_1 = 10 \\mu F$，$C_2 = 20 \\mu F$，$C_3 = 30 \\mu F$。求：$(1)$三者串联后的等效电容；$(2)$三者并联后的等效电容。",
+      "options": [],
+      "answer": "$(1) C$_串 $= 5.45 \\mu F$；$(2) C$_并 $= 60 \\mu F$",
+      "solutionSteps": [
+        "（1）串联等效电容：$\\frac{1}{C}$_串 $= \\frac{1}{C}_1 + \\frac{1}{C}_2 + \\frac{1}{C}_3$",
+        "代入：$\\frac{1}{C}$_串 $= \\frac{1}{1}0 + \\frac{1}{2}0 + \\frac{1}{3}0 = \\frac{(6+3+2)}{6}0 = 1\\frac{1}{6}0$",
+        "解得：$C$_串 $= 6\\frac{0}{1}1 \\approx 5.45 \\mu F$",
+        "（2）并联等效电容：$C$_并 $= C_1 + C_2 + C_3$",
+        "代入：$C$_并 $= 10 + 20 + 30 = 60 \\mu F$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-em-capacitance"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "电容器串联和并联有不同公式，与电阻相反"
+        },
+        {
+          "level": "L2",
+          "text": "串联：$\\frac{1}{C}$_串 $= \\frac{1}{C}_1 + \\frac{1}{C}_2 + ...$；并联：$C$_并 $= C_1 + C_2 + ...$"
+        },
+        {
+          "level": "L3",
+          "text": "串联等效电容小于任一电容器电容，并联等效电容大于任一电容器电容"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-em-q9",
+      "title": "欧姆定律应用",
+      "type": "solution",
+      "difficulty": 1,
+      "content": "一电阻 $R = 10 \\Omega$，两端电压 $U = 20 V$。求：$(1)$通过电阻的电流；$(2)$电阻消耗的功率。",
+      "options": [],
+      "answer": "$(1) I = 2 A$；$(2) P = 40 W$",
+      "solutionSteps": [
+        "（1）欧姆定律：I = U/R",
+        "代入：$I = 2\\frac{0}{1}0 = 2 A$",
+        "（2）功率公式：$P =$UI $= I^2R = U^2/R$",
+        "代入：$P = 20\\times2 = 40 W$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-em-steady-current"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "欧姆定律是最基本的电路定律"
+        },
+        {
+          "level": "L2",
+          "text": "$I = \\frac{U}{R}$，功率 $P =$UI $= I^2R = U^2/R$"
+        },
+        {
+          "level": "L3",
+          "text": "注意单位：$U$单位 $V$，$I$单位 $A$，$R$单位 $\\Omega$，$P$单位 $W$"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-em-q10",
+      "title": "无限长直导线的磁场",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "一无限长直导线，载有电流 $I = 5 A$。求距导线 $r = 0.02 m$处的磁感应强度。（真空磁导率 $\\mu_0 = 4\\pi\\times10^{-7} T\\cdot\\frac{m}{A}$）",
+      "options": [],
+      "answer": "$B = 5\\times10^{-5} T$",
+      "solutionSteps": [
+        "无限长直导线磁场公式：$B = \\mu_0\\frac{I}{(2\\pi r)}$",
+        "代入数值：$B = 4\\pi\\times10^{-7}\\times\\frac{5}{(2\\pi\\times0.02)}$",
+        "化简：$B = 2\\times10^{-7}\\times\\frac{5}{0}.02 = 10\\times10^{-7}/0.02 = 5\\times10^{-5} T$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-em-magnetic-field"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "无限长直导线产生的磁场有固定公式"
+        },
+        {
+          "level": "L2",
+          "text": "$B = \\mu_0\\frac{I}{(2\\pi r)}$，磁场方向由右手螺旋定则判断"
+        },
+        {
+          "level": "L3",
+          "text": "注意 $\\mu_0/(2\\pi) = 2\\times10^{-7} T\\cdot\\frac{m}{A}$，可以简化计算"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-em-q11",
+      "title": "洛伦兹力方向判断",
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "一正电荷在均匀磁场中运动，速度方向垂直指向纸面内，磁场方向水平向右。则电荷受到的洛伦兹力方向是：",
+      "options": [
+        "A. 竖直向上",
+        "B. 竖直向下",
+        "C. 水平向左",
+        "D. 水平向右"
+      ],
+      "answer": "A",
+      "solutionSteps": [
+        "洛伦兹力公式：$F =$qv$\\times B$（矢量叉乘）",
+        "用左手定则判断：正电荷运动方向垂直纸面向内（$\\times$），磁场向右",
+        "左手四指从 v 转向 B，大拇指指向即为 F 方向",
+        "判断结果：竖直向上"
+      ],
+      "knowledgeNodeIds": [
+        "physics-em-lorentz-force"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "洛伦兹力方向由矢量叉乘决定，可用左手定则判断"
+        },
+        {
+          "level": "L2",
+          "text": "注意正电荷用左手定则，负电荷用右手定则（或左手定则后取反）"
+        },
+        {
+          "level": "L3",
+          "text": "$v$垂直纸面向内用 $\\times$表示，叉乘结果垂直 $v$和 $B$所在平面"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-em-q12",
+      "title": "安培力计算",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "一长为 $L = 0.5 m$的直导线，载有电流 $I = 3 A$，放置在匀强磁场中。磁场磁感应强度 $B = 0.4 T$，方向水平向右。导线方向与磁场方向夹角 $\\theta = 60\\circ$。求导线受到的安培力大小和方向。",
+      "options": [],
+      "answer": "F = 0.52 N，方向垂直导线和磁场所在平面",
+      "solutionSteps": [
+        "安培力公式：$F =$BIL $sin\\theta$",
+        "代入数值：$F = 0.4\\times3\\times0.5\\times\\sin(60\\circ)$",
+        "计算：$F = 0.6\\times(√\\frac{3}{2}) = 0.3\\\\sqrt{3} \\approx 0.52 N$",
+        "方向：由左手定则判断，垂直导线和磁场所在平面"
+      ],
+      "knowledgeNodeIds": [
+        "physics-em-ampere-force"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "载流导线在磁场中受到安培力"
+        },
+        {
+          "level": "L2",
+          "text": "$F =$BIL $sin\\theta$，$\\theta$是电流方向与磁场方向的夹角"
+        },
+        {
+          "level": "L3",
+          "text": "方向由左手定则判断：四指电流方向，磁场穿入手心，大拇指安培力方向"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-em-q13",
+      "title": "法拉第电磁感应定律",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "一半径为 $r = 0.1 m$的圆形线圈，共 $N = 100$匝，在匀强磁场中绕通过圆心且垂直圆面的轴匀速转动。磁场磁感应强度 $B = 0.5 T$，转动角速度 $\\omega = 10\\pi$ra$\\frac{d}{s}$。求线圈中产生的最大感应电动势。",
+      "options": [],
+      "answer": "$\\varepsilon_max = 157 V$",
+      "solutionSteps": [
+        "线圈面积：$S = \\pi r^2 = \\pi\\times0.01 = 0.0314 m^2$",
+        "磁通量：$\\Phi =$NBS $\\cos(\\omega t)$",
+        "感应电动势：$\\varepsilon = -d\\Phi/dt =$NBS$\\omega \\sin(\\omega t)$",
+        "最大感应电动势：$\\varepsilon_max =$NBS$\\omega$",
+        "代入：$\\varepsilon_max = 100\\times0.5\\times0.0314\\times10\\pi = 50\\times0.0314\\times31.4 = 157 V$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-em-electromagnetic-induction"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "转动线圈在磁场中产生交变电动势"
+        },
+        {
+          "level": "L2",
+          "text": "法拉第电磁感应定律：$\\varepsilon = -d\\Phi/dt$，关键是计算磁通量"
+        },
+        {
+          "level": "L3",
+          "text": "最大电动势发生在 $\\sin(\\omega t) = 1$时，$\\varepsilon_max =$NBS$\\omega$"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-em-q14",
+      "title": "楞次定律应用",
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "一条形磁铁从上方插入线圈，N极先进入。则线圈中产生的感应电流方向（从上往下看）是：",
+      "options": [
+        "A. 顺时针",
+        "B. 逆时针",
+        "C. 先顺时针后逆时针",
+        "D. 先逆时针后顺时针"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "磁铁N极插入，穿过线圈的磁通量增加，方向向下",
+        "根据楞次定律，感应电流产生的磁场阻碍磁通量增加",
+        "所以感应电流产生的磁场方向向上",
+        "由右手螺旋定则，从上往下看，感应电流为逆时针方向"
+      ],
+      "knowledgeNodeIds": [
+        "physics-em-electromagnetic-induction"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "楞次定律：感应电流的方向总是阻碍引起它的磁通量变化"
+        },
+        {
+          "level": "L2",
+          "text": "判断步骤：①原磁场方向；②磁通量变化；③感应电流磁场方向；④感应电流方向"
+        },
+        {
+          "level": "L3",
+          "text": "用右手螺旋定则判断电流方向与磁场方向关系"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-em-q15",
+      "title": "综合题：带电粒子在电磁场中运动",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "一质量为 $m = 1.6\\times10^{-27}$kg，电荷量为 $q = 1.6\\times10^{-19} C$的质子，以速度 $v = 2\\times10^6 \\frac{m}{s}$垂直进入磁感应强度 $B = 0.5 T$的匀强磁场中。求：$(1)$质子在磁场中做圆周运动的半径；$(2)$质子运动的周期；$(3)$若同时在垂直磁场方向加电场强度 $E = 1\\times10^4 \\frac{V}{m}$的匀强电场，质子将做何种运动？",
+      "options": [],
+      "answer": "$(1) R = 0.04 m$；$(2) T = 1.26\\times10^{-7} s$；$(3)$螺旋运动",
+      "solutionSteps": [
+        "（1）洛伦兹力提供向心力：qvB $= mv^2/R$",
+        "解得：$R = m\\frac{v}{(qB)} = 1.6\\times10^{-27}\\times2\\times10^6/(1.6\\times10^{-19}\\times0.5) = 0.04 m$",
+        "（2）周期：$T = 2\\pi\\frac{R}{v} = 2\\pi\\frac{m}{(qB)}$",
+        "代入：$T = 2\\pi\\times1.6\\times10^{-27}/(1.6\\times10^{-19}\\times0.5) = 1.26\\times10^{-7} s$",
+        "（3）加电场后，电场力使质子沿电场方向加速，洛伦兹力使质子做圆周运动，合成运动为螺旋运动"
+      ],
+      "knowledgeNodeIds": [
+        "physics-em-lorentz-force",
+        "physics-em-magnetic-field"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "带电粒子在磁场中做圆周运动，在电场中做加速运动"
+        },
+        {
+          "level": "L2",
+          "text": "磁场中：半径 $R = m\\frac{v}{(qB)}$，周期 $T = 2\\pi\\frac{m}{(qB)}$；电场中：加速度 $a = q\\frac{E}{m}$"
+        },
+        {
+          "level": "L3",
+          "text": "电磁场共存时，运动可分解：平行磁场方向为匀速或加速，垂直磁场方向为圆周运动"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    }
+  ]
+}

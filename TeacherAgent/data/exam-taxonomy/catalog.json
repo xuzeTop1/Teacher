@@ -1,0 +1,769 @@
+{
+  "schemaVersion": 1,
+  "catalogName": "TeacherAgent 考研考试体系目录 v1",
+  "updatedAt": "2026-08-07",
+  "source": {
+    "title": "TeacherAgent 现有题库数据盘点（PACK_MANIFEST + seed 元数据）",
+    "license": "original",
+    "sourceType": "derived_from_pack_manifest",
+    "note": "本目录从 data/knowledge、data/questions 的现有 seed 与 src/services/knowledge/packManifest.ts 盘点推导，不虚构考试大纲与题库。节点 status 与对应 Pack 的审核状态一致：pack 为 draft 时其叶子节点为 draft，不得用于出题。"
+  },
+  "nodes": [
+    {
+      "stableId": "408",
+      "code": "408",
+      "displayName": "计算机学科专业基础",
+      "shortName": "408",
+      "aliases": ["408统考", "计算机408", "408考研", "计算机学科专业基础综合", "计算机统考"],
+      "parentId": null,
+      "nodeType": "EXAM_TRACK",
+      "status": "approved",
+      "questionScope": [],
+      "legacySubjectCode": "cs408",
+      "source": {
+        "title": "TeacherAgent 现有 CS408 Pack 盘点",
+        "license": "original",
+        "sourceType": "derived_from_pack_manifest",
+        "note": "考试组节点只用于聚合、统计、导航与综合复习，不直接作为题目归属。"
+      }
+    },
+    {
+      "stableId": "408.data-structures",
+      "code": "408",
+      "displayName": "数据结构",
+      "shortName": "数据结构",
+      "aliases": ["数构", "Data Structures"],
+      "parentId": "408",
+      "nodeType": "SUBJECT",
+      "status": "draft",
+      "questionScope": [{ "packIds": ["cs408-data-structures"] }],
+      "legacySubjectCode": "cs408",
+      "source": {
+        "title": "cs408-data-structures Pack",
+        "license": "original",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "包状态为 draft（待审核），未进入 approved 出题范围。"
+      }
+    },
+    {
+      "stableId": "408.computer-organization",
+      "code": "408",
+      "displayName": "计算机组成原理",
+      "shortName": "组成原理",
+      "aliases": ["计组", "组成原理", "Computer Organization"],
+      "parentId": "408",
+      "nodeType": "SUBJECT",
+      "status": "draft",
+      "questionScope": [{ "packIds": ["cs408-computer-organization"] }],
+      "legacySubjectCode": "cs408",
+      "source": {
+        "title": "cs408-computer-organization Pack",
+        "license": "original",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "包状态为 draft（待审核），未进入 approved 出题范围。"
+      }
+    },
+    {
+      "stableId": "408.operating-systems",
+      "code": "408",
+      "displayName": "计算机操作系统",
+      "shortName": "操作系统",
+      "aliases": ["操作系统", "OS", "Operating Systems"],
+      "parentId": "408",
+      "nodeType": "SUBJECT",
+      "status": "draft",
+      "questionScope": [{ "packIds": ["cs408-operating-systems"] }],
+      "legacySubjectCode": "cs408",
+      "source": {
+        "title": "cs408-operating-systems Pack",
+        "license": "original",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "包状态为 draft（待审核），未进入 approved 出题范围。"
+      }
+    },
+    {
+      "stableId": "408.computer-networks",
+      "code": "408",
+      "displayName": "计算机网络",
+      "shortName": "计算机网络",
+      "aliases": ["计网", "网络", "Computer Networks"],
+      "parentId": "408",
+      "nodeType": "SUBJECT",
+      "status": "approved",
+      "questionScope": [{ "packIds": ["cs408-computer-networks"] }],
+      "legacySubjectCode": "cs408",
+      "source": {
+        "title": "cs408-computer-networks Pack",
+        "license": "original",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "当前 408 中唯一 approved 的子科目，可直接出题。"
+      }
+    },
+    {
+      "stableId": "kaoyan-english",
+      "code": null,
+      "displayName": "考研英语",
+      "shortName": "考研英语",
+      "aliases": ["英语", "考研英语一", "考研英语二", "English"],
+      "parentId": null,
+      "nodeType": "EXAM_TRACK",
+      "status": "draft",
+      "questionScope": [],
+      "legacySubjectCode": "english",
+      "source": {
+        "title": "TeacherAgent 现有考研英语 Pack 盘点",
+        "license": "original",
+        "sourceType": "derived_from_pack_manifest",
+        "note": "考试组节点只用于聚合、统计、导航与综合复习；所有子科目 pack 当前均为 draft。"
+      }
+    },
+    {
+      "stableId": "kaoyan-english.grammar",
+      "code": null,
+      "displayName": "语法",
+      "shortName": "语法",
+      "aliases": ["英语语法", "Grammar"],
+      "parentId": "kaoyan-english",
+      "nodeType": "SUBJECT",
+      "status": "draft",
+      "questionScope": [{ "packIds": ["english-grammar"] }],
+      "legacySubjectCode": "english",
+      "source": {
+        "title": "english-grammar Pack",
+        "license": "original",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "包状态为 draft（待审核），未进入 approved 出题范围。"
+      }
+    },
+    {
+      "stableId": "kaoyan-english.reading",
+      "code": null,
+      "displayName": "阅读",
+      "shortName": "阅读",
+      "aliases": ["阅读理解", "Reading Comprehension", "Reading"],
+      "parentId": "kaoyan-english",
+      "nodeType": "SUBJECT",
+      "status": "draft",
+      "questionScope": [{ "packIds": ["english-reading"] }],
+      "legacySubjectCode": "english",
+      "source": {
+        "title": "english-reading Pack",
+        "license": "original",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "包状态为 draft（待审核），未进入 approved 出题范围。"
+      }
+    },
+    {
+      "stableId": "kaoyan-english.translation",
+      "code": null,
+      "displayName": "翻译",
+      "shortName": "翻译",
+      "aliases": ["英译汉", "Translation"],
+      "parentId": "kaoyan-english",
+      "nodeType": "SUBJECT",
+      "status": "draft",
+      "questionScope": [{ "packIds": ["english-translation"] }],
+      "legacySubjectCode": "english",
+      "source": {
+        "title": "english-translation Pack",
+        "license": "original",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "包状态为 draft（待审核），未进入 approved 出题范围。"
+      }
+    },
+    {
+      "stableId": "kaoyan-english.cloze",
+      "code": null,
+      "displayName": "完形填空",
+      "shortName": "完形填空",
+      "aliases": ["完形", "Cloze", "Use of English"],
+      "parentId": "kaoyan-english",
+      "nodeType": "SUBJECT",
+      "status": "draft",
+      "questionScope": [{ "packIds": ["english-cloze"] }],
+      "legacySubjectCode": "english",
+      "source": {
+        "title": "english-cloze Pack",
+        "license": "original",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "包状态为 draft（待审核），未进入 approved 出题范围。"
+      }
+    },
+    {
+      "stableId": "kaoyan-politics",
+      "code": null,
+      "displayName": "考研政治",
+      "shortName": "考研政治",
+      "aliases": ["政治", "思想政治理论", "Politics"],
+      "parentId": null,
+      "nodeType": "EXAM_TRACK",
+      "status": "draft",
+      "questionScope": [],
+      "legacySubjectCode": "politics",
+      "source": {
+        "title": "TeacherAgent 现有考研政治 Pack 盘点",
+        "license": "original",
+        "sourceType": "derived_from_pack_manifest",
+        "note": "考试组节点只用于聚合、统计、导航与综合复习；所有子科目 pack 当前均为 draft。"
+      }
+    },
+    {
+      "stableId": "kaoyan-politics.marxism",
+      "code": null,
+      "displayName": "马克思主义基本原理",
+      "shortName": "马原",
+      "aliases": ["马原", "马克思主义原理", "Marxism"],
+      "parentId": "kaoyan-politics",
+      "nodeType": "SUBJECT",
+      "status": "draft",
+      "questionScope": [{ "packIds": ["politics-marxism"] }],
+      "legacySubjectCode": "politics",
+      "source": {
+        "title": "politics-marxism Pack",
+        "license": "original",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "包状态为 draft（待审核），未进入 approved 出题范围。"
+      }
+    },
+    {
+      "stableId": "kaoyan-politics.maoism",
+      "code": null,
+      "displayName": "毛泽东思想概论",
+      "shortName": "毛概",
+      "aliases": ["毛概", "毛泽东思想", "Mao Zedong Thought"],
+      "parentId": "kaoyan-politics",
+      "nodeType": "SUBJECT",
+      "status": "draft",
+      "questionScope": [{ "packIds": ["politics-maoism"] }],
+      "legacySubjectCode": "politics",
+      "source": {
+        "title": "politics-maoism Pack",
+        "license": "original",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "包状态为 draft（待审核），未进入 approved 出题范围。"
+      }
+    },
+    {
+      "stableId": "kaoyan-politics.history",
+      "code": null,
+      "displayName": "中国近现代史纲要",
+      "shortName": "史纲",
+      "aliases": ["史纲", "近现代史", "Chinese Modern History"],
+      "parentId": "kaoyan-politics",
+      "nodeType": "SUBJECT",
+      "status": "draft",
+      "questionScope": [{ "packIds": ["politics-history"] }],
+      "legacySubjectCode": "politics",
+      "source": {
+        "title": "politics-history Pack",
+        "license": "original",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "包状态为 draft（待审核），未进入 approved 出题范围。"
+      }
+    },
+    {
+      "stableId": "kaoyan-politics.morals",
+      "code": null,
+      "displayName": "思想道德与法治",
+      "shortName": "思法",
+      "aliases": ["思法", "思想道德与法治", "Morals and Law"],
+      "parentId": "kaoyan-politics",
+      "nodeType": "SUBJECT",
+      "status": "draft",
+      "questionScope": [{ "packIds": ["politics-morals"] }],
+      "legacySubjectCode": "politics",
+      "source": {
+        "title": "politics-morals Pack",
+        "license": "original",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "包状态为 draft（待审核），未进入 approved 出题范围。"
+      }
+    },
+    {
+      "stableId": "management-coop",
+      "code": null,
+      "displayName": "管理类联考",
+      "shortName": "管理联考",
+      "aliases": ["管理类综合", "199管理类联考", "管理综合", "Management Joint Exam"],
+      "parentId": null,
+      "nodeType": "EXAM_TRACK",
+      "status": "draft",
+      "questionScope": [],
+      "legacySubjectCode": "management",
+      "source": {
+        "title": "TeacherAgent 现有管理类联考 Pack 盘点",
+        "license": "original",
+        "sourceType": "derived_from_pack_manifest",
+        "note": "考试组节点只用于聚合、统计、导航与综合复习；所有子科目 pack 当前均为 draft。"
+      }
+    },
+    {
+      "stableId": "management-coop.math",
+      "code": null,
+      "displayName": "初等数学",
+      "shortName": "初数",
+      "aliases": ["联考数学", "初等数学", "Management Math"],
+      "parentId": "management-coop",
+      "nodeType": "SUBJECT",
+      "status": "draft",
+      "questionScope": [{ "packIds": ["management-math"] }],
+      "legacySubjectCode": "management",
+      "source": {
+        "title": "management-math Pack",
+        "license": "original",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "包状态为 draft（待审核），未进入 approved 出题范围。"
+      }
+    },
+    {
+      "stableId": "management-coop.logic",
+      "code": null,
+      "displayName": "逻辑推理",
+      "shortName": "逻辑",
+      "aliases": ["逻辑", "形式逻辑", "Management Logic"],
+      "parentId": "management-coop",
+      "nodeType": "SUBJECT",
+      "status": "draft",
+      "questionScope": [{ "packIds": ["management-logic"] }],
+      "legacySubjectCode": "management",
+      "source": {
+        "title": "management-logic Pack",
+        "license": "original",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "包状态为 draft（待审核），未进入 approved 出题范围。"
+      }
+    },
+    {
+      "stableId": "management-coop.writing",
+      "code": null,
+      "displayName": "写作",
+      "shortName": "写作",
+      "aliases": ["论说文", "论证有效性分析", "Management Writing"],
+      "parentId": "management-coop",
+      "nodeType": "SUBJECT",
+      "status": "draft",
+      "questionScope": [{ "packIds": ["management-writing"] }],
+      "legacySubjectCode": "management",
+      "source": {
+        "title": "management-writing Pack",
+        "license": "original",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "包状态为 draft（待审核），未进入 approved 出题范围。"
+      }
+    },
+    {
+      "stableId": "education-311",
+      "code": null,
+      "displayName": "教育学311",
+      "shortName": "教育学311",
+      "aliases": ["教育学", "311教育学", "Education"],
+      "parentId": null,
+      "nodeType": "EXAM_TRACK",
+      "status": "draft",
+      "questionScope": [],
+      "legacySubjectCode": "education",
+      "source": {
+        "title": "TeacherAgent 现有教育学 Pack 盘点",
+        "license": "original",
+        "sourceType": "derived_from_pack_manifest",
+        "note": "考试组节点只用于聚合、统计、导航与综合复习；所有子科目 pack 当前均为 draft。"
+      }
+    },
+    {
+      "stableId": "education-311.pedagogy",
+      "code": null,
+      "displayName": "教育学原理",
+      "shortName": "原理",
+      "aliases": ["教育学原理", "Pedagogy"],
+      "parentId": "education-311",
+      "nodeType": "SUBJECT",
+      "status": "draft",
+      "questionScope": [{ "packIds": ["education-pedagogy"] }],
+      "legacySubjectCode": "education",
+      "source": {
+        "title": "education-pedagogy Pack",
+        "license": "original",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "包状态为 draft（待审核），未进入 approved 出题范围。"
+      }
+    },
+    {
+      "stableId": "education-311.educational-psychology",
+      "code": null,
+      "displayName": "教育心理学",
+      "shortName": "教心",
+      "aliases": ["教心", "教育心理学", "Educational Psychology"],
+      "parentId": "education-311",
+      "nodeType": "SUBJECT",
+      "status": "draft",
+      "questionScope": [{ "packIds": ["education-psychology"] }],
+      "legacySubjectCode": "education",
+      "source": {
+        "title": "education-psychology Pack",
+        "license": "original",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "包状态为 draft（待审核），未进入 approved 出题范围。"
+      }
+    },
+    {
+      "stableId": "education-311.history",
+      "code": null,
+      "displayName": "中外教育史",
+      "shortName": "教育史",
+      "aliases": ["教育史", "中外教育史", "History of Education"],
+      "parentId": "education-311",
+      "nodeType": "SUBJECT",
+      "status": "draft",
+      "questionScope": [{ "packIds": ["education-history"] }],
+      "legacySubjectCode": "education",
+      "source": {
+        "title": "education-history Pack",
+        "license": "original",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "包状态为 draft（待审核），未进入 approved 出题范围。"
+      }
+    },
+    {
+      "stableId": "psychology-312",
+      "code": null,
+      "displayName": "心理学312",
+      "shortName": "心理学312",
+      "aliases": ["心理学", "312心理学", "Psychology"],
+      "parentId": null,
+      "nodeType": "EXAM_TRACK",
+      "status": "draft",
+      "questionScope": [],
+      "legacySubjectCode": "psychology",
+      "source": {
+        "title": "TeacherAgent 现有心理学 Pack 盘点",
+        "license": "original",
+        "sourceType": "derived_from_pack_manifest",
+        "note": "考试组节点只用于聚合、统计、导航与综合复习；所有子科目 pack 当前均为 draft。"
+      }
+    },
+    {
+      "stableId": "psychology-312.general",
+      "code": null,
+      "displayName": "普通心理学",
+      "shortName": "普心",
+      "aliases": ["普心", "普通心理学", "General Psychology"],
+      "parentId": "psychology-312",
+      "nodeType": "SUBJECT",
+      "status": "draft",
+      "questionScope": [{ "packIds": ["psychology-general"] }],
+      "legacySubjectCode": "psychology",
+      "source": {
+        "title": "psychology-general Pack",
+        "license": "original",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "包状态为 draft（待审核），未进入 approved 出题范围。"
+      }
+    },
+    {
+      "stableId": "psychology-312.experimental",
+      "code": null,
+      "displayName": "实验心理学",
+      "shortName": "实验",
+      "aliases": ["实验心理", "实验心理学", "Experimental Psychology"],
+      "parentId": "psychology-312",
+      "nodeType": "SUBJECT",
+      "status": "draft",
+      "questionScope": [{ "packIds": ["psychology-experimental"] }],
+      "legacySubjectCode": "psychology",
+      "source": {
+        "title": "psychology-experimental Pack",
+        "license": "original",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "包状态为 draft（待审核），未进入 approved 出题范围。"
+      }
+    },
+    {
+      "stableId": "psychology-312.developmental",
+      "code": null,
+      "displayName": "发展心理学",
+      "shortName": "发展",
+      "aliases": ["发展心理", "发展心理学", "Developmental Psychology"],
+      "parentId": "psychology-312",
+      "nodeType": "SUBJECT",
+      "status": "draft",
+      "questionScope": [{ "packIds": ["psychology-developmental"] }],
+      "legacySubjectCode": "psychology",
+      "source": {
+        "title": "psychology-developmental Pack",
+        "license": "original",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "包状态为 draft（待审核），未进入 approved 出题范围。"
+      }
+    },
+    {
+      "stableId": "law-master",
+      "code": null,
+      "displayName": "法律硕士",
+      "shortName": "法律硕士",
+      "aliases": ["法硕", "法律硕士联考", "法律硕士", "JM"],
+      "parentId": null,
+      "nodeType": "EXAM_TRACK",
+      "status": "draft",
+      "questionScope": [],
+      "legacySubjectCode": "lawmaster",
+      "source": {
+        "title": "TeacherAgent 现有法律硕士 Pack 盘点",
+        "license": "original",
+        "sourceType": "derived_from_pack_manifest",
+        "note": "考试组节点只用于聚合、统计、导航与综合复习；所有子科目 pack 当前均为 draft。"
+      }
+    },
+    {
+      "stableId": "law-master.civil",
+      "code": null,
+      "displayName": "民法",
+      "shortName": "民法",
+      "aliases": ["民法学", "Civil Law"],
+      "parentId": "law-master",
+      "nodeType": "SUBJECT",
+      "status": "draft",
+      "questionScope": [{ "packIds": ["lawmaster-civil"] }],
+      "legacySubjectCode": "lawmaster",
+      "source": {
+        "title": "lawmaster-civil Pack",
+        "license": "original",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "包状态为 draft（待审核），未进入 approved 出题范围。"
+      }
+    },
+    {
+      "stableId": "law-master.criminal",
+      "code": null,
+      "displayName": "刑法",
+      "shortName": "刑法",
+      "aliases": ["刑法学", "Criminal Law"],
+      "parentId": "law-master",
+      "nodeType": "SUBJECT",
+      "status": "draft",
+      "questionScope": [{ "packIds": ["lawmaster-criminal"] }],
+      "legacySubjectCode": "lawmaster",
+      "source": {
+        "title": "lawmaster-criminal Pack",
+        "license": "original",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "包状态为 draft（待审核），未进入 approved 出题范围。"
+      }
+    },
+    {
+      "stableId": "law-master.jurisprudence",
+      "code": null,
+      "displayName": "法理学",
+      "shortName": "法理",
+      "aliases": ["法理", "法理学", "Jurisprudence"],
+      "parentId": "law-master",
+      "nodeType": "SUBJECT",
+      "status": "draft",
+      "questionScope": [{ "packIds": ["lawmaster-jurisprudence"] }],
+      "legacySubjectCode": "lawmaster",
+      "source": {
+        "title": "lawmaster-jurisprudence Pack",
+        "license": "original",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "包状态为 draft（待审核），未进入 approved 出题范围。"
+      }
+    },
+    {
+      "stableId": "civil-xingce",
+      "code": null,
+      "displayName": "考公·行测",
+      "shortName": "行测",
+      "aliases": ["行测", "行政职业能力测验", "Xingce"],
+      "parentId": null,
+      "nodeType": "EXAM_TRACK",
+      "status": "draft",
+      "questionScope": [],
+      "legacySubjectCode": "xingce",
+      "source": {
+        "title": "TeacherAgent 现有考公行测 Pack 盘点",
+        "license": "original",
+        "sourceType": "derived_from_pack_manifest",
+        "note": "考试组节点只用于聚合、统计、导航与综合复习；所有子科目 pack 当前均为 draft。常识判断类内容受 docs/civil-service-governance.md §9 限制。"
+      }
+    },
+    {
+      "stableId": "civil-xingce.verbal",
+      "code": null,
+      "displayName": "言语理解与表达",
+      "shortName": "言语理解",
+      "aliases": ["言语理解", "言语", "Verbal Comprehension"],
+      "parentId": "civil-xingce",
+      "nodeType": "SUBJECT",
+      "status": "draft",
+      "questionScope": [{ "packIds": ["civil-verbal"] }],
+      "legacySubjectCode": "xingce",
+      "source": {
+        "title": "civil-verbal Pack",
+        "license": "original",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "包状态为 draft（待审核），未进入 approved 出题范围。"
+      }
+    },
+    {
+      "stableId": "civil-xingce.logic",
+      "code": null,
+      "displayName": "判断推理",
+      "shortName": "判断推理",
+      "aliases": ["判断推理", "判断", "Logical Reasoning"],
+      "parentId": "civil-xingce",
+      "nodeType": "SUBJECT",
+      "status": "draft",
+      "questionScope": [{ "packIds": ["civil-logic"] }],
+      "legacySubjectCode": "xingce",
+      "source": {
+        "title": "civil-logic Pack",
+        "license": "original",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "包状态为 draft（待审核），未进入 approved 出题范围。"
+      }
+    },
+    {
+      "stableId": "civil-xingce.data-analysis",
+      "code": null,
+      "displayName": "资料分析",
+      "shortName": "资料分析",
+      "aliases": ["资料分析", "资析", "Data Analysis"],
+      "parentId": "civil-xingce",
+      "nodeType": "SUBJECT",
+      "status": "draft",
+      "questionScope": [{ "packIds": ["civil-data-analysis"] }],
+      "legacySubjectCode": "xingce",
+      "source": {
+        "title": "civil-data-analysis Pack",
+        "license": "original",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "包状态为 draft（待审核），未进入 approved 出题范围。"
+      }
+    },
+    {
+      "stableId": "civil-xingce.quant",
+      "code": null,
+      "displayName": "数量关系",
+      "shortName": "数量关系",
+      "aliases": ["数量关系", "数量", "Quantitative Reasoning"],
+      "parentId": "civil-xingce",
+      "nodeType": "SUBJECT",
+      "status": "draft",
+      "questionScope": [{ "packIds": ["civil-quant"] }],
+      "legacySubjectCode": "xingce",
+      "source": {
+        "title": "civil-quant Pack",
+        "license": "original",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "包状态为 draft（待审核），未进入 approved 出题范围。"
+      }
+    },
+    {
+      "stableId": "civil-xingce.common-sense",
+      "code": null,
+      "displayName": "常识判断",
+      "shortName": "常识判断",
+      "aliases": ["常识判断", "常识", "General Knowledge"],
+      "parentId": "civil-xingce",
+      "nodeType": "SUBJECT",
+      "status": "draft",
+      "questionScope": [{ "packIds": ["civil-common-sense"] }],
+      "legacySubjectCode": "xingce",
+      "source": {
+        "title": "civil-common-sense Pack",
+        "license": "original",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "包状态为 draft（待审核），未进入 approved 出题范围；常识判断不能以考试大纲作为事实来源。"
+      }
+    },
+    {
+      "stableId": "civil-shenlun",
+      "code": null,
+      "displayName": "考公·申论",
+      "shortName": "申论",
+      "aliases": ["申论", "Shenlun"],
+      "parentId": null,
+      "nodeType": "EXAM_TRACK",
+      "status": "draft",
+      "questionScope": [],
+      "legacySubjectCode": "shenlun",
+      "source": {
+        "title": "TeacherAgent 现有考公申论 Pack 盘点",
+        "license": "original",
+        "sourceType": "derived_from_pack_manifest",
+        "note": "考试组节点只用于聚合、统计、导航与综合复习；所有子科目 pack 当前均为 draft。"
+      }
+    },
+    {
+      "stableId": "civil-shenlun.summary",
+      "code": null,
+      "displayName": "申论·归纳概括",
+      "shortName": "概括题",
+      "aliases": ["归纳概括", "概括题", "Summary"],
+      "parentId": "civil-shenlun",
+      "nodeType": "SUBJECT",
+      "status": "draft",
+      "questionScope": [{ "packIds": ["civil-shenlun-summary"] }],
+      "legacySubjectCode": "shenlun",
+      "source": {
+        "title": "civil-shenlun-summary Pack",
+        "license": "original",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "包状态为 draft（待审核），未进入 approved 出题范围。"
+      }
+    },
+    {
+      "stableId": "civil-shenlun.argument",
+      "code": null,
+      "displayName": "申论·综合分析与对策",
+      "shortName": "对策题",
+      "aliases": ["综合分析", "对策题", "Argument"],
+      "parentId": "civil-shenlun",
+      "nodeType": "SUBJECT",
+      "status": "draft",
+      "questionScope": [{ "packIds": ["civil-shenlun-argument"] }],
+      "legacySubjectCode": "shenlun",
+      "source": {
+        "title": "civil-shenlun-argument Pack",
+        "license": "original",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "包状态为 draft（待审核），未进入 approved 出题范围。"
+      }
+    },
+    {
+      "stableId": "civil-shenlun.implementation",
+      "code": null,
+      "displayName": "申论·贯彻执行",
+      "shortName": "贯彻执行",
+      "aliases": ["贯彻执行", "Implementation"],
+      "parentId": "civil-shenlun",
+      "nodeType": "SUBJECT",
+      "status": "draft",
+      "questionScope": [{ "packIds": ["civil-shenlun-implementation"] }],
+      "legacySubjectCode": "shenlun",
+      "source": {
+        "title": "civil-shenlun-implementation Pack",
+        "license": "original",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "包状态为 draft（待审核），未进入 approved 出题范围。"
+      }
+    },
+    {
+      "stableId": "civil-shenlun.writing",
+      "code": null,
+      "displayName": "申论·大作文",
+      "shortName": "大作文",
+      "aliases": ["大作文", "申论写作", "Essay Writing"],
+      "parentId": "civil-shenlun",
+      "nodeType": "SUBJECT",
+      "status": "draft",
+      "questionScope": [{ "packIds": ["civil-shenlun-writing"] }],
+      "legacySubjectCode": "shenlun",
+      "source": {
+        "title": "civil-shenlun-writing Pack",
+        "license": "original",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "包状态为 draft（待审核），未进入 approved 出题范围。"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1643 @@
+{
+  "subject": "cs408",
+  "course": "data_structures",
+  "chapter": "cs408-data-structures",
+  "status": "draft",
+  "nodes": [
+    {
+      "id": "cs408-ds-basic-concepts",
+      "title": "数据结构基本概念",
+      "summary": "数据结构研究数据元素之间的逻辑关系以及在计算机中的存储方式和相关操作。其核心包含三要素：逻辑结构（集合、线性、树形、图状）、存储结构（顺序、链式、索引、散列）和数据运算。抽象数据类型（ADT）将数据的逻辑特性与操作封装在一起，隐藏实现细节。",
+      "prerequisites": [],
+      "keyPoints": [
+        "数据结构三要素：逻辑结构、存储结构、运算",
+        "四种基本逻辑结构：集合、线性结构、树形结构、图状结构",
+        "四种常用存储方式：顺序存储、链式存储、索引存储、散列存储",
+        "抽象数据类型（ADT）= 数据对象 + 数据关系 + 基本操作"
+      ],
+      "misconceptions": [
+        "逻辑结构和存储结构是一一对应的——实际上同一种逻辑结构可以用多种存储方式实现",
+        "ADT 只关心数据的存储方式——ADT 强调的是逻辑特性和操作的抽象，与具体实现无关"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "想想数据的组织方式和操作之间有什么关系"
+        },
+        {
+          "level": "L2",
+          "text": "区分逻辑结构和物理结构，它们分属不同层次"
+        },
+        {
+          "level": "L3",
+          "text": "ADT 的核心在于封装：对外暴露操作接口，对内隐藏存储实现"
+        }
+      ],
+      "difficulty": 1,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-algorithm-complexity",
+      "title": "算法基本概念与复杂度分析",
+      "summary": "算法是对特定问题求解步骤的有限描述，具有有穷性、确定性、可行性、输入和输出五个基本特性。复杂度分析用渐进符号描述算法执行时间或占用空间随输入规模增长的趋势，大O表示上界、大Omega表示下界、大Theta表示紧确界。",
+      "prerequisites": [
+        "cs408-ds-basic-concepts"
+      ],
+      "keyPoints": [
+        "算法五个特性：有穷性、确定性、可行性、输入、输出",
+        "好算法应满足：正确性、可读性、健壮性、高效率与低存储",
+        "时间复杂度用大O记号表示增长趋势，忽略常数和低阶项",
+        "常见复杂度从低到高：$O(1) < O(logn) < O(n) < O(nlogn) < O(n^2) < O(2^n)$",
+        "空间复杂度衡量算法运行过程中额外占用的存储空间"
+      ],
+      "misconceptions": [
+        "时间复杂度就是程序实际运行时间——实际上它描述的是增长趋势，不是具体时间",
+        "$O(n)$的算法一定比 $O(n^2)$快——当 $n$很小时常数因子可能使 $O(n^2)$更快"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "关注循环嵌套的层数和每层的执行次数"
+        },
+        {
+          "level": "L2",
+          "text": "递归算法的时间复杂度可以通过递推关系式或主定理求解"
+        },
+        {
+          "level": "L3",
+          "text": "找到基本操作的执行次数关于 n 的表达式，再取最高阶项"
+        }
+      ],
+      "difficulty": 2,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-linear-list",
+      "title": "线性表（顺序表与链表）",
+      "summary": "线性表是具有相同数据类型的 n 个数据元素的有限序列，元素之间存在一对一的前驱后继关系。顺序表用连续存储空间存放元素，支持随机访问但插入删除需移动大量元素；链表通过指针链接不连续的存储节点，插入删除灵活但不支持随机访问。",
+      "prerequisites": [
+        "cs408-ds-basic-concepts"
+      ],
+      "keyPoints": [
+        "顺序表：连续存储，随机访问 $O(1)$，插入删除平均 $O(n)$",
+        "单链表：链式存储，查找 $O(n)$，插入删除 $O(1)$（已知位置时）",
+        "双向链表和循环链表是单链表的两种常见变体",
+        "选择存储方式需考虑操作频率：频繁查找选顺序表，频繁插入删除选链表"
+      ],
+      "misconceptions": [
+        "链表一定比顺序表占空间多——链表的额外开销来自指针域，但顺序表可能存在空间浪费（预留空间未用满）",
+        "顺序表的插入操作总是 $O(n)——$在表尾插入时只需 $O(1)$"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "比较两种存储结构在插入、删除、查找时的操作过程"
+        },
+        {
+          "level": "L2",
+          "text": "想想插入或删除操作需要移动多少元素，与位置 i 和表长 n 的关系"
+        },
+        {
+          "level": "L3",
+          "text": "顺序表第 $i$个元素的地址 =首地址 $+ (i-1) *$元素大小"
+        }
+      ],
+      "difficulty": 2,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-stack-queue",
+      "title": "栈和队列",
+      "summary": "栈和队列都是操作受限的线性表。栈只允许在表尾（栈顶）进行插入和删除，遵循后进先出（LIFO）原则；队列在表尾插入、表头删除，遵循先进先出（FIFO）原则。循环队列通过取模运算解决顺序队列的假溢出问题。",
+      "prerequisites": [
+        "cs408-ds-linear-list"
+      ],
+      "keyPoints": [
+        "栈的 LIFO 特性适用于递归、表达式求值、括号匹配、进制转换",
+        "队列的 FIFO 特性适用于层次遍历、缓冲处理、任务调度",
+        "循环队列判空：front ==rear；判满：$(rear+1) % maxSize == front$",
+        "双端队列（deque）允许两端进行插入和删除操作"
+      ],
+      "misconceptions": [
+        "循环队列的 rear ==front 既表示空又表示满——通常牺牲一个存储位置来区分：满时 $(rear+1)%maxSize == front$",
+        "栈只能处理递归问题——栈还广泛用于表达式求值、括号匹配等非递归场景"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "栈和队列的区别就在于操作端的限制不同"
+        },
+        {
+          "level": "L2",
+          "text": "循环队列中用取模运算让数组首尾相连，注意判空判满的条件"
+        },
+        {
+          "level": "L3",
+          "text": "队列中元素个数的计算公式：(rear - front + maxSize) % maxSize"
+        }
+      ],
+      "difficulty": 2,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-array-matrix",
+      "title": "数组与特殊矩阵压缩存储",
+      "summary": "数组是线性表的推广，每个元素由一组下标唯一确定。对特殊矩阵（对称矩阵、三角矩阵、三对角矩阵等），可以利用其元素分布的规律性，只存储有效元素以节省空间。稀疏矩阵则用三元组表或十字链表来压缩存储非零元素。",
+      "prerequisites": [
+        "cs408-ds-linear-list"
+      ],
+      "keyPoints": [
+        "行优先存储地址公式：LOC$(i,j) =$LOC$(0,0) + (i*n + j) * L$",
+        "对称矩阵只需存储下三角（含对角线），共 $n\\frac{(n+1)}{2}$个元素",
+        "三对角矩阵非零元素集中在主对角线及其上下各一条对角线上",
+        "稀疏矩阵可用三元组表（行号、列号、值）或十字链表存储"
+      ],
+      "misconceptions": [
+        "稀疏矩阵压缩存储后还是二维数组——压缩后变为一维数组或链表结构",
+        "所有矩阵都适合压缩存储——只有非零元素分布有规律的矩阵压缩才有意义"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "关键在于找到矩阵元素下标与存储位置之间的映射关系"
+        },
+        {
+          "level": "L2",
+          "text": "对称矩阵 $a[i][j] = a[j][i]$，只存下三角时 $k = i\\frac{(i+1)}{2} + j$（$i>=j$）"
+        },
+        {
+          "level": "L3",
+          "text": "三对角矩阵中 a[i][j] 非零当且仅当 |i-j| <= 1"
+        }
+      ],
+      "difficulty": 2,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-tree-binary",
+      "title": "树与二叉树",
+      "summary": "树是一种层次结构的非线性数据结构，每个节点最多有一个前驱但可以有多个后继。二叉树是每个节点最多有两棵子树（左子树和右子树）的有序树，且子树不能颠倒。二叉树具有若干重要性质，如第 $k$层最多 $2^(k-1)$个节点、$n0 = n2 + 1$等。",
+      "prerequisites": [
+        "cs408-ds-basic-concepts"
+      ],
+      "keyPoints": [
+        "二叉树性质：叶节点数 $n0 =$度为2的节点数 $n2 + 1$",
+        "满二叉树：每层节点数都达到最大值，高度 $h$时有 $2^h - 1$个节点",
+        "完全二叉树：除最后一层外其余层节点数达到最大，且最后一层节点靠左排列",
+        "$n$个节点的完全二叉树高度为 floor$(log2(n)) + 1$",
+        "树、森林可以通过左孩子右兄弟表示法转换为二叉树"
+      ],
+      "misconceptions": [
+        "二叉树就是度为2的树——二叉树是有序树，即使某节点只有一棵子树也要区分左右",
+        "完全二叉树和满二叉树是一回事——满二叉树是完全二叉树的特例"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "树的度与二叉树的度含义不同，注意区分"
+        },
+        {
+          "level": "L2",
+          "text": "利用 $n0 = n2 + 1$和总节点数 $n = n0 + n1 + n2$可以求解各类节点数"
+        },
+        {
+          "level": "L3",
+          "text": "完全二叉树的顺序存储中，节点 i 的左孩子为 2i，右孩子为 2i+1（1起始编号）"
+        }
+      ],
+      "difficulty": 2,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-tree-traversal",
+      "title": "二叉树遍历与线索二叉树",
+      "summary": "二叉树遍历指按某种规则访问树中每个节点恰好一次。四种基本遍历方式为前序（根-左-右）、中序（左-根-右）、后序（左-右-根）和层序遍历。线索二叉树在遍历过程中将空指针替换为指向前驱或后继的线索，方便不借助栈进行遍历。",
+      "prerequisites": [
+        "cs408-ds-tree-binary"
+      ],
+      "keyPoints": [
+        "前序遍历：根节点 -> 左子树 -> 右子树",
+        "中序遍历：左子树 -> 根节点 -> 右子树（对BST得到有序序列）",
+        "后序遍历：左子树 -> 右子树 -> 根节点",
+        "层序遍历借助队列实现，逐层从左到右访问",
+        "线索二叉树用标志位区分指针是指向孩子还是线索"
+      ],
+      "misconceptions": [
+        "给定前序和后序序列就能唯一确定一棵二叉树——只有前序+中序或中序+后序才能唯一确定",
+        "线索二叉树不需要栈就能完成所有遍历——中序线索二叉树可以，但前序和后序仍可能需要栈"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "前序的第一个元素是根，中序中根将左右子树分开"
+        },
+        {
+          "level": "L2",
+          "text": "利用前序和中序序列可以递归地重建树：前序确定根，中序划分左右子树"
+        },
+        {
+          "level": "L3",
+          "text": "n 个节点的二叉树有 n+1 个空指针域，线索化就是利用这些空指针"
+        }
+      ],
+      "difficulty": 2,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-huffman",
+      "title": "哈夫曼树与哈夫曼编码",
+      "summary": "哈夫曼树（最优二叉树）是带权路径长度（WPL）最小的二叉树。构造方法是每次选取权值最小的两棵树合并为新树，新根权值为两棵子树权值之和。哈夫曼编码是一种不等长前缀编码，从根到叶节点的路径即为该字符的编码，保证任何编码都不是其他编码的前缀。",
+      "prerequisites": [
+        "cs408-ds-tree-binary"
+      ],
+      "keyPoints": [
+        "WPL = 所有叶节点的权值 x 路径长度之和，哈夫曼树使 WPL 最小",
+        "n 个叶节点的哈夫曼树共有 2n-1 个节点（没有度为1的节点）",
+        "哈夫曼编码是前缀编码，解码无歧义",
+        "构造过程使用贪心策略，每次合并最小权值的两棵树"
+      ],
+      "misconceptions": [
+        "哈夫曼树是唯一的——相同权值集合可能构造出不同形态的哈夫曼树，但 WPL 相同",
+        "哈夫曼编码一定比等长编码短——对于出现频率接近的字符集，优势不明显"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "想想为什么每次都选最小权值合并能得到最优解"
+        },
+        {
+          "level": "L2",
+          "text": "哈夫曼树中没有度为1的节点，所以总节点数 = 2n-1"
+        },
+        {
+          "level": "L3",
+          "text": "WPL 的计算：每个叶节点的权值乘以它到根的路径长度，再求和"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-union-find-heap",
+      "title": "并查集与堆",
+      "summary": "并查集用于管理不相交集合的合并与查询操作，通过数组实现，支持查找元素所在集合和合并两个集合。堆是一种完全二叉树结构：大根堆中每个节点的值不小于其子节点，小根堆中每个节点的值不大于其子节点，常用于优先队列和堆排序。",
+      "prerequisites": [
+        "cs408-ds-tree-binary"
+      ],
+      "keyPoints": [
+        "并查集用数组 parent[] 存储，find 操作沿父指针追溯到根，union 操作将一棵根的父指针指向另一棵根",
+        "并查集优化：按秩合并（小树挂到大树下）+ 路径压缩（查找时将路径上所有节点直接连到根）",
+        "大根堆：每个节点 >= 其子节点；小根堆：每个节点 <= 其子节点",
+        "堆的数组实现中，节点 i 的左孩子为 2i+1，右孩子为 2i+2（0起始）",
+        "建堆时间复杂度 $O(n)$，插入和删除时间复杂度 $O(logn)$"
+      ],
+      "misconceptions": [
+        "堆是一棵平衡二叉搜索树——堆只保证父子节点的大小关系，不保证左小右大",
+        "并查集的路径压缩会改变集合元素的关系——只是改变了存储结构，集合成员关系不变"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "并查集的核心是 find 和 union 两个操作"
+        },
+        {
+          "level": "L2",
+          "text": "堆排序中建堆后每次取出堆顶元素放到数组末尾，再对剩余元素调整"
+        },
+        {
+          "level": "L3",
+          "text": "Floyd建堆法从最后一个非叶节点开始自底向上做下沉操作，总复杂度 $O(n)$"
+        }
+      ],
+      "difficulty": 2,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-graph-basic",
+      "title": "图的基本概念与存储结构",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "图由顶点集和边集组成，根据边是否有方向分为有向图和无向图。无向图有 $n$个顶点时最多 $n\\frac{(n-1)}{2}$条边，有向图最多 $n(n-1)$条边。图的常用存储结构有邻接矩阵和邻接表，分别适合稠密图和稀疏图。",
+      "prerequisites": [
+        "cs408-ds-basic-concepts"
+      ],
+      "keyPoints": [
+        "无向图边数上界 $n\\frac{(n-1)}{2}$，有向图弧数上界 $n(n-1)$",
+        "连通图：任意两顶点间有路径；连通分量是无向图的极大连通子图",
+        "邻接矩阵：二维数组存储，空间 $O(V^2)$，适合稠密图",
+        "邻接表：链表数组存储，空间 $O(V+E)$，适合稀疏图"
+      ],
+      "misconceptions": [
+        "有向图的强连通分量就是连通分量——强连通分量是有向图中的概念，要求双向可达",
+        "邻接矩阵一定是对称矩阵——只有无向图的邻接矩阵才一定对称"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "选择存储结构时考虑图的稠密程度和需要执行的操作"
+        },
+        {
+          "level": "L2",
+          "text": "邻接矩阵中第 i 行非零元素个数 = 顶点 i 的出度（有向图）"
+        },
+        {
+          "level": "L3",
+          "text": "无向图邻接矩阵中第 i 行（列）非零元素个数 = 顶点 i 的度"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-graph-traversal",
+      "title": "图的遍历（BFS与DFS）",
+      "summary": "深度优先搜索（DFS）从某顶点出发，沿一条路径尽可能深入访问，回溯后再探索其他路径，类似树的前序遍历，借助栈（递归）实现。广度优先搜索（BFS）先访问起始顶点的所有邻接点，再逐层扩展，借助队列实现，类似树的层序遍历。",
+      "prerequisites": [
+        "cs408-ds-graph-basic"
+      ],
+      "keyPoints": [
+        "DFS 借助递归或栈，每次访问一个未访问的邻接点并标记已访问",
+        "BFS 借助队列，先入队起始顶点，每次出队一个顶点并将其未访问邻接点入队",
+        "对非连通图需从每个未访问顶点出发调用遍历算法，调用次数 = 连通分量数",
+        "$DF\\frac{S}{B}$FS 的时间复杂度：邻接矩阵 $O(V^2)$，邻接表 $O(V+E)$"
+      ],
+      "misconceptions": [
+        "DFS 和 BFS 的遍历序列是唯一的——取决于邻接点的访问顺序，同一图可能产生不同序列",
+        "BFS 只适用于无权图——BFS 亦可用于有权图，但无法求最短路径"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "DFS 用栈（递归），BFS 用队列，想想它们各自访问顶点的顺序"
+        },
+        {
+          "level": "L2",
+          "text": "遍历过程中需要用 visited 数组记录已访问顶点，避免重复访问"
+        },
+        {
+          "level": "L3",
+          "text": "邻接表存储时，BFS 的总时间 = 所有顶点入队出队 + 所有边被检查"
+        }
+      ],
+      "difficulty": 2,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-mst",
+      "title": "最小生成树（Prim与Kruskal）",
+      "summary": "最小生成树（MST）是连通图中边权之和最小的生成树。Prim 算法从某一顶点出发，每次选取连接已选集合和未选集合的最小权边加入，适合稠密图。Kruskal 算法对所有边按权值排序，依次选取不形成环的最小边，借助并查集判环，适合稀疏图。",
+      "prerequisites": [
+        "cs408-ds-graph-traversal"
+      ],
+      "keyPoints": [
+        "Prim算法：从一个顶点扩展，每次选连接树与非树顶点的最小边，$O(V^2)$或堆优化 $O(E logV)$",
+        "Kruskal算法：边按权排序，用并查集判环，选 $V-1$条边，$O(E logE)$",
+        "n 个顶点的连通图其生成树恰有 n-1 条边",
+        "MST 不一定唯一，但所有 MST 的边权之和相同"
+      ],
+      "misconceptions": [
+        "最小生成树一定包含图中权值最小的那条边——这是正确的（切割性质），但容易在变形题中忽视",
+        "Prim 和 Kruskal 的结果一定相同——当存在多条同权边时可能得到不同形态的 MST"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "想想两个算法分别是从什么角度来构建生成树的"
+        },
+        {
+          "level": "L2",
+          "text": "Prim 关注顶点（点扩展），Kruskal 关注边（边排序选边）"
+        },
+        {
+          "level": "L3",
+          "text": "稠密图 $E$接近 $V^2$，Prim 用邻接矩阵 $O(V^2)$更优；稀疏图 $E$远小于 $V^2$，Kruskal $O(E logE)$更优"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-shortest-path",
+      "title": "最短路径算法",
+      "summary": "最短路径问题求图中两顶点间权值之和最小的路径。Dijkstra 算法求单源最短路径，每次选取距离最小的未确定顶点并松弛其邻接点，不能处理负权边。Floyd 算法用动态规划求所有顶点对的最短路径，可处理负权边但不能有负权环。",
+      "prerequisites": [
+        "cs408-ds-graph-traversal"
+      ],
+      "keyPoints": [
+        "$Dijkstra$：贪心策略，$O(V^2)$或优先队列优化 $O(E logV)$，不能处理负权边",
+        "Floyd：动态规划，三重循环 $O(V^3)$，dist$[i][j] = \\min(dist[i][j], dist[i][k]+dist[k][j])$",
+        "松弛操作：若经过某中间顶点路径更短则更新距离值",
+        "Dijkstra 每次选 dist 最小的未访问顶点加入已确定集合"
+      ],
+      "misconceptions": [
+        "Dijkstra 能处理带负权边的图——不能，负权边会破坏贪心选择性质",
+        "Floyd 只能求两点间最短路径——它求的是所有顶点对的最短路径"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "Dijkstra 的核心操作是松弛，想想什么时候需要更新距离"
+        },
+        {
+          "level": "L2",
+          "text": "Dijkstra 每步选距离源点最近的未确定顶点，这就是贪心选择"
+        },
+        {
+          "level": "L3",
+          "text": "Floyd 的状态转移方程：引入顶点 k 后，i 到 j 的最短路径要么经过 k，要么不经过"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-topo-critical",
+      "title": "拓扑排序与关键路径",
+      "summary": "拓扑排序将 AOV（Activity On Vertex）有向无环图中的顶点排成线性序列，使得对每条有向边 (u,v)，u 都排在 v 前面。方法是反复选取入度为0的顶点输出并删除其出边。关键路径是 AOE（Activity On Edge）网中从源点到汇点的最长路径，决定工程最短完成时间。",
+      "prerequisites": [
+        "cs408-ds-graph-traversal"
+      ],
+      "keyPoints": [
+        "拓扑排序：反复选入度为0的顶点输出，若输出顶点数 < 总顶点数则说明有环",
+        "关键路径 = AOE 网中最长路径，路径上的活动为关键活动",
+        "关键活动的最早开始时间 = 最迟开始时间（无机动时间）",
+        "求关键路径需先拓扑排序，再正推求 ve（最早）、逆推求 vl（最迟）"
+      ],
+      "misconceptions": [
+        "拓扑排序的结果是唯一的——同一图可能有多种合法拓扑序列",
+        "关键路径只有一条——可能有多条等长的关键路径"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "拓扑排序借助入度数组和队列（或栈）来实现"
+        },
+        {
+          "level": "L2",
+          "text": "关键活动满足 $e(i) = l(i)$，即最早开始时间等于最迟开始时间"
+        },
+        {
+          "level": "L3",
+          "text": "ve 沿拓扑序正推取最大值，vl 沿逆拓扑序推取最小值"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-bst",
+      "title": "查找与二叉搜索树",
+      "summary": "查找是在数据集合中根据给定值寻找对应元素的过程。二叉搜索树（BST）满足左子树所有节点值 <根节点值 <右子树所有节点值，中序遍历得到递增序列。BST 的查找、插入、删除平均 $O(logn)$，最坏退化为 $O(n)$。",
+      "prerequisites": [
+        "cs408-ds-tree-binary"
+      ],
+      "keyPoints": [
+        "BST 查找：从根开始比较，小于走左、大于走右，直到找到或为空",
+        "BST 插入：查找失败的位置即为插入位置",
+        "BST 删除：叶节点直接删；一个子节点用子节点替代；两个子节点用中序后继（或前驱）替代",
+        "BST 中序遍历得到有序序列",
+        "ASL（平均查找长度）是衡量查找效率的指标"
+      ],
+      "misconceptions": [
+        "BST的查找效率总是 $O(logn)——$当树退化为链表时（如按序插入）退化为 $O(n)$",
+        "删除有两个子节点的 BST 节点时可以直接删除——必须先用中序后继或前驱替代"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "BST 的核心性质是左小右大，利用这个性质可以高效查找"
+        },
+        {
+          "level": "L2",
+          "text": "删除双子节点时，找右子树中最小节点（中序后继）来替代"
+        },
+        {
+          "level": "L3",
+          "text": "n 个节点的 BST 形态不同导致查找效率不同，这就是平衡树要解决的问题"
+        }
+      ],
+      "difficulty": 2,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-balanced-tree",
+      "title": "平衡二叉树与红黑树",
+      "summary": "平衡二叉树（AVL 树）是一种特殊的 BST，要求任何节点的左右子树高度差的绝对值不超过1。当插入或删除导致失衡时，通过 LL、RR、LR、RL 四种旋转操作恢复平衡。红黑树是另一种近似平衡的 BST，通过颜色约束保证最长路径不超过最短路径的两倍，减少旋转次数。",
+      "prerequisites": [
+        "cs408-ds-bst"
+      ],
+      "keyPoints": [
+        "AVL 树平衡因子 = 左子树高度 - 右子树高度，取值范围 {-1, 0, 1}",
+        "四种旋转：LL（右旋）、RR（左旋）、LR（先左后右）、RL（先右后左）",
+        "AVL树查找、插入、删除均为 $O(logn)$",
+        "红黑树五条性质：节点非红即黑、根为黑、叶（NIL）为黑、红节点子必黑、从任一节点到叶的黑节点数相同",
+        "红黑树最长路径不超过最短路径的2倍，保证 $O(logn)$查找效率"
+      ],
+      "misconceptions": [
+        "红黑树比 AVL 树更平衡——红黑树的平衡条件更宽松，换来了更少的旋转操作和更好的插入删除性能",
+        "AVL 树插入最多需要一次旋转——插入后可能需从插入点沿路径向上多次旋转"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "AVL 树在每次插入后检查从新节点到根路径上是否有失衡节点"
+        },
+        {
+          "level": "L2",
+          "text": "判断旋转类型看失衡节点和导致失衡的子节点的方向关系（左左、右右等）"
+        },
+        {
+          "level": "L3",
+          "text": "红黑树插入新节点默认红色，若父节点也是红色则需要调整（变色+旋转）"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-btree",
+      "title": "B树与B+树",
+      "summary": "B树（多路平衡查找树）是为磁盘等外存设备设计的平衡查找树，每个节点可包含多个关键字和多个子节点。m 阶 B 树每个节点最多 m 个子节点、m-1 个关键字，所有叶节点在同一层。B+ 树是 B 树的变体，所有数据记录在叶节点上，非叶节点仅做索引，叶节点间通过指针相连便于顺序访问。",
+      "prerequisites": [
+        "cs408-ds-bst"
+      ],
+      "keyPoints": [
+        "$m$阶 $B$树：每个节点最多 $m$个子节点，根至少2个，非根至少 ceil$(\\frac{m}{2})$个子节点",
+        "B 树所有叶节点在同一层（失败节点层），保证平衡",
+        "B+ 树数据全在叶节点，非叶节点只做索引",
+        "B+ 树叶节点通过指针相连，支持高效的范围查询",
+        "B 树和 B+ 树广泛应用于数据库索引和文件系统"
+      ],
+      "misconceptions": [
+        "B 树的 B 代表 Binary——B 代表 Balance（平衡），B 树是多路平衡树",
+        "B+ 树的非叶节点也存储数据——非叶节点只存索引关键字和子节点指针"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "B 树可以看作 BST 的多路推广，每个节点存多个关键字"
+        },
+        {
+          "level": "L2",
+          "text": "B 树插入时节点满了要分裂，将中间关键字上移到父节点"
+        },
+        {
+          "level": "L3",
+          "text": "$m$阶 $B$树中关键字数 $k$满足 ceil$(\\frac{m}{2})-1 <= k <= m-1$（非根节点）"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-hash",
+      "title": "散列表",
+      "summary": "散列表通过散列函数将关键字直接映射到存储地址，实现接近 $O(1)$的查找效率。散列冲突不可避免，常用处理方法有开放定址法（线性探测、二次探测、双重散列）和链地址法。装填因子 =表中元素数/表长，影响查找效率。",
+      "prerequisites": [
+        "cs408-ds-basic-concepts"
+      ],
+      "keyPoints": [
+        "散列函数构造：直接定址法、除留余数法（$H(key) =$key $% p$，$p$取不大于表长的最大素数）",
+        "冲突处理-开放定址法：线性探测 $di=1,2,3...$；二次探测 $di=1^2,-1^2,2^2,-2^2...$",
+        "冲突处理-链地址法：将所有映射到同一位置的元素链成一个链表",
+        "装填因子 alpha =表中记录数 /散列表长度，alpha 越大冲突越多"
+      ],
+      "misconceptions": [
+        "散列表查找一定是 $O(1)——$这是理想情况，冲突严重时退化为 $O(n)$",
+        "线性探测和链地址法的 ASL 相同——不同冲突处理方法的 ASL 计算公式不同"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "散列函数的设计目标是让关键字尽可能均匀分布"
+        },
+        {
+          "level": "L2",
+          "text": "除留余数法中 p 选素数是为了让散列值分布更均匀"
+        },
+        {
+          "level": "L3",
+          "text": "线性探测会产生聚集现象（一次聚集），二次探测可减轻但不能完全消除"
+        }
+      ],
+      "difficulty": 2,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-sorting-basic",
+      "title": "排序算法概述与简单排序",
+      "summary": "排序是将一组数据按指定关键字排列成有序序列的过程。简单排序算法包括直接插入排序（将元素插入已有序子序列）、冒泡排序（相邻元素比较交换）和简单选择排序（每次选最小元素放到已排好序的位置）。排序算法的稳定性指相等元素的相对顺序是否改变。",
+      "prerequisites": [
+        "cs408-ds-algorithm-complexity"
+      ],
+      "keyPoints": [
+        "直接插入排序：平均和最坏 $O(n^2)$，最好 $O(n)$，稳定",
+        "冒泡排序：平均和最坏 $O(n^2)$，最好 $O(n)$（已有序时一趟无交换即停），稳定",
+        "简单选择排序：始终 $O(n^2)$，不稳定（交换可能改变相等元素顺序）",
+        "稳定性判断：排序前后相等元素的相对位置是否改变"
+      ],
+      "misconceptions": [
+        "简单选择排序是稳定的——选择排序在交换过程中可能打乱相等元素的顺序，是不稳定的",
+        "冒泡排序每趟都能确定一个元素的最终位置——每趟确实将当前最大（或最小）元素移到最终位置"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "从操作方式上区分三种简单排序：插入、交换、选择"
+        },
+        {
+          "level": "L2",
+          "text": "判断稳定性要看排序过程中是否有可能跨越相等元素的交换"
+        },
+        {
+          "level": "L3",
+          "text": "插入排序在基本有序时效率很高，接近 $O(n)$，这是它优于选择排序的地方"
+        }
+      ],
+      "difficulty": 2,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-sorting-advanced",
+      "title": "高级排序算法",
+      "summary": "高级排序算法通过分治或特殊策略突破 $O(n^2)$的下界。快速排序用分治思想以枢轴划分两部分，平均 $O(nlogn)$但不稳定。归并排序将序列分成两半递归排序后合并，稳定且始终 $O(nlogn)$。堆排序利用堆结构反复取最大元素，$O(nlogn)$但不稳定。基数排序按位分配收集，$O(d(n+r))$，稳定。",
+      "prerequisites": [
+        "cs408-ds-sorting-basic",
+        "cs408-ds-union-find-heap"
+      ],
+      "keyPoints": [
+        "快速排序：平均 $O(nlogn)$，最坏 $O(n^2)$（已有序时），空间 $O(logn)$，不稳定",
+        "归并排序：始终 $O(nlogn)$，空间 $O(n)$，稳定",
+        "堆排序：始终 $O(nlogn)$，空间 $O(1)$，不稳定",
+        "基数排序：$O(d(n+r))$，空间 $O(r)$，稳定，适合关键字范围有限的场景",
+        "基于比较的排序下界为 $O(nlogn)$，基数排序不属于比较排序"
+      ],
+      "misconceptions": [
+        "快速排序的最坏情况比堆排序差所以堆排序更好——实际中快速排序常数因子更小，平均表现更优",
+        "归并排序可以原地排序——标准归并排序需要 $O(n)$额外空间"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "快排的关键在于枢轴的选择和划分操作"
+        },
+        {
+          "level": "L2",
+          "text": "归并排序的分治过程可以画成一棵高度为 $logn$的二叉树，每层合并代价 $O(n)$"
+        },
+        {
+          "level": "L3",
+          "text": "堆排序分两步：建堆 $O(n)$，然后 $n-1$次取堆顶并调整 $O(nlogn)$"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-string-basic",
+      "title": "串的基本概念与存储",
+      "summary": "串（字符串）是由零个或多个字符组成的有限序列。串的长度称为串长，空串长度为零。子串是串中任意个连续字符组成的子序列。串的存储方式包括定长顺序存储（静态数组）、堆分配存储（动态数组）和块链存储（链式结构，每个节点可存多个字符）。",
+      "prerequisites": [
+        "cs408-ds-basic-concepts",
+        "cs408-ds-linear-list"
+      ],
+      "keyPoints": [
+        "定长顺序存储：用固定长度数组存储串，操作时可能需要截断或填充",
+        "堆分配存储：运行时动态分配数组空间，兼顾顺序存储的随机访问和灵活的空间管理",
+        "块链存储：每个链表节点存储多个字符（chunk），提高存储密度",
+        "串的模式匹配：BF 暴力匹配 $O(mn)$，KMP 改进为 $O(m+n)$"
+      ],
+      "misconceptions": [
+        "串就是字符数组——串是一种特殊的线性表，其数据元素为字符，但操作方式（如子串查找、连接）有特殊性",
+        "块链存储中每个节点只存一个字符——块链的每个节点可存多个字符以提高存储密度，减少指针开销"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "串是特殊的线性表，其元素都是字符，考虑它有哪些特殊操作"
+        },
+        {
+          "level": "L2",
+          "text": "定长存储简单但不灵活，堆分配存储可以动态调整大小"
+        },
+        {
+          "level": "L3",
+          "text": "块链存储中每个节点存储多个字符（如4个或8个），用存储密度衡量空间利用率"
+        }
+      ],
+      "difficulty": 1,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-kmp-detail",
+      "title": "KMP算法原理与next数组推导",
+      "summary": "KMP（$Knuth-Morris-Pratt$）算法是一种高效的串模式匹配算法，核心思想是当匹配失败时，利用已匹配部分的信息，将模式串向右滑动尽可能远的距离，而主串指针不回退。通过预处理模式串得到 next 数组（或 nextval 数组），记录每个位置匹配失败时应回退到的位置，使时间复杂度降为 $O(m+n)$。",
+      "prerequisites": [
+        "cs408-ds-string-basic"
+      ],
+      "keyPoints": [
+        "next[j] 表示模式串前 j 个字符组成的子串的最长相等前后缀长度",
+        "next 数组推导：利用递推关系，当前字符匹配失败时，找到最长的相同前后缀长度",
+        "nextval 是 next 的改进版：当 P[j] == P[next[j]] 时，nextval[j] = nextval[next[j]]，避免重复比较",
+        "KMP 匹配过程：主串指针 i 不回退，模式串指针 j 根据 next/nextval 回退",
+        "KMP时间复杂度 $O(m+n)$，空间复杂度 $O(m)$"
+      ],
+      "misconceptions": [
+        "next 数组与主串有关——next 数组仅由模式串本身决定，与主串无关",
+        "KMP 中主串指针也需要回退——主串指针 i 始终不回退，只有模式串指针 j 回退"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "想想匹配失败时，已经匹配的部分有什么可以利用的信息"
+        },
+        {
+          "level": "L2",
+          "text": "next[j] 的含义：模式串前 j 个字符中，最长相等前后缀的长度"
+        },
+        {
+          "level": "L3",
+          "text": "nextval 在 next 基础上进一步优化：若 P[j]=P[next[j]]，则回退到 next[j] 也没用，应继续回退到 nextval[next[j]]"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-glist",
+      "title": "广义表概念与存储",
+      "summary": "广义表是线性表的推广，其元素可以是原子（不可再分的数据元素），也可以是子广义表。广义表具有递归和层次结构特性。广义表的长度是指最外层元素的个数，深度是指广义表展开后所含括号的最大层数。广义表常用链式存储，每个节点包含标志域、数据域/表头表尾指针域。",
+      "prerequisites": [
+        "cs408-ds-linear-list",
+        "cs408-ds-tree-binary"
+      ],
+      "keyPoints": [
+        "广义表长度 = 最外层元素个数",
+        "广义表深度 = 括号嵌套的最大层数，原子的深度为0，空表深度为1",
+        "表头（head）取广义表第一个元素，表尾（tail）取除第一个元素外剩余部分构成的广义表",
+        "广义表的链式存储：标志域区分原子节点和表节点，表节点含表头指针和表尾指针",
+        "共享子表和递归子表是广义表的两种特殊形式"
+      ],
+      "misconceptions": [
+        "广义表的深度等于其长度——深度是括号嵌套层数，长度是最外层元素个数，两者含义完全不同",
+        "表尾操作返回去掉第一个元素后的剩余元素——表尾返回的是一个广义表，不是多个独立元素"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "广义表是线性表的推广，元素可以是原子也可以是子表"
+        },
+        {
+          "level": "L2",
+          "text": "深度计算：递归地看，深度 $= \\max$(各元素深度) $+ 1$，原子深度为0"
+        },
+        {
+          "level": "L3",
+          "text": "head 返回第一个元素（可以是原子或子表），tail 返回剩余元素组成的广义表（一定是广义表）"
+        }
+      ],
+      "difficulty": 2,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-sparse-matrix",
+      "title": "稀疏矩阵详细（三元组、十字链表）",
+      "summary": "稀疏矩阵是非零元素远少于零元素的矩阵。为节省存储空间，只存储非零元素。三元组顺序表用（行号, 列号, 值）的有序序列存储非零元素，适合稀疏矩阵的转置和乘法等操作。十字链表（正交表）结合行链表和列链表，每个非零元素对应一个节点，同时链接同行和同列的下一个非零元素，更适合动态修改。",
+      "prerequisites": [
+        "cs408-ds-array-matrix",
+        "cs408-ds-linear-list"
+      ],
+      "keyPoints": [
+        "三元组表示：每个非零元素用 (i, j, value) 三元组存储，按行优先排列",
+        "三元组转置：按列优先扫描三元组表，重新排列为行优先的转置三元组",
+        "十字链表节点结构：$(row, col, value, right_ptr, down_ptr)$",
+        "十字链表每行一个行头链表，每列一个列头链表，行和列方向分别用指针串联",
+        "三元组适合静态操作（如转置），十字链表适合频繁插入删除的动态场景"
+      ],
+      "misconceptions": [
+        "三元组表示中元素按列排列——三元组通常按行优先排列，即先行号小的在前，同行则列号小的在前",
+        "十字链表只按行链接——十字链表同时维护行链表和列链表，每个节点在两个方向上都有指针"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "稀疏矩阵中零元素远多于非零元素，只存非零元素可以大大节省空间"
+        },
+        {
+          "level": "L2",
+          "text": "三元组转置的关键：将原三元组按列号排序后重新编号行列"
+        },
+        {
+          "level": "L3",
+          "text": "十字链表的每个节点既在行链表中又在列链表中，两个方向的指针分别指向同行和同列的下一个非零元素"
+        }
+      ],
+      "difficulty": 2,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-threaded-tree",
+      "title": "线索二叉树详细（前序/中序/后序线索化）",
+      "summary": "线索二叉树是在二叉链表基础上增加线索的改进结构。通过遍历将空指针改为指向前驱或后继的线索，并设置标志位（ltag/rtag）区分指针是孩子指针还是线索。中序线索化后，可以像遍历链表一样不借助栈完成中序遍历。前序和后序线索化也有各自特点，但前序和后序线索化在某些情况下仍需借助栈。",
+      "prerequisites": [
+        "cs408-ds-tree-binary",
+        "cs408-ds-tree-traversal"
+      ],
+      "keyPoints": [
+        "线索化过程：在遍历过程中，若节点无左孩子则将 ltag=1 且左指针指向前驱，无右孩子则将 rtag=1 且右指针指向后继",
+        "中序线索二叉树：可以找到中序前驱和中序后继，遍历不需要栈",
+        "前序线索二叉树：前序遍历不需要栈（利用右线索跳到后继），但求前序前驱较复杂",
+        "后序线索二叉树：求后序后继容易，但后序遍历仍可能需要栈（因为需要先回到父节点）",
+        "n 个节点的二叉树有 n+1 个空指针域，线索化利用了这些空指针"
+      ],
+      "misconceptions": [
+        "所有线索二叉树都能不用栈遍历——后序线索二叉树的后序遍历仍可能需要栈",
+        "线索化后原来的左右指针信息丢失——线索化只修改空指针域，非空指针仍指向原来的孩子节点"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "线索化的目的是利用空指针存储前驱后继信息，避免递归或栈"
+        },
+        {
+          "level": "L2",
+          "text": "中序线索化中，左线索指向前驱，右线索指向后继"
+        },
+        {
+          "level": "L3",
+          "text": "中序线索二叉树遍历：从最左下节点开始，有右子树则找右子树最左节点，否则沿右线索走"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-avl-rotate",
+      "title": "AVL树旋转详细（LL/RR/LR/RL四种）",
+      "summary": "AVL 树在插入或删除节点后可能出现平衡因子超出 {-1, 0, 1} 范围的失衡节点，需要通过旋转操作恢复平衡。根据失衡节点和其子节点的方向关系，分为四种情况：LL（左左，右旋）、RR（右右，左旋）、LR（左右，先左旋后右旋）、RL（右左，先右旋后左旋）。每次插入最多需要从失衡点向上做一次旋转。",
+      "prerequisites": [
+        "cs408-ds-balanced-tree"
+      ],
+      "keyPoints": [
+        "LL 型（右旋）：失衡节点的左子树较高，且左孩子的左子树更高，对失衡节点做一次右旋",
+        "RR 型（左旋）：失衡节点的右子树较高，且右孩子的右子树更高，对失衡节点做一次左旋",
+        "LR 型（先左后右）：失衡节点的左子树较高，但左孩子的右子树更高，先对左孩子左旋，再对失衡节点右旋",
+        "RL 型（先右后左）：失衡节点的右子树较高，但右孩子的左子树更高，先对右孩子右旋，再对失衡节点左旋",
+        "插入时从新节点向上找到第一个失衡节点进行旋转即可；删除时可能需要多次旋转"
+      ],
+      "misconceptions": [
+        "AVL 树插入后可能需要多次旋转——插入操作最多只需要一次旋转即可恢复平衡",
+        "LR 和 RL 旋转可以一步完成——LR/RL 需要两步旋转，先调整子树再调整根"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "判断旋转类型的关键：看失衡节点到插入位置的路径方向"
+        },
+        {
+          "level": "L2",
+          "text": "LL 和 RR 是单旋转，LR 和 RL 是双旋转（先内后外）"
+        },
+        {
+          "level": "L3",
+          "text": "旋转后需要重新计算平衡因子，确保所有节点都满足 AVL 条件"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-btree-op",
+      "title": "B树插入与删除操作",
+      "summary": "$B$树的插入和删除操作需要维护 $B$树的平衡性质。插入时，若节点关键字数达到上限 $m-1$，则需要分裂节点，将中间关键字上移到父节点。删除时，若节点关键字数低于下限 ceil$(\\frac{m}{2})-1$，则需要向兄弟借关键字或与兄弟合并，必要时父节点关键字下移补充。",
+      "prerequisites": [
+        "cs408-ds-btree"
+      ],
+      "keyPoints": [
+        "插入分裂：节点满（$m-1$个关键字）时分裂为两个节点，中间关键字（第 ceil$(\\frac{m}{2})-1$个）上移到父节点",
+        "删除借关键字：兄弟节点关键字数多于下限时，通过父节点旋转借一个关键字",
+        "删除合并：兄弟节点关键字数等于下限时，与兄弟及父节点关键字合并为一个节点",
+        "删除导致根节点为空时，树的高度降低一层",
+        "插入和删除后都需要从修改位置向上检查并维护 B 树性质"
+      ],
+      "misconceptions": [
+        "B 树删除时子节点不够就直接合并——应先看兄弟是否有多余关键字可借，借不到才合并",
+        "B 树分裂时任意选一个关键字上移——应选中间位置的关键字上移，保证分裂后两个节点的关键字数都满足要求"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "B 树插入的核心操作是节点满时分裂，删除的核心操作是不够时借或合并"
+        },
+        {
+          "level": "L2",
+          "text": "分裂时中间关键字上移，左边留在原节点，右边去新节点"
+        },
+        {
+          "level": "L3",
+          "text": "删除合并时，将左兄弟、父节点关键字、当前节点三者合并为一个新节点"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-bplus-tree",
+      "title": "B+树特点与应用",
+      "summary": "B+ 树是 B 树的变体，所有数据记录都存储在叶节点上，非叶节点仅存储索引关键字和子节点指针。B+ 树的叶节点通过指针链接成有序链表，支持高效的顺序访问和范围查询。B+ 树广泛应用于数据库索引和文件系统，如 MySQL 的 InnoDB 引擎使用 B+ 树作为索引结构。",
+      "prerequisites": [
+        "cs408-ds-btree"
+      ],
+      "keyPoints": [
+        "B+ 树所有数据都在叶节点，非叶节点只存索引关键字和指向子树的指针",
+        "叶节点通过指针相连形成有序链表，便于范围查询和顺序扫描",
+        "B+ 树的非叶节点中的关键字同时出现在叶节点中（作为索引副本）",
+        "B+ 树的查找必须到叶节点才能获取数据，非叶节点只起导航作用",
+        "B+ 树在数据库索引和文件系统中广泛应用，因其范围查询效率高"
+      ],
+      "misconceptions": [
+        "B+ 树和 B 树的区别只是多了一个叶子链表——B+ 树的核心区别是数据只在叶节点，非叶节点纯做索引",
+        "B+ 树查找比 B 树快——B+ 树查找必须到叶节点，非叶节点上的查找可能比 B 树慢（B 树可在中间节点命中）"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "B+ 树的关键改进：数据全在叶节点，叶节点之间有链表连接"
+        },
+        {
+          "level": "L2",
+          "text": "范围查询时，B+ 树找到起点后沿叶节点链表顺序扫描即可，不需要回溯"
+        },
+        {
+          "level": "L3",
+          "text": "B+ 树非叶节点的关键字个数 = 子树指针个数 - 1，且关键字仅做索引分隔"
+        }
+      ],
+      "difficulty": 2,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-hash-detail",
+      "title": "散列冲突处理详细（线性探测/二次探测/链地址法ASL计算）",
+      "summary": "散列冲突处理的两种主要方法是开放定址法和链地址法。线性探测法在冲突时依次检查下一个位置，容易产生一次聚集。二次探测法使用平方序列探测，减轻聚集但不能保证找到空位。链地址法将同义词用链表连接，ASL 计算需要分别统计每条链的查找次数。掌握各种方法的 ASL 计算是考试重点。",
+      "prerequisites": [
+        "cs408-ds-hash"
+      ],
+      "keyPoints": [
+        "线性探测 ASL 计算：每个元素的查找次数 = 从散列地址到实际位置的距离 + 1",
+        "二次探测：探测序列为 $H+1^2, H-1^2, H+2^2, H-2^2, ...$（模表长）",
+        "链地址法 ASL 计算：第 $k$个插入同义词链的元素查找次数为 $k$，ASL =各元素查找次数之和 /元素总数",
+        "线性探测成功查找 ASL $= (\\frac{1}{m}) *$sum(每个元素到散列地址的距离$+1$)",
+        "链地址法不会产生溢出，但需要额外指针空间"
+      ],
+      "misconceptions": [
+        "链地址法的 ASL 与元素插入顺序无关——链地址法中查找次数取决于元素在链中的位置，而链中顺序与插入顺序有关",
+        "线性探测的聚集现象只与装填因子有关——聚集还与关键字的散列分布和表的使用历史有关"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "ASL 的计算核心：每个元素查找成功的比较次数之和除以元素个数"
+        },
+        {
+          "level": "L2",
+          "text": "线性探测中，若元素散列地址为 H，实际存在位置 P，则查找次数 = P - H + 1（考虑回绕）"
+        },
+        {
+          "level": "L3",
+          "text": "链地址法中，同一条链上第 1 个插入的元素查找 1 次，第 2 个查找 2 次，以此类推"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-graph-compare",
+      "title": "图算法综合比较（Dijkstra vs Floyd, Prim vs Kruskal）",
+      "summary": "图算法的选择取决于具体场景。Dijkstra 适合单源最短路径，Floyd 适合所有点对最短路径。Prim 从顶点角度扩展生成树，适合稠密图；Kruskal 从边角度排序选边，适合稀疏图。理解各算法的适用条件、时间复杂度和局限性是综合运用的基础。",
+      "prerequisites": [
+        "cs408-ds-shortest-path",
+        "cs408-ds-mst"
+      ],
+      "keyPoints": [
+        "$Dijkstra O(V^2)$适合单源、稠密图；优先队列优化 $O(E logV)$适合稀疏图；不能处理负权边",
+        "$Floyd O(V^3)$适合所有点对、顶点数较少的情况；可处理负权边但不能有负权环",
+        "$Prim O(V^2)$适合稠密图；堆优化 $O(E logV)$适合稀疏图",
+        "$Kruskal O(E logE)$适合稀疏图，借助并查集判环",
+        "$Bellman-Ford O(VE)$可以处理负权边并检测负权环"
+      ],
+      "misconceptions": [
+        "Floyd 比 Dijkstra 功能更强所以总是用 Floyd——当只需要单源最短路时，Dijkstra 效率更高",
+        "Prim 和 Kruskal 在所有场景下结果相同——当存在多条同权边时，两个算法可能产生不同形态的 MST"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "从需求出发：单源还是全源？稠密还是稀疏？有无负权？"
+        },
+        {
+          "level": "L2",
+          "text": "Dijkstra 贪心选最小距离顶点，Floyd 动态规划逐步引入中间顶点"
+        },
+        {
+          "level": "L3",
+          "text": "稠密图 $E$接近 $V^2$时 Prim $O(V^2)$优于 Kruskal $O(E logE)$；稀疏图则相反"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-sort-compare",
+      "title": "排序算法综合比较（时间/空间/稳定性/适用场景）",
+      "summary": "各种排序算法在时间复杂度、空间复杂度、稳定性和适用场景上各有特点。直接插入和冒泡排序在基本有序时效率高；快速排序平均性能最优但最坏退化；归并排序稳定且始终 $O(nlogn)$但需额外空间；堆排序空间 $O(1)$但不稳定；基数排序适合关键字范围有限的场景。选择排序算法需综合考虑数据特征和需求。",
+      "prerequisites": [
+        "cs408-ds-sorting-basic",
+        "cs408-ds-sorting-advanced"
+      ],
+      "keyPoints": [
+        "时间复杂度对比：插入/冒泡 $O(n^2)$（最好$O(n)$）；快排/归并/堆排 $O(nlogn)$（平均）；基数排序 $O(d(n+r))$",
+        "空间复杂度对比：快排 $O(logn)$；归并 $O(n)$；堆排/插入/冒泡/选择 $O(1)$",
+        "稳定性：插入、冒泡、归并、基数排序稳定；选择、快排、堆排不稳定",
+        "数据基本有序时：插入排序和冒泡排序效率最高",
+        "要求稳定排序时：可选插入、冒泡、归并、基数排序"
+      ],
+      "misconceptions": [
+        "快速排序总是最快的排序——快排最坏情况退化为 $O(n^2)$，对已有序数据选端点为枢轴时最差",
+        "不稳定的排序算法在任何情况下都不稳定——稳定性是指存在某种输入使得相等元素顺序改变，不是说每次都会改变"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "从时间、空间、稳定性三个维度建立排序算法的对比表"
+        },
+        {
+          "level": "L2",
+          "text": "考虑数据规模和初始状态：小规模用简单排序，大规模用高级排序，基本有序用插入"
+        },
+        {
+          "level": "L3",
+          "text": "基于比较的排序时间下界为 $O(nlogn)$，非比较排序（如基数排序）可以突破此限制"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-external-sort",
+      "title": "外部排序基本概念（多路归并、败者树）",
+      "summary": "外部排序处理无法全部装入内存的大规模数据。基本思想是将数据分成若干能装入内存的段，每段内部排序后生成初始归并段（run），然后通过多路归并逐步合并成完整的有序文件。归并路数越多，归并趟数越少，但每次归并需要更多缓冲区。败者树是多路归并中高效选择最小元素的优化结构。",
+      "prerequisites": [
+        "cs408-ds-sorting-advanced"
+      ],
+      "keyPoints": [
+        "外部排序两阶段：生成初始归并段 + 多趟归并",
+        "k 路归并：每次从 k 个归并段中选最小元素合并，每趟归并 k 个段为 1 个",
+        "归并趟数 =ceil$(log_k(m))$，$m$为初始归并段个数",
+        "败者树：完全二叉树结构，内部节点记录失败者，根节点的父节点指向最小元素所在归并段",
+        "增加归并路数 $k$可减少归并趟数，但增加每次选最小的比较次数，败者树将比较次数降为 $O(\\log k)$"
+      ],
+      "misconceptions": [
+        "归并路数越大越好——路数增大会增加每次归并的缓冲区需求和比较开销，需要权衡",
+        "败者树是一棵二叉搜索树——败者树不是 BST，它是一种用于多路归并的选择树，内部节点记录败者而非胜者"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "外部排序的核心问题是数据太大无法一次装入内存"
+        },
+        {
+          "level": "L2",
+          "text": "k 路归并中每趟从 k 个候选中选最小，用败者树可以高效完成"
+        },
+        {
+          "level": "L3",
+          "text": "减少归并趟数的方法：增大 k（多路归并）或减少初始归并段数（如置换-选择排序）"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-replace-select",
+      "title": "置换-选择排序与最佳归并树",
+      "summary": "置换-选择排序是生成初始归并段的优化方法，利用工作区（内存缓冲区）不断用新元素替换已输出的最小元素，使生成的归并段长度不均匀——靠前的段较长，靠后的段较短。最佳归并树（哈夫曼归并树）利用哈夫曼树的思想构造归并方案，使总读盘次数最少，尤其当归并段数不满足 $(m-1) \\mod (k-1) = 0$时需要补充虚段。",
+      "prerequisites": [
+        "cs408-ds-external-sort"
+      ],
+      "keyPoints": [
+        "置换-选择排序：工作区满后每次输出最小元素并读入新元素，产生的归并段平均长度为工作区的2倍",
+        "置换-选择排序产生的归并段长度不等，前长后短",
+        "最佳归并树：用哈夫曼树的思想组织 k 路归并，使总 I/O 次数最少",
+        "$k$路归并中，若 $(m-1) \\mod (k-1) != 0$，需补充 $(k-1) - (m-1) \\mod (k-1)$个虚段（长度为0）",
+        "最佳归并树的 WPL = 总读盘次数"
+      ],
+      "misconceptions": [
+        "置换-选择排序产生的归并段长度相同——实际上前段长后段短，长度不均匀",
+        "最佳归并树不需要补充虚段——当 $(m-1) \\mod (k-1) != 0$时必须补充虚段才能构造严格的 $k$叉哈夫曼树"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "置换-选择排序的目标是生成更长的初始归并段以减少归并趟数"
+        },
+        {
+          "level": "L2",
+          "text": "最佳归并树就是哈夫曼树在外部排序中的应用，权值为归并段长度"
+        },
+        {
+          "level": "L3",
+          "text": "$k$叉哈夫曼树要求 $(m-1) \\mod (k-1) = 0$，不满足时补长度为 0的虚段"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-radix-sort",
+      "title": "基数排序详细（LSD/MSD）",
+      "summary": "基数排序是一种非比较排序算法，将关键字按位拆分，从低位到高位（LSD）或从高位到低位（MSD）逐位进行分配和收集。LSD 基数排序从最低位开始，每位做一次稳定的分配-收集，经过 $d$趟后得到有序序列。MSD 从最高位开始，按最高位分组后对每组递归处理下一位。基数排序时间复杂度 $O(d(n+r))$，是稳定的排序算法。",
+      "prerequisites": [
+        "cs408-ds-sorting-basic"
+      ],
+      "keyPoints": [
+        "LSD（最低位优先）：从最低位开始逐位分配收集，每位需稳定排序",
+        "MSD（最高位优先）：从最高位开始分组，对每组递归处理低位",
+        "每趟分配：按当前位的值将元素放入 r 个桶中（r 为基数，如十进制 r=10）",
+        "每趟收集：按桶号从小到大依次收集元素，保持桶内原有顺序（稳定）",
+        "时间复杂度 $O(d(n+r))$，空间复杂度 $O(r)$，$d$为位数，$r$为基数",
+        "基数排序是稳定的排序算法"
+      ],
+      "misconceptions": [
+        "基数排序适用于所有数据类型——基数排序要求关键字可以按位分解，且每位取值范围有限",
+        "MSD 和 LSD 效率相同——LSD 简单统一，MSD 可提前终止（某些桶只有一个元素时），各有适用场景"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "基数排序的核心思想：按位拆分，每位做分配和收集"
+        },
+        {
+          "level": "L2",
+          "text": "LSD 从个位开始，每趟必须用稳定排序，否则前面排好的高位会被打乱"
+        },
+        {
+          "level": "L3",
+          "text": "$d$位关键字，每位取值 0到 $r-1$，每趟 $O(n+r)$，共 $d$趟，总时间 $O(d(n+r))$"
+        }
+      ],
+      "difficulty": 2,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-shell-sort",
+      "title": "希尔排序",
+      "summary": "希尔排序（缩小增量排序）是直接插入排序的改进版本。先将序列按某个增量 dk 分成若干子序列，对每个子序列进行直接插入排序，然后逐步缩小增量重复此过程，直到增量为 1 时对整个序列做一次插入排序。希尔排序通过前期使序列基本有序来提高最终插入排序的效率。",
+      "prerequisites": [
+        "cs408-ds-sorting-basic"
+      ],
+      "keyPoints": [
+        "增量序列：$d1, d2, ..., dk=1$，常用 dk $= dk-\\frac{1}{2}$（向下取整）或 Hibbard 增量等",
+        "每趟排序：按当前增量将序列分组，对每组做直接插入排序",
+        "最后一趟增量为 1，等价于对整个序列做一次直接插入排序",
+        "时间复杂度与增量序列选择有关：最坏 $O(n^2)$（如 $dk=\\frac{n}{2}$递减），好的增量可达 $O(n^1.5)$或 $O(n^1.3)$",
+        "希尔排序是不稳定的排序算法"
+      ],
+      "misconceptions": [
+        "希尔排序是稳定的——由于跨距离交换元素，相等元素的相对顺序可能改变",
+        "希尔排序的时间复杂度始终为 $O(nlogn)——$时间复杂度取决于增量序列的选择，不同增量序列复杂度不同"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "希尔排序的核心思想：先大跨度粗调，再小跨度细调"
+        },
+        {
+          "level": "L2",
+          "text": "增量为 dk 时，将所有距离为 dk 的元素组成子序列分别排序"
+        },
+        {
+          "level": "L3",
+          "text": "最后一趟增量为 1 时，序列已经基本有序，此时插入排序效率很高"
+        }
+      ],
+      "difficulty": 2,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-heap-sort-detail",
+      "title": "堆排序详细过程（建堆+调整）",
+      "summary": "堆排序利用堆这种数据结构进行排序。首先将待排序序列建成大根堆（或小根堆），然后反复取出堆顶元素（最大值）放到序列末尾，再对剩余元素重新调整为堆。建堆使用 Floyd 算法从最后一个非叶节点开始自底向上做下沉调整，时间 $O(n)$。每次调整后堆大小减 1，共 $n-1$次调整，总时间 $O(nlogn)$。",
+      "prerequisites": [
+        "cs408-ds-sorting-advanced",
+        "cs408-ds-union-find-heap"
+      ],
+      "keyPoints": [
+        "建堆（Floyd 算法）：从最后一个非叶节点 n/2 开始，到根节点 1，依次做下沉（sift down）调整",
+        "下沉调整：将节点与较大的子节点比较，若小于子节点则交换，继续向下调整",
+        "排序过程：每次将堆顶（最大值）与堆底交换，堆大小减 1，对新堆顶做下沉调整",
+        "大根堆升序排序，小根堆降序排序",
+        "堆排序空间 $O(1)$，时间始终 $O(nlogn)$，不稳定"
+      ],
+      "misconceptions": [
+        "建堆是从第一个节点开始向下调整——建堆从最后一个非叶节点（n/2）开始，自底向上调整",
+        "堆排序每轮都需要重新建堆——每轮只需对新的堆顶做一次下沉调整，不需要完全重建"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "堆排序分两阶段：先建堆，再反复取堆顶并调整"
+        },
+        {
+          "level": "L2",
+          "text": "建堆时从最后一个非叶节点开始，因为叶节点不需要调整"
+        },
+        {
+          "level": "L3",
+          "text": "每次取堆顶后，将最后一个元素放到堆顶，然后做下沉调整恢复堆性质"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-merge-sort-detail",
+      "title": "归并排序详细（递归/迭代）",
+      "summary": "归并排序采用分治策略，将序列分成两半分别递归排序，然后将两个有序子序列合并为一个有序序列。递归版本自顶向下分解，迭代版本（$2-$路归并）自底向上逐步扩大归并段长度。归并排序的时间复杂度始终为 $O(nlogn)$，需要 $O(n)$额外空间，是稳定的排序算法。",
+      "prerequisites": [
+        "cs408-ds-sorting-advanced"
+      ],
+      "keyPoints": [
+        "递归版本：将序列一分为二，递归排序两半，然后合并（merge）",
+        "迭代版本：初始每个元素为一个有序段，每趟将相邻的两个有序段合并，段长翻倍",
+        "合并操作：用两个指针分别指向两个有序段的起始位置，依次取较小者放入临时数组",
+        "时间复杂度：分解 $O(logn)$层，每层合并 $O(n)$，总计 $O(nlogn)$",
+        "空间复杂度 $O(n)$（需要临时数组），稳定性由合并时取相等元素的顺序保证"
+      ],
+      "misconceptions": [
+        "归并排序可以不需要额外空间——标准归并排序需要 $O(n)$的临时空间来合并，原地归并效率很低",
+        "归并排序只适用于链表——归并排序对数组和链表都适用，链表归并甚至不需要额外空间"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "归并排序的核心操作是合并两个有序序列为一个有序序列"
+        },
+        {
+          "level": "L2",
+          "text": "递归分解到每个子序列只有 1 个元素时终止（1 个元素天然有序）"
+        },
+        {
+          "level": "L3",
+          "text": "合并时若两个元素相等，优先取前一个序列的元素，这样保证稳定性"
+        }
+      ],
+      "difficulty": 2,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-dag-app",
+      "title": "DAG应用（拓扑排序+关键路径综合）",
+      "summary": "有向无环图（DAG）在工程规划中有重要应用。拓扑排序将 DAG 中的顶点排成线性序列，是求关键路径的基础。关键路径是 AOE 网中从源点到汇点的最长路径，决定了工程的最短完成时间。通过拓扑排序正推各事件最早发生时间 ve，逆拓扑排序逆推各事件最迟发生时间 vl，可求出各活动的最早和最迟开始时间，从而确定关键活动。",
+      "prerequisites": [
+        "cs408-ds-topo-critical"
+      ],
+      "keyPoints": [
+        "拓扑排序是求关键路径的前提步骤",
+        "ve（事件最早时间）沿拓扑序正推：ve$(j) = \\max{ve(i) + weight(i,j)}$",
+        "vl（事件最迟时间）沿逆拓扑序逆推：vl$(i) = \\min{vl(j) - weight(i,j)}$",
+        "活动最早开始时间 $e(a) =$ve(起点)，活动最迟开始时间 $l(a) =$vl(终点) -活动权值",
+        "关键活动满足 $e(a) = l(a)$，所有关键活动组成的路径为关键路径",
+        "缩短关键活动可加快工程进度，但可能产生新的关键路径"
+      ],
+      "misconceptions": [
+        "缩短任意一个关键活动就能缩短工期——缩短关键活动后可能出现新的关键路径，需要同时缩短所有关键路径",
+        "关键路径上的活动可以延迟——关键活动的机动时间为零，任何延迟都会导致整个工程延期"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "关键路径求解的基础是拓扑排序，先排好序再计算时间参数"
+        },
+        {
+          "level": "L2",
+          "text": "ve 正推取 max，vl 逆推取 min，注意方向不能反"
+        },
+        {
+          "level": "L3",
+          "text": "提高工程进度的关键是缩短关键路径上的关键活动，且要注意可能有多条关键路径"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-bipartite",
+      "title": "二分图匹配概念",
+      "summary": "二分图（二部图）是顶点可以分为两个不相交集合 U 和 V 的图，使得每条边的两个端点分别属于不同集合。二分图匹配是选取一组边使得任意两条边不共享顶点。最大匹配是边数最多的匹配。匈牙利算法是求二分图最大匹配的经典算法。若所有顶点都被匹配则为完美匹配。",
+      "prerequisites": [
+        "cs408-ds-graph-basic"
+      ],
+      "keyPoints": [
+        "二分图定义：顶点集可分为 U 和 V，每条边连接 U 中一个顶点和 V 中一个顶点",
+        "匹配：一组没有公共端点的边的集合",
+        "最大匹配：边数最多的匹配，可用匈牙利算法求解",
+        "完美匹配：所有顶点都被匹配的匹配（要求 |U| = |V|）",
+        "匈牙利算法通过寻找增广路径来扩大匹配，时间复杂度 $O(VE)$"
+      ],
+      "misconceptions": [
+        "所有图都是二分图——只有顶点可以分为两个独立集且边只在两集合之间的图才是二分图",
+        "最大匹配一定是完美匹配——最大匹配只保证边数最多，不一定覆盖所有顶点"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "二分图的核心：顶点可以分成两组，边只连接不同组的顶点"
+        },
+        {
+          "level": "L2",
+          "text": "增广路径：从一个未匹配点出发，交替经过非匹配边和匹配边，到达另一个未匹配点"
+        },
+        {
+          "level": "L3",
+          "text": "匈牙利算法的核心：反复寻找增广路径并翻转路径上的匹配/非匹配状态来扩大匹配"
+        }
+      ],
+      "difficulty": 2,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-redblack-light",
+      "title": "红黑树基本概念（五条性质、与AVL比较）",
+      "summary": "红黑树是一种自平衡的二叉搜索树，每个节点额外存储一个颜色属性（红色或黑色）。通过五条性质约束，保证从根到叶子的最长路径不超过最短路径的 2 倍，从而实现近似平衡。与 AVL 树相比，红黑树的平衡条件更宽松，插入和删除时旋转次数更少，适合频繁插入删除的场景。",
+      "prerequisites": [
+        "cs408-ds-balanced-tree"
+      ],
+      "keyPoints": [
+        "红黑树五条性质：$(1)$每个节点非红即黑 $(2)$根节点为黑色 $(3)$叶节点（NIL）为黑色 $(4)$红节点的两个子节点必为黑色 $(5)$从任一节点到其每个叶子的路径上黑色节点数相同",
+        "黑高：从某节点出发到叶子的路径上黑色节点个数（不含该节点自身）",
+        "最长路径不超过最短路径的 2 倍：因为性质 5 保证每条路径黑节点数相同，性质 4 保证红节点不能相邻",
+        "与 AVL 比较：AVL 严格平衡（高度差 <=1），查找更快；红黑树宽松平衡，插入删除旋转更少",
+        "红黑树插入：新节点染红色，通过变色和旋转修复性质；删除：较复杂，涉及多种情况"
+      ],
+      "misconceptions": [
+        "红黑树的查找效率比 AVL 高——红黑树可能比 AVL 树高一些，查找效率不一定更高，但插入删除更高效",
+        "红黑树中红色节点可以相邻——性质 4 明确规定红节点的子节点必须为黑色"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "红黑树通过颜色约束实现近似平衡，核心是五条性质"
+        },
+        {
+          "level": "L2",
+          "text": "性质 5（黑高相同）+ 性质 4（红不相邻）=> 最长路径不超过最短路径 2 倍"
+        },
+        {
+          "level": "L3",
+          "text": "红黑树插入新节点默认红色（不破坏黑高），若父节点也是红色则需通过变色和旋转修复"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    }
+  ]
+}

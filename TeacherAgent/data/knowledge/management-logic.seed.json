@@ -1,0 +1,687 @@
+{
+  "subject": "management",
+  "course": "management-logic",
+  "chapter": "management-logic",
+  "status": "draft",
+  "nodes": [
+    {
+      "id": "management-logic-001",
+      "title": "概念与直言命题",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "直言命题分全称/特称/肯定/否定；周延看主谓项是否断定全部。'所有S是P'中S周延、P不周延。",
+      "prerequisites": [],
+      "misconceptions": [
+        "混淆周延",
+        "忽视量项"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个概念在管综里常怎么考？"
+        },
+        {
+          "level": "L2",
+          "text": "回到定义再判断。"
+        },
+        {
+          "level": "L3",
+          "text": "先定性后计算。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-logic-002",
+      "title": "复合命题（联言/选言/假言）",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "联言'且'全真才真；选言'或'一真即真（相容）；假言'若p则q'只有p真q假为假，其等价于'非p或q'。",
+      "prerequisites": [
+        "management-logic-001"
+      ],
+      "misconceptions": [
+        "混淆相容与不相容选言",
+        "记错假言真值"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "它和哪个易混点接近？"
+        },
+        {
+          "level": "L2",
+          "text": "列出异同避免误用。"
+        },
+        {
+          "level": "L3",
+          "text": "用例子固定理解。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-logic-003",
+      "title": "命题推理（逆否/二难）",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "假言推理有效式：肯定前件、否定后件；逆否命题与原命题等价；二难推理由两难推结论。",
+      "prerequisites": [
+        "management-logic-002"
+      ],
+      "misconceptions": [
+        "否定前件谬误",
+        "混淆逆否"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "公式/规则的前提是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "缺前提不能套用。"
+        },
+        {
+          "level": "L3",
+          "text": "先检查适用条件。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-logic-004",
+      "title": "模态与关系命题",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "模态命题含'必然/可能'；关系命题关注对称性、传递性（如'大于'反对称且传递）。",
+      "prerequisites": [
+        "management-logic-001"
+      ],
+      "misconceptions": [
+        "混淆模态词",
+        "错判关系性质"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这一步最容易错在哪？"
+        },
+        {
+          "level": "L2",
+          "text": "把易错点写下来。"
+        },
+        {
+          "level": "L3",
+          "text": "用反例验证边界。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-logic-005",
+      "title": "论证结构",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "论证由论题（结论）、论据（前提）与论证方式构成；分析先找结论与支撑它的前提。",
+      "prerequisites": [
+        "management-logic-001"
+      ],
+      "misconceptions": [
+        "把例子当结论",
+        "忽视隐含前提"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "题干给了哪些量？"
+        },
+        {
+          "level": "L2",
+          "text": "先列已知再找关系。"
+        },
+        {
+          "level": "L3",
+          "text": "建立方程或模型。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-logic-006",
+      "title": "削弱",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "削弱可攻击论据、切断论证联系或另有他因；直接削弱结论最强，削弱论证过程次之。",
+      "prerequisites": [
+        "management-logic-005"
+      ],
+      "misconceptions": [
+        "把加强当削弱",
+        "削弱力度不分"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这是哪类题型？"
+        },
+        {
+          "level": "L2",
+          "text": "先归类再调用方法。"
+        },
+        {
+          "level": "L3",
+          "text": "用题型模板组织思路。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-logic-007",
+      "title": "加强",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "加强可补充论据、建立联系、排除他因或类比；必要时找论证成立的前提。",
+      "prerequisites": [
+        "management-logic-005"
+      ],
+      "misconceptions": [
+        "混淆加强与假设",
+        "补无关论据"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "结论由什么条件推出？"
+        },
+        {
+          "level": "L2",
+          "text": "区分充分与必要。"
+        },
+        {
+          "level": "L3",
+          "text": "条件充分性判断靠此。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-logic-008",
+      "title": "假设（必要前提）",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "假设是论证成立必不可少的隐含前提；用'取非法'检验：否定后论证崩塌即为必要假设。",
+      "prerequisites": [
+        "management-logic-005"
+      ],
+      "misconceptions": [
+        "把充分当必要",
+        "混淆假设与加强"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "论证的漏洞可能在哪？"
+        },
+        {
+          "level": "L2",
+          "text": "先找断裂再分析。"
+        },
+        {
+          "level": "L3",
+          "text": "用逻辑缺陷清单排查。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-logic-009",
+      "title": "解释与评价",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "解释题找能说明矛盾现象的原因；评价题判断某信息对结论的影响方向（支持/削弱）。",
+      "prerequisites": [
+        "management-logic-005"
+      ],
+      "misconceptions": [
+        "解释题变削弱题",
+        "评价方向不清"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个概念在管综里常怎么考？"
+        },
+        {
+          "level": "L2",
+          "text": "回到定义再判断。"
+        },
+        {
+          "level": "L3",
+          "text": "先定性后计算。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-logic-010",
+      "title": "归纳与类比推理",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "归纳由特殊到一般，结论或然；类比依相似性迁移，相似点越相关越强。",
+      "prerequisites": [
+        "management-logic-005"
+      ],
+      "misconceptions": [
+        "把或然当必然",
+        "类比点不相关"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "它和哪个易混点接近？"
+        },
+        {
+          "level": "L2",
+          "text": "列出异同避免误用。"
+        },
+        {
+          "level": "L3",
+          "text": "用例子固定理解。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-logic-011",
+      "title": "因果推理",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "求异法（有因有果、无因无果）、求同法；注意相关不等于因果，警惕倒置与第三变量。",
+      "prerequisites": [
+        "management-logic-005"
+      ],
+      "misconceptions": [
+        "相关当因果",
+        "因果倒置"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "公式/规则的前提是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "缺前提不能套用。"
+        },
+        {
+          "level": "L3",
+          "text": "先检查适用条件。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-logic-012",
+      "title": "综合推理：匹配与排序",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "综合推理用已知条件做匹配/排序/分组；常用列表与排除法，条件多时需按确定信息展开。",
+      "prerequisites": [
+        "management-logic-001"
+      ],
+      "misconceptions": [
+        "不列条件表",
+        "忽略确定信息"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这一步最容易错在哪？"
+        },
+        {
+          "level": "L2",
+          "text": "把易错点写下来。"
+        },
+        {
+          "level": "L3",
+          "text": "用反例验证边界。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-logic-013",
+      "title": "逻辑基本规律",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "同一律（概念一致）、矛盾律（不两可）、排中律（不两不可）；自相矛盾是常见谬误。",
+      "prerequisites": [
+        "management-logic-001"
+      ],
+      "misconceptions": [
+        "混淆矛盾与反对",
+        "违反同一律"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "题干给了哪些量？"
+        },
+        {
+          "level": "L2",
+          "text": "先列已知再找关系。"
+        },
+        {
+          "level": "L3",
+          "text": "建立方程或模型。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-logic-014",
+      "title": "常见逻辑谬误",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "典型谬误：偷换概念、以偏概全、因果倒置、类比不当、滑坡、诉诸情感；识别它们是论证分析基础。",
+      "prerequisites": [
+        "management-logic-005"
+      ],
+      "misconceptions": [
+        "认不出谬误",
+        "混淆谬误类型"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这是哪类题型？"
+        },
+        {
+          "level": "L2",
+          "text": "先归类再调用方法。"
+        },
+        {
+          "level": "L3",
+          "text": "用题型模板组织思路。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-logic-015",
+      "title": "论证有效性分析衔接",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "论证有效性分析即找出原文论证缺陷并分析；逻辑谬误清单直接服务于该题型。",
+      "prerequisites": [
+        "management-logic-014",
+        "management-logic-005"
+      ],
+      "misconceptions": [
+        "只驳不论",
+        "不指名谬误"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "结论由什么条件推出？"
+        },
+        {
+          "level": "L2",
+          "text": "区分充分与必要。"
+        },
+        {
+          "level": "L3",
+          "text": "条件充分性判断靠此。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-logic-016",
+      "title": "逻辑题型概览",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "管综逻辑30题均为单选，含形式逻辑、论证逻辑与综合推理；不考查专业知识，重思维规则。",
+      "prerequisites": [
+        "management-logic-001"
+      ],
+      "misconceptions": [
+        "以为考专业",
+        "忽视形式逻辑"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "论证的漏洞可能在哪？"
+        },
+        {
+          "level": "L2",
+          "text": "先找断裂再分析。"
+        },
+        {
+          "level": "L3",
+          "text": "用逻辑缺陷清单排查。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-logic-017",
+      "title": "解题节奏",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "逻辑建议控制在50分钟内；形式逻辑求稳、综合推理可后做，先拿稳分题。",
+      "prerequisites": [
+        "management-logic-016"
+      ],
+      "misconceptions": [
+        "纠缠难题",
+        "不计时"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个概念在管综里常怎么考？"
+        },
+        {
+          "level": "L2",
+          "text": "回到定义再判断。"
+        },
+        {
+          "level": "L3",
+          "text": "先定性后计算。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-logic-018",
+      "title": "隐含前提识别",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "论证常省略前提；识别隐含前提可补上'搭桥'使推理完整，是假设题的核心。",
+      "prerequisites": [
+        "management-logic-008"
+      ],
+      "misconceptions": [
+        "忽视隐含前提",
+        "搭桥方向错"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "它和哪个易混点接近？"
+        },
+        {
+          "level": "L2",
+          "text": "列出异同避免误用。"
+        },
+        {
+          "level": "L3",
+          "text": "用例子固定理解。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-logic-019",
+      "title": "争议焦点",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "两人争论的焦点是他们分歧的核心命题；找焦点要看双方各自主张的冲突点。",
+      "prerequisites": [
+        "management-logic-005"
+      ],
+      "misconceptions": [
+        "把背景当焦点",
+        "焦点描述过宽"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "公式/规则的前提是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "缺前提不能套用。"
+        },
+        {
+          "level": "L3",
+          "text": "先检查适用条件。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-logic-020",
+      "title": "逻辑与写作联动",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "逻辑训练（辨谬误、理结构）直接提升论证有效性分析能力；两科互补。",
+      "prerequisites": [
+        "management-logic-015"
+      ],
+      "misconceptions": [
+        "割裂逻辑与写作",
+        "忽视迁移"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这一步最容易错在哪？"
+        },
+        {
+          "level": "L2",
+          "text": "把易错点写下来。"
+        },
+        {
+          "level": "L3",
+          "text": "用反例验证边界。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    }
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "subject": "math",
+  "course": "linear_algebra",
+  "chapter": "linear-algebra-expanded",
+  "status": "draft",
+  "nodes": [
+    {
+      "id": "la-matrix-rank",
+      "title": "矩阵的秩",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "矩阵的秩是矩阵中线性无关的行（或列）的最大数目，记作 $\\rank(A)$。通过初等行变换将矩阵化为行阶梯形，非零行的数目就是秩。秩的重要性质：$\\rank(A) \\le \\min(m, n)$；$\\rank(AB) \\le \\min(\\rank(A), \\rank(B))$；$\\rank(A) = \\rank(Aᵀ)$。秩反映了矩阵包含的独立信息量。",
+      "prerequisites": [
+        "la-matrix-multiplication",
+        "la-gaussian-elimination"
+      ],
+      "misconceptions": [
+        "把矩阵的秩和矩阵的行列式混淆——行列式只对方阵有定义，秩对任意矩阵都有定义",
+        "认为行阶梯形不同时秩一定不同——行阶梯形不唯一但秩唯一",
+        "忘记秩为 0 当且仅当矩阵是零矩阵"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "一个 $3\\times4$矩阵的秩最大可能是多少？最小呢？"
+        },
+        {
+          "level": "L2",
+          "text": "矩阵的秩和齐次方程组 Ax = 0 的解有什么关系？"
+        },
+        {
+          "level": "L3",
+          "text": "$\\rank(A) = n$说明什么？$\\rank(A) < n$又说明什么？和行列式有什么联系？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original linear algebra seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "la-vector-space",
+      "title": "向量空间",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "向量空间是满足加法封闭和数乘封闭的集合。$R^n$是最基本的向量空间。子空间是向量空间的子集且自身也是向量空间（必须包含零向量）。常见的子空间：矩阵的列空间 $C(A) = {Ax | x \\in R^n}$、行空间、零空间 $N(A) = {x | Ax = 0}$。维数定理：$\\dim(N(A)) + \\rank(A) = n$。",
+      "prerequisites": [
+        "la-vector-definition",
+        "la-vector-linear-combination"
+      ],
+      "misconceptions": [
+        "忘记子空间必须包含零向量——这是最容易遗漏的条件",
+        "把列空间和行空间混淆——列空间是列向量张成的空间，行空间是行向量张成的空间",
+        "认为向量空间中的元素一定是箭头——函数、多项式等也可以构成向量空间"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "$R^3$中过原点的平面是 $R^3$的子空间吗？不过原点的平面呢？"
+        },
+        {
+          "level": "L2",
+          "text": "矩阵 A 的列空间是什么？它和方程 Ax = b 有解有什么关系？"
+        },
+        {
+          "level": "L3",
+          "text": "所有次数不超过 2 的多项式构成向量空间吗？它的维数是多少？基是什么？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original linear algebra seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "la-linear-independence",
+      "title": "线性无关与线性相关",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "向量组 $v_1, ..., v_k$线性无关意味着方程 $c_1v_1 + ... + c_kv_k = 0$只有零解 $c_1 = ... = c_k = 0$。否则线性相关，即存在不全为零的系数使线性组合为零。判断方法：将向量作为列构成矩阵，化为行阶梯形，非零行数 =线性无关向量个数。$n+1$个 $n$维向量一定线性相关。",
+      "prerequisites": [
+        "la-vector-linear-combination",
+        "la-gaussian-elimination"
+      ],
+      "misconceptions": [
+        "把线性相关和线性组合混淆——线性相关是存在性，线性组合是构造性",
+        "认为只有零向量才导致线性相关——非零向量也可以线性相关",
+        "忘记线性无关向量组的子集仍然线性无关"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "$(1, 0)$和 $(0, 1)$线性相关吗？$(1, 0)$和 $(2, 0)$呢？"
+        },
+        {
+          "level": "L2",
+          "text": "如何用高斯消元法判断一组向量是否线性无关？"
+        },
+        {
+          "level": "L3",
+          "text": "$R^3$中最多有几个线性无关的向量？超过这个数会怎样？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original linear algebra seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "la-basis-dimension",
+      "title": "基与维数",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "向量空间 $V$的一组基是 $V$中线性无关且能表示 $V$中所有向量的向量组。基中向量的个数称为维数 $\\dim(V)$。标准基：$R^n$的标准基是 $e_1 = (1,0,...,0), ..., e_n = (0,...,0,1)$。坐标表示：若 ${v_1, ..., v_n}$是 $V$的基，则 $V$中每个向量有唯一的坐标表示 $x = c_1v_1 + ... + c_nv_n$。",
+      "prerequisites": [
+        "la-vector-space",
+        "la-linear-independence"
+      ],
+      "misconceptions": [
+        "认为基是唯一的——同一向量空间可以有不同的基",
+        "忘记基必须同时满足线性无关和生成性两个条件",
+        "混淆维数和矩阵的行数/列数"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "$R^2$的标准基是什么？它有几个向量？"
+        },
+        {
+          "level": "L2",
+          "text": "$(1,1)$和 $(1,-1)$能成为 $R^2$的基吗？"
+        },
+        {
+          "level": "L3",
+          "text": "向量 $(3, 5)$在基 ${(1,0), (0,1)}$下的坐标是什么？在基 ${(1,1), (1,-1)}$下呢？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original linear algebra seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "la-eigenvalue-eigenvector",
+      "title": "特征值与特征向量",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "对于方阵 $A$，若存在非零向量 $x$和标量 $\\lambda$使得 Ax $= \\lambda x$，则 $\\lambda$是 $A$的特征值，$x$是对应的特征向量。特征值由特征方程 $\\det(A - \\lambda I) = 0$求得。性质：特征值之和 =迹 $\\tr(A)$，特征值之积 =行列式 $\\det(A)$。不同特征值对应的特征向量线性无关。",
+      "prerequisites": [
+        "la-determinant-2x2",
+        "la-matrix-multiplication",
+        "la-linear-independence"
+      ],
+      "misconceptions": [
+        "把特征值和特征向量混淆——特征值是标量，特征向量是向量",
+        "认为所有矩阵都有特征值——实矩阵可能只有复特征值",
+        "忘记特征向量必须是非零向量"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "矩阵 A 把某些向量只做伸缩而不改变方向，这些向量有什么特殊性？"
+        },
+        {
+          "level": "L2",
+          "text": "求特征值需要解 $\\det(A - \\lambda I) = 0$，这是一个关于 $\\lambda$的什么方程？"
+        },
+        {
+          "level": "L3",
+          "text": "$2\\times2$矩阵的特征方程是二次方程，最多有几个特征值？$3\\times3$呢？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original linear algebra seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "la-diagonalization",
+      "title": "矩阵对角化",
+      "level": "method",
+      "difficulty": 3,
+      "summary": "若方阵 $A$有 $n$个线性无关的特征向量，则 $A$可对角化：$A = PDP^{-1}$，其中 $D$是特征值对角矩阵，$P$是特征向量构成的矩阵。对角化的好处：$A^n = PD^nP^{-1}$，其中 $D^n$只需对角元素取 $n$次幂。对角化条件：$A$有 $n$个线性无关的特征向量；等价地，每个特征值的几何重数等于代数重数。",
+      "prerequisites": [
+        "la-eigenvalue-eigenvector",
+        "la-matrix-multiplication"
+      ],
+      "misconceptions": [
+        "认为所有矩阵都可对角化——不是所有矩阵都有足够的线性无关特征向量",
+        "把 $P$和 $P^{-1}$的位置搞反$——A = PDP^{-1}$不是 $A = P^{-1}DP$",
+        "忘记对角化后计算 $A^n$比直接计算容易得多"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "对角矩阵的 n 次幂怎么算？这比一般矩阵的 n 次幂简单在哪里？"
+        },
+        {
+          "level": "L2",
+          "text": "如果 A 有 n 个不同的特征值，A 一定可对角化吗？"
+        },
+        {
+          "level": "L3",
+          "text": "$A = PDP^{-1}$中，$P$的列是什么？$D$的对角元素是什么？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original linear algebra seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "la-orthogonality",
+      "title": "正交性与正交投影",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "两个向量正交（垂直）意味着内积为零：$\\langle u, v\\rangle = 0$。正交向量组一定是线性无关的。标准正交基：基中每两个向量正交且每个向量长度为 1。$Gram-Schmidt$正交化：从任意基构造正交基的过程。正交投影：向量 $v$在子空间 $W$上的投影 $proj_W(v) = \\Sigma (\\langle v, u_i\\rangle/\\langle u_i, u_i\\rangle) u_i$（${u_i}$是 $W$的正交基）。",
+      "prerequisites": [
+        "la-vector-definition",
+        "la-linear-independence",
+        "la-basis-dimension"
+      ],
+      "misconceptions": [
+        "把正交和垂直只理解为几何概念——正交是内积为零的代数概念",
+        "忘记正交投影的误差向量 $v - proj_W(v)$正交于子空间 $W$",
+        "混淆 Gram-Schmidt 过程和高斯消元——前者构造正交基，后者化行阶梯形"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "向量 $(1, 0)$和 $(0, 1)$正交吗？$(1, 1)$和 $(1, -1)$呢？"
+        },
+        {
+          "level": "L2",
+          "text": "如何把向量 $(3, 4)$投影到 $x$轴上？投影结果是什么？"
+        },
+        {
+          "level": "L3",
+          "text": "Gram-Schmidt 过程的核心思想是什么？每一步减去的是什么？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original linear algebra seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    }
+  ]
+}

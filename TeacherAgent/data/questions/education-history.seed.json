@@ -1,0 +1,823 @@
+{
+  "subject": "education",
+  "course": "history",
+  "chapter": "education-history",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "education-history-q001",
+      "title": "孔子主张",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "孔子主张'有教无类'，其含义最接近：",
+      "answer": "B",
+      "solutionSteps": [
+        "有教无类打破等级。",
+        "选B。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "它针对春秋等级。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "不是现代免费。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-history-001"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 只教贵族",
+        "B. 不论出身都可受教",
+        "C. 免费教育",
+        "D. 只教成人"
+      ]
+    },
+    {
+      "id": "education-history-q002",
+      "title": "孟荀人性论",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "孟子与荀子人性论的根本分歧是：",
+      "answer": "C",
+      "solutionSteps": [
+        "孟善荀恶。",
+        "选C。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "由此导出不同教育作用。"
+        },
+        {
+          "level": "L2",
+          "text": "选C。"
+        },
+        {
+          "level": "L3",
+          "text": "记住对立。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-history-002"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 都性善",
+        "B. 都性恶",
+        "C. 性善vs性恶",
+        "D. 都无善无恶"
+      ]
+    },
+    {
+      "id": "education-history-q003",
+      "title": "荀子认知过程",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "荀子提出的认知顺序是：",
+      "answer": "B",
+      "solutionSteps": [
+        "闻见知行为是荀子的。",
+        "选B。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "与《中庸》学思不同。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "记关键词。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-history-003"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 学—思—行",
+        "B. 闻—见—知—行",
+        "C. 知—行—信",
+        "D. 疑—问—思"
+      ]
+    },
+    {
+      "id": "education-history-q004",
+      "title": "《学记》原则",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "'禁于未发之谓豫'体现的教学原则是：",
+      "answer": "B",
+      "solutionSteps": [
+        "豫=预防。",
+        "选B。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "豫时孙摩四字各有所指。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "时=及时，孙=循序。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-history-005"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 启发诱导",
+        "B. 预防性原则",
+        "C. 长善救失",
+        "D. 藏息相辅"
+      ]
+    },
+    {
+      "id": "education-history-q005",
+      "title": "师说",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "韩愈《师说》中教师的任务是：",
+      "answer": "B",
+      "solutionSteps": [
+        "传道受业解惑。",
+        "选B。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "道之所存师之所存。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "记原句。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-history-007"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 管理学生",
+        "B. 传道受业解惑",
+        "C. 只授经文",
+        "D. 考核"
+      ]
+    },
+    {
+      "id": "education-history-q006",
+      "title": "朱子读书法",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "朱熹读书法强调：",
+      "answer": "B",
+      "solutionSteps": [
+        "循序渐进、熟读精思。",
+        "选B。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "朱子读书法有六条。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "与王阳明不同。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-history-008"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 死记硬背",
+        "B. 循序渐进、熟读精思",
+        "C. 只求顿悟",
+        "D. 废弃书本"
+      ]
+    },
+    {
+      "id": "education-history-q007",
+      "title": "王阳明",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "王阳明提出：",
+      "answer": "B",
+      "solutionSteps": [
+        "阳明：知行合一致良知。",
+        "选B。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "与朱熹对立。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "心即理。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-history-009"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 存天理灭人欲",
+        "B. 知行合一、致良知",
+        "C. 中体西用",
+        "D. 有教无类"
+      ]
+    },
+    {
+      "id": "education-history-q008",
+      "title": "书院",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "下列关于书院，错误的是：",
+      "answer": "C",
+      "solutionSteps": [
+        "书院是民间不是官学。",
+        "选C。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "白鹿洞学规是范本。"
+        },
+        {
+          "level": "L2",
+          "text": "选C。"
+        },
+        {
+          "level": "L3",
+          "text": "排除官学项。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-history-010"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 自由讲学",
+        "B. 重论辩",
+        "C. 属官学系统",
+        "D. 藏书刻书"
+      ]
+    },
+    {
+      "id": "education-history-q009",
+      "title": "科举",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "科举制废除于：",
+      "answer": "B",
+      "solutionSteps": [
+        "1905废科举。",
+        "选B。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "隋唐立，清末废。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "记年份。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-history-011"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 1900",
+        "B. 1905",
+        "C. 1911",
+        "D. 1895"
+      ]
+    },
+    {
+      "id": "education-history-q010",
+      "title": "张之洞",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "'中体西用'系统阐发于：",
+      "answer": "A",
+      "solutionSteps": [
+        "张之洞《劝学篇》。",
+        "选A。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "中体西用保本位。"
+        },
+        {
+          "level": "L2",
+          "text": "选A。"
+        },
+        {
+          "level": "L3",
+          "text": "作者书名对应。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-history-012"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 《劝学篇》",
+        "B. 《师说》",
+        "C. 《学记》",
+        "D. 《新教育大纲》"
+      ]
+    },
+    {
+      "id": "education-history-q011",
+      "title": "近代学制",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "中国第一个正式施行的近代学制是：",
+      "answer": "B",
+      "solutionSteps": [
+        "癸卯首个施行（1904）。",
+        "选B。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "壬寅未施行。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "壬戌是六三三。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-history-013"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 壬寅学制",
+        "B. 癸卯学制",
+        "C. 壬戌学制",
+        "D. 戊戌学制"
+      ]
+    },
+    {
+      "id": "education-history-q012",
+      "title": "蔡元培五育",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "蔡元培'五育并举'不包括：",
+      "answer": "D",
+      "solutionSteps": [
+        "五育无宗教教育。",
+        "选D。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "五育：军国民/实利/公民道德/世界观/美育。"
+        },
+        {
+          "level": "L2",
+          "text": "选D。"
+        },
+        {
+          "level": "L3",
+          "text": "记全五育。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-history-014"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 军国民教育",
+        "B. 实利教育",
+        "C. 公民道德",
+        "D. 宗教教育"
+      ]
+    },
+    {
+      "id": "education-history-q013",
+      "title": "陶行知",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "陶行知'生活教育'不包括：",
+      "answer": "D",
+      "solutionSteps": [
+        "生活教育三口号无读书做官。",
+        "选D。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "小先生制是其创。"
+        },
+        {
+          "level": "L2",
+          "text": "选D。"
+        },
+        {
+          "level": "L3",
+          "text": "排除封建项。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-history-015"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 生活即教育",
+        "B. 社会即学校",
+        "C. 教学做合一",
+        "D. 读书做官"
+      ]
+    },
+    {
+      "id": "education-history-q014",
+      "title": "晏阳初",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "晏阳初平民教育针对的'四大病害'是：",
+      "answer": "B",
+      "solutionSteps": [
+        "愚贫弱私。",
+        "选B。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "对应四大教育。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "记关键词。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-history-016"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 衣食住行医",
+        "B. 愚贫弱私",
+        "C. 仁义礼智",
+        "D. 日月星辰"
+      ]
+    },
+    {
+      "id": "education-history-q015",
+      "title": "杨贤江",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "《新教育大纲》的作者是：",
+      "answer": "B",
+      "solutionSteps": [
+        "杨贤江著。",
+        "选B。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "它是马克思主义教育里程碑。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "作者书名对应。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-history-018"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 蔡元培",
+        "B. 杨贤江",
+        "C. 陶行知",
+        "D. 张之洞"
+      ]
+    },
+    {
+      "id": "education-history-q016",
+      "title": "孔孟荀比较",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "比较孔子、孟子、荀子教育思想的人性论前提及其教育作用。",
+      "answer": "1) 孔子未明言人性，重'有教无类'与因材。",
+      "solutionSteps": [
+        "1) 孔子未明言人性，重'有教无类'与因材。",
+        "2)孟子性善$\\to$教育为'扩充'善端；荀子性恶$\\to$教育为'化性起伪'。",
+        "3) 人性论前提直接决定教育作用是'扬'还是'改'。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先分人性论。"
+        },
+        {
+          "level": "L2",
+          "text": "再推导作用。"
+        },
+        {
+          "level": "L3",
+          "text": "先定位人物的时代与核心主张，再判断评价。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-history-002"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "education-history-q017",
+      "title": "《学记》原则应用",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "列举《学记》主要教学原则并各举一例。",
+      "answer": "1) 教学相长、豫时孙摩、长善救失、启发诱导、藏息相辅、学不躐等。",
+      "solutionSteps": [
+        "1) 教学相长、豫时孙摩、长善救失、启发诱导、藏息相辅、学不躐等。",
+        "2) 例：'不陵节而施'=循序渐进；'道而弗牵'=启发。",
+        "3) 它们构成中国古代教学原则体系。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先列六/七条。"
+        },
+        {
+          "level": "L2",
+          "text": "再举对应例子。"
+        },
+        {
+          "level": "L3",
+          "text": "区分'人性论前提'与'教育作用'的推导关系。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-history-005"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "education-history-q018",
+      "title": "蔡元培改革",
+      "type": "diagnostic",
+      "difficulty": 3,
+      "content": "蔡元培'兼容并包'在北大改革中的意义是什么？",
+      "answer": "1) 打破一派独尊，容纳不同学术与思潮。",
+      "solutionSteps": [
+        "1) 打破一派独尊，容纳不同学术与思潮。",
+        "2) 以学问为标准聘师，提升学术活力。",
+        "3) 体现教育独立与学术自由精神。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先解释含义。"
+        },
+        {
+          "level": "L2",
+          "text": "再谈影响。"
+        },
+        {
+          "level": "L3",
+          "text": "注意原文术语（如'有教无类''性善''性恶'）的准确含义。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-history-014"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "education-history-q019",
+      "title": "中体西用评价",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "如何评价'中体西用'？",
+      "answer": "1) 积极：为引进西学提供合法空间，推动新式教育。",
+      "solutionSteps": [
+        "1) 积极：为引进西学提供合法空间，推动新式教育。",
+        "2) 局限：以维护纲常为前提，阻碍制度性变革。",
+        "3) 是近代化过渡性主张。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先谈积极。"
+        },
+        {
+          "level": "L2",
+          "text": "再谈局限。"
+        },
+        {
+          "level": "L3",
+          "text": "把人物放到'古今中西'脉络里比较，避免孤立记忆。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-history-012"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "education-history-q020",
+      "title": "陶行知vs传统",
+      "type": "diagnostic",
+      "difficulty": 3,
+      "content": "陶行知'教学做合一'针对传统教育的什么问题？",
+      "answer": "1) 针对死记硬背、脱离生活。",
+      "solutionSteps": [
+        "1) 针对死记硬背、脱离生活。",
+        "2) 强调在做中学，知与行统一。",
+        "3) 呼应大众化、生活化教育方向。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先指问题。"
+        },
+        {
+          "level": "L2",
+          "text": "再讲主张。"
+        },
+        {
+          "level": "L3",
+          "text": "凡涉及制度/运动，先问'为了解决什么问题'。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-history-015"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft"
+    }
+  ]
+}

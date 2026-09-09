@@ -1,0 +1,1675 @@
+{
+  "subject": "cs408",
+  "course": "operating_systems",
+  "chapter": "cs408-operating-systems",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "cs408-os-q-basic-001",
+      "title": "操作系统基本特征",
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "操作系统的四个基本特征是：",
+      "options": [
+        "A. 并发、共享、虚拟、异步",
+        "B. 并发、共享、实时、异步",
+        "C. 并行、共享、虚拟、同步",
+        "D. 并发、独占、虚拟、异步"
+      ],
+      "answer": "A",
+      "solutionSteps": [
+        "操作系统的四大基本特征是并发、共享、虚拟和异步",
+        "并发是核心特征，共享以并发为前提",
+        "虚拟是技术手段（如虚拟内存、虚拟处理器）",
+        "异步指进程以不可预知的速度向前推进"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-os-basic-concepts"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "OS 的基本特征是固定考点"
+        },
+        {
+          "level": "L2",
+          "text": "并发 $\\neq$并行，注意区分"
+        },
+        {
+          "level": "L3",
+          "text": "四个特征中并发是最基本的，其他特征都基于并发"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-os-q-struct-001",
+      "title": "微内核操作系统",
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "下列关于微内核操作系统的叙述中，正确的是：",
+      "options": [
+        "A. 所有 OS 功能都在内核态运行",
+        "B. 内核只保留最基本的功能，其他功能作为用户态服务",
+        "C. 微内核的性能一定优于单体结构",
+        "D. 微内核不使用消息传递机制"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "A 错误：微内核将大部分功能移到用户态",
+        "B 正确：微内核仅保留进程通信、基本调度等核心功能",
+        "C 错误：微内核因消息传递开销，性能通常不如单体结构",
+        "D 错误：微内核恰恰依赖消息传递实现模块间通信"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-os-structure"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "微内核的设计哲学是最小化内核"
+        },
+        {
+          "level": "L2",
+          "text": "微内核的模块间通信通过消息传递"
+        },
+        {
+          "level": "L3",
+          "text": "微内核的优点是可靠性高（一个服务崩溃不影响内核）"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-os-q-process-001",
+      "title": "进程与线程辨析",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "下列关于进程和线程的叙述中，正确的是：",
+      "options": [
+        "A. 线程是资源分配的基本单位",
+        "B. 同一进程的线程之间不能共享数据",
+        "C. 线程切换比进程切换的开销小",
+        "D. 每个线程都有独立的地址空间"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "A 错误：进程是资源分配的基本单位",
+        "B 错误：同一进程的线程共享进程的地址空间和数据",
+        "C 正确：线程共享地址空间，切换时不需要刷新 TLB 和 Cache",
+        "D 错误：线程共享所属进程的地址空间"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-os-process-thread"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "进程 vs 线程的核心区别在于资源拥有"
+        },
+        {
+          "level": "L2",
+          "text": "线程共享进程的地址空间所以切换快"
+        },
+        {
+          "level": "L3",
+          "text": "线程有自己的栈和寄存器但共享代码段和数据段"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-os-q-state-001",
+      "title": "进程状态转换",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "进程从运行状态转为阻塞状态的原因是：",
+      "options": [
+        "A. 时间片用完",
+        "B. 被更高优先级进程抢占",
+        "C. 请求 I/O 操作或等待某一事件",
+        "D. 进程执行完毕"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "$A$和 $B$导致运行 $\\to$就绪（被动失去 CPU）",
+        "$C$正确：请求 $I/O$或等待事件是进程主动行为，导致运行 $\\to$阻塞",
+        "$D$导致运行 $\\to$终止",
+        "运行 $\\to$阻塞是进程主动请求的结果"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-os-process-state"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "区分主动转换和被动转换"
+        },
+        {
+          "level": "L2",
+          "text": "运行$\\to$阻塞是进程自己决定的（如等待$I/O$）"
+        },
+        {
+          "level": "L3",
+          "text": "运行$\\to$就绪是被系统决定的（时间片到或被抢占）"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-os-q-sched-001",
+      "title": "SJF调度计算",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "4个进程到达时间和运行时间如下：$P1(0,8), P2(1,4), P3(2,9), P4(3,5)$。用非抢占 SJF 调度，求各进程的等待时间和平均等待时间。",
+      "options": [],
+      "answer": "P1:0, P2:7, P3:15, P4:9；平均等待时间 7.75",
+      "solutionSteps": [
+        "t=0：只有 P1，运行 P1（8个单位），P1 完成于 t=8",
+        "$t=8$：$P2(4), P3(9), P4(5)$都已到达，选最短 $P2(4)$，$P2$完成于 $t=12$",
+        "$t=12$：$P3(9), P4(5)$，选 $P4(5)$，$P4$完成于 $t=17$",
+        "$t=17$：只剩 $P3(9)$，$P3$完成于 $t=26$",
+        "等待时间 =开始时间 -到达时间：$P1=0-0=0, P2=8-1=7, P3=17-2=15, P4=12-3=9$",
+        "平均等待时间 $= \\frac{(0+7+15+9)}{4} = 3\\frac{1}{4} = 7.75$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-os-scheduling"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "非抢占 SJF 在进程运行期间不会被中断"
+        },
+        {
+          "level": "L2",
+          "text": "每次选已到达且运行时间最短的进程"
+        },
+        {
+          "level": "L3",
+          "text": "等待时间 = 开始运行时间 - 到达时间"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-os-q-sync-001",
+      "title": "PV操作生产者消费者",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "用 PV 操作实现生产者-消费者问题（单缓冲区）。写出信号量定义和两个进程的伪代码。",
+      "options": [],
+      "answer": "$mutex=1$（互斥）$, empty=1$（空位）$, full=0$（产品）；生产者 $P(empty);P(mutex);$放产品$;V(mutex);V(full)$；消费者 $P(full);P(mutex);$取产品$;V(mutex);V(empty)$",
+      "solutionSteps": [
+        "定义信号量：mutex=1（互斥访问缓冲区），empty=n（空缓冲区数，此处 n=1），full=0（满缓冲区数）",
+        "生产者进程：$P(empty)$等待空位 $\\to P(mutex)$进入临界区 $\\to$放入产品 $\\to V(mutex)$退出 $\\to V(full)$通知有产品",
+        "消费者进程：$P(full)$等待产品 $\\to P(mutex)$进入临界区 $\\to$取出产品 $\\to V(mutex)$退出 $\\to V(empty)$通知有空位",
+        "注意：P 操作的顺序很重要，先 P 同步信号量再 P 互斥信号量，否则可能死锁"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-os-semaphore",
+        "cs408-os-sync-mutex"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "生产者-消费者需要两类信号量：互斥和同步"
+        },
+        {
+          "level": "L2",
+          "text": "empty 和 full 是同步信号量，mutex 是互斥信号量"
+        },
+        {
+          "level": "L3",
+          "text": "先 $P(empt\\frac{y}{f}ull)$再 $P(mutex)$，顺序反了可能死锁"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-os-q-critical-001",
+      "title": "临界区概念",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "以下关于临界区的说法中，正确的是：",
+      "options": [
+        "A. 临界区是访问共享资源的代码段，一次只允许一个进程进入",
+        "B. 临界区中的代码执行时不能被任何中断打断",
+        "C. 所有进程的临界区必须是相同的代码",
+        "D. 进入临界区前不需要任何检查"
+      ],
+      "answer": "A",
+      "solutionSteps": [
+        "A 正确：临界区的定义就是访问共享资源的代码段，需要互斥进入",
+        "B 错误：可以通过软件或硬件方式实现互斥，不一定要关中断",
+        "C 错误：不同进程访问不同共享资源时有不同的临界区",
+        "D 错误：进入临界区需要通过进入区代码检查是否可进入"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-os-critical-section"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "临界区的核心概念是互斥访问"
+        },
+        {
+          "level": "L2",
+          "text": "临界区的代码结构：进入区$\\to$临界区$\\to$退出区$\\to$剩余区"
+        },
+        {
+          "level": "L3",
+          "text": "互斥的实现方式有多种：软件、硬件、信号量等"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-os-q-sem-001",
+      "title": "信号量初值计算",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "某系统有 3 个进程共享 5 台同类设备，每个进程最多需要 3 台设备。用信号量 S 管理这些设备，S 的初值应为多少？若三个进程各申请了 2 台设备，此时 S 的值是多少？",
+      "options": [],
+      "answer": "初值 5；各申请2台后 $S = 5 - 6 = -1$",
+      "solutionSteps": [
+        "信号量初值 = 资源总数 = 5",
+        "3 个进程各申请 2 台 = 共申请 6 台",
+        "$S = 5 - 6 = -1$，表示有 1个进程因无可用设备而被阻塞",
+        "注：S = -1 说明有一个进程在等待，但系统还没有死锁（因为每个进程只需再要1台而总共还剩...已经分了6台超过5台，说明某次 P 操作导致阻塞）"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-os-semaphore"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "信号量初值等于可用资源数"
+        },
+        {
+          "level": "L2",
+          "text": "每次 P 操作信号量减 1，V 操作加 1"
+        },
+        {
+          "level": "L3",
+          "text": "S < 0 时 |S| 表示等待的进程数"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-os-q-deadlock-001",
+      "title": "死锁概念辨析",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "下列关于死锁的叙述中，正确的有：（多选）",
+      "options": [
+        "A. 死锁的四个必要条件可以同时被破坏来预防死锁",
+        "B. 资源分配图中有环时系统一定处于死锁状态",
+        "C. 银行家算法属于死锁避免策略",
+        "D. 死锁检测和解除的开销可能比死锁预防更大"
+      ],
+      "answer": "ACD",
+      "solutionSteps": [
+        "A 正确：预防死锁只需破坏四个必要条件中的至少一个",
+        "B 错误：多实例资源时有环不一定死锁（环可能被打断）",
+        "C 正确：银行家算法在每次分配前检查安全性，属于避免策略",
+        "D 正确：检测需要定期运行检测算法，解除需要回退或终止进程"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-os-deadlock",
+        "cs408-os-deadlock-handling"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "死锁四必要条件缺一不可"
+        },
+        {
+          "level": "L2",
+          "text": "单实例资源有环一定死锁，多实例资源有环不一定"
+        },
+        {
+          "level": "L3",
+          "text": "银行家算法的核心是检查安全序列"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-os-q-banker-001",
+      "title": "银行家算法",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "系统有 $A$、$B$、$C$三类资源共 10、5、7个。当前状态：$P1$已分配 $(0,1,0)$最大需求 $(7,5,3)\nP2$已分配 $(2,0,0)$最大需求 $(3,2,2)\nP3$已分配 $(3,0,2)$最大需求 $(9,0,2)$Available $= (5,4,5)$。判断系统是否安全，若是则给出一个安全序列。",
+      "options": [],
+      "answer": "系统安全，安全序列：$P2 \\to P3 \\to P1$",
+      "solutionSteps": [
+        "$Need = Max -$Allocation：$P1(7,4,3), P2(1,2,2), P3(6,0,0)$",
+        "$Available=(5,4,5)$。检查 $P2$：Need$(1,2,2) <= (5,4,5)$，可运行",
+        "$P2$完成后释放 $(2,0,0)$，Available $= (5,4,5)+(2,0,0) = (7,4,5)$",
+        "检查 $P3$：Need$(6,0,0) <= (7,4,5)$，可运行",
+        "$P3$完成后释放 $(3,0,2)$，Available $= (7,4,5)+(3,0,2) = (10,4,7)$",
+        "检查 $P1$：Need$(7,4,3) <= (10,4,7)$，可运行",
+        "$P1$完成。安全序列：$P2 \\to P3 \\to P1$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-os-deadlock-handling"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "银行家算法步骤：找 Need <= Available 的进程"
+        },
+        {
+          "level": "L2",
+          "text": "满足的进程运行后释放资源，更新 Available"
+        },
+        {
+          "level": "L3",
+          "text": "若所有进程都能找到满足序列则系统安全"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-os-q-mem-001",
+      "title": "最佳适应算法",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "在动态分区分配中，采用最佳适应（Best Fit）算法时，分配后通常会产生：",
+      "options": [
+        "A. 大量外部碎片",
+        "B. 大量内部碎片",
+        "C. 很小的无法利用的碎片",
+        "D. 没有碎片"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "最佳适应总是选择最小但足够大的空闲区",
+        "切割后剩余的部分往往很小，难以被后续请求利用",
+        "这些小碎片是外部碎片（空闲但不连续）",
+        "与固定分区的内部碎片（分配给进程但用不到）不同"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-os-contiguous-alloc"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "最佳适应找最小的够大空闲区"
+        },
+        {
+          "level": "L2",
+          "text": "切割后剩下的碎片通常太小"
+        },
+        {
+          "level": "L3",
+          "text": "这些碎片是外部碎片，不是内部碎片"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-os-q-page-001",
+      "title": "分页地址计算",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "某系统页面大小 4KB，进程逻辑地址空间 32位。求：$(1)$页内偏移占几位？$(2)$该进程最多有多少页？$(3)$逻辑地址 $0x00003A7F$对应的页号和页内偏移是多少？",
+      "options": [],
+      "answer": "偏移12位；最多 $2^20 = 1048576$页；页号 3，偏移 0xA$7F$",
+      "solutionSteps": [
+        "$(1)$页面 4KB $= 2^12$，页内偏移 $= 12$位",
+        "$(2)$逻辑地址 32位，页号位数 $= 32-12 = 20$位，最多 $2^20 = 1048576$页",
+        "$(3) 0x00003A7F$：低 12位 $= 0$xA$7F$（页内偏移），高位 $= 0x00003 = 3$（页号）",
+        "验证：$3 \\times 4096 + 0$xA$7F = 12288 + 2687 = 14975 = 0x3A7F$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-os-paging"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "页内偏移位数 = log2(页面大小)"
+        },
+        {
+          "level": "L2",
+          "text": "页号 = 逻辑地址右移偏移位数"
+        },
+        {
+          "level": "L3",
+          "text": "页内偏移 =逻辑地址 AND (页面大小 $- 1$)"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-os-q-seg-001",
+      "title": "分段与分页对比",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "下列关于分段和分页的对比中，正确的是：",
+      "options": [
+        "A. 分段有内部碎片，分页没有",
+        "B. 分页对用户透明，分段对用户可见",
+        "C. 分段的大小固定，分页的大小不固定",
+        "D. 分页和分段都完全没有碎片"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "A 错误：分页有内部碎片（最后一页不满），分段有外部碎片",
+        "B 正确：分页是系统自动划分对用户透明，分段按程序逻辑划分对程序员可见",
+        "C 错误：正好相反，分页大小固定，分段大小不固定",
+        "D 错误：两者都有碎片问题，只是类型不同"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-os-segmentation"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "分页和分段的核心区别在于划分依据"
+        },
+        {
+          "level": "L2",
+          "text": "分页按固定大小划分（硬件），分段按逻辑划分（用户）"
+        },
+        {
+          "level": "L3",
+          "text": "分页有内部碎片，分段有外部碎片"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-os-q-vm-001",
+      "title": "LRU页面置换",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "某系统采用 LRU 页面置换算法，分配给某进程 3 个页面框。页面访问序列为：7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2。计算缺页次数和缺页率。",
+      "options": [],
+      "answer": "缺页 8次，缺页率 $\\frac{8}{1}3 \\approx 61.5%$",
+      "solutionSteps": [
+        "访问 7：缺页，框=[7]。访问 0：缺页，框=[7,0]。访问 1：缺页，框=[7,0,1]（3次缺页）",
+        "访问 2：缺页，LRU 淘汰最久未用的 7，框=[2,0,1]（4次缺页）",
+        "访问 0：命中，框=[2,0,1]（更新0为最近使用）",
+        "访问 3：缺页，LRU 淘汰最久未用的 1，框=[2,0,3]（5次缺页）",
+        "访问 0：命中，框=[2,0,3]",
+        "访问 4：缺页，LRU 淘汰最久未用的 2，框=[4,0,3]（6次缺页）",
+        "访问 2：缺页，LRU 淘汰最久未用的 3，框=[4,0,2]（7次缺页）",
+        "访问 3：缺页，LRU 淘汰最久未用的 4，框=[3,0,2]（8次缺页）",
+        "访问 0：命中。访问 3：命中。访问 2：命中",
+        "缺页次数 $= 8$次，缺页率 $= \\frac{8}{1}3 \\approx 61.5%$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-os-virtual-memory"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "LRU 淘汰最久未被访问的页面"
+        },
+        {
+          "level": "L2",
+          "text": "维护一个访问时间记录或栈来判断哪个最久未用"
+        },
+        {
+          "level": "L3",
+          "text": "缺页率 =缺页次数 /总访问次数"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-os-q-file-001",
+      "title": "硬链接与软链接",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "在树形目录结构中，下列关于硬链接和软链接的叙述中，正确的是：",
+      "options": [
+        "A. 删除原文件后，硬链接和软链接都失效",
+        "B. 硬链接可以跨文件系统",
+        "C. 删除原文件后，硬链接仍然有效而软链接失效",
+        "D. 软链接和硬链接的实现完全相同"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "硬链接直接指向 inode，删除原文件（只是一个目录项）后 inode 引用计数不为 0，硬链接仍有效",
+        "软链接（符号链接）保存的是目标文件的路径名，删除原文件后路径指向不存在的文件，链接失效",
+        "硬链接通常不能跨文件系统（因为 inode 号只在同一文件系统内唯一）",
+        "C 正确"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-os-file-system"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "硬链接和软链接的实现机制不同"
+        },
+        {
+          "level": "L2",
+          "text": "硬链接指向 inode，软链接指向路径名"
+        },
+        {
+          "level": "L3",
+          "text": "删除文件只是删除一个目录项，inode 引用计数减到 0 才真正删除"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-os-q-alloc-001",
+      "title": "文件物理分配",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "下列关于文件物理分配方式的说法中，错误的是：",
+      "options": [
+        "A. 连续分配支持随机访问但有外部碎片",
+        "B. 隐式链接分配不支持随机访问",
+        "C. 索引分配适合大文件但需要额外的索引块空间",
+        "D. FAT 表（显式链接）完全不支持顺序访问"
+      ],
+      "answer": "D",
+      "solutionSteps": [
+        "A 正确：连续分配的文件在磁盘上连续存放，支持随机访问但有外部碎片",
+        "B 正确：隐式链接需要沿指针链逐个访问，不支持直接跳到第 k 块",
+        "C 正确：索引分配用索引块存储所有块地址，大文件可能需要多级索引",
+        "D 错误：FAT 表支持顺序访问（沿 FAT 链顺序读取），也可以实现半随机访问（沿 FAT 链跳转到指定块）"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-os-file-alloc"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "三种分配方式的随机访问能力和碎片特性不同"
+        },
+        {
+          "level": "L2",
+          "text": "FAT 表是全局的链接表，可以沿链顺序遍历"
+        },
+        {
+          "level": "L3",
+          "text": "索引分配的索引块本身也占磁盘空间"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-os-q-disk-001",
+      "title": "磁盘调度计算",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "磁盘请求队列为 98, 183, 37, 122, 14, 124, 65, 67，磁头初始位置在 53，移动方向向外（磁道号增大方向）。分别用 SSTF 和 SCAN 算法计算总寻道距离。",
+      "options": [],
+      "answer": "SSTF 总距离 236；SCAN 总距离 299",
+      "solutionSteps": [
+        "SSTF：每次选最近的。$53\\to65(12)\\to67(2)\\to37(30)\\to14(23)\\to98(84)\\to122(24)\\to124(2)\\to183(59)$",
+        "SSTF总距离 $= 12+2+30+23+84+24+2+59 = 236$",
+        "SCAN（向外扫描）：$53\\to65\\to67\\to98\\to122\\to124\\to183\\to$（反转）$\\to37\\to14$",
+        "向外距离 $= 183-53 = 130$；反转后距离 $= 183-14 = 169$",
+        "SCAN总距离 $= 130 + 169 = 299$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-os-disk-scheduling"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "SSTF 每次选最近的请求"
+        },
+        {
+          "level": "L2",
+          "text": "SCAN 像电梯一样扫到一端再反向"
+        },
+        {
+          "level": "L3",
+          "text": "总距离 = 各次移动距离之和"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-os-q-io-001",
+      "title": "SPOOLing技术",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "SPOOLing 技术的主要目的是：",
+      "options": [
+        "A. 提高 CPU 利用率",
+        "B. 将独占设备改造为共享设备",
+        "C. 减少磁盘空间占用",
+        "D. 加快内存访问速度"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "SPOOLing（假脱机）在磁盘上建立输入/输出井",
+        "以打印机为例：多个进程的打印请求先存入输出井，由 SPOOLing 系统依次打印",
+        "各进程感觉自己在独占打印机，实际上是共享使用",
+        "B 正确：将独占设备虚拟化为共享设备"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-os-io-mgmt"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "SPOOLing 的核心思想是用磁盘空间模拟多台设备"
+        },
+        {
+          "level": "L2",
+          "text": "典型应用：打印机假脱机"
+        },
+        {
+          "level": "L3",
+          "text": "SPOOLing = Simultaneous Peripheral Operations On-Line"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-os-q-monitor-001",
+      "title": "管程概念简述",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "简述管程（Monitor）相比信号量机制的主要优势。",
+      "options": [],
+      "answer": "管程将同步逻辑封装在数据结构内部，由编译器保证互斥，比手动使用 PV 操作更不容易出错",
+      "solutionSteps": [
+        "管程将共享变量和访问它们的过程封装在一起，外部无法直接访问共享数据",
+        "管程的互斥由编译器自动实现，程序员不需要手动写 $P(mutex)$和 $V(mutex)$",
+        "信号量使用中常见的错误（如忘记 V 操作、P/V 不匹配）在管程中不会发生",
+        "管程的条件变量 wait/signal 语义更清晰，便于实现复杂的同步逻辑"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-os-monitor"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "管程的设计目标是让同步更安全更容易"
+        },
+        {
+          "level": "L2",
+          "text": "信号量的 P/V 操作容易遗漏或配对错误"
+        },
+        {
+          "level": "L3",
+          "text": "管程由编译器保证互斥，信号量由程序员手动管理"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-os-q-pv-002",
+      "title": "PV操作与安全性分析",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "某系统有 5 个进程（P1~P5）共享 3 台同类打印机。每个进程最多需要 2 台打印机。用 PV 操作管理这些资源，写出信号量定义和每个进程的伪代码。若每个进程已申请 1 台打印机，系统是否安全？为什么？",
+      "options": [],
+      "answer": "信号量 $S$初值为 3；每个进程执行 $P(S)$、使用打印机、$V(S)$。系统不安全，因为 3个进程各持有 1台打印机，$Available=0$，每个进程还需 1台，无进程能继续执行",
+      "solutionSteps": [
+        "定义信号量 S = 3（3 台打印机的可用数量）",
+        "每个进程 Pi 的伪代码：$P(S) \\to$使用打印机 $\\to V(S)$",
+        "当前状态：5 个进程各申请 1 台，但只有 3 台，所以 3 个进程各持有 1 台，2 个进程被阻塞",
+        "$Available = 0$，每个持有者还需 1台。Need $= (1,1,1,1,1)$",
+        "检查安全性：Available=0，没有任何进程的 Need <= Available，不存在安全序列",
+        "系统不安全，可能死锁：3 个进程各持有 1 台打印机，都在等第 2 台，但 Available=0"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-os-semaphore",
+        "cs408-os-deadlock"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "信号量初值等于资源总数"
+        },
+        {
+          "level": "L2",
+          "text": "用银行家算法的思想检查安全性"
+        },
+        {
+          "level": "L3",
+          "text": "当所有进程各持有 1 台且 Available=0 时，没有进程能继续执行"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-os-q-prod-cons-001",
+      "title": "生产者消费者信号量方案",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "有 10 个缓冲区的生产者-消费者问题，用 PV 操作实现。写出所有信号量的定义、初值，以及生产者和消费者的完整伪代码。说明为什么 P 操作的顺序不能交换。",
+      "options": [],
+      "answer": "$mutex=1, empty=10, full=0$；生产者：$P(empty)\\to P(mutex)\\to$放产品$\\to V(mutex)\\to V(full)$；消费者：$P(full)\\to P(mutex)\\to$取产品$\\to V(mutex)\\to V(empty)$。若先$P(mutex)$再$P(empty)$，缓冲区满时生产者持锁等待empty，消费者无法取产品，导致死锁",
+      "solutionSteps": [
+        "定义信号量：mutex=1（互斥访问缓冲区），empty=10（10个空缓冲区），full=0（0个满缓冲区）",
+        "生产者伪代码：loop ${ P(empty); P(mutex); buffer[in]=product; in=(in+1)%10; V(mutex); V(full); }$",
+        "消费者伪代码：loop ${ P(full); P(mutex); product=buffer[out]; out=(out+1)%10; V(mutex); V(empty); consume(product); }$",
+        "$P$操作顺序分析：若生产者先 $P(mutex)$再 $P(empty)$，当缓冲区全满时，生产者已持有 mutex 但被 empty 阻塞；消费者需要 $P(mutex)$进入临界区取产品，但 mutex 被生产者持有，形成死锁",
+        "因此必须先 P 同步信号量（empty/full），再 P 互斥信号量（mutex）"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-os-prod-cons",
+        "cs408-os-pv-comprehensive"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "需要三类信号量：互斥信号量和两个同步信号量"
+        },
+        {
+          "level": "L2",
+          "text": "empty 初值等于缓冲区数量，full 初值为 0"
+        },
+        {
+          "level": "L3",
+          "text": "先 P 同步再 P 互斥，是为了避免持有互斥锁时被阻塞"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-os-q-readers-writers-001",
+      "title": "读者优先PV方案",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "用 PV 操作实现读者优先的读者-写者问题。写出信号量定义、读者和写者的完整伪代码，并说明 readCount 的作用。",
+      "options": [],
+      "answer": "$rw=1$（写互斥），$mutex=1$（readCount互斥），$readCount=0$。第一个读者 $P(rw)$阻止写者，最后一个读者 $V(rw)$允许写者进入",
+      "solutionSteps": [
+        "定义信号量：rw=1（互斥写操作），mutex=1（互斥访问 readCount），readCount=0（当前读者数量）",
+        "读者伪代码：$P(mutex) \\to readCount++ \\to$if $readCount==1$then $P(rw) \\to V(mutex) \\to$读数据 $\\to P(mutex) \\to readCount-- \\to$if $readCount==0$then $V(rw) \\to V(mutex)$",
+        "写者伪代码：$P(rw) \\to$写数据 $\\to V(rw)$",
+        "readCount的作用：记录当前正在读的读者数量。第一个读者到达时 $P(rw)$阻止写者进入，最后一个读者离开时 $V(rw)$允许写者进入",
+        "读者优先特性：在读期间到达的写者必须等待所有读者完成，可能导致写者饥饿"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-os-readers-writers",
+        "cs408-os-pv-comprehensive"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "读者-写者问题需要区分读-读相容和读-写互斥"
+        },
+        {
+          "level": "L2",
+          "text": "readCount 记录当前读者数，第一个读者加锁，最后一个读者解锁"
+        },
+        {
+          "level": "L3",
+          "text": "mutex 保护 readCount 的修改是互斥操作"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-os-q-phil-001",
+      "title": "哲学家进餐死锁分析",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "5 个哲学家围坐圆桌，每人左右各有一支筷子。下列关于哲学家进餐问题的叙述中，错误的是：",
+      "options": [
+        "A. 若每人各拿起左边的筷子，则系统处于死锁状态",
+        "B. 限制最多 4 人同时拿筷子可以预防死锁",
+        "C. 让奇数哲学家先左后右、偶数哲学家先右后左可以打破环路等待条件",
+        "D. 哲学家进餐问题只涉及互斥条件，不涉及其他死锁条件"
+      ],
+      "answer": "D",
+      "solutionSteps": [
+        "A 正确：每人各拿一支筷子后都在等待右边的筷子，形成环路等待，处于死锁状态",
+        "B 正确：限制 4 人保证至少一人能拿到两支筷子，打破了'请求和保持'条件",
+        "C 正确：奇偶哲学家拿筷子顺序不同，使得不可能形成环路等待",
+        "D 错误：哲学家进餐问题同时满足死锁的四个必要条件（互斥、请求和保持、不可剥夺、环路等待），不只是互斥条件"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-os-dining-phil",
+        "cs408-os-deadlock"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "哲学家进餐问题是死锁的经典示例"
+        },
+        {
+          "level": "L2",
+          "text": "死锁需要同时满足四个必要条件"
+        },
+        {
+          "level": "L3",
+          "text": "每人各拿一支筷子时，四个条件全部满足"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-os-q-rr-calc-001",
+      "title": "RR调度计算周转时间",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "3个进程同时到达（到达时间均为 0），运行时间分别为 $P1=5, P2=3, P3=6$。时间片 $q=2$，按 $P1\\to P2\\to P3$顺序入队。用 RR 调度计算各进程的完成时间和平均周转时间。",
+      "options": [],
+      "answer": "P1完成t=12, P2完成t=9, P3完成t=14；平均周转时间 11.67",
+      "solutionSteps": [
+        "时间片 $q=2$，就绪队列初始顺序 $P1\\to P2\\to P3$",
+        "t=0~2：P1 运行 2，剩余 3。t=2~4：P2 运行 2，剩余 1。t=4~6：P3 运行 2，剩余 4",
+        "第二轮 t=6~8：P1 运行 2，剩余 1",
+        "t=8~9：P2 运行 1（剩余不足时间片），P2 完成，完成时间 = 9",
+        "t=9~11：P3 运行 2，剩余 2",
+        "第三轮 t=11~12：P1 运行 1，P1 完成，完成时间 = 12",
+        "t=12~14：P3 运行 2，P3 完成，完成时间 = 14",
+        "周转时间：$P1 = 12$，$P2 = 9$，$P3 = 14$",
+        "平均周转时间 $= (12 + 9 + \\frac{14)}{3} = 3\\frac{5}{3} \\approx 11.67$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-os-rr-calc",
+        "cs408-os-scheduling"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "RR调度每轮每个进程运行 $\\min$(剩余时间,时间片)"
+        },
+        {
+          "level": "L2",
+          "text": "按入队顺序轮流执行，时间片用完后排到队尾"
+        },
+        {
+          "level": "L3",
+          "text": "周转时间 = 完成时间 - 到达时间，所有进程到达时间为 0"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-os-q-priority-001",
+      "title": "优先级调度计算",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "3个进程同时到达（到达时间均为 0），运行时间和优先级如下：$P1$(运行$=4,$优先级$=2$)$, P2$(运行$=3,$优先级$=1$)$, P3$(运行$=5,$优先级$=3$)。优先级数字越小越高。用非抢占优先级调度计算各进程的等待时间和平均等待时间。",
+      "options": [],
+      "answer": "P1等待3, P2等待0, P3等待7；平均等待时间 3.33",
+      "solutionSteps": [
+        "优先级排序：$P2$(优先级1) $> P1$(优先级2) $> P3$(优先级3)",
+        "非抢占调度：P2 先运行（t=0~3），然后 P1（t=3~7），最后 P3（t=7~12）",
+        "等待时间 =开始时间 -到达时间：$P2=0-0=0, P1=3-0=3, P3=7-0=7$",
+        "平均等待时间 $= \\frac{(0+3+7)}{3} = 1\\frac{0}{3} \\approx 3.33$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-os-priority-sched",
+        "cs408-os-scheduling"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "非抢占优先级调度按优先级从高到低依次运行"
+        },
+        {
+          "level": "L2",
+          "text": "优先级数字越小优先级越高"
+        },
+        {
+          "level": "L3",
+          "text": "等待时间 = 开始运行时间 - 到达时间"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-os-q-mfq-001",
+      "title": "MFQ调度规则判断",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "某系统采用多级反馈队列调度，有 3 个队列 Q0、Q1、Q2，时间片分别为 4、8、16。下列关于 MFQ 的叙述中，正确的是：",
+      "options": [
+        "A. 新进程从最低优先级队列 Q2 开始",
+        "B. 进程在 Q0 中时间片用完未完成，则降级到 Q1",
+        "C. 低优先级队列的进程可以抢占高优先级队列的进程",
+        "D. MFQ 不能处理短作业，所有作业都要经历所有队列"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "A 错误：新进程从最高优先级队列 Q0 开始",
+        "B 正确：进程在当前队列时间片用完未完成时，降到低一级队列",
+        "C 错误：高优先级队列的进程可以抢占低优先级队列的进程，反过来不行",
+        "D 错误：短作业可能在 Q0 中就完成了，不需要进入低优先级队列"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-os-mfq-detail"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "MFQ 的核心规则是新进程从高优先级队列开始"
+        },
+        {
+          "level": "L2",
+          "text": "时间片用完未完成的进程降级"
+        },
+        {
+          "level": "L3",
+          "text": "短作业在高级队列中快速完成，长作业逐步降级"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-os-q-detect-001",
+      "title": "死锁检测计算",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "系统有 3 个进程 P1、P2、P3 和 3 类单实例资源 R1、R2、R3。当前状态：P1 持有 R1 并请求 R2，P2 持有 R2 并请求 R3，P3 持有 R3 并请求 R1。用资源分配图简化法判断系统是否死锁。",
+      "options": [],
+      "answer": "系统死锁。三个进程形成环路 $P1\\to R2\\to P2\\to R3\\to P3\\to R1\\to P1$，且所有资源均为单实例，环路无法简化，三个进程均死锁",
+      "solutionSteps": [
+        "画出资源分配图：$P1\\to R2$（$P1$请求$R2$），$R1\\to P1$（$R1$分配给$P1$），$P2\\to R3$，$R2\\to P2$，$P3\\to R1$，$R3\\to P3$",
+        "尝试简化：找进程 Pi 使其请求的资源可被满足（即该资源当前可用）",
+        "$Available = (0,0,0)$（所有资源都被持有），没有任何进程的需求可以被满足",
+        "无法简化任何进程，所有 3 个进程都无法完成",
+        "结论：系统处于死锁状态，死锁进程集合为 {P1, P2, P3}"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-os-deadlock-detect",
+        "cs408-os-deadlock"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "死锁检测需要检查是否存在可以完成的进程"
+        },
+        {
+          "level": "L2",
+          "text": "Work初始为 Available，若为 $(0,0,0)$则没有进程可以开始"
+        },
+        {
+          "level": "L3",
+          "text": "单实例资源有环一定死锁，因为环上每个资源都只有一个实例"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-os-q-banker-calc-001",
+      "title": "银行家算法完整计算",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "系统有 $A$、$B$、$C$三类资源共 10、5、7个。当前状态：$P1$已分配 $(2,0,0)$最大需求 $(5,3,3)$；$P2$已分配 $(1,1,0)$最大需求 $(3,2,2)$；$P3$已分配 $(1,0,2)$最大需求 $(4,2,4)$。Available $= (6,4,5)$。$P1$发出请求 Request$1 = (1,0,1)$。判断是否允许该请求。",
+      "options": [],
+      "answer": "允许请求。试探分配后系统安全，安全序列为 $P2\\to P1\\to P3$",
+      "solutionSteps": [
+        "$Need = Max -$Allocation：$P1(3,3,3), P2(2,1,2), P3(3,0,2)$",
+        "检查请求：Request$1(1,0,1) <=$Need$1(3,3,3)$通过；Request$1(1,0,1) <=$Available$(6,4,5)$通过",
+        "试探分配：Available$' = (6,4,5)-(1,0,1) = (5,4,4)$；Allocation$1' = (3,0,1)$；Need$1' = (2,3,2)$",
+        "安全性检查：Work $= (5,4,4)$。检查 $P2$：Need$2(2,1,2) <= (5,4,4)$，可完成。Work $= (5,4,4)+(1,1,0) = (6,5,4)$",
+        "检查 $P1$：Need$1'(2,3,2) <= (6,5,4)$，可完成。Work $= (6,5,4)+(3,0,1) = (9,5,5)$",
+        "检查 $P3$：Need$3(3,0,2) <= (9,5,5)$，可完成",
+        "安全序列 $P2\\to P1\\to P3$存在，允许请求"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-os-banker-calc",
+        "cs408-os-deadlock-handling"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "银行家算法先检查请求是否合法，再试探分配，最后检查安全性"
+        },
+        {
+          "level": "L2",
+          "text": "试探分配后要重新计算 Available 和 Need，然后做安全性检查"
+        },
+        {
+          "level": "L3",
+          "text": "安全性检查中 Work 初始等于试探后的 Available"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-os-q-page-addr-001",
+      "title": "分页地址转换计算",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "某系统页面大小 4KB，页表如下：页号 $0\\to$物理块号 5，页号 $1\\to$物理块号 8，页号 $2\\to$物理块号 3，页号 $3\\to$物理块号 10，页号 $4\\to$物理块号 6。求逻辑地址 18500对应的物理地址。",
+      "options": [],
+      "answer": "物理地址 = 26276",
+      "solutionSteps": [
+        "页面大小 = 4KB = 4096",
+        "页号 $= \\frac{18500}{4096} = 4$（整除），页内偏移 $= 18500 % 4096 = 2116$",
+        "查页表：页号 $4 \\to$物理块号 6",
+        "物理地址 $= 6 \\times 4096 + 2116 = 24576 + 2116 = 26692$",
+        "验证：页内偏移 2116 < 4096，合法"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-os-page-calc",
+        "cs408-os-paging"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先将逻辑地址拆分为页号和页内偏移"
+        },
+        {
+          "level": "L2",
+          "text": "页号 =逻辑地址 /页面大小，页内偏移 =逻辑地址 %页面大小"
+        },
+        {
+          "level": "L3",
+          "text": "物理地址 =物理块号 $\\times$页面大小 +页内偏移"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-os-q-tlb-amat-001",
+      "title": "TLB有效访存时间计算",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "某分页系统 TLB 命中率为 98%，TLB 查找时间为 10ns，内存访问时间为 100ns。TLB 命中时只需一次内存访问取数据；TLB 未命中时需一次内存访问查页表，再一次内存访问取数据。计算有效内存访问时间（EMAT）。",
+      "options": [],
+      "answer": "EMAT = 150ns",
+      "solutionSteps": [
+        "TLB命中（概率 0.98）：时间 =TLB查找 +访存取数据 $= 10 + 100 = 110ns$",
+        "TLB未命中（概率 0.02）：时间 =TLB查找 +访存查页表 +访存取数据 $= 10 + 100 + 100 = 210ns$",
+        "$EMAT = 0.98 \\times 110 + 0.02 \\times 210$",
+        "$EMAT = 107.8 + 4.2 = 112ns$",
+        "注：若 TLB 查找与内存访问并行（即 TLB 未命中时不额外消耗 TLB 查找时间），则 EMAT $= 0.98\\times(10+100) + 0.02\\times(10+100+100) = 112ns$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-os-tlb-effect",
+        "cs408-os-paging"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "EMAT 是 TLB 命中和未命中两种情况的加权平均"
+        },
+        {
+          "level": "L2",
+          "text": "TLB 命中只需一次访存，未命中需两次访存"
+        },
+        {
+          "level": "L3",
+          "text": "$EMAT = h\\times(t+m) + (1-h)\\times(t+2m)$"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-os-q-seg-addr-001",
+      "title": "分段地址转换计算",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "某分段系统段表如下：段号 0（基址$=2000,$长度$=800$），段号 1（基址$=5000,$长度$=300$），段号 2（基址$=10000,$长度$=500$），段号 3（基址$=8000,$长度$=200$）。将逻辑地址 (段号$=2,$偏移$=300$) 转换为物理地址，并判断逻辑地址 (段号$=1,$偏移$=400$) 是否合法。",
+      "options": [],
+      "answer": "逻辑地址$(2,300)$的物理地址为 10300；逻辑地址$(1,400)$越界，不合法",
+      "solutionSteps": [
+        "逻辑地址 (段号$=2,$偏移$=300$)：查段表段号 2，基址$=10000$，长度$=500$",
+        "偏移 300 <长度 500，合法。物理地址 $= 10000 + 300 = 10300$",
+        "逻辑地址 (段号$=1,$偏移$=400$)：查段表段号 1，基址$=5000$，长度$=300$",
+        "偏移 400 >= 长度 300，越界异常！该地址不合法"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-os-seg-calc",
+        "cs408-os-segmentation"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "分段地址转换 = 段基址 + 段内偏移"
+        },
+        {
+          "level": "L2",
+          "text": "转换前必须检查段内偏移是否超过段长度"
+        },
+        {
+          "level": "L3",
+          "text": "偏移 >= 段长度时触发越界异常"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-os-q-opt-001",
+      "title": "OPT页面置换模拟",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "某系统分配 3 个页面框，页面访问序列为：7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2。用 OPT 页面置换算法模拟，计算缺页次数和缺页率。",
+      "options": [],
+      "answer": "缺页 7次，缺页率 $\\frac{7}{1}3 \\approx 53.8%$",
+      "solutionSteps": [
+        "访问 7：缺页，框=[7]。访问 0：缺页，框=[7,0]。访问 1：缺页，框=[7,0,1]（3次缺页）",
+        "访问 2：需置换。未来序列 0,3,0,4,2,3,0,3,2。7 不再被访问，淘汰 7。框=[2,0,1]（4次缺页）",
+        "访问 0：命中。框=[2,0,1]",
+        "访问 3：需置换。未来序列 0,4,2,3,0,3,2。1 不再被访问，淘汰 1。框=[2,0,3]（5次缺页）",
+        "访问 0：命中。访问 4：需置换。未来序列 2,3,0,3,2。1 不在框中。框中 2 下次在位置 9，0 下次在位置 11，3 下次在位置 10。淘汰最远的 0。框=[2,4,3]（6次缺页）",
+        "访问 2：命中。访问 3：命中。访问 0：需置换。框中 2 下次在位置 13，4 不再被访问，3 下次在位置 12。淘汰 4。框=[2,0,3]（7次缺页）",
+        "访问 3：命中。访问 2：命中",
+        "缺页次数 $= 7$，缺页率 $= \\frac{7}{1}3 \\approx 53.8%$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-os-opt-sim",
+        "cs408-os-virtual-memory"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "OPT 淘汰将来最长时间不被访问的页面"
+        },
+        {
+          "level": "L2",
+          "text": "需要向后扫描访问序列，找到每个框中页面下一次被访问的位置"
+        },
+        {
+          "level": "L3",
+          "text": "若某页面在剩余序列中不再被访问，立即淘汰它"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-os-q-fifo-belady-001",
+      "title": "FIFO与Belady异常",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "页面访问序列为 1, 2, 3, 4, 1, 2, 5。分别用 FIFO 算法在 3 个和 4 个页面框下模拟，计算缺页次数，验证是否出现 Belady 异常。",
+      "options": [],
+      "answer": "3 个框缺页 7 次，4 个框缺页 5 次，未出现 Belady 异常（增加框数后缺页减少，符合正常情况）",
+      "solutionSteps": [
+        "3 个框 FIFO 模拟：",
+        "访问 1：缺页，框=[1]。访问 2：缺页，框=[1,2]。访问 3：缺页，框=[1,2,3]。访问 4：缺页，FIFO 淘汰 1，框=[4,2,3]",
+        "访问 1：缺页，FIFO 淘汰 2，框=[4,1,3]。访问 2：缺页，FIFO 淘汰 3，框=[4,1,2]。访问 5：缺页，FIFO 淘汰 4，框=[5,1,2]",
+        "3 个框缺页 = 7 次",
+        "4 个框 FIFO 模拟：",
+        "访问 1：缺页，框=[1]。访问 2：缺页，框=[1,2]。访问 3：缺页，框=[1,2,3]。访问 4：缺页，框=[1,2,3,4]",
+        "访问 1：命中。访问 2：命中。访问 5：缺页，FIFO 淘汰 1，框=[5,2,3,4]",
+        "4 个框缺页 = 5 次",
+        "结论：3 框缺页 7 次 > 4 框缺页 5 次，增加框数后缺页减少，未出现 Belady 异常"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-os-fifo-sim",
+        "cs408-os-virtual-memory"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "FIFO 淘汰最早进入内存的页面"
+        },
+        {
+          "level": "L2",
+          "text": "Belady 异常是增加页面框反而缺页更多"
+        },
+        {
+          "level": "L3",
+          "text": "需要分别模拟 3 个框和 4 个框的情况并比较缺页次数"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-os-q-lru-001",
+      "title": "LRU页面置换模拟",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "某系统分配 2 个页面框，页面访问序列为：1, 2, 3, 4, 1, 2, 5, 1, 2, 3。用 LRU 页面置换算法模拟，计算缺页次数。",
+      "options": [],
+      "answer": "缺页 10 次",
+      "solutionSteps": [
+        "访问 1：缺页，框=[1]。访问 2：缺页，框=[1,2]（2次缺页）",
+        "访问 3：缺页，LRU 淘汰 1（最久未用），框=[3,2]。访问 4：缺页，LRU 淘汰 2，框=[3,4]（4次缺页）",
+        "访问 1：缺页，LRU 淘汰 3，框=[1,4]。访问 2：缺页，LRU 淘汰 4，框=[1,2]（6次缺页）",
+        "访问 5：缺页，LRU 淘汰 1，框=[5,2]。访问 1：缺页，LRU 淘汰 2，框=[5,1]（8次缺页）",
+        "访问 2：缺页，LRU 淘汰 5，框=[2,1]。访问 3：缺页，LRU 淘汰 1，框=[2,3]（10次缺页）",
+        "总缺页 10 次，缺页率 100%"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-os-lru-sim",
+        "cs408-os-virtual-memory"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "LRU 淘汰最近最久未使用的页面"
+        },
+        {
+          "level": "L2",
+          "text": "每次访问后更新页面的使用顺序"
+        },
+        {
+          "level": "L3",
+          "text": "2 个页面框意味着只能保留 2 个不同的页面"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-os-q-clock-001",
+      "title": "Clock算法概念判断",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "下列关于 Clock 页面置换算法的叙述中，正确的是：",
+      "options": [
+        "A. Clock 算法可以精确实现 LRU 的效果",
+        "B. 简单 Clock 算法中，访问位为 1 的页面在指针扫描时被立即淘汰",
+        "C. 改进 Clock 算法优先淘汰访问位和修改位都为 0 的页面",
+        "D. Clock 算法不需要任何硬件支持"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "A 错误：Clock 只是 LRU 的近似，不能精确追踪访问时间顺序",
+        "B 错误：访问位为 1 时将其置 0 并继续扫描，不立即淘汰",
+        "$C$正确：改进 Clock 按 $(0,0)\\to(1,0)\\to(0,1)\\to(1,1)$优先级淘汰，$(0,0)$表示未访问且未修改，优先淘汰",
+        "D 错误：Clock 需要硬件支持访问位（引用位），每次页面访问时由硬件自动置位"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-os-clock"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "Clock 算法是 LRU 的低开销近似"
+        },
+        {
+          "level": "L2",
+          "text": "访问位为 0 的页面才是候选淘汰对象"
+        },
+        {
+          "level": "L3",
+          "text": "改进 Clock 通过修改位进一步区分页面的淘汰优先级"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-os-q-index-001",
+      "title": "混合索引计算最大文件长度",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "某文件系统 inode 中有 10 个直接块指针、1 个一级间接指针、1 个二级间接指针和 1 个三级间接指针。磁盘块大小 4KB，每个块指针占 4 字节。计算该文件系统可寻址的最大文件长度。",
+      "options": [],
+      "answer": "最大文件长度 = 16GB + 16KB + 40 = 约 16GB（精确值 17180098600 字节）",
+      "solutionSteps": [
+        "每个磁盘块可容纳指针数 $= \\frac{4096}{4} = 1024$个指针",
+        "直接索引：10个块 $\\to 10 \\times 4$KB $= 40KB$",
+        "一级间接索引：1024个块 $\\to 1024 \\times 4$KB $= 4MB$",
+        "二级间接索引：$1024 \\times 1024 = 1048576$个块 $\\to 1048576 \\times 4$KB $= 4GB$",
+        "三级间接索引：$1024 \\times 1024 \\times 1024 = 1073741824$个块 $\\to 1073741824 \\times 4$KB $= 4TB$",
+        "最大文件长度 $= (10 + 1024 + 1048576 + 1073741824) \\times 4KB$",
+        "$= 1074791434 \\times 4096 = 4,402,345,713,664$字节 $\\approx 4TB$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-os-index-alloc",
+        "cs408-os-file-alloc"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先计算每个磁盘块能放多少个指针"
+        },
+        {
+          "level": "L2",
+          "text": "每级间接索引可寻址的块数 =上一级指针数 $\\times$每块指针数"
+        },
+        {
+          "level": "L3",
+          "text": "最大文件长度 =所有层级可寻址块数之和 $\\times$块大小"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-os-q-free-001",
+      "title": "空闲空间管理概念",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "下列关于磁盘空闲空间管理的叙述中，正确的是：",
+      "options": [
+        "A. 位示图法用一个字节表示一个磁盘块的占用状态",
+        "B. 空闲链表法不适合连续分配",
+        "C. 成组链接法将空闲块分组，每组最后一块记录下一组的块号",
+        "D. 位示图法不占用任何磁盘空间"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "A 错误：位示图用一个 bit（不是字节）表示一个磁盘块的占用状态",
+        "B 错误：空闲链表法适合连续分配，可以从链表中连续取出多个空闲块",
+        "C 正确：成组链接法将空闲块分组，每组最后一块存放下一组的块号信息",
+        "D 错误：位示图本身需要占用磁盘块来存储，磁盘越大位示图越大"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-os-free-space",
+        "cs408-os-file-alloc"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "空闲空间管理需要跟踪哪些磁盘块是空闲的"
+        },
+        {
+          "level": "L2",
+          "text": "位示图用 bit 而非字节来表示每个块的状态"
+        },
+        {
+          "level": "L3",
+          "text": "成组链接法是 UNIX 文件系统的经典方案"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-os-q-cscan-001",
+      "title": "C-SCAN磁盘调度计算",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "磁盘请求队列：30, 70, 120, 50, 150, 180, 90。磁头初始位置在 50，当前移动方向为磁道号增大方向。磁盘范围 0~199。用 C-SCAN 算法计算服务顺序和总寻道距离（回程跳跃计入距离）。",
+      "options": [],
+      "answer": "服务顺序：$50\\to70\\to90\\to120\\to150\\to180\\to$(跳回0)$\\to30$；总寻道距离 $= 319$",
+      "solutionSteps": [
+        "C-SCAN 只在一个方向（增大方向）服务请求",
+        "正向扫描：$50\\to70(20)\\to90(20)\\to120(30)\\to150(30)\\to180(30)$，正向距离 $= 180-50 = 130$",
+        "回程：从 180 跳到 0，距离 = 180",
+        "继续正向：$0\\to30(30)$，距离 $= 30$",
+        "总寻道距离 $= 130 + 180 + 30 = 340$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-os-cscan",
+        "cs408-os-disk-scheduling"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "C-SCAN 只在一个方向上服务请求"
+        },
+        {
+          "level": "L2",
+          "text": "到达最右端后跳回最左端，回程不服务请求"
+        },
+        {
+          "level": "L3",
+          "text": "总距离包括正向扫描距离和回程跳跃距离"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-os-q-spooling-001",
+      "title": "SPOOLing技术概念",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "下列关于 SPOOLing 技术的叙述中，错误的是：",
+      "options": [
+        "A. SPOOLing 技术需要磁盘作为后援存储器",
+        "B. SPOOLing 技术可以将独占设备改造为共享设备",
+        "C. SPOOLing 系统中用户进程直接操作物理设备",
+        "D. SPOOLing 系统中有专门的进程负责将数据从井传送到物理设备"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "A 正确：SPOOLing 需要磁盘上的输入/输出井",
+        "B 正确：SPOOLing 的核心功能就是将独占设备虚拟化为共享设备",
+        "C 错误：用户进程不直接操作物理设备，而是向输出井写入数据，由 SPo 进程负责实际输出",
+        "D 正确：SPo（输出进程）负责将输出井中的数据传送到物理设备"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-os-spooling-detail",
+        "cs408-os-io-mgmt"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "SPOOLing 的核心是用磁盘模拟设备"
+        },
+        {
+          "level": "L2",
+          "text": "用户进程与磁盘井交互，不直接操作物理设备"
+        },
+        {
+          "level": "L3",
+          "text": "SPo 进程是唯一操控物理设备的系统进程"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-os-q-comprehensive-001",
+      "title": "分页TLB缺页联合计算",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "某分页系统：页面大小 4KB，物理内存 64MB，TLB 命中率 95%，TLB 查找时间 20ns，内存访问时间 100ns。求：$(1)$物理地址需要多少位？$(2)$有效访存时间 EMAT 是多少？$(3)$若发生缺页中断，缺页处理时间 10ms，且缺页时 TLB 和页表访问均无效，考虑缺页率 0.1%时的实际 EMAT 是多少？",
+      "options": [],
+      "answer": "$(1) 26$位；$(2) EMAT=215$ns；$(3)$实际 EMAT $\\approx 10215ns$",
+      "solutionSteps": [
+        "$(1)$物理内存 64MB $= 2^26$字节，物理地址需要 26位",
+        "$(2)$不考虑缺页：TLB命中$(95%)$：$20+100=120$ns；TLB未命中$(5%)$：$20+100+100=220ns$",
+        "$EMAT = 0.95\\times120 + 0.05\\times220 = 114 + 11 = 125ns$",
+        "$(3)$考虑缺页：缺页率 $0.1% = 0.001$",
+        "无缺页时$(99.9%)$：$EMAT_normal = 125ns$",
+        "有缺页时$(0.1%)$：时间 $= 10$ms $= 10000000ns$",
+        "实际 EMAT $= 0.999 \\times 125 + 0.001 \\times 10000000 = 124.875 + 10000 = 10124.875$ns $\\approx 10125ns$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-os-tlb-effect",
+        "cs408-os-paging",
+        "cs408-os-virtual-memory"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "物理地址位数由物理内存大小决定"
+        },
+        {
+          "level": "L2",
+          "text": "EMAT 需要分别计算 TLB 命中和未命中两种情况"
+        },
+        {
+          "level": "L3",
+          "text": "缺页处理时间远大于正常访存时间，即使缺页率很低也会显著影响 EMAT"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    }
+  ]
+}

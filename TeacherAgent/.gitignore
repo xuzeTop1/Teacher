@@ -1,0 +1,25 @@
+node_modules/
+dist/
+dist-ssr/
+target/
+src-tauri/target/
+*.log
+.env
+.env.*
+!.env.example
+.mimocode/
+tools/document-worker/dist/
+tools/document-worker/build/
+tools/document-worker/*.spec
+src-tauri/binaries/
+__pycache__/
+*.egg-info/
+
+# 本地工具目录（配置/记忆/凭据，不入仓库）
+.codebuddy/
+.workbuddy/
+.claude/
+
+# 本地实验产物与开发日志（含截图，不入库）
+benchmark-results/
+tauri-dev.log

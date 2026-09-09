@@ -1,0 +1,304 @@
+{
+  "subject": "physics",
+  "course": "大学物理",
+  "chapter": "近代物理",
+  "status": "draft",
+  "nodes": [
+    {
+      "id": "physics-modern-relativity",
+      "title": "狭义相对论基础",
+      "summary": "狭义相对论基于相对性原理和光速不变原理。时间膨胀、长度收缩、质能关系等是其重要推论。洛伦兹变换是相对论运动学的基础。",
+      "prerequisites": [
+        "physics-mech-kinematics"
+      ],
+      "keyPoints": [
+        "狭义相对论的两条基本假设",
+        "洛伦兹变换",
+        "时间膨胀与长度收缩",
+        "同时性的相对性",
+        "质能关系：$E=mc^2$"
+      ],
+      "misconceptions": [
+        "误认为相对论效应在低速下完全消失（实际是近似消失）",
+        "混淆固有时与坐标时",
+        "误将质能关系理解为质量可以转化为能量（实际是等价关系）"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "如果你坐在一艘接近光速的飞船上，你看到的地球上的时钟是变快还是变慢？"
+        },
+        {
+          "level": "L2",
+          "text": "洛伦兹变换与伽利略变换的根本区别是什么？在什么条件下两者一致？"
+        },
+        {
+          "level": "L3",
+          "text": "考虑一个物体高速运动，它的质量会如何变化？这与牛顿第二定律 F=ma 有什么关系？"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-modern-photoelectric",
+      "title": "光电效应",
+      "summary": "光电效应揭示光的粒子性。爱因斯坦光电效应方程描述光子能量、逸出功与光电子最大动能的关系。红限频率是光电效应发生的最低频率。",
+      "prerequisites": [
+        "physics-em-electric-potential"
+      ],
+      "keyPoints": [
+        "光电效应的实验规律",
+        "爱因斯坦光电效应方程",
+        "光子概念与光的波粒二象性",
+        "红限频率与逸出功",
+        "截止电压与光电子最大动能"
+      ],
+      "misconceptions": [
+        "误认为光强越大，光电子动能越大（实际是光强影响光电子数目）",
+        "混淆光子能量与光强",
+        "误将光电效应视为光的波动性的证据（实际是粒子性）"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "为什么用红光照射金属表面不能产生光电效应，而用紫光可以？"
+        },
+        {
+          "level": "L2",
+          "text": "如果入射光强增加，但频率不变，光电效应会发生什么变化？"
+        },
+        {
+          "level": "L3",
+          "text": "考虑一个光电管，如果施加反向电压，光电流会如何变化？这与截止电压有什么关系？"
+        }
+      ],
+      "difficulty": 2,
+      "level": "application",
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-modern-debroglie",
+      "title": "德布罗意波",
+      "summary": "德布罗意假设任何实物粒子都具有波粒二象性，其波长与动量成反比。电子衍射实验证实了德布罗意假设。",
+      "prerequisites": [
+        "physics-modern-photoelectric"
+      ],
+      "keyPoints": [
+        "德布罗意假设：$\\lambda=\\frac{h}{p}$",
+        "电子衍射实验",
+        "物质波的统计解释",
+        "不确定关系与波粒二象性",
+        "电子显微镜的原理"
+      ],
+      "misconceptions": [
+        "误认为只有光子具有波粒二象性（实际所有粒子都有）",
+        "混淆德布罗意波与电磁波",
+        "误将物质波视为经典波（实际是概率波）"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "一个电子和一个质子具有相同的动能，哪个的德布罗意波长更长？"
+        },
+        {
+          "level": "L2",
+          "text": "如果加速电压增加，电子的德布罗意波长会如何变化？"
+        },
+        {
+          "level": "L3",
+          "text": "考虑一个电子通过狭缝发生衍射，这与光的衍射有什么相似之处和不同之处？"
+        }
+      ],
+      "difficulty": 2,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-modern-uncertainty",
+      "title": "不确定关系",
+      "summary": "不确定关系是量子力学的基本原理，指出某些成对物理量（如位置与动量）不能同时精确测量。这反映了微观粒子的波粒二象性。",
+      "prerequisites": [
+        "physics-modern-debroglie"
+      ],
+      "keyPoints": [
+        "海森堡不确定关系：$\\Delta x\\cdot\\Delta p_x \\ge ħ/2$",
+        "能量-时间不确定关系：$\\Delta E\\cdot\\Delta t \\ge ħ/2$",
+        "不确定关系的物理意义",
+        "与经典力学的根本区别",
+        "不确定关系对测量精度的限制"
+      ],
+      "misconceptions": [
+        "误认为不确定关系是测量仪器的精度限制（实际是基本原理）",
+        "混淆不确定关系与实验误差",
+        "误将不确定关系视为消极的限制（实际是自然的本质属性）"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "如果能精确测量一个电子的位置，那么它的动量还能精确测量吗？为什么？"
+        },
+        {
+          "level": "L2",
+          "text": "不确定关系与德布罗意波有什么关系？如何从波粒二象性理解不确定关系？"
+        },
+        {
+          "level": "L3",
+          "text": "考虑一个原子中的电子，它的能量是不连续的（量子化的）。这与能量-时间不确定关系有什么关系？"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-modern-hydrogen",
+      "title": "氢原子能级",
+      "summary": "玻尔理论成功解释了氢原子光谱。量子力学给出更完整的描述，能级公式与玻尔理论一致，但波函数有更丰富的结构。",
+      "prerequisites": [
+        "physics-modern-photoelectric",
+        "physics-em-electric-potential"
+      ],
+      "keyPoints": [
+        "玻尔的三条假设",
+        "氢原子能级公式：$E_n = -13.\\frac{6}{n}^2 eV$",
+        "氢原子光谱的线系",
+        "量子数以更大胆的方式描述电子状态",
+        "泡利不相容原理与元素周期表"
+      ],
+      "misconceptions": [
+        "误认为玻尔理论完全正确（实际只适用于单电子原子）",
+        "混淆轨道角动量量子数与磁量子数",
+        "误将电子轨道视为经典轨道（实际是概率分布）"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "氢原子从 n=3 跃迁到 n=1，发射的光子能量是多少？"
+        },
+        {
+          "level": "L2",
+          "text": "为什么玻尔理论不能解释多电子原子的光谱？"
+        },
+        {
+          "level": "L3",
+          "text": "考虑一个氢原子处于基态，如果用一个光子激发它到 n=2 的激发态，这个光子的波长应该是多少？"
+        }
+      ],
+      "difficulty": 3,
+      "level": "application",
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-modern-nuclear",
+      "title": "原子核基础",
+      "summary": "原子核由质子和中子组成。核力是短程强相互作用。原子核的衰变、裂变和聚变是原子核物理的重要应用。",
+      "prerequisites": [
+        "physics-em-electric-field"
+      ],
+      "keyPoints": [
+        "原子核的组成与核素符号",
+        "核力的主要性质",
+        "放射性衰变：$\\alpha$、$\\beta$、$\\gamma$衰变",
+        "半衰期与衰变定律",
+        "核反应与质能关系"
+      ],
+      "misconceptions": [
+        "误认为原子核内质子之间的库仑斥力会使其分解（实际核力更强）",
+        "混淆结合能与平均结合能",
+        "误将放射性视为人为可以完全控制的过程（实际是自发过程）"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "为什么原子核中的质子不会因为相互排斥而飞散？"
+        },
+        {
+          "level": "L2",
+          "text": "如果一个放射性样品的半衰期是 10 年，那么 30 年后还剩下多少？"
+        },
+        {
+          "level": "L3",
+          "text": "考虑一个核反应，反应前的总质量大于反应后的总质量。这个反应是释放能量还是吸收能量？如何计算释放的能量？"
+        }
+      ],
+      "difficulty": 2,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-modern-mass-energy",
+      "title": "质能方程",
+      "summary": "质能方程 $E=mc^2$揭示质量与能量的等价性。核反应（裂变和聚变）中质量亏损转化为巨大能量，是核能利用的基础。",
+      "prerequisites": [
+        "physics-modern-relativity",
+        "physics-modern-nuclear"
+      ],
+      "keyPoints": [
+        "质能等价性",
+        "质量亏损与结合能",
+        "核裂变与核聚变",
+        "核能的利用：核电站与核武器",
+        "反物质与湮灭"
+      ],
+      "misconceptions": [
+        "误认为质量可以转化为能量（实际是等价关系）",
+        "混淆质量亏损与质量消失",
+        "误将质能方程视为相对论独有（实际经典物理中也有能量与质量的关系）"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "为什么核反应释放的能量比化学反应大得多？"
+        },
+        {
+          "level": "L2",
+          "text": "如果一个反应的质量亏损是 1 u，释放的能量是多少 MeV？"
+        },
+        {
+          "level": "L3",
+          "text": "考虑核聚变反应，为什么轻核聚变成中等质量的核会释放能量？这与平均结合能有什么关系？"
+        }
+      ],
+      "difficulty": 3,
+      "level": "application",
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    }
+  ]
+}

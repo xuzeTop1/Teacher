@@ -1,0 +1,186 @@
+{
+  "subject": "shenlun",
+  "course": "shenlun",
+  "chapter": "civil-shenlun-argument",
+  "status": "draft",
+  "nodes": [
+    {
+      "id": "shenlun-arg-analyze",
+      "title": "综合分析：含义/原因/启示",
+      "level": "method",
+      "summary": "综合分析题一般按「是什么（释义）—为什么（原因/影响）—怎么办（启示/对策）」展开。先判断题型（词句理解、观点分析、启示型），再决定重心，不套万能模板。",
+      "prerequisites": [],
+      "misconceptions": [
+        "不分题型一律写「意义+对策」",
+        "把材料没有的启示硬编进去"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这道题是让你解释含义、分析原因，还是谈启示？"
+        },
+        {
+          "level": "L2",
+          "text": "「是什么—为什么—怎么办」里，哪一部分是这题重点？"
+        },
+        {
+          "level": "L3",
+          "text": "你的启示，材料里有没有对应依据？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲申论五大题型（归纳概括 / 综合分析 / 提出对策 / 贯彻执行 / 申发论述）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；申论辅导以材料拆解、结构、改写为核心，不默认代写整篇；具体题目与表述待人工复核（review_status=draft）。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "shenlun-arg-countermeasure",
+      "title": "提出对策：问题—原因—对策",
+      "level": "method",
+      "summary": "对策题先定位材料中的问题与原因，对策要针对原因提出，做到「问题—原因—对策」对应。材料已有对策直接摘取，材料只有问题时按原因反推。",
+      "prerequisites": [
+        "shenlun-arg-analyze"
+      ],
+      "misconceptions": [
+        "对策不针对原因，泛泛而谈",
+        "把问题当对策写（如「加强宣传」无主体无动作）"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "材料里这个问题，根子上的原因是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "针对这个原因，谁来做什么具体动作能解决？"
+        },
+        {
+          "level": "L3",
+          "text": "你写的「加强/完善」有没有主体和可执行动作？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲申论五大题型（归纳概括 / 综合分析 / 提出对策 / 贯彻执行 / 申发论述）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；申论辅导以材料拆解、结构、改写为核心，不默认代写整篇；具体题目与表述待人工复核（review_status=draft）。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "shenlun-arg-feasible",
+      "title": "对策的可行性",
+      "level": "method",
+      "summary": "好对策要满足：主体明确、可执行、符合实际、针对问题。避免「加强立法、加大投入、提高意识」这类无主体无抓手的空话，要落到具体动作。",
+      "prerequisites": [
+        "shenlun-arg-countermeasure"
+      ],
+      "misconceptions": [
+        "堆砌「加强/完善/重视」等空泛词",
+        "对策没有责任主体，无法落地"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这条对策由谁负责、做什么具体动作？"
+        },
+        {
+          "level": "L2",
+          "text": "它真的能解决前面那个原因吗？"
+        },
+        {
+          "level": "L3",
+          "text": "把空话改成有主体有抓手的一句话，会怎么写？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲申论五大题型（归纳概括 / 综合分析 / 提出对策 / 贯彻执行 / 申发论述）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；申论辅导以材料拆解、结构、改写为核心，不默认代写整篇；具体题目与表述待人工复核（review_status=draft）。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "shenlun-arg-logic",
+      "title": "分析题论证逻辑",
+      "level": "method",
+      "summary": "分析段落内部要逻辑自洽：先亮明判断，再用材料中的事实/观点支撑，最后回扣。避免只列观点不论证，或观点和论据脱节。",
+      "prerequisites": [
+        "shenlun-arg-analyze"
+      ],
+      "misconceptions": [
+        "只给结论不给材料支撑",
+        "论据和观点之间没有逻辑连接"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "你这一段的判断（观点）是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "材料里哪句话能支撑这个判断？"
+        },
+        {
+          "level": "L3",
+          "text": "观点和论据之间，缺不缺一句过渡连接？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲申论五大题型（归纳概括 / 综合分析 / 提出对策 / 贯彻执行 / 申发论述）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；申论辅导以材料拆解、结构、改写为核心，不默认代写整篇；具体题目与表述待人工复核（review_status=draft）。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "shenlun-arg-material",
+      "title": "依托材料作答",
+      "level": "strategy",
+      "summary": "申论所有题型都以材料为唯一依据。作答时要点必须能从材料找到出处，不可凭外部知识或主观发挥替代材料内容。材料不足时才谨慎补充常识。",
+      "prerequisites": [
+        "shenlun-arg-analyze"
+      ],
+      "misconceptions": [
+        "脱离材料背模板、堆金句",
+        "用外部知识替代材料要点"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "你这句话，在材料第几段能找到依据？"
+        },
+        {
+          "level": "L2",
+          "text": "如果材料没有，你是谨慎补充还是凭印象写的？"
+        },
+        {
+          "level": "L3",
+          "text": "把这条换成从材料摘取的表述，会不会更稳？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲申论五大题型（归纳概括 / 综合分析 / 提出对策 / 贯彻执行 / 申发论述）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；申论辅导以材料拆解、结构、改写为核心，不默认代写整篇；具体题目与表述待人工复核（review_status=draft）。"
+      },
+      "reviewStatus": "draft"
+    }
+  ]
+}

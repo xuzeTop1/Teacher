@@ -1,0 +1,18 @@
+.gradle/
+build/
+local.properties
+.env
+.env.*
+*.jks
+*.keystore
+keystore.properties
+
+/.idea/
+/.kotlin/
+
+/app/build/
+/app/schemas/
+/artifacts/
+
+# 本地调试脚本与产物
+check-provider-status.ps1

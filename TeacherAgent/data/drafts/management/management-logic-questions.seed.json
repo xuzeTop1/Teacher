@@ -1,0 +1,868 @@
+{
+  "subject": "management",
+  "course": "logic",
+  "chapter": "management-logic",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "management-logic-q001",
+      "title": "论证结构识别",
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "一段文字先陈述'近年来远程办公增多'，随后得出'企业应当减少写字楼租赁'。这里的结论是：",
+      "answer": "B",
+      "solutionSteps": [
+        "结论是被支持的主张，而非支撑它的理由。",
+        "前提给出事实，结论给出主张或建议。",
+        "'应当'引导的规范性语句通常是结论。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先找'因为/所以'或'因此/可见'等标记。"
+        },
+        {
+          "level": "L2",
+          "text": "前提是理由，结论是主张，定位被支持的那句。"
+        },
+        {
+          "level": "L3",
+          "text": "结论常含'应当''可见'等词，是被支持的命题。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-logic-001"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 近年来远程办公增多",
+        "B. 企业应当减少写字楼租赁",
+        "C. 远程办公是一种趋势",
+        "D. 写字楼租赁成本高"
+      ]
+    },
+    {
+      "id": "management-logic-q002",
+      "title": "演绎有效性",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "已知前提'所有鲸都是哺乳动物'且'所有哺乳动物都用肺呼吸'，可以必然推出：",
+      "answer": "A",
+      "solutionSteps": [
+        "这是典型的三段论，前提真则结论必然真。",
+        "注意不能把主谓词颠倒推出B。",
+        "C、D与给定前提无必然联系。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "把两个前提连成链：鲸$\\to$哺乳动物$\\to$用肺呼吸。"
+        },
+        {
+          "level": "L2",
+          "text": "演绎推理结论不超出前提范围。"
+        },
+        {
+          "level": "L3",
+          "text": "只有A是从前提必然推出的。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-logic-002"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 所有鲸都用肺呼吸",
+        "B. 用肺呼吸的都是鲸",
+        "C. 鲸比哺乳动物高级",
+        "D. 有的哺乳动物不是鲸"
+      ]
+    },
+    {
+      "id": "management-logic-q003",
+      "title": "归纳推理性质",
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "根据对某品牌100件抽检产品均合格，推断'该品牌产品合格'。这种推理的结论：",
+      "answer": "B",
+      "solutionSteps": [
+        "归纳由特殊到一般，结论超出前提，可错。",
+        "样本再大也仍是概率性结论。",
+        "演绎才具必然性，归纳不具。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "归纳结论是可错的一般性猜想。"
+        },
+        {
+          "level": "L2",
+          "text": "样本代表性决定可信度，非必然性。"
+        },
+        {
+          "level": "L3",
+          "text": "只有B正确描述归纳特性。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-logic-003"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 必然为真",
+        "B. 具有或然性，可能被新证据推翻",
+        "C. 与演绎等价",
+        "D. 不受样本影响"
+      ]
+    },
+    {
+      "id": "management-logic-q004",
+      "title": "类比强度",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "用'人脑像计算机一样处理信息'类比，说明计算机也能'思考'。评价该类比最关键看：",
+      "answer": "B",
+      "solutionSteps": [
+        "类比强度取决于相似属性与目标属性的相关程度。",
+        "表面相似（外观/速度）无关本质。",
+        "先找本质差异再判断。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "类比看的是相似点是否支撑结论中的相似。"
+        },
+        {
+          "level": "L2",
+          "text": "信息处理相似不必然推出都能'思考'。"
+        },
+        {
+          "level": "L3",
+          "text": "关键是比较属性与结论属性的相关性。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-logic-004"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 二者外观是否相似",
+        "B. 信息处理与思考属性的相关性",
+        "C. 计算机运算速度",
+        "D. 人脑重量"
+      ]
+    },
+    {
+      "id": "management-logic-q005",
+      "title": "同一律应用",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "辩论中一方把'自由'理解为'不受法律约束'，另一方理解为'依法享有的权利'，这最可能违反：",
+      "answer": "B",
+      "solutionSteps": [
+        "同一概念在讨论中含义漂移即违反同一律。",
+        "矛盾律管自相矛盾，排中律管二选一。",
+        "这里核心是同词异义。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "同一律要求概念含义在论证中保持一致。"
+        },
+        {
+          "level": "L2",
+          "text": "偷换概念是典型的同一律违反。"
+        },
+        {
+          "level": "L3",
+          "text": "选B。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-logic-005"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 矛盾律",
+        "B. 同一律",
+        "C. 排中律",
+        "D. 充足理由律"
+      ]
+    },
+    {
+      "id": "management-logic-q006",
+      "title": "矛盾律识别",
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "下列哪一对命题不能同真？",
+      "answer": "C",
+      "solutionSteps": [
+        "矛盾命题不能同真也不能同假。",
+        "A、B、D可同真。",
+        "C是矛盾关系，必有一假。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "矛盾关系非此即彼，不能同真。"
+        },
+        {
+          "level": "L2",
+          "text": "C中两命题恰为矛盾。"
+        },
+        {
+          "level": "L3",
+          "text": "选C。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-logic-006"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. '今天下雨'与'今天刮风'",
+        "B. '他是医生'与'他是教师'",
+        "C. '这个数大于5'与'这个数不大于5'",
+        "D. '猫是动物'与'狗是动物'"
+      ]
+    },
+    {
+      "id": "management-logic-q007",
+      "title": "排中律适用",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "对于'这个数是奇数'与'这个数是偶数'，二者关系及排中律适用情况是：",
+      "answer": "B",
+      "solutionSteps": [
+        "整数非奇即偶，二者穷尽且互斥，是矛盾关系。",
+        "矛盾关系不能同假，排中律适用。",
+        "反对关系才可同假。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "奇偶穷尽所有可能，属于矛盾关系。"
+        },
+        {
+          "level": "L2",
+          "text": "排中律用于矛盾命题必有一真。"
+        },
+        {
+          "level": "L3",
+          "text": "选B。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-logic-007"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 反对关系，排中律适用",
+        "B. 矛盾关系，排中律适用",
+        "C. 交叉关系，排中律不适用",
+        "D. 包含关系，排中律不适用"
+      ]
+    },
+    {
+      "id": "management-logic-q008",
+      "title": "内涵与外延",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "'学生'与'大学生'相比，下列说法正确的是：",
+      "answer": "B",
+      "solutionSteps": [
+        "'大学生'增加属性（在大学就读），内涵更深、外延更窄。",
+        "内涵与外延反向变化。",
+        "'学生'外延更大。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "加限定词通常加深内涵、缩小外延。"
+        },
+        {
+          "level": "L2",
+          "text": "'大学生'是'学生'的种概念。"
+        },
+        {
+          "level": "L3",
+          "text": "选B。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-logic-008"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. '学生'内涵更深、外延更窄",
+        "B. '大学生'内涵更深、外延更窄",
+        "C. 二者内涵相同",
+        "D. 二者外延相同"
+      ]
+    },
+    {
+      "id": "management-logic-q009",
+      "title": "概念关系",
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "'教师'与'女性'这两个概念的关系是：",
+      "answer": "C",
+      "solutionSteps": [
+        "有的教师是女性，有的不是；有的女性是教师，有的不是：交叉。",
+        "不是整体包含，也非全异。",
+        "画欧拉图可直观判断。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "交叉指部分重叠。"
+        },
+        {
+          "level": "L2",
+          "text": "两概念互有对方成员，是交叉。"
+        },
+        {
+          "level": "L3",
+          "text": "选C。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-logic-009"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 包含",
+        "B. 同一",
+        "C. 交叉",
+        "D. 全异"
+      ]
+    },
+    {
+      "id": "management-logic-q010",
+      "title": "对当方阵",
+      "type": "diagnostic",
+      "difficulty": 3,
+      "content": "已知'有的鸟会飞'为真，则下列必然为真的是：",
+      "answer": "B",
+      "solutionSteps": [
+        "'有的鸟会飞'真，其矛盾命题'所有鸟不会飞'必假。",
+        "特称真推不出全称真假，也推不出另一特称真假。",
+        "用对当方阵：矛盾关系必一真一假。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先定位'有的S是P'的矛盾是'所有S不是P'。"
+        },
+        {
+          "level": "L2",
+          "text": "矛盾命题不能同真，故后者假。"
+        },
+        {
+          "level": "L3",
+          "text": "只有B必然为真。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-logic-010"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. '所有鸟会飞'为真",
+        "B. '所有鸟不会飞'为假",
+        "C. '有的鸟不会飞'为真",
+        "D. '所有鸟会飞'为假"
+      ]
+    },
+    {
+      "id": "management-logic-q011",
+      "title": "联言选言",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "命题'他学过数学或物理'（相容选言）为假，当且仅当：",
+      "answer": "C",
+      "solutionSteps": [
+        "相容选言至少一真即真，故为假须两假。",
+        "两门都没学才使'或'为假。",
+        "A、B、D都使命题为真。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "相容选言假↔所有支命题都假。"
+        },
+        {
+          "level": "L2",
+          "text": "两门都没学即两支皆假。"
+        },
+        {
+          "level": "L3",
+          "text": "选C。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-logic-011"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 他只学过数学",
+        "B. 他两门都学过",
+        "C. 他两门都没学",
+        "D. 他只学过物理"
+      ]
+    },
+    {
+      "id": "management-logic-q012",
+      "title": "充分必要条件",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "'只有通过体检，才能入职'说明体检是入职的：",
+      "answer": "B",
+      "solutionSteps": [
+        "'只有$p$才$q'$中$p$是$q$的必要条件（$q\\to p$）。",
+        "有体检不一定入职，故非充分。",
+        "入职必然以体检为前提。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "'只有$p$才$q'\\to p$必要。"
+        },
+        {
+          "level": "L2",
+          "text": "必要条件：无p必无q。"
+        },
+        {
+          "level": "L3",
+          "text": "选B。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-logic-012"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 充分条件",
+        "B. 必要条件",
+        "C. 充要条件",
+        "D. 无关条件"
+      ]
+    },
+    {
+      "id": "management-logic-q013",
+      "title": "假言推理",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "已知'若下雨则地湿'。现已知地湿，则：",
+      "answer": "C",
+      "solutionSteps": [
+        "肯定后件（地湿）不能推出前件（下雨），可能由洒水导致。",
+        "有效推理只有肯前件、否后件。",
+        "这是典型肯定后件谬误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "$p\\to q$，已知$q$，无法反推$p$。"
+        },
+        {
+          "level": "L2",
+          "text": "地湿可由其他原因造成。"
+        },
+        {
+          "level": "L3",
+          "text": "选C。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-logic-013"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 必然下过雨",
+        "B. 必然没下雨",
+        "C. 不能必然推出是否下雨",
+        "D. 雨和地湿无关"
+      ]
+    },
+    {
+      "id": "management-logic-q014",
+      "title": "否定代入法",
+      "type": "diagnostic",
+      "difficulty": 3,
+      "content": "题干论证'该法实施后犯罪率下降，故该法有效'。要检验其必然性，最该否定代入的是：",
+      "answer": "B",
+      "solutionSteps": [
+        "检验因果，应尝试否定'下降由该法导致'看论证是否崩塌。",
+        "否定原因与结果的联系是削弱核心。",
+        "否定A只否定事实，不涉及因果推断。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "因果论证的关键联系是'法$\\to$下降'。"
+        },
+        {
+          "level": "L2",
+          "text": "否定该联系最能检验结论。"
+        },
+        {
+          "level": "L3",
+          "text": "选B。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-logic-014"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 犯罪率确实下降",
+        "B. 犯罪率下降不是由该法导致",
+        "C. 该法存在",
+        "D. 该法文本"
+      ]
+    },
+    {
+      "id": "management-logic-q015",
+      "title": "削弱加强",
+      "type": "diagnostic",
+      "difficulty": 3,
+      "content": "论证'多喝牛奶能长高，因为缺钙不利骨骼'。下列哪项削弱最强？",
+      "answer": "B",
+      "solutionSteps": [
+        "B指出他因（基因）并弱化因果联系，属强削弱。",
+        "A是加强，C是个例无关，D无关。",
+        "削弱看是否切断或倒置因果。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "削弱要攻击'牛奶$\\to$长高'的因果链。"
+        },
+        {
+          "level": "L2",
+          "text": "B说明主因非牛奶，强削弱。"
+        },
+        {
+          "level": "L3",
+          "text": "选B。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-logic-015"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 牛奶含钙丰富",
+        "B. 长高主要由基因决定，与钙摄入关系有限",
+        "C. 有人不爱喝牛奶",
+        "D. 牛奶好喝"
+      ]
+    },
+    {
+      "id": "management-logic-q016",
+      "title": "统计样本",
+      "type": "diagnostic",
+      "difficulty": 3,
+      "content": "某调查仅在市中心健身房抽样，得出'国民普遍爱运动'。该推理主要问题是：",
+      "answer": "B",
+      "solutionSteps": [
+        "健身房人群本就偏好运动，样本不能代表全体国民。",
+        "这是典型的方便样本偏差。",
+        "数量未必小，关键是代表性。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "统计推断要求样本随机且代表总体。"
+        },
+        {
+          "level": "L2",
+          "text": "该样本自偏，不能外推。"
+        },
+        {
+          "level": "L3",
+          "text": "选B。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-logic-016"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 样本量太小",
+        "B. 样本不具代表性（选择性偏差）",
+        "C. 统计方法错误",
+        "D. 结论过于谨慎"
+      ]
+    },
+    {
+      "id": "management-logic-q017",
+      "title": "逻辑谬误",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "'专家都这么认为，所以你错了'属于：",
+      "answer": "A",
+      "solutionSteps": [
+        "用专家身份代替理由说服，是诉诸权威谬误。",
+        "非归纳、非类比、非概念偷换。",
+        "合理引用证据与诉诸权威不同。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "靠身份而非论证施压即诉诸权威。"
+        },
+        {
+          "level": "L2",
+          "text": "专家意见可作证据，但不能替代推理。"
+        },
+        {
+          "level": "L3",
+          "text": "选A。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-logic-017"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 诉诸权威",
+        "B. 以偏概全",
+        "C. 滑坡谬误",
+        "D. 偷换概念"
+      ]
+    },
+    {
+      "id": "management-logic-q018",
+      "title": "论证评价",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "评价一个论证，正确的顺序是：",
+      "answer": "B",
+      "solutionSteps": [
+        "规范评价：结构$\\to$前提真$\\to$推理有效$\\to$力度。",
+        "立场先行会带入偏见。",
+        "力度是最后一步。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "评价三步走：结构、前提、推理。"
+        },
+        {
+          "level": "L2",
+          "text": "立场与文采不是评价核心。"
+        },
+        {
+          "level": "L3",
+          "text": "选B。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-logic-018"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 先看结论是否符合我的观点",
+        "B. 先结构、再前提真实性、再推理有效性",
+        "C. 直接判断力度",
+        "D. 只看语言优美度"
+      ]
+    },
+    {
+      "id": "management-logic-q019",
+      "title": "识别漏洞",
+      "type": "diagnostic",
+      "difficulty": 3,
+      "content": "论证：'因为A国落后，所以A国必然动荡'。该论证最明显的漏洞是：",
+      "answer": "B",
+      "solutionSteps": [
+        "把'落后'与'动荡'的相关当必然因果，忽略制度等其他因素。",
+        "属因果不当。",
+        "非样本或概念问题。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "漏洞在于过度推断因果必然性。"
+        },
+        {
+          "level": "L2",
+          "text": "需补其他稳定因素才能成立。"
+        },
+        {
+          "level": "L3",
+          "text": "选B。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-logic-019"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 用词不当",
+        "B. 由相关跳跃到必然因果，忽略其他稳定因素",
+        "C. 样本太小",
+        "D. 概念不清"
+      ]
+    },
+    {
+      "id": "management-logic-q020",
+      "title": "综合推理",
+      "type": "diagnostic",
+      "difficulty": 3,
+      "content": "甲、乙、丙分别来自京、沪、穗，已知甲不在京、丙在穗。则乙来自：",
+      "answer": "A",
+      "solutionSteps": [
+        "丙在穗，甲不在京则只可能沪，余下京归乙。",
+        "用排除法列表即可锁定。",
+        "综合推理靠逐步排除。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先固定丙=穗，再推甲$\\neq$京$\\to$甲=沪，乙=京。"
+        },
+        {
+          "level": "L2",
+          "text": "排除法逐步得解。"
+        },
+        {
+          "level": "L3",
+          "text": "选A。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-logic-020"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 京",
+        "B. 沪",
+        "C. 穗",
+        "D. 无法确定"
+      ]
+    }
+  ]
+}

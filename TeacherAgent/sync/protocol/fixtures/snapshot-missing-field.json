@@ -1,0 +1,35 @@
+{
+  "format": "alerttime-teacher-sync",
+  "schemaVersion": 1,
+  "messageType": "snapshot",
+  "deviceId": "f0a24c19-0f8e-4b6d-9a3c-77e1b2d4c5a6",
+  "snapshotId": "6f9a3b2c-1d4e-4f5a-9b6c-7d8e9f0a1b2c",
+  "generatedAt": 1785600000000,
+  "appVersion": "0.1.0",
+  "protocolCapabilities": { "fullSnapshotV1": true, "proposalsV1": true },
+  "cursor": null,
+  "payload": {
+    "subjects": [
+      {
+        "remoteId": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
+        "name": "英语",
+        "createdAt": 1785500000000,
+        "updatedAt": 1785500000000
+      }
+    ],
+    "weeklyGoals": [],
+    "tasks": [
+      {
+        "remoteId": "c9d0e1f2-a3b4-4c5d-9e6f-7a8b9c0d1e2f",
+        "subjectRemoteId": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
+        "type": 1,
+        "priority": 0,
+        "status": 0,
+        "sortOrder": 0,
+        "createdAt": 1785371000000,
+        "updatedAt": 1785371000000
+      }
+    ],
+    "studySessions": []
+  }
+}

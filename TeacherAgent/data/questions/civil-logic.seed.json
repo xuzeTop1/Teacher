@@ -1,0 +1,164 @@
+{
+  "subject": "xingce",
+  "course": "xingce",
+  "chapter": "civil-logic",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "xingce-logic-q001-translate",
+      "title": "翻译推理：条件方向",
+      "knowledgeNodeIds": [
+        "xingce-logic-translate"
+      ],
+      "type": "logic_translate",
+      "difficulty": 2,
+      "content": "已知：只有拿到资格证，才能上岗。以下哪项一定为真？A. 上岗的人一定拿到了资格证。B. 拿到资格证的人一定上岗了。",
+      "answer": "A 一定为真。「只有 P 才 Q」翻译为 Q→P（上岗→资格证）。由上岗可推出有资格证（肯前必肯后）；拿到资格证不能反推一定上岗（否前无必然）。",
+      "solutionSteps": [
+        "「只有 P 才 Q」= Q→P，即 上岗→资格证。",
+        "A：上岗→资格证，符合肯前必肯后，成立。",
+        "B：资格证→上岗，是肯后，无法推出，不必然。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "「只有…才…」箭头朝哪边画？"
+        },
+        {
+          "level": "L2",
+          "text": "已知「上岗」，能推出什么？"
+        },
+        {
+          "level": "L3",
+          "text": "「拿到证」是前提还是结论，能不能反推？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "xingce-logic-q002-strengthen",
+      "title": "加强削弱：论证结构",
+      "knowledgeNodeIds": [
+        "xingce-logic-strengthen"
+      ],
+      "type": "logic_strengthen",
+      "difficulty": 2,
+      "content": "论点：推广分时电价能引导居民错峰用电。论据：电价随时段浮动后，部分家庭主动调整了用电时间。以下哪项最能加强上述论证？A. 电价浮动增加了电网压力。B. 调整用电时间的家庭切实降低了高峰负荷。",
+      "answer": "B 最能加强。B 在「调整用电时间」与「错峰（降低高峰负荷）」之间搭桥，直接支撑论点；A 反而削弱或无关。",
+      "solutionSteps": [
+        "找论点：分时电价→引导错峰。论据：家庭调整用电时间。",
+        "论据到论点存在跳跃：调整时间是否等于错峰成功？",
+        "B 补上这一环（调整时间→降低高峰负荷），属搭桥加强。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "论点和论据分别是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "论据和论点之间缺了哪一步连接？"
+        },
+        {
+          "level": "L3",
+          "text": "哪个选项正好补上这个连接？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "xingce-logic-q003-analogy",
+      "title": "类比推理：词项关系",
+      "knowledgeNodeIds": [
+        "xingce-logic-analogy"
+      ],
+      "type": "logic_analogy",
+      "difficulty": 1,
+      "content": "树木：森林",
+      "answer": "关系为组成/集合：多个「树木」构成「森林」（部分与整体）。类比应选「部分—整体」关系的一组，如「水滴：海洋」。",
+      "solutionSteps": [
+        "判断两词关系：树木是森林的组成部分。",
+        "确定关系类型：部分与整体（集合）。",
+        "在选项中找同类型且顺序一致的一组。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "两个词是部分与整体，还是因果、并列？"
+        },
+        {
+          "level": "L2",
+          "text": "顺序是「小→大」还是「大→小」？"
+        },
+        {
+          "level": "L3",
+          "text": "选项里哪组也是「部分组成整体」且顺序一致？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "xingce-logic-q004-definition",
+      "title": "定义判断：要件拆分",
+      "knowledgeNodeIds": [
+        "xingce-logic-definition"
+      ],
+      "type": "logic_definition",
+      "difficulty": 2,
+      "content": "「首店经济」指某品牌在特定区域开设的第一家门店所带来的经济效应。下列属于首店经济的是：A. 某品牌在本地开出第一家门店，带动周边客流。B. 某品牌在本地开第三家分店。",
+      "answer": "A 属于。要件：特定区域 + 第一家门店 + 带来经济效应。A 满足「第一家」且「带动客流（经济效应）」；B 是第三家，不满足「第一」。",
+      "solutionSteps": [
+        "拆定义要件：①特定区域；②第一家门店；③带来经济效应。",
+        "A：第一家 + 带动客流，三项均满足。",
+        "B：第三家，违反要件②，排除。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "定义里有哪些限定要件？"
+        },
+        {
+          "level": "L2",
+          "text": "选项 B 违反了哪个要件？"
+        },
+        {
+          "level": "L3",
+          "text": "用要件逐条核对 A，是不是全中？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。"
+      },
+      "reviewStatus": "draft"
+    }
+  ]
+}

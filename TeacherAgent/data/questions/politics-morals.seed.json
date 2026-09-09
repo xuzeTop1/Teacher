@@ -1,0 +1,886 @@
+{
+  "subject": "politics",
+  "course": "morals",
+  "chapter": "politics-morals",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "politics-morals-q001",
+      "title": "理想信念的作用",
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "理想信念是人生精神的核心，对人生发展具有重要指导作用。下列关于理想信念作用的理解，正确的是：",
+      "options": [
+        "A. 理想信念是虚无缥缈的，没有实际意义",
+        "B. 理想信念指引人生奋斗方向，提供前进动力",
+        "C. 理想信念就是空想，不能指导实际行动",
+        "D. 理想信念只对年轻人有意义，对成年人没有意义"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "理想信念是人们在实践中形成的、有实现可能性的对未来社会和自身发展目标的向往与追求，它能够指引人生奋斗方向、提供前进动力、提高精神境界，B选项正确。",
+        "理想信念不是虚无缥缈的，它是建立在对社会发展客观规律正确认识基础上的价值追求，有重要的实际意义，A选项错误。",
+        "理想信念不是空想，它能够指导实际行动，是实践的精神动力，C选项错误。",
+        "理想信念对各个年龄段的人都有重要意义，不是只对年轻人有意义，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "想一想：为什么有些人面对困难能坚持不懈，有些人却轻易放弃？支撑他们的力量是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "理想信念的作用体现在三个方面：指引方向（奋斗目标）、提供动力（克服困难）、提升境界（精神追求）。"
+        },
+        {
+          "level": "L3",
+          "text": "判断理想信念的作用，反对'虚无无用论'和'空想无用论'两种错误认识。理想信念是科学的、有实现可能性的价值追求。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-morals-001"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-morals-q002",
+      "title": "中国精神的内涵",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "中国精神是民族精神和时代精神的统一。下列关于中国精神内涵的理解，正确的是：",
+      "options": [
+        "A. 中国精神就是以爱国主义为核心的民族精神",
+        "B. 中国精神就是以改革创新为核心的时代精神",
+        "C. 中国精神是民族精神和时代精神的统一",
+        "D. 中国精神和世界各国民族精神没有区别"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "中国精神是民族精神和时代精神的统一：以爱国主义为核心的民族精神是根，以改革创新为核心的时代精神是魂，两者相辅相成，C选项正确。",
+        "A、B选项都只说了一半，中国精神既包括民族精神，也包括时代精神，两者缺一不可。",
+        "中国精神有鲜明的中国特色，和世界其他国家民族精神有共性也有个性，不是没有区别，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "中华民族在几千年的历史中能够生生不息，当代中国能够快速发展，这两种精神力量之间有什么关系？"
+        },
+        {
+          "level": "L2",
+          "text": "中国精神是'根'（民族精神）和'魂'（时代精神）的统一，两者相辅相成，不能割裂。"
+        },
+        {
+          "level": "L3",
+          "text": "分析中国精神的内涵，抓住'爱国主义'（民族精神核心）和'改革创新'（时代精神核心）两个关键词。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-morals-002"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-morals-q003",
+      "title": "社会主义核心价值观的三个层面",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "社会主义核心价值观的基本内容包括三个层面。下列关于这三个层面的理解，正确的是：",
+      "options": [
+        "A. 国家层面：爱国、敬业、诚信、友善",
+        "B. 社会层面：富强、民主、文明、和谐",
+        "C. 公民层面：爱国、敬业、诚信、友善",
+        "D. 社会主义核心价值观的三个层面是相互独立的，没有联系"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "社会主义核心价值观的公民层面价值准则是：爱国、敬业、诚信、友善，C选项正确。",
+        "国家层面的价值目标是：富强、民主、文明、和谐，A选项把公民层面和国家层面搞反了，错误。",
+        "社会层面的价值取向是：自由、平等、公正、法治，B选项把国家层面和社会层面搞混了，错误。",
+        "社会主义核心价值观的三个层面是相互联系、相互贯通的有机整体，不是相互独立的，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "社会主义核心价值观有24个字，它们分别属于哪个层面？国家、社会、公民三个层面的侧重点有什么不同？"
+        },
+        {
+          "level": "L2",
+          "text": "记住对应关系是关键：国家（目标）$\\to$富强民主文明和谐；社会（规则）$\\to$自由平等公正法治；公民（准则）$\\to$爱国敬业诚信友善。"
+        },
+        {
+          "level": "L3",
+          "text": "分析社会主义核心价值观，从三个层面理解其内在逻辑：国家层面回答'建设什么样的国家'，社会层面回答'建设什么样的社会'，公民层面回答'培育什么样的公民'。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-morals-003"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-morals-q004",
+      "title": "道德的本质",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "道德是反映社会经济关系的特殊意识形态。下列关于道德本质的理解，正确的是：",
+      "options": [
+        "A. 道德和法律完全一样，都是靠国家强制力保证实施的",
+        "B. 道德是固定不变的，和经济社会发展没有关系",
+        "C. 道德反映社会经济关系，并随着经济社会的发展而变化",
+        "D. 道德就是个人的主观喜好，没有客观标准"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "道德是反映社会经济关系的特殊意识形态，社会经济关系的变化必然引起道德的变化，C选项正确。",
+        "道德和法律有本质区别：法律靠国家强制力保证实施，道德主要靠社会舆论、传统习俗和内心信念来维持，A选项错误。",
+        "道德不是固定不变的，它随着经济社会的发展而变化，B选项错误。",
+        "道德虽有一定的主观性，但有客观的社会评价标准，不是纯粹的个人主观喜好，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "道德和法律都是规范人的行为，它们有什么区别？一个靠制裁，一个靠什么来维持？"
+        },
+        {
+          "level": "L2",
+          "text": "道德的本质要从三个层面理解：意识形态（反映经济关系）、调节方式（特殊方式）、实践精神（知行合一）。"
+        },
+        {
+          "level": "L3",
+          "text": "分析道德的本质，抓住'反映社会经济关系'这个关键点：经济关系变化$\\to$道德变化，这是唯物史观的基本原理。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-morals-004"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-morals-q005",
+      "title": "社会公德的主要内容",
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "社会公德是人们在社会交往和公共生活中应该遵守的行为准则。下列属于社会公德主要内容的是：",
+      "options": [
+        "A. 爱岗敬业、诚实守信",
+        "B. 尊老爱幼、夫妻和睦",
+        "C. 文明礼貌、助人为乐、爱护公物、保护环境、遵纪守法",
+        "D. 爱国、敬业、诚信、友善"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "社会公德的主要内容是：文明礼貌、助人为乐、爱护公物、保护环境、遵纪守法，C选项正确。",
+        "爱岗敬业、诚实守信是社会主义职业道德的内容，不是社会公德，A选项错误。",
+        "尊老爱幼、夫妻和睦是家庭美德的内容，不是社会公德，B选项错误。",
+        "爱国、敬业、诚信、友善是社会主义核心价值观公民层面的内容，不是社会公德的具体规范，D选项不准确。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "在公共场所，我们应该遵守哪些行为规范？这些规范针对的是什么场景？"
+        },
+        {
+          "level": "L2",
+          "text": "社会公德针对的是'公共生活'场景，不是职业场景（职业道德）或家庭场景（家庭美德）。"
+        },
+        {
+          "level": "L3",
+          "text": "区分四种道德领域：社会公德（公共生活）、职业道德（职业生活）、家庭美德（家庭生活）、个人品德（个人修养）。场景不同，规范不同。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-morals-006"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-morals-q006",
+      "title": "社会主义职业道德的最高境界",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "社会主义职业道德的主要内容包括爱岗敬业、诚实守信、办事公道、服务群众、奉献社会。其中，社会主义职业道德的最高境界是：",
+      "options": [
+        "A. 爱岗敬业",
+        "B. 诚实守信",
+        "C. 办事公道",
+        "D. 奉献社会"
+      ],
+      "answer": "D",
+      "solutionSteps": [
+        "奉献社会是社会主义职业道德的最高境界，它要求从业者在职业活动中树立为社会、为他人作奉献的职业精神，D选项正确。",
+        "爱岗敬业是社会主义职业道德的最基本要求，不是最高境界，A选项不准确。",
+        "诚实守信、办事公道都是职业道德的重要要求，但不是最高境界，B、C选项不准确。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "在职业活动中，只是做好自己的本职工作，和主动为社会、为他人作奉献，这两者的境界有什么不同？"
+        },
+        {
+          "level": "L2",
+          "text": "社会主义职业道德有层次性：最基本的要求是爱岗敬业，最高的境界是奉献社会。"
+        },
+        {
+          "level": "L3",
+          "text": "分析社会主义职业道德，抓住'基本要求和最高境界'两个层面：从'做好本职工作'到'为社会奉献'，体现了职业道德的层次性。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-morals-007"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-morals-q007",
+      "title": "个人品德在社会道德建设中的作用",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "个人品德是通过社会道德教育和个人自觉的道德修养所形成的稳定的心理状态和行为习惯。下列关于个人品德在社会道德建设中作用的理解，正确的是：",
+      "options": [
+        "A. 个人品德是天生的，对社会道德建设没有影响",
+        "B. 个人品德是社会公德、职业道德、家庭美德建设的基础",
+        "C. 个人品德只是私事，和社会道德建设没有关系",
+        "D. 社会道德建设只需要完善制度，不需要关注个人品德"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "个人品德在社会道德建设中具有基础性作用：个人品德是社会公德、职业道德、家庭美德建设的基础，是提高社会整体道德水平的前提，B选项正确。",
+        "个人品德不是天生的，而是通过后天道德修养形成的，它也对社会道德建设有重要影响，A选项错误。",
+        "个人品德不是私事，千千万万个人的品德汇聚起来，就是整个社会的道德风貌，C选项错误。",
+        "社会道德建设既要完善制度，也要关注个人品德养成，两者不可偏废，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "为什么有些人能做到'慎独'（没人监督时也严守道德）？这种品质对社会道德建设有什么意义？"
+        },
+        {
+          "level": "L2",
+          "text": "个人品德是社会道德建设的'基础工程'：没有个人品德的提升，社会公德、职业道德、家庭美德建设就缺乏坚实基础。"
+        },
+        {
+          "level": "L3",
+          "text": "分析个人品德的作用，抓住'基础性'这个关键词：个人品德$\\to$家庭美德$\\to$职业道德$\\to$社会公德，这是一个由小到大、由内到外的道德建设逻辑链条。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-morals-009"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-morals-q008",
+      "title": "宪法的最高法律效力",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "宪法是国家的根本法，具有最高的法律地位、法律权威、法律效力。下列关于宪法最高法律效力的理解，正确的是：",
+      "options": [
+        "A. 宪法和其他法律地位平等，没有高低之分",
+        "B. 一切法律、行政法规和地方性法规都不得同宪法相抵触",
+        "C. 宪法离日常生活很远，和普通百姓没有关系",
+        "D. 宪法的法律效力只是象征性的，没有实际约束力"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "宪法具有最高法律效力，一切法律、行政法规和地方性法规都不得同宪法相抵触，否则无效，B选项正确。",
+        "宪法是根本法，具有最高法律效力，其他法律都必须依据宪法制定，不得同宪法相抵触，A选项错误。",
+        "宪法规定了公民的基本权利和义务，和普通百姓的日常生活关系密切，不是没有关系，C选项错误。",
+        "宪法的法律效力是真实的、有约束力的，不是象征性的，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "宪法被称为'根本大法'，它和其他法律有什么不同？为什么说它具有最高法律效力？"
+        },
+        {
+          "level": "L2",
+          "text": "宪法之所以具有最高法律效力，因为它规定国家最根本的问题，是一切法律的立法基础。"
+        },
+        {
+          "level": "L3",
+          "text": "分析宪法的最高法律效力，抓住'立法基础'（其他法律依据宪法制定）、'不得抵触'（违宪无效）、'监督保障'（宪法监督制度）三个要点。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-morals-011"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-morals-q009",
+      "title": "中国特色社会主义法治体系的构成",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "中国特色社会主义法治体系是一个系统工程。下列关于中国特色社会主义法治体系构成的理解，正确的是：",
+      "options": [
+        "A. 中国特色社会主义法治体系就是制定更多法律",
+        "B. 中国特色社会主义法治体系包括法律规范、法治实施、法治监督、法治保障、党内法规五个子系统",
+        "C. 中国特色社会主义法治体系建设只是立法机关的事",
+        "D. 中国特色社会主义法治体系建设可以在很短时间内完成"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "中国特色社会主义法治体系是一个由多个子系统构成的复杂系统，包括：完备的法律规范体系、高效的法治实施体系、严密的法治监督体系、有力的法治保障体系、完善的党内法规体系，B选项正确。",
+        "中国特色社会主义法治体系不仅仅是立法（制定法律），还包括执法、司法、守法、监督等各个环节，A选项不准确。",
+        "中国特色社会主义法治体系建设需要立法、执法、司法、守法各方面共同努力，不是只是立法机关的事，C选项错误。",
+        "中国特色社会主义法治体系建设是一个长期历史过程，不可能在很短时间内完成，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "有了法律，是不是就等于有了法治？法律制定出来后，还需要什么条件才能真正发挥作用？"
+        },
+        {
+          "level": "L2",
+          "text": "中国特色社会主义法治体系是一个系统工程，不仅包括立法，还包括执法、司法、守法、监督等各个环节。"
+        },
+        {
+          "level": "L3",
+          "text": "分析中国特色社会主义法治体系，抓住'五个体系'：法律规范、法治实施、法治监督、法治保障、党内法规。五者相辅相成，缺一不可。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-morals-012"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-morals-q010",
+      "title": "法治思维的基本内容",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "法治思维是以法治价值和法治精神为导向的思维模式。下列关于法治思维基本内容的理解，正确的是：",
+      "options": [
+        "A. 法治思维就是死抠法律条文",
+        "B. 法治思维只适用于法律工作者",
+        "C. 法治思维包括法律至上、权力制约、公平正义、人权保障、正当程序等内容",
+        "D. 法治思维和人治思维没有本质区别"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "法治思维是以法治价值和法治精神为导向的思维模式，其基本内容包括：法律至上、权力制约、公平正义、人权保障、正当程序，C选项正确。",
+        "法治思维不是死抠法律条文，它包含公平正义、人权保障等价值追求，A选项错误。",
+        "法治思维适用于所有公民，不是只适用于法律工作者，B选项错误。",
+        "法治思维和人治思维有本质区别：法治思维坚持法律至上，人治思维坚持个人意志至上，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "遇到矛盾和纠纷时，是找关系、托人情，还是走法律途径？这两种不同的处理方式反映了什么思维差异？"
+        },
+        {
+          "level": "L2",
+          "text": "法治思维不是死抠条文，而是以法治价值和法治精神为导向的思维模式，它包含公平正义、人权保障等价值追求。"
+        },
+        {
+          "level": "L3",
+          "text": "分析法治思维的内容，抓住五个要点：法律至上、权力制约、公平正义、人权保障、正当程序。这五者是法治思维的核心要义。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-morals-013"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-morals-q011",
+      "title": "法律权利和法律义务的关系",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "法律权利和法律义务是相互依存、相互促进、相互统一的关系。下列关于权利义务关系的理解，正确的是：",
+      "options": [
+        "A. 法律只规定权利，义务是道德的事",
+        "B. 权利和义务是完全对立的，不能统一",
+        "C. 没有权利就无所谓义务，没有义务也就没有权利",
+        "D. 只享受权利不履行义务是合理的"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "法律权利和法律义务是相互依存、相互促进、相互统一的关系：没有权利就无所谓义务，没有义务也就没有权利，C选项正确。",
+        "法律既规定权利，也规定义务，A选项错误。",
+        "权利和义务不是完全对立的，而是统一的，坚持权利义务相统一是法治的基本原则，B选项错误。",
+        "只享受权利不履行义务，违背了权利义务相统一的原则，是不合理的，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "享受权利的同时，要不要履行义务？只享受权利不履行义务，对社会来说意味着什么？"
+        },
+        {
+          "level": "L2",
+          "text": "法律权利和法律义务是相互依存、相互促进的关系：权利是义务的前提，义务是权利的保障。"
+        },
+        {
+          "level": "L3",
+          "text": "分析权利义务关系，坚持'相统一'原则：公民在行使权利时，不得损害国家、社会、集体的利益和其他公民的合法的自由和权利。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-morals-014"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-morals-q012",
+      "title": "公民行使权利的边界",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "我国宪法法律保障公民享有广泛的权利。但公民在行使权利时，也有一定的边界。下列关于公民行使权利边界的理解，正确的是：",
+      "options": [
+        "A. 公民权利是绝对的，没有任何限制",
+        "B. 公民在行使权利时，不得损害国家、社会、集体的利益和其他公民的合法权利",
+        "C. 公民想怎么行使权利就怎么行使，别人无权干涉",
+        "D. 公民权利只写在宪法上，实际上没有保障"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "公民在行使权利时，必须遵守宪法和法律的规定，不得损害国家、社会、集体的利益和其他公民的合法的自由和权利，B选项正确。",
+        "公民权利不是绝对的，有一定的边界，A选项错误。",
+        "公民行使权利必须在法律框架内，不能损害他人合法权益，不是想怎么行使就怎么行使，C选项错误。",
+        "我国宪法法律规定的公民权利，有法律制度保障，不是没有实际保障的，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "公民享有言论自由，但是不是可以在网上随意造谣诽谤他人？权利和自由的边界在哪里？"
+        },
+        {
+          "level": "L2",
+          "text": "公民权利不是绝对的，行使权利不得损害国家、社会、集体的利益和其他公民的合法权利。"
+        },
+        {
+          "level": "L3",
+          "text": "分析公民行使权利的边界，抓住'权利有边界'这个关键点：自由有底线，权利有边界。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-morals-015"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-morals-q013",
+      "title": "尊法学法守法用法的内在联系",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "尊法学法守法用法是全面依法治国对公民的基本要求。下列关于尊法学法守法用法内在联系的理解，正确的是：",
+      "options": [
+        "A. 尊法学法守法用法是相互独立的，没有联系",
+        "B. 尊法是前提，学法是基础，守法是核心，用法是目的",
+        "C. 只要守法就够了，不需要尊法和学法",
+        "D. 尊法学法守法用法只是对普通百姓的要求"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "尊法学法守法用法是一个有机整体：尊法（尊重法律、信仰法治）是前提，学法（学习法律知识）是基础，守法（严格遵守法律）是核心，用法（运用法律维护权益）是目的，B选项正确。",
+        "尊法学法守法用法是相互联系、相互促进的有机整体，不是相互独立的，A选项错误。",
+        "尊法学法守法用法四个方面缺一不可，只守法不尊法学法，是被动守法，不能真正树立法治观念，C选项错误。",
+        "尊法学法守法用法是对全体公民的要求，包括领导干部，不是只对普通百姓的要求，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "为什么有些人自己的合法权益受到侵害时，不知道用法律武器来保护自己？这说明了什么？"
+        },
+        {
+          "level": "L2",
+          "text": "尊法学法守法用法是一个有机整体：尊法是前提，学法是基础，守法是核心，用法是目的。"
+        },
+        {
+          "level": "L3",
+          "text": "分析尊法学法守法用法，抓住'观念—知识—行为—能力'这个逻辑链条：树立法治观念$\\to$学习法律知识$\\to$养成守法习惯$\\to$提高用法能力。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-morals-017"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-morals-q014",
+      "title": "依法履行义务的意义",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "公民依法履行义务，是法治社会的基本要求。下列关于依法履行义务意义的理解，正确的是：",
+      "options": [
+        "A. 履行义务是被动服从，没有积极意义",
+        "B. 履行义务是享受权利的前提和保障",
+        "C. 履行义务只是普通百姓的事，名人可以例外",
+        "D. 履行义务就是牺牲自己的全部利益"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "履行义务是享受权利的前提和保障，只有每个公民都自觉履行义务，社会才能正常运转，每个人的权利才能真正实现，B选项正确。",
+        "履行义务不是被动服从，而是公民责任的体现，有重要的积极意义，A选项错误。",
+        "依法履行义务是对全体公民的要求，任何人不得例外，C选项错误。",
+        "履行义务不是牺牲全部利益，而是在享受权利的同时，承担法律规定的相应责任，D选项不准确。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "为什么依法纳税、依法服兵役是每个公民的义务？如果大家都不履行义务，社会会变成什么样子？"
+        },
+        {
+          "level": "L2",
+          "text": "履行义务不是被动服从，而是公民责任的体现。没有义务的履行，就没有权利的保障。"
+        },
+        {
+          "level": "L3",
+          "text": "分析依法履行义务的意义，从个人（责任体现）和社会（正常运转的前提）两个层面理解。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-morals-019"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-morals-q015",
+      "title": "法治中国建设的目标和任务",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "法治中国建设是全面依法治国的奋斗目标。下列关于法治中国建设目标和任务的理解，正确的是：",
+      "options": [
+        "A. 法治中国建设的目标是在2035年基本建成法治国家、法治政府、法治社会",
+        "B. 法治中国建设只是立法机关的事",
+        "C. 法治中国建设可以在很短时间内完成",
+        "D. 法治中国建设不需要关注党内法规体系建设"
+      ],
+      "answer": "A",
+      "solutionSteps": [
+        "法治中国建设的目标是：到2035年，法治国家、法治政府、法治社会基本建成，中国特色社会主义法治体系基本形成，A选项正确。",
+        "法治中国建设需要科学立法、严格执法、公正司法、全民守法四个方面共同推进，不是只是立法机关的事，B选项错误。",
+        "法治中国建设是一个长期历史过程，不可能在很短时间内完成，C选项错误。",
+        "党内法规体系建设是中国特色社会主义法治体系的重要组成部分，法治中国建设必须关注党内法规体系建设，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "建设法治中国，仅仅是立法机关制定更多法律就够了吗？还需要哪些方面的努力？"
+        },
+        {
+          "level": "L2",
+          "text": "法治中国建设是一个系统工程，需要科学立法、严格执法、公正司法、全民守法四个方面共同推进。"
+        },
+        {
+          "level": "L3",
+          "text": "分析法治中国建设，抓住'共同推进'（依法治国、依法执政、依法行政）和'一体建设'（法治国家、法治政府、法治社会）两个基本路径。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-morals-020"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-morals-q016",
+      "title": "中华传统美德的创造性转化和创新性发展",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "中华传统美德是中华文化精髓。对待中华传统美德的正确态度是：",
+      "options": [
+        "A. 中华传统美德已经过时，应该全盘否定",
+        "B. 中华传统美德全是精华，应该全盘继承",
+        "C. 坚持古为今用、推陈出新，实现创造性转化和创新性发展",
+        "D. 中华传统美德和当代社会完全没有关系"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "对待中华传统美德，要坚持古为今用、推陈出新，实现创造性转化和创新性发展，C选项正确。",
+        "中华传统美德形成于古代社会，其中有精华也有糟粕，不能全盘否定，也不能全盘继承，A、B选项错误。",
+        "中华传统美德中的许多内容（如仁爱、诚信、正义）仍然符合时代要求，可以古为今用，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "中华文化延续了五千年，其中蕴含的道德智慧，在今天还有没有价值？哪些仍然适用？"
+        },
+        {
+          "level": "L2",
+          "text": "对待中华传统美德，要坚持'创造性转化、创新性发展'的方针，不能全盘继承，也不能全盘否定。"
+        },
+        {
+          "level": "L3",
+          "text": "分析中华传统美德的当代价值，关键看哪些美德（如仁爱、诚信、正义）仍然符合时代要求，可以古为今用。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-morals-005"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-morals-q017",
+      "title": "爱国主义的时代要求",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "爱国主义是中华民族精神的核心。在当代中国，弘扬爱国主义精神，必须坚持爱国主义和社会主义相统一。下列关于爱国主义和社会主义关系的理解，正确的是：",
+      "options": [
+        "A. 爱国主义和社会主义是对立的",
+        "B. 在当代中国，爱国主义首先体现在对社会主义中国的热爱上",
+        "C. 爱国主义就是盲目排外，拒绝学习外国优秀文化",
+        "D. 爱国主义已经过时，不需要再弘扬"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "在当代中国，爱国主义和社会主义是统一的，爱国主义首先体现在对社会主义中国的热爱上，B选项正确。",
+        "爱国主义和社会主义不是对立的，在当代中国，两者是统一的，A选项错误。",
+        "爱国主义不是盲目排外，我们坚持爱国主义，也主张学习外国优秀文化和先进技术，C选项错误。",
+        "爱国主义在任何时代都有重要意义，没有过时，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "在当代中国，爱国应该爱什么样的中国？爱国主义和爱社会主义是什么关系？"
+        },
+        {
+          "level": "L2",
+          "text": "在当代中国，爱国主义和社会主义是统一的。爱国就要爱社会主义中国，这是时代的要求。"
+        },
+        {
+          "level": "L3",
+          "text": "分析爱国主义的时代要求，抓住'爱国主义和社会主义相统一'这个核心要点。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-morals-002"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-morals-q018",
+      "title": "社会主义核心价值观的培育和践行",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "社会主义核心价值观是当代中国精神的集中体现。下列关于培育和践行社会主义核心价值观的理解，正确的是：",
+      "options": [
+        "A. 社会主义核心价值观的培育和践行只是口号宣传",
+        "B. 社会主义核心价值观的培育和践行需要融入社会生活各个方面",
+        "C. 社会主义核心价值观和每个人的日常生活没有关系",
+        "D. 社会主义核心价值观只需要写在文件上，不需要落实"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "社会主义核心价值观的培育和践行，需要融入社会生活各个方面，落实到经济发展实践和社会治理中，让人民群众在日常活动中感知它、领悟它，B选项正确。",
+        "社会主义核心价值观的培育和践行不是简单的口号宣传，而要落实到实际行动中，A选项不准确。",
+        "社会主义核心价值观和每个人的日常生活关系密切，它指导人们的言行，C选项错误。",
+        "社会主义核心价值观不仅要写在文件上，更要落实到实践中，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "社会主义核心价值观的24个字，和普通人的日常生活有什么关系？它如何指导人们的言行？"
+        },
+        {
+          "level": "L2",
+          "text": "社会主义核心价值观的培育和践行，要融入社会生活，让人们在实践中感知、领悟、践行。"
+        },
+        {
+          "level": "L3",
+          "text": "分析社会主义核心价值观的培育和践行，抓住'融入'这个关键词：融入社会生活、融入经济发展、融入社会治理。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-morals-003"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-morals-q019",
+      "title": "法律运行的主要环节",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "我国社会主义法律的运行包括多个环节。下列关于法律运行主要环节的理解，正确的是：",
+      "options": [
+        "A. 法律运行只包括立法这一个环节",
+        "B. 我国社会主义法律的运行包括法律制定、法律遵守、法律执行、法律适用四个环节",
+        "C. 法律制定出来后，法律运行就结束了",
+        "D. 法律适用只是法院的事，和其他机关没有关系"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "我国社会主义法律的运行包括四个环节：法律制定（立法）、法律遵守（守法）、法律执行（执法）、法律适用（司法），B选项正确。",
+        "法律运行包括立法、守法、执法、司法四个环节，不只是立法，A选项错误。",
+        "法律制定出来后，还要经过守法、执法、司法等环节，法律运行才完整，C选项错误。",
+        "法律适用涉及多个机关的协作配合，不只是法院的事，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "法律制定出来后，它是怎么实际发挥作用的？普通百姓、行政机关、司法机关分别在法律运行中扮演什么角色？"
+        },
+        {
+          "level": "L2",
+          "text": "法律运行是一个从立法到守法、执法、司法的完整过程，四个环节缺一不可。"
+        },
+        {
+          "level": "L3",
+          "text": "分析法律运行，抓住'四个环节'：立法（制定法律）、守法（全体公民遵守）、执法（行政机关执行）、司法（司法机关适用）。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-morals-010"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-morals-q020",
+      "title": "道德和法律的辩证关系",
+      "type": "diagnostic",
+      "difficulty": 3,
+      "content": "道德和法律是调节人们思想行为、协调人际关系、维护社会秩序的两种基本社会规范。下列关于道德和法律辩证关系的理解，正确的是：",
+      "options": [
+        "A. 道德和法律完全相同，没有任何区别",
+        "B. 道德和法律完全对立，不能同时发挥作用",
+        "C. 道德和法律既有区别又有联系，相辅相成、相互促进",
+        "D. 只需要法律就够了，道德没有实际作用"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "道德和法律既有区别（产生方式、实施保障、调整范围不同），又有联系（内容上相互渗透、功能上相辅相成），两者共同发挥作用，C选项正确。",
+        "道德和法律有本质区别，不是完全相同的，A选项错误。",
+        "道德和法律不是对立的，而是相辅相成的，能够共同发挥作用，B选项错误。",
+        "道德和法律各自有不可替代的作用，不能互相取代，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "有些事是违法的，但不一定违反道德；有些事违反道德，但不一定违法。这说明道德和法律有什么关系？"
+        },
+        {
+          "level": "L2",
+          "text": "道德和法律的区别：产生方式（自发形成 vs 国家制定）、实施保障（舆论信念 vs 国家强制力）、调整范围（更广 vs 较窄）。"
+        },
+        {
+          "level": "L3",
+          "text": "分析道德和法律的辩证关系，从'区别'（三者：产生、保障、范围）和'联系'（内容渗透、功能互补）两个层面入手。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-morals-004",
+        "politics-morals-010"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    }
+  ]
+}

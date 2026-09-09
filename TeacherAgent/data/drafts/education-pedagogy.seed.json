@@ -1,0 +1,686 @@
+{
+  "subject": "education",
+  "course": "pedagogy",
+  "chapter": "education-pedagogy",
+  "status": "draft",
+  "nodes": [
+    {
+      "id": "education-pedagogy-001",
+      "title": "教育的本质",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "教育是有目的地培养人的社会活动，其质的规定性在于'培养人'，区别于一般的社会影响。",
+      "prerequisites": [],
+      "misconceptions": [
+        "把教育等同于任意社会影响",
+        "认为教育只有学校一种形式"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "想想哪些活动算'教育'，哪些只是'影响'？"
+        },
+        {
+          "level": "L2",
+          "text": "教育的核心词是'有目的'和'培养人'。"
+        },
+        {
+          "level": "L3",
+          "text": "判断一个活动是否教育，看它是否以培养人为目的。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "education-pedagogy-002",
+      "title": "教育的基本要素",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "教育由教育者、受教育者与教育中介（内容、方法、媒介）三要素构成，彼此互动。",
+      "prerequisites": [
+        "education-pedagogy-001"
+      ],
+      "misconceptions": [
+        "忽视教育中介",
+        "把学生当被动容器"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "三者中少了'中介'，教学能发生吗？"
+        },
+        {
+          "level": "L2",
+          "text": "中介包括课程、方法、环境等。"
+        },
+        {
+          "level": "L3",
+          "text": "要素间是互动关系而非单向。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "education-pedagogy-003",
+      "title": "教育目的",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "教育目的是教育活动预期达到的结果，规定培养人的质量规格，受制于社会与人的发展。",
+      "prerequisites": [
+        "education-pedagogy-001"
+      ],
+      "misconceptions": [
+        "把教育目的与教育目标混同",
+        "认为目的纯主观"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "'目的'和'目标'差在哪？目的更根本。"
+        },
+        {
+          "level": "L2",
+          "text": "目的受社会需要与个体发展双重制约。"
+        },
+        {
+          "level": "L3",
+          "text": "先定位它是总方向还是具体指标。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "education-pedagogy-004",
+      "title": "教育与社会发展",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "教育受生产力与政治经济制度制约，又通过育人反作用于社会；二者是制约与促进的辩证关系。",
+      "prerequisites": [
+        "education-pedagogy-003"
+      ],
+      "misconceptions": [
+        "认为教育决定一切",
+        "忽视社会制约"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "教育能脱离经济基础独立发展吗？不能。"
+        },
+        {
+          "level": "L2",
+          "text": "教育与社会的核心是辩证关系。"
+        },
+        {
+          "level": "L3",
+          "text": "既看制约也看反作用。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "education-pedagogy-005",
+      "title": "教育与人的发展",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "人的发展受遗传、环境、教育及主观能动性影响；教育需遵循身心发展规律如顺序性、阶段性。",
+      "prerequisites": [
+        "education-pedagogy-001"
+      ],
+      "misconceptions": [
+        "环境决定论",
+        "忽视阶段性"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "同样的教育对不同年龄为何效果不同？因阶段性。"
+        },
+        {
+          "level": "L2",
+          "text": "顺序性要求循序渐进。"
+        },
+        {
+          "level": "L3",
+          "text": "主观能动性是内因。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "education-pedagogy-006",
+      "title": "课程的概念与类型",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "课程是学校教育内容及其进程安排；分学科课程与活动课程、分必修与选修等类型。",
+      "prerequisites": [
+        "education-pedagogy-003"
+      ],
+      "misconceptions": [
+        "课程等于教材",
+        "混淆课程与教学"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "教材是课程的全部吗？不是。"
+        },
+        {
+          "level": "L2",
+          "text": "学科与活动课程侧重点不同。"
+        },
+        {
+          "level": "L3",
+          "text": "课程是内容与进程而非仅书本。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "education-pedagogy-007",
+      "title": "学科课程与活动课程",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "学科课程按知识逻辑组织，系统性强；活动课程以学生经验为中心，重直接体验。",
+      "prerequisites": [
+        "education-pedagogy-006"
+      ],
+      "misconceptions": [
+        "把二者对立",
+        "认为活动课程无系统"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "两种课程各自的长处是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "现代课程多取二者之长。"
+        },
+        {
+          "level": "L3",
+          "text": "别非此即彼。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "education-pedagogy-008",
+      "title": "教学的概念与任务",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "教学是教师的教与学生的学共同组成的双边活动，任务包括传授知识、发展能力与思想品德。",
+      "prerequisites": [
+        "education-pedagogy-002"
+      ],
+      "misconceptions": [
+        "教学等于教师讲",
+        "忽视学生学"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "教学是双边还是单边？双边。"
+        },
+        {
+          "level": "L2",
+          "text": "任务不止知识，还有能力与品德。"
+        },
+        {
+          "level": "L3",
+          "text": "教与学统一。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "education-pedagogy-009",
+      "title": "教学过程的性质",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "教学过程是认识过程又是发展过程，具有间接性、引导性和教育性。",
+      "prerequisites": [
+        "education-pedagogy-008"
+      ],
+      "misconceptions": [
+        "把教学当纯粹认知",
+        "忽视教育性"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "学生获取的是直接经验还是间接经验？间接。"
+        },
+        {
+          "level": "L2",
+          "text": "教学含价值引导。"
+        },
+        {
+          "level": "L3",
+          "text": "认识+发展双重属性。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "education-pedagogy-010",
+      "title": "教学原则",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "常用原则有科学性与思想性统一、启发性、循序渐进、因材施教、理论联系实际等。",
+      "prerequisites": [
+        "education-pedagogy-008"
+      ],
+      "misconceptions": [
+        "原则与规律混淆",
+        "死记原则不辨析"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "'启发'原则反对的是什么？灌输。"
+        },
+        {
+          "level": "L2",
+          "text": "原则源于规律又指导实践。"
+        },
+        {
+          "level": "L3",
+          "text": "先判情境再用原则。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "education-pedagogy-011",
+      "title": "教学方法",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "方法含讲授、讨论、探究、演示等；选择依据教学目标、内容与学生特点。",
+      "prerequisites": [
+        "education-pedagogy-008"
+      ],
+      "misconceptions": [
+        "方法越新越好",
+        "一种方法包打天下"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "没有万能方法，关键看适配。"
+        },
+        {
+          "level": "L2",
+          "text": "讨论法重参与，讲授重系统。"
+        },
+        {
+          "level": "L3",
+          "text": "依目标选方法。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "education-pedagogy-012",
+      "title": "班级授课制",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "班级授课制按年龄分班、按课表集体教学，效率高但难照顾个别差异。",
+      "prerequisites": [
+        "education-pedagogy-008"
+      ],
+      "misconceptions": [
+        "认为它一无是处",
+        "忽视其效率"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "它的优点和局限分别是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "为补差异衍生分组与个别化。"
+        },
+        {
+          "level": "L3",
+          "text": "辩证看效率与个性。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "education-pedagogy-013",
+      "title": "德育过程",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "德育是知、情、意、行统一发展的过程，具有长期性、反复性。",
+      "prerequisites": [
+        "education-pedagogy-003"
+      ],
+      "misconceptions": [
+        "重知轻行",
+        "认为一次教育即成型"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "品德只靠讲道理够吗？不够，要练行。"
+        },
+        {
+          "level": "L2",
+          "text": "知情意行四要素。"
+        },
+        {
+          "level": "L3",
+          "text": "德育是慢过程。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "education-pedagogy-014",
+      "title": "德育原则",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "如导向性、疏导、尊重信任与严格要求结合、长善救失、因材施教等。",
+      "prerequisites": [
+        "education-pedagogy-013"
+      ],
+      "misconceptions": [
+        "只严不尊",
+        "只夸不要求"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "'长善救失'指什么？发扬优点克服缺点。"
+        },
+        {
+          "level": "L2",
+          "text": "尊重与要求要结合。"
+        },
+        {
+          "level": "L3",
+          "text": "原则指导德育实践。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "education-pedagogy-015",
+      "title": "教师角色与专业发展",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "教师是引导者、促进者与合作者；专业发展包括职前培养与职后继续教育。",
+      "prerequisites": [
+        "education-pedagogy-002"
+      ],
+      "misconceptions": [
+        "教师只是知识搬运工",
+        "专业发展一次完成"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "现代教师更像是引导者还是灌输者？"
+        },
+        {
+          "level": "L2",
+          "text": "发展是终身的。"
+        },
+        {
+          "level": "L3",
+          "text": "角色随理念转变。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "education-pedagogy-016",
+      "title": "学生观与主体性",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "学生是发展的人、独特的人、有主体意义的人；教学要尊重其主体性与潜能。",
+      "prerequisites": [
+        "education-pedagogy-005"
+      ],
+      "misconceptions": [
+        "把学生当容器",
+        "否定差异性"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "学生是被塑造还是自我建构？二者兼顾。"
+        },
+        {
+          "level": "L2",
+          "text": "主体性意味着参与权。"
+        },
+        {
+          "level": "L3",
+          "text": "差异应被尊重。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "education-pedagogy-017",
+      "title": "教育评价",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "教育评价依功能分诊断性、形成性、总结性；依标准分相对、绝对与个体内差异评价。",
+      "prerequisites": [
+        "education-pedagogy-003"
+      ],
+      "misconceptions": [
+        "评价等于考试",
+        "分不清形成与总结"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "平时小测是哪种评价？形成性。"
+        },
+        {
+          "level": "L2",
+          "text": "考试只是评价方式之一。"
+        },
+        {
+          "level": "L3",
+          "text": "先判功能再选方式。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "education-pedagogy-018",
+      "title": "终身教育与学习型社会",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "终身教育贯穿人的一生、贯通各类场所；学习型社会强调人人可学、时时可学。",
+      "prerequisites": [
+        "education-pedagogy-001"
+      ],
+      "misconceptions": [
+        "认为教育只在学校阶段",
+        "窄化学习场所"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "毕业是否等于学习结束？否。"
+        },
+        {
+          "level": "L2",
+          "text": "学习场所从学校扩展到社会。"
+        },
+        {
+          "level": "L3",
+          "text": "终身是时间维度。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "education-pedagogy-019",
+      "title": "教育公平",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "教育公平含起点、过程与结果公平；受资源、政策与制度影响，是动态的历史范畴。",
+      "prerequisites": [
+        "education-pedagogy-004"
+      ],
+      "misconceptions": [
+        "把公平等同平均",
+        "忽视历史条件"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "平均主义等于公平吗？不一定。"
+        },
+        {
+          "level": "L2",
+          "text": "起点/过程/结果三层看。"
+        },
+        {
+          "level": "L3",
+          "text": "公平是具体的历史的。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "education-pedagogy-020",
+      "title": "教育研究基本取向",
+      "level": "method",
+      "difficulty": 3,
+      "summary": "教育研究可从理论、实证、行动研究等取向切入；选题需有价值、可行、创新。",
+      "prerequisites": [
+        "education-pedagogy-001"
+      ],
+      "misconceptions": [
+        "重方法轻问题",
+        "混淆相关与因果"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "先有问题还是先有方法？问题。"
+        },
+        {
+          "level": "L2",
+          "text": "行动研究贴近实践改进。"
+        },
+        {
+          "level": "L3",
+          "text": "区分相关与因果。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    }
+  ]
+}

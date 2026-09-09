@@ -1,0 +1,129 @@
+{
+  "subject": "shenlun",
+  "course": "shenlun",
+  "chapter": "civil-shenlun-summary",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "shenlun-summary-q001-material",
+      "title": "材料概括练习：概括问题",
+      "knowledgeNodeIds": [
+        "shenlun-summary-task",
+        "shenlun-summary-mark",
+        "shenlun-summary-merge"
+      ],
+      "type": "summary_practice",
+      "difficulty": 1,
+      "content": "【练习】阅读下面材料，概括当前社区养老服务面临的主要问题（不超过 100 字）。\n材料：某社区 60 岁以上老人占三成，但日间照料中心仅 1 处且每周只开放 3 天；适老化改造进度慢，多数楼道无扶手；上门护理人手不足，排班要等两周；老人就餐难，助餐点覆盖不到半数小区。",
+      "answer": "主要问题：1. 设施不足，日间照料中心少、开放时间短；2. 适老化改造滞后，公共空间缺扶手等无障碍设施；3. 上门护理人力短缺、等候久；4. 助餐覆盖低，就餐不便。",
+      "solutionSteps": [
+        "审对象：概括「社区养老的主要问题」，范围即本段材料。",
+        "标注：设施、改造、护理、就餐四类问题分别标出。",
+        "归并去重，按「总括 + 分条」输出，每条核心词+说明。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "题目让你概括的对象是「问题」还是「原因」？"
+        },
+        {
+          "level": "L2",
+          "text": "材料里能分成几类问题：设施、改造、护理、就餐？"
+        },
+        {
+          "level": "L3",
+          "text": "用「总括句+分条」写，每条别超过一句。"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲申论五大题型（归纳概括 / 综合分析 / 提出对策 / 贯彻执行 / 申发论述）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；申论辅导以材料拆解、结构、改写为核心，不默认代写整篇；具体题目与表述待人工复核（review_status=draft）。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "shenlun-summary-q002-reason",
+      "title": "材料概括练习：概括原因",
+      "knowledgeNodeIds": [
+        "shenlun-summary-mark",
+        "shenlun-summary-keyword"
+      ],
+      "type": "summary_practice",
+      "difficulty": 2,
+      "content": "【练习】根据下面材料，概括「年轻人不愿参加社区活动」的原因（分条，不超过 80 字）。\n材料：调研显示，活动多在工作日白天，与上班时间冲突；内容偏文艺汇演，年轻人兴趣低；通知仅靠楼栋贴纸，触达差；缺少线上报名与反馈渠道。",
+      "answer": "原因：1. 时间冲突，活动多在工作日白天；2. 内容不匹配，偏文艺汇演；3. 宣传触达差，仅靠纸质通知；4. 参与渠道单一，缺线上报名与反馈。",
+      "solutionSteps": [
+        "审对象：概括「原因」。",
+        "逐句定位原因表述（时间、内容、宣传、渠道）。",
+        "用材料原词凝练，分条输出。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "这段材料每句话分别指向哪个原因？"
+        },
+        {
+          "level": "L2",
+          "text": "能不能用材料里的原词概括，而不是自造词？"
+        },
+        {
+          "level": "L3",
+          "text": "分条后检查有没有把「现象」误写成「原因」。"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲申论五大题型（归纳概括 / 综合分析 / 提出对策 / 贯彻执行 / 申发论述）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；申论辅导以材料拆解、结构、改写为核心，不默认代写整篇；具体题目与表述待人工复核（review_status=draft）。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "shenlun-summary-q003-expression",
+      "title": "材料概括练习：条理表达",
+      "knowledgeNodeIds": [
+        "shenlun-summary-structure",
+        "shenlun-summary-merge"
+      ],
+      "type": "summary_practice",
+      "difficulty": 2,
+      "content": "【练习】把下面的零散要点整理成「总括句 + 分条」的规范概括（不超过 120 字）。\n零散要点：小区路灯坏了一半没人修；垃圾清运不及时有异味；电动车乱停堵住消防通道；监控坏了两处；健身器材螺丝松动。",
+      "answer": "总括：小区公共设施管护存在多处短板。分条：1. 照明缺失，半数路灯损坏未修；2. 环卫滞后，垃圾清运不及时；3. 停车无序，电动车堵占消防通道；4. 安防与器材隐患，监控损坏、健身器材松动。",
+      "solutionSteps": [
+        "把零散要点按维度归类（照明、环卫、停车、安防/器材）。",
+        "写一句总括。",
+        "每条「核心词+说明」，避免细节堆砌。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "这些零散点能归成哪几个维度？"
+        },
+        {
+          "level": "L2",
+          "text": "先写一句总括，再分条会不会更清楚？"
+        },
+        {
+          "level": "L3",
+          "text": "每条用「核心词+说明」，别把整句抄进来。"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲申论五大题型（归纳概括 / 综合分析 / 提出对策 / 贯彻执行 / 申发论述）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；申论辅导以材料拆解、结构、改写为核心，不默认代写整篇；具体题目与表述待人工复核（review_status=draft）。"
+      },
+      "reviewStatus": "draft"
+    }
+  ]
+}

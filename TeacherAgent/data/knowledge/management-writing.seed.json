@@ -1,0 +1,687 @@
+{
+  "subject": "management",
+  "course": "management-writing",
+  "chapter": "management-writing",
+  "status": "draft",
+  "nodes": [
+    {
+      "id": "management-writing-001",
+      "title": "写作总体结构",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "管综写作两篇：论证有效性分析（30分，约600字）与论说文（35分，约700字），共65分；重在逻辑与结构。",
+      "prerequisites": [],
+      "misconceptions": [
+        "以为靠文采",
+        "忽视字数"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个概念在管综里常怎么考？"
+        },
+        {
+          "level": "L2",
+          "text": "回到定义再判断。"
+        },
+        {
+          "level": "L3",
+          "text": "先定性后计算。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-writing-002",
+      "title": "论证有效性分析",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "论证有效性分析要求找出给定论证中的逻辑缺陷并分析其如何削弱结论；不是驳斥观点，而是评论证过程。",
+      "prerequisites": [
+        "management-writing-001"
+      ],
+      "misconceptions": [
+        "把分析当反驳",
+        "只说'不对'"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "它和哪个易混点接近？"
+        },
+        {
+          "level": "L2",
+          "text": "列出异同避免误用。"
+        },
+        {
+          "level": "L3",
+          "text": "用例子固定理解。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-writing-003",
+      "title": "常见逻辑缺陷",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "高频缺陷：偷换概念、以偏概全、因果倒置、类比不当、滑坡、非黑即白、平均数陷阱；识别是得分关键。",
+      "prerequisites": [
+        "management-writing-002"
+      ],
+      "misconceptions": [
+        "认不全缺陷",
+        "混淆缺陷"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "公式/规则的前提是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "缺前提不能套用。"
+        },
+        {
+          "level": "L3",
+          "text": "先检查适用条件。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-writing-004",
+      "title": "有效性分析写法",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "结构：总评（论证有缺陷）+ 逐点分析（点名谬误+说明危害）+ 小结；每点独立成段、先判后析。",
+      "prerequisites": [
+        "management-writing-002"
+      ],
+      "misconceptions": [
+        "不点名谬误",
+        "堆砌不分析"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这一步最容易错在哪？"
+        },
+        {
+          "level": "L2",
+          "text": "把易错点写下来。"
+        },
+        {
+          "level": "L3",
+          "text": "用反例验证边界。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-writing-005",
+      "title": "论说文审题立意",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "论说文先审题：抓材料关键词与关系，确立明确、积极、可展开的立意；跑题是最大失分。",
+      "prerequisites": [
+        "management-writing-001"
+      ],
+      "misconceptions": [
+        "立意模糊",
+        "跑题"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "题干给了哪些量？"
+        },
+        {
+          "level": "L2",
+          "text": "先列已知再找关系。"
+        },
+        {
+          "level": "L3",
+          "text": "建立方程或模型。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-writing-006",
+      "title": "论说文结构",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "常用结构：引论（亮观点）$\\to$本论（分论点+论据）$\\to$结论（升华）；分论点间递进或并列。",
+      "prerequisites": [
+        "management-writing-005"
+      ],
+      "misconceptions": [
+        "无结构堆材料",
+        "分论点重复"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这是哪类题型？"
+        },
+        {
+          "level": "L2",
+          "text": "先归类再调用方法。"
+        },
+        {
+          "level": "L3",
+          "text": "用题型模板组织思路。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-writing-007",
+      "title": "论证方法",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "论说文论证可用举例、对比、因果、引用、比喻；论据要典型且与分论点直接对应。",
+      "prerequisites": [
+        "management-writing-006"
+      ],
+      "misconceptions": [
+        "论据与论点脱节",
+        "只举例不议"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "结论由什么条件推出？"
+        },
+        {
+          "level": "L2",
+          "text": "区分充分与必要。"
+        },
+        {
+          "level": "L3",
+          "text": "条件充分性判断靠此。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-writing-008",
+      "title": "素材积累",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "素材含典型人物、数据、名言；宜按主题（管理/创新/责任/合作）归类，避免考场上现编。",
+      "prerequisites": [
+        "management-writing-005"
+      ],
+      "misconceptions": [
+        "素材不归类",
+        "临场编造"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "论证的漏洞可能在哪？"
+        },
+        {
+          "level": "L2",
+          "text": "先找断裂再分析。"
+        },
+        {
+          "level": "L3",
+          "text": "用逻辑缺陷清单排查。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-writing-009",
+      "title": "语言表达",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "写作语言求准确、简练、连贯；避免口语化、绝对化与空洞套话；逻辑连接词使层次清晰。",
+      "prerequisites": [
+        "management-writing-006"
+      ],
+      "misconceptions": [
+        "语言空洞",
+        "绝对化表述"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个概念在管综里常怎么考？"
+        },
+        {
+          "level": "L2",
+          "text": "回到定义再判断。"
+        },
+        {
+          "level": "L3",
+          "text": "先定性后计算。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-writing-010",
+      "title": "标题与开头",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "标题应凝练点明立意；开头简明引述材料并亮明中心论点，避免绕弯与照抄全文。",
+      "prerequisites": [
+        "management-writing-005"
+      ],
+      "misconceptions": [
+        "标题过大",
+        "开头冗长"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "它和哪个易混点接近？"
+        },
+        {
+          "level": "L2",
+          "text": "列出异同避免误用。"
+        },
+        {
+          "level": "L3",
+          "text": "用例子固定理解。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-writing-011",
+      "title": "段落展开",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "一段一意：段首观点句+解释+论据+分析；避免一段多意或只有论据无论证。",
+      "prerequisites": [
+        "management-writing-006"
+      ],
+      "misconceptions": [
+        "段落无中心",
+        "有例无论"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "公式/规则的前提是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "缺前提不能套用。"
+        },
+        {
+          "level": "L3",
+          "text": "先检查适用条件。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-writing-012",
+      "title": "立意偏差防范",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "常见偏差：立意过宽难展开、过偏偏离材料、表面化缺深度；审题时先窄化到可论证角度。",
+      "prerequisites": [
+        "management-writing-005"
+      ],
+      "misconceptions": [
+        "立意过宽",
+        "表面化"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这一步最容易错在哪？"
+        },
+        {
+          "level": "L2",
+          "text": "把易错点写下来。"
+        },
+        {
+          "level": "L3",
+          "text": "用反例验证边界。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-writing-013",
+      "title": "思辨性",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "高分论说文具思辨：看到两面（如自由与秩序、创新与守正）并辩证统一，避免非此即彼。",
+      "prerequisites": [
+        "management-writing-006"
+      ],
+      "misconceptions": [
+        "非黑即白",
+        "孤立看问题"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "题干给了哪些量？"
+        },
+        {
+          "level": "L2",
+          "text": "先列已知再找关系。"
+        },
+        {
+          "level": "L3",
+          "text": "建立方程或模型。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-writing-014",
+      "title": "时间管理",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "整卷180分钟：写作建议留约60分钟（有效性25+论说35）；先易后难，留足两篇完整时间。",
+      "prerequisites": [
+        "management-writing-001"
+      ],
+      "misconceptions": [
+        "写作被挤压",
+        "不计时"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这是哪类题型？"
+        },
+        {
+          "level": "L2",
+          "text": "先归类再调用方法。"
+        },
+        {
+          "level": "L3",
+          "text": "用题型模板组织思路。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-writing-015",
+      "title": "卷面与字数",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "两篇均有字数下限（约$60\\frac{0}{7}00$），不足扣分；卷面整洁、分段清晰影响阅卷印象。",
+      "prerequisites": [
+        "management-writing-001"
+      ],
+      "misconceptions": [
+        "字数不足",
+        "卷面潦草"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "结论由什么条件推出？"
+        },
+        {
+          "level": "L2",
+          "text": "区分充分与必要。"
+        },
+        {
+          "level": "L3",
+          "text": "条件充分性判断靠此。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-writing-016",
+      "title": "有效性分析范文步骤",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "实操：通读标出结论与论据$\\to$逐句找缺陷$\\to$选4点写分析（点名+解释+危害）；控制在600字内。",
+      "prerequisites": [
+        "management-writing-003"
+      ],
+      "misconceptions": [
+        "缺陷找太多写不下",
+        "不标结论"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "论证的漏洞可能在哪？"
+        },
+        {
+          "level": "L2",
+          "text": "先找断裂再分析。"
+        },
+        {
+          "level": "L3",
+          "text": "用逻辑缺陷清单排查。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-writing-017",
+      "title": "论说文主题",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "常考主题围绕管理（决策/团队）、社会（责任/公平）、个人（坚持/学习）；准备可迁移的通用立意。",
+      "prerequisites": [
+        "management-writing-005"
+      ],
+      "misconceptions": [
+        "主题押宝",
+        "无通用立意"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个概念在管综里常怎么考？"
+        },
+        {
+          "level": "L2",
+          "text": "回到定义再判断。"
+        },
+        {
+          "level": "L3",
+          "text": "先定性后计算。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-writing-018",
+      "title": "常见失分点",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "失分主因：跑题、结构混乱、论据与论点脱节、语言空洞、字数不足；逐项对照可提分。",
+      "prerequisites": [
+        "management-writing-006"
+      ],
+      "misconceptions": [
+        "只练不总结",
+        "忽视失分点"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "它和哪个易混点接近？"
+        },
+        {
+          "level": "L2",
+          "text": "列出异同避免误用。"
+        },
+        {
+          "level": "L3",
+          "text": "用例子固定理解。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-writing-019",
+      "title": "逻辑与写作迁移",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "逻辑训练的'找谬误、理结构'直接用于有效性分析；论说文也需清晰论证，二者同源。",
+      "prerequisites": [
+        "management-writing-001",
+        "management-writing-003"
+      ],
+      "misconceptions": [
+        "割裂两科",
+        "忽视迁移"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "公式/规则的前提是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "缺前提不能套用。"
+        },
+        {
+          "level": "L3",
+          "text": "先检查适用条件。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-writing-020",
+      "title": "备考策略",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "写作提分靠'模板+批改'：背熟两类结构，动手写并对照范文修订，积累主题素材。",
+      "prerequisites": [
+        "management-writing-001"
+      ],
+      "misconceptions": [
+        "只背不写",
+        "不批改"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这一步最容易错在哪？"
+        },
+        {
+          "level": "L2",
+          "text": "把易错点写下来。"
+        },
+        {
+          "level": "L3",
+          "text": "用反例验证边界。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    }
+  ]
+}

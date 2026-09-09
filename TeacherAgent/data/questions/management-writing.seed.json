@@ -1,0 +1,806 @@
+{
+  "subject": "management",
+  "course": "management-writing",
+  "chapter": "management-writing",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "management-writing-q-001",
+      "title": "写作分值",
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "管综写作两篇合计（ ）分。",
+      "options": [
+        "65",
+        "30",
+        "35",
+        "100"
+      ],
+      "answer": "65",
+      "solutionSteps": [
+        "论证有效性$30+$论说文$35=65$。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断考点类型。"
+        },
+        {
+          "level": "L2",
+          "text": "再调用对应公式或规则。"
+        },
+        {
+          "level": "L3",
+          "text": "写出关键一步再给答案。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-writing-001"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "management-writing-q-002",
+      "title": "有效性分析本质",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "论证有效性分析主要评价的是（ ）。",
+      "options": [
+        "论证过程的逻辑缺陷",
+        "作者观点对错",
+        "文采",
+        "字数"
+      ],
+      "answer": "论证过程的逻辑缺陷",
+      "solutionSteps": [
+        "有效性分析评论证过程，不评观点是非。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "列出已知量与目标。"
+        },
+        {
+          "level": "L2",
+          "text": "建立关系（方程/推理）。"
+        },
+        {
+          "level": "L3",
+          "text": "检查单位与条件。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-writing-002"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "management-writing-q-003",
+      "title": "高频缺陷",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "下列属论证缺陷的是（ ）。",
+      "options": [
+        "以偏概全",
+        "用词优美",
+        "段落多",
+        "字数足"
+      ],
+      "answer": "以偏概全",
+      "solutionSteps": [
+        "以偏概全是用局部推全体，典型缺陷。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判定题型（问题求解/充分性/逻辑/写作）。"
+        },
+        {
+          "level": "L2",
+          "text": "再用对应套路。"
+        },
+        {
+          "level": "L3",
+          "text": "结构清晰不易失分。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-writing-003"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "management-writing-q-004",
+      "title": "有效性分析结构",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "论证有效性分析的主体部分应如何组织？",
+      "options": null,
+      "answer": "总评指出论证有缺陷。",
+      "solutionSteps": [
+        "总评指出论证有缺陷。",
+        "逐点：点名谬误+解释+说明危害。",
+        "每点独立成段，先判后析。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "条件是否充分？"
+        },
+        {
+          "level": "L2",
+          "text": "A单独能否推出结论？B呢？"
+        },
+        {
+          "level": "L3",
+          "text": "按标准选项判定。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-writing-004"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "management-writing-q-005",
+      "title": "论说文审题",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "论说文最该先做的是（ ）。",
+      "options": [
+        "审题确立意",
+        "想名言",
+        "写标题",
+        "抄材料"
+      ],
+      "answer": "审题确立意",
+      "solutionSteps": [
+        "审题立意是前提，跑题最致命。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "论证缺了哪一环？"
+        },
+        {
+          "level": "L2",
+          "text": "指出谬误类型。"
+        },
+        {
+          "level": "L3",
+          "text": "给出分析句。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-writing-005"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "management-writing-q-006",
+      "title": "论说文结构",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "论说文常见结构是（ ）。",
+      "options": [
+        "引论-本论-结论",
+        "只举例子",
+        "随意写",
+        "抄材料"
+      ],
+      "answer": "引论-本论-结论",
+      "solutionSteps": [
+        "引论亮观点、本论论证、结论升华。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先审题立意。"
+        },
+        {
+          "level": "L2",
+          "text": "再搭结构。"
+        },
+        {
+          "level": "L3",
+          "text": "最后补论据。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-writing-006"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "management-writing-q-007",
+      "title": "论据要求",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "选论据时应注意什么？为何论据要与分论点对应？",
+      "options": null,
+      "answer": "论据须典型、真实、贴切。",
+      "solutionSteps": [
+        "论据须典型、真实、贴切。",
+        "对应分论点才能支撑该论点。",
+        "脱节则论证无效，白写。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "区分充分与必要。"
+        },
+        {
+          "level": "L2",
+          "text": "别把必要条件当充分。"
+        },
+        {
+          "level": "L3",
+          "text": "用具体判断作答。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-writing-007"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "management-writing-q-008",
+      "title": "标题拟写",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "好的论说文标题应（ ）。",
+      "options": [
+        "凝练点明立意",
+        "越长越好",
+        "照抄材料",
+        "越玄越好"
+      ],
+      "answer": "凝练点明立意",
+      "solutionSteps": [
+        "标题要凝练并直接体现中心立意。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先找结论与论据。"
+        },
+        {
+          "level": "L2",
+          "text": "再看推理是否跳跃。"
+        },
+        {
+          "level": "L3",
+          "text": "用缺陷名词收尾。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-writing-010"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "management-writing-q-009",
+      "title": "段落展开",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "一个标准论证段落应如何展开？",
+      "options": null,
+      "answer": "段首观点句亮明分论点。",
+      "solutionSteps": [
+        "段首观点句亮明分论点。",
+        "解释+典型论据支撑。",
+        "分析论据如何证成分论点。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断考点类型。"
+        },
+        {
+          "level": "L2",
+          "text": "再调用对应公式或规则。"
+        },
+        {
+          "level": "L3",
+          "text": "写出关键一步再给答案。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-writing-011"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "management-writing-q-010",
+      "title": "思辨性",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "高分论说文常体现（ ）。",
+      "options": [
+        "辩证统一两面",
+        "非黑即白",
+        "只说一面",
+        "情绪化"
+      ],
+      "answer": "辩证统一两面",
+      "solutionSteps": [
+        "辩证看待两面（如自由与秩序）显思辨。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "列出已知量与目标。"
+        },
+        {
+          "level": "L2",
+          "text": "建立关系（方程/推理）。"
+        },
+        {
+          "level": "L3",
+          "text": "检查单位与条件。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-writing-013"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "management-writing-q-011",
+      "title": "写作时间",
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "管综整卷考试时长为（ ）分钟。",
+      "options": [
+        "180",
+        "150",
+        "120",
+        "200"
+      ],
+      "answer": "180",
+      "solutionSteps": [
+        "管综180分钟（数学/逻辑/写作共用）。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断考点类型。"
+        },
+        {
+          "level": "L2",
+          "text": "再调用对应公式或规则。"
+        },
+        {
+          "level": "L3",
+          "text": "写出关键一步再给答案。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-writing-014"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "management-writing-q-012",
+      "title": "立意偏差",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "若材料讲'创新与守正'，立意写成'要创新'是否最佳？如何优化？",
+      "options": null,
+      "answer": "单写创新偏面，易浅。",
+      "solutionSteps": [
+        "单写创新偏面，易浅。",
+        "优化为二者辩证统一更佳。",
+        "窄化到可论证角度避免空泛。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "列出已知量与目标。"
+        },
+        {
+          "level": "L2",
+          "text": "建立关系（方程/推理）。"
+        },
+        {
+          "level": "L3",
+          "text": "检查单位与条件。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-writing-012",
+        "management-writing-013"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "management-writing-q-013",
+      "title": "有效性找缺陷数",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "论证有效性分析通常选（ ）个主要缺陷展开。",
+      "options": [
+        "3-4",
+        "1",
+        "10",
+        "0"
+      ],
+      "answer": "$3-4$",
+      "solutionSteps": [
+        "选$3-4$个最明显缺陷，篇幅可控且覆盖。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判定题型（问题求解/充分性/逻辑/写作）。"
+        },
+        {
+          "level": "L2",
+          "text": "再用对应套路。"
+        },
+        {
+          "level": "L3",
+          "text": "结构清晰不易失分。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-writing-016"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "management-writing-q-014",
+      "title": "论据脱节",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "写了一堆生动例子却得分低，最可能原因是？",
+      "options": null,
+      "answer": "例子未与分析结合，与论点脱节。",
+      "solutionSteps": [
+        "例子未与分析结合，与论点脱节。",
+        "应有例有议、句句扣题。",
+        "否则只是堆料。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "条件是否充分？"
+        },
+        {
+          "level": "L2",
+          "text": "A单独能否推出结论？B呢？"
+        },
+        {
+          "level": "L3",
+          "text": "按标准选项判定。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-writing-007",
+        "management-writing-018"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "management-writing-q-015",
+      "title": "字数底线",
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "论说文约需写到（ ）字以免扣分。",
+      "options": [
+        "700",
+        "300",
+        "100",
+        "1000"
+      ],
+      "answer": "700",
+      "solutionSteps": [
+        "论说文约700字下限，不足扣分。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "论证缺了哪一环？"
+        },
+        {
+          "level": "L2",
+          "text": "指出谬误类型。"
+        },
+        {
+          "level": "L3",
+          "text": "给出分析句。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-writing-015"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "management-writing-q-016",
+      "title": "主题准备",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "如何准备论说文素材更高效？",
+      "options": null,
+      "answer": "按主题（管理/社会/个人）归类素材。",
+      "solutionSteps": [
+        "按主题（管理/社会/个人）归类素材。",
+        "准备可迁移的通用立意。",
+        "避免押单题、临场编造。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先审题立意。"
+        },
+        {
+          "level": "L2",
+          "text": "再搭结构。"
+        },
+        {
+          "level": "L3",
+          "text": "最后补论据。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-writing-017"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "management-writing-q-017",
+      "title": "滑坡谬误",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "'允许迟到就会成绩下滑进而退学'犯了（ ）。",
+      "options": [
+        "滑坡谬误",
+        "以偏概全",
+        "偷换概念",
+        "因果倒置"
+      ],
+      "answer": "滑坡谬误",
+      "solutionSteps": [
+        "无端串联因果、夸大连锁后果即滑坡。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "区分充分与必要。"
+        },
+        {
+          "level": "L2",
+          "text": "别把必要条件当充分。"
+        },
+        {
+          "level": "L3",
+          "text": "用具体判断作答。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-writing-003"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "management-writing-q-018",
+      "title": "逻辑迁移",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "逻辑训练如何帮助写作？举一例。",
+      "options": null,
+      "answer": "逻辑'找谬误'用于有效性分析。",
+      "solutionSteps": [
+        "逻辑'找谬误'用于有效性分析。",
+        "理结构能力用于论说文论证。",
+        "如用矛盾律检查自相矛盾。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先找结论与论据。"
+        },
+        {
+          "level": "L2",
+          "text": "再看推理是否跳跃。"
+        },
+        {
+          "level": "L3",
+          "text": "用缺陷名词收尾。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-writing-019"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "management-writing-q-019",
+      "title": "失分主因",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "管综写作最大失分风险是（ ）。",
+      "options": [
+        "跑题",
+        "字好看",
+        "段落少",
+        "用名言"
+      ],
+      "answer": "跑题",
+      "solutionSteps": [
+        "跑题直接导致立意偏离，失分最重。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断考点类型。"
+        },
+        {
+          "level": "L2",
+          "text": "再调用对应公式或规则。"
+        },
+        {
+          "level": "L3",
+          "text": "写出关键一步再给答案。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-writing-018"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "management-writing-q-020",
+      "title": "备考策略",
+      "type": "diagnostic",
+      "difficulty": 1,
+      "content": "写作提分最有效的做法组合是？",
+      "options": null,
+      "answer": "背熟两类结构模板。",
+      "solutionSteps": [
+        "背熟两类结构模板。",
+        "动手写并对照范文批改。",
+        "积累主题素材，模板+批改闭环。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "列出已知量与目标。"
+        },
+        {
+          "level": "L2",
+          "text": "建立关系（方程/推理）。"
+        },
+        {
+          "level": "L3",
+          "text": "检查单位与条件。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-writing-020"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    }
+  ]
+}

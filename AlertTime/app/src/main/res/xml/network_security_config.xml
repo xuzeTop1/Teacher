@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Android 的 cleartext 许可是 app-wide，无法按动态 RFC1918 地址做域名白名单。
+    因此这里只提供平台层能力；真正的唯一请求入口仍是 EndpointPolicy：
+    只有 AUTH_MODE_NONE 且 loopback/RFC1918 的 HTTP 才能通过，带密钥模式始终要求 HTTPS。
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config>

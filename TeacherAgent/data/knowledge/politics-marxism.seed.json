@@ -1,0 +1,687 @@
+{
+  "subject": "politics",
+  "course": "marxism",
+  "chapter": "politics-marxism",
+  "status": "draft",
+  "nodes": [
+    {
+      "id": "politics-marxism-001",
+      "title": "马克思主义的科学内涵",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "马克思主义是由马克思和恩格斯创立的科学理论体系，包含马克思主义哲学、政治经济学和科学社会主义三个基本组成部分。它揭示了自然、社会和思维发展的普遍规律，特别是资本主义生产方式的运动规律，为实现无产阶级和人类解放提供了科学理论指导。",
+      "prerequisites": [],
+      "misconceptions": [
+        "马克思主义只是一套政治意识形态，不是科学理论",
+        "马克思主义已经过时，不适用于当代社会"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "请从理论的构成部分出发，思考一套完整社会理论需要涵盖哪些层面。"
+        },
+        {
+          "level": "L2",
+          "text": "马克思主义包含哲学、经济学和社会主义三个层面，分别对应世界观、经济分析和社会改造方案。"
+        },
+        {
+          "level": "L3",
+          "text": "判断一套理论是否科学，关键看它是否以实践为基础、是否随实践发展而发展，以及是否经得起历史检验。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-marxism-002",
+      "title": "哲学基本问题",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "哲学基本问题是思维与存在的关系问题，包含两个方面：第一方面是思维与存在何者为第一性，据此划分唯物主义和唯心主义；第二方面是思维能否认识存在，据此划分可知论和不可知论。对哲学基本问题的回答是区分不同哲学派别的基本标准。",
+      "prerequisites": [],
+      "misconceptions": [
+        "哲学基本问题只是哲学家之间的争论，与现实无关",
+        "唯物主义和唯心主义只是两种不同的观点，没有对错之分"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "思考一下：当你观察桌子时，桌子是先于你的意识存在的，还是因为你在看它才存在的？"
+        },
+        {
+          "level": "L2",
+          "text": "这个问题看似简单，但它决定了你是站在唯物主义（物质第一性）还是唯心主义（意识第一性）的立场上。"
+        },
+        {
+          "level": "L3",
+          "text": "哲学基本问题的第一方面回答'世界本原是什么'，第二方面回答'人能否认识世界'。抓住这两个维度来判断哲学派别。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-marxism-003",
+      "title": "物质观",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "马克思主义物质观认为，物质是不依赖于人的意识并能为人的意识所反映的客观实在。物质的唯一特性是客观实在性。物质世界是运动的，运动是物质的根本属性和存在方式，静止是运动的特殊状态。时间和空间是物质运动的存在形式。",
+      "prerequisites": [
+        "politics-marxism-002"
+      ],
+      "misconceptions": [
+        "物质就是看得见摸得着的实体",
+        "物质和意识是完全对立、互不相干的"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "当你想到'物质'这个词时，你最先想到的是什么？是具体的物体，还是更抽象的东西？"
+        },
+        {
+          "level": "L2",
+          "text": "马克思主义的物质概念比日常理解宽泛得多，它概括了一切可以被人认识的客观存在。"
+        },
+        {
+          "level": "L3",
+          "text": "关键判断标准：一个东西是不是物质，不看它是否看得见，而看它是否不依赖于人的意识而存在。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-marxism-004",
+      "title": "意识的本质",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "意识是物质世界长期发展的产物，是人脑的机能和属性，是客观世界的主观映象。意识产生于劳动，语言促进了意识的发展。意识具有能动性，能够能动地认识世界和改造世界，但意识的反作用必须以尊重客观规律为前提。",
+      "prerequisites": [
+        "politics-marxism-003"
+      ],
+      "misconceptions": [
+        "意识是人脑分泌的特殊物质，像胆汁一样",
+        "意识可以脱离物质独立存在"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "思考：人工智能'意识'和人类意识的根本区别在哪里？"
+        },
+        {
+          "level": "L2",
+          "text": "意识不是实体，而是人脑这种高度组织化的物质的功能属性。"
+        },
+        {
+          "level": "L3",
+          "text": "判断意识本质的三个要点：起源上（物质世界长期发展产物）、生理基础上（人脑机能）、内容上（客观世界的主观映象）。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-marxism-005",
+      "title": "对立统一规律",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "对立统一规律是唯物辩证法的实质和核心，它揭示事物发展的内在动力。矛盾是反映事物内部和事物之间对立统一关系的哲学范畴。矛盾具有同一性和斗争性两种基本属性。矛盾的同一性指矛盾双方相互依存、相互贯通；斗争性指矛盾双方相互排斥、相互分离。矛盾是事物发展的动力。",
+      "prerequisites": [
+        "politics-marxism-002"
+      ],
+      "misconceptions": [
+        "矛盾的斗争性就是争吵或冲突",
+        "矛盾的同一性意味着矛盾双方完全一样"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "想一想：为什么'福兮祸所伏，祸兮福所倚'？事物内部是否存在相互对立又相互依存的力量？"
+        },
+        {
+          "level": "L2",
+          "text": "对立统一规律告诉我们，事物发展的根本原因在于事物内部的矛盾运动。"
+        },
+        {
+          "level": "L3",
+          "text": "分析矛盾问题时，先看矛盾双方是什么，再看它们如何同一（相互依存转化），如何斗争（相互排斥），最后看这种矛盾运动如何推动事物发展。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-marxism-006",
+      "title": "质量互变规律",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "质量互变规律揭示事物发展的形式和状态。量变是事物数量的增减和组成要素排列次序的变动，是保持事物的质的相对稳定性的不显著变化。质变是事物性质的根本变化，是事物由一种质态向另一种质态的飞跃。量变是质变的必要准备，质变是量变的必然结果，量变和质变相互渗透。",
+      "prerequisites": [
+        "politics-marxism-005"
+      ],
+      "misconceptions": [
+        "量变就是缓慢的变化，质变就是快速的变化",
+        "只有质变才有意义，量变不重要"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "为什么水滴石穿？为什么千里之堤溃于蚁穴？这些现象背后有什么共同规律？"
+        },
+        {
+          "level": "L2",
+          "text": "量变积累到一定程度就会引起质变，而质变又为新的量变开辟道路。"
+        },
+        {
+          "level": "L3",
+          "text": "判断是量变还是质变，关键看事物的根本性质是否改变。度的原理告诉我们，要在实践中掌握适度原则。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-marxism-007",
+      "title": "否定之否定规律",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "否定之否定规律揭示事物发展的方向和道路。辩证否定是事物的自我否定，是事物发展和联系的环节，其实质是'扬弃'，即既克服又保留。事物的发展经历肯定、否定、否定之否定三个阶段，形成一个周期。发展的总方向是前进的、上升的，具体道路是曲折的、螺旋式上升的。",
+      "prerequisites": [
+        "politics-marxism-005",
+        "politics-marxism-006"
+      ],
+      "misconceptions": [
+        "否定就是完全抛弃、彻底消灭",
+        "事物发展是直线式前进的"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "想一想：小麦的生长过程经历了什么？种子$\\to$植株$\\to$新的种子，这个过程说明了什么？"
+        },
+        {
+          "level": "L2",
+          "text": "辩证否定不是外力作用的结果，而是事物内部矛盾运动的结果，是'扬弃'。"
+        },
+        {
+          "level": "L3",
+          "text": "分析发展过程时，要区分：第一，发展的总趋势是前进上升的；第二，发展的具体道路是曲折迂回的。这两个方面缺一不可。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-marxism-008",
+      "title": "实践与认识",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "实践是认识的来源，是认识发展的动力，是检验认识真理性的唯一标准，是认识的目的。认识运动是一个辩证发展过程：从实践到认识，再从认识到实践。感性认识是认识的初级阶段，理性认识是认识的高级阶段，感性认识有待于发展为理性认识，理性认识依赖于感性认识。",
+      "prerequisites": [
+        "politics-marxism-004"
+      ],
+      "misconceptions": [
+        "认识可以脱离实践而独立产生",
+        "感性认识没有价值，只有理性认识才是真理"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "你是如何学会游泳的？是只读游泳教材就能学会，还是必须下水练习？"
+        },
+        {
+          "level": "L2",
+          "text": "马克思主义认识论是能动的革命的反映论，强调实践在认识中的决定作用。"
+        },
+        {
+          "level": "L3",
+          "text": "判断认识是否正确，不能看主观上觉得如何，而要看它能否在实践中达到预期目的。这是检验真理的唯一标准。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-marxism-009",
+      "title": "真理与价值",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "真理是标志主观与客观相符合的哲学范畴，是人们对客观事物及其规律的正确反映。真理具有客观性、绝对性和相对性。价值是揭示外部客观世界对于满足人的需要的意义关系的范畴。真理原则和价值原则是人类活动的两个基本原则，真理原则要求按客观规律办事，价值原则要求满足人的需要。成功的实践必须以实现真理和价值统一为前提。",
+      "prerequisites": [
+        "politics-marxism-008"
+      ],
+      "misconceptions": [
+        "真理是因人而异的，没有客观标准",
+        "有价值的东西就是真理"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "如果一个科学理论很有用（有价值），但它与客观事实不符，我们能说它是真理吗？"
+        },
+        {
+          "level": "L2",
+          "text": "真理是客观的，不以人的意志为转移；价值是主体的，与人的需要相关。两者在实践中统一。"
+        },
+        {
+          "level": "L3",
+          "text": "分析真理问题时，坚持'实践是检验真理的唯一标准'；分析价值问题时，坚持'满足人民需要'这一根本价值立场。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-marxism-010",
+      "title": "社会基本矛盾",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "社会基本矛盾是生产力和生产关系、经济基础和上层建筑的矛盾。生产力决定生产关系，生产关系反作用于生产力；经济基础决定上层建筑，上层建筑反作用于经济基础。社会基本矛盾是社会发展的根本动力。阶级斗争是阶级社会发展的直接动力。革命是历史的火车头。改革是社会主义社会发展的重要动力。",
+      "prerequisites": [
+        "politics-marxism-002"
+      ],
+      "misconceptions": [
+        "社会基本矛盾只存在于资本主义社会",
+        "生产力就是科学技术"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "为什么封建社会会替代奴隶社会，资本主义社会会替代封建社会？推动社会形态更替的根本力量是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "社会基本矛盾的运动规律是：生产力发展$\\to$生产关系不适应$\\to$变革生产关系$\\to$经济基础变化$\\to$上层建筑变革。"
+        },
+        {
+          "level": "L3",
+          "text": "判断社会变革是否必然，关键看生产关系是否适应生产力发展要求，上层建筑是否适应经济基础要求。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-marxism-011",
+      "title": "人民群众是历史的创造者",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "人民群众是社会历史的主体，是历史的创造者。人民群众是社会物质财富的创造者，是社会精神财富的创造者，是社会变革的决定力量。杰出人物在历史发展中起重要作用，但不能决定和改变历史发展的总进程和总方向。坚持群众观点和群众路线，是中国共产党领导中国革命、建设和改革取得胜利的重要保证。",
+      "prerequisites": [
+        "politics-marxism-010"
+      ],
+      "misconceptions": [
+        "历史是由少数英雄人物创造的",
+        "人民群众只是历史的旁观者"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "想一想：如果没有广大劳动者的辛勤劳动，社会能存在吗？如果没有人民群众的支持，任何政治力量能取得胜利吗？"
+        },
+        {
+          "level": "L2",
+          "text": "唯物史观既肯定人民群众的决定作用，也承认个人在历史上的作用，但个人的作用不能超越人民群众的决定作用。"
+        },
+        {
+          "level": "L3",
+          "text": "分析历史问题时，要坚持'人民群众是历史创造者'这一唯物史观基本原理，同时具体分析杰出人物的历史作用。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-marxism-012",
+      "title": "商品二因素",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "商品是用来交换的劳动产品，具有使用价值和价值两个因素。使用价值是商品能满足人们某种需要的属性，是商品的自然属性。价值是凝结在商品中的无差别的一般人类劳动，是商品的社会属性。使用价值和价值是对立统一的关系：两者统一于商品体中，但又相互排斥，商品生产者要实现价值就必须让渡使用价值。",
+      "prerequisites": [],
+      "misconceptions": [
+        "有价值的物品一定有使用价值",
+        "使用价值是商品特有的属性"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "同样一件衣服，对生产者和购买者来说，意义有何不同？生产者关心什么？购买者关心什么？"
+        },
+        {
+          "level": "L2",
+          "text": "商品二因素反映了商品的两个不同维度的属性：自然属性（有用性）和社会属性（人类劳动凝结）。"
+        },
+        {
+          "level": "L3",
+          "text": "判断一个物品是不是商品，看它是否用于交换；分析商品的内在矛盾，看使用价值和价值如何在交换中实现统一。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-marxism-013",
+      "title": "劳动二重性",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "生产商品的劳动具有二重性：具体劳动和抽象劳动。具体劳动是指在特定具体形式下进行的劳动，创造商品的使用价值。抽象劳动是指撇开一切具体形式的、无差别的一般人类劳动，形成商品的价值。具体劳动和抽象劳动是同一劳动过程的两个方面，不是两次劳动。劳动二重性理论是理解政治经济学的枢纽。",
+      "prerequisites": [
+        "politics-marxism-012"
+      ],
+      "misconceptions": [
+        "具体劳动和抽象劳动是两种完全不同的劳动",
+        "抽象劳动就是脑力劳动"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "木匠做桌子和铁匠打铁，他们做的事情很不一样，但都在'劳动'。这两种'不一样'和'一样'分别说明了什么？"
+        },
+        {
+          "level": "L2",
+          "text": "具体劳动回答'怎样劳动、什么劳动'的问题，抽象劳动回答'劳动了多少时间'的问题。"
+        },
+        {
+          "level": "L3",
+          "text": "理解劳动二重性的关键是：它是同一劳动的两个方面，不是两种劳动。具体劳动生产使用价值，抽象劳动形成价值。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-marxism-014",
+      "title": "价值量与价值规律",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "商品的价值量由生产商品的社会必要劳动时间决定。社会必要劳动时间是在现有的社会正常的生产条件下，在社会平均的劳动熟练程度和劳动强度下，制造某种使用价值所需要的劳动时间。价值规律的基本内容是：商品的价值量由生产商品的社会必要劳动时间决定，商品交换以价值量为基础，按照等价交换的原则进行。价值规律的表现形式是价格围绕价值上下波动。",
+      "prerequisites": [
+        "politics-marxism-012",
+        "politics-marxism-013"
+      ],
+      "misconceptions": [
+        "商品价值量由个别劳动时间决定",
+        "价格围绕价值波动说明价值规律失效了"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "如果有人做一件衣服需要10小时，有人只需要2小时，这件衣服的价值量应该按谁的时间计算？"
+        },
+        {
+          "level": "L2",
+          "text": "价值量由社会必要劳动时间决定，这意味着效率高的生产者可以获得超额收入。"
+        },
+        {
+          "level": "L3",
+          "text": "分析价格波动时，要区分：价格围绕价值波动是价值规律的表现形式，不是对价值规律的否定。价格归根到底由价值决定。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-marxism-015",
+      "title": "剩余价值的生产",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "剩余价值是由雇佣工人创造的、被资本家无偿占有的、超过劳动力价值的价值。资本主义生产过程是劳动过程和价值增殖过程的统一。雇佣工人的劳动时间分为必要劳动时间和剩余劳动时间两部分。必要劳动时间再生产劳动力的价值，剩余劳动时间创造剩余价值。剩余价值生产的两种基本方法是绝对剩余价值生产和相对剩余价值生产。",
+      "prerequisites": [
+        "politics-marxism-013"
+      ],
+      "misconceptions": [
+        "剩余价值是资本家经营管理应得的报酬",
+        "机器也能创造剩余价值"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "工人一天工作8小时，工资只够维持基本生活。那么这8小时以外，工人的劳动成果归谁？"
+        },
+        {
+          "level": "L2",
+          "text": "剩余价值的秘密在于：劳动力商品的使用价值（劳动）能创造出比自身价值更大的价值。"
+        },
+        {
+          "level": "L3",
+          "text": "分析剩余价值生产，关键抓住：购买劳动力$\\to$消费劳动力（劳动）$\\to$劳动创造的价值大于劳动力价值$\\to$差额被资本家占有。这就是剥削的秘密。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-marxism-016",
+      "title": "资本积累",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "资本积累是把剩余价值再转化为资本，即剩余价值的资本化。资本积累的实质是资本家利用无偿占有的剩余价值，扩大生产规模，进一步无偿占有更多的剩余价值。资本积累的后果是：资本有机构成提高，相对过剩人口形成，严重的贫富两极分化。资本积累的历史趋势是资本主义私有制的灭亡和社会主义公有制的建立。",
+      "prerequisites": [
+        "politics-marxism-015"
+      ],
+      "misconceptions": [
+        "资本积累对工人有利，因为它创造了更多就业机会",
+        "资本积累就是资本家节约消费、把钱存起来"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "资本家把赚来的钱用来买更多机器、雇更多工人，这对资本家和工人分别意味着什么？"
+        },
+        {
+          "level": "L2",
+          "text": "资本积累不仅仅是'存钱'，而是把剩余价值转化为新的资本，扩大剥削规模。"
+        },
+        {
+          "level": "L3",
+          "text": "分析资本积累的二重后果：一方面促进社会生产力发展，另一方面加剧资本主义基本矛盾。这是理解资本主义历史命运的关键。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-marxism-017",
+      "title": "资本的循环和周转",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "资本循环是资本从一种形式出发，经过一系列形式变化，又回到原来出发点的运动。产业资本循环经历购买、生产、销售三个阶段，采取货币资本、生产资本、商品资本三种职能形式。资本周转是周而复始、不断重复的资本循环。影响资本周转速度的因素有生产时间和流通时间的长短、生产资本的构成（固定资本和流动资本的比例）。加快资本周转可以带来更多年剩余价值。",
+      "prerequisites": [
+        "politics-marxism-015"
+      ],
+      "misconceptions": [
+        "资本循环就是商品从生产到销售的过程",
+        "固定资本就是买厂房设备的钱，永远不会动"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "一家工厂从买原料开始，到把产品卖出去收回钱，这个过程经历了哪些阶段？每个阶段资本的形式发生了什么变化？"
+        },
+        {
+          "level": "L2",
+          "text": "资本循环理论揭示了资本运动的连续性要求，即三种职能形式在空间上并存、在时间上继起。"
+        },
+        {
+          "level": "L3",
+          "text": "分析资本周转速度时，要区分固定资本（逐次转移价值）和流动资本（一次转移价值），这是影响周转速度的关键因素。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-marxism-018",
+      "title": "社会再生产",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "社会再生产是不断重复、不断更新的生产过程。社会再生产的核心问题是社会总产品的实现问题，即社会总产品的价值补偿和实物补偿问题。社会总产品在价值上分为c、v、m三部分，在实物上分为生产资料和消费资料两大类。与此相适应，社会生产分为第一部类（生产生产资料的部类）和第二部类（生产消费资料的部类）。只有两大部类之间和部类内部保持适当比例，社会再生产才能顺利进行。",
+      "prerequisites": [
+        "politics-marxism-017"
+      ],
+      "misconceptions": [
+        "社会再生产就是每个企业把自己的生产重复一遍",
+        "市场经济中不会出现社会再生产的比例失调"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "如果今年生产的所有产品都卖不出去，明年还能继续生产吗？社会生产需要什么条件才能持续进行？"
+        },
+        {
+          "level": "L2",
+          "text": "社会再生产理论揭示了社会化大生产客观要求的比例关系，这是国民经济协调发展的重要理论依据。"
+        },
+        {
+          "level": "L3",
+          "text": "分析社会再生产实现条件时，关键是理解：第一部类向第二部类提供的生产资料，要等于第二部类需要的生产资料；反之亦然。这是两大部类平衡发展的基本条件。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-marxism-019",
+      "title": "剩余价值的分配",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "在资本主义社会，剩余价值被不同资本家集团分割为产业利润、商业利润、利息、银行利润、农业地租等具体形式。利润是剩余价值的转化形式。平均利润率形成后，各部门资本家按等量资本获得等量利润的原则瓜分剩余价值。资本主义地租是农业资本家交给土地所有者的超过平均利润的那部分剩余价值，它体现了土地所有者、农业资本家和农业工人三者之间的关系。",
+      "prerequisites": [
+        "politics-marxism-015",
+        "politics-marxism-017"
+      ],
+      "misconceptions": [
+        "利润是资本家'经营管理'应得的报酬",
+        "地租是土地'自然产生'的收益"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "同样投入100万元，开工厂和开商店哪个赚得更多？在竞争中，不同部门的利润率会趋向一个什么结果？"
+        },
+        {
+          "level": "L2",
+          "text": "剩余价值分配理论揭示了：不同资本家集团共同瓜分雇佣工人创造的剩余价值，他们之间也存在矛盾，但共同剥削无产阶级。"
+        },
+        {
+          "level": "L3",
+          "text": "分析剩余价值的各种转化形式时，要抓住：不管形式如何变化，其源泉都是雇佣工人的剩余劳动。这是贯穿始终的主线。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-marxism-020",
+      "title": "资本主义基本矛盾和经济危机",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "资本主义基本矛盾是个别企业内部生产的有组织性和整个社会生产的无政府状态之间的矛盾，是生产无限扩大的趋势和劳动人民有支付能力的需求相对缩小之间的矛盾。资本主义基本矛盾是经济危机的根源。经济危机的实质是生产相对过剩，即生产的商品相对于劳动人民有支付能力的需求来说过剩了。经济危机周期性爆发，使资本主义再生产也呈现周期性。",
+      "prerequisites": [
+        "politics-marxism-010",
+        "politics-marxism-016",
+        "politics-marxism-018"
+      ],
+      "misconceptions": [
+        "经济危机就是商品太少、供不应求",
+        "资本主义可以通过自身调节彻底消除经济危机"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "为什么在经济危机中，一方面商品大量积压卖不出去，另一方面很多人买不起基本生活用品？"
+        },
+        {
+          "level": "L2",
+          "text": "资本主义基本矛盾决定了经济危机是制度性的，不是偶然的。只要资本主义制度存在，经济危机就不可避免。"
+        },
+        {
+          "level": "L3",
+          "text": "分析经济危机时，要区分'绝对过剩'（生产太多超过实际需要）和'相对过剩'（超过购买能力）。资本主义危机是相对过剩危机。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    }
+  ]
+}

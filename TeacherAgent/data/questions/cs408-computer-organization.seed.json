@@ -1,0 +1,1678 @@
+{
+  "subject": "cs408",
+  "course": "computer_organization",
+  "chapter": "cs408-computer-organization",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "cs408-co-q-system-001",
+      "title": "冯·诺依曼体系辨析",
+      "content": "冯$\\cdot$诺依曼体系结构计算机的核心思想是：",
+      "type": "concept_check",
+      "difficulty": 1,
+      "options": [
+        "A. 采用十进制运算",
+        "B. 存储程序和程序控制",
+        "C. 使用高级语言编程",
+        "D. 采用分布式计算"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "冯$\\cdot$诺依曼体系结构的核心是存储程序原理：程序和数据以二进制形式存储在存储器中",
+        "计算机按照存储的程序自动逐条取出指令并执行",
+        "选项 $A$错误，冯$\\cdot$诺依曼使用二进制。$C$和 $D$与冯$\\cdot$诺依曼体系无关"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-co-system-overview"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "冯$\\cdot$诺依曼体系的关键在于程序如何被处理"
+        },
+        {
+          "level": "L2",
+          "text": "存储程序意味着程序和数据同等对待"
+        },
+        {
+          "level": "L3",
+          "text": "五大部件 +存储程序 +二进制 =冯$\\cdot$诺依曼体系核心"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-q-perf-001",
+      "title": "CPU执行时间计算",
+      "content": "某处理器主频为 2GHz，运行某程序需要执行 $10^8$条指令，CPI 为 2.5。求该程序的 CPU 执行时间。若将主频提高到 4GHz 但 CPI 增大到 3，执行时间是多少？哪种方案更快？",
+      "type": "solution",
+      "difficulty": 2,
+      "options": [],
+      "answer": "方案1：0.125秒；方案2：0.075秒；方案2更快",
+      "solutionSteps": [
+        "方案1：$T =$IC $\\times \\frac{CPI}{f} = 10^8 \\times \\frac{2.5}{(2\\times10^9)} = \\frac{2.5\\times10^8}{2\\times10^9} = 0.125$秒",
+        "方案2：$T = 10^8 \\times \\frac{3}{(4\\times10^9)} = \\frac{3\\times10^8}{4\\times10^9} = 0.075$秒",
+        "方案2更快（0.075 < 0.125），虽然 CPI 增大了但主频提升更显著"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-co-performance"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "CPU执行时间公式：$T =$IC $\\times$CPI /主频"
+        },
+        {
+          "level": "L2",
+          "text": "注意主频单位换算：GHz $= 10^9 Hz$"
+        },
+        {
+          "level": "L3",
+          "text": "提高主频不一定降低执行时间，还要看 CPI 的变化"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-q-number-001",
+      "title": "补码表示范围",
+      "content": "8 位补码所能表示的整数范围是：",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "A. -127 ~ +127",
+        "B. -128 ~ +127",
+        "C. -128 ~ +128",
+        "D. -127 ~ +128"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "8 位补码：最高位为符号位，数值位 7 位",
+        "最大正数：01111111 = +127",
+        "最小负数：$10000000 = -128$（$-2^7$）",
+        "注意 -128 的补码是 10000000，它没有对应的原码表示",
+        "所以范围是 -128 ~ +127"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-co-number-representation"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "补码比原码多表示一个负数"
+        },
+        {
+          "level": "L2",
+          "text": "$n$位补码范围：$-2^(n-1) ~ 2^(n-1) - 1$"
+        },
+        {
+          "level": "L3",
+          "text": "8 位补码的 -128 编码为 10000000，原码无法表示这个数"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-q-ieee-001",
+      "title": "IEEE754浮点转换",
+      "content": "将十进制数 -13.625 转换为 IEEE 754 单精度浮点数格式，给出其 32 位二进制表示和十六进制表示。",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [],
+      "answer": "二进制：1 10000010 10110100000000000000000，十六进制：C15A0000H",
+      "solutionSteps": [
+        "符号位 S = 1（负数）",
+        "将 13.625转为二进制：$13 = 1101$，$0.625 = 0.101$，所以 $13.625 = 1101.101$",
+        "规格化：$1101.101 = 1.101101 \\times 2^3$",
+        "阶码 $E = 3 + 127 = 130 = 10000010$",
+        "尾数 M = 101101（去掉隐含位 1），补零到 23 位：10110100000000000000000",
+        "组合：1 10000010 10110100000000000000000 = C15A0000H"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-co-ieee754"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先分离符号、整数部分和小数部分分别转换"
+        },
+        {
+          "level": "L2",
+          "text": "规格化后阶码 = 实际指数 + 偏移值127"
+        },
+        {
+          "level": "L3",
+          "text": "尾数只存小数部分，隐含最高位1不存储"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-q-alu-001",
+      "title": "ALU概念辨析",
+      "content": "下列关于 ALU 的叙述中，正确的是：",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "A. ALU 只能做加法运算",
+        "B. ALU 中的溢出和进位是同一个概念",
+        "C. ALU 可以实现算术运算和逻辑运算",
+        "D. ALU 不需要状态寄存器"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "A 错误：ALU 能做加减乘除、逻辑与或非、移位等多种运算",
+        "B 错误：进位标志（CF）针对无符号运算，溢出标志（OF）针对有符号运算",
+        "C 正确：ALU 全称为算术逻辑单元，既能做算术运算也能做逻辑运算",
+        "D 错误：ALU 需要状态寄存器保存运算结果标志（溢出、零、进位等）"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-co-alu"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "ALU 的全称提示了它的两大功能"
+        },
+        {
+          "level": "L2",
+          "text": "区分进位和溢出：无符号看进位，有符号看溢出"
+        },
+        {
+          "level": "L3",
+          "text": "ALU = Arithmetic Logic Unit，Arithmetic + Logic"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-q-complement-001",
+      "title": "补码加法溢出判断",
+      "content": "用 8位补码计算 $67 + 78$，判断是否溢出，并说明理由。",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [],
+      "answer": "溢出。$67 + 78 = 145$，超出 8位补码正数最大值 127",
+      "solutionSteps": [
+        "[67]补 = 01000011，[78]补 = 01001110",
+        "相加：$01000011 + 01001110 = 10010001$",
+        "结果最高位为 1，看起来像负数，但两个正数相加不可能为负",
+        "溢出判断：Cf（最高位进位）$= 0$，$C7$（次高位进位）$= 1$，$V = 0$XOR $1 = 1$，溢出",
+        "两个正数（$67+78=145$）的和超出了 8位补码最大正数 127"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-co-complement-arith"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先看两个操作数的符号，同号相加才可能溢出"
+        },
+        {
+          "level": "L2",
+          "text": "V = 最高位进位 XOR 次高位进位"
+        },
+        {
+          "level": "L3",
+          "text": "两个正数相加结果为负（符号位为1），说明溢出了"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-q-mem-001",
+      "title": "SRAM与DRAM比较",
+      "content": "下列关于 SRAM 和 DRAM 的比较中，正确的是：",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "A. SRAM 需要定期刷新，DRAM 不需要",
+        "B. SRAM 集成度高于 DRAM",
+        "C. SRAM 速度比 DRAM 快",
+        "D. SRAM 的单位成本低于 DRAM"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "A 错误：DRAM 需要定期刷新（电容漏电），SRAM 不需要（触发器保持）",
+        "B 错误：DRAM 每个存储单元只需一个晶体管+一个电容，集成度更高",
+        "C 正确：SRAM 基于触发器，访问速度比 DRAM 的电容充放电更快",
+        "D 错误：SRAM 每个单元需要 6 个晶体管，成本高于 DRAM"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-co-main-memory"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "SRAM 用触发器存储，DRAM 用电容存储"
+        },
+        {
+          "level": "L2",
+          "text": "电容会漏电所以需要刷新，触发器不会"
+        },
+        {
+          "level": "L3",
+          "text": "SRAM 快但贵（用于 Cache），DRAM 慢但便宜（用于主存）"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-q-cache-001",
+      "title": "Cache命中率计算",
+      "content": "某计算机 Cache 访问时间 5ns，主存访问时间 50ns，Cache 命中率 95%。求平均访存时间。若要使平均访存时间降到 10ns 以内，命中率至少需要多少？",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [],
+      "answer": "平均访存时间 7.25ns；命中率至少需 88.9%",
+      "solutionSteps": [
+        "$T_avg = H \\times T_c + (1-H) \\times T_m = 0.95\\times5 + 0.05\\times50 = 4.75 + 2.5 = 7.25ns$",
+        "设目标命中率 $H'$：$H'\\times5 + (1-H')\\times50 \\le 10$",
+        "$5H' + 50 - 50H' \\le 10 \\to 50 - 45H' \\le 10 \\to 45H' \\ge 40 \\to H' \\ge 4\\frac{0}{4}5 = \\frac{8}{9} \\approx 88.9%$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-co-cache"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "平均访存时间公式：$T = H\\times T_cache + (1-H)\\times T_main$"
+        },
+        {
+          "level": "L2",
+          "text": "将目标 $T_avg$代入公式，解出 $H$的不等式"
+        },
+        {
+          "level": "L3",
+          "text": "注意这里假设未命中时先查 Cache（5ns）再查主存（50ns），还是同时启动"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-q-mapping-001",
+      "title": "Cache映射地址计算",
+      "content": "某 Cache 容量 4KB，块大小 $64B$，采用 4路组相联映射。主存容量 1MB。求：$(1)$Cache 的行数和组数；$(2)$主存地址各字段（Tag、Index、Offset）的位数。",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [],
+      "answer": "行数64，组数16；Tag=10位，Index=4位，Offset=6位",
+      "solutionSteps": [
+        "$(1)$Cache 行数 =容量/块大小 $= 409\\frac{6}{6}4 = 64$行",
+        "组数 =行数/路数 $= 6\\frac{4}{4} = 16$组",
+        "$(2)$Offset $= log2$(块大小) $= log2(64) = 6$位",
+        "$Index = log2$(组数) $= log2(16) = 4$位",
+        "主存地址位数 $= log2(1MB) = 20$位",
+        "$Tag = 20 - 4 - 6 = 10$位"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-co-cache-mapping"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "地址划分：Tag + Index + Offset，总位数 = 主存地址位数"
+        },
+        {
+          "level": "L2",
+          "text": "Offset 由块大小决定，Index 由组数决定"
+        },
+        {
+          "level": "L3",
+          "text": "组数 =Cache 行数 /路数"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-q-vm-001",
+      "title": "TLB地址转换计算",
+      "content": "在页式虚拟存储管理中，TLB 命中率为 98%，TLB 访问时间 2ns，页表访问时间 10ns，主存访问时间 50ns。假设 TLB 和 Cache 同时查找，TLB 未命中时需访问页表。一次访存（含地址转换）的平均时间是：",
+      "type": "concept_check",
+      "difficulty": 3,
+      "options": [
+        "A. 52ns",
+        "B. 54ns",
+        "C. 52.2ns",
+        "D. 62ns"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "TLB命中时：TLB 时间 +主存访问 $= 2 + 50 = 52ns$",
+        "TLB未命中时：TLB 时间 +页表访问 +主存访问 $= 2 + 10 + 50 = 62ns$",
+        "平均时间 $= 0.98 \\times 52 + 0.02 \\times 62 = 50.96 + 1.24 = 52.2ns$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-co-virtual-memory"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "TLB 命中只需 TLB 时间 + 一次主存访问"
+        },
+        {
+          "level": "L2",
+          "text": "TLB 未命中需额外访问页表"
+        },
+        {
+          "level": "L3",
+          "text": "平均时间 =命中率$\\times$命中时间 +($1-$命中率)$\\times$未命中时间"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-q-instr-001",
+      "title": "扩展操作码技术",
+      "content": "某指令系统采用定长指令字，指令字长 16 位，操作码 4 位，则该指令系统最多可以有几种操作？若使用扩展操作码技术，地址码为 4 位时操作码可扩展到几位？",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "A. 16 种操作，扩展到 12 位操作码",
+        "B. 16 种操作，扩展到 8 位操作码",
+        "C. 8 种操作，扩展到 12 位操作码",
+        "D. 16 种操作，不能扩展"
+      ],
+      "answer": "A",
+      "solutionSteps": [
+        "4位操作码最多表示 $2^4 = 16$种操作",
+        "当地址码为 4位时（单地址指令），指令字 16位中操作码可用 $16-4 = 12$位",
+        "扩展操作码技术让地址码少的指令使用更长的操作码",
+        "零地址指令的操作码可达 16 位（全部用于操作码）"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-co-instruction-system"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "$k$位操作码可表示 $2^k$种不同操作"
+        },
+        {
+          "level": "L2",
+          "text": "扩展操作码把省下的地址码位给操作码用"
+        },
+        {
+          "level": "L3",
+          "text": "单地址指令：$16 - 4 = 12$位操作码"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-q-addr-001",
+      "title": "相对寻址计算",
+      "content": "某计算机按字节编址，采用相对寻址的转移指令，指令字长 2 字节。执行该指令时 PC = 2000H，指令中的偏移量为 +40（十进制），则转移目标地址为：",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "A. 2028H",
+        "B. 202AH",
+        "C. 2040H",
+        "D. 2042H"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "相对寻址：有效地址 = PC + 偏移量",
+        "取指后 PC 已更新为下一条指令地址 $= 2000H + 2 = 2002H$",
+        "偏移量 $+40 = 28H$",
+        "目标地址 = 2002H + 28H = 202AH"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-co-addressing"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "相对寻址中的 PC 指向下一条指令，不是当前指令"
+        },
+        {
+          "level": "L2",
+          "text": "取指操作会自动让 PC 增加指令字长"
+        },
+        {
+          "level": "L3",
+          "text": "目标地址 = (当前PC + 指令字长) + 偏移量"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-q-pipe-001",
+      "title": "流水线性能计算",
+      "content": "一个 5 段流水线，每段时间 10ns。连续执行 20 条指令时，求理想情况下的执行时间和加速比。",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [],
+      "answer": "执行时间 240ns，加速比 $10\\frac{0}{2}4 \\approx 4.17$",
+      "solutionSteps": [
+        "非流水线执行时间 $= 20 \\times 5 \\times 10 = 1000ns$",
+        "流水线执行时间 $= (k + n - 1) \\times$时钟周期 $= (5 + 20 - 1) \\times 10 = 24 \\times 10 = 240ns$",
+        "加速比 $= \\frac{1000}{240} \\approx 4.17$",
+        "理想最大加速比 = k = 5（当 n 很大时接近）"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-co-cpu-pipeline"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "流水线总时间 =(段数 +指令数 $- 1$) $\\times$时钟周期"
+        },
+        {
+          "level": "L2",
+          "text": "非流水线总时间 =指令数 $\\times$段数 $\\times$时钟周期"
+        },
+        {
+          "level": "L3",
+          "text": "加速比 =非流水线时间 /流水线时间"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-q-hazard-001",
+      "title": "流水线冒险分析",
+      "content": "在 5 段流水线（IF-ID-EX-MEM-WB）中，有如下指令序列：\nI1: ADD R1, R2, R3  （R1 = R2+R3）\nI2: SUB R4, R1, R5  （R4 = R1-R5）\nI3: AND R6, R4, R7  （R6 = R4 AND R7）\n若不使用数据前推，需要插入多少个 stall 周期？使用数据前推后呢？",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [],
+      "answer": "无前推需 4 个 stall；有前推需 0 个 stall",
+      "solutionSteps": [
+        "I2 依赖 I1 的 R1（RAW），I3 依赖 I2 的 R4（RAW）",
+        "无前推：I2 的 ID 在 I1 的 WB 之后才能读到正确的 R1。I1 的 WB 在第5周期，I2 的 ID 原在第2周期，需要 stall 到第6周期，stall 3个周期",
+        "同理 I3 依赖 I2 的 R4，也需 stall 3个周期",
+        "标准 5 段流水线中，WB 在第 5 周期前半段写，ID 在第 2 周期后半段读，实际 stall 2 拍",
+        "无前推总 stall：I1->I2 stall 2 拍 + I2->I3 stall 2 拍 = 4 拍",
+        "有前推：I1 的 EX 结果可直接前推到 I2 的 EX 输入（EX->EX 前推），无需 stall。I2 同理。所以 0 stall"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-co-pipeline-hazards"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "RAW（写后读）是数据冒险的主要类型"
+        },
+        {
+          "level": "L2",
+          "text": "前推可以将 EX 阶段的结果直接送到下条指令的 EX 阶段"
+        },
+        {
+          "level": "L3",
+          "text": "ALU->ALU 前推可以完全消除 RAW 冒险，但 Load-Use 不行"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-q-io-001",
+      "title": "DMA方式辨析",
+      "content": "下列关于 DMA 方式的叙述中，错误的是：",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "A. DMA 传输过程中不需要 CPU 执行指令",
+        "B. DMA 传输前后需要 CPU 参与初始化和善后",
+        "C. DMA 适合传输少量零散数据",
+        "D. DMA 通过周期窃取方式获得总线控制权"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "A 正确：DMA 传输阶段由 DMA 控制器接管总线，不需要 CPU 执行指令",
+        "B 正确：CPU 需要设置源地址、目的地址、传输长度和方向等参数",
+        "C 错误：DMA 适合传输大量连续数据块，少量零散数据用中断方式更合适",
+        "D 正确：DMA 在 CPU 不访问主存的空闲周期中窃取总线使用权"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-co-bus-io"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "DMA 的核心特点是硬件控制器直接管理数据传输"
+        },
+        {
+          "level": "L2",
+          "text": "DMA 开始前 CPU 要初始化 DMA 控制器"
+        },
+        {
+          "level": "L3",
+          "text": "DMA 适合块传输，中断适合少量数据"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-q-cisc-risc-001",
+      "title": "RISC特点辨析",
+      "content": "下列属于 RISC 特点的有：（多选）",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "A. 指令条数少、格式规整、等长",
+        "B. 大量使用寄存器，运算在寄存器间进行",
+        "C. 微程序控制为主",
+        "D. 编译器较复杂"
+      ],
+      "answer": "ABD",
+      "solutionSteps": [
+        "A 正确：RISC 指令精简，格式固定，便于硬件流水线化",
+        "B 正确：RISC 采用 Load/Store 架构，运算指令只操作寄存器",
+        "C 错误：RISC 以硬布线控制为主（速度快），CISC 以微程序控制为主",
+        "D 正确：RISC 需要编译器优化指令调度来弥补指令功能的简化"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-co-cisc-risc"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "RISC 的设计哲学是用简单的硬件 + 聪明的编译器"
+        },
+        {
+          "level": "L2",
+          "text": "CISC 用微程序控制灵活实现复杂指令，RISC 用硬布线追求速度"
+        },
+        {
+          "level": "L3",
+          "text": "RISC 的 Load/Store 意味着访存只有 Load 和 Store 指令"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-q-float-001",
+      "title": "浮点数最大规格化数",
+      "content": "某浮点数格式为：阶码 6 位（含 1 位阶符，移码表示），尾数 10 位（含 1 位数符，补码表示），基数为 2。该浮点数能表示的最大正规格化数为：",
+      "type": "concept_check",
+      "difficulty": 3,
+      "options": [
+        "A. 2^31 × (1 - 2^-9)",
+        "B. 2^32 × (1 - 2^-9)",
+        "C. 2^31 × (1 - 2^-10)",
+        "D. 2^30 × (1 - 2^-9)"
+      ],
+      "answer": "A",
+      "solutionSteps": [
+        "阶码 6位移码，偏移值 $2^5 = 32$。阶码范围 0~63（移码），对应真值 $-32~31$",
+        "最大阶码真值 $= 31$（移码 $63 = 111111$）",
+        "尾数 10位补码（含符号位），最大正规格化尾数 $= 0.111111111 = 1 - 2^-9$",
+        "最大正规格化数 $= 2^31 \\times (1 - 2^-9)$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-co-fixed-float",
+        "cs408-co-ieee754"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先确定阶码的表示范围和尾数的精度"
+        },
+        {
+          "level": "L2",
+          "text": "移码的真值 = 移码值 - 偏移值"
+        },
+        {
+          "level": "L3",
+          "text": "规格化尾数最高位为1，最大值就是所有位都为1"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-q-cache-write-001",
+      "title": "Cache写策略辨析",
+      "content": "下列关于 Cache 写策略的说法中，正确的是：",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "A. 写直达（write-through）每次写操作只修改 Cache",
+        "B. 写回（write-back）每次写操作同时修改 Cache 和主存",
+        "C. 写回策略需要为每个 Cache 行设置脏位（dirty bit）",
+        "D. 写直达比写回策略实现更复杂"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "A 错误：写直达每次同时写 Cache 和主存",
+        "B 错误：写回只修改 Cache，被替换时再写回主存",
+        "C 正确：写回策略需要脏位标记该行是否被修改，替换时只回写脏行",
+        "D 错误：写直达实现更简单（每次都写主存即可），写回需要脏位和回写逻辑"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-co-cache-replace-write"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "写直达每次都写主存，写回只在替换时写"
+        },
+        {
+          "level": "L2",
+          "text": "脏位记录 Cache 行是否被修改过"
+        },
+        {
+          "level": "L3",
+          "text": "写回减少了主存写入次数但增加了一致性风险"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-q-mult-001",
+      "title": "Booth算法原理",
+      "content": "简述 Booth 算法（补码一位乘法）的基本规则，说明它相比原码一位乘法的优势。",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [],
+      "answer": "Booth 算法根据乘数相邻两位的差值决定操作；优势在于统一处理有符号数且减少加法次数",
+      "solutionSteps": [
+        "Booth规则：检查乘数当前位 $y_i$和前一位 $y_{i-1}$（初始 $y_{-1}=0$）",
+        "$y_i - y_{i-1} = 1$（即 01）：加被乘数 $[x]$补",
+        "$y_i - y_{i-1} = -1$（即 10）：减被乘数 $[-x]$补（即加 $[x]$补 的相反数）",
+        "$y_i - y_{i-1} = 0$（即 00或 11）：不做加法，仅算术右移",
+        "优势：直接用补码运算不需要单独处理符号位，且连续1序列只需首尾两次加减"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-co-multiplier-divider"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "Booth 算法看的是相邻两位的差值"
+        },
+        {
+          "level": "L2",
+          "text": "连续的 1 序列（如 011110）只需一次减和一次加"
+        },
+        {
+          "level": "L3",
+          "text": "原码乘法需要先分离符号位单独处理"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-q-dma-001",
+      "title": "DMA传输方式辨析",
+      "content": "下列关于 DMA（直接存储器存取）方式的叙述中，错误的是：",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "A. DMA 传输过程中 CPU 可以继续执行其他程序",
+        "B. DMA 控制器通过周期窃取方式获得总线控制权",
+        "C. DMA 适合传输少量零散数据",
+        "D. DMA 传输开始前需要 CPU 设置源地址、目的地址和传输长度"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "A 正确：DMA 传输阶段由 DMA 控制器接管总线，CPU 可执行其他指令（除非访存冲突）",
+        "B 正确：DMA 在 CPU 不访存的空闲周期窃取总线使用权",
+        "C 错误：DMA 适合传输大量连续数据块，少量零散数据用中断方式更合适",
+        "D 正确：CPU 需要初始化 DMA 控制器，设置传输参数"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-co-bus-io"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "DMA 的核心特点是硬件直接管理数据传输"
+        },
+        {
+          "level": "L2",
+          "text": "DMA 开始前需要 CPU 初始化"
+        },
+        {
+          "level": "L3",
+          "text": "DMA 适合块传输，中断适合少量数据"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-q-booth-001",
+      "title": "Booth算法计算乘法",
+      "content": "用 Booth 算法（补码一位乘法）计算 $(-3) \\times 5$，使用 5位补码表示。列出每步的部分积和乘数变化过程。",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [],
+      "answer": "结果为 10001（5位补码），即十进制 -15",
+      "solutionSteps": [
+        "[x]补 = [-3]补 = 11101（5位），[-x]补 = [3]补 = 00011（5位）",
+        "[y]补 = [5]补 = 00101（5位），附加位 y_{-1} = 0",
+        "Booth算法每步检查$P$的末两位：01加$[x]$补，10加$[-x]$补，$0\\frac{0}{1}1$仅算术右移",
+        "初始P = 00101|0（乘数拼接附加位），A = [x]补符号扩展，S = [-x]补符号扩展",
+        "经5步运算（4步移位+最后1步不移位），得到乘积的补码表示",
+        "最终结果 $= 10001$（5位补码）$= -16+1 = -15$",
+        "验证：$(-3) \\times 5 = -15$，结果正确"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-co-booth",
+        "cs408-co-multiplier-divider"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "Booth算法每步看P的末两位决定操作"
+        },
+        {
+          "level": "L2",
+          "text": "01加被乘数，10减被乘数（加[-x]补），00或11仅移位"
+        },
+        {
+          "level": "L3",
+          "text": "最后一步只做加减不移位，结果取部分积的高n位"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-q-float-norm-001",
+      "title": "浮点数规格化计算",
+      "content": "某浮点数格式：阶码4位（含1位阶符，移码表示，偏移值7），尾数8位（含1位数符，补码表示），基数为2。某浮点数运算后尾数为 00.0011010，阶码移码为 1011。请进行规格化处理，给出规格化后的阶码和尾数。",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [],
+      "answer": "左规2次：尾数变为00.1101000，阶码移码变为1001",
+      "solutionSteps": [
+        "当前尾数 00.0011010，最高有效位（符号位后第一位）为0，需要左规",
+        "第1次左规：尾数左移1位$\\to00.0110100$，阶码减1：$1011-1=1010$",
+        "此时尾数00.0110100，最高有效位仍为0，继续左规",
+        "第2次左规：尾数左移1位$\\to00.1101000$，阶码减1：$1010-1=1001$",
+        "此时尾数00.1101000，最高有效位为1，规格化完成",
+        "结果：尾数 $= 00.1101000$，阶码移码 $= 1001$（真值 $= 9-7 = 2$）"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-co-float-normalize",
+        "cs408-co-fixed-float"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "左规条件：尾数最高有效位为0，需要左移"
+        },
+        {
+          "level": "L2",
+          "text": "每左移1位，阶码减1，保持数值不变"
+        },
+        {
+          "level": "L3",
+          "text": "左规直到尾数最高有效位为1（即符号位后第一位为1）"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-q-float-round-001",
+      "title": "浮点舍入方法辨析",
+      "content": "下列关于浮点数舍入方法的说法中，正确的是：",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "A. 截断法（直接丢弃多余位）的精度最高",
+        "B. IEEE 754默认的舍入方式是0舍1入法",
+        "C. 恒置1法是将保留的最低有效位恒置为1",
+        "D. 0舍1入法与十进制四舍五入完全相同"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "A 错误：截断法实现最简单但精度最低，总是偏向零方向产生误差",
+        "B 错误：IEEE 754默认舍入方式是就近舍入到偶数（round to nearest, ties to even），不是0舍1入",
+        "C 正确：恒置1法将保留部分的最低有效位恒置为1，统计平均误差较小",
+        "D 错误：0舍1入法是二进制版本（看丢弃部分最高位），十进制四舍五入看的是数值大小，两者判断标准不同"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-co-float-round"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "不同舍入方法在精度和实现复杂度上各有取舍"
+        },
+        {
+          "level": "L2",
+          "text": "IEEE 754使用的是round to nearest even，不是简单的0舍1入"
+        },
+        {
+          "level": "L3",
+          "text": "恒置1法的思想是让最低位总为1，减少系统性偏差"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-q-cache-addr-001",
+      "title": "Cache地址划分计算",
+      "content": "某计算机主存地址32位，Cache容量为16KB，块大小$64B$，采用2路组相联映射。求：$(1)$Cache行数和组数；$(2)$主存地址中Tag、Index、Offset各占多少位？",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [],
+      "answer": "Cache行数256，组数128；Tag=18位，Index=7位，Offset=6位",
+      "solutionSteps": [
+        "Offset位数 $= log2$(块大小) $= log2(64) = 6$位",
+        "Cache行数 =Cache容量/块大小 $= 1638\\frac{4}{6}4 = 256$行",
+        "组数 =Cache行数/路数 $= 25\\frac{6}{2} = 128$组",
+        "Index位数 $= log2$(组数) $= log2(128) = 7$位",
+        "Tag位数 =主存地址位数 -Index位数 -Offset位数 $= 32 - 7 - 6 = 18$位"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-co-cache-calc",
+        "cs408-co-cache-mapping"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先算Offset（由块大小决定），再算Index（由组数决定）"
+        },
+        {
+          "level": "L2",
+          "text": "组数 =Cache行数 /路数，Index $= log2$(组数)"
+        },
+        {
+          "level": "L3",
+          "text": "Tag位数 = 总地址位数 - Index - Offset"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-q-cache-amat-001",
+      "title": "AMAT计算",
+      "content": "某计算机有两级Cache。L1 Cache命中时间1个时钟周期，缺失率5%；L2 Cache命中时间6个时钟周期，缺失率20%；主存访问惩罚100个时钟周期。每个时钟周期1ns。求AMAT（平均内存访问时间）。",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [],
+      "answer": "AMAT = 2.3个时钟周期 = 2.3ns",
+      "solutionSteps": [
+        "$AMAT = L1$命中时间 $+ L1$缺失率 $\\times$($L2$命中时间 $+ L2$缺失率 $\\times$主存惩罚)",
+        "$AMAT = 1 + 0.05 \\times (6 + 0.20 \\times 100)$",
+        "$= 1 + 0.05 \\times (6 + 20)$",
+        "$= 1 + 0.05 \\times 26$",
+        "$= 1 + 1.3 = 2.3$个时钟周期",
+        "每个时钟周期1ns，所以AMAT = 2.3ns"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-co-cache-perf",
+        "cs408-co-cache"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "两级Cache的AMAT需要逐级展开"
+        },
+        {
+          "level": "L2",
+          "text": "L2的缺失惩罚是访问主存的代价"
+        },
+        {
+          "level": "L3",
+          "text": "$AMAT = T_L1 + MR_L1 \\times (T_L2 + MR_L2 \\times MP_main)$"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-q-tlb-001",
+      "title": "TLB与Cache联合转换",
+      "content": "某系统TLB命中率为96%，TLB查找时间10ns，页表访问（主存中）时间50ns。Cache命中率为90%，Cache访问时间5ns，Cache未命中时访问主存50ns。采用串行访问方式（先查TLB再查Cache）。求一次访存的平均时间。",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [],
+      "answer": "平均访存时间 = 21.5ns",
+      "solutionSteps": [
+        "串行方式：先查TLB得到物理地址，再用物理地址查Cache",
+        "Cache部分的平均访问时间（不论TLB命中与否）$= 0.9\\times5 + 0.1\\times50 = 4.5 + 5 = 9.5ns$",
+        "TLB命中（96%）：总时间 = TLB查找10ns + Cache平均9.5ns = 19.5ns",
+        "TLB未命中（4%）：总时间 = TLB查找10ns + 页表访问50ns + Cache平均9.5ns = 69.5ns",
+        "$AMAT = 0.96 \\times 19.5 + 0.04 \\times 69.5 = 18.72 + 2.78 = 21.5ns$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-co-tlb",
+        "cs408-co-cache-perf"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "串行方式需要先完成TLB查找才能开始Cache查找"
+        },
+        {
+          "level": "L2",
+          "text": "TLB命中和未命中两种情况分别计算，再加权平均"
+        },
+        {
+          "level": "L3",
+          "text": "无论TLB是否命中，之后都要查Cache，Cache部分的平均时间相同"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-q-virtual-001",
+      "title": "页表地址转换计算",
+      "content": "某系统虚拟地址32位，物理地址28位，页面大小4KB。每个页表项4字节。求：$(1)$页表有多少项？$(2)$页表占多大空间？$(3)$虚拟地址$0x00123456$对应的虚拟页号和页内偏移各是多少？",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [],
+      "answer": "页表$2^20$项，页表大小4MB；虚拟页号$0x123=291$，页内偏移$0x456$",
+      "solutionSteps": [
+        "页面大小4KB $= 2^12$，页内偏移12位",
+        "虚拟页号位数 $= 32 - 12 = 20$位",
+        "页表项数 $= 2^20 = 1048576$项",
+        "页表大小 $= 2^20 \\times 4$字节 $= 4MB$",
+        "虚拟地址$0x00123456$：虚拟页号 $= 0x00123456 >> 12 = 0x123 = 291$",
+        "页内偏移 $= 0x00123456 & 0$xFFF $= 0x456 = 1110$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-co-virtual-calc",
+        "cs408-co-virtual-memory"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "页内偏移由页面大小决定：4KB $= 2^12$，偏移12位"
+        },
+        {
+          "level": "L2",
+          "text": "虚拟页号 = 虚拟地址的高位部分（去掉页内偏移）"
+        },
+        {
+          "level": "L3",
+          "text": "页表项数 = 虚拟页数 = 2^(虚拟地址位数-页内偏移位数)"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-q-datapath-001",
+      "title": "数据通路概念辨析",
+      "content": "下列关于数据通路的说法中，正确的是：",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "A. 单总线数据通路允许同一时钟周期内进行多次数据传输",
+        "B. 专用数据通路结构比单总线结构更简单",
+        "C. 数据通路包含总线、寄存器和ALU等部件",
+        "D. 数据通路只存在于CPU外部，连接CPU与主存"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "A 错误：单总线结构同一时刻只能进行一次数据传输，因为所有部件共享一条总线",
+        "B 错误：专用数据通路设置多条专用连接，结构比单总线更复杂，但速度更快",
+        "C 正确：数据通路由总线、寄存器（PC、IR、MAR、MDR等）和ALU等部件组成",
+        "D 错误：数据通路主要指CPU内部各部件之间的数据传输路径"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-co-data-path"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "数据通路是CPU内部数据传输的通道"
+        },
+        {
+          "level": "L2",
+          "text": "单总线的限制在于同一时刻只能有一个传输"
+        },
+        {
+          "level": "L3",
+          "text": "数据通路包含所有参与数据传输的部件，不仅是连线"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-q-micro-001",
+      "title": "微程序控制器概念",
+      "content": "下列关于微程序控制器的说法中，错误的是：",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "A. 微指令存储在控制存储器（CM）中",
+        "B. 每条机器指令对应一段微程序",
+        "C. 微程序控制器比硬布线控制器速度更快",
+        "D. 水平型微指令的每一位可直接控制一个功能部件"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "A 正确：微程序控制器的微指令存储在控制存储器CM中（通常为ROM）",
+        "B 正确：每条机器指令的执行过程对应一段微程序（多条微指令序列）",
+        "C 错误：微程序控制器每条微指令需访问CM，速度低于硬布线控制器的纯组合逻辑",
+        "D 正确：水平型微指令采用直接编码，每一位对应一个控制信号"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-co-microprogram"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "微程序控制器用存储逻辑实现控制功能"
+        },
+        {
+          "level": "L2",
+          "text": "访问存储器比纯组合逻辑慢"
+        },
+        {
+          "level": "L3",
+          "text": "水平型微指令宽而短（并行度高），垂直型窄而长（编码压缩）"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-q-micro-vs-001",
+      "title": "硬布线vs微程序比较",
+      "content": "下列关于硬布线控制器和微程序控制器的比较中，正确的有：（多选）",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "A. 硬布线控制器速度通常快于微程序控制器",
+        "B. 微程序控制器比硬布线控制器更容易修改和扩展",
+        "C. RISC处理器通常采用微程序控制器",
+        "D. 硬布线控制器的控制信号由组合逻辑电路产生"
+      ],
+      "answer": "ABD",
+      "solutionSteps": [
+        "A 正确：硬布线是纯组合逻辑，无需访问存储器，速度更快",
+        "B 正确：微程序修改只需更改CM中的微指令，硬布线需要重新设计电路",
+        "C 错误：RISC指令简单规整，通常采用硬布线控制器以获得更高速度；CISC才多用微程序",
+        "D 正确：硬布线控制器的核心就是用组合逻辑电路（与门、或门等）产生控制信号"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-co-micro-vs-hard",
+        "cs408-co-hardwire",
+        "cs408-co-microprogram"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "两者的核心区别在于控制信号的产生方式"
+        },
+        {
+          "level": "L2",
+          "text": "RISC指令简单$\\to$硬布线追求速度；CISC指令复杂$\\to$微程序追求灵活性"
+        },
+        {
+          "level": "L3",
+          "text": "现代CPU融合两者：复杂指令翻译为微操作，微操作由硬布线执行"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-q-pipeline-calc-001",
+      "title": "流水线吞吐率加速比计算",
+      "content": "一个4段流水线，各段时间分别为：取指2ns、译码3ns、执行4ns、写回1ns。连续执行50条指令。求：$(1)$时钟周期应取多少？$(2)$流水线总执行时间？$(3)$吞吐率和加速比？",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [],
+      "answer": "时钟周期4ns，总时间212ns，吞吐率约$2.36\\times10^8$条/秒，加速比约2.36",
+      "solutionSteps": [
+        "$(1)$各段时间不等时，时钟周期取最慢段时间：$\\Delta t = \\max(2,3,4,1) = 4ns$",
+        "$(2)$流水线总时间 $= (k+n-1)\\times\\Delta t = (4+50-1)\\times4 = 53\\times4 = 212ns$",
+        "$(3)$非流水线总时间 $= n\\times$各段时间之和 $= 50\\times(2+3+4+1) = 50\\times10 = 500ns$",
+        "吞吐率 TP $= n/$总时间 $= 5\\frac{0}{(212\\times10^-9)} \\approx 2.36\\times10^8$条/秒",
+        "加速比 $S =$非流水线时间/流水线时间 $= 50\\frac{0}{2}12 \\approx 2.36$",
+        "效率 $\\eta = \\frac{S}{k} = 2.3\\frac{6}{4} \\approx 58.9%$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-co-pipeline-calc",
+        "cs408-co-cpu-pipeline"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "各段时间不等时，时钟周期由最慢段决定"
+        },
+        {
+          "level": "L2",
+          "text": "非流水线时间 =指令数 $\\times$各段时间之和"
+        },
+        {
+          "level": "L3",
+          "text": "加速比 =非流水线时间 /流水线时间"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-q-hazard-calc-001",
+      "title": "数据冒险stall计算",
+      "content": "在5段流水线（$IF-ID-EX-MEM-WB$）中，有如下指令序列：$I1:$LW $R1, 0(R2)$（$R1 =$Memory$[R2+0]$，Load指令）$I2:$ADD $R3, R1, R4$（$R3 = R1+R4$，使用$R1$）$I3:$SUB $R5, R3, R6$（$R5 = R3-R6$，使用$R3$）假设使用数据前推（旁路），$I1$和$I2$之间需要几个stall？$I2$和$I3$之间呢？总共需要几个stall？",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [],
+      "answer": "I1-I2之间需要1个stall（Load-Use冒险），I2-I3之间需要0个stall（ALU-ALU前推），总共1个stall",
+      "solutionSteps": [
+        "I1(LW)和I2(ADD)之间：I1是Load指令，数据在MEM阶段末才得到；I2在EX阶段需要R1",
+        "这是$Load-Use$冒险，即使有MEM$\\to$EX的前推路径，数据在MEM末才准备好，而$I2$的EX在$I1$的MEM同周期开始",
+        "因此I1-I2之间必须stall 1拍",
+        "I2(ADD)和I3(SUB)之间：I2是ALU指令，结果在EX阶段末即可用",
+        "$I3$在EX阶段需要$R3$，通过EX$\\to$EX前推路径，$I2$的EX输出可直接送到$I3$的EX输入",
+        "因此I2-I3之间不需要stall",
+        "总共需要1个stall"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-co-hazard-detail",
+        "cs408-co-pipeline-hazards"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "Load-Use冒险和ALU-ALU冒险的处理方式不同"
+        },
+        {
+          "level": "L2",
+          "text": "Load的数据比ALU结果晚一个周期才可用"
+        },
+        {
+          "level": "L3",
+          "text": "$EX\\to$EX前推可以消除$ALU-ALU$冒险，但无法消除$Load-Use$冒险"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-q-interrupt-001",
+      "title": "中断响应过程辨析",
+      "content": "下列关于中断响应过程的叙述中，正确的是：",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "A. CPU在执行任何指令的过程中都能立即响应中断",
+        "B. 中断响应由硬件自动完成，包括保存断点和跳转ISR入口",
+        "C. 中断服务程序执行完毕后不需要恢复现场",
+        "D. 多个中断同时发生时，所有中断同时被处理"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "A 错误：CPU在指令执行周期末（指令边界）才检查中断请求，不能在指令执行中途响应",
+        "B 正确：中断响应由硬件自动完成——保存PC（断点）到栈中，关中断，加载ISR入口地址到PC",
+        "C 错误：ISR执行前需要保存现场（寄存器值），执行后必须恢复现场，否则影响被中断程序",
+        "D 错误：多个中断同时发生时，按优先级逐个处理（中断判优），不是同时处理"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-co-interrupt"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "中断响应有固定的时机和流程"
+        },
+        {
+          "level": "L2",
+          "text": "中断响应是硬件自动的，但ISR是软件"
+        },
+        {
+          "level": "L3",
+          "text": "中断判优决定了多个中断同时发生时的处理顺序"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-q-dma-calc-001",
+      "title": "DMA传输速率计算",
+      "content": "某DMA控制器采用周期窃取方式传输数据。每次窃取一个总线周期传输一个32位字。总线时钟频率为100MHz。若DMA需要传输200KB的数据，求：$(1)$DMA传输所需时间；$(2)$在此期间CPU有多少时间可以正常执行指令（假设CPU每次访存也需1个总线周期，且CPU和DMA不会同时请求总线）？",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [],
+      "answer": "DMA传输时间约0.05ms；CPU可用时间取决于CPU访存频率",
+      "solutionSteps": [
+        "每次传输数据量 = 32位 = 4字节",
+        "总线周期 $= \\frac{1}{1}00$MHz $= 10ns$",
+        "需传输次数 $= \\frac{200KB}{4B} = \\frac{204800}{4} = 51200$次",
+        "DMA总传输时间 $= 51200 \\times 10$ns $= 512000$ns $= 512\\mu s \\approx 0.512ms$",
+        "注意：周期窃取方式下DMA不是独占总线，只在CPU不访存时窃取",
+        "若CPU每个指令周期都访存，则DMA和CPU各占一半总线周期，DMA实际时间翻倍",
+        "若CPU不访存，DMA可以连续使用总线，传输时间 $= 512\\mu s$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-co-dma-detail",
+        "cs408-co-bus-io"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先算总传输次数 =总数据量 /每次传输量"
+        },
+        {
+          "level": "L2",
+          "text": "每次传输需要一个总线周期的时间"
+        },
+        {
+          "level": "L3",
+          "text": "周期窃取方式下DMA和CPU交替使用总线"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-q-bus-001",
+      "title": "总线定时概念辨析",
+      "content": "下列关于总线定时方式的说法中，正确的是：",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "A. 同步定时方式允许连接不同速度的设备",
+        "B. 异步定时方式使用统一的时钟信号协调传输",
+        "C. 半同步定时方式在同步时钟基础上增加了等待周期",
+        "D. 异步定时方式比同步定时方式速度更快"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "A 错误：同步定时要求所有设备按统一时钟工作，不适合连接不同速度设备",
+        "B 错误：异步定时不使用统一时钟，而是通过握手信号（请求/应答）协调传输",
+        "C 正确：半同步定时以同步时钟为基础，慢速设备可插入等待周期（Wait State）",
+        "D 错误：同步定时在设备速度一致时速度最快，异步定时因握手开销通常较慢"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-co-bus-detail"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "同步和异步的核心区别在于是否使用统一时钟"
+        },
+        {
+          "level": "L2",
+          "text": "半同步是同步的改进版，加入了等待机制"
+        },
+        {
+          "level": "L3",
+          "text": "异步握手需要请求和应答两个信号，有额外开销"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-q-overflow-001",
+      "title": "补码溢出判断计算",
+      "content": "用8位补码计算 $(-70) + (-80)$，用单符号位法和双符号位法分别判断是否溢出。",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [],
+      "answer": "溢出。双符号位法结果符号位为01（正溢出），结果超出8位补码范围",
+      "solutionSteps": [
+        "[-70]补 = 10111010，[-80]补 = 10110000",
+        "逐位相加：$10111010 + 10110000 = 1 10101100$（进位$Cf=1$）",
+        "8位结果 = 10101100 = -84（补码），但正确答案应为-150，说明溢出",
+        "【双符号位法】将符号位扩展为两位：[-70]变补 = 11 0111010，[-80]变补 = 11 0110000",
+        "相加：$11 0111010 + 11 0110000 = 1 01 0101100$（9位结果）",
+        "取双符号位 = 01，表示正溢出（两负数相加结果向正方向溢出），确认溢出",
+        "【范围验证】8位补码范围为$-128~127$，$-70+(-80)=-150 < -128$，超出范围，确认溢出"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-co-complement-overflow-calc",
+        "cs408-co-complement-arith"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "两个负数相加，如果结果为正，说明溢出了"
+        },
+        {
+          "level": "L2",
+          "text": "双符号位法更直观：扩展一位符号位，看结果的两个符号位是否相同"
+        },
+        {
+          "level": "L3",
+          "text": "8位补码范围-128~127，-150显然超出范围"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-q-array-mult-001",
+      "title": "阵列乘法器概念辨析",
+      "content": "下列关于阵列乘法器的说法中，正确的是：",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "A. 阵列乘法器采用串行移位加法实现，速度与软件乘法相同",
+        "B. 阵列乘法器通过并行计算所有部分积来提高速度",
+        "C. 阵列乘法器只能用于无符号数乘法",
+        "D. 阵列乘法器的时间复杂度为O(n^2)"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "A 错误：阵列乘法器是并行结构，速度远快于串行移位加法",
+        "B 正确：阵列乘法器先生成所有部分积，再用加法器阵列并行求和",
+        "C 错误：阵列乘法器可以用于有符号数乘法（配合Booth编码等）",
+        "$D$错误：阵列乘法器时间复杂度为$O(n)$（信号传播延迟与位数成正比），空间复杂度为$O(n^2)$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-co-array-multiplier"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "阵列乘法器的核心优势在于并行性"
+        },
+        {
+          "level": "L2",
+          "text": "时间复杂度和空间复杂度是不同的概念"
+        },
+        {
+          "level": "L3",
+          "text": "Wallace树是阵列乘法器的进一步优化，延迟为$O(\\log n)$"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-q-io-port-001",
+      "title": "I/O端口编址方式",
+      "content": "下列关于I/O端口编址方式的说法中，正确的是：",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "A. 统一编址方式下，I/O端口需要专用的I/O指令来访问",
+        "B. 独立编址方式下，I/O端口占用主存地址空间",
+        "C. 统一编址方式下，可用访存指令直接访问I/O端口",
+        "D. 两种编址方式在性能上完全相同"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "A 错误：统一编址下I/O端口映射到主存空间，用普通访存指令（Load/Store）即可访问，不需要专用I/O指令",
+        "B 错误：独立编址下I/O端口有独立的地址空间，不占用主存地址空间",
+        "C 正确：统一编址（存储器映射I/O）将I/O端口视为主存单元，可用所有访存指令访问",
+        "D 错误：统一编址占用主存空间但指令灵活，独立编址不占主存空间但需专用指令，各有优劣"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-co-io-interface"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "统一编址把I/O当主存，独立编址I/O有自己空间"
+        },
+        {
+          "level": "L2",
+          "text": "统一编址用Load/Store，独立编址用IN/OUT"
+        },
+        {
+          "level": "L3",
+          "text": "RISC多用统一编址，CISC（x86）多用独立编址"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-q-ieee-calc-001",
+      "title": "IEEE754浮点数表示",
+      "content": "将十进制数 5.5 转换为 IEEE 754 单精度浮点数格式，给出其32位二进制表示和十六进制表示。",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [],
+      "answer": "二进制：0 10000001 01100000000000000000000，十六进制：40B00000H",
+      "solutionSteps": [
+        "符号位 S = 0（正数）",
+        "5.5转二进制：$5 = 101$，$0.5 = 0.1$，所以 $5.5 = 101.1$",
+        "规格化：$101.1 = 1.011 \\times 2^2$",
+        "阶码 $E = 2 + 127 = 129 = 10000001$",
+        "尾数 M = 011（去掉隐含位1），补零到23位：01100000000000000000000",
+        "组合：0 10000001 01100000000000000000000",
+        "按4位分组：$0100 0000 1011 0000 0000 0000 0000 0000 = 40B00000H$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-co-ieee754",
+        "cs408-co-float-normalize"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先将十进制数转为二进制，再规格化"
+        },
+        {
+          "level": "L2",
+          "text": "阶码 = 实际指数 + 偏移值127"
+        },
+        {
+          "level": "L3",
+          "text": "尾数只存小数部分，整数部分的1是隐含的"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-co-q-comprehensive-001",
+      "title": "CPU数据通路综合题",
+      "content": "某CPU采用单总线数据通路结构，包含PC、IR、MAR、MDR、通用寄存器R0~R3和ALU。请描述执行指令 ADD R1, R2（R1 = R1 + R2）的完整数据通路流程（列出每个时钟周期的微操作）。",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [],
+      "answer": "取指阶段3个周期+执行阶段2个周期，共5个时钟周期",
+      "solutionSteps": [
+        "取指阶段（单总线，每周期一次传输）：",
+        "$T1:$PC$\\to$MAR（将PC中的指令地址送到地址寄存器）",
+        "$T2:$MDR$\\to$IR（从存储器读出指令到指令寄存器），$PC+1\\to$PC（PC自增）",
+        "注意：$T2$中MDR$\\to$IR和$PC+1$可以合并为一个周期（$PC+1$在ALU中完成，与MDR$\\to$IR不冲突）",
+        "单总线结构：$T1:$PC$\\to$MAR$; T2:$MEM$\\to$MDR$\\to$IR,同时$PC+1$",
+        "执行阶段：",
+        "$T3: R2\\to$MAR（将$R2$的内容送到ALU的一个输入，通过总线）",
+        "$T4: R1\\to$ALU,ALU$(R1+R2)\\to R1$（ALU计算$R1+R2$，结果写回$R1$）",
+        "单总线结构每周期只能有一次总线传输，所以需要多个周期完成"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-co-data-path",
+        "cs408-co-instruction-system"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "单总线结构每个时钟周期只能进行一次总线传输"
+        },
+        {
+          "level": "L2",
+          "text": "指令执行分为取指和执行两个阶段"
+        },
+        {
+          "level": "L3",
+          "text": "ADD指令需要：取PC地址$\\to$读存储器$\\to$取指令$\\to$读$R2\\to$ALU计算$\\to$写$R1$"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    }
+  ]
+}

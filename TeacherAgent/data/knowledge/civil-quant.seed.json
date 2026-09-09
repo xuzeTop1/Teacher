@@ -1,0 +1,183 @@
+{
+  "subject": "xingce",
+  "course": "xingce",
+  "chapter": "civil-quant",
+  "status": "draft",
+  "nodes": [
+    {
+      "id": "xingce-quant-engineer",
+      "title": "数量关系：工程问题",
+      "level": "method",
+      "summary": "工程问题常用赋总量法：设工作量为各效率公倍数，效率 = 总量 / 时间。合作时效率和相加。遇到多人轮流或间歇，先算一个周期完成量再处理余数。",
+      "prerequisites": [],
+      "misconceptions": [
+        "不赋总量直接列分式方程，计算繁琐易错",
+        "合作效率当成效率相减"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "能不能给总工作量赋一个方便的公倍数？"
+        },
+        {
+          "level": "L2",
+          "text": "每个人的效率分别是多少，合作时怎么加？"
+        },
+        {
+          "level": "L3",
+          "text": "如果有间歇或轮流，一个周期能完成多少，余下怎么算？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "xingce-quant-travel",
+      "title": "数量关系：行程问题",
+      "level": "method",
+      "summary": "行程问题核心公式 路程 = 速度 × 时间。相遇问题路程和 = 速度和 × 时间；追及问题路程差 = 速度差 × 时间。画线段图厘清运动过程再列式。",
+      "prerequisites": [],
+      "misconceptions": [
+        "相遇和追及的公式记混",
+        "不画图导致运动过程理解错误"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这是相遇还是追及？路程和还是路程差？"
+        },
+        {
+          "level": "L2",
+          "text": "画一条线段图，标出两人的起点、方向和相遇点。"
+        },
+        {
+          "level": "L3",
+          "text": "速度和与速度差分别怎么用，时间能不能约掉？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "xingce-quant-permcomb",
+      "title": "数量关系：排列组合",
+      "level": "method",
+      "summary": "区分有序（排列 A）与无序（组合 C）。常用分类分步、插空、捆绑、对立面（总-不合要求）。先判断是否考虑顺序，再选方法。",
+      "prerequisites": [],
+      "misconceptions": [
+        "该用组合却用排列，多乘了顺序",
+        "没有先分类，导致重复或遗漏"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "选出来的元素交换顺序算不同结果吗？要排列还是组合？"
+        },
+        {
+          "level": "L2",
+          "text": "能不能先捆绑或先插空再算？"
+        },
+        {
+          "level": "L3",
+          "text": "正面分类太乱时，用对立面（总数减不符合）会不会更简单？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "xingce-quant-inclusion",
+      "title": "数量关系：容斥原理",
+      "level": "method",
+      "summary": "两集合：总数 = A + B - 都满足 + 都不满足。三集合用标准公式或画图（韦恩图）标注各区域。优先用画图法避免符号记错。",
+      "prerequisites": [
+        "xingce-quant-permcomb"
+      ],
+      "misconceptions": [
+        "三集合公式记错，漏减交集",
+        "不画图导致重复计算"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "画三个相交圆，把已知数字填到对应区域。"
+        },
+        {
+          "level": "L2",
+          "text": "只满足一个、满足两个、满足三个的区域分别怎么算？"
+        },
+        {
+          "level": "L3",
+          "text": "题目问「至少满足一个」还是「都不满足」？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "xingce-quant-substitute",
+      "title": "数量关系：代入排除法",
+      "level": "strategy",
+      "summary": "当正面列式困难时，优先用代入排除：从选项反推条件，尤其适合年龄、余数、不定方程类。优先代简单数或居中选项，能快速定位答案。",
+      "prerequisites": [
+        "xingce-quant-engineer",
+        "xingce-quant-travel"
+      ],
+      "misconceptions": [
+        "一味硬算，错过更快的代入路径",
+        "代入无序，浪费时间"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这题正面算麻烦吗？能不能拿选项往条件里代？"
+        },
+        {
+          "level": "L2",
+          "text": "先代哪个数最省事，居中还是边界？"
+        },
+        {
+          "level": "L3",
+          "text": "代入后发现不满足，是换相邻选项还是重新判断方向？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。"
+      },
+      "reviewStatus": "draft"
+    }
+  ]
+}

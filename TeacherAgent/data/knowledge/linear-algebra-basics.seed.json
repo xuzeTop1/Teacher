@@ -1,0 +1,345 @@
+{
+  "subject": "math",
+  "course": "linear_algebra",
+  "status": "draft",
+  "nodes": [
+    {
+      "id": "la-matrix-definition",
+      "title": "矩阵的定义",
+      "summary": "矩阵是一个按行和列排列的数表。$m\\times n$矩阵有 $m$行 $n$列，元素用 $a_{ij}$表示第 $i$行第 $j$列的元素。",
+      "level": "concept",
+      "difficulty": 1,
+      "prerequisites": [],
+      "misconceptions": [
+        "把矩阵和行列式混为一谈",
+        "忽略矩阵乘法不满足交换律"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "矩阵和你熟悉的表格有什么相似之处？"
+        },
+        {
+          "level": "L2",
+          "text": "$2\\times3$矩阵和 $3\\times2$矩阵能相加吗？能相乘吗？"
+        },
+        {
+          "level": "L3",
+          "text": "行向量和列向量是特殊的矩阵吗？"
+        }
+      ],
+      "source": {
+        "title": "Original TeacherAgent seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "la-matrix-addition",
+      "title": "矩阵加法",
+      "summary": "同型矩阵才能相加，对应位置元素相加。矩阵加法满足交换律和结合律。",
+      "level": "method",
+      "difficulty": 1,
+      "prerequisites": [
+        "la-matrix-definition"
+      ],
+      "misconceptions": [
+        "试图把不同尺寸的矩阵相加"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "两个矩阵要满足什么条件才能相加？"
+        },
+        {
+          "level": "L2",
+          "text": "把对应位置的元素分别相加试试。"
+        },
+        {
+          "level": "L3",
+          "text": "矩阵加法和数乘能满足什么运算律？"
+        }
+      ],
+      "source": {
+        "title": "Original TeacherAgent seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "la-matrix-multiplication",
+      "title": "矩阵乘法",
+      "summary": "$A(m\\times n)$乘以 $B(n\\times p)$得到 $C(m\\times p)$。$C_{ij} = \\Sigma a_{ik} * b_{kj}$。矩阵乘法不满足交换律。",
+      "level": "method",
+      "difficulty": 2,
+      "prerequisites": [
+        "la-matrix-definition"
+      ],
+      "misconceptions": [
+        "认为 AB = BA",
+        "忘记中间维度必须匹配",
+        "把矩阵乘法当成对应元素相乘"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "$A$是 $2\\times3$，$B$是 $3\\times2$，AB 的结果是什么尺寸？"
+        },
+        {
+          "level": "L2",
+          "text": "C_{11} = a_{11}*b_{11} + a_{12}*b_{21} + a_{13}*b_{31}，你能算出来吗？"
+        },
+        {
+          "level": "L3",
+          "text": "AB=0 能推出 A=0 或 B=0 吗？"
+        }
+      ],
+      "source": {
+        "title": "Original TeacherAgent seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "la-determinant-2x2",
+      "title": "二阶行列式",
+      "summary": "$2\\times2$行列式 $\\begin{vmatrix} a & b \\\\\\ c & d \\end{vmatrix} =$ad -bc。行列式是一个数，不是矩阵。",
+      "level": "concept",
+      "difficulty": 1,
+      "prerequisites": [
+        "la-matrix-definition"
+      ],
+      "misconceptions": [
+        "把行列式和矩阵混为一谈",
+        "忘记行列式是一个数值"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "行列式的结果是一个数还是一个表格？"
+        },
+        {
+          "level": "L2",
+          "text": "主对角线乘积减去副对角线乘积。"
+        },
+        {
+          "level": "L3",
+          "text": "2x2 行列式的几何意义是什么？"
+        }
+      ],
+      "source": {
+        "title": "Original TeacherAgent seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "la-determinant-properties",
+      "title": "行列式的性质",
+      "summary": "行列式转置不变；两行互换变号；某行乘 k 则行列式乘 k；两行相同则行列式为 0。",
+      "level": "theorem",
+      "difficulty": 2,
+      "prerequisites": [
+        "la-determinant-2x2"
+      ],
+      "misconceptions": [
+        "忽略行变换对行列式值的影响"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "如果矩阵有两行完全相同，行列式等于什么？"
+        },
+        {
+          "level": "L2",
+          "text": "把某一行乘以 2，行列式会怎么变？"
+        },
+        {
+          "level": "L3",
+          "text": "行列式为 0 说明什么？"
+        }
+      ],
+      "source": {
+        "title": "Original TeacherAgent seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "la-inverse-matrix",
+      "title": "逆矩阵",
+      "summary": "若 AB = BA = I，则 B 是 A 的逆矩阵，记作 A^{-1}。只有方阵且行列式不为 0 时才有逆矩阵。",
+      "level": "concept",
+      "difficulty": 2,
+      "prerequisites": [
+        "la-matrix-multiplication",
+        "la-determinant-2x2"
+      ],
+      "misconceptions": [
+        "认为所有矩阵都有逆",
+        "把 A^{-1} 理解为 1/A"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "什么样的矩阵一定没有逆矩阵？"
+        },
+        {
+          "level": "L2",
+          "text": "行列式为 0 的矩阵为什么没有逆？"
+        },
+        {
+          "level": "L3",
+          "text": "不是所有方阵都可逆，什么条件保证可逆？"
+        }
+      ],
+      "source": {
+        "title": "Original TeacherAgent seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "la-linear-equation-system",
+      "title": "线性方程组",
+      "summary": "n 个 n 元一次方程组成的方程组。可以用矩阵表示为 Ax = b。有唯一解、无穷多解或无解三种情况。",
+      "level": "concept",
+      "difficulty": 2,
+      "prerequisites": [
+        "la-matrix-multiplication",
+        "la-determinant-2x2"
+      ],
+      "misconceptions": [
+        "认为线性方程组一定有唯一解",
+        "忽略增广矩阵的作用"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "2 个方程 3 个未知数，可能有唯一解吗？"
+        },
+        {
+          "level": "L2",
+          "text": "系数矩阵的行列式为 0 时，方程组的解会怎样？"
+        },
+        {
+          "level": "L3",
+          "text": "齐次方程组一定有解吗？"
+        }
+      ],
+      "source": {
+        "title": "Original TeacherAgent seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "la-gaussian-elimination",
+      "title": "高斯消元法",
+      "summary": "通过初等行变换把增广矩阵化为行阶梯形，再回代求解。是解线性方程组的基本方法。",
+      "level": "method",
+      "difficulty": 2,
+      "prerequisites": [
+        "la-linear-equation-system"
+      ],
+      "misconceptions": [
+        "消元过程中改变方程的解",
+        "忘记记录行变换"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "初等行变换有哪三种？它们会改变方程组的解吗？"
+        },
+        {
+          "level": "L2",
+          "text": "先把第一列消成只有第一个元素非零，再处理第二列。"
+        },
+        {
+          "level": "L3",
+          "text": "行阶梯形和行最简形有什么区别？"
+        }
+      ],
+      "source": {
+        "title": "Original TeacherAgent seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "la-vector-definition",
+      "title": "向量的定义",
+      "summary": "向量是既有大小又有方向的量。n 维向量是 n 个有序数的组合。可以用列矩阵或行矩阵表示。",
+      "level": "concept",
+      "difficulty": 1,
+      "prerequisites": [
+        "la-matrix-definition"
+      ],
+      "misconceptions": [
+        "把向量只理解为物理中的箭头",
+        "忽略零向量也是向量"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "平面上的点 $(3, 4)$可以看成什么向量？"
+        },
+        {
+          "level": "L2",
+          "text": "向量和标量的区别是什么？"
+        },
+        {
+          "level": "L3",
+          "text": "零向量和任意向量平行吗？"
+        }
+      ],
+      "source": {
+        "title": "Original TeacherAgent seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "la-vector-linear-combination",
+      "title": "向量的线性组合",
+      "summary": "k1*v1 + k2*v2 + ... + kn*vn 称为向量 v1,...,vn 的线性组合。线性代数的核心概念之一。",
+      "level": "concept",
+      "difficulty": 2,
+      "prerequisites": [
+        "la-vector-definition"
+      ],
+      "misconceptions": [
+        "混淆线性组合和线性相关"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "$(1,2)$能不能写成 $(1,0)$和 $(0,1)$的线性组合？"
+        },
+        {
+          "level": "L2",
+          "text": "找 $k1, k2$使得 $k1*(1,0) + k2*(0,1) = (1,2)$。"
+        },
+        {
+          "level": "L3",
+          "text": "线性相关和线性无关的直观含义是什么？"
+        }
+      ],
+      "source": {
+        "title": "Original TeacherAgent seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    }
+  ]
+}

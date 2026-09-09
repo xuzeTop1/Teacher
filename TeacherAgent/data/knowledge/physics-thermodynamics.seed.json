@@ -1,0 +1,261 @@
+{
+  "subject": "physics",
+  "course": "大学物理",
+  "chapter": "热学",
+  "status": "draft",
+  "nodes": [
+    {
+      "id": "physics-thermo-ideal-gas",
+      "title": "理想气体状态方程",
+      "summary": "理想气体状态方程描述平衡态下气体压强、体积和温度的关系。它是气体实验定律的综合，也是气体动理论的出发点。",
+      "prerequisites": [
+        "physics-mech-work-energy"
+      ],
+      "keyPoints": [
+        "理想气体状态方程：pV=nRT",
+        "气体实验定律：玻意耳定律、查理定律、盖吕萨克定律",
+        "混合理想气体分压定律",
+        "真实气体与理想气体的偏差"
+      ],
+      "misconceptions": [
+        "误认为理想气体状态方程适用于所有气体",
+        "混淆摩尔质量与分子质量",
+        "误将温度视为强度量（实际是广延量）"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "理想气体状态方程中有几个状态量？哪些是强度量，哪些是广延量？"
+        },
+        {
+          "level": "L2",
+          "text": "一定质量的理想气体，从状态1变化到状态2，有哪些过程？这些过程中哪些量不变？"
+        },
+        {
+          "level": "L3",
+          "text": "考虑一个真实气体，在低温高压下与理想气体有较大偏差。这是什么原因造成的？"
+        }
+      ],
+      "difficulty": 1,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-thermo-kinetic-theory",
+      "title": "气体动理论",
+      "summary": "气体动理论从微观角度解释气体宏观性质。压强是大量分子碰撞器壁的平均效果，温度是分子平均平动动能的量度。",
+      "prerequisites": [
+        "physics-thermo-ideal-gas"
+      ],
+      "keyPoints": [
+        "气体分子热运动的基本假设",
+        "压强公式的推导：$p=2n\\varepsilon_\\frac{k}{3}$",
+        "温度的微观意义：$\\varepsilon_k=3k\\frac{T}{2}$",
+        "能量按自由度均分定理",
+        "麦克斯韦速率分布律"
+      ],
+      "misconceptions": [
+        "误认为所有分子速率都相同",
+        "混淆平均速率、方均根速率和最概然速率",
+        "误将温度视为分子运动剧烈程度的唯一量度"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "气体压强是怎样产生的？它与哪些微观量有关？"
+        },
+        {
+          "level": "L2",
+          "text": "温度的微观意义是什么？为什么温度越高，分子运动越剧烈？"
+        },
+        {
+          "level": "L3",
+          "text": "考虑一个混合气体，不同气体的分子平均动能是否相同？方均根速率呢？"
+        }
+      ],
+      "difficulty": 2,
+      "level": "method",
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-thermo-first-law",
+      "title": "热力学第一定律",
+      "summary": "热力学第一定律是能量守恒定律在热现象中的应用。系统内能的增量等于从外界吸收的热量减去对外做的功。",
+      "prerequisites": [
+        "physics-mech-work-energy",
+        "physics-thermo-ideal-gas"
+      ],
+      "keyPoints": [
+        "热力学第一定律：$\\Delta U=Q-W$",
+        "内能是状态函数",
+        "等容、等压、等温、绝热过程的特点",
+        "热容：定容热容$C_V$和定压热容$C_p$",
+        "循环过程与热机效率"
+      ],
+      "misconceptions": [
+        "误认为内能只是温度的函数（实际与体积也有关，对理想气体才只与温度有关）",
+        "混淆热量与内能",
+        "误将热力学第一定律视为能量守恒的完整表述（实际还有辐射等）"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "热力学第一定律的文字表述是什么？它实际上是哪个普遍定律在热现象中的应用？"
+        },
+        {
+          "level": "L2",
+          "text": "等温过程中内能变化为零，那么系统吸收的热量去向何处？"
+        },
+        {
+          "level": "L3",
+          "text": "考虑一个循环过程，系统从高温热源吸热，向低温热源放热，同时对外做功。这符合热力学第一定律吗？符合第二定律吗？"
+        }
+      ],
+      "difficulty": 2,
+      "level": "method",
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-thermo-second-law",
+      "title": "热力学第二定律",
+      "summary": "热力学第二定律揭示自然过程的方向性。它有多种表述，核心是不可逆性。熵增加原理是第二定律的数学表述。",
+      "prerequisites": [
+        "physics-thermo-first-law"
+      ],
+      "keyPoints": [
+        "热力学第二定律的克劳修斯表述和开尔文表述",
+        "可逆过程与不可逆过程",
+        "卡诺定理",
+        "熵增加原理",
+        "热力学第二定律的统计解释"
+      ],
+      "misconceptions": [
+        "误认为热力学第二定律禁止任何熵减少的过程（实际是孤立系统熵不减）",
+        "混淆不可逆性与不可能逆转",
+        "误将热力学第二定律视为宏观定律（实际有统计基础）"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "为什么热量不能自发从低温物体传到高温物体？这与能量守恒矛盾吗？"
+        },
+        {
+          "level": "L2",
+          "text": "什么是可逆过程？实际过程都是不可逆的吗？"
+        },
+        {
+          "level": "L3",
+          "text": "考虑一个孤立系统，初态是非平衡态，末态是平衡态。这个过程中熵如何变化？这与分子运动的随机性有什么关系？"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-thermo-carnot",
+      "title": "卡诺循环",
+      "summary": "卡诺循环是由两个等温过程和两个绝热过程组成的可逆循环。卡诺热机效率只与两个热源温度有关，是所有热机效率的上限。",
+      "prerequisites": [
+        "physics-thermo-first-law",
+        "physics-thermo-second-law"
+      ],
+      "keyPoints": [
+        "卡诺循环的组成",
+        "卡诺热机效率：$\\eta=1-T_2/T_1$",
+        "卡诺制冷机系数：$\\varepsilon=T_2/(T_1-T_2)$",
+        "卡诺定理",
+        "热力学温标的建立"
+      ],
+      "misconceptions": [
+        "误认为卡诺效率可以达到100%",
+        "混淆热机效率与制冷系数",
+        "误将实际热机效率与卡诺效率混淆"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "卡诺热机的效率与哪些因素有关？为什么实际热机效率低于卡诺效率？"
+        },
+        {
+          "level": "L2",
+          "text": "如果想要提高卡诺热机的效率，应该提高高温热源温度还是降低低温热源温度？为什么？"
+        },
+        {
+          "level": "L3",
+          "text": "考虑一个卡诺制冷机，如果低温热源温度接近绝对零度，需要的功会如何变化？这与热力学第三定律有什么关系？"
+        }
+      ],
+      "difficulty": 3,
+      "level": "application",
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-thermo-entropy",
+      "title": "熵的基础概念",
+      "summary": "熵是描述系统无序程度的态函数。熵增加原理指出孤立系统的熵永不减少。熵的概念将热力学第二定律定量化。",
+      "prerequisites": [
+        "physics-thermo-second-law"
+      ],
+      "keyPoints": [
+        "熵的定义：$dS=dQ_re\\frac{v}{T}$",
+        "熵是状态函数",
+        "熵增加原理",
+        "熵的微观意义：无序度的量度",
+        "信息熵与热力学熵的类比"
+      ],
+      "misconceptions": [
+        "误认为熵总是增加（实际是孤立系统熵不减）",
+        "混淆熵与热量",
+        "误将熵视为抽象概念（实际有明确的物理意义）"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "什么是熵？它与系统的无序程度有什么关系？"
+        },
+        {
+          "level": "L2",
+          "text": "一个孤立系统从非平衡态演化到平衡态，熵如何变化？为什么？"
+        },
+        {
+          "level": "L3",
+          "text": "考虑一个气体自由膨胀过程，这是一个不可逆过程。如何计算这个过程的熵变？"
+        }
+      ],
+      "difficulty": 3,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    }
+  ]
+}

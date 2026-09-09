@@ -1,0 +1,807 @@
+{
+  "subject": "psychology",
+  "course": "psychology-general",
+  "chapter": "psychology-general",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "psychology-general-q-001",
+      "title": "心理学的研究对象",
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "心理学主要研究的是（ ）。",
+      "options": [
+        "心理与行为及其规律",
+        "仅大脑生理结构",
+        "仅异常心理",
+        "仅学习成绩"
+      ],
+      "answer": "心理与行为及其规律",
+      "solutionSteps": [
+        "心理学以心理与行为及其规律为研究对象，兼具基础与应用属性。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先回忆相关概念的定义。"
+        },
+        {
+          "level": "L2",
+          "text": "再结合题干情境分析。"
+        },
+        {
+          "level": "L3",
+          "text": "分步骤写出推理链条。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "psychology-general-001"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "psychology-general-q-002",
+      "title": "短时记忆容量",
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "短时记忆的容量通常约为（ ）。",
+      "options": [
+        "7±2个组块",
+        "无限",
+        "3个以内",
+        "20个以上"
+      ],
+      "answer": "$7\\pm2$个组块",
+      "solutionSteps": [
+        "米勒提出短时记忆容量约为$7\\pm2$个组块。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "题干给了哪些线索？"
+        },
+        {
+          "level": "L2",
+          "text": "这些线索指向哪个理论？"
+        },
+        {
+          "level": "L3",
+          "text": "用理论框架组织答案。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "psychology-general-007"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "psychology-general-q-003",
+      "title": "艾宾浩斯遗忘曲线",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "艾宾浩斯遗忘曲线表明遗忘的进程是（ ）。",
+      "options": [
+        "先快后慢",
+        "匀速",
+        "先慢后快",
+        "不遗忘"
+      ],
+      "answer": "先快后慢",
+      "solutionSteps": [
+        "遗忘在学习后立即开始且先快后慢，呈负加速。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "这是记忆类还是理解类问题？"
+        },
+        {
+          "level": "L2",
+          "text": "若是理解，画个关系图。"
+        },
+        {
+          "level": "L3",
+          "text": "把要点编号，避免漏项。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "psychology-general-008"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "psychology-general-q-004",
+      "title": "情绪理论区分",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "认为'先有生理变化，后有情绪体验'的理论是（ ）。",
+      "options": [
+        "詹姆斯-兰格理论",
+        "坎农-巴德理论",
+        "认知评价理论",
+        "三者都不是"
+      ],
+      "answer": "詹姆斯-兰格理论",
+      "solutionSteps": [
+        "詹姆斯-兰格理论主张情绪源于对身体变化的感知。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判定问题类型（概念/应用/辨析）。"
+        },
+        {
+          "level": "L2",
+          "text": "再调用对应知识点。"
+        },
+        {
+          "level": "L3",
+          "text": "结论后要有一句总结。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "psychology-general-012"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "psychology-general-q-005",
+      "title": "斯皮尔曼智力理论",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "斯皮尔曼智力理论中的G因素指（ ）。",
+      "options": [
+        "一般因素",
+        "特殊因素",
+        "晶体智力",
+        "流体智力"
+      ],
+      "answer": "一般因素",
+      "solutionSteps": [
+        "G为一般智力因素，S为特殊因素。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "有没有反例可以检验？"
+        },
+        {
+          "level": "L2",
+          "text": "反例能框定边界。"
+        },
+        {
+          "level": "L3",
+          "text": "边界条件常是考点。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "psychology-general-014"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "psychology-general-q-006",
+      "title": "马斯洛需要层次",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "按马斯洛需要层次，位于最底层的是（ ）。",
+      "options": [
+        "生理需要",
+        "尊重需要",
+        "自我实现",
+        "归属与爱"
+      ],
+      "answer": "生理需要",
+      "solutionSteps": [
+        "生理需要在层次最底，是其他需要的基础。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先写出公式或定理。"
+        },
+        {
+          "level": "L2",
+          "text": "代入题干数值。"
+        },
+        {
+          "level": "L3",
+          "text": "检查单位与方向是否合理。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "psychology-general-011"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "psychology-general-q-007",
+      "title": "知觉恒常性",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "为何在远近距离变化时，我们仍把同一扇门知觉为长方形而非梯形？请用知觉特性解释。",
+      "options": null,
+      "answer": "指出这是知觉恒常性（形状恒常性）。",
+      "solutionSteps": [
+        "指出这是知觉恒常性（形状恒常性）。",
+        "说明大脑结合经验与线索保持稳定知觉。",
+        "区分感觉信息与知觉组织的关系。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "区分自变量与因变量。"
+        },
+        {
+          "level": "L2",
+          "text": "想想控制变量怎么处理。"
+        },
+        {
+          "level": "L3",
+          "text": "用实验逻辑组织作答。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "psychology-general-005"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "psychology-general-q-008",
+      "title": "动机冲突类型",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "一个人既想考研提升学历（趋），又想工作赚钱（趋），但时间冲突只能选一。这属于哪种动机冲突？如何分析？",
+      "options": null,
+      "answer": "判定为双趋冲突（两目标皆吸引但不可兼得）。",
+      "solutionSteps": [
+        "判定为双趋冲突（两目标皆吸引但不可兼得）。",
+        "指出解决需比较目标价值或放弃其一。",
+        "可补充现实中有时转为多重趋避。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先答'是什么'，再答'为什么'。"
+        },
+        {
+          "level": "L2",
+          "text": "最后给一个例子。"
+        },
+        {
+          "level": "L3",
+          "text": "结构化作答不易失分。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "psychology-general-013"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "psychology-general-q-009",
+      "title": "大五人格维度",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "大五人格模型中'OCEAN'的'E'代表（ ）。",
+      "options": [
+        "外向性",
+        "情绪稳定性",
+        "经验开放性",
+        "宜人性"
+      ],
+      "answer": "外向性",
+      "solutionSteps": [
+        "E=Extraversion（外向性）。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先回忆相关概念的定义。"
+        },
+        {
+          "level": "L2",
+          "text": "再结合题干情境分析。"
+        },
+        {
+          "level": "L3",
+          "text": "分步骤写出推理链条。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "psychology-general-017"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "psychology-general-q-010",
+      "title": "弗洛伊德三我",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "遵循现实原则、在超我与本我间调停的人格结构是（ ）。",
+      "options": [
+        "自我",
+        "本我",
+        "超我",
+        "潜意识"
+      ],
+      "answer": "自我",
+      "solutionSteps": [
+        "自我依现实原则运作，协调本我与超我。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "题干给了哪些线索？"
+        },
+        {
+          "level": "L2",
+          "text": "这些线索指向哪个理论？"
+        },
+        {
+          "level": "L3",
+          "text": "用理论框架组织答案。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "psychology-general-018"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "psychology-general-q-011",
+      "title": "感觉与知觉区别",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "举例说明感觉与知觉的区别，并说明二者关系。",
+      "options": null,
+      "answer": "感觉是对刺激个别属性的反映（如看到红色）。",
+      "solutionSteps": [
+        "感觉是对刺激个别属性的反映（如看到红色）。",
+        "知觉是组织后的整体（如认出这是苹果）。",
+        "知觉以感觉为基础并受经验影响。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "有没有反例可以检验？"
+        },
+        {
+          "level": "L2",
+          "text": "反例能框定边界。"
+        },
+        {
+          "level": "L3",
+          "text": "边界条件常是考点。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "psychology-general-005"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "psychology-general-q-012",
+      "title": "前摄与倒摄抑制",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "学英语后再学法语容易混淆，睡前复习的内容却记得更牢。请用遗忘的干扰理论解释。",
+      "options": null,
+      "answer": "学法语受前摄抑制（旧英语干扰新法语）。",
+      "solutionSteps": [
+        "学法语受前摄抑制（旧英语干扰新法语）。",
+        "睡前少倒摄抑制（之后无新学干扰）。",
+        "说明序列位置影响遗忘。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "这是记忆类还是理解类问题？"
+        },
+        {
+          "level": "L2",
+          "text": "若是理解，画个关系图。"
+        },
+        {
+          "level": "L3",
+          "text": "把要点编号，避免漏项。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "psychology-general-008"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "psychology-general-q-013",
+      "title": "离差智商",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "现代智力测验多采用离差智商，其目的是（ ）。",
+      "options": [
+        "以同龄常模比较相对位置",
+        "固定比率",
+        "测量年龄",
+        "测反应时"
+      ],
+      "answer": "以同龄常模比较相对位置",
+      "solutionSteps": [
+        "离差智商以同龄群体分布标准差表示相对位置。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先写出公式或定理。"
+        },
+        {
+          "level": "L2",
+          "text": "代入题干数值。"
+        },
+        {
+          "level": "L3",
+          "text": "检查单位与方向是否合理。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "psychology-general-015"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "psychology-general-q-014",
+      "title": "人本主义核心",
+      "type": "diagnostic",
+      "difficulty": 3,
+      "content": "罗杰斯的人本主义人格观与弗洛伊德的焦点有何根本不同？",
+      "options": null,
+      "answer": "罗杰斯关注潜能、自我概念与积极关注。",
+      "solutionSteps": [
+        "罗杰斯关注潜能、自我概念与积极关注。",
+        "弗洛伊德聚焦潜意识和冲突。",
+        "二者在人性与改变机制上取向相反。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "题干给了哪些线索？"
+        },
+        {
+          "level": "L2",
+          "text": "这些线索指向哪个理论？"
+        },
+        {
+          "level": "L3",
+          "text": "用理论框架组织答案。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "psychology-general-019"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "psychology-general-q-015",
+      "title": "注意的过滤器理论",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "注意的过滤器（瓶颈）理论主要解释的是（ ）。",
+      "options": [
+        "信息选择的机制",
+        "记忆容量",
+        "情绪产生",
+        "智力差异"
+      ],
+      "answer": "信息选择的机制",
+      "solutionSteps": [
+        "过滤器理论解释注意如何筛选进入意识的信息。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "区分自变量与因变量。"
+        },
+        {
+          "level": "L2",
+          "text": "想想控制变量怎么处理。"
+        },
+        {
+          "level": "L3",
+          "text": "用实验逻辑组织作答。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "psychology-general-006"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "psychology-general-q-016",
+      "title": "斯滕伯格三元智力",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "斯滕伯格三元智力不包含以下哪一项（ ）。",
+      "options": [
+        "晶体-流体二分",
+        "成分亚理论",
+        "经验亚理论",
+        "情境亚理论"
+      ],
+      "answer": "晶体-流体二分",
+      "solutionSteps": [
+        "晶体-流体是卡特尔的区分，非斯滕伯格三元。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "有没有反例可以检验？"
+        },
+        {
+          "level": "L2",
+          "text": "反例能框定边界。"
+        },
+        {
+          "level": "L3",
+          "text": "边界条件常是考点。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "psychology-general-014"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "psychology-general-q-017",
+      "title": "语言获得装置",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "提出先天'语言获得装置(LAD)'的语言学家是（ ）。",
+      "options": [
+        "乔姆斯基",
+        "皮亚杰",
+        "维果茨基",
+        "斯金纳"
+      ],
+      "answer": "乔姆斯基",
+      "solutionSteps": [
+        "乔姆斯基主张人类先天具备语言获得装置。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先回忆相关概念的定义。"
+        },
+        {
+          "level": "L2",
+          "text": "再结合题干情境分析。"
+        },
+        {
+          "level": "L3",
+          "text": "分步骤写出推理链条。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "psychology-general-010"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "psychology-general-q-018",
+      "title": "意志定义",
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "有意识地确立目标并克服困难实现目标的过程称为（ ）。",
+      "options": [
+        "意志",
+        "情绪",
+        "记忆",
+        "感觉"
+      ],
+      "answer": "意志",
+      "solutionSteps": [
+        "意志是有意识地确立并达成目标的过程。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先答'是什么'，再答'为什么'。"
+        },
+        {
+          "level": "L2",
+          "text": "最后给一个例子。"
+        },
+        {
+          "level": "L3",
+          "text": "结构化作答不易失分。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "psychology-general-013"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "psychology-general-q-019",
+      "title": "社会化含义",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "为什么说社会化贯穿人的一生，而不仅止于童年？",
+      "options": null,
+      "answer": "童年期是初始社会化关键期。",
+      "solutionSteps": [
+        "童年期是初始社会化关键期。",
+        "成年后仍面临职业、角色再社会化。",
+        "终身社会化是发展常态。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判定问题类型（概念/应用/辨析）。"
+        },
+        {
+          "level": "L2",
+          "text": "再调用对应知识点。"
+        },
+        {
+          "level": "L3",
+          "text": "结论后要有一句总结。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "psychology-general-020"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "psychology-general-q-020",
+      "title": "综合辨析：智力与能力",
+      "type": "diagnostic",
+      "difficulty": 3,
+      "content": "请比较斯皮尔曼、吉尔福特、斯滕伯格三人对智力的看法的异同。",
+      "options": null,
+      "answer": "斯皮尔曼：G+S二因素。",
+      "solutionSteps": [
+        "斯皮尔曼：G+S二因素。",
+        "吉尔福特：内容$\\times$操作$\\times$产物三维。",
+        "斯滕伯格：成分/经验/情境三元。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "有没有反例可以检验？"
+        },
+        {
+          "level": "L2",
+          "text": "反例能框定边界。"
+        },
+        {
+          "level": "L3",
+          "text": "边界条件常是考点。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "psychology-general-014"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    }
+  ]
+}

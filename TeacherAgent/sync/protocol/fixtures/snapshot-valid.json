@@ -1,0 +1,332 @@
+{
+  "format": "alerttime-teacher-sync",
+  "schemaVersion": 1,
+  "messageType": "snapshot",
+  "deviceId": "f0a24c19-0f8e-4b6d-9a3c-77e1b2d4c5a6",
+  "snapshotId": "5e8f2a91-b3c4-4d5e-9f01-23456789abcd",
+  "generatedAt": 1785600000000,
+  "appVersion": "0.1.0",
+  "protocolCapabilities": {
+    "fullSnapshotV1": true,
+    "proposalsV1": true
+  },
+  "cursor": null,
+  "futureUnknownField": { "keep": "ignored" },
+  "payload": {
+    "subjects": [
+      {
+        "remoteId": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
+        "name": "英语",
+        "color": "#4CAF50",
+        "icon": null,
+        "sortOrder": 0,
+        "isArchived": false,
+        "createdAt": 1785500000000,
+        "updatedAt": 1785500000000,
+        "deletedAt": null,
+        "examTrackId": "kaoyan-english",
+        "examSubjectId": "kaoyan-english.grammar",
+        "examModuleId": null,
+        "unknownFutureField": "ignored"
+      },
+      {
+        "remoteId": "b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e",
+        "name": "高等数学（含特殊字符：π ≥ 1/2、emoji 🎓、换行\n第二行）",
+        "color": null,
+        "icon": "book",
+        "sortOrder": 1,
+        "isArchived": false,
+        "createdAt": 1785500001000,
+        "updatedAt": 1785500001000,
+        "deletedAt": null
+      },
+      {
+        "remoteId": "c3d4e5f6-a7b8-4c9d-8e0f-2a3b4c5d6e7f",
+        "name": "已归档旧科目",
+        "color": null,
+        "icon": null,
+        "sortOrder": 2,
+        "isArchived": true,
+        "createdAt": 1785000000000,
+        "updatedAt": 1785100000000,
+        "deletedAt": 1785200000000
+      }
+    ],
+    "weeklyGoals": [
+      {
+        "remoteId": "d4e5f6a7-b8c9-4d0e-9f1a-2b3c4d5e6f7a",
+        "weekStart": 1785369600000,
+        "title": "完成高数第一章课后题",
+        "successCriteria": "正确率 ≥ 80%",
+        "sourceProposalId": "7e8f9a0b-1c2d-4e5f-8a9b-0c1d2e3f4a5b",
+        "status": 0,
+        "completedAt": null,
+        "deferredToWeekStart": null,
+        "exceptionReason": null,
+        "createdAt": 1785370000000,
+        "updatedAt": 1785370000000,
+        "deletedAt": null
+      },
+      {
+        "remoteId": "e5f6a7b8-c9d0-4e1f-9a2b-3c4d5e6f7a8b",
+        "weekStart": 1785369600000,
+        "title": "英语听力打卡 7 天",
+        "successCriteria": null,
+        "sourceProposalId": null,
+        "status": 1,
+        "completedAt": 1785600000000,
+        "deferredToWeekStart": null,
+        "exceptionReason": null,
+        "createdAt": 1785370100000,
+        "updatedAt": 1785600000000,
+        "deletedAt": null
+      },
+      {
+        "remoteId": "f6a7b8c9-d0e1-4f2a-9b3c-4d5e6f7a8b9c",
+        "weekStart": 1784764800000,
+        "title": "上周未完成目标（已延期）",
+        "successCriteria": null,
+        "status": 2,
+        "completedAt": null,
+        "deferredToWeekStart": 1785369600000,
+        "exceptionReason": "临时有事",
+        "createdAt": 1784770000000,
+        "updatedAt": 1785369600000,
+        "deletedAt": null
+      },
+      {
+        "remoteId": "a7b8c9d0-e1f2-4a3b-9c4d-5e6f7a8b9c0d",
+        "weekStart": 1784764800000,
+        "title": "已取消目标",
+        "successCriteria": null,
+        "status": 3,
+        "completedAt": null,
+        "deferredToWeekStart": null,
+        "exceptionReason": "改考英语",
+        "createdAt": 1784770100000,
+        "updatedAt": 1784770200000,
+        "deletedAt": null
+      },
+      {
+        "remoteId": "b8c9d0e1-f2a3-4b4c-9d5e-6f7a8b9c0d1e",
+        "weekStart": 1784764800000,
+        "title": "已软删除的目标",
+        "successCriteria": null,
+        "status": 0,
+        "completedAt": null,
+        "deferredToWeekStart": null,
+        "exceptionReason": null,
+        "createdAt": 1784770300000,
+        "updatedAt": 1784770400000,
+        "deletedAt": 1784770500000
+      }
+    ],
+    "tasks": [
+      {
+        "remoteId": "c9d0e1f2-a3b4-4c5d-9e6f-7a8b9c0d1e2f",
+        "subjectRemoteId": "b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e",
+        "title": "复习极限与连续",
+        "content": "教材第 1-3 节，重点：夹逼定理、等价无穷小",
+        "sourceProposalId": "7e8f9a0b-1c2d-4e5f-8a9b-0c1d2e3f4a5b",
+        "type": 1,
+        "priority": 1,
+        "status": 0,
+        "targetDurationSeconds": 3600,
+        "dueAt": 1785500000000,
+        "completedAt": null,
+        "sortOrder": 0,
+        "createdAt": 1785371000000,
+        "updatedAt": 1785371000000,
+        "deletedAt": null
+      },
+      {
+        "remoteId": "d0e1f2a3-b4c5-4d6e-9f7a-8b9c0d1e2f3a",
+        "subjectRemoteId": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
+        "title": "背单词 50 个",
+        "content": null,
+        "type": 1,
+        "priority": 0,
+        "status": 1,
+        "targetDurationSeconds": 1800,
+        "dueAt": 1785490000000,
+        "completedAt": 1785493600000,
+        "sortOrder": 1,
+        "createdAt": 1785372000000,
+        "updatedAt": 1785493600000,
+        "deletedAt": null
+      },
+      {
+        "remoteId": "e1f2a3b4-c5d6-4e7f-9a8b-9c0d1e2f3a4b",
+        "subjectRemoteId": null,
+        "title": "无科目待办（type=0）",
+        "content": null,
+        "sourceProposalId": null,
+        "type": 0,
+        "priority": 0,
+        "status": 0,
+        "targetDurationSeconds": null,
+        "dueAt": null,
+        "completedAt": null,
+        "sortOrder": 2,
+        "createdAt": 1785373000000,
+        "updatedAt": 1785373000000,
+        "deletedAt": null
+      },
+      {
+        "remoteId": "f2a3b4c5-d6e7-4f8a-9b9c-0d1e2f3a4b5c",
+        "subjectRemoteId": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
+        "title": "已删除的计划",
+        "content": null,
+        "type": 1,
+        "priority": 0,
+        "status": 0,
+        "targetDurationSeconds": null,
+        "dueAt": null,
+        "completedAt": null,
+        "sortOrder": 3,
+        "createdAt": 1785374000000,
+        "updatedAt": 1785374100000,
+        "deletedAt": 1785374200000
+      }
+    ],
+    "studySessions": [
+      {
+        "remoteId": "a3b4c5d6-e7f8-4a9b-9c0d-1e2f3a4b5c6d",
+        "subjectRemoteId": "b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e",
+        "taskRemoteId": "c9d0e1f2-a3b4-4c5d-9e6f-7a8b9c0d1e2f",
+        "title": "高数复习",
+        "startTime": 1785490000000,
+        "endTime": 1785493600000,
+        "durationSeconds": 3000,
+        "pauseSeconds": 600,
+        "focusScore": 88,
+        "note": "今天状态不错",
+        "status": 0,
+        "createdAt": 1785490000000,
+        "updatedAt": 1785493600000,
+        "deletedAt": null,
+        "aiHelpSeconds": 420,
+        "aiHelpCount": 2,
+        "externalAiAppSeconds": 0,
+        "aiUsageSource": "alerttime_ai_help"
+      },
+      {
+        "remoteId": "b4c5d6e7-f8a9-4b0c-9d1e-2f3a4b5c6d7e",
+        "subjectRemoteId": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
+        "taskRemoteId": null,
+        "title": null,
+        "startTime": 1785520000000,
+        "endTime": null,
+        "durationSeconds": 1200,
+        "pauseSeconds": 0,
+        "focusScore": null,
+        "note": null,
+        "status": 1,
+        "createdAt": 1785520000000,
+        "updatedAt": 1785521200000,
+        "deletedAt": null
+      },
+      {
+        "remoteId": "c5d6e7f8-a9b0-4c1d-9e2f-3a4b5c6d7e8f",
+        "subjectRemoteId": null,
+        "taskRemoteId": null,
+        "title": "无科目自由学习",
+        "startTime": 1785400000000,
+        "endTime": 1785401800000,
+        "durationSeconds": 1600,
+        "pauseSeconds": 200,
+        "focusScore": 60,
+        "note": "含特殊字符：引号\" 反斜杠\\ 换行\n第三行",
+        "status": 0,
+        "createdAt": 1785400000000,
+        "updatedAt": 1785401800000,
+        "deletedAt": null
+      },
+      {
+        "remoteId": "d6e7f8a9-b0c1-4d2e-9f3a-4b5c6d7e8f9a",
+        "subjectRemoteId": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
+        "taskRemoteId": null,
+        "title": "已取消的会话",
+        "startTime": 1785350000000,
+        "endTime": 1785351000000,
+        "durationSeconds": 900,
+        "pauseSeconds": 0,
+        "focusScore": null,
+        "note": null,
+        "status": 2,
+        "createdAt": 1785350000000,
+        "updatedAt": 1785351000000,
+        "deletedAt": null
+      },
+      {
+        "remoteId": "e7f8a9b0-c1d2-4e3f-9a4b-5c6d7e8f9a0b",
+        "subjectRemoteId": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
+        "taskRemoteId": null,
+        "title": "异常结束的会话",
+        "startTime": 1785340000000,
+        "endTime": 1785340600000,
+        "durationSeconds": 540,
+        "pauseSeconds": 0,
+        "focusScore": null,
+        "note": "App 被系统清理",
+        "status": 3,
+        "createdAt": 1785340000000,
+        "updatedAt": 1785340600000,
+        "deletedAt": null
+      }
+    ],
+    "learningAnalysis": {
+      "analysisId": "9f8e7d6c-5b4a-4321-8fed-cba987654321",
+      "sourceSnapshotId": "5e8f2a91-b3c4-4d5e-9f01-23456789abcd",
+      "generatedAt": 1785600001000,
+      "promptVersion": "android-learning-analysis-v1",
+      "generator": "deterministic_fallback",
+      "profile": {
+        "facts": [
+          {
+            "code": "today.completed_tasks",
+            "label": "今日完成计划数",
+            "value": 1,
+            "evidenceRefs": ["task:d0e1f2a3-b4c5-4d6e-9f7a-8b9c0d1e2f3a"]
+          }
+        ],
+        "inferences": [
+          {
+            "statement": "今日计划完成情况可用于安排一次轻量诊断。",
+            "confidence": 0.72,
+            "evidenceRefs": ["task:d0e1f2a3-b4c5-4d6e-9f7a-8b9c0d1e2f3a"]
+          }
+        ]
+      },
+      "planEvaluation": {
+        "verdict": "reasonable",
+        "score": 82,
+        "dimensions": [
+          {
+            "code": "completion",
+            "score": 82,
+            "summary": "已完成一项英语计划，仍需结合更多日期数据观察稳定性。"
+          }
+        ],
+        "risks": ["单日样本不足以代表长期执行能力。"],
+        "suggestions": ["保持当前节奏，并在下一次同步继续比较计划与实际完成情况。"]
+      },
+      "assessmentDraft": {
+        "status": "draft",
+        "scopeSummary": "围绕本快照中的英语背词计划生成诊断草稿。",
+        "questions": [
+          {
+            "questionId": "7a6b5c4d-3e2f-4109-8abc-def123456789",
+            "subjectRemoteId": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
+            "taskRemoteId": "d0e1f2a3-b4c5-4d6e-9f7a-8b9c0d1e2f3a",
+            "type": "diagnostic",
+            "prompt": "请用自己的话解释今天背诵词汇中最容易混淆的一组词。",
+            "rationale": "检查计划完成后的真实理解，而不是以学习时长推断掌握度。",
+            "rubric": ["能指出词义差异", "能给出使用语境"]
+          }
+        ]
+      },
+      "warnings": ["该评估测试仅为 draft，不进入 approved 题库或掌握度。"]
+    }
+  }
+}

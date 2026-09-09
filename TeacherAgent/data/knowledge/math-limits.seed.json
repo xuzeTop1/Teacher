@@ -1,0 +1,1227 @@
+{
+  "subject": "math",
+  "course": "calculus",
+  "chapter": "limits-and-continuity",
+  "status": "approved",
+  "nodes": [
+    {
+      "id": "math-limit-basic-definition",
+      "title": "极限的直观含义",
+      "level": "concept",
+      "summary": "函数极限描述的是自变量趋近某一点或无穷远时，函数值是否趋近某个确定值。求极限前应先判断趋近位置、函数形式和是否出现不定式。",
+      "prerequisites": [
+        "函数",
+        "自变量趋近",
+        "函数值"
+      ],
+      "misconceptions": [
+        "把极限值等同于函数在该点的函数值",
+        "未检查分母是否趋近于 0"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "先判断自变量趋近哪里，函数值可能靠近什么。"
+        },
+        {
+          "level": "L2",
+          "text": "直接代入后，看看是不是出现 $\\frac{0}{0}$、$\\infty/\\infty$这类不定式。"
+        },
+        {
+          "level": "L3",
+          "text": "如果 $\\lim f(x)$存在但 $f(a)$无定义，能说 $f$在 $a$连续吗？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-limit-left-right",
+      "title": "左极限和右极限",
+      "level": "concept",
+      "summary": "左极限考察 x 从小于 a 的一侧趋近 a，右极限考察 x 从大于 a 的一侧趋近 a。函数在一点的双侧极限存在，必须左右极限都存在且相等。",
+      "prerequisites": [
+        "数轴方向",
+        "函数极限"
+      ],
+      "misconceptions": [
+        "只算一侧就断定双侧极限存在",
+        "分段点两侧使用了同一个表达式"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个趋近点左右两侧的表达式一样吗？"
+        },
+        {
+          "level": "L2",
+          "text": "分别写出 $x\\to a-$和 $x\\to a+$时应该代入哪一段。"
+        },
+        {
+          "level": "L3",
+          "text": "分段函数在分段点处，左右极限分别用哪一段表达式？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-limit-existence-condition",
+      "title": "极限存在的判定",
+      "level": "concept",
+      "summary": "一点处双侧极限存在的核心判据是左右极限都存在并且相等。函数值是否有定义不决定极限是否存在，但会影响连续性判断。",
+      "prerequisites": [
+        "左极限",
+        "右极限",
+        "函数值"
+      ],
+      "misconceptions": [
+        "认为函数在该点无定义就一定没有极限",
+        "把极限存在和连续混为一谈"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "先别看 $f(a)$，只看两侧趋近时函数值靠近哪里。"
+        },
+        {
+          "level": "L2",
+          "text": "如果左右极限相等，这说明极限存在；接下来才检查连续。"
+        },
+        {
+          "level": "L3",
+          "text": "如果左极限是 0 右极限也是 0，极限一定是 0 吗？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-limit-infinitesimal",
+      "title": "无穷小的含义",
+      "level": "concept",
+      "summary": "当自变量按指定方式变化时，函数值趋近于 0，这个函数就是该过程下的无穷小。无穷小不是固定的很小的数，而是趋近过程中的变量或函数。",
+      "prerequisites": [
+        "极限为 0",
+        "趋近过程"
+      ],
+      "misconceptions": [
+        "把无穷小当作一个具体小数",
+        "忽略无穷小必须依赖趋近过程"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个表达式在当前趋近过程中是不是趋近于 0？"
+        },
+        {
+          "level": "L2",
+          "text": "换一个趋近点后，它还一定是无穷小吗？"
+        },
+        {
+          "level": "L3",
+          "text": "无穷小和很小的数有什么本质区别？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-limit-infinity",
+      "title": "无穷大与发散",
+      "level": "concept",
+      "summary": "若函数值的绝对值可以超过任意大的正数，就称函数在该过程中趋于无穷大。趋于正无穷、负无穷或左右方向不同，都不等同于存在有限极限。",
+      "prerequisites": [
+        "函数值大小",
+        "发散"
+      ],
+      "misconceptions": [
+        "把无穷大当作普通实数参与代数运算",
+        "看到分母趋近 0 就直接写正无穷"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "分母趋近 0 时，分子趋近什么？符号从哪一侧变化？"
+        },
+        {
+          "level": "L2",
+          "text": "左右两侧是都趋向同一个无穷方向，还是方向相反？"
+        },
+        {
+          "level": "L3",
+          "text": "$\\lim f(x)=$无穷大 能说极限存在吗？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-limit-indeterminate-forms",
+      "title": "常见不定式",
+      "level": "concept",
+      "summary": "常见不定式包括 $\\frac{0}{0}$、$\\infty/\\infty$、$0\\cdot\\infty$、$\\infty-\\infty$、$1^\\infty$、$0^0$和 $\\infty^0$。不定式表示直接代入不足以确定极限，需要进一步化简或换方法。",
+      "prerequisites": [
+        "直接代入",
+        "极限运算"
+      ],
+      "misconceptions": [
+        "把 $\\frac{0}{0}$当成 0或 1",
+        "见到 $\\infty-\\infty$就直接等于 0"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "直接代入得到的是确定值，还是不定式？"
+        },
+        {
+          "level": "L2",
+          "text": "这个不定式更适合化为分式、提主项，还是取对数处理？"
+        },
+        {
+          "level": "L3",
+          "text": "$\\frac{0}{0}$和 $0*\\inf$都是不定式，它们之间能互相转化吗？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-limit-direct-substitution",
+      "title": "直接代入法",
+      "level": "method",
+      "summary": "对连续函数或可由连续运算保持连续的表达式，直接代入常能求出极限。直接代入得到确定实数时，通常可以作为第一步；若得到不定式，就要换方法。",
+      "prerequisites": [
+        "连续函数",
+        "不定式"
+      ],
+      "misconceptions": [
+        "任何极限都先机械代入并把结果当答案",
+        "直接代入失败后仍继续代入"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "先试一次代入，结果是确定数还是不定式？"
+        },
+        {
+          "level": "L2",
+          "text": "如果是确定数，能解释为什么这个表达式在附近连续吗？"
+        },
+        {
+          "level": "L3",
+          "text": "什么条件下可以直接代入求极限？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-limit-factor-cancel",
+      "title": "因式分解与约分",
+      "level": "method",
+      "summary": "多项式或有理式出现 $\\frac{0}{0}$型时，常通过因式分解找出共同因子并约去，再代入求极限。约分只在趋近点附近的表达式等价意义下使用，不要求原函数在该点有定义。",
+      "prerequisites": [
+        "因式分解",
+        "有理式",
+        "0/0 型"
+      ],
+      "misconceptions": [
+        "约掉会为 0 的因子后误以为原函数在该点也有定义",
+        "没有先确认共同因子"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "分子分母是否都有导致 $\\frac{0}{0}$的同一个因子？"
+        },
+        {
+          "level": "L2",
+          "text": "约分后再代入，和原函数在该点有无定义是同一个问题吗？"
+        },
+        {
+          "level": "L3",
+          "text": "约分后代入和直接代入有什么区别？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-limit-rationalization",
+      "title": "根式有理化",
+      "level": "method",
+      "summary": "含根式的 $\\frac{0}{0}$或 $\\infty-\\infty$型极限，常通过乘以共轭表达式消去根号差。关键是同时乘除同一个共轭式，并观察化简后的主导因子。",
+      "prerequisites": [
+        "平方差公式",
+        "共轭式",
+        "根式"
+      ],
+      "misconceptions": [
+        "只乘分子不乘分母",
+        "有理化后忘记继续约分或判断主项"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "表达式里有没有根号差？它的共轭式是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "乘共轭后能不能出现平方差，从而消掉根号？"
+        },
+        {
+          "level": "L3",
+          "text": "分子分母同时有理化会怎样？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-limit-equivalent-infinitesimal",
+      "title": "等价无穷小替换",
+      "level": "method",
+      "summary": "当 $x$趋近于 0时，常见等价无穷小包括 $\\sin x \\sim x$、$\\tan x \\sim x$、$1 - \\cos x \\sim \\frac{x^2}{2}$、$\\ln(1+x) \\sim x$、$e^x - 1 \\sim x$。使用时要确认整体乘除关系，不能随意在加减结构中局部替换。",
+      "prerequisites": [
+        "无穷小",
+        "基本初等函数",
+        "乘除结构"
+      ],
+      "misconceptions": [
+        "在加减项中随意替换导致主阶项被误删",
+        "忘记确认变量趋近于 0"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这题里有没有 $\\sin x$、$\\ln(1+x)$、$e^x-1$这类趋近 0的标准形式？"
+        },
+        {
+          "level": "L2",
+          "text": "先看表达式整体是乘除结构还是加减结构，再决定能不能直接替换。"
+        },
+        {
+          "level": "L3",
+          "text": "等价无穷小替换在加减法中能用吗？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-limit-squeeze-theorem",
+      "title": "夹逼定理",
+      "level": "method",
+      "summary": "若一个函数被夹在两个函数之间，且上下两个函数在同一过程中趋近于同一个极限，那么中间函数也趋近于该极限。夹逼常用于含 $\\sin(\\frac{1}{x})$、绝对值或估界结构的极限。",
+      "prerequisites": [
+        "不等式",
+        "极限比较",
+        "三角函数有界性"
+      ],
+      "misconceptions": [
+        "只找到一侧界就使用夹逼",
+        "上下界极限不相等也强行夹逼"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "能否找到一个上界和一个下界同时夹住目标表达式？"
+        },
+        {
+          "level": "L2",
+          "text": "这两个界在趋近过程中是否走向同一个数？"
+        },
+        {
+          "level": "L3",
+          "text": "夹逼定理中上下界的极限必须相等吗？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-limit-lhopital",
+      "title": "洛必达法则的适用边界",
+      "level": "method",
+      "summary": "洛必达法则常用于 $\\frac{0}{0}$或 $\\infty/\\infty$型极限。使用前要确认分子分母分别趋近于 0或无穷，且相关函数在邻域内可导，分母导数不为 0。不是所有极限都适合直接套用。",
+      "prerequisites": [
+        "导数",
+        "不定式",
+        "函数可导"
+      ],
+      "misconceptions": [
+        "没有确认不定式类型就直接求导",
+        "把乘积型或差值型极限强行套成分式"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "直接代入后，分子和分母分别趋近于什么？"
+        },
+        {
+          "level": "L2",
+          "text": "如果确实是 $\\frac{0}{0}$或 $\\infty/\\infty$，再考虑分子分母分别求导是否更简单。"
+        },
+        {
+          "level": "L3",
+          "text": "洛必达法则能反复使用吗？什么条件下可以？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-limit-taylor-leading-term",
+      "title": "泰勒展开与主导项",
+      "level": "method",
+      "summary": "在复杂极限中，可以用泰勒展开保留最低阶非零项，比较分子分母的主导阶。使用时要控制展开阶数，确保保留到第一个不抵消的项。",
+      "prerequisites": [
+        "导数",
+        "多项式近似",
+        "无穷小阶"
+      ],
+      "misconceptions": [
+        "展开阶数不够导致主项被误删",
+        "把近似等号当作全局恒等式"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "最低阶项会不会相互抵消？如果会，需要展开到下一阶吗？"
+        },
+        {
+          "level": "L2",
+          "text": "你能先写出 $\\sin x$、$\\cos x$、$e^x$在 0附近的前几项吗？"
+        },
+        {
+          "level": "L3",
+          "text": "用泰勒展开求极限时，展开到第几项就够了？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-limit-variable-substitution",
+      "title": "极限中的变量代换",
+      "level": "method",
+      "summary": "变量代换可以把非标准趋近形式转化为熟悉形式，例如令 t=x-a 或 t=1/x。代换后必须同步改写趋近过程和表达式。",
+      "prerequisites": [
+        "复合函数",
+        "趋近过程",
+        "代数变形"
+      ],
+      "misconceptions": [
+        "只换表达式不换趋近方向",
+        "代换后忘记 t 的取值限制或方向"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "能不能令一个新变量把趋近点移到 0？"
+        },
+        {
+          "level": "L2",
+          "text": "原来 $x\\to a+$时，新变量是趋近 $0+$还是 $0-$？"
+        },
+        {
+          "level": "L3",
+          "text": "换元后新变量的趋近方向会变吗？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-limit-piecewise-one-sided",
+      "title": "分段函数的单侧极限",
+      "level": "method",
+      "summary": "分段函数在分界点处求极限时，应分别用左侧表达式求左极限、右侧表达式求右极限。只有两侧结果相等，双侧极限才存在。",
+      "prerequisites": [
+        "分段函数",
+        "左极限",
+        "右极限"
+      ],
+      "misconceptions": [
+        "在分界点直接代入某一段就判断极限",
+        "忽略等号属于哪一段与极限无关"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "x 从左边靠近时落在哪一段？从右边靠近时又落在哪一段？"
+        },
+        {
+          "level": "L2",
+          "text": "分段定义里的等号影响函数值，还是影响趋近过程？"
+        },
+        {
+          "level": "L3",
+          "text": "分段函数在分段点处一定不连续吗？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-sequence-limit-basic",
+      "title": "数列极限",
+      "level": "concept",
+      "summary": "数列极限描述 $n$无限增大时项 $a_n$是否趋近某个确定数。数列只有离散下标，不能像函数一样讨论 $x$从左右两侧趋近。",
+      "prerequisites": [
+        "数列",
+        "无穷远趋近"
+      ],
+      "misconceptions": [
+        "把数列下标当作连续变量随意取左右极限",
+        "只看前几项就断定极限"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "当 n 越来越大时，主要项是哪一个？"
+        },
+        {
+          "level": "L2",
+          "text": "分子分母同除最高阶项后，剩下的项会趋近什么？"
+        },
+        {
+          "level": "L3",
+          "text": "数列极限和函数极限有什么联系？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-sequence-monotone-bounded",
+      "title": "单调有界准则",
+      "level": "theorem",
+      "summary": "单调递增且有上界的数列、或单调递减且有下界的数列一定收敛。该准则常用于证明极限存在，而不是直接给出极限值。",
+      "prerequisites": [
+        "数列单调性",
+        "有界性",
+        "收敛"
+      ],
+      "misconceptions": [
+        "只证明有界就认为收敛",
+        "只证明单调却没有证明边界"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个数列是单调递增还是递减？有没有对应的上界或下界？"
+        },
+        {
+          "level": "L2",
+          "text": "准则能先说明极限存在，之后还需要单独求极限值。"
+        },
+        {
+          "level": "L3",
+          "text": "单调有界准则能判断极限值吗？还是只能判断存在性？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-limit-heine-theorem",
+      "title": "海涅定理",
+      "level": "theorem",
+      "summary": "函数极限存在可用数列方式刻画：任取趋近目标点但不等于该点的数列，其函数值数列都趋近同一个数。它常用于证明极限不存在。",
+      "prerequisites": [
+        "函数极限",
+        "数列极限",
+        "反例"
+      ],
+      "misconceptions": [
+        "只找一个数列趋近就证明极限存在",
+        "忘记数列项不能等于趋近点"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "若想证明极限不存在，能不能找两条趋近路径得到不同结果？"
+        },
+        {
+          "level": "L2",
+          "text": "选择的数列是否都趋近同一个点且避开该点？"
+        },
+        {
+          "level": "L3",
+          "text": "海涅定理怎么用来证明极限不存在？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-continuity-point",
+      "title": "一点连续的三个条件",
+      "level": "concept",
+      "summary": "函数在 $x=a$处连续通常需要三个条件：$f(a)$有定义，$\\lim_{x\\to a} f(x)$存在，并且该极限等于 $f(a)$。分段函数要特别检查左右极限。",
+      "prerequisites": [
+        "函数值",
+        "左右极限",
+        "极限存在"
+      ],
+      "misconceptions": [
+        "只检查函数值有定义就认为连续",
+        "忽略左右极限是否相等"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "判断连续时，先列出 $f(a)$、左极限、右极限这三个对象。"
+        },
+        {
+          "level": "L2",
+          "text": "如果是分段函数，左右两侧趋近 a 时用的是哪一段表达式？"
+        },
+        {
+          "level": "L3",
+          "text": "连续的三个条件分别是什么？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-continuity-interval",
+      "title": "区间连续",
+      "level": "concept",
+      "summary": "函数在开区间内连续，要求区间内每一点都连续；在闭区间端点处通常使用对应的单侧连续。区间连续是使用介值定理、最值定理的前提。",
+      "prerequisites": [
+        "一点连续",
+        "单侧极限",
+        "区间"
+      ],
+      "misconceptions": [
+        "只检查几个特殊点就认为整个区间连续",
+        "闭区间端点仍要求双侧极限"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "区间内部和端点的连续要求是不是一样？"
+        },
+        {
+          "level": "L2",
+          "text": "这个函数在区间内有没有分母为 0、根号无意义或分段点？"
+        },
+        {
+          "level": "L3",
+          "text": "开区间上的连续函数一定有最大值吗？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-continuity-elementary-functions",
+      "title": "初等函数的连续性",
+      "level": "concept",
+      "summary": "多项式在实数范围内处处连续；有理函数在分母不为 0 处连续；三角、指数、对数等初等函数在其定义域内连续。判断连续时要先看定义域。",
+      "prerequisites": [
+        "初等函数",
+        "定义域",
+        "连续"
+      ],
+      "misconceptions": [
+        "忽略对数和根式的定义域",
+        "认为有表达式就一定连续"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个表达式的定义域先是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "它是由哪些已知连续函数通过四则运算或复合得到的？"
+        },
+        {
+          "level": "L3",
+          "text": "tan x 在定义域内连续，那在 pi/2 处呢？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-continuity-composition",
+      "title": "复合函数连续性",
+      "level": "concept",
+      "summary": "若内层函数在一点连续，外层函数在对应函数值处连续，则复合函数在该点连续。使用时要检查内层值是否落在外层函数定义域内。",
+      "prerequisites": [
+        "复合函数",
+        "定义域",
+        "一点连续"
+      ],
+      "misconceptions": [
+        "只看外层连续而忽略内层取值范围",
+        "复合后定义域变化没有检查"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "内层函数趋近到什么值？外层函数在这个值处连续吗？"
+        },
+        {
+          "level": "L2",
+          "text": "复合表达式的定义域是否比原来更窄？"
+        },
+        {
+          "level": "L3",
+          "text": "连续函数的复合一定连续吗？定义域怎么确定？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-discontinuity-removable",
+      "title": "可去间断点",
+      "level": "concept",
+      "summary": "若一点处极限存在但函数值不存在，或函数值存在但不等于该极限，则该点通常是可去间断点。通过重新定义该点函数值可以修补连续性。",
+      "prerequisites": [
+        "极限存在",
+        "函数值",
+        "连续条件"
+      ],
+      "misconceptions": [
+        "把所有间断点都叫可去间断",
+        "认为可去间断说明原函数已经连续"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这一点的极限存在吗？$f(a)$是否等于这个极限？"
+        },
+        {
+          "level": "L2",
+          "text": "如果只改 $f(a)$的值，能不能让函数连续？"
+        },
+        {
+          "level": "L3",
+          "text": "可去间断点处补充定义后函数就连续了吗？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-discontinuity-jump",
+      "title": "跳跃间断点",
+      "level": "concept",
+      "summary": "若左右极限都存在但不相等，该点称为跳跃间断点。它常出现在分段函数的分界点处。",
+      "prerequisites": [
+        "左极限",
+        "右极限",
+        "分段函数"
+      ],
+      "misconceptions": [
+        "左右极限不同仍认为极限存在",
+        "只看函数值不看两侧趋近"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "左极限和右极限分别是多少？"
+        },
+        {
+          "level": "L2",
+          "text": "两个单侧极限都存在但不相等时，这属于哪类间断？"
+        },
+        {
+          "level": "L3",
+          "text": "跳跃间断点处左右极限都存在但不相等，补充定义能修复吗？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-discontinuity-infinite",
+      "title": "无穷间断点",
+      "level": "concept",
+      "summary": "若函数在某点附近趋向正无穷或负无穷，通常称该点为无穷间断点。常见来源是分母趋近于 0 且分子不趋近于 0。",
+      "prerequisites": [
+        "无穷大",
+        "分母趋近 0",
+        "间断点"
+      ],
+      "misconceptions": [
+        "分母趋近 0 就不分析符号和分子",
+        "把无穷间断当作可去间断"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "当 x 靠近该点时，分母趋近 0，分子趋近什么？"
+        },
+        {
+          "level": "L2",
+          "text": "左右两侧是否都发散？方向是否相同？"
+        },
+        {
+          "level": "L3",
+          "text": "无穷间断点处函数值趋向无穷，能说极限存在吗？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-discontinuity-oscillatory",
+      "title": "振荡间断点",
+      "level": "concept",
+      "summary": "若函数在趋近某点时不断振荡而不靠近固定值，可能形成振荡间断。例如 $\\sin(\\frac{1}{x})$在 $x\\to0$时没有极限。",
+      "prerequisites": [
+        "函数极限",
+        "有界振荡",
+        "三角函数"
+      ],
+      "misconceptions": [
+        "函数有界就认为极限存在",
+        "只取一条路径看到收敛就下结论"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "函数值是在靠近某个数，还是一直振荡？"
+        },
+        {
+          "level": "L2",
+          "text": "能不能找两列趋近 0 的 x，使函数值分别趋近不同结果？"
+        },
+        {
+          "level": "L3",
+          "text": "$\\sin(\\frac{1}{x})$在 $x=0$处是什么类型的间断？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-continuity-parameter-piecewise",
+      "title": "分段函数连续性求参数",
+      "level": "method",
+      "summary": "分段函数要求在分界点连续时，通常把左极限、右极限和函数值列成等式，解出待定参数。若有多个分界点，需要逐点列条件。",
+      "prerequisites": [
+        "分段函数",
+        "连续条件",
+        "参数方程"
+      ],
+      "misconceptions": [
+        "只让函数值相等却不检查极限",
+        "只检查一个分界点"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "先把分界点处的左极限、右极限、函数值分别写出来。"
+        },
+        {
+          "level": "L2",
+          "text": "连续要求这三个量满足什么等式？"
+        },
+        {
+          "level": "L3",
+          "text": "参数取什么值时分段函数在分段点连续？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-continuity-intermediate-value",
+      "title": "介值定理",
+      "level": "theorem",
+      "summary": "若函数在闭区间 $[a,b]$上连续，则它能取得 $f(a)$与 $f(b)$之间的每一个值。介值定理常用于证明方程在区间内有根。",
+      "prerequisites": [
+        "闭区间连续",
+        "函数值符号",
+        "存在性证明"
+      ],
+      "misconceptions": [
+        "不检查闭区间连续就使用介值定理",
+        "把存在一个根误认为唯一根"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "函数在整个闭区间上连续吗？端点函数值有什么关系？"
+        },
+        {
+          "level": "L2",
+          "text": "如果 $f(a)$和 $f(b)$异号，0是否在它们之间？"
+        },
+        {
+          "level": "L3",
+          "text": "介值定理能用来证明方程有根吗？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-continuity-extreme-value",
+      "title": "闭区间连续函数最值定理",
+      "level": "theorem",
+      "summary": "若函数在闭区间 [a,b] 上连续，则一定能在该区间上取得最大值和最小值。闭区间和连续性两个条件缺一不可。",
+      "prerequisites": [
+        "闭区间",
+        "区间连续",
+        "有界性"
+      ],
+      "misconceptions": [
+        "开区间连续也一定取到最值",
+        "只知道有界就认为能取到最大值"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "题目给的是闭区间还是开区间？函数在整个区间连续吗？"
+        },
+        {
+          "level": "L2",
+          "text": "最值定理保证的是取到最值，不只是有上界或下界。"
+        },
+        {
+          "level": "L3",
+          "text": "最值定理要求的闭区间条件能放宽吗？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-limit-asymptote",
+      "title": "渐近线与极限",
+      "level": "concept",
+      "summary": "垂直渐近线常与 x 趋近某点时函数趋向无穷有关；水平渐近线常与 x 趋向正负无穷时函数趋近常数有关。渐近线判断依赖极限过程。",
+      "prerequisites": [
+        "无穷大",
+        "无穷远极限",
+        "函数图像"
+      ],
+      "misconceptions": [
+        "看到分母为 0 就一定有垂直渐近线",
+        "只算 $x\\to+\\infty$不检查 $x\\to-\\infty$"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "你要判断的是垂直渐近线还是水平渐近线？对应哪个极限过程？"
+        },
+        {
+          "level": "L2",
+          "text": "左右两侧或正负无穷方向的极限是否需要分别讨论？"
+        },
+        {
+          "level": "L3",
+          "text": "水平渐近线和斜渐近线能同时存在吗？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-limit-order-comparison",
+      "title": "无穷小阶的比较",
+      "level": "method",
+      "summary": "比较无穷小阶时，常考察两个无穷小之比的极限。比值趋于 0 表示前者高阶；趋于有限非零常数表示同阶，常数为 1 时表示等价。",
+      "prerequisites": [
+        "无穷小",
+        "极限比值",
+        "等价无穷小"
+      ],
+      "misconceptions": [
+        "只凭表达式外观判断阶数",
+        "把同阶和等价混为一谈"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "要比较两个无穷小，能不能先写出它们的比值？"
+        },
+        {
+          "level": "L2",
+          "text": "这个比值的极限是 0、有限非零常数，还是无穷？"
+        },
+        {
+          "level": "L3",
+          "text": "高阶无穷小和低阶无穷小的比值极限是什么？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-limit-log-exponential",
+      "title": "指数对数型极限",
+      "level": "method",
+      "summary": "含幂指函数的不定式如 $1^\\infty$、$0^0$、$\\infty^0$，常先取对数，把指数移到乘法结构中求极限，再指数还原。",
+      "prerequisites": [
+        "对数运算",
+        "复合函数",
+        "不定式"
+      ],
+      "misconceptions": [
+        "直接把底数极限和指数极限分别代入",
+        "取对数后忘记还原原极限"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个表达式是不是形如 $f(x)^{g(x)}$？直接代入属于哪种不定式？"
+        },
+        {
+          "level": "L2",
+          "text": "设原式为 y，先研究 ln y 会不会更容易？"
+        },
+        {
+          "level": "L3",
+          "text": "$\\ln x$和 $e^x$谁增长更快？怎么用极限说明？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-limit-infinite-rational",
+      "title": "有理函数的无穷远极限",
+      "level": "method",
+      "summary": "求有理函数在无穷远处的极限时，通常比较分子分母最高次项。分子次数低于分母时极限为 0，次数相等时看最高次项系数比，分子次数更高时通常发散或有斜渐近线。",
+      "prerequisites": [
+        "多项式次数",
+        "无穷远极限",
+        "最高次项"
+      ],
+      "misconceptions": [
+        "把低次项在无穷远处的影响看得和高次项一样大",
+        "次数更高时仍写成有限系数比"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "分子和分母的最高次数分别是多少？"
+        },
+        {
+          "level": "L2",
+          "text": "同除最高次项后，哪些项会趋近于 0？"
+        },
+        {
+          "level": "L3",
+          "text": "有理函数在无穷远处的极限取决于什么？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-limit-trig-basic",
+      "title": "三角函数基本极限",
+      "level": "method",
+      "summary": "核心三角基本极限包括 $\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$，以及由此推出 $\\lim_{x \\to 0}\\frac{\\tan x}{x}=1$、$\\lim_{x \\to 0}\\frac{1-\\cos x}{x^2}=\\frac{1}{2}$等结果。使用时要保证角度变量趋近于 0，并注意复合变量。",
+      "prerequisites": [
+        "三角函数",
+        "等价无穷小",
+        "变量代换"
+      ],
+      "misconceptions": [
+        "变量不是趋近 0 仍直接套公式",
+        "忘记处理 $\\frac{\\sin(kx)}{kx}$中的系数"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "三角函数里面的整体变量是否趋近于 0？"
+        },
+        {
+          "level": "L2",
+          "text": "能不能凑出 $\\frac{\\sin u}{u}$的形式，再把多出来的系数单独处理？"
+        },
+        {
+          "level": "L3",
+          "text": "$\\lim_{x\\to0}\\frac{\\sin x}{x}=1$能用来推导 $\\lim_{x\\to0}\\frac{\\tan x}{x}=1$吗？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-limit-continuity-workflow",
+      "title": "极限与连续题的解题流程",
+      "level": "strategy",
+      "summary": "处理极限与连续题时，可按流程推进：确认趋近过程，尝试直接代入，识别不定式，选择化简、等价无穷小、夹逼、洛必达或泰勒方法，最后回到连续性条件检查。",
+      "prerequisites": [
+        "直接代入",
+        "不定式",
+        "连续条件"
+      ],
+      "misconceptions": [
+        "不判断题型就套公式",
+        "算出极限后忘记回答连续性或参数条件"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这题当前卡在哪一步：代入、化简、选方法，还是连续性判断？"
+        },
+        {
+          "level": "L2",
+          "text": "先把趋近过程和直接代入结果写出来，再选工具。"
+        },
+        {
+          "level": "L3",
+          "text": "求极限的完整流程是什么？先检查什么后检查什么？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    }
+  ]
+}

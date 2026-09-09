@@ -1,0 +1,617 @@
+{
+  "subject": "physics",
+  "course": "大学物理",
+  "chapter": "力学",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "physics-mechanics-q1",
+      "title": "匀加速直线运动位移计算",
+      "type": "solution",
+      "difficulty": 1,
+      "content": "一质点从静止开始做匀加速直线运动，加速度 $a = 2 \\frac{m}{s}^2$。求：$(1)$第3秒末的速度；$(2)$前3秒内的位移。",
+      "options": [],
+      "answer": "$(1) v = 6 \\frac{m}{s}$；$(2) s = 9 m$",
+      "solutionSteps": [
+        "（1）使用速度公式：$v = v_0 + at$",
+        "初速度 $v_0 = 0$，代入得：$v = 0 + 2\\times3 = 6 \\frac{m}{s}$",
+        "（2）使用位移公式：$s = v_0t + ½at^2$",
+        "代入得：$s = 0\\times3 + ½\\times2\\times3^2 = 9 m$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-mech-kinematics"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "回忆匀加速直线运动的速度公式和位移公式"
+        },
+        {
+          "level": "L2",
+          "text": "速度公式：$v = v_0 +$at；位移公式：$s = v_0t + ½at^2$"
+        },
+        {
+          "level": "L3",
+          "text": "注意初速度 $v_0 = 0$，直接代入公式计算"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-mechanics-q2",
+      "title": "斜抛运动射程计算",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "一质点以初速度 $v_0 = 20 \\frac{m}{s}$从地面斜向上抛出，抛射角 $\\theta = 30\\circ$。不计空气阻力，$g = 10 \\frac{m}{s}^2$。求：$(1)$射程；$(2)$最大高度。",
+      "options": [],
+      "answer": "$(1) R = 20\\\\sqrt{3} \\approx 34.64 m$；$(2) H = 5 m$",
+      "solutionSteps": [
+        "（1）射程公式：$R = v_0^2sin\\frac{(2\\theta)}{g}$",
+        "代入：$R = 20^2\\times\\sin\\frac{(60\\circ)}{1}0 = 400\\times\\frac{(\\\\sqrt{3}/2)}{1}0 = 20\\\\sqrt{3} m$",
+        "（2）最大高度公式：$H = v_0^2sin^2\\theta/(2g)$",
+        "代入：$H = 20^2\\times\\sin^2\\frac{(30\\circ)}{(2\\times10)} = 400\\times\\frac{(1/4)}{2}0 = 5 m$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-mech-kinematics"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "斜抛运动可以分解为水平匀速和竖直上抛两个分运动"
+        },
+        {
+          "level": "L2",
+          "text": "记忆射程公式 $R = v_0^2sin\\frac{(2\\theta)}{g}$和最大高度公式 $H = v_0^2sin^2\\theta/(2g)$"
+        },
+        {
+          "level": "L3",
+          "text": "$\\sin(30\\circ) = \\frac{1}{2}$，$\\sin(60\\circ) = √\\frac{3}{2}$，代入计算"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-mechanics-q3",
+      "title": "牛顿第二定律应用",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "一质量为 $m = 2$kg 的物体放在水平桌面上，受到水平拉力 $F = 10 N$作用。已知物体与桌面间的动摩擦因数 $\\mu = 0.2$，取 $g = 10 \\frac{m}{s}^2$。求物体的加速度。",
+      "options": [],
+      "answer": "$a = 3 \\frac{m}{s}^2$",
+      "solutionSteps": [
+        "分析受力：水平方向拉力 $F$，摩擦力 $f = \\mu N$",
+        "竖直方向平衡：$N =$mg $= 2\\times10 = 20 N$",
+        "摩擦力：$f = \\mu N = 0.2\\times20 = 4 N$",
+        "牛顿第二定律：F - f = ma",
+        "代入：$10 - 4 = 2a$，解得 $a = 3 \\frac{m}{s}^2$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-mech-newton-laws"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "需要先分析物体的受力情况"
+        },
+        {
+          "level": "L2",
+          "text": "摩擦力 $f = \\mu N$，其中 $N$是正压力，等于物体的重力 mg"
+        },
+        {
+          "level": "L3",
+          "text": "应用牛顿第二定律：合外力 = ma，即 F - f = ma"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-mechanics-q4",
+      "title": "斜面受力分析",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "一质量为 $m = 5$kg 的物体放在倾角 $\\theta = 37\\circ$的光滑斜面上。求：$(1)$物体沿斜面方向的加速度；$(2)$斜面对物体的支持力。（取 $g = 10 \\frac{m}{s}^2$，$sin37\\circ = 0.6$，$cos37\\circ = 0.8$）",
+      "options": [],
+      "answer": "$(1) a = 6 \\frac{m}{s}^2$；$(2) N = 40 N$",
+      "solutionSteps": [
+        "建立坐标系：x轴沿斜面向下，y轴垂直斜面向上",
+        "受力分析：重力 mg，支持力 N",
+        "（1）$x$方向：mg $sin\\theta =$ma，得 $a = g sin\\theta = 10\\times0.6 = 6 \\frac{m}{s}^2$",
+        "（2）$y$方向：$N -$mg $cos\\theta = 0$，得 $N =$mg $cos\\theta = 5\\times10\\times0.8 = 40 N$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-mech-newton-laws"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "斜面问题通常需要建立沿斜面和垂直斜面的坐标系"
+        },
+        {
+          "level": "L2",
+          "text": "将重力分解为沿斜面方向 mg $sin\\theta$和垂直斜面方向 mg $cos\\theta$"
+        },
+        {
+          "level": "L3",
+          "text": "沿斜面方向应用牛顿第二定律，垂直斜面方向力平衡"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-mechanics-q5",
+      "title": "动量守恒定律应用",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "两质点质量分别为 $m_1 = 2$kg，$m_2 = 3$kg，在光滑水平面上相向而行。$m_1$速度 $v_1 = 4 \\frac{m}{s}$，$m_2$速度 $v_2 = -2 \\frac{m}{s}$（取 $m_1$运动方向为正）。两质点发生完全弹性碰撞。求碰撞后两质点的速度。",
+      "options": [],
+      "answer": "$v_1' = -2.8 \\frac{m}{s}$，$v_2' = 3.2 \\frac{m}{s}$",
+      "solutionSteps": [
+        "完全弹性碰撞，动量守恒和动能守恒",
+        "动量守恒：$m_1v_1 + m_2v_2 = m_1v_1' + m_2v_2'$",
+        "代入：$2\\times4 + 3\\times(-2) = 2v_1' + 3v_2'$，即 $2 = 2v_1' + 3v_2' ... ①$",
+        "动能守恒：$½m_1v_1^2 + ½m_2v_2^2 = ½m_1v_1'^2 + ½m_2v_2'^2$",
+        "代入：$½\\times2\\times16 + ½\\times3\\times4 = v_1'^2 + 1.5v_2'^2$，即 $22 = v_1'^2 + 1.5v_2'^2 ... ②$",
+        "联立①②解得：$v_1' = -2.8 \\frac{m}{s}$，$v_2' = 3.2 \\frac{m}{s}$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-mech-momentum"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "完全弹性碰撞需要满足两个守恒定律"
+        },
+        {
+          "level": "L2",
+          "text": "动量守恒：$m_1v_1 + m_2v_2 = m_1v_1' + m_2v_2'$；动能守恒：$½m_1v_1^2 + ½m_2v_2^2 = ½m_1v_1'^2 + ½m_2v_2'^2$"
+        },
+        {
+          "level": "L3",
+          "text": "注意速度的矢量性，规定正方向。联立两个方程求解"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-mechanics-q6",
+      "title": "动量定理应用",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "一质量为 $m = 0.5$kg 的篮球以 $v_1 = 5 \\frac{m}{s}$的速度竖直向下撞击地面，反弹后竖直向上速度 $v_2 = 4 \\frac{m}{s}$。已知篮球与地面的接触时间 $\\Delta t = 0.01 s$。求地面给篮球的平均作用力。",
+      "options": [],
+      "answer": "F = 450 N（方向竖直向上）",
+      "solutionSteps": [
+        "取竖直向上为正方向",
+        "动量变化：$\\Delta p = mv_2 - mv_1 = 0.5\\times4 - 0.5\\times(-5) = 4.5$kg$\\cdot\\frac{m}{s}$",
+        "动量定理：$(F - mg)\\Delta t = \\Delta p$",
+        "代入：$(F - 0.5\\times10)\\times0.01 = 4.5$",
+        "解得：$F - 5 = 450$，$F = 455 N \\approx 450 N$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-mech-momentum"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "动量定理：合外力的冲量等于动量的变化"
+        },
+        {
+          "level": "L2",
+          "text": "注意速度的矢量性，撞击前速度向下为负，反弹后速度向上为正"
+        },
+        {
+          "level": "L3",
+          "text": "篮球受力：地面作用力 F（向上）和重力 mg（向下），合外力为 F - mg"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-mechanics-q7",
+      "title": "动能定理应用",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "一质量为 $m = 1$kg 的物体从高度 $h = 5 m$处由静止开始下落，落地时速度 $v = 8 \\frac{m}{s}$。求空气阻力对物体做的功。（取 $g = 10 \\frac{m}{s}^2$）",
+      "options": [],
+      "answer": "$W_f = -9 J$",
+      "solutionSteps": [
+        "应用动能定理：合外力做功 = 动能变化",
+        "重力做功：$W_g =$mgh $= 1\\times10\\times5 = 50 J$",
+        "空气阻力做功：$W_f$（负功）",
+        "动能变化：$\\Delta E_k = ½mv^2 - 0 = ½\\times1\\times64 = 32 J$",
+        "动能定理：$W_g + W_f = \\Delta E_k$",
+        "代入：$50 + W_f = 32$，解得 $W_f = -18 J$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-mech-work-energy"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "动能定理：所有力做的总功等于动能的变化"
+        },
+        {
+          "level": "L2",
+          "text": "重力做正功 $W_g =$mgh，空气阻力做负功 $W_f$"
+        },
+        {
+          "level": "L3",
+          "text": "注意动能变化的计算：$\\Delta E_k = ½mv^2 - ½mv_0^2$，初速度 $v_0 = 0$"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-mechanics-q8",
+      "title": "机械能守恒定律应用",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "一轻质弹簧原长 $l_0 = 0.2 m$，劲度系数 $k = 100 \\frac{N}{m}$，一端固定，另一端系一质量 $m = 0.5$kg 的物体。将物体缓慢下拉使弹簧伸长 $x = 0.1 m$后由静止释放。求物体通过原长位置时的速度。",
+      "options": [],
+      "answer": "v = 1.41 m/s",
+      "solutionSteps": [
+        "只有重力和弹力做功，机械能守恒",
+        "取弹簧原长位置为重力势能零点",
+        "初始状态（弹簧伸长 x 处）：",
+        "弹性势能：$E_p$弹 $= ½kx^2 = ½\\times100\\times0.01 = 0.5 J$",
+        "重力势能：$E_p$重 $= -mgx = -0.5\\times10\\times0.1 = -0.5 J$",
+        "动能：$E_k = 0$",
+        "末状态（原长位置）：",
+        "弹性势能：$E_p$弹$' = 0$",
+        "重力势能：$E_p$重$' = 0$",
+        "动能：$E_k' = ½mv^2$",
+        "机械能守恒：$0.5 - 0.5 + 0 = 0 + 0 + ½\\times0.5\\times v^2$",
+        "解得：$v^2 = 2$，$v = \\\\sqrt{2} \\approx 1.41 \\frac{m}{s}$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-mech-work-energy"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "只有保守力（重力和弹力）做功时，机械能守恒"
+        },
+        {
+          "level": "L2",
+          "text": "需要选择合适的势能零点，计算初始和末状态的机械能"
+        },
+        {
+          "level": "L3",
+          "text": "注意重力势能的零点选择，以及弹簧伸长时重力势能的变化"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-mechanics-q9",
+      "title": "匀速圆周运动向心力计算",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "一质量为 $m = 0.2$kg 的小球用长为 $L = 0.5 m$的细绳系住，在竖直平面内做圆周运动。小球通过最高点时速度 $v = 2 \\frac{m}{s}$。求：$(1)$小球通过最高点时的向心加速度；$(2)$细绳对小球的拉力。（取 $g = 10 \\frac{m}{s}^2$）",
+      "options": [],
+      "answer": "$(1) a_n = 8 \\frac{m}{s}^2$；$(2) T = -0.4 N$（负号表示压力）",
+      "solutionSteps": [
+        "（1）向心加速度：$a_n = v^2/L = \\frac{4}{0}.5 = 8 \\frac{m}{s}^2$",
+        "（2）最高点受力分析：重力 mg 向下，拉力 T 向下（假设）",
+        "牛顿第二定律：mg $+ T = ma_n$",
+        "代入：$0.2\\times10 + T = 0.2\\times8$",
+        "解得：$T = 1.6 - 2 = -0.4 N$",
+        "负号表示细绳对小球的力实际向上（小球未脱离轨道时）"
+      ],
+      "knowledgeNodeIds": [
+        "physics-mech-circular-motion"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "匀速圆周运动的向心力由合外力提供"
+        },
+        {
+          "level": "L2",
+          "text": "向心加速度公式：$a_n = v^2/R$，其中 $R$是曲率半径"
+        },
+        {
+          "level": "L3",
+          "text": "最高点受力分析：重力和拉力都指向圆心（向下），合力提供向心力"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-mechanics-q10",
+      "title": "简谐振动周期计算",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "一弹簧振子，弹簧劲度系数 $k = 50 \\frac{N}{m}$，振子质量 $m = 0.5$kg。将振子从平衡位置向右拉离 $x_0 = 0.02 m$后由静止释放。求：$(1)$振动的角频率；$(2)$振动周期；$(3)$振子通过平衡位置时的速度。",
+      "options": [],
+      "answer": "$(1) \\omega = 10$ra$\\frac{d}{s}$；$(2) T = 0.628 s$；$(3) v_max = 0.2 \\frac{m}{s}$",
+      "solutionSteps": [
+        "（1）角频率：$\\omega = \\\\sqrt{\\frac{k}{m}} = \\\\sqrt{5\\frac{0}{0}.5} = 10$ra$\\frac{d}{s}$",
+        "（2）周期：$T = 2\\pi/\\omega = 2\\pi/10 = \\pi/5 \\approx 0.628 s$",
+        "（3）机械能守恒：$½kx_0^2 = ½mv_max^2$",
+        "代入：$½\\times50\\times0.0004 = ½\\times0.5\\times v_max^2$",
+        "解得：$v_max^2 = 0.04$，$v_max = 0.2 \\frac{m}{s}$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-mech-shm"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "弹簧振子的角频率、周期有固定公式"
+        },
+        {
+          "level": "L2",
+          "text": "$\\omega = \\\\sqrt{\\frac{k}{m}}$，$T = 2\\pi/\\omega$，最大速度 $v_max = \\omega A$（$A$是振幅）"
+        },
+        {
+          "level": "L3",
+          "text": "也可以用机械能守恒求解最大速度：$½kA^2 = ½mv_max^2$"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-mechanics-q11",
+      "title": "完全弹性碰撞速度交换",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "质量分别为 $m_1$和 $m_2$的两质点发生完全弹性碰撞。下列哪种情况下，碰撞后两质点的速度交换？（多选）",
+      "options": [
+        "A. m₁ = m₂，且碰撞前 m₂ 静止",
+        "B. m₁ = m₂，且碰撞前 m₁ 静止",
+        "C. m₁ >> m₂，且碰撞前 m₂ 静止",
+        "D. m₁ << m₂，且碰撞前 m₂ 静止"
+      ],
+      "answer": "A",
+      "solutionSteps": [
+        "完全弹性碰撞的速度公式：",
+        "$v_1' = [(m_1-m_2)v_1 + 2m_2v_2]/(m_1+m_2)$",
+        "$v_2' = [(m_2-m_1)v_2 + 2m_1v_1]/(m_1+m_2)$",
+        "$A$选项：$m_1 = m_2$，$v_2 = 0$，代入得 $v_1' = 0$，$v_2' = v_1$，速度交换",
+        "$B$选项：$m_1 = m_2$，$v_1 = 0$，代入得 $v_1' = v_2$，$v_2' = 0$，不是速度交换",
+        "$C$选项：$m_1 >> m_2$，$v_2 = 0$，$v_1' \\approx v_1$，$v_2' \\approx 2v_1$，不是速度交换",
+        "$D$选项：$m_1 << m_2$，$v_2 = 0$，$v_1' \\approx -v_1$，$v_2' \\approx 0$，不是速度交换"
+      ],
+      "knowledgeNodeIds": [
+        "physics-mech-collision"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "回忆完全弹性碰撞的速度公式"
+        },
+        {
+          "level": "L2",
+          "text": "速度交换发生在质量相等且一个静止的情况下"
+        },
+        {
+          "level": "L3",
+          "text": "可以直接代入特殊情况验证，也可以记忆结论"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-mechanics-q12",
+      "title": "万有引力与重力加速度",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "地球质量 $M = 6.0\\times10^{24}$kg，半径 $R = 6.4\\times10^6 m$。有一人造卫星在距地面高度 $h = R$的圆形轨道上运行。求卫星的运行速度。（万有引力常量 $G = 6.67\\times10^{-11} N\\cdot m^2/kg^2$）",
+      "options": [],
+      "answer": "$v \\approx 5.59\\times10^3 \\frac{m}{s}$",
+      "solutionSteps": [
+        "卫星轨道半径：$r = R + h = 2R = 1.28\\times10^7 m$",
+        "万有引力提供向心力：GM$\\frac{m}{r}^2 = mv^2/r$",
+        "化简得：v = √(GM/r)",
+        "代入：$v = \\\\sqrt{6.67\\times10^{-11}\\times6.0\\times10^{24}/1.28\\times10^7}$",
+        "计算：$v = \\\\sqrt{3.12\\times10^7} \\approx 5.59\\times10^3 \\frac{m}{s}$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-mech-gravitation"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "卫星做圆周运动的向心力由万有引力提供"
+        },
+        {
+          "level": "L2",
+          "text": "万有引力公式：$F =$GM$\\frac{m}{r}^2$；向心力公式：$F = mv^2/r$"
+        },
+        {
+          "level": "L3",
+          "text": "注意轨道半径 r = R + h，本题 h = R，所以 r = 2R"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-mechanics-q13",
+      "title": "静摩擦力方向判断",
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "一物体放在匀速转动的水平圆盘上，随圆盘一起转动。物体受到的静摩擦力方向是：",
+      "options": [
+        "A. 指向圆心",
+        "B. 背离圆心",
+        "C. 与圆盘转动切线方向相同",
+        "D. 与圆盘转动切线方向相反"
+      ],
+      "answer": "A",
+      "solutionSteps": [
+        "物体在水平圆盘上做匀速圆周运动",
+        "需要向心力维持圆周运动",
+        "向心力由静摩擦力提供",
+        "静摩擦力方向指向圆心"
+      ],
+      "knowledgeNodeIds": [
+        "physics-mech-friction"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "匀速圆周运动需要向心力"
+        },
+        {
+          "level": "L2",
+          "text": "向心力方向指向圆心"
+        },
+        {
+          "level": "L3",
+          "text": "分析物体受力，找出哪个力提供向心力"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-mechanics-q14",
+      "title": "滑动摩擦力做功计算",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "一质量为 $m = 10$kg 的木箱在水平地面上滑动，初速度 $v_0 = 5 \\frac{m}{s}$。已知木箱与地面间的动摩擦因数 $\\mu = 0.3$，取 $g = 10 \\frac{m}{s}^2$。求：$(1)$木箱滑行的加速度；$(2)$木箱滑行的距离。",
+      "options": [],
+      "answer": "$(1) a = -3 \\frac{m}{s}^2$；$(2) s \\approx 4.17 m$",
+      "solutionSteps": [
+        "（1）滑动摩擦力：$f = \\mu N = \\mu$mg $= 0.3\\times10\\times10 = 30 N$",
+        "加速度：$a = -\\frac{f}{m} = -3\\frac{0}{1}0 = -3 \\frac{m}{s}^2$（负号表示减速）",
+        "（2）使用运动学公式：$v^2 - v_0^2 = 2as$",
+        "末速度 $v = 0$，代入：$0 - 25 = 2\\times(-3)\\times s$",
+        "解得：$s = 2\\frac{5}{6} \\approx 4.17 m$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-mech-friction",
+        "physics-mech-kinematics"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "滑动摩擦力 $f = \\mu N$，其中 $N$是正压力"
+        },
+        {
+          "level": "L2",
+          "text": "摩擦力做负功，使物体减速"
+        },
+        {
+          "level": "L3",
+          "text": "可以用牛顿第二定律求加速度，再用运动学公式求位移"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-mechanics-q15",
+      "title": "综合题：滑块-弹簧-斜面系统",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "一质量为 $m = 2$kg 的滑块从高为 $h = 0.8 m$的光滑斜面顶端由静止滑下，滑到水平面上与一轻质弹簧相连。弹簧另一端固定，劲度系数 $k = 200 \\frac{N}{m}$。斜面与水平面平滑连接。求：$(1)$滑块滑到斜面底端时的速度；$(2)$滑块压缩弹簧的最大压缩量。（取 $g = 10 \\frac{m}{s}^2$）",
+      "options": [],
+      "answer": "$(1) v = 4 \\frac{m}{s}$；$(2) x_max = 0.4 m$",
+      "solutionSteps": [
+        "（1）斜面部分：机械能守恒",
+        "$mgh = ½mv^2$",
+        "代入：$2\\times10\\times0.8 = ½\\times2\\times v^2$",
+        "解得：$v^2 = 16$，$v = 4 \\frac{m}{s}$",
+        "（2）水平面部分：滑块动能转化为弹簧弹性势能",
+        "$½mv^2 = ½kx_max^2$",
+        "代入：$½\\times2\\times16 = ½\\times200\\times x_max^2$",
+        "解得：$x_max^2 = 0.16$，$x_max = 0.4 m$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-mech-work-energy",
+        "physics-mech-kinematics",
+        "physics-mech-newton-laws"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "斜面部分只有重力做功，机械能守恒"
+        },
+        {
+          "level": "L2",
+          "text": "水平面部分滑块动能转化为弹簧弹性势能"
+        },
+        {
+          "level": "L3",
+          "text": "注意两个过程的连接点：斜面底端的速度就是水平面上的初速度"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    }
+  ]
+}

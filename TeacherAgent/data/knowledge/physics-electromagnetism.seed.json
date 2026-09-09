@@ -1,0 +1,429 @@
+{
+  "subject": "physics",
+  "course": "大学物理",
+  "chapter": "电磁学",
+  "status": "draft",
+  "nodes": [
+    {
+      "id": "physics-em-coulomb",
+      "title": "库仑定律",
+      "summary": "库仑定律描述真空中两个静止点电荷之间的相互作用力。力的大小与电荷量乘积成正比，与距离平方成反比，方向沿连线。",
+      "prerequisites": [
+        "physics-mech-newton-laws"
+      ],
+      "keyPoints": [
+        "库仑定律公式：$F=k|q_1q_2|/r^2$",
+        "电荷量的正负与力的方向",
+        "库仑力的矢量性",
+        "静电力的叠加原理"
+      ],
+      "misconceptions": [
+        "误认为库仑力与电荷量成正比（实际是与乘积成正比）",
+        "混淆力的方向与电荷正负的关系",
+        "误将库仑定律应用于运动电荷"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "两个电荷之间的作用力与它们的电荷量有什么关系？与距离呢？"
+        },
+        {
+          "level": "L2",
+          "text": "三个电荷在同一直线上，如何求其中一个电荷受到的合力？"
+        },
+        {
+          "level": "L3",
+          "text": "考虑两个异号电荷，它们的库仑力是引力。如果同时加上外电场，合力方向如何判断？"
+        }
+      ],
+      "difficulty": 1,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-em-electric-field",
+      "title": "电场强度",
+      "summary": "电场强度描述电场本身的力学性质，定义为试探电荷在电场中受到的电场力与电荷量的比值。电场强度是矢量，叠加遵循矢量合成法则。",
+      "prerequisites": [
+        "physics-em-coulomb"
+      ],
+      "keyPoints": [
+        "电场强度定义：$E=\\frac{F}{q}_0$",
+        "点电荷的电场：$E=k\\frac{q}{r}^2$",
+        "电场叠加原理",
+        "电场线的基本性质"
+      ],
+      "misconceptions": [
+        "误认为电场强度与试探电荷有关",
+        "混淆电场强度与电场力",
+        "误将电场线视为真实存在的线"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "电场强度是如何定义的？为什么要用试探电荷？"
+        },
+        {
+          "level": "L2",
+          "text": "两个等量同号点电荷中垂线上各点的电场强度方向如何？"
+        },
+        {
+          "level": "L3",
+          "text": "考虑一个均匀带电球面，球面内外电场强度如何分布？这能用库仑定律直接计算吗？"
+        }
+      ],
+      "difficulty": 1,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-em-gauss-law",
+      "title": "高斯定理",
+      "summary": "高斯定理建立电场强度通过任意闭合曲面的通量与闭合曲面内电荷的关系。对于具有对称性的电荷分布，可以用高斯定理简便计算电场强度。",
+      "prerequisites": [
+        "physics-em-electric-field"
+      ],
+      "keyPoints": [
+        "电通量定义：$\\Phi_E=∮E\\cdot dS$",
+        "高斯定理：$∮E\\cdot dS=q$内$/\\varepsilon_0$",
+        "球对称电荷分布的电场",
+        "轴对称电荷分布的电场",
+        "无限大平面电荷的电场"
+      ],
+      "misconceptions": [
+        "误认为高斯定理只适用于对称情况",
+        "混淆电通量与电场强度",
+        "误将高斯面内的电荷遗漏"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "电通量的物理意义是什么？它和电场线有什么关系？"
+        },
+        {
+          "level": "L2",
+          "text": "如何用高斯定理计算均匀带电球体的电场分布？需要选取什么样的高斯面？"
+        },
+        {
+          "level": "L3",
+          "text": "考虑一个均匀带电的无限长圆柱体，如何用高斯定理计算柱内外的电场？"
+        }
+      ],
+      "difficulty": 2,
+      "level": "method",
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-em-electric-potential",
+      "title": "电势与电势能",
+      "summary": "电势是描述电场能量性质的物理量，电势能是电荷在电场中具有的能量。电势差（电压）是电流产生的驱动力。等势面与电场线垂直。",
+      "prerequisites": [
+        "physics-em-electric-field",
+        "physics-mech-work-energy"
+      ],
+      "keyPoints": [
+        "电势定义：V=Ep/q",
+        "电势差与电场强度的关系：$U=\\int E\\cdot dl$",
+        "点电荷的电势：V=kq/r",
+        "电势能的计算",
+        "等势面的性质"
+      ],
+      "misconceptions": [
+        "误认为电势为零处电场强度一定为零",
+        "混淆电势与电势能",
+        "误将电势差视为矢量"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "电势和电场强度有什么区别和联系？"
+        },
+        {
+          "level": "L2",
+          "text": "一个等量异号电荷对的中垂面上，电势是多少？电场强度呢？"
+        },
+        {
+          "level": "L3",
+          "text": "考虑一个均匀带电球面，球面内外的电势如何分布？与电场强度分布有什么不同？"
+        }
+      ],
+      "difficulty": 2,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-em-capacitance",
+      "title": "电容",
+      "summary": "电容是描述导体储存电荷能力的物理量。平行板电容器的电容与极板面积成正比，与极板间距成反比。电容器串联和并联有不同的等效电容公式。",
+      "prerequisites": [
+        "physics-em-electric-potential"
+      ],
+      "keyPoints": [
+        "电容定义：C=Q/U",
+        "平行板电容器：$C=\\varepsilon_0\\frac{S}{d}$",
+        "电容器串联与并联",
+        "电容器的储能：$W=½CU^2$",
+        "电介质对电容的影响"
+      ],
+      "misconceptions": [
+        "误认为电容与极板带电量有关",
+        "混淆电容器串联和并联的公式",
+        "误将电容器储能公式写为W=½QU"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "平行板电容器的电容与哪些因素有关？如果插入电介质，电容如何变化？"
+        },
+        {
+          "level": "L2",
+          "text": "两个电容器串联，等效电容是增大还是减小？为什么？"
+        },
+        {
+          "level": "L3",
+          "text": "考虑一个平行板电容器，保持与电源连接（电压不变），插入电介质后，极板上的电荷如何变化？"
+        }
+      ],
+      "difficulty": 2,
+      "level": "application",
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-em-steady-current",
+      "title": "稳恒电流",
+      "summary": "稳恒电流是电路中电荷流动的稳定状态。欧姆定律描述电流与电压、电阻的关系。基尔霍夫定律是分析复杂电路的基础。",
+      "prerequisites": [
+        "physics-em-electric-field"
+      ],
+      "keyPoints": [
+        "电流密度定义：$J=\\sigma E$",
+        "欧姆定律：I=U/R",
+        "电阻的串联与并联",
+        "基尔霍夫电流定律（KCL）",
+        "基尔霍夫电压定律（KVL）"
+      ],
+      "misconceptions": [
+        "误认为电流是矢量",
+        "混淆电流与电流密度",
+        "误将欧姆定律视为普适定律（实际上只适用于金属等线性元件）"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "电流的方向是如何规定的？与电子运动方向相同还是相反？"
+        },
+        {
+          "level": "L2",
+          "text": "一个复杂电路有多个支路，如何列写基尔霍夫方程？"
+        },
+        {
+          "level": "L3",
+          "text": "考虑一个电路中有电容，在稳恒电流条件下，电容相当于开路还是短路？"
+        }
+      ],
+      "difficulty": 1,
+      "level": "application",
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-em-magnetic-field",
+      "title": "磁场",
+      "summary": "磁场由运动电荷或电流产生。磁感应强度描述磁场的性质。毕奥-萨伐尔定律和安培环路定理是计算磁场的基本工具。",
+      "prerequisites": [
+        "physics-em-electric-field"
+      ],
+      "keyPoints": [
+        "磁感应强度定义：$B=F_ma\\frac{x}{(qv)}$",
+        "毕奥-萨伐尔定律",
+        "安培环路定理",
+        "无限长直导线的磁场",
+        "圆电流中心的磁场"
+      ],
+      "misconceptions": [
+        "误认为磁场对静止电荷有力的作用",
+        "混淆磁感应强度与磁场强度",
+        "误将安培环路定理视为普适公式（实际只适用于对称情况）"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "电流产生磁场的方向如何判断？用右手还是左手？"
+        },
+        {
+          "level": "L2",
+          "text": "如何用安培环路定理计算无限长螺线管内部的磁场？"
+        },
+        {
+          "level": "L3",
+          "text": "考虑一个无限大平面电流，它产生的磁场有何特点？如何用安培环路定理计算？"
+        }
+      ],
+      "difficulty": 2,
+      "level": "method",
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-em-lorentz-force",
+      "title": "洛伦兹力",
+      "summary": "洛伦兹力是运动电荷在电磁场中受到的总力，等于电场力与磁场力之和。洛伦兹力不改变电荷的动能，只改变运动方向。",
+      "prerequisites": [
+        "physics-em-electric-field",
+        "physics-em-magnetic-field"
+      ],
+      "keyPoints": [
+        "洛伦兹力公式：$F=q(E+v\\times B)$",
+        "磁场力部分：$F_m=qv\\times B$",
+        "洛伦兹力不做功",
+        "带电粒子在匀强磁场中的圆周运动",
+        "速度选择器原理"
+      ],
+      "misconceptions": [
+        "误认为洛伦兹力总是做负功",
+        "混淆洛伦兹力与安培力（安培力是洛伦兹力的宏观表现）",
+        "误将正电荷与负电荷的受力方向混淆"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "洛伦兹力的磁场部分方向与速度和磁场方向有什么关系？"
+        },
+        {
+          "level": "L2",
+          "text": "一个带电粒子在匀强磁场中做圆周运动，半径和周期与哪些因素有关？"
+        },
+        {
+          "level": "L3",
+          "text": "考虑一个带电粒子在正交的匀强电场和磁场中运动，初始速度为零。粒子的运动轨迹如何？"
+        }
+      ],
+      "difficulty": 2,
+      "level": "application",
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-em-ampere-force",
+      "title": "安培力",
+      "summary": "安培力是载流导线在磁场中受到的作用力。安培力公式是洛伦兹力的宏观表现。两平行载流导线之间的相互作用力是安培力的典型应用。",
+      "prerequisites": [
+        "physics-em-magnetic-field",
+        "physics-em-lorentz-force"
+      ],
+      "keyPoints": [
+        "安培力公式：$dF=Idl\\times B$",
+        "均匀磁场中直导线受到的安培力",
+        "两平行载流导线的相互作用",
+        "磁矩在磁场中受到的力矩",
+        "电动机原理"
+      ],
+      "misconceptions": [
+        "误认为安培力方向总是与电流方向垂直",
+        "混淆安培力与洛伦兹力",
+        "误将非直导线的安培力计算视为简单"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "安培力的方向与电流方向和磁场方向有什么关系？"
+        },
+        {
+          "level": "L2",
+          "text": "两条平行导线，电流同向时相互吸引还是排斥？为什么？"
+        },
+        {
+          "level": "L3",
+          "text": "考虑一个闭合载流线圈在匀强磁场中，它受到的合外力是多少？合力矩呢？"
+        }
+      ],
+      "difficulty": 2,
+      "level": "application",
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-em-electromagnetic-induction",
+      "title": "电磁感应",
+      "summary": "电磁感应现象揭示变化的磁场产生电场。法拉第电磁感应定律给出感应电动势的大小，楞次定律给出感应电动势的方向。",
+      "prerequisites": [
+        "physics-em-magnetic-field"
+      ],
+      "keyPoints": [
+        "法拉第电磁感应定律：$\\varepsilon=-d\\Phi/dt$",
+        "楞次定律：感应电流阻碍磁通量变化",
+        "动生电动势",
+        "感生电动势",
+        "自感与互感"
+      ],
+      "misconceptions": [
+        "误认为感应电动势与磁通量本身有关（实际是与变化率有关）",
+        "混淆动生电动势与感生电动势的机理",
+        "误将楞次定律理解为“感应电流方向与原磁场方向相反”"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "什么情况下会在闭合回路中产生感应电流？"
+        },
+        {
+          "level": "L2",
+          "text": "一个线圈在匀强磁场中匀速转动，产生的感应电动势如何变化？"
+        },
+        {
+          "level": "L3",
+          "text": "考虑一个无限长直导线附近有一个矩形线圈，导线中电流随时间变化。线圈中产生的感应电动势方向如何判断？"
+        }
+      ],
+      "difficulty": 2,
+      "level": "method",
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    }
+  ]
+}

@@ -1,0 +1,686 @@
+{
+  "subject": "lawmaster",
+  "course": "lawmaster-jurisprudence",
+  "chapter": "lawmaster-jurisprudence",
+  "status": "draft",
+  "nodes": [
+    {
+      "id": "lawmaster-jurisprudence-001",
+      "title": "法的概念（马克思主义）",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "马克思主义认为：法是由一定物质生活条件决定的统治阶级意志的体现，由国家制定或认可并以强制力保证实施，权利义务为内容。",
+      "prerequisites": [],
+      "misconceptions": [
+        "把法与道德等同",
+        "忽视物质制约性"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个法律概念的关键词是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "它和相近概念差在哪？"
+        },
+        {
+          "level": "L3",
+          "text": "先下定义再找区分点。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-jurisprudence-002",
+      "title": "法的特征",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "法具规范性、国家意志性、国家强制性、程序性与可诉性；这些特征区别于道德、习俗等其他规范。",
+      "prerequisites": [
+        "lawmaster-jurisprudence-001"
+      ],
+      "misconceptions": [
+        "混淆强制与任意",
+        "忽视可诉性"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "它的法律依据是哪一条？"
+        },
+        {
+          "level": "L2",
+          "text": "试着定位法条位置。"
+        },
+        {
+          "level": "L3",
+          "text": "把制度—条文—要件三者对应。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-jurisprudence-003",
+      "title": "法的本质",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "法的本质在于其阶级性（体现统治阶级意志）与物质制约性（由经济基础决定）；二者统一而非对立。",
+      "prerequisites": [
+        "lawmaster-jurisprudence-001"
+      ],
+      "misconceptions": [
+        "只讲阶级性",
+        "只讲物质性"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "构成要件有几项？"
+        },
+        {
+          "level": "L2",
+          "text": "逐项核对是否齐备。"
+        },
+        {
+          "level": "L3",
+          "text": "四要件/三阶层要记全。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-jurisprudence-004",
+      "title": "法的渊源",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "法的渊源指法的表现形式；正式渊源含宪法、法律、行政法规、地方性法规、规章、司法解释等，非正式渊源含习惯、判例、政策。",
+      "prerequisites": [
+        "lawmaster-jurisprudence-001"
+      ],
+      "misconceptions": [
+        "混淆正式与非正式",
+        "漏掉宪法位阶"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个制度想解决什么问题？"
+        },
+        {
+          "level": "L2",
+          "text": "立法目的决定解释方向。"
+        },
+        {
+          "level": "L3",
+          "text": "从目的反推适用。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-jurisprudence-005",
+      "title": "法的分类",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "法可分成文法与不成文法、根本法与普通法、实体法与程序法、一般法与特别法等；不同分类标准不同。",
+      "prerequisites": [
+        "lawmaster-jurisprudence-001"
+      ],
+      "misconceptions": [
+        "混淆分类标准",
+        "认为不成文即无效"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "谁享有权利、谁承担义务？"
+        },
+        {
+          "level": "L2",
+          "text": "主体资格是否具备？"
+        },
+        {
+          "level": "L3",
+          "text": "先定主体再看内容。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-jurisprudence-006",
+      "title": "法的效力",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "法的效力含对人、对事、空间与时间效力；法一般不溯及既往（从旧兼从轻为例外）。",
+      "prerequisites": [
+        "lawmaster-jurisprudence-001"
+      ],
+      "misconceptions": [
+        "认为法可溯及既往",
+        "混淆效力维度"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "责任如何归属？"
+        },
+        {
+          "level": "L2",
+          "text": "归责原则是过错还是无过错？"
+        },
+        {
+          "level": "L3",
+          "text": "归责原则决定举证方向。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-jurisprudence-007",
+      "title": "法律关系",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "法律关系是由法调整、以权利义务为内容的社会关系；由主体、内容、客体构成，因法律事实（事件/行为）产生变更消灭。",
+      "prerequisites": [
+        "lawmaster-jurisprudence-001"
+      ],
+      "misconceptions": [
+        "混淆法律关系与事实关系",
+        "忽视法律事实"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "情形A和情形B有何不同？"
+        },
+        {
+          "level": "L2",
+          "text": "区分关键事实是什么？"
+        },
+        {
+          "level": "L3",
+          "text": "用构成要件做判别。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-jurisprudence-008",
+      "title": "权利与义务",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "权利是可为或要求他人为一定行为的资格，义务是必须为或不为的约束；二者对立统一，权利是目的、义务是手段。",
+      "prerequisites": [
+        "lawmaster-jurisprudence-007"
+      ],
+      "misconceptions": [
+        "把权利当绝对",
+        "割裂权义关系"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "常见误解是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "把误区摆出来再纠正。"
+        },
+        {
+          "level": "L3",
+          "text": "辨析题先破后立。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-jurisprudence-009",
+      "title": "法的价值",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "法的价值含秩序、自由、正义、效率等；法律通过分配与保障这些价值来引导社会。",
+      "prerequisites": [
+        "lawmaster-jurisprudence-001"
+      ],
+      "misconceptions": [
+        "只讲一种价值",
+        "忽视价值冲突"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个法律概念的关键词是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "它和相近概念差在哪？"
+        },
+        {
+          "level": "L3",
+          "text": "先下定义再找区分点。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-jurisprudence-010",
+      "title": "价值冲突与解决",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "法的价值冲突可经价值位阶（位阶高者优先）、个案平衡与比例原则（手段必要适度）解决。",
+      "prerequisites": [
+        "lawmaster-jurisprudence-009"
+      ],
+      "misconceptions": [
+        "认为价值无冲突",
+        "混淆解决原则"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "它的法律依据是哪一条？"
+        },
+        {
+          "level": "L2",
+          "text": "试着定位法条位置。"
+        },
+        {
+          "level": "L3",
+          "text": "把制度—条文—要件三者对应。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-jurisprudence-011",
+      "title": "法律责任",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "法律责任是违法或违约引起的不利后果；归责原则含过错、严格（无过错）、公平责任；免责事由含时效、补救、豁免等。",
+      "prerequisites": [
+        "lawmaster-jurisprudence-007"
+      ],
+      "misconceptions": [
+        "混淆责任与制裁",
+        "忽视归责原则"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "构成要件有几项？"
+        },
+        {
+          "level": "L2",
+          "text": "逐项核对是否齐备。"
+        },
+        {
+          "level": "L3",
+          "text": "四要件/三阶层要记全。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-jurisprudence-012",
+      "title": "法律推理",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "法律推理是从规范与事实推出结论的思维；演绎（三段论）最常用，另有归纳与类比推理，保证裁判有据。",
+      "prerequisites": [
+        "lawmaster-jurisprudence-007"
+      ],
+      "misconceptions": [
+        "只知演绎",
+        "混淆类比与归纳"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个制度想解决什么问题？"
+        },
+        {
+          "level": "L2",
+          "text": "立法目的决定解释方向。"
+        },
+        {
+          "level": "L3",
+          "text": "从目的反推适用。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-jurisprudence-013",
+      "title": "法律解释",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "法律解释分文义、体系、目的与历史等方法；正式解释（有权）具普遍效力，非正式解释供参考。",
+      "prerequisites": [
+        "lawmaster-jurisprudence-001"
+      ],
+      "misconceptions": [
+        "只信文义",
+        "混淆有权与无权解释"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "谁享有权利、谁承担义务？"
+        },
+        {
+          "level": "L2",
+          "text": "主体资格是否具备？"
+        },
+        {
+          "level": "L3",
+          "text": "先定主体再看内容。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-jurisprudence-014",
+      "title": "法律体系",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "法律体系是一国现行全部法律规范按调整对象与方法分成的部门法的总和；中国特色社会主义法律体系含宪法、民商、行政等门类。",
+      "prerequisites": [
+        "lawmaster-jurisprudence-001"
+      ],
+      "misconceptions": [
+        "混淆法律体系与法系",
+        "忽视部门法"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "责任如何归属？"
+        },
+        {
+          "level": "L2",
+          "text": "归责原则是过错还是无过错？"
+        },
+        {
+          "level": "L3",
+          "text": "归责原则决定举证方向。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-jurisprudence-015",
+      "title": "法治",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "法治是依良法而治，强调法律至上、权力受约束、保障权利；全面依法治国要求法治国家、政府、社会一体建设。",
+      "prerequisites": [
+        "lawmaster-jurisprudence-009"
+      ],
+      "misconceptions": [
+        "把法治当法制",
+        "忽视权力约束"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "情形A和情形B有何不同？"
+        },
+        {
+          "level": "L2",
+          "text": "区分关键事实是什么？"
+        },
+        {
+          "level": "L3",
+          "text": "用构成要件做判别。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-jurisprudence-016",
+      "title": "法治与德治",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "法治与德治相辅相成：法治强制底线的外在他律，德治倡内在自律；二者结合治理更有效。",
+      "prerequisites": [
+        "lawmaster-jurisprudence-015"
+      ],
+      "misconceptions": [
+        "把二者对立",
+        "认为可相互替代"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "常见误解是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "把误区摆出来再纠正。"
+        },
+        {
+          "level": "L3",
+          "text": "辨析题先破后立。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-jurisprudence-017",
+      "title": "法的制定（立法）",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "立法是法定机关依程序创制、修改、废止法的活动；我国立法体制为统一而又分层的体制，遵循法定权限与程序。",
+      "prerequisites": [
+        "lawmaster-jurisprudence-001"
+      ],
+      "misconceptions": [
+        "认为立法无程序",
+        "忽视权限划分"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个法律概念的关键词是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "它和相近概念差在哪？"
+        },
+        {
+          "level": "L3",
+          "text": "先下定义再找区分点。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-jurisprudence-018",
+      "title": "法的实施",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "法的实施含执法（行政）、司法（审判检察）、守法（公民组织）；实施使文本之法转为现实秩序。",
+      "prerequisites": [
+        "lawmaster-jurisprudence-001"
+      ],
+      "misconceptions": [
+        "只讲司法",
+        "忽视守法基础"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "它的法律依据是哪一条？"
+        },
+        {
+          "level": "L2",
+          "text": "试着定位法条位置。"
+        },
+        {
+          "level": "L3",
+          "text": "把制度—条文—要件三者对应。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-jurisprudence-019",
+      "title": "法律监督",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "法律监督是各方对法实施的监察督促，含国家监督（权力、行政、司法）与社会监督（舆论、公民），保障法律统一正确实施。",
+      "prerequisites": [
+        "lawmaster-jurisprudence-018"
+      ],
+      "misconceptions": [
+        "只讲国家监督",
+        "忽视社会监督"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "构成要件有几项？"
+        },
+        {
+          "level": "L2",
+          "text": "逐项核对是否齐备。"
+        },
+        {
+          "level": "L3",
+          "text": "四要件/三阶层要记全。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-jurisprudence-020",
+      "title": "法与其他社会现象",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "法与经济（基础决定并反作用）、政治（统治工具亦受制约）、文化（相互塑造）、科技（提出新课题）相互作用，不可孤立看待。",
+      "prerequisites": [
+        "lawmaster-jurisprudence-001"
+      ],
+      "misconceptions": [
+        "认为法决定一切",
+        "忽视反作用"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个制度想解决什么问题？"
+        },
+        {
+          "level": "L2",
+          "text": "立法目的决定解释方向。"
+        },
+        {
+          "level": "L3",
+          "text": "从目的反推适用。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "format": "alerttime-teacher-sync",
+  "schemaVersion": 1,
+  "messageType": "proposalDecision",
+  "deviceId": "f0a24c19-0f8e-4b6d-9a3c-77e1b2d4c5a6",
+  "generatedAt": 1785604200000,
+  "appVersion": "0.1.0",
+  "protocolCapabilities": { "fullSnapshotV1": true, "proposalsV1": true },
+  "cursor": null,
+  "payload": {
+    "proposalId": "9c2d6e5f-4a7b-4c8d-9e0f-1a2b3c4d5e6f",
+    "decision": "accepted",
+    "decidedAt": 1785604200000
+  }
+}

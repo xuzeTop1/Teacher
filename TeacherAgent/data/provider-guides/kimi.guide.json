@@ -1,0 +1,196 @@
+{
+  "id": "guide-kimi",
+  "providerName": "kimi",
+  "displayName": "Kimi / Moonshot",
+  "description": "Kimi（月之暗面）提供的大语言模型 API，支持多模态输入和深度推理。通过 OpenAI 兼容接口调用。",
+  "status": "approved",
+  "guideVersion": "1.0.0",
+  "verifiedAt": "2026-07-28",
+  "baseUrlPresets": [
+    {
+      "id": "kimi-default",
+      "label": "Kimi 官方 API",
+      "url": "https://api.moonshot.cn/v1",
+      "description": "月之暗面官方 API 端点"
+    }
+  ],
+  "modelPresets": [
+    {
+      "id": "kimi-k2.6",
+      "label": "Kimi K2.6（推荐）",
+      "description": "最新多模态推理模型，支持图片和视频输入，具备深度思考能力",
+      "textModel": "kimi-k2.6",
+      "visionModel": "kimi-k2.6",
+      "embeddingModel": "",
+      "supportsVision": true,
+      "supportsEmbedding": false,
+      "fixedSampling": true,
+      "omitTemperature": true,
+      "recommended": true
+    },
+    {
+      "id": "kimi-k2.5",
+      "label": "Kimi K2.5（稳定）",
+      "description": "稳定版本，适合日常对话和教学辅导",
+      "textModel": "kimi-k2.5",
+      "visionModel": "kimi-k2.5",
+      "embeddingModel": "",
+      "supportsVision": true,
+      "supportsEmbedding": false,
+      "fixedSampling": true,
+      "omitTemperature": true,
+      "recommended": false
+    }
+  ],
+  "capabilities": {
+    "supportsStreaming": true,
+    "supportsVision": true,
+    "supportsEmbedding": false,
+    "supportsThinking": true
+  },
+  "fieldHelp": [
+    {
+      "field": "baseUrl",
+      "label": "Base URL",
+      "help": "填写 Kimi 官方 API 地址。注意末尾需要包含 /v1，不要多加 /chat/completions。",
+      "placeholder": "https://api.moonshot.cn/v1"
+    },
+    {
+      "field": "model",
+      "label": "模型",
+      "help": "填写模型 ID（如 kimi-k2.6），不是产品名称。Kimi K2.6 和 K2.5 同时支持文字和图片输入。",
+      "placeholder": "kimi-k2.6"
+    },
+    {
+      "field": "apiKey",
+      "label": "API Key",
+      "help": "在 platform.kimi.com 控制台创建。格式类似 sk-...，保存后存入系统钥匙串，不会明文存储。",
+      "placeholder": "sk-..."
+    },
+    {
+      "field": "textModel",
+      "label": "Text Model（可选）",
+      "help": "纯文字对话使用的模型。留空则使用主模型。Kimi 通常不需要单独设置。"
+    },
+    {
+      "field": "visionModel",
+      "label": "Vision Model（可选）",
+      "help": "处理图片时使用的模型。Kimi K2.6/K2.5 本身支持图片，通常与主模型相同。"
+    }
+  ],
+  "setupSteps": [
+    {
+      "id": "kimi-step-1",
+      "title": "获取 API Key",
+      "description": "访问 platform.kimi.com，注册账号后在「API Key 管理」页面创建新的 API Key。",
+      "example": "sk-（在控制台复制你的密钥）"
+    },
+    {
+      "id": "kimi-step-2",
+      "title": "填写 Base URL",
+      "description": "在 Base URL 字段填入 https://api.moonshot.cn/v1。注意不要添加 /chat/completions 后缀。"
+    },
+    {
+      "id": "kimi-step-3",
+      "title": "选择模型",
+      "description": "推荐使用 kimi-k2.6（最新多模态推理模型）。如果追求稳定性可选 kimi-k2.5。"
+    },
+    {
+      "id": "kimi-step-4",
+      "title": "粘贴 API Key 并保存",
+      "description": "将 API Key 粘贴到 API Key 字段，点击保存。Key 会存入系统钥匙串（Windows 凭据管理器），不会明文保存在本地文件中。"
+    },
+    {
+      "id": "kimi-step-5",
+      "title": "测试连接",
+      "description": "点击「测试连接」按钮验证配置是否正确。成功会显示模型回复和响应时间。"
+    }
+  ],
+  "commonErrors": [
+    {
+      "id": "kimi-err-401",
+      "matchPatterns": ["401", "unauthorized", "invalid api key", "authentication"],
+      "title": "API Key 无效或未授权",
+      "explanation": "API Key 不正确、已过期或未创建。Kimi 使用 Bearer Token 认证。",
+      "resolutionSteps": [
+        "检查 API Key 是否完整复制（以 sk- 开头）",
+        "登录 platform.kimi.com 确认 Key 未被删除或禁用",
+        "如已失效，创建新的 API Key 并重新粘贴保存"
+      ],
+      "relatedFields": ["apiKey"]
+    },
+    {
+      "id": "kimi-err-400-temperature",
+      "matchPatterns": ["invalid temperature", "temperature", "unsupported parameter"],
+      "title": "温度参数不被接受",
+      "explanation": "Kimi K2.5/K2.6 推理模型不接受自定义 temperature 参数。TeacherAgent 已自动处理：对这些模型不发送 temperature。如果你看到此错误，可能是模型名称填写有误。",
+      "resolutionSteps": [
+        "确认模型名称为 kimi-k2.6 或 kimi-k2.5（全小写，带点号）",
+        "不要填写 moonshot-v1-8k 等旧版模型名",
+        "如仍报错，尝试将模型改为 kimi-k2.5"
+      ],
+      "relatedFields": ["model"]
+    },
+    {
+      "id": "kimi-err-404",
+      "matchPatterns": ["404", "not found", "model_not_found", "does not exist"],
+      "title": "模型不存在",
+      "explanation": "填写的模型 ID 在 Kimi 平台不存在。常见错误：填写了产品名而非模型 ID。",
+      "resolutionSteps": [
+        "使用 kimi-k2.6 或 kimi-k2.5 作为模型 ID",
+        "不要填写 Kimi、Moonshot 等产品名称",
+        "不要使用 moonshot-v1-8k 等已下线的旧模型"
+      ],
+      "relatedFields": ["model"]
+    },
+    {
+      "id": "kimi-err-thinking-empty",
+      "matchPatterns": ["empty", "no content", "content is empty", "assistant content"],
+      "title": "收到回复但没有正文内容",
+      "explanation": "Kimi 推理模型的响应分为「思考过程」和「最终回答」两部分。如果只返回思考过程而没有最终回答，通常是 max_tokens 设置过小，模型还没输出最终回答就达到了长度上限。",
+      "resolutionSteps": [
+        "TeacherAgent 已自动为 Kimi 设置较大的 max_tokens（32768）",
+        "如仍出现，尝试使用 kimi-k2.5 替代 kimi-k2.6",
+        "确认 Base URL 正确（https://api.moonshot.cn/v1）"
+      ],
+      "relatedFields": ["model", "baseUrl"]
+    },
+    {
+      "id": "kimi-err-network",
+      "matchPatterns": ["network", "timeout", "econnrefused", "fetch failed", "connect"],
+      "title": "网络连接失败",
+      "explanation": "无法连接到 Kimi API 服务器。可能是网络问题或 Base URL 填写错误。",
+      "resolutionSteps": [
+        "检查网络连接是否正常",
+        "确认 Base URL 为 https://api.moonshot.cn/v1",
+        "如在公司/学校网络，检查是否有代理或防火墙限制",
+        "稍后重试（可能是临时服务波动）"
+      ],
+      "relatedFields": ["baseUrl"]
+    }
+  ],
+  "officialSources": [
+    {
+      "title": "Kimi 开放平台文档",
+      "url": "https://platform.kimi.com/docs/overview",
+      "verifiedAt": "2026-07-28"
+    },
+    {
+      "title": "Kimi API 参考",
+      "url": "https://platform.kimi.com/docs/api-reference",
+      "verifiedAt": "2026-07-28"
+    }
+  ],
+  "securityNotices": [
+    {
+      "id": "kimi-sec-key-storage",
+      "title": "API Key 安全存储",
+      "description": "API Key 保存后存入操作系统钥匙串（Windows 凭据管理器），不会以明文形式存储在本地文件、数据库或前端状态中。"
+    },
+    {
+      "id": "kimi-sec-key-format",
+      "title": "Key 格式识别",
+      "description": "Kimi API Key 通常以 sk- 开头。如果系统提示「检测到明文 Key」，说明你可能把 Key 填错了位置。"
+    }
+  ]
+}

@@ -1,0 +1,847 @@
+{
+  "subject": "english",
+  "chapter": "english-cloze",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "eng-cloze-q-001",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "and",
+        "but",
+        "so",
+        "because"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先读前一句和后一句，判断逻辑关系"
+        },
+        {
+          "level": "L2",
+          "text": "年轻 $\\to$聪明，这是转折关系"
+        },
+        {
+          "level": "L3",
+          "text": "转折关系用but"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-cloze-001"
+      ],
+      "source": {
+        "title": "完形填空",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于完形填空练习设计，考查逻辑连词辨析。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "读前句'He is young'和后句'he is smart'，判断逻辑关系：年轻和聪明是相反特征，应为转折关系。",
+        "转折关系用but/however，因果关系用so/because，并列关系用and。",
+        "选B（but）；A（and表并列，不符合）；C（so表因果，不符合）；D（because表原因，不符合）。"
+      ],
+      "content": "完形填空：选择合适的逻辑连词：\n\n\"He is young, ___ he is smart.\"\n\n(A) and\n(B) but\n(C) so\n(D) because"
+    },
+    {
+      "id": "eng-cloze-q-002",
+      "type": "solution",
+      "difficulty": 2,
+      "options": [
+        "address",
+        "location",
+        "speech",
+        "house"
+      ],
+      "answer": "A",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先想address的常见意思（地址）是否通顺？"
+        },
+        {
+          "level": "L2",
+          "text": "如果不通顺，考虑生义（解决）"
+        },
+        {
+          "level": "L3",
+          "text": "address the problem = 解决问题"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-cloze-002"
+      ],
+      "source": {
+        "title": "完形填空",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于完形填空练习设计，考查熟词生义。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "先想address常见意思'地址'，代入'the problem'不通顺，排除常见意思。",
+        "考虑address生义'解决'，address the problem=解决问题，符合语境。",
+        "选A（address）；B（location地址/位置，不能接the problem）；C（speech演讲）；D（house房子）均不符合。"
+      ],
+      "content": "完形填空：选择合适的熟词生义：\n\n\"The company plans to ___ the problem.\"\n\n(A) address\n(B) location\n(C) speech\n(D) house"
+    },
+    {
+      "id": "eng-cloze-q-003",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "give",
+        "take",
+        "look",
+        "put"
+      ],
+      "answer": "A",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先想动词短语的意思"
+        },
+        {
+          "level": "L2",
+          "text": "give up = 放弃"
+        },
+        {
+          "level": "L3",
+          "text": "放弃吸烟 = give up smoking"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-cloze-003"
+      ],
+      "source": {
+        "title": "完形填空",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于完形填空练习设计，考查动词短语搭配辨析。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "动词短语give up=放弃，take up=占据/开始，look up=查阅，put up=张贴/建造。",
+        "smoking与give up搭配：give up smoking=戒烟，符合语境。",
+        "选A（give）；其他选项代入后意思不通。"
+      ],
+      "content": "完形填空：选择合适的动词短语：\n\n\"He decided to ___ up smoking.\"\n\n(A) give\n(B) take\n(C) look\n(D) put"
+    },
+    {
+      "id": "eng-cloze-q-004",
+      "type": "solution",
+      "difficulty": 2,
+      "options": [
+        "Therefore",
+        "However",
+        "Moreover",
+        "Although"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先读前一句和后一句，判断句际关系"
+        },
+        {
+          "level": "L2",
+          "text": "年轻 $\\to$聪明，这是转折关系"
+        },
+        {
+          "level": "L3",
+          "text": "转折关系用However"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-cloze-004"
+      ],
+      "source": {
+        "title": "完形填空",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于完形填空练习设计，考查句际关系推断。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "前句'He is young'和后句'he is smart'是转折关系（年轻通常被认为不成熟，但他聪明）。",
+        "However表转折，Therefore表因果，Moreover表递进，Although是连词（不单独用）。",
+        "选B（However）；A（因此）因果关系反了；C（而且）是递进；D（虽然）是连词需接从句。"
+      ],
+      "content": "完形填空：判断句际关系：\n\n\"He is young. ___, he is smart.\"\n\n(A) Therefore\n(B) However\n(C) Moreover\n(D) Although"
+    },
+    {
+      "id": "eng-cloze-q-005",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "kind",
+        "mean",
+        "lazy",
+        "stupid"
+      ],
+      "answer": "A",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先找空格前/后的关键词"
+        },
+        {
+          "level": "L2",
+          "text": "helpsothers $\\to$kind，同义复现"
+        },
+        {
+          "level": "L3",
+          "text": "选择kind"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-cloze-005"
+      ],
+      "source": {
+        "title": "完形填空",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于完形填空练习设计，考查上下文词汇复现。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "上下文线索：后句'He often helps others'（他经常帮助别人）$\\to$说明他善良。",
+        "kind=善良的，mean=刻薄的，lazy=懒惰的，stupid=愚蠢的。",
+        "选A（kind）；其他三个选项与'helps others'矛盾。"
+      ],
+      "content": "完形填空：上下文词汇复现：\n\n\"He is ___. He often helps others.\"\n\n(A) kind\n(B) mean\n(C) lazy\n(D) stupid"
+    },
+    {
+      "id": "eng-cloze-q-006",
+      "type": "solution",
+      "difficulty": 2,
+      "options": [
+        "on",
+        "in",
+        "to",
+        "for"
+      ],
+      "answer": "C",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先想固定搭配"
+        },
+        {
+          "level": "L2",
+          "text": "pay attention to是固定搭配"
+        },
+        {
+          "level": "L3",
+          "text": "选择to"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-cloze-006"
+      ],
+      "source": {
+        "title": "完形填空",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于完形填空练习设计，考查固定搭配与习惯用法。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "固定搭配pay attention to（注意...），to是介词不能更改。",
+        "类似搭配：look forward to（期待），devote to（致力于）。",
+        "选C（to）；其他介词不与pay attention搭配。"
+      ],
+      "content": "完形填空：固定搭配：\n\n\"He paid attention ___ the problem.\"\n\n(A) on\n(B) in\n(C) to\n(D) for"
+    },
+    {
+      "id": "eng-cloze-q-007",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "He",
+        "She",
+        "It",
+        "They"
+      ],
+      "answer": "A",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先找到代词在文中的位置"
+        },
+        {
+          "level": "L2",
+          "text": "然后找前一句的主语（Tom）"
+        },
+        {
+          "level": "L3",
+          "text": "最后判断单复数、阴阳性是否一致（Tom是男性单数，用He）"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-cloze-007"
+      ],
+      "source": {
+        "title": "完形填空",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于完形填空练习设计，考查代词指代关系判断。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "前一句主语Tom是男性单数，后一句代词应与之保持一致。",
+        "He指代男性单数，She指代女性单数，It指代物，They指代复数。",
+        "选A（He）；其他选项性别或单复数不一致。"
+      ],
+      "content": "完形填空：代词指代关系：\n\n\"Tom likes English. ___ studies every day.\"\n\n(A) He\n(B) She\n(C) It\n(D) They"
+    },
+    {
+      "id": "eng-cloze-q-008",
+      "type": "solution",
+      "difficulty": 2,
+      "options": [
+        "go",
+        "goes",
+        "went",
+        "will go"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先找时间标志词（every day）"
+        },
+        {
+          "level": "L2",
+          "text": "然后看全文基调（是现在时）"
+        },
+        {
+          "level": "L3",
+          "text": "最后选择合适时态（现在时，主语He是单数，用goes）"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-cloze-008"
+      ],
+      "source": {
+        "title": "完形填空",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于完形填空练习设计，考查时态与语态一致性。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "时间标志词every day（每天）表示现在时，排除过去时C（went）和将来时D（will go）。",
+        "主语He是第三人称单数，现在时谓语用goes，排除A（go）。",
+        "选B（goes）；A用于第一/二人称和复数主语。"
+      ],
+      "content": "完形填空：时态与语态一致性：\n\n\"He ___ to school every day.\"\n\n(A) go\n(B) goes\n(C) went\n(D) will go"
+    },
+    {
+      "id": "eng-cloze-q-009",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "are",
+        "is",
+        "were",
+        "be"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先找到真正的主语（The number，不是students）"
+        },
+        {
+          "level": "L2",
+          "text": "然后判断主语是单数还是复数（The number是单数）"
+        },
+        {
+          "level": "L3",
+          "text": "最后选择合适谓语（单数用is）"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-cloze-009"
+      ],
+      "source": {
+        "title": "完形填空",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于完形填空练习设计，考查主谓一致原则。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "The number of + 复数名词，主语是number（单数），谓语用单数is。",
+        "a number of + 复数名词，主语是名词复数，谓语用复数are（这是混淆点）。",
+        "选B（is）；A（are）是a number of的谓语；C（were）是过去时；D（be）动词原形不能单独作谓语。"
+      ],
+      "content": "完形填空：主谓一致原则：\n\n\"The number of students __ increasing.\"\n\n(A) are\n(B) is\n(C) were\n(D) be"
+    },
+    {
+      "id": "eng-cloze-q-010",
+      "type": "solution",
+      "difficulty": 2,
+      "options": [
+        "See",
+        "Seen",
+        "Seeing",
+        "To see"
+      ],
+      "answer": "C",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断逻辑主语（the students）"
+        },
+        {
+          "level": "L2",
+          "text": "然后判断主动还是被动（students主动see）"
+        },
+        {
+          "level": "L3",
+          "text": "最后选择合适形式（主动用Seeing）"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-cloze-010"
+      ],
+      "source": {
+        "title": "完形填空",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于完形填空练习设计，考查非谓语动词的用法。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "非谓语动词seeing的逻辑主语是the students（学生主动看见老师进来）。",
+        "主动关系用Seeing（现在分词），被动关系用Seen（过去分词）。",
+        "选C（Seeing）；A（See动词原形不能作状语）；B（Seen表被动，不符合）；D（To see表目的，不符合）。"
+      ],
+      "content": "完形填空：非谓语动词的用法：\n\n\"___ the teacher entering, the students stood up.\"\n\n(A) See\n(B) Seen\n(C) Seeing\n(D) To see"
+    },
+    {
+      "id": "eng-cloze-q-011",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "in",
+        "on",
+        "at",
+        "by"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断是时间、地点还是方式介词？"
+        },
+        {
+          "level": "L2",
+          "text": "Monday是具体日期，用on"
+        },
+        {
+          "level": "L3",
+          "text": "具体日期用on"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-cloze-011"
+      ],
+      "source": {
+        "title": "完形填空",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于完形填空练习设计，考查介词用法辨析。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "Monday是具体日期（星期几），具体日期前用介词on。",
+        "in+年/月/季节，on+具体日期/星期，at+时刻。",
+        "选B（on）；A（in）用于年/月；C（at）用于时刻；D（by）表示'到...为止'。"
+      ],
+      "content": "完形填空：介词用法辨析：\n\n\"He arrived ___ Monday.\"\n\n(A) in\n(B) on\n(C) at\n(D) by"
+    },
+    {
+      "id": "eng-cloze-q-012",
+      "type": "solution",
+      "difficulty": 2,
+      "options": [
+        "a, The",
+        "the, A",
+        "a, A",
+        "the, The"
+      ],
+      "answer": "A",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断名词是泛指还是特指？"
+        },
+        {
+          "level": "L2",
+          "text": "第一次提到是泛指，用a"
+        },
+        {
+          "level": "L3",
+          "text": "第二次提到是特指，用the"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-cloze-012"
+      ],
+      "source": {
+        "title": "完形填空",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于完形填空练习设计，考查冠词用法。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "第一次提到book是泛指，用不定冠词a；第二次提到book是特指，用定冠词the。",
+        "泛指用a/an，特指用the；抽象名词前通常用零冠词。",
+        "选A（a, The）；B和D冠词顺序反了；C两处都用a不符合特指规则。"
+      ],
+      "content": "完形填空：冠词用法：\n\n\"He has ___ book. ___ book is interesting.\"\n\n(A) a, The\n(B) the, A\n(C) a, A\n(D) the, The"
+    },
+    {
+      "id": "eng-cloze-q-013",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "good, hard",
+        "hard, good",
+        "good, hardly",
+        "hard, hardly"
+      ],
+      "answer": "A",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断空格修饰什么词？"
+        },
+        {
+          "level": "L2",
+          "text": "第一空修饰student（名词），用形容词good"
+        },
+        {
+          "level": "L3",
+          "text": "第二空修饰studies（动词），用副词hard"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-cloze-013"
+      ],
+      "source": {
+        "title": "完形填空",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于完形填空练习设计，考查形容词与副词辨析。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "第一空修饰student（名词）用形容词good；第二空修饰studies（动词）用副词hard。",
+        "形容词修饰名词，副词修饰动词/形容词/副词；-ly结尾的不一定是副词（friendly是形容词）。",
+        "选A（good, hard）；B（hard, good）词性反了；C（hard作形容词是'硬的/困难的'，hardly是'几乎不'）；D词性反了。"
+      ],
+      "content": "完形填空：形容词与副词辨析：\n\n\"He is a ___ student. He studies __.\"\n\n(A) good, hard\n(B) hard, good\n(C) good, hardly\n(D) hard, hardly"
+    },
+    {
+      "id": "eng-cloze-q-014",
+      "type": "solution",
+      "difficulty": 2,
+      "options": [
+        "am",
+        "was",
+        "were",
+        "be"
+      ],
+      "answer": "C",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断是否虚拟语气（有if）？"
+        },
+        {
+          "level": "L2",
+          "text": "然后判断是与现在还是过去事实相反（与现在事实相反）？"
+        },
+        {
+          "level": "L3",
+          "text": "最后选择合适动词形式（与现在事实相反，用were）"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-cloze-014"
+      ],
+      "source": {
+        "title": "完形填空",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于完形填空练习设计，考查虚拟语气在完形填空中的运用。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "If I were you是虚拟语气与现在事实相反，be动词用were（不用was）。",
+        "虚拟语气与现在相反：if + 主语 + 过去时（be动词用were），主句 + would/could/might + do。",
+        "选C（were）；A（am）真实条件句；B（was）虚拟语气不用was（正式文体）；D（be）不能用于虚拟语气。"
+      ],
+      "content": "完形填空：虚拟语气在完形填空中的运用：\n\n\"If I ___ you, I would go.\"\n\n(A) am\n(B) was\n(C) were\n(D) be"
+    },
+    {
+      "id": "eng-cloze-q-015",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "can",
+        "may",
+        "must",
+        "should"
+      ],
+      "answer": "D",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断句意（应该努力学习）？"
+        },
+        {
+          "level": "L2",
+          "text": "然后想情态动词意思（should = 应该）"
+        },
+        {
+          "level": "L3",
+          "text": "最后选择合适的情态动词（should）"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-cloze-015"
+      ],
+      "source": {
+        "title": "完形填空",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于完形填空练习设计，考查情态动词用法。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "句意：你应该努力学习。should表示'应该'，符合建议语境。",
+        "can表能力，may表许可/可能，must表必须（语气过强），should表应该（语气适中）。",
+        "选D（should）；其他选项意思不符合建议语境。"
+      ],
+      "content": "完形填空：情态动词用法：\n\n\"You ___ study hard.\"\n\n(A) can\n(B) may\n(C) must\n(D) should"
+    },
+    {
+      "id": "eng-cloze-q-016",
+      "type": "solution",
+      "difficulty": 2,
+      "options": [
+        "come",
+        "comes",
+        "coming",
+        "came"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断是否倒装句（谓语在主语前面）？"
+        },
+        {
+          "level": "L2",
+          "text": "然后判断是完全倒装还是部分倒装（完全倒装）？"
+        },
+        {
+          "level": "L3",
+          "text": "最后选择合适语序（Here comes the bus.）"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-cloze-016"
+      ],
+      "source": {
+        "title": "完形填空",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于完形填空练习设计，考查倒装句在完形填空中的运用。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "Here comes the bus是完全倒装，主语bus在谓语comes后面。",
+        "完全倒装：状语（Here/There/Out等）+ 谓语 + 主语；部分倒装：否定词 + 助动词 + 主语。",
+        "选B（comes）；主语bus是单数，谓语用comes；A（come）是复数形式；C（coming）不是谓语形式；D时态不对。"
+      ],
+      "content": "完形填空：倒装句在完形填空中的运用：\n\n\"Here ___ the bus.\"\n\n(A) come\n(B) comes\n(C) coming\n(D) came"
+    },
+    {
+      "id": "eng-cloze-q-017",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "It",
+        "That",
+        "This",
+        "What"
+      ],
+      "answer": "A",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断是否强调句型（It is...that...）？"
+        },
+        {
+          "level": "L2",
+          "text": "然后找被强调部分（this approach）"
+        },
+        {
+          "level": "L3",
+          "text": "最后选择合适连接词（It）"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-cloze-017"
+      ],
+      "source": {
+        "title": "完形填空",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于完形填空练习设计，考查强调句型在完形填空中的运用。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "强调句型：It is/was + 被强调部分 + that/who + 剩余部分。",
+        "去掉It is...that后句子仍完整：This approach has led to the success. 说明是强调句型。",
+        "选A（It）；B（That）和C（This）不能引导强调句型；D（What）用于名词性从句。"
+      ],
+      "content": "完形填空：强调句型在完形填空中的运用：\n\n\"___ is this approach that has led to the success.\"\n\n(A) It\n(B) That\n(C) This\n(D) What"
+    },
+    {
+      "id": "eng-cloze-q-018",
+      "type": "solution",
+      "difficulty": 2,
+      "options": [
+        "is",
+        "are",
+        "be",
+        "am"
+      ],
+      "answer": "A",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断是否there be句型？"
+        },
+        {
+          "level": "L2",
+          "text": "然后看名词是单数还是复数（book是单数）"
+        },
+        {
+          "level": "L3",
+          "text": "最后选择合适动词（is）"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-cloze-018"
+      ],
+      "source": {
+        "title": "完形填空",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于完形填空练习设计，考查There be句型在完形填空中的运用。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "There be句型：There + be动词 + 主语 + 地点/时间。",
+        "主语a book是单数，be动词用is；主语是复数用are。",
+        "选A（is）；B（are）用于复数主语；C（be）动词原形不能单独使用；D（am）只用于I。"
+      ],
+      "content": "完形填空：There be句型在完形填空中的运用：\n\n\"There ___ a book on the table.\"\n\n(A) is\n(B) are\n(C) be\n(D) am"
+    },
+    {
+      "id": "eng-cloze-q-019",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "tall",
+        "taller",
+        "tallest",
+        "more tall"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断是否比较级或最高级（后面有than，是比较级）？"
+        },
+        {
+          "level": "L2",
+          "text": "然后看后面是否有than或in/of短语（有than，是比较级）"
+        },
+        {
+          "level": "L3",
+          "text": "最后选择合适形式（taller）"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-cloze-019"
+      ],
+      "source": {
+        "title": "完形填空",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于完形填空练习设计，考查比较级与最高级在完形填空中的运用。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "than是比较级标志，tall的比较级是taller（单音节词+er）。",
+        "比较级+than，最高级+in/of；more tall是错误的比较级形式（tall是单音节词）。",
+        "选B（taller）；A（tall）是原级；C（tallest）是最高级；D（more tall）形式错误。"
+      ],
+      "content": "完形填空：比较级与最高级在完形填空中的运用：\n\n\"He is ___ than me.\"\n\n(A) tall\n(B) taller\n(C) tallest\n(D) more tall"
+    },
+    {
+      "id": "eng-cloze-q-020",
+      "type": "solution",
+      "difficulty": 2,
+      "options": [
+        "通读全文，逐题解答，复核答案",
+        "逐题解答，通读全文，复核答案",
+        "通读全文，复核答案，逐题解答",
+        "逐题解答，复核答案，通读全文"
+      ],
+      "answer": "A",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先想完形填空的整体解题策略？"
+        },
+        {
+          "level": "L2",
+          "text": "然后判断顺序（先通读全文把握主旨，再逐题解答，最后复核答案）"
+        },
+        {
+          "level": "L3",
+          "text": "最后选择合适顺序（通读全文，逐题解答，复核答案）"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-cloze-020"
+      ],
+      "source": {
+        "title": "完形填空",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于完形填空练习设计，考查完形填空的整体解题策略。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "完形填空解题步骤：先通读全文把握主旨，再逐题解答结合上下文，最后复核答案。",
+        "不选B（先逐题再通读，效率低）；C（通读后立即复核再逐题，逻辑不对）；D（顺序完全错误）。",
+        "选A（通读全文，逐题解答，复核答案），这是标准解题顺序。"
+      ],
+      "content": "完形填空：整体解题策略：\n\n\"完形填空的解题步骤是：先___，再___，最后___。\"\n\n(A) 通读全文，逐题解答，复核答案\n(B) 逐题解答，通读全文，复核答案\n(C) 通读全文，复核答案，逐题解答\n(D) 逐题解答，复核答案，通读全文"
+    }
+  ]
+}

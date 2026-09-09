@@ -1,0 +1,276 @@
+{
+  "subject": "math",
+  "course": "probability",
+  "status": "draft",
+  "nodes": [
+    {
+      "id": "prob-sample-space",
+      "title": "样本空间",
+      "summary": "随机试验所有可能结果的集合称为样本空间，记作 $\\Omega$。每个结果称为一个样本点。",
+      "level": "concept",
+      "difficulty": 1,
+      "prerequisites": [],
+      "misconceptions": [
+        "混淆样本空间和事件",
+        "遗漏某些可能结果"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "掷一枚骰子，样本空间包含哪些元素？"
+        },
+        {
+          "level": "L2",
+          "text": "样本空间是 {1, 2, 3, 4, 5, 6}，那'点数大于 4'是样本空间吗？"
+        },
+        {
+          "level": "L3",
+          "text": "样本空间一定是有限集吗？"
+        }
+      ],
+      "source": {
+        "title": "Original TeacherAgent seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "prob-event",
+      "title": "事件",
+      "summary": "事件是样本空间的子集。必然事件就是样本空间本身，不可能事件是空集。",
+      "level": "concept",
+      "difficulty": 1,
+      "prerequisites": [
+        "prob-sample-space"
+      ],
+      "misconceptions": [
+        "把事件和样本点混为一谈"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "'掷骰子得到偶数'这个事件包含哪些样本点？"
+        },
+        {
+          "level": "L2",
+          "text": "事件 {2, 4, 6} 是样本空间 {1,2,3,4,5,6} 的子集。"
+        },
+        {
+          "level": "L3",
+          "text": "互斥事件和对立事件有什么区别？"
+        }
+      ],
+      "source": {
+        "title": "Original TeacherAgent seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "prob-classical",
+      "title": "古典概型",
+      "summary": "有限个等可能结果的随机试验。$P(A) = A$包含的样本点数 /样本空间总样本点数。",
+      "level": "method",
+      "difficulty": 1,
+      "prerequisites": [
+        "prob-event"
+      ],
+      "misconceptions": [
+        "忘记验证等可能性",
+        "数错样本点个数"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "掷骰子得到偶数的概率怎么算？"
+        },
+        {
+          "level": "L2",
+          "text": "偶数事件有 3个样本点，总共 6个，所以 $P = \\frac{3}{6}$。"
+        },
+        {
+          "level": "L3",
+          "text": "古典概型要求每个基本事件等可能，怎么验证？"
+        }
+      ],
+      "source": {
+        "title": "Original TeacherAgent seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "prob-conditional",
+      "title": "条件概率",
+      "summary": "在事件 $B$已发生的条件下事件 $A$发生的概率：$P(A|B) = P(AB) / P(B)$。",
+      "level": "concept",
+      "difficulty": 2,
+      "prerequisites": [
+        "prob-classical"
+      ],
+      "misconceptions": [
+        "混淆 $P(A|B)$和 $P(B|A)$",
+        "忘记 $P(B) > 0$的条件"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "已知抽到的是红色球，它是大球的概率和直接抽到大球的概率一样吗？"
+        },
+        {
+          "level": "L2",
+          "text": "条件概率缩小了样本空间，只考虑 B 发生的情况。"
+        },
+        {
+          "level": "L3",
+          "text": "$P(A|B)$和 $P(B|A)$有什么关系？"
+        }
+      ],
+      "source": {
+        "title": "Original TeacherAgent seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "prob-independence",
+      "title": "事件独立性",
+      "summary": "若 $P(AB) = P(A)P(B)$，则 $A$和 $B$相互独立。独立意味着一个事件的发生不影响另一个。",
+      "level": "concept",
+      "difficulty": 2,
+      "prerequisites": [
+        "prob-conditional"
+      ],
+      "misconceptions": [
+        "把互斥和独立混为一谈",
+        "直觉判断独立性而不验证公式"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "互斥的两个事件能独立吗？"
+        },
+        {
+          "level": "L2",
+          "text": "如果 $A$和 $B$互斥，$P(AB) = 0$，但 $P(A)P(B)$通常不为 0，所以不独立。"
+        },
+        {
+          "level": "L3",
+          "text": "两两独立和相互独立有什么区别？"
+        }
+      ],
+      "source": {
+        "title": "Original TeacherAgent seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "prob-random-variable",
+      "title": "随机变量",
+      "summary": "随机变量是将随机试验的结果映射为实数的函数。离散随机变量取有限或可列个值。",
+      "level": "concept",
+      "difficulty": 2,
+      "prerequisites": [
+        "prob-event"
+      ],
+      "misconceptions": [
+        "把随机变量当成普通变量",
+        "混淆分布律和概率"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "掷骰子的点数 X 是随机变量吗？X 可以取哪些值？"
+        },
+        {
+          "level": "L2",
+          "text": "X 是随机变量，取值 {1,2,3,4,5,6}，每个值有确定的概率。"
+        },
+        {
+          "level": "L3",
+          "text": "离散型和连续型随机变量的概率描述有什么不同？"
+        }
+      ],
+      "source": {
+        "title": "Original TeacherAgent seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "prob-expectation",
+      "title": "数学期望",
+      "summary": "离散随机变量的期望 $E(X) = \\Sigma x_i * P(X=x_i)$。期望是随机变量的加权平均。",
+      "level": "concept",
+      "difficulty": 2,
+      "prerequisites": [
+        "prob-random-variable"
+      ],
+      "misconceptions": [
+        "把期望当成一定会出现的值",
+        "忘记加权"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "掷一枚公平骰子，点数的期望是多少？"
+        },
+        {
+          "level": "L2",
+          "text": "$E(X) = 1*(\\frac{1}{6}) + 2*(\\frac{1}{6}) + ... + 6*(\\frac{1}{6}) = 3.5$"
+        },
+        {
+          "level": "L3",
+          "text": "期望的线性性质在什么条件下成立？"
+        }
+      ],
+      "source": {
+        "title": "Original TeacherAgent seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "prob-variance",
+      "title": "方差",
+      "summary": "方差 Var$(X) = E[(X - E(X))^2] = E(X^2) - [E(X)]^2$。方差衡量随机变量的离散程度。",
+      "level": "concept",
+      "difficulty": 2,
+      "prerequisites": [
+        "prob-expectation"
+      ],
+      "misconceptions": [
+        "混淆方差和标准差",
+        "忘记方差公式简化"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "方差大说明什么？方差为 0 说明什么？"
+        },
+        {
+          "level": "L2",
+          "text": "方差为 0说明 $X$几乎必然等于 $E(X)$。"
+        },
+        {
+          "level": "L3",
+          "text": "方差为 0 说明什么？"
+        }
+      ],
+      "source": {
+        "title": "Original TeacherAgent seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    }
+  ]
+}

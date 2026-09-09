@@ -1,0 +1,707 @@
+{
+  "subject": "english",
+  "chapter": "english-grammar",
+  "status": "draft",
+  "nodes": [
+    {
+      "id": "eng-grammar-001",
+      "title": "非限制性定语从句 vs 限制性定语从句",
+      "content": "## 核心区别\n\n### 1. 形式区别\n- **限制性定语从句**：名词+关系词+从句（无逗号）\n- **非限制性定语从句**：名词+逗号+关系词+从句+逗号\n\n### 2. 意义区别\n- **限制性**：从句是先行词不可缺少的定语，删除后句意不完整或改变\n- **非限制性**：从句只是对先行词的补充说明，删除后主句意思仍完整\n\n### 3. 关系词区别\n- **that** 只能引导限制性定语从句\n- **which/who/whom** 可引导两种定语从句\n- **as** 常引导非限制性定语从句\n\n### 4. 翻译区别\n- **限制性**：从句前置，译为\"...的名词\"\n- **非限制性**：从句后置，译为\"..., 这...\"或单独成句\n\n## 示例\n\"The study, which took 15 years to complete, shows that...\"\n（非限制性，which指代整个主句或study）",
+      "difficulty": 2,
+      "status": "draft",
+      "prerequisites": [],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "观察从句前面是否有逗号？"
+        },
+        {
+          "level": "L2",
+          "text": "思考：删除从句后，主句的意思是否完整？"
+        },
+        {
+          "level": "L3",
+          "text": "判断关系词是which还是that？非限制性定语从句不能用that"
+        }
+      ],
+      "misconceptions": [
+        "把非限制性定语从句的which当成that，非限制性定语从句不能用that引导",
+        "忽略非限制性定语从句的逗号标志，误判为限制性定语从句",
+        "把which指代先行词和which指代整个主句两种情况混淆"
+      ],
+      "summary": "掌握非限制性定语从句与限制性定语从句的形式和意义区别。",
+      "source": {
+        "title": "TeacherAgent English knowledge seed",
+        "license": "original_generated",
+        "sourceType": "curriculum"
+      }
+    },
+    {
+      "id": "eng-grammar-002",
+      "title": "名词性从句的嵌套结构",
+      "content": "## 名词性从句类型\n\n1. **主语从句**：What he said is true.\n2. **宾语从句**：I think (that) he is right.\n3. **表语从句**：The question is whether we can finish it.\n4. **同位语从句**：The idea that we can win surprised them.\n\n## 嵌套结构识别\n\n### 典型嵌套模式\n```\n主语从句 + 谓语动词 + 宾语从句\nWhat he said || that he was wrong || surprised us.\n```\n\n### 示例\n\"That the evidence was inconclusive, the science uncertain...\"\n- 主语从句：That the evidence was inconclusive\n- 主句：the science uncertain...\n\n## 解题步骤\n1. 找连接词（that, what, whether, how等）\n2. 判断从句在主句中的成分\n3. 识别是否有嵌套（一个名词性从句中包含另一个）",
+      "difficulty": 3,
+      "status": "draft",
+      "prerequisites": [
+        "eng-grammar-001"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "找到句子中的连接词（that, what, whether等）"
+        },
+        {
+          "level": "L2",
+          "text": "判断这个连接词引导的从句在句子中作什么成分？"
+        },
+        {
+          "level": "L3",
+          "text": "检查是否有从句中包含另一个从句的情况"
+        }
+      ],
+      "misconceptions": [
+        "找不到主语从句的谓语，把从句中的谓语当成主句谓语",
+        "忽略主语从句的that不充当成分但可以省略的情况（及物动词后的that可省）",
+        "把同位语从句和定语从句混淆（that在同位语从句中不充当成分）"
+      ],
+      "summary": "掌握名词性从句的嵌套结构（主语从句、宾语从句、表语从句、同位语从句）。",
+      "source": {
+        "title": "TeacherAgent English knowledge seed",
+        "license": "original_generated",
+        "sourceType": "curriculum"
+      }
+    },
+    {
+      "id": "eng-grammar-003",
+      "title": "非谓语动词作状语与定语",
+      "content": "## 非谓语动词三种形式\n\n1. **动名词（doing）**：具有名词性质\n2. **现在分词（doing）**：表示主动、进行\n3. **过去分词（done）**：表示被动、完成\n4. **不定式（to do）**：表示目的、将来\n\n## 作状语 vs 作定语\n\n### 作状语（修饰整个句子或谓语动词）\n```\nSeeing the teacher, the students stood up.\n（Seeing逻辑主语是students，主动关系）\n```\n\n### 作定语（修饰名词）\n```\nThe student seeing the teacher stood up.\n（seeing修饰student，被动关系需改为seen）\n```\n\n## 关键判断方法\n1. **逻辑主语判断**：非谓语动词的逻辑主语是否等于句子的主语？\n2. **逗号判断**：状语常在句首或句末用逗号隔开\n3. **功能判断**：定语紧贴名词，状语修饰动作或整个句子\n\n## 示例\n\"While fossil fuels — coal, oil, gas — still generate roughly 85 percent of the world's energy supply...\"\n- generate是谓语动词\n- While引导让步状语从句",
+      "difficulty": 2,
+      "status": "draft",
+      "prerequisites": [
+        "eng-grammar-001"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "找出非谓语动词（doing/done/to do）"
+        },
+        {
+          "level": "L2",
+          "text": "判断它的逻辑主语是谁？是句子的主语吗？"
+        },
+        {
+          "level": "L3",
+          "text": "如果是状语，它修饰的是整个句子；如果是定语，它修饰的是哪个名词？"
+        }
+      ],
+      "misconceptions": [
+        "非谓语动词作状语时逻辑主语判断错误，不是所有情况逻辑主语都是句子主语",
+        "作定语和作状语的非谓语动词位置不同，但功能判断错误",
+        "忽略现在分词和过去分词在语态上的区别（主动doing，被动done）"
+      ],
+      "summary": "掌握非谓语动词作状语与定语的用法（doing主动、done被动、to do目的）。",
+      "source": {
+        "title": "TeacherAgent English knowledge seed",
+        "license": "original_generated",
+        "sourceType": "curriculum"
+      }
+    },
+    {
+      "id": "eng-grammar-004",
+      "title": "独立主格结构",
+      "content": "##独立主格定义独立主格（Absolute Construction）是一种无动词的句子片段，由\"名词/代词 +非谓语动词/形容词/副词/介词短语\"构成，在句中作状语。##结构形式### 1.名词 +doin$\\frac{g}{d}$one```The weather being fine,we went out.（weather是being fine的逻辑主语）```\n\n### 2.名词 +形容词```He came in,his face pale.（face +pale）```\n\n### 3.名词 +介词短语```The teacher entered the classroom,book in hand.（book +in hand）```\n\n##与状语从句的转换```Because the weather was fine $\\to$The weather being fine```\n\n##使用条件1.逻辑主语与主句主语不一致2.逻辑主语加上非谓语动词/形容词等3.通常用逗号与主句隔开##示例\"With the Church$'s$teachings and ways of thinking being eclipsed...\"\n-With引导的独立主格-the Church$'s$teachings and ways of thinking 是being eclipsed的逻辑主语",
+      "difficulty": 3,
+      "status": "draft",
+      "prerequisites": [
+        "eng-grammar-003"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "观察句子的逻辑主语有几个？"
+        },
+        {
+          "level": "L2",
+          "text": "如果有两个逻辑主语，且一个不是主句主语，可能是独立主格"
+        },
+        {
+          "level": "L3",
+          "text": "寻找'名词 + 非谓语动词/形容词/介词短语'的结构"
+        }
+      ],
+      "misconceptions": [
+        "把独立主格当成状语从句的省略，两者结构不同",
+        "独立主格中的being在某些情况下可以省略，但规则记错",
+        "忽略独立主格和主句之间通常有逗号隔开"
+      ],
+      "summary": "掌握独立主格结构的识别与分析（名词/代词+非谓语动词/形容词/介词短语）。",
+      "source": {
+        "title": "TeacherAgent English knowledge seed",
+        "license": "original_generated",
+        "sourceType": "curriculum"
+      }
+    },
+    {
+      "id": "eng-grammar-005",
+      "title": "部分倒装 vs 完全倒装",
+      "content": "##倒装类型### 1.完全倒装（谓语全部提前）```Here comes the bus.（主语the bus在后，谓语comes在前）```\n\n### 2.部分倒装（助动词/情态动词提前）```Never have $I$seen such $a$thing.（助动词have提前，主语$I$在后）```\n\n##部分倒装触发词$1. **$否定词开头**：never,seldom,hardly,scarcely,barely,not only$...\n2. **only$开头**：Only then did $I$realize$...\n3. **s\\frac{o}{n}$eithe$\\frac{r}{n}$or开头**：So do $I.\n4. **$虚拟语气条件句省略$if**$：Had $I$known...\n\n##完全倒装触发条件$1. **her\\frac{e}{t}$here开头** +主语是名词（Here comes he$. \\times \\to$Here he comes. √）$2. **$介词短语作地点状语开头** +主语是名词```In front of the house stands $a tree.\n```\n\n##$示例\"Only gradually was the $by-product$of the institution noted...\"\n-Only开头 +部分倒装-正常语序：The $by-product$was noted only gradually.",
+      "difficulty": 2,
+      "status": "draft",
+      "prerequisites": [],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "观察句首是否有否定词或only？"
+        },
+        {
+          "level": "L2",
+          "text": "如果是部分倒装，助动词/情态动词应该在主语前面"
+        },
+        {
+          "level": "L3",
+          "text": "如果是完全倒装，整个谓语动词都在主语前面"
+        }
+      ],
+      "misconceptions": [
+        "部分倒装和完全倒装混淆（否定词在句首是部分倒装，Here comes...是完全倒装）",
+        "忽略only+状语在句首时的部分倒装规则",
+        "倒装后主语和谓语的顺序仍判断错误"
+      ],
+      "summary": "掌握部分倒装与完全倒装的区分（完全倒装谓语全部提前，部分倒装助动词提前）。",
+      "source": {
+        "title": "TeacherAgent English knowledge seed",
+        "license": "original_generated",
+        "sourceType": "curriculum"
+      }
+    },
+    {
+      "id": "eng-grammar-006",
+      "title": "强调句型 It is... that...",
+      "content": "##强调句型结构###基本形式```It $i\\frac{s}{w}$as +被强调部分 +tha$\\frac{t}{w}$ho +句子剩余部分```\n\n###强调成分$1. **$强调主语**：It is Tom tha$\\frac{t}{w}$ho helped me$.\n2. **$强调宾语**：It is me that Tom helped$.\n3. **$强调状语**：It is yesterday that $I$met Tom.\n\n###判断方法（去掉It is...that后句子仍完整）```It is Tom that helped me$. \\to$Tom helped me. √\n```\n\n###与定语从句区别- **强调句型**：去掉It is...that，句子完整- **定语从句**：去掉It is...that，句子不完整（that是关系词）##示例\"It is this implicit or $explicit$reference to nature that fully justifies...\"\n-强调主语：this implicit or $explicit$reference to nature-去掉强调句型：This implicit or $explicit$reference to nature fully justifies...",
+      "difficulty": 2,
+      "status": "draft",
+      "prerequisites": [
+        "eng-grammar-001"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "找到It is/was...that/who结构"
+        },
+        {
+          "level": "L2",
+          "text": "尝试去掉It is...that，看句子是否仍然完整？"
+        },
+        {
+          "level": "L3",
+          "text": "如果完整，就是强调句型；如果不完整，就是定语从句"
+        }
+      ],
+      "misconceptions": [
+        "强调句型去掉It is...that后句子不完整，说明不是强调句型而是定语从句",
+        "强调句型中用了which而不是that，强调句型只用that/who",
+        "把强调句型中的that当成定语从句的that"
+      ],
+      "summary": "掌握强调句型It is...that的识别，去掉It is...that后句子仍完整。",
+      "source": {
+        "title": "TeacherAgent English knowledge seed",
+        "license": "original_generated",
+        "sourceType": "curriculum"
+      }
+    },
+    {
+      "id": "eng-grammar-007",
+      "title": "虚拟语气的倒装形式",
+      "content": "##虚拟语气倒装（省略if）###规则当虚拟条件句中有were,had,should时，可省略if，将were,had,should提前至句首。###示例```If $I$were you $\\to$Were $I$youIf $I$had known $\\to$Had $I$knownIf it should rain $\\to$Should it rain```\n\n###注意事项$1. **$不能省略if的情况**：如果条件句是否定句（If $I$had not$... \\to$Had $I$not... √）$2. **were$的特例**：Even if $I$were you $\\to$Were $I$you（即使省略even if）##示例\"Had the College Board followed its own rules,it would have...\"\n-倒装虚拟：Had the College Board followed =If the College Board had followed-主句：it would have...\n\n##混合虚拟```If $I$had studied harder in college$, I$would be happier now.（从句与过去事实相反，主句与现在事实相反）```",
+      "difficulty": 3,
+      "status": "draft",
+      "prerequisites": [
+        "eng-grammar-005"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "观察句首是否有were/had/should？"
+        },
+        {
+          "level": "L2",
+          "text": "如果有，这可能是虚拟语气的倒装形式"
+        },
+        {
+          "level": "L3",
+          "text": "尝试还原成if条件句，看意思是否通顺"
+        }
+      ],
+      "misconceptions": [
+        "虚拟语气倒装（Had I...）还原成if条件句时动词形式错误",
+        "忽略虚拟语气倒装只适用于had/were/should，不能用于其他动词",
+        "把真实条件句的倒装当成虚拟语气倒装"
+      ],
+      "summary": "掌握虚拟语气的倒装形式（省略if，将were/had/should提前至句首）。",
+      "source": {
+        "title": "TeacherAgent English knowledge seed",
+        "license": "original_generated",
+        "sourceType": "curriculum"
+      }
+    },
+    {
+      "id": "eng-grammar-008",
+      "title": "复杂并列句与省略结构",
+      "content": "## 并列句类型\n\n### 1. 简单并列（and/but/or连接）\n```\nHe likes English and he likes math.\n```\n\n### 2. 复杂并列（多个并列成分）\n```\nThe study shows that A, that B, and that C.\n（that引导的三个宾语从句并列）\n```\n\n### 3. 省略结构\n```\nSome like English, others (like) math.\n（省略了like）\n```\n\n## 省略条件\n1. **主语相同可省略**：I came, (I) saw, (I) conquered.\n2. **谓语相同可省略**：He likes English and (he likes) math.\n3. **be动词可省略**：When (you are) young, you should...\n\n## 示例\n\"They should start by discarding California's lame argument... and then should...\"\n- They should start... and then should...\n- 省略了第二个they should的部分结构\n\n## 识别方法\n1. 找并列连词（and, but, or, not only...but also...）\n2. 判断并列成分是否对称\n3. 检查是否有省略（对比完整句和省略句）",
+      "difficulty": 2,
+      "status": "draft",
+      "prerequisites": [
+        "eng-grammar-001"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "找到并列连词（and/but/or等）"
+        },
+        {
+          "level": "L2",
+          "text": "判断并列的两边是否对称？"
+        },
+        {
+          "level": "L3",
+          "text": "如果有省略，省略的部分是什么？"
+        }
+      ],
+      "misconceptions": [
+        "并列句省略时省略的不是核心动词，规则判断错误",
+        "忽略并列结构对称原则（A and B结构应对称）",
+        "把并列句省略和从句省略混淆"
+      ],
+      "summary": "掌握复杂并列句与省略结构，识别并列连词后重复词的省略。",
+      "source": {
+        "title": "TeacherAgent English knowledge seed",
+        "license": "original_generated",
+        "sourceType": "curriculum"
+      }
+    },
+    {
+      "id": "eng-grammar-009",
+      "title": "同位语从句 vs 定语从句",
+      "content": "## 核心区别\n\n### 1. 功能区别\n- **同位语从句**：解释说明名词的具体内容（名词是抽象概念）\n- **定语从句**：修饰限定名词的特征（名词是具体或抽象都可以）\n\n### 2. 关系词区别\n- **同位语从句**：that不充当成分，只起连接作用\n- **定语从句**：that充当主语/宾语等成分\n\n### 3. 翻译区别\n- **同位语从句**：译为\"...的内容是\"或单独成句\n- **定语从句**：译为\"...的名词\"\n\n## 示例对比\n```\n同位语从句：The idea that we can win is encouraging.\n（that we can win是idea的具体内容，that不充当成分）\n\n定语从句：The idea that he proposed is encouraging.\n（that指代idea，在从句中作proposed的宾语）\n```\n\n## 常见抽象名词（后常接同位语从句）\nidea, fact, news, hope, belief, doubt, evidence, assumption, theory...\n\n## 示例\n\"The theory that trade leads to economic growth...\"\n- theory后接同位语从句\n- that trade leads to economic growth解释theory的具体内容",
+      "difficulty": 3,
+      "status": "draft",
+      "prerequisites": [
+        "eng-grammar-001",
+        "eng-grammar-002"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "判断that在从句中是否充当成分？"
+        },
+        {
+          "level": "L2",
+          "text": "如果that不充当成分，可能是同位语从句"
+        },
+        {
+          "level": "L3",
+          "text": "看前面的名词是否是抽象概念（idea, fact, theory等）"
+        }
+      ],
+      "misconceptions": [
+        "同位语从句和定语从句混淆（that在同位语从句中不充当成分，在定语从句中充当成分）",
+        "忽略同位语从句前的名词通常是抽象名词（idea/fact/news等）",
+        "把同位语从句的that省略（同位语从句的that不能省略）"
+      ],
+      "summary": "掌握同位语从句与定语从句的区分（同位语that不充当成分，定语从句that充当成分）。",
+      "source": {
+        "title": "TeacherAgent English knowledge seed",
+        "license": "original_generated",
+        "sourceType": "curriculum"
+      }
+    },
+    {
+      "id": "eng-grammar-010",
+      "title": "as引导的从句类型辨析",
+      "content": "## as的多种用法\n\n### 1. 引导定语从句（非限制性）\n```\nAs is known to all, the earth is round.\n（as指代整个主句）\n```\n\n### 2. 引导状语从句（比较/时间/原因/让步）\n```\n比较：He is as tall as I (am).\n时间：As he grew older, he became wiser.\n原因：As it was raining, we stayed home.\n让步：Much as I like it, I won't buy it.\n```\n\n### 3. 引导名词性从句（较少见）\n```\nShe is a teacher, as is clear from her voice.\n```\n\n## 示例\n\"As many people hit middle age...\"\n- as引导时间状语从句\n- 意为\"当...时候\"\n\n## 判断方法\n1. **as后面直接接动词**：通常是定语从句（as作主语/宾语）\n2. **as后面接完整句子**：通常是状语从句\n3. **as...as结构**：比较状语从句\n\n## 特殊结构\n```\n...as + 形容词/副词 + as + 主谓（让步）\nMuch as I like it = Although I like it very much\n```",
+      "difficulty": 2,
+      "status": "draft",
+      "prerequisites": [
+        "eng-grammar-001"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "观察as后面接的是单词还是完整句子？"
+        },
+        {
+          "level": "L2",
+          "text": "如果是形容词/副词+as，这是让步状语从句"
+        },
+        {
+          "level": "L3",
+          "text": "如果as指代整个主句，这是非限制性定语从句"
+        }
+      ],
+      "misconceptions": [
+        "as引导非限制性定语从句时，as和which用法混淆（as可放句首，which不可）",
+        "as在定语从句中充当成分，但忽略as通常指代整个主句或主句一部分",
+        "把as引导的定语从句和as引导的状语从句混淆"
+      ],
+      "summary": "掌握as引导的从句类型辨析（定语从句、状语从句、固定结构as is known）。",
+      "source": {
+        "title": "TeacherAgent English knowledge seed",
+        "license": "original_generated",
+        "sourceType": "curriculum"
+      }
+    },
+    {
+      "id": "eng-grammar-011",
+      "title": "状语从句的省略结构",
+      "content": "## 状语从句省略规则\n\n当状语从句的主语与主句主语一致，且从句中有be动词时，可省略\"主语+be\"。\n\n### 可省略的结构\n```\n完整：When he was young, he liked reading.\n省略：When young, he liked reading.\n\n完整：If it is possible, we will go.\n省略：If possible, we will go.\n\n完整：Although he is tired, he continues working.\n省略：Although tired, he continues working.\n```\n\n### 常见省略连词\n- **when/while/as** + 形容词/分词\n- **if/unless** + 形容词/分词\n- **although/though/even though** + 形容词/分词\n- **whether...or...** + 形容词\n\n## 示例\n\"When (it is) properly understood, ...\"\n- 省略了it is\n- 完整结构：When it is properly understood\n\n## 注意事项\n1. 只有从句主语=主句主语时才能省略\n2. 从句中必须有be动词\n3. 省略后句子意思仍然完整",
+      "difficulty": 2,
+      "status": "draft",
+      "prerequisites": [
+        "eng-grammar-003",
+        "eng-grammar-008"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "观察从句的主语是否等于主句的主语？"
+        },
+        {
+          "level": "L2",
+          "text": "如果相等，且有be动词，可以尝试省略"
+        },
+        {
+          "level": "L3",
+          "text": "省略后检查句子意思是否仍然完整"
+        }
+      ],
+      "misconceptions": [
+        "状语从句省略的条件记错（主语一致且有be动词才能省略）",
+        "省略后连词保留但主语和be动词都省略，规则混淆",
+        "把状语从句省略和定语从句省略混淆"
+      ],
+      "summary": "掌握状语从句的省略规则（主语一致+be动词，可省略主语+be动词）。",
+      "source": {
+        "title": "TeacherAgent English knowledge seed",
+        "license": "original_generated",
+        "sourceType": "curriculum"
+      }
+    },
+    {
+      "id": "eng-grammar-012",
+      "title": "比较结构的特殊用法",
+      "content": "##比较结构类型### 1.基本比较（as...as,more...than）```He is as tall as $I (am).$He is taller than $I (am).\n```\n\n### 2.$双重比较（the more...the more）```The more you practice,the better you become.\n```\n\n### 3.比较的倒装（否定词开头）```He likes English more than $(he likes)$math$.\n\\to$More than math does he like English.(强调)```\n\n### 4.比较的省略```He likes English more than $I.$（than后省略了like English）```\n\n##练习难点### 1.比较对象不一致```The climate of Beijing is colder than that of Guangzhou.（that指代climate，避免重复）```\n\n### 2.比较级修饰语```He is much taller than $I.$（much修饰比较级taller）```\n\n##示例\"No one would have been more surprised than $I (was)...\"\n-$比较级：more surprised-省略了was-完整：No one would have been more surprised than $I was$",
+      "difficulty": 3,
+      "status": "draft",
+      "prerequisites": [
+        "eng-grammar-010"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "找到比较级词汇（more, less, better, worse等）"
+        },
+        {
+          "level": "L2",
+          "text": "判断比较的对象是否对称？"
+        },
+        {
+          "level": "L3",
+          "text": "如果有that/those，它们指代的是什么？"
+        }
+      ],
+      "misconceptions": [
+        "比较结构中that/those指代错误（that指代单数不可数名词，those指代复数名词）",
+        "比较对象不一致（比较的应该是同类事物）",
+        "忽略比较级中than后面的主谓倒装情况"
+      ],
+      "summary": "掌握比较结构的特殊用法（that/those指代前文名词，避免重复）。",
+      "source": {
+        "title": "TeacherAgent English knowledge seed",
+        "license": "original_generated",
+        "sourceType": "curriculum"
+      }
+    },
+    {
+      "id": "eng-grammar-013",
+      "title": "there be句型的变体",
+      "content": "## there be基本结构\n\n```\nThere + be + 名词 + 地点/时间状语\nThere is a book on the table.\n```\n\n## there be的变体\n\n### 1. there + 情态动词 + be\n```\nThere may be a problem.\nThere must have been an accident.\n```\n\n### 2. there + 不及物动词（appear, seem, exist, remain等）\n```\nThere appears to be a mistake.\nThere seems no doubt about it.\nThere exists a possibility.\n```\n\n### 3. there be + 定语从句\n```\nThere is a book that I like.\n（that引导定语从句修饰book）\n```\n\n## 示例\n\"There is no doubt that...\"\n- there be句型\n- no doubt后接同位语从句\n\n## 特殊结构\n\n### there be + 非谓语动词\n```\nThere being no bus, we had to walk.\n（there being构成独立主格）\n\nFor there to be life, there must be water.\n（there to be作宾语）\n```",
+      "difficulty": 2,
+      "status": "draft",
+      "prerequisites": [
+        "eng-grammar-001",
+        "eng-grammar-004"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "观察句首是否有there？"
+        },
+        {
+          "level": "L2",
+          "text": "如果是there be句型，be动词后面是主语"
+        },
+        {
+          "level": "L3",
+          "text": "如果there后面不是be，可能是不及物动词的变体"
+        }
+      ],
+      "misconceptions": [
+        "There be句型变体中动词用错（seems/appears/exists等不及物动词）",
+        "忽略There be句型变体中主语在动词后面",
+        "把There be句型变体和完全倒装混淆"
+      ],
+      "summary": "掌握there be句型的变体（there + seem/appear/exist等不及物动词）。",
+      "source": {
+        "title": "TeacherAgent English knowledge seed",
+        "license": "original_generated",
+        "sourceType": "curriculum"
+      }
+    },
+    {
+      "id": "eng-grammar-014",
+      "title": "插入语结构识别",
+      "content": "## 插入语定义\n插入语是两个逗号/破折号之间的内容，对句子进行补充说明，删除后句子结构仍然完整。\n\n## 插入语形式\n\n### 1. 副词/副词短语\n```\nHe is, however, right.\nThe study was, after all, successful.\n```\n\n### 2. 介词短语\n```\nThe study — in all its aspects — was successful.\n```\n\n### 3. 从句/短句\n```\nHe was, as we expected, successful.\nThe policy, many experts say, will fail.\n```\n\n## 识别方法\n1. 找两个逗号/破折号之间的内容\n2. 尝试删除这部分，看主句是否仍然完整\n3. 如果完整，这就是插入语\n\n## 示例\n\"While fossil fuels — coal, oil, gas — still generate...\"\n- 插入语：coal, oil, gas\n- 用破折号隔开\n- 删除后：While fossil fuels still generate...（完整）\n\n## 干扰作用\n插入语常干扰对句子主干的识别，阅读时应先跳过插入语。",
+      "difficulty": 2,
+      "status": "draft",
+      "prerequisites": [
+        "eng-grammar-001"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "寻找两个逗号或破折号之间的内容"
+        },
+        {
+          "level": "L2",
+          "text": "尝试删除这部分，看主句是否仍然完整？"
+        },
+        {
+          "level": "L3",
+          "text": "如果完整，这就是插入语，阅读时可以跳过"
+        }
+      ],
+      "misconceptions": [
+        "插入语和定语从句混淆（插入语删除后主句完整，定语从句不能删除）",
+        "插入语的位置判断错误（通常在两个逗号之间）",
+        "忽略插入语对句子结构的干扰，分析句子时没跳过插入语"
+      ],
+      "summary": "掌握插入语结构的识别（两个逗号之间，删除后主句仍完整）。",
+      "source": {
+        "title": "TeacherAgent English knowledge seed",
+        "license": "original_generated",
+        "sourceType": "curriculum"
+      }
+    },
+    {
+      "id": "eng-grammar-015",
+      "title": "指代关系判断",
+      "content": "## 指代关系类型\n\n### 1. 代词指代\n```\nTom likes his book. (his指代Tom)\nThe study shows its result. (its指代study)\n```\n\n### 2. 定语从句中的which/that指代\n```\nI like the book that you recommended. (that指代book)\n```\n\n### 3. 非限制性定语从句的which指代整个主句\n```\nHe failed the exam, which surprised us. (which指代整个主句)\n```\n\n## 判断方法\n\n### 1. 就近原则\n```\nTom told John that he was wrong.\n（he通常指代John，因为更近）\n```\n\n### 2. 逻辑一致原则\n```\nThe climate of Beijing is colder than that of Guangzhou.\n（that指代climate，因为比较的是climate）\n```\n\n### 3. 数的一致\n```\nThe students and the teacher like their books.\n（their指代students和teacher）\n```\n\n## 示例\n\"The report, which was published last week, shows that...\"\n- which指代The report\n- 非限制性定语从句\n\n## 常见考点\n1. **that/those指代前面的名词**（避免重复）\n2. **it的指代**（可能是形式主语，也可能是指代）\n3. **this/that作为指示代词**",
+      "difficulty": 2,
+      "status": "draft",
+      "prerequisites": [
+        "eng-grammar-001",
+        "eng-grammar-009"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "找到代词（he, she, it, they, that, those等）"
+        },
+        {
+          "level": "L2",
+          "text": "观察前面最近的名词是什么？"
+        },
+        {
+          "level": "L3",
+          "text": "判断数是否一致（单数/复数）？逻辑是否合理？"
+        }
+      ],
+      "misconceptions": [
+        "代词it和one的区别混淆（it指代特定事物，one指代同类事物中的一个）",
+        "忽略代词指代的就近原则，但就近原则有例外",
+        "把形式宾语it和真实宾语混淆"
+      ],
+      "summary": "掌握指代关系判断（代词it/they/this/that的先行词识别）。",
+      "source": {
+        "title": "TeacherAgent English knowledge seed",
+        "license": "original_generated",
+        "sourceType": "curriculum"
+      }
+    },
+    {
+      "id": "eng-grammar-016",
+      "title": "主谓一致的特殊情况",
+      "content": "## 主谓一致基本原则\n主语是单数，谓语用单数；主语是复数，谓语用复数。\n\n## 特殊情况\n\n### 1. 集体名词（family, team, government等）\n```\nThe family is united. (强调整体)\nThe family are watching TV. (强调成员)\n```\n\n### 2. 并列主语（and连接）\n```\nTom and Jerry are friends. (复数)\n```\n\n### 3. 就近原则（either...or, neither...nor, not only...but also）\n```\nEither you or I am wrong.\n（谓语与最近的主语I一致）\n```\n\n### 4. 就远原则（with, together with, as well as等）\n```\nTom, together with his friends, is going.\n（谓语与Tom一致，不受with短语影响）\n```\n\n### 5. 时间/金钱/距离作主语（单数）\n```\nTen years is a long time.\n```\n\n### 6. each/every + 单数名词（单数）\n```\nEvery student has a book.\n```\n\n## 示例\n\"The number of students is increasing.\"\n- 主语：The number（单数）\n- 谓语：is\n- students是of的宾语，不影响主谓一致",
+      "difficulty": 2,
+      "status": "draft",
+      "prerequisites": [],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "找到真正的主语（不是of/with等介词的宾语）"
+        },
+        {
+          "level": "L2",
+          "text": "判断主语是单数还是复数？"
+        },
+        {
+          "level": "L3",
+          "text": "如果有并列连词，判断是否适用就近/就远原则？"
+        }
+      ],
+      "misconceptions": [
+        "主谓一致中忽略主语后面的with/together with等短语不影响主语单复数",
+        "忽略The number of和A number of的主谓一致区别",
+        "集体名词作主谓一致时的单复数判断错误"
+      ],
+      "summary": "掌握主谓一致的特殊情况（集体名词、就近原则、就远原则）。",
+      "source": {
+        "title": "TeacherAgent English knowledge seed",
+        "license": "original_generated",
+        "sourceType": "curriculum"
+      }
+    },
+    {
+      "id": "eng-grammar-017",
+      "title": "否定词的转移与强调",
+      "content": "## 否定词转移\n\n### 1. think/believe/suppose + not（否定转移到从句）\n```\nI don't think he is right.\n（= I think he is not right.）\n```\n\n### 2. 部分否定（all/both/every + not）\n```\nAll that glitters is not gold.\n（= Not all that glitters is gold.）\n```\n\n## 否定词强调\n\n### 1. 双重否定\n```\nHe is not unwilling to help.\n（= He is willing to help.）\n```\n\n### 2. 否定词 + without/unless等\n```\nYou can't succeed without hard work.\n（= You can't succeed if you don't work hard.）\n```\n\n### 3. 否定词开头的部分倒装\n```\nNever have I seen such a thing.\n（正常：I have never seen such a thing.）\n```\n\n## 示例\n\"It is not uncommon for...\"\n- 双重否定：not uncommon = common\n- 意为\"...是常见的\"\n\n## 翻译技巧\n遇到否定词，先判断是否转移，再判断是否双重否定。",
+      "difficulty": 3,
+      "status": "draft",
+      "prerequisites": [
+        "eng-grammar-005",
+        "eng-grammar-007"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "观察句中是否有否定词（not, never, seldom等）？"
+        },
+        {
+          "level": "L2",
+          "text": "如果有think/believe等动词，否定可能转移到从句"
+        },
+        {
+          "level": "L3",
+          "text": "如果有双重否定，意思是肯定"
+        }
+      ],
+      "misconceptions": [
+        "否定词转移只适用于think/believe/suppose等动词，不适用其他动词",
+        "忽略否定词转移后从句用肯定形式表达否定意思",
+        "把否定词转移和部分否定混淆（not all$\\neq$全部否定）"
+      ],
+      "summary": "掌握否定词的转移与强调（think/believe的否定转移到从句）。",
+      "source": {
+        "title": "TeacherAgent English knowledge seed",
+        "license": "original_generated",
+        "sourceType": "curriculum"
+      }
+    },
+    {
+      "id": "eng-grammar-018",
+      "title": "介词+which/whom引导的定语从句",
+      "content": "##结构形式```介词 +whic$\\frac{h}{w}$hom +从句剩余部分```\n\n###示例```This is the book about which $I$told you.（=This is the book that $I$told you about.）The man with whom $I$talked is my teacher.（=The man who$(m) I$talked with is my teacher.）```\n\n##判断方法### 1.找到介词介词通常来自：-从句中的动词固定搭配（talk with,depend on等）-从句中的形容词固定搭配（interested in,good at等）-表示时间/地点/原因的介词（in which =when,for which =why）### 2.判断用which还是whom$- **which**$：指代事物$- **whom**$：指代人（作宾语）##示例\"...the way in which the $information$is presented...\"\n-介词in来自固定搭配in the way-which指代the way##特殊用法```介词 +whose +名词This is the student of whose father $I$know.（whose father作of的宾语）```",
+      "difficulty": 3,
+      "status": "draft",
+      "prerequisites": [
+        "eng-grammar-001"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "找到介词（in, on, at, with, for等）"
+        },
+        {
+          "level": "L2",
+          "text": "判断这个介词来自从句中的哪个搭配？"
+        },
+        {
+          "level": "L3",
+          "text": "用which还是whom？看指代的是物还是人？"
+        }
+      ],
+      "misconceptions": [
+        "介词+which定语从句中介词选择错误，应根据搭配或句意选择",
+        "忽略介词+which定语从句中which不能省略",
+        "把介词+which和介词+whom混淆（指人用whom，指物用which）"
+      ],
+      "summary": "掌握介词+which/whom引导的定语从句（介词来自搭配，提前至关系词前）。",
+      "source": {
+        "title": "TeacherAgent English knowledge seed",
+        "license": "original_generated",
+        "sourceType": "curriculum"
+      }
+    },
+    {
+      "id": "eng-grammar-019",
+      "title": "it作形式主语/宾语",
+      "content": "## it的用法\n\n### 1. it作形式主语\n```\nIt is important to study English.\n（真正主语：to study English）\n\nIt is obvious that he is wrong.\n（真正主语：that he is wrong）\n```\n\n### 2. it作形式宾语\n```\nI find it important to study English.\n（真正宾语：to study English）\n\nI think it important that he should come.\n（真正宾语：that he should come）\n```\n\n### 3. it指代前面的内容\n```\nI like English and I study it every day.\n（it指代English）\n```\n\n## 判断方法\n\n### 1. 形式主语：it + be + 形容词/名词 + to do/that从句\n- 如果it后面是be + 形容词，且后面有to do/that，it是形式主语\n\n### 2. 形式宾语：动词 + it + 形容词 + to do/that从句\n- 如果it在动词后面，且后面有to do/that，it是形式宾语\n\n## 示例\n\"It is difficult to say...\"\n- it是形式主语\n- 真正主语：to say...\n\n## 常见结构\n```\nIt is + adj. + (for/of sb.) + to do\nIt is + past participle + that...\n```",
+      "difficulty": 2,
+      "status": "draft",
+      "prerequisites": [
+        "eng-grammar-002"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "观察it后面是否有be动词或谓语动词？"
+        },
+        {
+          "level": "L2",
+          "text": "如果it后面是be + 形容词，且有to do/that从句，it是形式主语"
+        },
+        {
+          "level": "L3",
+          "text": "如果it在动词后面，且有to do/that从句，it是形式宾语"
+        }
+      ],
+      "misconceptions": [
+        "形式主语it和强调句型It is...that混淆（强调句型去掉It is...that后句子完整）",
+        "形式主语it指代的真正主语（to do/that从句）判断错误",
+        "忽略形式主语it的句子结构：It is + adj + to do/that..."
+      ],
+      "summary": "掌握it作形式主语/宾语的用法（It is adj to do/that从句）。",
+      "source": {
+        "title": "TeacherAgent English knowledge seed",
+        "license": "original_generated",
+        "sourceType": "curriculum"
+      }
+    },
+    {
+      "id": "eng-grammar-020",
+      "title": "than引导的比较状语从句省略",
+      "content": "## than的用法\n\n### 1. than作为介词（省略从句）\n```\nHe has more books than I. (非正式)\n= He has more books than I have. (正式)\n```\n\n### 2. than作为连词（引导从句）\n```\nHe likes English more than I (like English).\n（省略了like English）\n\nHe likes English more than me. (不同的意思)\n（= He likes English more than he likes me.）\n```\n\n## 省略规则\n\n当than后面的主语+谓语与主句重复时，可省略重复部分。\n\n### 示例\n```\n完整：He likes English more than he likes math.\n省略：He likes English more than math.\n\n完整：Reading is more important than writing is important.\n省略：Reading is more important than writing.\n```\n\n## 示例\n\"...more likely to...than (they are likely to)...\"\n- than后面省略了they are likely to\n- 完整结构：more likely to A than (they are likely to) B\n\n## 注意事项\n1. **than I 与 than me 意思不同**\n2. **省略后注意逻辑关系**\n3. **如果有that/those，它们指代前面的名词**",
+      "difficulty": 3,
+      "status": "draft",
+      "prerequisites": [
+        "eng-grammar-010",
+        "eng-grammar-012"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "找到than，判断后面是名词/代词还是完整句子？"
+        },
+        {
+          "level": "L2",
+          "text": "如果是代词，判断是用主格（I/he）还是宾格（me/him）？"
+        },
+        {
+          "level": "L3",
+          "text": "如果后面有省略，补充完整后意思是否通顺？"
+        }
+      ],
+      "misconceptions": [
+        "than作介词和作连词的判断错误（than后接主格是连词，接宾格是介词）",
+        "比较状语从句省略时省略的部分判断错误",
+        "忽略than在比较级中的特殊用法"
+      ],
+      "summary": "掌握than引导的比较状语从句省略（than后省略与主句重复的成分）。",
+      "source": {
+        "title": "TeacherAgent English knowledge seed",
+        "license": "original_generated",
+        "sourceType": "curriculum"
+      }
+    }
+  ]
+}

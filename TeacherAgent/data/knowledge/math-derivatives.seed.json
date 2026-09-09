@@ -1,0 +1,440 @@
+{
+  "subject": "math",
+  "course": "calculus",
+  "chapter": "derivatives",
+  "status": "approved",
+  "nodes": [
+    {
+      "id": "math-deriv-definition",
+      "title": "导数的定义",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "导数描述函数在某一点处的瞬时变化率，其本质是一个极限：$f'(x_0) = \\lim_{\\Delta x\\to 0} \\frac{f(x_0+\\Delta x) - f(x_0)}{\\Delta x}$。也可写作 $f'(x_0) = \\lim_{x\\to x_0} \\frac{f(x) - f(x_0)}{x - x_0}$。若该极限存在，则称函数在 $x_0$处可导。",
+      "prerequisites": [
+        "math-limit-basic-definition",
+        "math-continuity-point"
+      ],
+      "misconceptions": [
+        "误认为导数就是斜率本身，忽略了导数是极限过程的结果，而非简单的两点连线斜率",
+        "认为函数连续就一定可导，实际上连续是可导的必要条件而非充分条件（如 |x| 在 x=0 处连续但不可导）",
+        "将 $\\Delta x$理解为一个很小的固定数，而非趋于零的变量"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "你能否回忆一下，瞬时变化率和平均变化率之间的区别是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "平均变化率是 $(f(x_0+\\Delta x) − f(x_0)) / \\Delta x$，当 $\\Delta x$越来越小时会发生什么？"
+        },
+        {
+          "level": "L3",
+          "text": "当 $\\Delta x \\to 0$时，平均变化率的极限就是导数的定义。试着把这个极限表达式写出来。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-deriv-geometric",
+      "title": "导数的几何意义",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "函数 $f(x)$在 $x_0$处的导数 $f'(x_0)$等于曲线 $y = f(x)$在点 $(x_0, f(x_0))$处切线的斜率。因此切线方程为 $y − f(x_0) = f'(x_0)(x − x_0)$。若 $f'(x_0)$不存在但趋于无穷，则切线为垂直线。",
+      "prerequisites": [
+        "math-deriv-definition"
+      ],
+      "misconceptions": [
+        "认为切线只在曲线的一侧与曲线相交，实际上切线可以与曲线在多个点相交",
+        "将割线与切线混淆——割线连接两点，切线是割线在两点重合时的极限位置",
+        "认为导数为零的点一定是极值点，忽略了驻点可能是拐点的情况"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "如果让你画一条曲线在某点处最贴近的直线，你会怎么确定这条线的方向？"
+        },
+        {
+          "level": "L2",
+          "text": "连接两点的割线斜率是 $\\Delta y/\\Delta x$，当两点无限接近时，割线变成了什么？"
+        },
+        {
+          "level": "L3",
+          "text": "割线的极限位置就是切线，其斜率正是导数 $f'(x_0)$。利用点斜式即可写出切线方程。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-deriv-power",
+      "title": "幂函数求导",
+      "level": "technique",
+      "difficulty": 1,
+      "summary": "对于幂函数 $f(x) = x^n$，其导数为 $f'(x) = nx^{n-1}$（幂法则）。此公式对任意实数 $n$均成立（在定义域内）。常数函数 $f(x) = c$的导数为 0。线性函数 $f(x) = ax + b$的导数为 $a$。",
+      "prerequisites": [
+        "math-deriv-definition",
+        "math-deriv-geometric"
+      ],
+      "misconceptions": [
+        "对 $x^n$中的 $n$仅限正整数使用幂法则，忘记 $n$为负数、分数时同样适用",
+        "对常数项求导出错，例如认为 $(5)' = 5$",
+        "对复合形式直接套用幂法则，例如将 $(2x)^3$的导数算成 $3(2x)^2$而忘记链式法则"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "你还记得 $x^2$的导数是什么吗？$x^3$呢？你能发现其中的规律吗？"
+        },
+        {
+          "level": "L2",
+          "text": "对 $x^n$用定义求导，展开 $(x+\\Delta x)^n$后，只保留含 $\\Delta x$一次幂的项，其余项在极限下会怎样？"
+        },
+        {
+          "level": "L3",
+          "text": "利用二项式展开或直接使用定义，得到 $(x^n)' = nx^{n-1}$。注意这个规则中指数 $n$移到前面，同时指数减 1。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-deriv-sum-product",
+      "title": "和与积的求导法则",
+      "level": "technique",
+      "difficulty": 2,
+      "summary": "求导的线性性质：$(f + g)' = f' + g'$，$(cf)' = cf'$（$c$为常数）。乘积法则（莱布尼茨法则）：$(fg)' = f'g + fg'$。商法则：$(\\frac{f}{g})' = \\frac{f'g - fg'}{g^2}$（$g \\neq 0$）。这些法则可组合使用来处理复杂的初等函数。",
+      "prerequisites": [
+        "math-deriv-power"
+      ],
+      "misconceptions": [
+        "错误地认为乘积的导数等于导数的乘积，即 $(fg)' = f'\\cdot g'$",
+        "商法则中分子的符号搞反，写成 $\\frac{f'g + fg'}{g^2}$",
+        "在使用线性性质时忘记对每一项分别求导，例如 $(3x^2 + 2x)'$漏掉对 $2x$的求导"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "如果你知道 $f(x)$和 $g(x)$各自的导数，那么 $f(x) + g(x)$的导数应该怎么算？"
+        },
+        {
+          "level": "L2",
+          "text": "对和的求导比较简单，但对乘积呢？试着从定义出发展开 $(f\\cdot g)(x+\\Delta x)$。"
+        },
+        {
+          "level": "L3",
+          "text": "乘积法则的直觉：变化率来自两部分——f 变化时 g 不变的部分（f'g），加上 g 变化时 f 不变的部分（fg'）。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-deriv-chain",
+      "title": "链式法则",
+      "level": "technique",
+      "difficulty": 3,
+      "summary": "若 $y = f(u)$且 $u = g(x)$，则复合函数 $y = f(g(x))$的导数为 $\\frac{dy}{dx} = \\frac{dy}{du}\\cdot\\frac{du}{dx} = f'(g(x))\\cdot g'(x)$。链式法则是处理复合函数求导的核心工具，使用时需正确识别外层函数和内层函数。",
+      "prerequisites": [
+        "math-deriv-sum-product",
+        "math-deriv-power"
+      ],
+      "misconceptions": [
+        "只对外层函数求导而忘记乘以内层函数的导数，例如将 $\\sin(2x)$的导数算成 $\\cos(2x)$",
+        "在多层复合时遗漏中间某一层的导数",
+        "在变量替换后忘记将结果中的 u 换回关于 x 的表达式"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "如果 y 依赖于 u，而 u 又依赖于 x，那么当 x 变化时，y 的变化率受什么影响？"
+        },
+        {
+          "level": "L2",
+          "text": "把 dy/dx 想成两个比值的乘积：y 对 u 的变化率乘以 u 对 x 的变化率。"
+        },
+        {
+          "level": "L3",
+          "text": "$\\frac{dy}{dx} = f'(g(x))\\cdot g'(x)$。先对外层 $f$在 $u=g(x)$处求导，再乘以内层 $g$对 $x$的导数。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-deriv-trig",
+      "title": "三角函数求导",
+      "level": "technique",
+      "difficulty": 2,
+      "summary": "基本三角函数的导数：$(\\sin x)' = \\cos x$，$(\\cos x)' = -\\sin x$，$(\\tan x)' = \\sec^2 x = \\frac{1}{\\cos^2 x}$。反三角函数导数：$(\\arcsin x)' = \\frac{1}{\\sqrt{1-x^2}}$，$(\\arctan x)' = \\frac{1}{1+x^2}$。结合链式法则可处理如 $\\sin(3x^2)$等复合形式。",
+      "prerequisites": [
+        "math-deriv-chain",
+        "math-deriv-sum-product"
+      ],
+      "misconceptions": [
+        "记错 (cos x)' 的符号，忘记前面的负号",
+        "将 $(\\tan x)'$记成 $\\sec x$而非 $\\sec^2x$",
+        "对反三角函数求导时忘记被开方数或分母中的限制条件"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "sin x 在 x=0 处的切线斜率是多少？这能帮你验证 (sin x)' 在 x=0 处的值。"
+        },
+        {
+          "level": "L2",
+          "text": "利用 $(\\sin x)'$的定义和和差化积公式，$\\lim[\\Delta x\\to0] (\\sin(x+\\Delta x) − \\sin x)/\\Delta x$可以化简为？"
+        },
+        {
+          "level": "L3",
+          "text": "展开 $\\sin(x+\\Delta x) = \\sin x\\cdot\\cos \\Delta x + \\cos x\\cdot\\sin \\Delta x$，再利用 $\\lim(\\sin \\Delta x/\\Delta x) = 1$和 $\\lim(\\cos \\Delta x) = 1$，得到 $\\cos x$。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-deriv-exp-log",
+      "title": "指数函数与对数函数求导",
+      "level": "technique",
+      "difficulty": 2,
+      "summary": "自然指数函数 $(e^x)' = e^x$，这是它最重要的性质之一。一般指数函数 $(a^x)' = a^x \\ln a$。自然对数函数 $(\\ln x)' = \\frac{1}{x}$。一般对数函数 $(log_a x)' = \\frac{1}{(x \\ln a)}$。这些公式结合链式法则可处理 $e^{2x}$、$\\ln(x^2+1)$等复合形式。",
+      "prerequisites": [
+        "math-deriv-chain",
+        "math-deriv-power"
+      ],
+      "misconceptions": [
+        "将 $(e^x)'$记成 $xe^{x-1}$（错误套用幂法则——指数函数的变量在指数上，不在底数上）",
+        "对 (ln x)' 忘记定义域 x > 0",
+        "将 $(a^x)'$的公式中的 $\\ln a$遗漏，直接写成 $a^x$"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "$e^x$有一个独特的性质：它的导数和它本身一样。你能用定义验证这一点吗？"
+        },
+        {
+          "level": "L2",
+          "text": "从定义出发，$(e^x)' = \\lim[\\Delta x\\to0] (e^(x+\\Delta x) − e^x)/\\Delta x = e^x \\cdot \\lim[\\Delta x\\to0] (e^\\Delta x − 1)/\\Delta x$。后面那个极限是多少？"
+        },
+        {
+          "level": "L3",
+          "text": "利用 $e$的定义，$\\lim(h\\to0)\\frac{(e^h − 1)}{h} = 1$，因此 $(e^x)' = e^x$。对于 $a^x$，利用 $a^x = e^(x \\ln a)$配合链式法则即可。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-deriv-implicit",
+      "title": "隐函数求导",
+      "level": "technique",
+      "difficulty": 3,
+      "summary": "当 $y$与 $x$的关系由方程 $F(x, y) = 0$隐式确定（无法显式解出 $y = f(x)$）时，可对等式两边关于 $x$求导，利用链式法则将 $y$视为 $x$的函数，然后解出 $\\frac{dy}{dx}$。例如对 $x^2 + y^2 = 1$两边求导得 $2x + 2y\\cdot\\frac{dy}{dx} = 0$，从而 $\\frac{dy}{dx} = -\\frac{x}{y}$。",
+      "prerequisites": [
+        "math-deriv-chain",
+        "math-deriv-trig",
+        "math-deriv-exp-log"
+      ],
+      "misconceptions": [
+        "对含 y 的项求导时忘记乘以 dy/dx（即忘记 y 是 x 的函数）",
+        "求出 dy/dx 后没有整理化简，或忘记用原方程将结果中的 y 进一步消去（如果题目要求）",
+        "在某些点上 y = 0 时忘记讨论导数不存在的情况"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "如果 $x$和 $y$的关系由方程给出而非 $y = f(x)$的显式形式，你还能对等式两边求导吗？"
+        },
+        {
+          "level": "L2",
+          "text": "关键在于：求导时把 y 当成 x 的函数，所以含 y 的项要用链式法则——对 y 求导后再乘以 dy/dx。"
+        },
+        {
+          "level": "L3",
+          "text": "对等式两边关于 x 求导，含 y 的项产生 dy/dx 因子，然后将所有 dy/dx 项收集到一边，解出 dy/dx 的表达式。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-deriv-parametric",
+      "title": "参数方程求导",
+      "level": "technique",
+      "difficulty": 3,
+      "summary": "当曲线由参数方程 $x = x(t)$、$y = y(t)$给出时，导数 $\\frac{dy}{dx} = \\frac{dy/dt}{dx/dt}$，条件是 $\\frac{dx}{dt} \\neq 0$。二阶导数 $\\frac{d^2y}{dx^2} = \\frac{\\frac{d}{dt}(\\frac{dy}{dx})}{\\frac{dx}{dt}}$。参数方程求导在物理学中描述运动轨迹时非常常见。",
+      "prerequisites": [
+        "math-deriv-chain",
+        "math-deriv-geometric"
+      ],
+      "misconceptions": [
+        "将 $\\frac{dy}{dx}$算成 $\\frac{dx/dt}{dy/dt}$，分子分母颠倒",
+        "计算二阶导数时直接对 dy/dx 关于 t 再求导一次，忘记还要除以 dx/dt",
+        "忘记检查 dx/dt = 0 的情况——此时切线可能是垂直的"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "如果 x 和 y 都是参数 t 的函数，当 t 变化时，dy/dx 能用 dy/dt 和 dx/dt 表示吗？"
+        },
+        {
+          "level": "L2",
+          "text": "利用链式法则的思想：$\\frac{dy}{dx} = \\frac{dy}{dt}\\cdot\\frac{dt}{dx} = \\frac{dy/dt}{dx/dt}$。"
+        },
+        {
+          "level": "L3",
+          "text": "分子是 $y$对参数的导数，分母是 $x$对参数的导数。注意 $\\frac{dx}{dt} \\neq 0$这个前提条件。二阶导数需再除以一次 $\\frac{dx}{dt}$。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-deriv-higher-order",
+      "title": "高阶导数",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "二阶导数 $f''(x)$是对一阶导数再求导的结果，记作 $\\frac{d^2y}{dx^2}$或 $f''(x)$。它描述函数变化率的变化率，物理中对应加速度。更高阶导数依次类推：$f^{(n)}(x)$。莱布尼茨公式给出了乘积的 $n$阶导数：$(fg)^{(n)} = \\sum_{k=0}^{n} C(n,k) f^{(k)} g^{(n-k)}$。",
+      "prerequisites": [
+        "math-deriv-sum-product",
+        "math-deriv-chain"
+      ],
+      "misconceptions": [
+        "将 $f''(x)$理解为 $(f'(x))^2$（平方）而非对 $f'(x)$再求导",
+        "在物理应用中混淆位置、速度、加速度的导数关系",
+        "计算 n 阶导数时没有发现规律，导致重复计算而无法得出通项公式"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "一阶导数描述变化率，那变化率的变化率又代表什么？"
+        },
+        {
+          "level": "L2",
+          "text": "如果一阶导数是速度，二阶导数就是加速度——它描述曲线的弯曲方向（凹凸性）。"
+        },
+        {
+          "level": "L3",
+          "text": "f''(x) = (f'(x))'，就是对 f'(x) 再求一次导。注意符号：f'' 不是 f' 的平方，而是 f' 的导数。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-deriv-differential",
+      "title": "微分的概念",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "函数 $f(x)$在 $x_0$处的微分定义为 $dy = f'(x_0)dx$，其中 $dx$是自变量的增量。微分 $dy$是函数增量 $\\Delta y$的线性主部，即当 $\\Delta x \\to 0$时，$\\Delta y \\approx dy + o(\\Delta x)$。微分具有形式不变性：无论 $u$是自变量还是中间变量，$dy = f'(u)du$的形式不变。",
+      "prerequisites": [
+        "math-deriv-definition",
+        "math-deriv-geometric"
+      ],
+      "misconceptions": [
+        "将微分 $dy$和增量 $\\Delta y$混为一谈，忽略了微分只是增量的线性近似部分",
+        "认为 dx 只是一个记号，不理解它是可以独立取值的自变量增量",
+        "在变量替换积分时忘记微分的形式不变性"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "如果函数在某点附近的增量 $\\Delta y$可以分成线性部分和高阶小量，线性部分是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "$\\Delta y = f(x_0+\\Delta x) − f(x_0) \\approx f'(x_0)\\cdot\\Delta x$，这个近似的误差是 $\\Delta x$的高阶无穷小。"
+        },
+        {
+          "level": "L3",
+          "text": "定义 $dy = f'(x_0)dx$，其中 $dx = \\Delta x$。$dy$是 $\\Delta y$的最佳线性近似，几何上对应切线上的增量。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-deriv-linear-approx",
+      "title": "线性近似与微分应用",
+      "level": "application",
+      "difficulty": 3,
+      "summary": "利用微分进行线性近似：$f(x) \\approx f(a) + f'(a)(x − a)$，当 $x$接近 $a$时精度较高。常见近似：$\\sin x \\approx x$，$e^x \\approx 1 + x$，$\\ln(1+x) \\approx x$（均在 $x \\approx 0$时成立）。微分还用于误差估计：若 $y = f(x)$，$x$的绝对误差为 $\\Delta x$，则 $y$的绝对误差约为 $|f'(x)|\\cdot|\\Delta x|$。",
+      "prerequisites": [
+        "math-deriv-differential",
+        "math-deriv-trig",
+        "math-deriv-exp-log"
+      ],
+      "misconceptions": [
+        "在 x 远离展开点 a 时仍然使用线性近似，导致误差不可接受",
+        "忘记线性近似只是一阶泰勒展开，更高精度需要更高阶项",
+        "在误差估计中混淆绝对误差和相对误差"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "如果函数在某点附近的行为接近线性，我们能用一条直线来近似它吗？"
+        },
+        {
+          "level": "L2",
+          "text": "切线方程 $y = f(a) + f'(a)(x − a)$给出了函数在 $a$附近的最佳线性近似。"
+        },
+        {
+          "level": "L3",
+          "text": "$f(x) \\approx f(a) + f'(a)(x − a)$就是线性近似公式。例如 $\\sin(0.01) \\approx \\sin 0 + \\cos 0 \\cdot 0.01 = 0.01$。误差随 $|x − a|$的增大而增大。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    }
+  ]
+}

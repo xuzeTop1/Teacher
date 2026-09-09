@@ -1,0 +1,823 @@
+{
+  "subject": "education",
+  "course": "pedagogy",
+  "chapter": "education-pedagogy",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "education-pedagogy-q001",
+      "title": "教育的质的规定性",
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "教育的质的规定性在于：",
+      "answer": "B",
+      "solutionSteps": [
+        "教育的根本是'培养人'。",
+        "选B。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "教育区别于一般社会影响的关键在于'培养人'。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "用定义反推：有目的培养人。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-pedagogy-002"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 传授知识",
+        "B. 培养人",
+        "C. 组织教学",
+        "D. 管理学生"
+      ]
+    },
+    {
+      "id": "education-pedagogy-q002",
+      "title": "教育功能维度",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "下列体现教育'个体发展功能'的是：",
+      "answer": "C",
+      "solutionSteps": [
+        "A/B/D 多属社会功能。",
+        "选C。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "区分个体功能与社会功能。"
+        },
+        {
+          "level": "L2",
+          "text": "选C。"
+        },
+        {
+          "level": "L3",
+          "text": "个体功能指向'人自身的发展'。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-pedagogy-003"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 提高劳动力素质",
+        "B. 传承文化",
+        "C. 促进个人个性发展",
+        "D. 维护政治稳定"
+      ]
+    },
+    {
+      "id": "education-pedagogy-q003",
+      "title": "身心发展规律",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "教学要'循序渐进'，主要依据人的发展的：",
+      "answer": "A",
+      "solutionSteps": [
+        "循序渐进对应顺序性。",
+        "选A。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "顺序性要求由浅入深。"
+        },
+        {
+          "level": "L2",
+          "text": "选A。"
+        },
+        {
+          "level": "L3",
+          "text": "别与阶段性混淆。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-pedagogy-005"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 顺序性",
+        "B. 不平衡性",
+        "C. 互补性",
+        "D. 个别差异性"
+      ]
+    },
+    {
+      "id": "education-pedagogy-q004",
+      "title": "教育目的与方针",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "关于教育目的与教育方针，正确的是：",
+      "answer": "B",
+      "solutionSteps": [
+        "方针含性质、途径、目的。",
+        "选B。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "方针比目的多'怎么办'。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "先定位概念层级。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-pedagogy-006"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 二者完全等同",
+        "B. 方针含目的但范围更宽",
+        "C. 目的包含方针",
+        "D. 没有关系"
+      ]
+    },
+    {
+      "id": "education-pedagogy-q005",
+      "title": "学制类型",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "美国现行学制主要属于：",
+      "answer": "B",
+      "solutionSteps": [
+        "美国单轨。",
+        "选B。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "单轨制。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "双轨在欧洲、分支型在中苏。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-pedagogy-008"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 双轨制",
+        "B. 单轨制",
+        "C. 分支型",
+        "D. 无学制"
+      ]
+    },
+    {
+      "id": "education-pedagogy-q006",
+      "title": "课程类型",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "以学生的经验为中心、重直接体验的课程是：",
+      "answer": "B",
+      "solutionSteps": [
+        "活动课程=经验课程。",
+        "选B。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "活动课程以学生经验为中心。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "与学科课程相对。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-pedagogy-010"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 学科课程",
+        "B. 活动课程",
+        "C. 隐性课程",
+        "D. 必修课程"
+      ]
+    },
+    {
+      "id": "education-pedagogy-q007",
+      "title": "教学本质",
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "教学是：",
+      "answer": "C",
+      "solutionSteps": [
+        "教学是双边。",
+        "选C。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "教与学统一。"
+        },
+        {
+          "level": "L2",
+          "text": "选C。"
+        },
+        {
+          "level": "L3",
+          "text": "排除单边说。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-pedagogy-011"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 教师单方面的讲授",
+        "B. 学生的自学",
+        "C. 教与学双边统一的活动",
+        "D. 单纯的认知过程"
+      ]
+    },
+    {
+      "id": "education-pedagogy-q008",
+      "title": "教学过程间接性",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "学生主要以掌握什么经验为主？",
+      "answer": "B",
+      "solutionSteps": [
+        "教学以间接经验为主。",
+        "选B。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "间接经验=人类积累的知识。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "直接经验是基础但非主体。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-pedagogy-012"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 直接经验",
+        "B. 间接经验",
+        "C. 本能经验",
+        "D. 随机经验"
+      ]
+    },
+    {
+      "id": "education-pedagogy-q009",
+      "title": "启发性原则",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "启发性教学原则主要反对：",
+      "answer": "B",
+      "solutionSteps": [
+        "启发反对灌输。",
+        "选B。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "启发性对应学生主体性。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "区分原则内涵。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-pedagogy-013"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 因材施教",
+        "B. 灌输式",
+        "C. 循序渐进",
+        "D. 巩固性"
+      ]
+    },
+    {
+      "id": "education-pedagogy-q010",
+      "title": "班级授课制确立者",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "系统确立班级授课制的教育家是：",
+      "answer": "C",
+      "solutionSteps": [
+        "夸美纽斯《大教学论》。",
+        "选C。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "班级授课制由夸美纽斯确立。"
+        },
+        {
+          "level": "L2",
+          "text": "选C。"
+        },
+        {
+          "level": "L3",
+          "text": "赫尔巴特是科学化。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-pedagogy-015"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 赫尔巴特",
+        "B. 杜威",
+        "C. 夸美纽斯",
+        "D. 卢梭"
+      ]
+    },
+    {
+      "id": "education-pedagogy-q011",
+      "title": "德育过程要素",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "德育过程是知、情、意、行统一发展的过程，其中'行'指：",
+      "answer": "D",
+      "solutionSteps": [
+        "行=道德行为。",
+        "选D。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "知行情意对应四要素。"
+        },
+        {
+          "level": "L2",
+          "text": "选D。"
+        },
+        {
+          "level": "L3",
+          "text": "实践是落脚点。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-pedagogy-016"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 道德认识",
+        "B. 道德情感",
+        "C. 道德意志",
+        "D. 道德行为"
+      ]
+    },
+    {
+      "id": "education-pedagogy-q012",
+      "title": "师生关系",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "理想师生关系的特征不包括：",
+      "answer": "D",
+      "solutionSteps": [
+        "绝对权威违背民主平等。",
+        "选D。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "师生关系强调民主平等。"
+        },
+        {
+          "level": "L2",
+          "text": "选D。"
+        },
+        {
+          "level": "L3",
+          "text": "排除专制项。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-pedagogy-017"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 民主平等",
+        "B. 尊师爱生",
+        "C. 教学相长",
+        "D. 教师绝对权威"
+      ]
+    },
+    {
+      "id": "education-pedagogy-q013",
+      "title": "形成性评价",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "平时课堂小测主要属于：",
+      "answer": "B",
+      "solutionSteps": [
+        "平时小测=形成性。",
+        "选B。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "形成性重在过程中反馈。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "与总结性区分。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-pedagogy-018"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 诊断性评价",
+        "B. 形成性评价",
+        "C. 总结性评价",
+        "D. 绝对评价"
+      ]
+    },
+    {
+      "id": "education-pedagogy-q014",
+      "title": "终身教育",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "终身教育强调：",
+      "answer": "B",
+      "solutionSteps": [
+        "终身=一生。",
+        "选B。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "终身教育贯通各类场所。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "排除学校中心。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-pedagogy-019"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 仅学校阶段",
+        "B. 贯穿人的一生",
+        "C. 仅职业培训",
+        "D. 仅儿童期"
+      ]
+    },
+    {
+      "id": "education-pedagogy-q015",
+      "title": "相关研究",
+      "type": "diagnostic",
+      "difficulty": 3,
+      "content": "研究发现'课外阅读时间'与'语文成绩'正相关，可以得出的稳妥结论是：",
+      "answer": "B",
+      "solutionSteps": [
+        "相关不等于因果。",
+        "选B。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "区分相关与因果。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "避免过度推断。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-pedagogy-020"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 阅读导致成绩提高",
+        "B. 二者相关但不等于因果",
+        "C. 成绩提高导致阅读",
+        "D. 毫无关系"
+      ]
+    },
+    {
+      "id": "education-pedagogy-q016",
+      "title": "教育与社会（综合）",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "有人认为'只要加大教育投入，就能立刻解决社会不平等'。请评析。",
+      "answer": "1) 教育受生产力与制度制约，不能脱离社会单独决定公平。",
+      "solutionSteps": [
+        "1) 教育受生产力与制度制约，不能脱离社会单独决定公平。",
+        "2) 教育能通过提升人力资本促进流动，但是慢变量。",
+        "3) 结论：教育重要但需配合分配与制度政策，不能夸大其即时决定作用。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先承认教育的作用。"
+        },
+        {
+          "level": "L2",
+          "text": "再指出社会制约。"
+        },
+        {
+          "level": "L3",
+          "text": "回到'培养人'这一根本，判断该说法是否站得住。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-pedagogy-004"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "education-pedagogy-q017",
+      "title": "五育关系",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "简述全面发展教育中五育的关系。",
+      "answer": "1) 五育各有相对独立任务（德、智、体、美、劳）。",
+      "solutionSteps": [
+        "1) 五育各有相对独立任务（德、智、体、美、劳）。",
+        "2) 相互渗透、相互促进，智育不等于全部。",
+        "3) 实践中要防止以智育取代其余各育。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先列五育。"
+        },
+        {
+          "level": "L2",
+          "text": "再谈联系。"
+        },
+        {
+          "level": "L3",
+          "text": "想想学校和家庭在这个问题上分工有何不同。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-pedagogy-007"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "education-pedagogy-q018",
+      "title": "教学原则应用",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "举例说明'因材施教'原则如何在课堂落实。",
+      "answer": "1) 了解学生差异（认知、兴趣、起点）。",
+      "solutionSteps": [
+        "1) 了解学生差异（认知、兴趣、起点）。",
+        "2) 设计分层任务与个别指导。",
+        "3) 评价兼顾共性标准与个体进步。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先定义原则。"
+        },
+        {
+          "level": "L2",
+          "text": "再给做法。"
+        },
+        {
+          "level": "L3",
+          "text": "用一句自己的话重述这个概念，再对照定义。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-pedagogy-013"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "education-pedagogy-q019",
+      "title": "班级授课制评价",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "有人说'班级授课制压制个性'，你是否同意？给出分析框架。",
+      "answer": "1) 承认局限：难照顾个别差异。",
+      "solutionSteps": [
+        "1) 承认局限：难照顾个别差异。",
+        "2) 承认优势：效率高、系统性强、便于普及。",
+        "3) 结论：问题不在制度本身，而在配套差异化教学。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "辩证看。"
+        },
+        {
+          "level": "L2",
+          "text": "先优后劣或反之。"
+        },
+        {
+          "level": "L3",
+          "text": "举一个反例，看这个原则会不会被推翻。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-pedagogy-015"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "education-pedagogy-q020",
+      "title": "课程类型辨析",
+      "type": "diagnostic",
+      "difficulty": 3,
+      "content": "为何现代课程强调学科课程与活动课程融合？",
+      "answer": "1) 学科课程重系统知识，活动课程重直接经验。",
+      "solutionSteps": [
+        "1) 学科课程重系统知识，活动课程重直接经验。",
+        "2) 二者互补：知识需经活动内化。",
+        "3) 融合取向体现'知识—经验—实践'统一。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先分述二者。"
+        },
+        {
+          "level": "L2",
+          "text": "再谈融合理由。"
+        },
+        {
+          "level": "L3",
+          "text": "把'目的—内容—方法'串成一条线来理解。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-pedagogy-010"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft"
+    }
+  ]
+}

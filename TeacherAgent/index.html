@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TeacherAgent</title>
+    <style>
+      html, body { margin: 0; min-height: 100%; background: #f7f3eb; }
+      #boot-splash {
+        position: fixed; inset: 0; display: grid; place-items: center;
+        color: #162033;
+        background:
+          radial-gradient(circle at 78% 12%, rgba(214, 154, 45, .14), transparent 28%),
+          linear-gradient(135deg, #fbf8f1 0%, #f5efe3 54%, #f8f3eb 100%);
+        font-family: Aptos, "Segoe UI", "Microsoft YaHei", sans-serif;
+      }
+      .boot-content { display: grid; justify-items: center; gap: 16px; animation: boot-enter .48s ease-out both; }
+      .boot-orbit { position: relative; display: grid; width: 92px; height: 92px; place-items: center; }
+      .boot-mark {
+        display: grid; width: 52px; height: 52px; place-items: center;
+        border-radius: 14px; color: #fff8df; background: linear-gradient(145deg, #0b2c5e, #123f78);
+        box-shadow: 0 10px 24px rgba(13, 50, 100, .18); font-size: 27px; font-weight: 800;
+        animation: boot-float 2.4s ease-in-out infinite;
+      }
+      .boot-orbit::before { content: ""; position: absolute; inset: 4px; border: 1px solid rgba(46, 108, 183, .22); border-radius: 50%; animation: boot-orbit 4.4s linear infinite; }
+      .boot-orbit-dot { position: absolute; top: 50%; left: 50%; width: 9px; height: 9px; border-radius: 50%; box-shadow: 0 0 0 5px rgba(46, 108, 183, .08); animation: boot-dot-orbit 2.7s linear infinite; }
+      .boot-orbit-dot-blue { background: #2e6cb7; }
+      .boot-orbit-dot-gold { width: 7px; height: 7px; background: #d69a2d; box-shadow: 0 0 0 5px rgba(214, 154, 45, .10); animation-delay: -1.35s; }
+      .boot-title { font-size: 19px; font-weight: 700; letter-spacing: .02em; animation: boot-title-in .7s .1s ease-out both; }
+      .boot-status { color: #6a7280; font-size: 14px; }
+      .boot-spinner { width: 22px; height: 22px; border: 3px solid #dce6f4; border-top-color: #2e6cb7; border-radius: 50%; animation: boot-spin .8s linear infinite; }
+      @keyframes boot-spin { to { transform: rotate(360deg); } }
+      @keyframes boot-enter { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+      @keyframes boot-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+      @keyframes boot-orbit { to { transform: rotate(360deg); } }
+      @keyframes boot-dot-orbit { from { transform: rotate(0deg) translateX(40px) rotate(0deg); } to { transform: rotate(360deg) translateX(40px) rotate(-360deg); } }
+      @keyframes boot-title-in { from { opacity: 0; letter-spacing: .12em; } to { opacity: 1; letter-spacing: .02em; } }
+      @media (prefers-reduced-motion: reduce) {
+        .boot-content, .boot-mark, .boot-orbit::before, .boot-orbit-dot, .boot-title, .boot-spinner { animation: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <div id="boot-splash" role="status" aria-live="polite">
+      <div class="boot-content">
+        <div class="boot-orbit" aria-hidden="true">
+          <span class="boot-orbit-dot boot-orbit-dot-blue"></span>
+          <span class="boot-orbit-dot boot-orbit-dot-gold"></span>
+          <div class="boot-mark">T</div>
+        </div>
+        <div class="boot-title">TeacherAgent</div>
+        <div class="boot-spinner" aria-hidden="true"></div>
+        <div id="boot-status" class="boot-status">正在启动学习空间…</div>
+      </div>
+    </div>
+    <script type="module" src="/src/bootstrap.ts"></script>
+  </body>
+</html>

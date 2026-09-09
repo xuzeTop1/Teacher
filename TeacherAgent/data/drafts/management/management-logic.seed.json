@@ -1,0 +1,684 @@
+{
+  "subject": "management",
+  "course": "logic",
+  "chapter": "management-logic",
+  "status": "draft",
+  "nodes": [
+    {
+      "id": "management-logic-001",
+      "title": "推理与论证的基本结构",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "论证由前提与结论组成，推理是从已知命题得出新命题的思维过程。识别前提与结论是逻辑分析的第一步。",
+      "prerequisites": [],
+      "misconceptions": [
+        "把个人观点当作已证前提",
+        "认为结论越强论证越有效"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "先找出这段话里'因为'和'所以'分别指向什么。"
+        },
+        {
+          "level": "L2",
+          "text": "区分前提（理由）和结论（主张）是分析任何论证的起点。"
+        },
+        {
+          "level": "L3",
+          "text": "判断一段文字是不是论证，看它是否在用理由支持某个主张。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-logic-002",
+      "title": "演绎推理与有效论证",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "演绎推理要求若前提为真则结论必然为真；有效论证指结构保真，不要求前提实际为真。",
+      "prerequisites": [
+        "management-logic-001"
+      ],
+      "misconceptions": [
+        "把'有效'误解为'结论符合事实'",
+        "混淆前提真与推理有效"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "想一想：前提真、结论假，这种情况在演绎推理里可能吗？"
+        },
+        {
+          "level": "L2",
+          "text": "有效性只关心结构，不关心前提是否碰巧为真。"
+        },
+        {
+          "level": "L3",
+          "text": "判断有效性：假设前提都真，结论是否一定真？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-logic-003",
+      "title": "归纳推理",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "归纳推理由特殊到一般，结论超出前提范围，具有或然性；样本的代表性决定结论的可靠程度。",
+      "prerequisites": [
+        "management-logic-001"
+      ],
+      "misconceptions": [
+        "认为归纳结论一定为真",
+        "忽视样本偏差"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个结论是从多少个例子推出来的？例子够典型吗？"
+        },
+        {
+          "level": "L2",
+          "text": "归纳结论是可错的一般性猜想，不是必然真理。"
+        },
+        {
+          "level": "L3",
+          "text": "检查样本是否有选择性偏差，是评价归纳的关键。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-logic-004",
+      "title": "类比推理",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "类比推理根据两个对象某些属性相似，推出其他属性也相似；相似属性的相关性和数量影响可信度。",
+      "prerequisites": [
+        "management-logic-001"
+      ],
+      "misconceptions": [
+        "把表面相似当本质相似",
+        "忽视可比性"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这两个事物真正可比的维度是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "类比的强度取决于相似属性与目标属性的相关程度。"
+        },
+        {
+          "level": "L3",
+          "text": "先找本质差异，再判断类比能否成立。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-logic-005",
+      "title": "同一律",
+      "level": "principle",
+      "difficulty": 1,
+      "summary": "同一律要求在同一思维过程中概念或命题保持同一含义，避免偷换概念。",
+      "prerequisites": [
+        "management-logic-001"
+      ],
+      "misconceptions": [
+        "在同一论证里悄悄改变词语含义",
+        "认为同一律限制事物本身变化"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这句话里的'自由'前后是指同一件事吗？"
+        },
+        {
+          "level": "L2",
+          "text": "同一律管的是'讨论中含义是否一致'，不是事物是否变化。"
+        },
+        {
+          "level": "L3",
+          "text": "发现同一词出现两次含义不同，就是违反同一律的信号。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-logic-006",
+      "title": "矛盾律",
+      "level": "principle",
+      "difficulty": 1,
+      "summary": "矛盾律要求两个互相矛盾的命题不能同真，必有一假；用于识别自相矛盾的陈述。",
+      "prerequisites": [
+        "management-logic-005"
+      ],
+      "misconceptions": [
+        "把反对关系误当矛盾关系",
+        "认为矛盾律要求命题同假"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这两句话能同时成立吗？若不能，至少一假。"
+        },
+        {
+          "level": "L2",
+          "text": "矛盾关系是非此即彼，反对关系可以同假。"
+        },
+        {
+          "level": "L3",
+          "text": "找矛盾：先确定两命题是否'不能同真'。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-logic-007",
+      "title": "排中律",
+      "level": "principle",
+      "difficulty": 2,
+      "summary": "排中律要求两个互相矛盾的命题不能同假，必有一真；适用于非此即彼的明确选择。",
+      "prerequisites": [
+        "management-logic-006"
+      ],
+      "misconceptions": [
+        "把'中立'误认为违反排中律",
+        "在模糊地带强行二选一"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这两个命题是否穷尽了所有可能？若穷尽则不能都假。"
+        },
+        {
+          "level": "L2",
+          "text": "排中律只在矛盾命题（非此即彼）上成立。"
+        },
+        {
+          "level": "L3",
+          "text": "存在中间状态时，排中律不直接适用。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-logic-008",
+      "title": "概念的内涵与外延",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "内涵是概念反映的对象本质属性，外延是概念适用的对象范围；内涵越深外延越窄。",
+      "prerequisites": [],
+      "misconceptions": [
+        "混淆内涵与外延",
+        "认为定义越长越好"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个词'是什么'（内涵）和它'管哪些东西'（外延）分别是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "内涵增加通常会缩小外延，二者反向变化。"
+        },
+        {
+          "level": "L3",
+          "text": "给概念下定义，先抓本质属性再定适用范围。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-logic-009",
+      "title": "概念间的关系",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "概念间有同一、包含、交叉、全异四种基本关系；画欧拉图可直观判断二者范围关系。",
+      "prerequisites": [
+        "management-logic-008"
+      ],
+      "misconceptions": [
+        "把交叉误判为包含",
+        "忽略全异中的矛盾与反对"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "用两个圆圈画出这两个概念的范围关系。"
+        },
+        {
+          "level": "L2",
+          "text": "交叉关系指有部分重叠而非整体包含。"
+        },
+        {
+          "level": "L3",
+          "text": "全异里再分矛盾（无中间）与反对（有中间）。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-logic-010",
+      "title": "直言命题与对当方阵",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "直言命题分全称肯定/否定、特称肯定/否定；对当方阵描述它们之间的矛盾、反对、下反对和差等关系。",
+      "prerequisites": [
+        "management-logic-009"
+      ],
+      "misconceptions": [
+        "记混方阵对角线矛盾关系",
+        "混淆'所有不'与'有的不'"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "方阵对角线永远是矛盾关系，先记住这一点。"
+        },
+        {
+          "level": "L2",
+          "text": "'所有S是P'的矛盾是'有的S不是P'。"
+        },
+        {
+          "level": "L3",
+          "text": "由一命题真假推出对当命题真假，按方阵关系走。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-logic-011",
+      "title": "联言与选言命题",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "联言命题（p且q）全真才真；相容选言（p或q）至少一真即真，不相容选言恰一真才真。",
+      "prerequisites": [
+        "management-logic-008"
+      ],
+      "misconceptions": [
+        "把相容选言当不相容",
+        "忽略联言'全真才真'"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这句话里'且'还是'或'？决定了真值条件。"
+        },
+        {
+          "level": "L2",
+          "text": "'或'在日常常指不相容，逻辑默认相容，要小心。"
+        },
+        {
+          "level": "L3",
+          "text": "联言命题只要一个支假整体就假。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-logic-012",
+      "title": "充分条件与必要条件",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "$p$是$q$的充分条件指$p\\to q$；$p$是$q$的必要条件指$q\\to p$。区分二者是假言推理的基础。",
+      "prerequisites": [
+        "management-logic-008"
+      ],
+      "misconceptions": [
+        "把充分当必要、必要当充分",
+        "用'只有…才'判断反了"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "问自己：有p是否一定有q？是则p充分。"
+        },
+        {
+          "level": "L2",
+          "text": "'只有p才q'说明p是q的必要条件。"
+        },
+        {
+          "level": "L3",
+          "text": "充分与必要互为逆否关系，画箭头最清楚。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-logic-013",
+      "title": "假言推理规则",
+      "level": "method",
+      "difficulty": 2,
+      "summary": "充分条件假言推理肯定前件则肯定后件、否定后件则否定前件；否定前件或肯定后件均无效。",
+      "prerequisites": [
+        "management-logic-012"
+      ],
+      "misconceptions": [
+        "误用'否定前件'推结论",
+        "误用'肯定后件'推结论"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "先写清 $p\\to q$，再看给的是$p$还是非$q$。"
+        },
+        {
+          "level": "L2",
+          "text": "肯定前件能推后件，否定后件能推否定前件。"
+        },
+        {
+          "level": "L3",
+          "text": "肯定后件是典型谬误，不能反推。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-logic-014",
+      "title": "否定代入法",
+      "level": "method",
+      "difficulty": 3,
+      "summary": "假设选项为假代入题干，检验是否导致矛盾或削弱结论，常用于必然性推理与削弱题。",
+      "prerequisites": [
+        "management-logic-013"
+      ],
+      "misconceptions": [
+        "代入后不检验一致性",
+        "把可能性当必然性"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "把选项取反后，题干还成立吗？"
+        },
+        {
+          "level": "L2",
+          "text": "若取反导致矛盾，则该选项往往必须为真。"
+        },
+        {
+          "level": "L3",
+          "text": "否定代入法适合'以下哪项必然为真'类题目。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-logic-015",
+      "title": "因果的削弱与加强",
+      "level": "method",
+      "difficulty": 3,
+      "summary": "削弱可指他因、因果倒置、断开联系；加强可排除他因、建立联系、举例佐证。",
+      "prerequisites": [
+        "management-logic-003"
+      ],
+      "misconceptions": [
+        "把相关当因果",
+        "削弱与加强方向搞反"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "题干说A导致B，你能否想到别的C也能导致B？"
+        },
+        {
+          "level": "L2",
+          "text": "因果倒置是最强削弱之一。"
+        },
+        {
+          "level": "L3",
+          "text": "加强常靠排除他因或补全因果链。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-logic-016",
+      "title": "统计与样本推理",
+      "level": "method",
+      "difficulty": 3,
+      "summary": "统计论证用样本推断总体；样本的随机性、代表性与样本容量直接影响结论可信度。",
+      "prerequisites": [
+        "management-logic-003"
+      ],
+      "misconceptions": [
+        "用方便样本代表总体",
+        "忽视百分比基数差异"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个样本是怎么抽的？能否代表总体？"
+        },
+        {
+          "level": "L2",
+          "text": "看比例前先看绝对基数，避免被百分比误导。"
+        },
+        {
+          "level": "L3",
+          "text": "样本偏差是统计论证最常见的漏洞。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-logic-017",
+      "title": "常见逻辑谬误",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "常见谬误包括偷换概念、诉诸权威/情感、以偏概全、滑坡谬误等；识别名称对应的结构即可辨析。",
+      "prerequisites": [
+        "management-logic-005"
+      ],
+      "misconceptions": [
+        "只记名称不识结构",
+        "把合理诉诸专家当谬误"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个结论是在用理由说服，还是用身份/情绪施压？"
+        },
+        {
+          "level": "L2",
+          "text": "以偏概全本质是小样本归纳过度。"
+        },
+        {
+          "level": "L3",
+          "text": "滑坡谬误把一连串未必发生的因果链当必然。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-logic-018",
+      "title": "论证评价",
+      "level": "method",
+      "difficulty": 2,
+      "summary": "评价论证看前提是否真实、推理是否有效、是否存在漏洞；先结构后内容再力度。",
+      "prerequisites": [
+        "management-logic-002"
+      ],
+      "misconceptions": [
+        "只凭结论对错评价论证",
+        "忽略隐含前提"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "分三步：前提真吗？推理有效吗？有漏洞吗？"
+        },
+        {
+          "level": "L2",
+          "text": "很多论证藏有未明说的前提，先补全。"
+        },
+        {
+          "level": "L3",
+          "text": "评价力度看前提对结论的支持强弱。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-logic-019",
+      "title": "识别论证漏洞",
+      "level": "method",
+      "difficulty": 3,
+      "summary": "漏洞常表现为概念偷换、以偏概全、因果不当、类比失当、循环论证等；定位漏洞类型再选对策。",
+      "prerequisites": [
+        "management-logic-018"
+      ],
+      "misconceptions": [
+        "笼统说'论证不严密'",
+        "找不到具体漏洞类型"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这段论证最可能被从哪一点攻破？"
+        },
+        {
+          "level": "L2",
+          "text": "具体指出漏洞类型，比说'有问题'更有力。"
+        },
+        {
+          "level": "L3",
+          "text": "循环论证是用结论证明前提本身。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "management-logic-020",
+      "title": "综合推理（排序与匹配）",
+      "level": "method",
+      "difficulty": 3,
+      "summary": "综合推理整合多个条件进行对象排序、匹配或分组；常用列表法与排除法逐步锁定。",
+      "prerequisites": [
+        "management-logic-009"
+      ],
+      "misconceptions": [
+        "条件多时凭感觉猜",
+        "不建立条件表"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "先把所有条件列成一张表，再逐条排除。"
+        },
+        {
+          "level": "L2",
+          "text": "排序题先固定最确定的端点或唯一项。"
+        },
+        {
+          "level": "L3",
+          "text": "匹配题用二维表标记可行/不可行最高效。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    }
+  ]
+}

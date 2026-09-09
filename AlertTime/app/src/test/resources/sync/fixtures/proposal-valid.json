@@ -1,0 +1,75 @@
+{
+  "format": "alerttime-teacher-sync",
+  "schemaVersion": 1,
+  "messageType": "proposal",
+  "deviceId": "f0a24c19-0f8e-4b6d-9a3c-77e1b2d4c5a6",
+  "generatedAt": 1785603700000,
+  "appVersion": "0.1.0",
+  "protocolCapabilities": { "fullSnapshotV1": true, "proposalsV1": true },
+  "cursor": null,
+  "payload": {
+    "proposals": [
+      {
+        "proposalId": "9c2d6e5f-4a7b-4c8d-9e0f-1a2b3c4d5e6f",
+        "deviceId": "f0a24c19-0f8e-4b6d-9a3c-77e1b2d4c5a6",
+        "version": 1,
+        "status": "pending",
+        "rationale": "本周英语投入 3.2 小时、计划完成率 40%（2/5 完成）；诊断显示一般现在时与现在完成时混淆（答对 2/5）。建议下周聚焦时态专项，先完成 10 题诊断后再进入写作练习。",
+        "proposedWeeklyGoals": [
+          {
+            "weekStart": 1785974400000,
+            "title": "完成时态专项 10 题",
+            "successCriteria": "正确率 ≥ 80%"
+          }
+        ],
+        "proposedTasks": [
+          {
+            "title": "复习一般现在时与现在完成时",
+            "subjectRemoteId": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
+            "targetDurationSeconds": 1800,
+            "dueAt": null
+          },
+          {
+            "title": "完成时态专项练习 5 题",
+            "subjectRemoteId": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
+            "targetDurationSeconds": 1500,
+            "dueAt": 1786060800000
+          }
+        ],
+        "sourceAssessmentIds": [
+          "d1e2f3a4-b5c6-4d7e-8f9a-0b1c2d3e4f5a"
+        ],
+        "createdAt": 1785603600000,
+        "expiresAt": null
+      },
+      {
+        "proposalId": "7e8f9a0b-1c2d-4e5f-8a9b-0c1d2e3f4a5b",
+        "deviceId": "f0a24c19-0f8e-4b6d-9a3c-77e1b2d4c5a6",
+        "version": 1,
+        "status": "accepted",
+        "rationale": "用户已明确采纳本周高等数学目标与复习任务。",
+        "proposedWeeklyGoals": [
+          {
+            "weekStart": 1785369600000,
+            "title": "完成高数第一章课后题",
+            "successCriteria": "正确率 ≥ 80%"
+          }
+        ],
+        "proposedTasks": [
+          {
+            "title": "复习极限与连续",
+            "subjectRemoteId": "b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e",
+            "targetDurationSeconds": 3600,
+            "dueAt": 1785500000000
+          }
+        ],
+        "sourceAssessmentIds": [
+          "e2f3a4b5-c6d7-4e8f-9a0b-1c2d3e4f5a6b"
+        ],
+        "createdAt": 1785369000000,
+        "expiresAt": null
+      }
+    ],
+    "nextCursor": "7e8f9a0b-1c2d-4e5f-8a9b-0c1d2e3f4a5b"
+  }
+}

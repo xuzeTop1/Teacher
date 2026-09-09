@@ -1,0 +1,823 @@
+{
+  "subject": "education",
+  "course": "psychology",
+  "chapter": "education-psychology",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "education-psychology-q001",
+      "title": "皮亚杰阶段",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "前运算阶段大致对应的年龄是：",
+      "answer": "B",
+      "solutionSteps": [
+        "前运算$2-7$岁。",
+        "选B。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "四阶段年龄要记牢。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "感知运动$0-2$、形式运算$11+$。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-psychology-002"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 0-2岁",
+        "B. 2-7岁",
+        "C. 7-11岁",
+        "D. 11岁以上"
+      ]
+    },
+    {
+      "id": "education-psychology-q002",
+      "title": "最近发展区",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "维果茨基的'最近发展区'是指：",
+      "answer": "C",
+      "solutionSteps": [
+        "ZPD是两水平之差。",
+        "选C。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "教学应走在发展前面。"
+        },
+        {
+          "level": "L2",
+          "text": "选C。"
+        },
+        {
+          "level": "L3",
+          "text": "不是单点能力。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-psychology-003"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 现有水平",
+        "B. 潜在水平",
+        "C. 现有与潜在水平之差",
+        "D. 已掌握知识"
+      ]
+    },
+    {
+      "id": "education-psychology-q003",
+      "title": "布鲁纳表征",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "布鲁纳提出的表征方式不包括：",
+      "answer": "D",
+      "solutionSteps": [
+        "表征有动作/映像/符号三种。",
+        "选D。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "三种表征是考点。"
+        },
+        {
+          "level": "L2",
+          "text": "选D。"
+        },
+        {
+          "level": "L3",
+          "text": "排除唯一化表述。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-psychology-004"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 动作表征",
+        "B. 映像表征",
+        "C. 符号表征",
+        "D. 语言表征作为唯一"
+      ]
+    },
+    {
+      "id": "education-psychology-q004",
+      "title": "先行组织者",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "奥苏贝尔的'先行组织者'作用是：",
+      "answer": "B",
+      "solutionSteps": [
+        "先行组织者促进同化。",
+        "选B。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "它位于学习材料之前。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "联系有意义学习。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-psychology-005"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 替代练习",
+        "B. 在新旧知识间搭桥",
+        "C. 直接给答案",
+        "D. 惩罚错误"
+      ]
+    },
+    {
+      "id": "education-psychology-q005",
+      "title": "负强化",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "下列属于负强化的是：",
+      "answer": "B",
+      "solutionSteps": [
+        "负强化=移除厌恶增行为。",
+        "选B。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "正强化加愉快，负强化撤厌恶。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "惩罚是降概率。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-psychology-007"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 表扬",
+        "B. 撤销处分以增进行为",
+        "C. 批评",
+        "D. 罚站"
+      ]
+    },
+    {
+      "id": "education-psychology-q006",
+      "title": "自我效能来源",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "提升自我效能感最有效的是：",
+      "answer": "C",
+      "solutionSteps": [
+        "成败经验最有力。",
+        "选C。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "自我效能针对具体任务。"
+        },
+        {
+          "level": "L2",
+          "text": "选C。"
+        },
+        {
+          "level": "L3",
+          "text": "来源有四但成败最强。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-psychology-011"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 言语说服",
+        "B. 替代经验",
+        "C. 直接成功经验",
+        "D. 情绪平静"
+      ]
+    },
+    {
+      "id": "education-psychology-q007",
+      "title": "归因维度",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "引导学生把失败归因于'努力'更有利，因为努力是：",
+      "answer": "B",
+      "solutionSteps": [
+        "努力=不稳定可控。",
+        "选B。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "可控性决定能动性。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "能力是稳定不可控。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-psychology-010"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 稳定不可控",
+        "B. 不稳定可控",
+        "C. 稳定可控",
+        "D. 不稳定不可控"
+      ]
+    },
+    {
+      "id": "education-psychology-q008",
+      "title": "耶克斯-多德森",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "根据耶克斯-多德森定律，难度越大的任务，最佳动机水平应：",
+      "answer": "B",
+      "solutionSteps": [
+        "难任务宜低动机。",
+        "选B。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "动机与效率倒U。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "易任务可高动机。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-psychology-009"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 越高",
+        "B. 越低",
+        "C. 不变",
+        "D. 无关"
+      ]
+    },
+    {
+      "id": "education-psychology-q009",
+      "title": "迁移理论",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "'共同要素说'的提出者是：",
+      "answer": "B",
+      "solutionSteps": [
+        "共同要素说=桑代克。",
+        "选B。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "贾德是概括化。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "苛勒是关系转换。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-psychology-014"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 贾德",
+        "B. 桑代克",
+        "C. 苛勒",
+        "D. 布鲁纳"
+      ]
+    },
+    {
+      "id": "education-psychology-q010",
+      "title": "科尔伯格",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "科尔伯格道德发展理论包含：",
+      "answer": "B",
+      "solutionSteps": [
+        "三水平六阶段。",
+        "选B。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "前习俗/习俗/后习俗。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "别与皮亚杰混淆。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-psychology-016"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 三阶段",
+        "B. 三水平六阶段",
+        "C. 两水平",
+        "D. 四阶段"
+      ]
+    },
+    {
+      "id": "education-psychology-q011",
+      "title": "加涅学习结果",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "加涅学习结果分类不包括：",
+      "answer": "D",
+      "solutionSteps": [
+        "五类无'道德规范'。",
+        "选D。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "五类：言语/智慧/策略/动作/态度。"
+        },
+        {
+          "level": "L2",
+          "text": "选D。"
+        },
+        {
+          "level": "L3",
+          "text": "态度是其中一类。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-psychology-017"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 言语信息",
+        "B. 智慧技能",
+        "C. 认知策略",
+        "D. 道德规范"
+      ]
+    },
+    {
+      "id": "education-psychology-q012",
+      "title": "元认知",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "元认知策略主要指：",
+      "answer": "B",
+      "solutionSteps": [
+        "元认知=计划监视调节。",
+        "选B。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "元认知是对认知的认知。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "复述属认知策略。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-psychology-019"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 复述",
+        "B. 计划、监视、调节",
+        "C. 组织提纲",
+        "D. 做笔记"
+      ]
+    },
+    {
+      "id": "education-psychology-q013",
+      "title": "心智技能阶段",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "加里培林心智技能形成的最终阶段是：",
+      "answer": "C",
+      "solutionSteps": [
+        "内部言语是终点。",
+        "选C。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "五阶段顺序要记。"
+        },
+        {
+          "level": "L2",
+          "text": "选C。"
+        },
+        {
+          "level": "L3",
+          "text": "原型内化完成。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-psychology-018"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 物质化",
+        "B. 出声外部言语",
+        "C. 内部言语",
+        "D. 活动定向"
+      ]
+    },
+    {
+      "id": "education-psychology-q014",
+      "title": "观察学习",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "班杜拉观察学习的环节不含：",
+      "answer": "D",
+      "solutionSteps": [
+        "四环节无惩罚。",
+        "选D。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "注意-保持-再现-动机。"
+        },
+        {
+          "level": "L2",
+          "text": "选D。"
+        },
+        {
+          "level": "L3",
+          "text": "动机可来自替代强化。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-psychology-008"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 注意",
+        "B. 保持",
+        "C. 再现",
+        "D. 惩罚"
+      ]
+    },
+    {
+      "id": "education-psychology-q015",
+      "title": "知识类型",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "'如何解一元二次方程'属于：",
+      "answer": "B",
+      "solutionSteps": [
+        "怎么做=程序性。",
+        "选B。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "陈述性是'是什么'。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "程序性靠练习。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-psychology-012"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft",
+      "options": [
+        "A. 陈述性知识",
+        "B. 程序性知识",
+        "C. 元认知",
+        "D. 态度"
+      ]
+    },
+    {
+      "id": "education-psychology-q016",
+      "title": "建构主义教学",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "基于建构主义，设计一节'浮力'课的要点。",
+      "answer": "1) 创设真实问题情境（如轮船为何漂浮）。",
+      "solutionSteps": [
+        "1) 创设真实问题情境（如轮船为何漂浮）。",
+        "2) 提供协作与对话，让学生自己建构。",
+        "3) 教师作为支架，引导而非灌输，最后归纳原理。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先提情境。"
+        },
+        {
+          "level": "L2",
+          "text": "再讲支架。"
+        },
+        {
+          "level": "L3",
+          "text": "结合一个真实课堂例子，检验这个概念是否说得通。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-psychology-006"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "education-psychology-q017",
+      "title": "动机培养",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "如何在中学生中培养内部学习动机？",
+      "answer": "1) 任务设计有趣且有挑战性（最近发展区内）。",
+      "solutionSteps": [
+        "1) 任务设计有趣且有挑战性（最近发展区内）。",
+        "2) 给予自主性与积极反馈，避免只用外部奖惩。",
+        "3) 培养自我效能与掌握目标。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先谈内在兴趣。"
+        },
+        {
+          "level": "L2",
+          "text": "再谈反馈方式。"
+        },
+        {
+          "level": "L3",
+          "text": "先区分'应然'（应当怎样）与'实然'（实际怎样）。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-psychology-009"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "education-psychology-q018",
+      "title": "归因训练",
+      "type": "diagnostic",
+      "difficulty": 3,
+      "content": "一名学生总把失败归因为'我笨'，作为教师怎么办？",
+      "answer": "1) 指出能力是稳定不可控，此归因有害。",
+      "solutionSteps": [
+        "1) 指出能力是稳定不可控，此归因有害。",
+        "2) 引导转向'努力/方法'（可控、不稳定）。",
+        "3) 用具体进步证据重建效能感。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先识别错误归因。"
+        },
+        {
+          "level": "L2",
+          "text": "再给替代归因。"
+        },
+        {
+          "level": "L3",
+          "text": "注意理论提出者的核心关切，避免张冠李戴。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-psychology-010"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "education-psychology-q019",
+      "title": "迁移促进",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "怎样促进学习迁移？",
+      "answer": "1) 教概括化原理（贾德），而非死记。",
+      "solutionSteps": [
+        "1) 教概括化原理（贾德），而非死记。",
+        "2) 提供相似情境与变式练习（共同要素）。",
+        "3) 培养元认知，促进策略迁移。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先讲概括。"
+        },
+        {
+          "level": "L2",
+          "text": "再讲情境。"
+        },
+        {
+          "level": "L3",
+          "text": "联系教育目的，看这一做法服务什么价值。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-psychology-014"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "education-psychology-q020",
+      "title": "差异教学",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "班里学生认知风格分'场独立'与'场依存'，教学如何兼顾？",
+      "answer": "1) 场独立者适自主分析任务，场依存者适合作与结构。",
+      "solutionSteps": [
+        "1) 场独立者适自主分析任务，场依存者适合作与结构。",
+        "2) 提供多种呈现与分组方式。",
+        "3) 用支架兼顾两类，避免单一模式。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先区分两类。"
+        },
+        {
+          "level": "L2",
+          "text": "再给做法。"
+        },
+        {
+          "level": "L3",
+          "text": "用'谁—在什么条件下—达到什么效果'梳理因果关系。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "education-psychology-020"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
+      },
+      "status": "draft"
+    }
+  ]
+}

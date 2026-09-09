@@ -1,0 +1,214 @@
+{
+  "subject": "math",
+  "course": "calculus",
+  "chapter": "integral-applications",
+  "status": "approved",
+  "nodes": [
+    {
+      "id": "math-intapp-area-curves",
+      "title": "曲线围成的面积",
+      "level": "method",
+      "difficulty": 2,
+      "summary": "两条曲线 $y=f(x)$和 $y=g(x)$在 $[a,b]$上围成的面积为 $\\int_a^b |f(x)-g(x)|dx$。关键是确定交点（积分限）和在每段上哪条曲线在上方。若用 $y$作积分变量，面积 $= \\int_c^d |$右函数 -左函数$|dy$。",
+      "prerequisites": [
+        "math-defint-ftc",
+        "math-app-deriv-extrema"
+      ],
+      "misconceptions": [
+        "忘记取绝对值导致面积为负",
+        "用 x 积分和 y 积分时搞混上下限"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "$y=x^2$和 $y=x$围成的区域，交点在哪里？"
+        },
+        {
+          "level": "L2",
+          "text": "在 [0,1]上 $x$和 $x^2$谁在上方？积分怎么写？"
+        },
+        {
+          "level": "L3",
+          "text": "如果两条曲线交叉（上下关系翻转），积分怎么处理？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-intapp-volume-disk",
+      "title": "旋转体体积：圆盘法",
+      "level": "method",
+      "difficulty": 2,
+      "summary": "曲线 $y=f(x)$绕 $x$轴旋转所得体积 $V = \\pi\\int_a^b [f(x)]^2dx$。本质是把旋转体切成薄圆盘，每个圆盘体积 $\\pi[f(x)]^2\\Delta x$，再求和取极限。绕 $y$轴时用 $x = g(y)$类似处理。",
+      "prerequisites": [
+        "math-defint-ftc"
+      ],
+      "misconceptions": [
+        "忘记平方或忘记乘 $\\pi$",
+        "混淆绕 x 轴和绕 y 轴的公式"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "$y=x^2$绕 $x$轴旋转，每个截面是什么形状？面积怎么算？"
+        },
+        {
+          "level": "L2",
+          "text": "圆盘法的积分公式中 $[f(x)]^2$代表什么？"
+        },
+        {
+          "level": "L3",
+          "text": "如果绕 y 轴而不是 x 轴旋转，公式怎么变？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-intapp-volume-shell",
+      "title": "旋转体体积：柱壳法",
+      "level": "method",
+      "difficulty": 3,
+      "summary": "曲线 $y=f(x)$绕 $y$轴旋转的体积 $V = 2\\pi\\int_a^b x\\cdot f(x)dx$。柱壳法把旋转体切成薄柱壳，每个体积 $2\\pi x\\cdot f(x)\\cdot\\Delta x$。当用圆盘法需要解出 $x=g(y)$很麻烦时，柱壳法往往更方便。",
+      "prerequisites": [
+        "math-intapp-volume-disk"
+      ],
+      "misconceptions": [
+        "柱壳法中忘乘 $2\\pi x$",
+        "不知道何时该用柱壳法而非圆盘法"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "柱壳法中的 $2\\pi x$代表什么几何量？"
+        },
+        {
+          "level": "L2",
+          "text": "$y=x^2$绕 $y$轴旋转，用柱壳法和圆盘法分别试试哪个更方便？"
+        },
+        {
+          "level": "L3",
+          "text": "什么情况下柱壳法比圆盘法简单？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-intapp-arc-length",
+      "title": "弧长公式",
+      "level": "method",
+      "difficulty": 2,
+      "summary": "光滑曲线 $y=f(x)$在 $[a,b]$上的弧长 $s = \\int_a^b \\sqrt{1 + [f'(x)]^2}\\,dx$。参数方程 $x=x(t), y=y(t)$的弧长 $s = \\int_\\alpha^\\beta \\sqrt{x'^2 + y'^2}\\,dt$。弧长公式来自勾股定理的无穷小形式。",
+      "prerequisites": [
+        "math-defint-substitution",
+        "math-deriv-sum-product"
+      ],
+      "misconceptions": [
+        "忘记开根号",
+        "参数方程弧长公式中漏掉一个导数的平方"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "曲线上的微小弧段 ds 和 dx、dy 之间是什么关系？"
+        },
+        {
+          "level": "L2",
+          "text": "为什么 $ds = \\sqrt{dx^2 + dy^2} = \\sqrt{1 + (\\frac{dy}{dx})^2}\\,dx$？"
+        },
+        {
+          "level": "L3",
+          "text": "$y = x^{3/2}$在 [0,1]上的弧长积分怎么写？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-intapp-average-value",
+      "title": "函数的平均值",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "函数 $f(x)$在 $[a,b]$上的平均值为 $f̄ = \\frac{1}{b-a}\\int_a^b f(x)\\,dx$。这是离散平均值的连续推广。平均值定理：连续函数在 $[a,b]$上必有一点取到其平均值。",
+      "prerequisites": [
+        "math-defint-ftc"
+      ],
+      "misconceptions": [
+        "把平均值和中位数混淆",
+        "忘记除以区间长度 (b-a)"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "$f(x)=x$在 [0,2]上的平均值是多少？"
+        },
+        {
+          "level": "L2",
+          "text": "平均值定理和中值定理有什么联系？"
+        },
+        {
+          "level": "L3",
+          "text": "为什么平均值公式要除以 (b-a)？和离散平均有什么类比？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-intapp-work",
+      "title": "变力做功",
+      "level": "method",
+      "difficulty": 2,
+      "summary": "变力 $F(x)$沿 $x$轴从 $a$到 $b$做功 $W = \\int_a^b F(x)dx$。弹簧胡克力 $F=kx$做功为 $\\int_0^x$kx $dx = kx^2/2$。泵送液体做功需考虑每层液体的重力和提升距离。",
+      "prerequisites": [
+        "math-defint-ftc"
+      ],
+      "misconceptions": [
+        "对泵送问题中提升距离的表达出错",
+        "混淆恒力做功 W=Fs 和变力做功"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "恒力做功 W=Fs，如果力随位置变化怎么办？"
+        },
+        {
+          "level": "L2",
+          "text": "弹簧拉伸 x 距离时，力从 0 变到 kx，做功怎么算？"
+        },
+        {
+          "level": "L3",
+          "text": "泵送水箱中的水，每层水的提升距离不同，怎么建积分？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    }
+  ]
+}

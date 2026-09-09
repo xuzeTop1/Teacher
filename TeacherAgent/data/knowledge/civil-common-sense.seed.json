@@ -1,0 +1,178 @@
+{
+  "subject": "xingce",
+  "course": "xingce",
+  "chapter": "civil-common-sense",
+  "status": "draft",
+  "nodes": [
+    {
+      "id": "xingce-sense-politics",
+      "title": "常识判断：政治与制度",
+      "level": "concept",
+      "summary": "覆盖国家机构职权划分、人民代表大会制度、基本政治制度等通用常识。以官方公开表述为准，区分「权力机关」「行政机关」「监察机关」「司法机关」的职权边界。",
+      "prerequisites": [],
+      "misconceptions": [
+        "混淆人大与政府的职权",
+        "把党的领导制度与其他制度混为一谈"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "题目问的是哪一类国家机构的职权？"
+        },
+        {
+          "level": "L2",
+          "text": "这个职权属于权力机关、行政机关还是司法机关？"
+        },
+        {
+          "level": "L3",
+          "text": "选项里有没有把不同机关的职权张冠李戴？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。本条为基于公开考试大纲范围生成的 AI 草稿，具体事实、法律条文和政策表述需以权威来源及人工审核为准。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "xingce-sense-law",
+      "title": "常识判断：法律基础",
+      "level": "concept",
+      "summary": "覆盖宪法基本原则、民法中的民事权利、刑法中的犯罪构成等基础常识。以现行法律条文表述为准，区分法律责任类型（民事/行政/刑事）。",
+      "prerequisites": [],
+      "misconceptions": [
+        "混淆民事责任与刑事责任",
+        "把法律原则当成具体条文结论"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这是民事、行政还是刑事领域的问题？"
+        },
+        {
+          "level": "L2",
+          "text": "相关主体的权利义务分别是什么？"
+        },
+        {
+          "level": "L3",
+          "text": "选项有没有把不同性质的法律责任混在一起？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。本条为基于公开考试大纲范围生成的 AI 草稿，具体事实、法律条文和政策表述需以权威来源及人工审核为准。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "xingce-sense-economy",
+      "title": "常识判断：经济基础",
+      "level": "concept",
+      "summary": "覆盖宏观经济（GDP、通货膨胀、货币政策与财政政策）与微观经济（供需、市场类型）的基础概念。区分政策手段属于货币还是财政。",
+      "prerequisites": [],
+      "misconceptions": [
+        "把货币政策与财政政策手段混淆",
+        "把供给和需求变动对价格的影响搞反"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "题目说的是央行手段还是政府收支手段？"
+        },
+        {
+          "level": "L2",
+          "text": "需求上升会对价格和数量产生什么影响？"
+        },
+        {
+          "level": "L3",
+          "text": "选项里哪个属于扩张性政策，哪个属于紧缩性？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。本条为基于公开考试大纲范围生成的 AI 草稿，具体事实、法律条文和政策表述需以权威来源及人工审核为准。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "xingce-sense-tech",
+      "title": "常识判断：科技与生活",
+      "level": "concept",
+      "summary": "覆盖重大科技成就、基础科学原理与生活中的科学常识。优先记「首次/第一/原理」类事实，注意区分科学事实与伪科学表述。",
+      "prerequisites": [],
+      "misconceptions": [
+        "把科幻表述当科学事实",
+        "混淆基础概念（如引力、电磁波）"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个说法符合公认的科学原理吗？"
+        },
+        {
+          "level": "L2",
+          "text": "题目强调的「首次/第一」对应哪个成就？"
+        },
+        {
+          "level": "L3",
+          "text": "选项有没有把相近概念偷换？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。本条为基于公开考试大纲范围生成的 AI 草稿，具体事实、法律条文和政策表述需以权威来源及人工审核为准。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "xingce-sense-humanity",
+      "title": "常识判断：人文历史",
+      "level": "concept",
+      "summary": "覆盖中国古代史重要节点、文化典籍与艺术成就等通识。以通行历史教材表述为准，注意时间线与因果，不凭模糊印象选答。",
+      "prerequisites": [],
+      "misconceptions": [
+        "时间线错位，把朝代顺序记反",
+        "把文学作品与作者张冠李戴"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这件事发生在哪个朝代，前后还有哪些大事？"
+        },
+        {
+          "level": "L2",
+          "text": "这部作品和作者的对应关系对吗？"
+        },
+        {
+          "level": "L3",
+          "text": "选项有没有把时间或人物挪到错误位置？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。本条为基于公开考试大纲范围生成的 AI 草稿，具体事实、法律条文和政策表述需以权威来源及人工审核为准。"
+      },
+      "reviewStatus": "draft"
+    }
+  ]
+}

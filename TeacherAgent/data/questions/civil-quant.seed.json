@@ -1,0 +1,164 @@
+{
+  "subject": "xingce",
+  "course": "xingce",
+  "chapter": "civil-quant",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "xingce-quant-q001-engineer",
+      "title": "数量关系：工程问题",
+      "knowledgeNodeIds": [
+        "xingce-quant-engineer"
+      ],
+      "type": "quant_word",
+      "difficulty": 2,
+      "content": "一项工程，甲单独做需 6 天，乙单独做需 3 天。两人合作需要几天完成？",
+      "answer": "2 天。赋总量 6，甲效 1、乙效 2，合作效率和 3，6/3=2 天。",
+      "solutionSteps": [
+        "赋工作总量为 6（6 和 3 的公倍数）。",
+        "甲效率=6/6=1，乙效率=6/3=2。",
+        "合作效率和=3，时间=6/3=2 天。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "给总工作量赋个方便的数，比如 6？"
+        },
+        {
+          "level": "L2",
+          "text": "甲和乙每天各完成多少？"
+        },
+        {
+          "level": "L3",
+          "text": "两人合起来每天完成多少，总量除以它？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "xingce-quant-q002-permcomb",
+      "title": "数量关系：排列组合",
+      "knowledgeNodeIds": [
+        "xingce-quant-permcomb"
+      ],
+      "type": "quant_permcomb",
+      "difficulty": 2,
+      "content": "从 5 名候选人中选 3 人组成一个小组（不考虑顺序），有多少种选法？",
+      "answer": "10 种。C(5,3)=5×4×3/(3×2×1)=10。",
+      "solutionSteps": [
+        "选人不考虑顺序，用组合 C(5,3)。",
+        "C(5,3)=10。",
+        "结论 10 种。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "选出来的人交换顺序算不同结果吗？用排列还是组合？"
+        },
+        {
+          "level": "L2",
+          "text": "组合数 C(5,3) 怎么算？"
+        },
+        {
+          "level": "L3",
+          "text": "C(5,3) 等于 C(5,2)，算哪个更简便？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "xingce-quant-q003-inclusion",
+      "title": "数量关系：容斥原理",
+      "knowledgeNodeIds": [
+        "xingce-quant-inclusion"
+      ],
+      "type": "quant_inclusion",
+      "difficulty": 2,
+      "content": "某班 50 人，会英语 30 人，会日语 25 人，两种都会 10 人。两种都不会的有几人？",
+      "answer": "5 人。至少会一种 = 30+25-10=45，都不会 = 50-45=5。",
+      "solutionSteps": [
+        "至少会一种 = 英 + 日 - 都会 = 30+25-10。",
+        "=45 人。",
+        "都不会 = 总数 50-45=5。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "画两个相交圆，把数字填进去。"
+        },
+        {
+          "level": "L2",
+          "text": "至少会一种怎么算，别忘了减重叠？"
+        },
+        {
+          "level": "L3",
+          "text": "总数减去至少会一种，就是都不会的。"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "xingce-quant-q004-substitute",
+      "title": "数量关系：代入排除",
+      "knowledgeNodeIds": [
+        "xingce-quant-substitute"
+      ],
+      "type": "quant_substitute",
+      "difficulty": 1,
+      "content": "一个两位数，个位比十位大 2，且两数之和是 10。这个数是？A. 46  B. 64  C. 28  D. 82",
+      "answer": "A（46）。个位 6 比十位 4 大 2，且 4+6=10；代入即验证。",
+      "solutionSteps": [
+        "从选项反代条件。",
+        "A：6-4=2 且 4+6=10，符合。",
+        "其余不满足，故选 A。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "正面列式麻烦，能不能拿选项往条件里代？"
+        },
+        {
+          "level": "L2",
+          "text": "先看「个位比十位大 2」能排除哪些？"
+        },
+        {
+          "level": "L3",
+          "text": "再用「和是 10」确认剩下的选项。"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。"
+      },
+      "reviewStatus": "draft"
+    }
+  ]
+}

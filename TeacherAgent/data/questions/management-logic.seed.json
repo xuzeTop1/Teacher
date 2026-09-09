@@ -1,0 +1,818 @@
+{
+  "subject": "management",
+  "course": "management-logic",
+  "chapter": "management-logic",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "management-logic-q-001",
+      "title": "假言命题等价",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "'若p则q'等价于（ ）。",
+      "options": [
+        "非p或q",
+        "p且q",
+        "非q或p",
+        "p或非q"
+      ],
+      "answer": "非p或q",
+      "solutionSteps": [
+        "$p\\to q$等价于 $¬p∨q$。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断考点类型。"
+        },
+        {
+          "level": "L2",
+          "text": "再调用对应公式或规则。"
+        },
+        {
+          "level": "L3",
+          "text": "写出关键一步再给答案。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-logic-002"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "management-logic-q-002",
+      "title": "逆否推理",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "由'若下雨则地湿'，可有效推出（ ）。",
+      "options": [
+        "若地不湿则没下雨",
+        "若地湿则下雨了",
+        "没下雨则地不湿",
+        "以上皆可"
+      ],
+      "answer": "若地不湿则没下雨",
+      "solutionSteps": [
+        "有效式为否定后件：地不湿⇒没下雨。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "列出已知量与目标。"
+        },
+        {
+          "level": "L2",
+          "text": "建立关系（方程/推理）。"
+        },
+        {
+          "level": "L3",
+          "text": "检查单位与条件。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-logic-003"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "management-logic-q-003",
+      "title": "削弱最强",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "结论'喝牛奶导致长高'。下列最能削弱的是？A.爱喝牛奶的人也爱运动 B.遗传决定身高 C.样本仅10人 D.有人不喝奶也高",
+      "options": null,
+      "answer": "削弱结论需直接攻击因果。",
+      "solutionSteps": [
+        "削弱结论需直接攻击因果。",
+        "B指遗传为他因，削弱因果联系最强。",
+        "A、D弱，C仅质疑样本。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判定题型（问题求解/充分性/逻辑/写作）。"
+        },
+        {
+          "level": "L2",
+          "text": "再用对应套路。"
+        },
+        {
+          "level": "L3",
+          "text": "结构清晰不易失分。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-logic-006",
+        "management-logic-011"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "management-logic-q-004",
+      "title": "必要假设",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "论证'因A所以B'要成立，必要假设是（ ）。",
+      "options": [
+        "A确实是B的原因",
+        "B很好",
+        "A常见",
+        "有人反对"
+      ],
+      "answer": "A确实是B的原因",
+      "solutionSteps": [
+        "必要假设须是论证成立缺之不可的前提。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "条件是否充分？"
+        },
+        {
+          "level": "L2",
+          "text": "A单独能否推出结论？B呢？"
+        },
+        {
+          "level": "L3",
+          "text": "按标准选项判定。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-logic-008"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "management-logic-q-005",
+      "title": "谬误识别",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "'我邻居吸烟也长寿，所以吸烟无害'犯了（ ）。",
+      "options": [
+        "以偏概全",
+        "因果倒置",
+        "偷换概念",
+        "滑坡"
+      ],
+      "answer": "以偏概全",
+      "solutionSteps": [
+        "以个别反例概括全体，属以偏概全。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "论证缺了哪一环？"
+        },
+        {
+          "level": "L2",
+          "text": "指出谬误类型。"
+        },
+        {
+          "level": "L3",
+          "text": "给出分析句。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-logic-014"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "management-logic-q-006",
+      "title": "论证结构",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "分析论证第一步是（ ）。",
+      "options": [
+        "找结论与前提",
+        "找例子",
+        "看字数",
+        "看作者"
+      ],
+      "answer": "找结论与前提",
+      "solutionSteps": [
+        "先定位结论与支撑前提。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先审题立意。"
+        },
+        {
+          "level": "L2",
+          "text": "再搭结构。"
+        },
+        {
+          "level": "L3",
+          "text": "最后补论据。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-logic-005"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "management-logic-q-007",
+      "title": "类比强度",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "类比推理要强，关键在于（ ）。",
+      "options": [
+        "相似点相关且重要",
+        "数量多",
+        "语言华丽",
+        "出处权威"
+      ],
+      "answer": "类比强度取决于相似点的相关性与重要性。",
+      "solutionSteps": [
+        "类比强度取决于相似点的相关性与重要性。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "区分充分与必要。"
+        },
+        {
+          "level": "L2",
+          "text": "别把必要条件当充分。"
+        },
+        {
+          "level": "L3",
+          "text": "用具体判断作答。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-logic-010"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "management-logic-q-008",
+      "title": "因果倒置",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "研究发现'喝咖啡者心脏病多'，遂称咖啡致心脏病。漏洞是（ ）。",
+      "options": [
+        "可能因果倒置（心脏病者更爱喝咖啡）",
+        "样本少",
+        "无关",
+        "统计错"
+      ],
+      "answer": "可能因果倒置（心脏病者更爱喝咖啡）",
+      "solutionSteps": [
+        "相关未必因果，可能倒置或第三变量。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先找结论与论据。"
+        },
+        {
+          "level": "L2",
+          "text": "再看推理是否跳跃。"
+        },
+        {
+          "level": "L3",
+          "text": "用缺陷名词收尾。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-logic-011"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "management-logic-q-009",
+      "title": "综合推理方法",
+      "type": "diagnostic",
+      "difficulty": 3,
+      "content": "综合推理题最稳妥的入手是（ ）。",
+      "options": [
+        "从确定信息列表排除",
+        "猜一个",
+        "先看选项",
+        "跳过"
+      ],
+      "answer": "以确定的条件为支点，列表排除推进。",
+      "solutionSteps": [
+        "以确定的条件为支点，列表排除推进。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断考点类型。"
+        },
+        {
+          "level": "L2",
+          "text": "再调用对应公式或规则。"
+        },
+        {
+          "level": "L3",
+          "text": "写出关键一步再给答案。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-logic-012"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "management-logic-q-010",
+      "title": "逻辑题型性质",
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "管综逻辑题（ ）。",
+      "options": [
+        "均为单选且考思维规则不考专业",
+        "含主观题",
+        "考专业知识",
+        "开卷"
+      ],
+      "answer": "均为单选且考思维规则不考专业",
+      "solutionSteps": [
+        "管综逻辑全单选，重规则不考专业内容。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断考点类型。"
+        },
+        {
+          "level": "L2",
+          "text": "再调用对应公式或规则。"
+        },
+        {
+          "level": "L3",
+          "text": "写出关键一步再给答案。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-logic-016"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "management-logic-q-011",
+      "title": "矛盾律",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "同时主张'所有鸟会飞'与'有的鸟不会飞'，违反（ ）。",
+      "options": [
+        "矛盾律",
+        "同一律",
+        "排中律",
+        "充足理由"
+      ],
+      "answer": "矛盾律",
+      "solutionSteps": [
+        "两可（自相矛盾）违反矛盾律。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "列出已知量与目标。"
+        },
+        {
+          "level": "L2",
+          "text": "建立关系（方程/推理）。"
+        },
+        {
+          "level": "L3",
+          "text": "检查单位与条件。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-logic-013"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "management-logic-q-012",
+      "title": "加强方式",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "要支持'锻炼提升记忆'，最好（ ）。",
+      "options": [
+        "排除他因并补机制",
+        "举一个例子",
+        "说很多人同意",
+        "引名言"
+      ],
+      "answer": "排除他因+说明机制最能加强因果。",
+      "solutionSteps": [
+        "排除他因+说明机制最能加强因果。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判定题型（问题求解/充分性/逻辑/写作）。"
+        },
+        {
+          "level": "L2",
+          "text": "再用对应套路。"
+        },
+        {
+          "level": "L3",
+          "text": "结构清晰不易失分。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-logic-007"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "management-logic-q-013",
+      "title": "取非法检验假设",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "如何用'取非法'判断一个选项是否为必要假设？",
+      "options": null,
+      "answer": "先否定该选项。",
+      "solutionSteps": [
+        "先否定该选项。",
+        "若否定后论证崩溃则它是必要假设。",
+        "否则只是加强而非必要。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "条件是否充分？"
+        },
+        {
+          "level": "L2",
+          "text": "A单独能否推出结论？B呢？"
+        },
+        {
+          "level": "L3",
+          "text": "按标准选项判定。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-logic-008"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "management-logic-q-014",
+      "title": "争论焦点",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "甲说'应限塑'，乙说'限塑影响小商贩'。二人焦点是（ ）。",
+      "options": [
+        "限塑的利弊权衡",
+        "塑料颜色",
+        "谁说的对",
+        "天气"
+      ],
+      "answer": "焦点在限塑的利弊与影响之争。",
+      "solutionSteps": [
+        "焦点在限塑的利弊与影响之争。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "论证缺了哪一环？"
+        },
+        {
+          "level": "L2",
+          "text": "指出谬误类型。"
+        },
+        {
+          "level": "L3",
+          "text": "给出分析句。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-logic-019"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "management-logic-q-015",
+      "title": "隐含前提搭桥",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "论证：'他考试高分，所以能力强。'缺的隐含前提是什么？",
+      "options": null,
+      "answer": "需补'考试高分反映能力强'。",
+      "solutionSteps": [
+        "需补'考试高分反映能力强'。",
+        "这是搭桥使推理成立。",
+        "否则高分与能力无必然联系。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先审题立意。"
+        },
+        {
+          "level": "L2",
+          "text": "再搭结构。"
+        },
+        {
+          "level": "L3",
+          "text": "最后补论据。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-logic-018"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "management-logic-q-016",
+      "title": "解释题",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "解释题的目标是（ ）。",
+      "options": [
+        "说明矛盾现象为何发生",
+        "削弱结论",
+        "下结论",
+        "举反例"
+      ],
+      "answer": "说明矛盾现象为何发生",
+      "solutionSteps": [
+        "解释题找原因说明看似矛盾的现象。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "区分充分与必要。"
+        },
+        {
+          "level": "L2",
+          "text": "别把必要条件当充分。"
+        },
+        {
+          "level": "L3",
+          "text": "用具体判断作答。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-logic-009"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "management-logic-q-017",
+      "title": "周延判断",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "'所有S是P'中（ ）。",
+      "options": [
+        "S周延，P不周延",
+        "都周延",
+        "都不周延",
+        "P周延S不"
+      ],
+      "answer": "S周延，P不周延",
+      "solutionSteps": [
+        "全称主项S周延，肯定谓项P不周延。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先找结论与论据。"
+        },
+        {
+          "level": "L2",
+          "text": "再看推理是否跳跃。"
+        },
+        {
+          "level": "L3",
+          "text": "用缺陷名词收尾。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-logic-001"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "management-logic-q-018",
+      "title": "论证有效性联动",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "论证有效性分析文章应优先（ ）。",
+      "options": [
+        "指名谬误并分析",
+        "只说不对",
+        "抄原文",
+        "抒发感想"
+      ],
+      "answer": "先点出具体谬误名称再分析其如何削弱论证。",
+      "solutionSteps": [
+        "先点出具体谬误名称再分析其如何削弱论证。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断考点类型。"
+        },
+        {
+          "level": "L2",
+          "text": "再调用对应公式或规则。"
+        },
+        {
+          "level": "L3",
+          "text": "写出关键一步再给答案。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-logic-015"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "management-logic-q-019",
+      "title": "选言推理",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "已知'p或q'且'非p'，可推出（ ）。",
+      "options": [
+        "q",
+        "非q",
+        "p且q",
+        "无结论"
+      ],
+      "answer": "q",
+      "solutionSteps": [
+        "相容选言否定一支可肯定另一支。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "列出已知量与目标。"
+        },
+        {
+          "level": "L2",
+          "text": "建立关系（方程/推理）。"
+        },
+        {
+          "level": "L3",
+          "text": "检查单位与条件。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-logic-002"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "management-logic-q-020",
+      "title": "综合辨析：形式vs论证逻辑",
+      "type": "diagnostic",
+      "difficulty": 3,
+      "content": "形式逻辑与论证逻辑的主要区别是什么？各举管综中的一类题。",
+      "options": null,
+      "answer": "形式逻辑依符号规则（如假言推理）判定有效性。",
+      "solutionSteps": [
+        "形式逻辑依符号规则（如假言推理）判定有效性。",
+        "论证逻辑评实际论证强弱（削弱/加强/假设）。",
+        "前者重结构，后者重内容。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断考点类型。"
+        },
+        {
+          "level": "L2",
+          "text": "再调用对应公式或规则。"
+        },
+        {
+          "level": "L3",
+          "text": "写出关键一步再给答案。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-logic-002",
+        "management-logic-006"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    }
+  ]
+}

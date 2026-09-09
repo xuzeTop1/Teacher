@@ -1,0 +1,189 @@
+{
+  "subject": "math",
+  "course": "linear_algebra",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "la-q001",
+      "title": "矩阵乘法尺寸",
+      "content": "$A$是 $2\\times3$矩阵，$B$是 $3\\times4$矩阵，AB 的结果是什么尺寸？BA 能算吗？",
+      "type": "concept_check",
+      "difficulty": 1,
+      "knowledgeNodeIds": [
+        "la-matrix-multiplication"
+      ],
+      "answer": "AB是 $2\\times4$矩阵。BA 不能算，因为 $B$的列数 4不等于 $A$的行数 2。",
+      "solutionSteps": [
+        "矩阵乘法要求前一个矩阵的列数等于后一个矩阵的行数。",
+        "$A(2\\times3) \\times B(3\\times4)$：$A$的列数 3等于 $B$的行数 3，所以可以乘，结果是 $2\\times4$。",
+        "$B(3\\times4) \\times A(2\\times3)$：$B$的列数 4不等于 $A$的行数 2，所以不能乘。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "矩阵乘法对尺寸有什么要求？"
+        },
+        {
+          "level": "L2",
+          "text": "前矩阵的列数必须等于后矩阵的行数。"
+        },
+        {
+          "level": "L3",
+          "text": "2x3 矩阵和 3x2 矩阵相乘结果是什么尺寸？"
+        }
+      ],
+      "source": {
+        "title": "Original TeacherAgent seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "la-q002",
+      "title": "二阶行列式计算",
+      "content": "计算行列式 $\\begin{vmatrix} 3 & 1 \\\\ 2 & 4 \\end{vmatrix}$的值。",
+      "type": "solution",
+      "difficulty": 1,
+      "knowledgeNodeIds": [
+        "la-determinant-2x2"
+      ],
+      "answer": "10",
+      "solutionSteps": [
+        "二阶行列式 $\\begin{vmatrix} a & b \\\\\\ c & d \\end{vmatrix} =$ad $- bc$",
+        "$\\begin{vmatrix} 3 & 1 \\\\ 2 & 4 \\end{vmatrix} = 3\\times4 - 1\\times2 = 12 - 2 = 10$"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "二阶行列式的公式是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "主对角线乘积减去副对角线乘积。"
+        },
+        {
+          "level": "L3",
+          "text": "行列式的行变换和列变换对行列式值的影响一样吗？"
+        }
+      ],
+      "source": {
+        "title": "Original TeacherAgent seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "la-q003",
+      "title": "逆矩阵存在条件",
+      "content": "矩阵 $A = \\begin{bmatrix} 1 & 2 \\\\\\ 2 & 4 \\end{bmatrix}$有逆矩阵吗？为什么？",
+      "type": "concept_check",
+      "difficulty": 2,
+      "knowledgeNodeIds": [
+        "la-inverse-matrix",
+        "la-determinant-2x2"
+      ],
+      "answer": "没有逆矩阵，因为行列式为 0。",
+      "solutionSteps": [
+        "矩阵有逆矩阵的充要条件是行列式不为 0。",
+        "$\\det(A) = 1\\times4 - 2\\times2 = 4 - 4 = 0$。",
+        "行列式为 0，所以 A 没有逆矩阵。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "什么样的矩阵没有逆矩阵？"
+        },
+        {
+          "level": "L2",
+          "text": "先算行列式看看。"
+        },
+        {
+          "level": "L3",
+          "text": "什么情况下用克拉默法则比高斯消元更方便？"
+        }
+      ],
+      "source": {
+        "title": "Original TeacherAgent seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "la-q004",
+      "title": "线性组合",
+      "content": "向量 $(5, 7)$能否表示为 $(1, 2)$和 $(2, 1)$的线性组合？如果能，系数是多少？",
+      "type": "solution",
+      "difficulty": 2,
+      "knowledgeNodeIds": [
+        "la-vector-linear-combination"
+      ],
+      "answer": "能。$(5, 7) = 3\\times(1, 2) + 1\\times(2, 1)$",
+      "solutionSteps": [
+        "设 $k1*(1,2) + k2*(2,1) = (5,7)$",
+        "展开得：$k1 + 2*k2 = 5$，$2*k1 + k2 = 7$",
+        "解方程组：$k1 = 3, k2 = 1$",
+        "验证：$3*(1,2) + 1*(2,1) = (3,6) + (2,1) = (5,7) ✓$"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "设系数 k1, k2，列方程组。"
+        },
+        {
+          "level": "L2",
+          "text": "$k1 + 2*k2 = 5$且 $2*k1 + k2 = 7$。"
+        },
+        {
+          "level": "L3",
+          "text": "向量组线性相关时，其中一个向量能用其他向量怎样表示？"
+        }
+      ],
+      "source": {
+        "title": "Original TeacherAgent seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "la-q005",
+      "title": "高斯消元",
+      "content": "用高斯消元法解方程组：x + y = 3，2x + 3y = 8。",
+      "type": "solution",
+      "difficulty": 2,
+      "knowledgeNodeIds": [
+        "la-gaussian-elimination"
+      ],
+      "answer": "x = 1, y = 2",
+      "solutionSteps": [
+        "增广矩阵：$\\begin{bmatrix} 1 & 1 & 3 \\\\\\ 2 & 3 & 8 \\end{bmatrix}$",
+        "$R2 ← R2 - 2*R1$：$\\begin{bmatrix} 1 & 1 & 3 \\\\\\ 0 & 1 & 2 \\end{bmatrix}$",
+        "从第二行得 y = 2",
+        "代入第一行：$x + 2 = 3$，得 $x = 1$"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先把增广矩阵写出来。"
+        },
+        {
+          "level": "L2",
+          "text": "用第二行减去第一行的 2 倍，消去 x。"
+        },
+        {
+          "level": "L3",
+          "text": "矩阵乘法的几何含义是什么？"
+        }
+      ],
+      "source": {
+        "title": "Original TeacherAgent seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    }
+  ]
+}

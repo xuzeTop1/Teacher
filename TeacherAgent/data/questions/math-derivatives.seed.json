@@ -1,0 +1,340 @@
+{
+  "subject": "math",
+  "course": "calculus",
+  "chapter": "derivatives",
+  "status": "approved",
+  "questions": [
+    {
+      "id": "math-deriv-q001-definition",
+      "title": "用定义求简单函数的导数",
+      "knowledgeNodeIds": [
+        "math-deriv-definition"
+      ],
+      "type": "solution",
+      "difficulty": 2,
+      "content": "用导数的极限定义求 $f(x) = x^2$在 $x=3$处的导数。",
+      "answer": "$f'(3) = 6$",
+      "solutionSteps": [
+        "$f'(3) = \\lim_{h \\to 0} \\frac{(3+h)^2 - 3^2}{h}$",
+        "$= \\lim_{h \\to 0} \\frac{9 + 6h + h^2 - 9}{h}$",
+        "$= \\lim_{h \\to 0} \\frac{6h + h^2}{h}$",
+        "$= \\lim_{h \\to 0} (6 + h) = 6$"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "写出差商 $[f(3+h) - f(3)] / h$。"
+        },
+        {
+          "level": "L2",
+          "text": "展开 $(3+h)^2$后分子能化简吗？"
+        },
+        {
+          "level": "L3",
+          "text": "如果用定义求 $f(x)=x^3$在 $x=2$处的导数，展开 $(2+h)^3$后会怎样？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-deriv-q002-chain",
+      "title": "复合函数求导",
+      "knowledgeNodeIds": [
+        "math-deriv-chain"
+      ],
+      "type": "solution",
+      "difficulty": 2,
+      "content": "求 $f(x) = \\sin(3x^2 + 1)$的导数。",
+      "answer": "$f'(x) = 6x\\cdot\\cos(3x^2 + 1)$",
+      "solutionSteps": [
+        "外层函数 $\\sin(u)$，内层函数 $u = 3x^2 + 1$",
+        "外层求导：$\\cos(u) = \\cos(3x^2 + 1)$",
+        "内层求导：du/dx = 6x",
+        "链式法则：$f'(x) = \\cos(3x^2 + 1) \\cdot 6x$"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "这个函数的外层和内层分别是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "链式法则要求把外层导数乘以内层导数，试试？"
+        },
+        {
+          "level": "L3",
+          "text": "如果内层不是 $3x^2+1$而是 $\\sin x$，链式法则的结果变成什么？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-deriv-q003-product",
+      "title": "乘法法则应用",
+      "knowledgeNodeIds": [
+        "math-deriv-sum-product"
+      ],
+      "type": "solution",
+      "difficulty": 2,
+      "content": "求 $f(x) = x^2 \\cdot e^x$的导数。",
+      "answer": "$f'(x) = e^x(x^2 + 2x)$",
+      "solutionSteps": [
+        "设 $u = x^2, v = e^x$",
+        "$u' = 2x, v' = e^x$",
+        "乘法法则：$f'(x) = u'v + uv' = 2x\\cdot e^x + x^2\\cdot e^x$",
+        "提取公因子：$f'(x) = e^x(2x + x^2)$"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "两个函数相乘的导数公式是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "结果能提取公因子化简吗？"
+        },
+        {
+          "level": "L3",
+          "text": "如果 $f=x^2*e^x*\\sin x$三个函数相乘，乘法法则怎么推广？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-deriv-q004-implicit",
+      "title": "隐函数求导",
+      "knowledgeNodeIds": [
+        "math-deriv-implicit"
+      ],
+      "type": "solution",
+      "difficulty": 3,
+      "content": "方程 $x^2 + y^2 = 25$在满足 $y \\neq 0$的点附近确定 $y$为 $x$的局部隐函数（由隐函数存在定理保证）。求该局部隐函数的导数 $\\frac{dy}{dx}$。",
+      "answer": "$\\frac{dy}{dx} = -\\frac{x}{y}$（$y \\neq 0$）",
+      "solutionSteps": [
+        "在 $y \\neq 0$的点附近，方程确定 $y$为 $x$的局部隐函数。对等式两边关于 $x$求导（$y$视为 $x$的函数）：$2x + 2y\\cdot\\frac{dy}{dx} = 0$",
+        "解出 $\\frac{dy}{dx}$：$2y\\cdot\\frac{dy}{dx} = -2x$",
+        "因 $y \\neq 0$，两边除以 $2y$：$\\frac{dy}{dx} = -\\frac{x}{y}$"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "对 $y^2$关于 $x$求导时，$y$是 $x$的函数，需要什么法则？"
+        },
+        {
+          "level": "L2",
+          "text": "求导后 dy/dx 出现在等式中，解方程求出它。"
+        },
+        {
+          "level": "L3",
+          "text": "如果方程是 $x^2+y^2+xy=1$，隐函数求导时 xy 项怎么处理？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-deriv-q005-higher-order",
+      "title": "高阶导数计算",
+      "knowledgeNodeIds": [
+        "math-deriv-higher-order"
+      ],
+      "type": "solution",
+      "difficulty": 2,
+      "content": "求 $f(x) = x^4 - 2x^3 + x$的三阶导数 $f'''(x)$。",
+      "answer": "f'''(x) = 24x - 12",
+      "solutionSteps": [
+        "$f'(x) = 4x^3 - 6x^2 + 1$",
+        "$f''(x) = 12x^2 - 12x$",
+        "f'''(x) = 24x - 12"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先求一阶导，再对一阶导求导。"
+        },
+        {
+          "level": "L2",
+          "text": "逐项求导，注意幂函数每次降一次幂。"
+        },
+        {
+          "level": "L3",
+          "text": "sin x 的 n 阶导数有什么规律？能写出通项公式吗？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-deriv-q006-differential",
+      "title": "微分近似计算",
+      "knowledgeNodeIds": [
+        "math-deriv-differential"
+      ],
+      "type": "solution",
+      "difficulty": 2,
+      "content": "用微分近似计算 $\\sqrt{25.6}$的近似值。",
+      "answer": "$\\sqrt{25.6} \\approx 5.06$",
+      "solutionSteps": [
+        "选 $f(x) = \\sqrt{x}, x_0 = 25, \\Delta x = 0.6$",
+        "$f'(x) = \\frac{1}{2\\sqrt{x}}, f'(25) = \\frac{1}{10} = 0.1$",
+        "$f(25) = 5$",
+        "$\\sqrt{25.6} \\approx f(25) + f'(25)\\cdot0.6 = 5 + 0.06 = 5.06$"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "选一个容易计算的点 $x_0=25$，$\\Delta x=0.6$。"
+        },
+        {
+          "level": "L2",
+          "text": "$f(x_0+\\Delta x) \\approx f(x_0) + f'(x_0)\\cdot\\Delta x$，代入试试。"
+        },
+        {
+          "level": "L3",
+          "text": "如果要近似 $\\ln(1.02)$，应该选哪个展开点？delta $x$是多少？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-deriv-q007-quotient",
+      "title": "除法法则应用",
+      "knowledgeNodeIds": [
+        "math-deriv-sum-product"
+      ],
+      "type": "solution",
+      "difficulty": 2,
+      "content": "求 $f(x) = \\frac{2x + 1}{x - 3}$的导数。",
+      "answer": "$f'(x) = \\frac{-7}{(x - 3)^2}$",
+      "solutionSteps": [
+        "设 u = 2x + 1, v = x - 3",
+        "u' = 2, v' = 1",
+        "除法法则：$f'(x) = \\frac{u'v - uv'}{v^2}$",
+        "$= \\frac{2(x-3) - (2x+1)\\cdot 1}{(x-3)^2}$",
+        "$= \\frac{2x - 6 - 2x - 1}{(x-3)^2} = \\frac{-7}{(x-3)^2}$"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "除法法则的分子是 u'v - uv' 还是 uv' - u'v？"
+        },
+        {
+          "level": "L2",
+          "text": "化简分子后看看能不能简化。"
+        },
+        {
+          "level": "L3",
+          "text": "如果分子分母都是复合函数，除法法则和链式法则怎么配合？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-deriv-q008-tangent-line",
+      "title": "求切线方程",
+      "knowledgeNodeIds": [
+        "math-deriv-geometric"
+      ],
+      "type": "solution",
+      "difficulty": 2,
+      "content": "求曲线 $y = x^3 - 2x$在点 $(1, -1)$处的切线方程。",
+      "answer": "y = x - 2",
+      "solutionSteps": [
+        "$y' = 3x^2 - 2$",
+        "在 $x=1$处斜率 $k = 3(1)^2 - 2 = 1$",
+        "切线方程：$y - (-1) = 1\\cdot(x - 1)$",
+        "化简：y = x - 2"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "切线斜率等于该点的导数值。"
+        },
+        {
+          "level": "L2",
+          "text": "点斜式 $y - y_0 = k(x - x_0)$代入斜率和点坐标。"
+        },
+        {
+          "level": "L3",
+          "text": "如果曲线在某点的导数为无穷大，切线是什么方向？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-deriv-q009-logarithmic",
+      "title": "对数求导法",
+      "knowledgeNodeIds": [
+        "math-deriv-implicit",
+        "math-deriv-chain"
+      ],
+      "type": "solution",
+      "difficulty": 3,
+      "content": "用对数求导法求 $y = x^x (x > 0)$的导数。",
+      "answer": "$y' = x^x(\\ln x + 1)$",
+      "solutionSteps": [
+        "取对数：ln y = x ln x",
+        "两边对 $x$求导：$(\\frac{1}{y})\\cdot y' = \\ln x + x\\cdot(\\frac{1}{x}) = \\ln x + 1$",
+        "$y' = y(\\ln x + 1) = x^x(\\ln x + 1)$"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "$x^x$既不是幂函数也不是指数函数，怎么处理？"
+        },
+        {
+          "level": "L2",
+          "text": "两边取 ln 后变成什么？再对 x 求导试试。"
+        },
+        {
+          "level": "L3",
+          "text": "对 $y=x^(x^2)$用对数求导法，$\\ln y$变成什么？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    }
+  ]
+}

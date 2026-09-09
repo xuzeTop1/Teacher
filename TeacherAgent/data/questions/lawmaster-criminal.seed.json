@@ -1,0 +1,811 @@
+{
+  "subject": "lawmaster",
+  "course": "lawmaster-criminal",
+  "chapter": "lawmaster-criminal",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "lawmaster-criminal-q-001",
+      "title": "罪刑法定",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "刑法基本原则中'法无明文规定不为罪'是指（ ）。",
+      "options": [
+        "罪刑法定",
+        "刑法平等",
+        "罪责刑相适应",
+        "从旧兼从轻"
+      ],
+      "answer": "罪刑法定",
+      "solutionSteps": [
+        "罪刑法定禁止类推入罪，是刑法基石。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先定性：这是民法还是刑法问题？"
+        },
+        {
+          "level": "L2",
+          "text": "再定位具体制度。"
+        },
+        {
+          "level": "L3",
+          "text": "按'定性—要件—结论'作答。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "lawmaster-criminal-001"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "lawmaster-criminal-q-002",
+      "title": "四要件",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "我国犯罪构成四要件不包括（ ）。",
+      "options": [
+        "违法性",
+        "犯罪客体",
+        "客观方面",
+        "主观方面"
+      ],
+      "answer": "违法性",
+      "solutionSteps": [
+        "四要件为客体/客观/主体/主观，违法性是三阶层概念。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "列出构成要件。"
+        },
+        {
+          "level": "L2",
+          "text": "逐条对应案情。"
+        },
+        {
+          "level": "L3",
+          "text": "缺哪条就不成立。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "lawmaster-criminal-002"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "lawmaster-criminal-q-003",
+      "title": "完全责任年龄",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "我国对绝大多数犯罪负完全刑事责任的年龄起点是（ ）。",
+      "options": [
+        "16周岁",
+        "14周岁",
+        "12周岁",
+        "18周岁"
+      ],
+      "answer": "16周岁",
+      "solutionSteps": [
+        "满16周岁对全部犯罪负刑事责任。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断行为性质。"
+        },
+        {
+          "level": "L2",
+          "text": "再谈违法性与有责性。"
+        },
+        {
+          "level": "L3",
+          "text": "结论要有法律根据。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "lawmaster-criminal-003"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "lawmaster-criminal-q-004",
+      "title": "故意与过失",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "应当预见而未预见以致损害，属于（ ）。",
+      "options": [
+        "过失",
+        "直接故意",
+        "间接故意",
+        "意外事件"
+      ],
+      "answer": "过失",
+      "solutionSteps": [
+        "应当预见而未预见=疏忽大意过失。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "区分此罪与彼罪的界限。"
+        },
+        {
+          "level": "L2",
+          "text": "关键区别事实是什么？"
+        },
+        {
+          "level": "L3",
+          "text": "用构成要件比对。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "lawmaster-criminal-004"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "lawmaster-criminal-q-005",
+      "title": "因果关系",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "甲打伤乙，乙就医途中遇车祸死亡。甲的伤害行为与乙死亡有无刑法因果关系？如何判断？",
+      "options": null,
+      "answer": "因果关系指危害行为对结果有无客观引起。",
+      "solutionSteps": [
+        "因果关系指危害行为对结果有无客观引起。",
+        "介入车祸若异常且独立，可能切断因果。",
+        "需判断介入因素是否可预见。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先答概念，再举法条。"
+        },
+        {
+          "level": "L2",
+          "text": "最后结合案情。"
+        },
+        {
+          "level": "L3",
+          "text": "法条+事实+结论三步走。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "lawmaster-criminal-005"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "lawmaster-criminal-q-006",
+      "title": "正当防卫限度",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "防卫明显超过必要限度造成重大损害的，应当（ ）。",
+      "options": [
+        "负刑事责任但应减轻或免除",
+        "不负任何责任",
+        "按既遂处罚",
+        "仅民事赔偿"
+      ],
+      "answer": "负刑事责任但应减轻或免除",
+      "solutionSteps": [
+        "防卫过当应负刑责但应当减轻或免除处罚。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "谁的主张需要举证？"
+        },
+        {
+          "level": "L2",
+          "text": "举证责任在哪一方？"
+        },
+        {
+          "level": "L3",
+          "text": "归责原则决定举证。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "lawmaster-criminal-007"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "lawmaster-criminal-q-007",
+      "title": "未遂vs中止",
+      "type": "diagnostic",
+      "difficulty": 3,
+      "content": "小偷入户行窃，听到警笛声以为被发现而逃走（实无警察），属未遂还是中止？",
+      "options": null,
+      "answer": "未得逞因'意志以外'的警笛（误认），属未遂。",
+      "solutionSteps": [
+        "未得逞因'意志以外'的警笛（误认），属未遂。",
+        "中止须自动放弃，此处非自动。",
+        "关键在是否出于本人意愿停止。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判定合同/行为效力。"
+        },
+        {
+          "level": "L2",
+          "text": "再分析后果。"
+        },
+        {
+          "level": "L3",
+          "text": "效力状态决定救济方式。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "lawmaster-criminal-010",
+        "lawmaster-criminal-011"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "lawmaster-criminal-q-008",
+      "title": "犯罪中止自动性",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "甲投毒后不忍，主动送乙就医脱险。甲的行为如何定性？法律后果？",
+      "options": null,
+      "answer": "过程中自动放弃并有效防止结果=犯罪中止。",
+      "solutionSteps": [
+        "过程中自动放弃并有效防止结果=犯罪中止。",
+        "未造成损害的，应当免除处罚。",
+        "造成损害的可减轻处罚。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先说原则，再给例外。"
+        },
+        {
+          "level": "L2",
+          "text": "例外要有法条支撑。"
+        },
+        {
+          "level": "L3",
+          "text": "原则—例外结构最稳。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "lawmaster-criminal-011"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "lawmaster-criminal-q-009",
+      "title": "共同犯罪故意",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "二人以上共同过失致害，是否构成共同犯罪（ ）。",
+      "options": [
+        "不构成",
+        "构成",
+        "视情况",
+        "按主犯论"
+      ],
+      "answer": "不构成",
+      "solutionSteps": [
+        "共同犯罪须共同故意，过失不构成共犯。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先定性：这是民法还是刑法问题？"
+        },
+        {
+          "level": "L2",
+          "text": "再定位具体制度。"
+        },
+        {
+          "level": "L3",
+          "text": "按'定性—要件—结论'作答。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "lawmaster-criminal-012"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "lawmaster-criminal-q-010",
+      "title": "主刑特征",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "下列只能独立适用、不能附加的是（ ）。",
+      "options": [
+        "主刑",
+        "罚金",
+        "剥夺政治权利",
+        "没收财产"
+      ],
+      "answer": "主刑",
+      "solutionSteps": [
+        "主刑只能独立适用。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "列出构成要件。"
+        },
+        {
+          "level": "L2",
+          "text": "逐条对应案情。"
+        },
+        {
+          "level": "L3",
+          "text": "缺哪条就不成立。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "lawmaster-criminal-015"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "lawmaster-criminal-q-011",
+      "title": "附加刑种类",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "仅适用于外国人的附加刑是（ ）。",
+      "options": [
+        "驱逐出境",
+        "罚金",
+        "剥夺政治权利",
+        "没收财产"
+      ],
+      "answer": "驱逐出境",
+      "solutionSteps": [
+        "驱逐出境仅对外国人适用。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断行为性质。"
+        },
+        {
+          "level": "L2",
+          "text": "再谈违法性与有责性。"
+        },
+        {
+          "level": "L3",
+          "text": "结论要有法律根据。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "lawmaster-criminal-016"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "lawmaster-criminal-q-012",
+      "title": "自首认定",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "犯罪后自动投案并如实供述自己的罪行，属于（ ）。",
+      "options": [
+        "自首",
+        "立功",
+        "累犯",
+        "坦白"
+      ],
+      "answer": "自首",
+      "solutionSteps": [
+        "自动投案+如实供述=自首，可从宽。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "区分此罪与彼罪的界限。"
+        },
+        {
+          "level": "L2",
+          "text": "关键区别事实是什么？"
+        },
+        {
+          "level": "L3",
+          "text": "用构成要件比对。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "lawmaster-criminal-017"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "lawmaster-criminal-q-013",
+      "title": "想象竞合",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "一行为同时触犯数罪名，通常按（ ）处断。",
+      "options": [
+        "从一重处断",
+        "数罪并罚",
+        "择一轻罪",
+        "吸收"
+      ],
+      "answer": "从一重处断",
+      "solutionSteps": [
+        "想象竞合从一重罪处断。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先答概念，再举法条。"
+        },
+        {
+          "level": "L2",
+          "text": "最后结合案情。"
+        },
+        {
+          "level": "L3",
+          "text": "法条+事实+结论三步走。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "lawmaster-criminal-013"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "lawmaster-criminal-q-014",
+      "title": "缓刑条件",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "被判处三年以下有期徒刑的初犯，是否必然适用缓刑？说明条件。",
+      "options": null,
+      "answer": "非必然：须犯罪情节较轻、有悔罪、无再犯危险、对社区无重大不良影响。",
+      "solutionSteps": [
+        "非必然：须犯罪情节较轻、有悔罪、无再犯危险、对社区无重大不良影响。",
+        "累犯与犯罪集团首要分子不适用。",
+        "缓刑是附条件不执行。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "谁的主张需要举证？"
+        },
+        {
+          "level": "L2",
+          "text": "举证责任在哪一方？"
+        },
+        {
+          "level": "L3",
+          "text": "归责原则决定举证。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "lawmaster-criminal-018"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "lawmaster-criminal-q-015",
+      "title": "假释性质",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "假释是指（ ）。",
+      "options": [
+        "附条件提前释放",
+        "减刑",
+        "缓刑",
+        "免刑"
+      ],
+      "answer": "附条件提前释放",
+      "solutionSteps": [
+        "假释是对服刑者附条件提前释放。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判定合同/行为效力。"
+        },
+        {
+          "level": "L2",
+          "text": "再分析后果。"
+        },
+        {
+          "level": "L3",
+          "text": "效力状态决定救济方式。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "lawmaster-criminal-019"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "lawmaster-criminal-q-016",
+      "title": "紧急避险对象",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "紧急避险损害的法益通常针对（ ）。",
+      "options": [
+        "第三人的合法权益",
+        "不法侵害人",
+        "自己财物",
+        "国家机关"
+      ],
+      "answer": "第三人的合法权益",
+      "solutionSteps": [
+        "避险损害的是无关第三人的较小法益。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先说原则，再给例外。"
+        },
+        {
+          "level": "L2",
+          "text": "例外要有法条支撑。"
+        },
+        {
+          "level": "L3",
+          "text": "原则—例外结构最稳。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "lawmaster-criminal-008"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "lawmaster-criminal-q-017",
+      "title": "追诉时效",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "犯罪嫌疑人在追诉期内逃避侦查的，追诉时效（ ）。",
+      "options": [
+        "不受限制",
+        "重新计算",
+        "减半",
+        "立即消灭"
+      ],
+      "answer": "不受限制",
+      "solutionSteps": [
+        "逃避侦查或审判的，不受追诉期限限制。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先定性：这是民法还是刑法问题？"
+        },
+        {
+          "level": "L2",
+          "text": "再定位具体制度。"
+        },
+        {
+          "level": "L3",
+          "text": "按'定性—要件—结论'作答。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "lawmaster-criminal-019"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "lawmaster-criminal-q-018",
+      "title": "犯罪客体定位",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "为何说'犯罪客体'决定罪名性质？它与'犯罪对象'有何不同？",
+      "options": null,
+      "answer": "客体是被侵害的社会关系，决定侵害的法益类型。",
+      "solutionSteps": [
+        "客体是被侵害的社会关系，决定侵害的法益类型。",
+        "对象是具体的人或物，不决定性质。",
+        "同对象可侵害不同客体（如偷电线）。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "列出构成要件。"
+        },
+        {
+          "level": "L2",
+          "text": "逐条对应案情。"
+        },
+        {
+          "level": "L3",
+          "text": "缺哪条就不成立。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "lawmaster-criminal-006"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "lawmaster-criminal-q-019",
+      "title": "从犯处罚",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "在共同犯罪中起次要或辅助作用的，是（ ），应当从轻、减轻或免除。",
+      "options": [
+        "从犯",
+        "主犯",
+        "胁从犯",
+        "教唆犯"
+      ],
+      "answer": "从犯",
+      "solutionSteps": [
+        "从犯起次要/辅助作用，从宽处罚。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断行为性质。"
+        },
+        {
+          "level": "L2",
+          "text": "再谈违法性与有责性。"
+        },
+        {
+          "level": "L3",
+          "text": "结论要有法律根据。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "lawmaster-criminal-012"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "lawmaster-criminal-q-020",
+      "title": "综合辨析：四要件vs三阶层",
+      "type": "diagnostic",
+      "difficulty": 3,
+      "content": "简述我国四要件体系与德日三阶层（构成要件该当性-违法性-有责性）的主要差异。",
+      "options": null,
+      "answer": "四要件平面耦合，同时齐备即成立。",
+      "solutionSteps": [
+        "四要件平面耦合，同时齐备即成立。",
+        "三阶层递进，先该当、再违法、后有责。",
+        "二者均旨在系统性认定犯罪，只是分析框架不同。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "区分此罪与彼罪的界限。"
+        },
+        {
+          "level": "L2",
+          "text": "关键区别事实是什么？"
+        },
+        {
+          "level": "L3",
+          "text": "用构成要件比对。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "lawmaster-criminal-002"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      },
+      "status": "draft"
+    }
+  ]
+}

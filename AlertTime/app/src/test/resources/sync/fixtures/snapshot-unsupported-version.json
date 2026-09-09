@@ -1,0 +1,17 @@
+{
+  "format": "alerttime-teacher-sync",
+  "schemaVersion": 2,
+  "messageType": "snapshot",
+  "deviceId": "f0a24c19-0f8e-4b6d-9a3c-77e1b2d4c5a6",
+  "snapshotId": "7a0b4c3d-2e5f-4a6b-9c7d-8e9f0a1b2c3d",
+  "generatedAt": 1785600000000,
+  "appVersion": "0.2.0",
+  "protocolCapabilities": { "fullSnapshotV1": true, "proposalsV1": true },
+  "cursor": null,
+  "payload": {
+    "subjects": [],
+    "weeklyGoals": [],
+    "tasks": [],
+    "studySessions": []
+  }
+}

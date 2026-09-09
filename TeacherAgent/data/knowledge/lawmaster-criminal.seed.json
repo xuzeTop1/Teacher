@@ -1,0 +1,686 @@
+{
+  "subject": "lawmaster",
+  "course": "lawmaster-criminal",
+  "chapter": "lawmaster-criminal",
+  "status": "draft",
+  "nodes": [
+    {
+      "id": "lawmaster-criminal-001",
+      "title": "刑法基本原则",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "刑法三大原则：罪刑法定（法无明文不为罪）、刑法平等、罪责刑相适应；罪刑法定是罪刑关系的基石。",
+      "prerequisites": [],
+      "misconceptions": [
+        "认为可类推入罪",
+        "忽视疑罪从无"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个法律概念的关键词是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "它和相近概念差在哪？"
+        },
+        {
+          "level": "L3",
+          "text": "先下定义再找区分点。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-criminal-002",
+      "title": "犯罪构成四要件概述",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "我国刑法以四要件体系认定犯罪：犯罪客体、客观方面、主体、主观方面；四者同时齐备才成立犯罪。",
+      "prerequisites": [
+        "lawmaster-criminal-001"
+      ],
+      "misconceptions": [
+        "遗漏任一要件",
+        "混淆要件顺序"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "它的法律依据是哪一条？"
+        },
+        {
+          "level": "L2",
+          "text": "试着定位法条位置。"
+        },
+        {
+          "level": "L3",
+          "text": "把制度—条文—要件三者对应。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-criminal-003",
+      "title": "犯罪主体",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "犯罪主体含自然人与单位；自然人须达责任年龄（完全$1\\frac{2}{1}\\frac{4}{1}6$分档）且具有责任能力（精神正常）。",
+      "prerequisites": [
+        "lawmaster-criminal-002"
+      ],
+      "misconceptions": [
+        "记错年龄分档",
+        "忽视单位犯罪"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "构成要件有几项？"
+        },
+        {
+          "level": "L2",
+          "text": "逐项核对是否齐备。"
+        },
+        {
+          "level": "L3",
+          "text": "四要件/三阶层要记全。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-criminal-004",
+      "title": "犯罪主观方面",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "主观方面分故意（明知并希望/放任）与过失（应当预见而未预见，或轻信避免）；意外事件不负刑责。",
+      "prerequisites": [
+        "lawmaster-criminal-002"
+      ],
+      "misconceptions": [
+        "混淆故意与过失",
+        "把意外当过失"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个制度想解决什么问题？"
+        },
+        {
+          "level": "L2",
+          "text": "立法目的决定解释方向。"
+        },
+        {
+          "level": "L3",
+          "text": "从目的反推适用。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-criminal-005",
+      "title": "犯罪客观方面",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "客观方面包括危害行为、危害结果及因果关系；无行为则无犯罪，因果关系是归责的客观基础。",
+      "prerequisites": [
+        "lawmaster-criminal-002"
+      ],
+      "misconceptions": [
+        "认为思想可构成犯罪",
+        "忽视因果关系"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "谁享有权利、谁承担义务？"
+        },
+        {
+          "level": "L2",
+          "text": "主体资格是否具备？"
+        },
+        {
+          "level": "L3",
+          "text": "先定主体再看内容。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-criminal-006",
+      "title": "犯罪客体",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "犯罪客体是刑法所保护而被侵害的社会关系；分一般客体、同类客体与直接客体，直接客体决定罪名性质。",
+      "prerequisites": [
+        "lawmaster-criminal-002"
+      ],
+      "misconceptions": [
+        "把客体当对象",
+        "混淆同类与直接"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "责任如何归属？"
+        },
+        {
+          "level": "L2",
+          "text": "归责原则是过错还是无过错？"
+        },
+        {
+          "level": "L3",
+          "text": "归责原则决定举证方向。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-criminal-007",
+      "title": "正当防卫",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "正当防卫须具备起因（不法侵害）、时间（进行中）、主观（防卫意图）、对象（侵害人）、限度（不过当）五条件，过当应减负。",
+      "prerequisites": [
+        "lawmaster-criminal-002"
+      ],
+      "misconceptions": [
+        "认为可事前防卫",
+        "混淆防卫与斗殴"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "情形A和情形B有何不同？"
+        },
+        {
+          "level": "L2",
+          "text": "区分关键事实是什么？"
+        },
+        {
+          "level": "L3",
+          "text": "用构成要件做判别。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-criminal-008",
+      "title": "紧急避险",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "紧急避险为保全较大法益而损害较小法益；须针对现实危险、不得已且未超必要限度，区别于正当防卫的对象。",
+      "prerequisites": [
+        "lawmaster-criminal-002"
+      ],
+      "misconceptions": [
+        "混淆避险与防卫",
+        "忽视法益权衡"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "常见误解是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "把误区摆出来再纠正。"
+        },
+        {
+          "level": "L3",
+          "text": "辨析题先破后立。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-criminal-009",
+      "title": "犯罪预备",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "犯罪预备是为实行犯罪准备工具、制造条件但因意志外原因未能着手；可比照既遂从轻、减轻或免除。",
+      "prerequisites": [
+        "lawmaster-criminal-002"
+      ],
+      "misconceptions": [
+        "把预备当既遂",
+        "混淆着手时点"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个法律概念的关键词是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "它和相近概念差在哪？"
+        },
+        {
+          "level": "L3",
+          "text": "先下定义再找区分点。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-criminal-010",
+      "title": "犯罪未遂",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "犯罪未遂是已着手实行但因意志以外原因未得逞；具备着手、未得逞、意志外三特征，可比照既遂从轻或减轻。",
+      "prerequisites": [
+        "lawmaster-criminal-002"
+      ],
+      "misconceptions": [
+        "混淆未遂与中止",
+        "忽视'意志外'"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "它的法律依据是哪一条？"
+        },
+        {
+          "level": "L2",
+          "text": "试着定位法条位置。"
+        },
+        {
+          "level": "L3",
+          "text": "把制度—条文—要件三者对应。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-criminal-011",
+      "title": "犯罪中止",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "犯罪中止是在犯罪过程中自动放弃或自动有效防止结果；须自动性且彻底/有效，未造成损害的应当免除。",
+      "prerequisites": [
+        "lawmaster-criminal-002"
+      ],
+      "misconceptions": [
+        "把中止当未遂",
+        "忽视自动性"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "构成要件有几项？"
+        },
+        {
+          "level": "L2",
+          "text": "逐项核对是否齐备。"
+        },
+        {
+          "level": "L3",
+          "text": "四要件/三阶层要记全。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-criminal-012",
+      "title": "共同犯罪",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "共同犯罪是二人以上共同故意犯罪；按作用分主犯、从犯、胁从犯，按分工有教唆犯；过失不构成共犯。",
+      "prerequisites": [
+        "lawmaster-criminal-002"
+      ],
+      "misconceptions": [
+        "认为过失也可共犯",
+        "混淆主从犯"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个制度想解决什么问题？"
+        },
+        {
+          "level": "L2",
+          "text": "立法目的决定解释方向。"
+        },
+        {
+          "level": "L3",
+          "text": "从目的反推适用。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-criminal-013",
+      "title": "罪数形态",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "罪数形态处理一行为触犯数罪名的关系，如想象竞合（从一重）、牵连犯（通常从一重）、吸收犯等。",
+      "prerequisites": [
+        "lawmaster-criminal-002"
+      ],
+      "misconceptions": [
+        "一律数罪并罚",
+        "混淆竞合与牵连"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "谁享有权利、谁承担义务？"
+        },
+        {
+          "level": "L2",
+          "text": "主体资格是否具备？"
+        },
+        {
+          "level": "L3",
+          "text": "先定主体再看内容。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-criminal-014",
+      "title": "刑罚概述与体系",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "刑罚是以国家名义剥夺犯罪人权益的制裁；分主刑（管制、拘役、有期、无期、死刑）与附加刑（可独立适用）。",
+      "prerequisites": [
+        "lawmaster-criminal-002"
+      ],
+      "misconceptions": [
+        "混淆主附刑",
+        "认为附加刑不可独立"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "责任如何归属？"
+        },
+        {
+          "level": "L2",
+          "text": "归责原则是过错还是无过错？"
+        },
+        {
+          "level": "L3",
+          "text": "归责原则决定举证方向。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-criminal-015",
+      "title": "主刑",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "主刑只能独立适用：管制（限制自由）、拘役（短期剥夺）、有期徒刑、无期徒刑与死刑（最严厉，适用受严格限制）。",
+      "prerequisites": [
+        "lawmaster-criminal-014"
+      ],
+      "misconceptions": [
+        "认为主刑可附加",
+        "忽视死刑限制"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "情形A和情形B有何不同？"
+        },
+        {
+          "level": "L2",
+          "text": "区分关键事实是什么？"
+        },
+        {
+          "level": "L3",
+          "text": "用构成要件做判别。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-criminal-016",
+      "title": "附加刑",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "附加刑含罚金、剥夺政治权利、没收财产与驱逐出境（仅外国人）；既可附加也可独立适用。",
+      "prerequisites": [
+        "lawmaster-criminal-014"
+      ],
+      "misconceptions": [
+        "记不全种类",
+        "忽视驱逐出境对象"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "常见误解是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "把误区摆出来再纠正。"
+        },
+        {
+          "level": "L3",
+          "text": "辨析题先破后立。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-criminal-017",
+      "title": "量刑情节",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "量刑情节分法定与酌定；累犯（再犯）从重，自首（自动投案如实供述）与立功可从宽，体现宽严相济。",
+      "prerequisites": [
+        "lawmaster-criminal-014"
+      ],
+      "misconceptions": [
+        "混淆自首与立功",
+        "忽视累犯效果"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个法律概念的关键词是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "它和相近概念差在哪？"
+        },
+        {
+          "level": "L3",
+          "text": "先下定义再找区分点。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-criminal-018",
+      "title": "刑罚裁量制度",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "数罪并罚按限制加重等原则合并；缓刑对原判刑罚附条件不执行，须符合刑期与再犯风险条件。",
+      "prerequisites": [
+        "lawmaster-criminal-014"
+      ],
+      "misconceptions": [
+        "混淆并罚与缓刑",
+        "忽视缓刑条件"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "它的法律依据是哪一条？"
+        },
+        {
+          "level": "L2",
+          "text": "试着定位法条位置。"
+        },
+        {
+          "level": "L3",
+          "text": "把制度—条文—要件三者对应。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-criminal-019",
+      "title": "刑罚执行与消灭",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "执行制度含减刑与假释（附条件提前释放）；追诉时效随法定最高刑确定，逃避侦查不受时效限制。",
+      "prerequisites": [
+        "lawmaster-criminal-014"
+      ],
+      "misconceptions": [
+        "混淆减刑与假释",
+        "忽视时效中断"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "构成要件有几项？"
+        },
+        {
+          "level": "L2",
+          "text": "逐项核对是否齐备。"
+        },
+        {
+          "level": "L3",
+          "text": "四要件/三阶层要记全。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-criminal-020",
+      "title": "刑法分则体系",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "分则以同类客体分章（如危害公共安全、侵犯财产、侵犯人身权利等）；具体罪名由罪状与法定刑构成。",
+      "prerequisites": [
+        "lawmaster-criminal-002"
+      ],
+      "misconceptions": [
+        "认为分则无体系",
+        "混淆罪状与法定刑"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个制度想解决什么问题？"
+        },
+        {
+          "level": "L2",
+          "text": "立法目的决定解释方向。"
+        },
+        {
+          "level": "L3",
+          "text": "从目的反推适用。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    }
+  ]
+}

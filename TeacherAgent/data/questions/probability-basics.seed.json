@@ -1,0 +1,185 @@
+{
+  "subject": "math",
+  "course": "probability",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "prob-q001",
+      "title": "古典概型计算",
+      "content": "袋中有 3 个红球和 2 个白球，随机取 1 个球，取到红球的概率是多少？",
+      "type": "solution",
+      "difficulty": 1,
+      "knowledgeNodeIds": [
+        "prob-classical"
+      ],
+      "answer": "$\\frac{3}{5}$",
+      "solutionSteps": [
+        "样本空间：5 个球，每个球被取到的可能性相同",
+        "事件 A = 取到红球，包含 3 个样本点",
+        "$P(A) = \\frac{3}{5}$"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "总共几个球？红球几个？"
+        },
+        {
+          "level": "L2",
+          "text": "古典概型公式：$P =$有利事件数 /总数"
+        },
+        {
+          "level": "L3",
+          "text": "如果事件 $A$和 $B$不互斥，$P(A union B)$的公式是什么？"
+        }
+      ],
+      "source": {
+        "title": "Original TeacherAgent seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "prob-q002",
+      "title": "条件概率",
+      "content": "已知 $P(A) = 0.6, P(B) = 0.5, P(AB) = 0.3$。求 $P(A|B)$。",
+      "type": "solution",
+      "difficulty": 2,
+      "knowledgeNodeIds": [
+        "prob-conditional"
+      ],
+      "answer": "0.6",
+      "solutionSteps": [
+        "条件概率公式：$P(A|B) = \\frac{P(AB)}{P(B)}$",
+        "$P(A|B) = \\frac{0.3}{0.5} = 0.6$"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "条件概率的公式是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "$P(A|B) = \\frac{P(AB)}{P(B)}$"
+        },
+        {
+          "level": "L3",
+          "text": "全概率公式和贝叶斯公式有什么关系？"
+        }
+      ],
+      "source": {
+        "title": "Original TeacherAgent seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "prob-q003",
+      "title": "独立性判断",
+      "content": "$P(A) = 0.4, P(B) = 0.5, P(AB) = 0.2$。$A$和 $B$是否独立？",
+      "type": "concept_check",
+      "difficulty": 2,
+      "knowledgeNodeIds": [
+        "prob-independence"
+      ],
+      "answer": "是独立的，因为 $P(AB) = P(A)P(B) = 0.2$",
+      "solutionSteps": [
+        "独立性条件：$P(AB) = P(A) \\times P(B)$",
+        "$P(A) \\times P(B) = 0.4 \\times 0.5 = 0.2$",
+        "$P(AB) = 0.2 = P(A) \\times P(B)$，所以 $A$和 $B$独立"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "独立性的定义条件是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "验证 $P(AB)$是否等于 $P(A)\\times P(B)$"
+        },
+        {
+          "level": "L3",
+          "text": "二项分布和泊松分布的近似关系是什么条件？"
+        }
+      ],
+      "source": {
+        "title": "Original TeacherAgent seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "prob-q004",
+      "title": "数学期望",
+      "content": "随机变量 $X$的分布律为 $P(X=1)=0.2, P(X=2)=0.5, P(X=3)=0.3$。求 $E(X)$。",
+      "type": "solution",
+      "difficulty": 2,
+      "knowledgeNodeIds": [
+        "prob-expectation"
+      ],
+      "answer": "2.1",
+      "solutionSteps": [
+        "$E(X) = \\Sigma x_i \\times P(X=x_i)$",
+        "$E(X) = 1\\times0.2 + 2\\times0.5 + 3\\times0.3$",
+        "$E(X) = 0.2 + 1.0 + 0.9 = 2.1$"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "期望的公式是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "每个取值乘以其概率，再求和。"
+        },
+        {
+          "level": "L3",
+          "text": "两个独立随机变量的方差有什么关系？"
+        }
+      ],
+      "source": {
+        "title": "Original TeacherAgent seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "prob-q005",
+      "title": "方差计算",
+      "content": "已知 $E(X) = 2, E(X^2) = 5$。求 Var$(X)$。",
+      "type": "solution",
+      "difficulty": 2,
+      "knowledgeNodeIds": [
+        "prob-variance"
+      ],
+      "answer": "1",
+      "solutionSteps": [
+        "方差公式：Var$(X) = E(X^2) - [E(X)]^2$",
+        "$Var(X) = 5 - 2^2 = 5 - 4 = 1$"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "方差的简化公式是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "$Var(X) = E(X^2) - [E(X)]^2$"
+        },
+        {
+          "level": "L3",
+          "text": "切比雪夫不等式的直观含义是什么？"
+        }
+      ],
+      "source": {
+        "title": "Original TeacherAgent seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    }
+  ]
+}

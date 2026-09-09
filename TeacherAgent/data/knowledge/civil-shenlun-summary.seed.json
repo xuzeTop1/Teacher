@@ -1,0 +1,186 @@
+{
+  "subject": "shenlun",
+  "course": "shenlun",
+  "chapter": "civil-shenlun-summary",
+  "status": "draft",
+  "nodes": [
+    {
+      "id": "shenlun-summary-task",
+      "title": "概括题：审题三要素",
+      "level": "method",
+      "summary": "概括题先审清「概括什么对象、在什么范围（给定资料几）、有没有特殊限定（问题/原因/表现/危害）」。对象错则全篇偏题，范围错则漏点。",
+      "prerequisites": [],
+      "misconceptions": [
+        "只看「概括」二字就动笔，不确认对象和范围",
+        "把题目要求的问题、原因、表现混在一起答"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "题目让你概括的对象是什么，限定在哪些资料？"
+        },
+        {
+          "level": "L2",
+          "text": "它要的是问题、原因还是表现，能不能分开列？"
+        },
+        {
+          "level": "L3",
+          "text": "如果对象理解错，你的答案会从哪一步开始偏？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲申论五大题型（归纳概括 / 综合分析 / 提出对策 / 贯彻执行 / 申发论述）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；申论辅导以材料拆解、结构、改写为核心，不默认代写整篇；具体题目与表述待人工复核（review_status=draft）。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "shenlun-summary-mark",
+      "title": "材料阅读与标注",
+      "level": "method",
+      "summary": "读材料时用符号标注：问题（○）、原因（△）、表现（—）、对策（√）、观点（☆）。先通读再定位，避免边读边抄导致要点散乱。",
+      "prerequisites": [
+        "shenlun-summary-task"
+      ],
+      "misconceptions": [
+        "不标注直接抄，结果要点重复或遗漏",
+        "通篇精读浪费时间，抓不住关键句"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这段材料里，哪几句是问题、哪几句是原因？"
+        },
+        {
+          "level": "L2",
+          "text": "用一种标注符号把同类信息归到一起，会不会更清楚？"
+        },
+        {
+          "level": "L3",
+          "text": "你标注的要点，有没有跟题目要求对象不一致的？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲申论五大题型（归纳概括 / 综合分析 / 提出对策 / 贯彻执行 / 申发论述）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；申论辅导以材料拆解、结构、改写为核心，不默认代写整篇；具体题目与表述待人工复核（review_status=draft）。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "shenlun-summary-merge",
+      "title": "要点归并与去重",
+      "level": "method",
+      "summary": "摘出的零散要点要按同一维度归并：同义合并、同类合并、同主体合并。归并后再分条，避免几条其实在说同一件事。",
+      "prerequisites": [
+        "shenlun-summary-mark"
+      ],
+      "misconceptions": [
+        "把相近意思写成多条，显得零散",
+        "不按维度归类，逻辑混乱"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "你摘出的这几条，有没有其实在说同一件事？"
+        },
+        {
+          "level": "L2",
+          "text": "能不能按「主体/维度」把相近的并成一条？"
+        },
+        {
+          "level": "L3",
+          "text": "归并后每一条能不能用一句话概括？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲申论五大题型（归纳概括 / 综合分析 / 提出对策 / 贯彻执行 / 申发论述）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；申论辅导以材料拆解、结构、改写为核心，不默认代写整篇；具体题目与表述待人工复核（review_status=draft）。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "shenlun-summary-keyword",
+      "title": "关键词摘取与转述",
+      "level": "method",
+      "summary": "优先摘取材料中的原词原句作关键词，必要时用自己的话凝练，但不擅自拔高或添加材料没有的信息。转述保持「材料原意 + 规范表达」。",
+      "prerequisites": [
+        "shenlun-summary-merge"
+      ],
+      "misconceptions": [
+        "完全照抄长句，不凝练",
+        "脱离材料自造高级词，失真"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这条能不能用材料里的原词概括？"
+        },
+        {
+          "level": "L2",
+          "text": "如果原句太长，保留哪些关键词不改变原意？"
+        },
+        {
+          "level": "L3",
+          "text": "你加的词，材料里真的有依据吗？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲申论五大题型（归纳概括 / 综合分析 / 提出对策 / 贯彻执行 / 申发论述）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；申论辅导以材料拆解、结构、改写为核心，不默认代写整篇；具体题目与表述待人工复核（review_status=draft）。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "shenlun-summary-structure",
+      "title": "条理表达（总分/分条）",
+      "level": "method",
+      "summary": "概括题答案一般采用「总括句 + 分条要点」：先用一句话总括，再按序号列要点，每条「核心词 + 简要说明」。不写长篇段落，便于阅卷定位。",
+      "prerequisites": [
+        "shenlun-summary-keyword"
+      ],
+      "misconceptions": [
+        "写成一大段，阅卷找不到要点",
+        "没有总括句，直接堆砌"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "能不能先用一句话把整体情况说清？"
+        },
+        {
+          "level": "L2",
+          "text": "分条时每条用「核心词 + 说明」会不会更清楚？"
+        },
+        {
+          "level": "L3",
+          "text": "你的分条之间有没有交叉重复？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲申论五大题型（归纳概括 / 综合分析 / 提出对策 / 贯彻执行 / 申发论述）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；申论辅导以材料拆解、结构、改写为核心，不默认代写整篇；具体题目与表述待人工复核（review_status=draft）。"
+      },
+      "reviewStatus": "draft"
+    }
+  ]
+}

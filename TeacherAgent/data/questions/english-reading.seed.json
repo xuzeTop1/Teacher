@@ -1,0 +1,847 @@
+{
+  "subject": "english",
+  "chapter": "english-reading",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "eng-reading-q-001",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "Supportive（支持的）",
+        "Critical（批评的）",
+        "Objective（客观的）",
+        "Indifferent（漠不关心的）"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "注意找评价性词汇，如lacks, isolated, disconnected等"
+        },
+        {
+          "level": "L2",
+          "text": "这些词汇是负向的，说明作者对在线教育持批评态度"
+        },
+        {
+          "level": "L3",
+          "text": "虽然提到some people argue，但作者用while转折，表达自己的真实态度"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-reading-001"
+      ],
+      "source": {
+        "title": "TeacherAgent English question seed",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于练习设计，考查作者态度题解题技巧。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "通读段落，识别作者评价性词汇：\"I believe it lacks...\"表明作者对在线教育持负面看法。",
+        "排除A（supportive与lacks矛盾）；C（objective需要正反两面，此处只有批评）；D（indifferent漠不关心，但作者明确表态）。",
+        "选B（critical批评的）：作者认为在线教育缺乏面对面互动，学生会感到孤立。"
+      ],
+      "content": "阅读下面段落，判断作者的态度：\n\n\"While some people argue that online education is convenient, I believe it lacks the personal interaction that traditional classrooms provide. Students may feel isolated and disconnected from their peers.\"\n\n(A) Supportive（支持的）\n(B) Critical（批评的）\n(C) Objective（客观的）\n(D) Indifferent（漠不关心的）"
+    },
+    {
+      "id": "eng-reading-q-002",
+      "type": "solution",
+      "difficulty": 2,
+      "options": [
+        "The company's profits decreased last year.",
+        "The new marketing strategy contributed to the profit increase.",
+        "The CEO was fired because of poor performance.",
+        "The company will definitely perform better next year."
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先定位原文，找到与选项相关的句子"
+        },
+        {
+          "level": "L2",
+          "text": "注意due to这个词，表示因果关系"
+        },
+        {
+          "level": "L3",
+          "text": "选项B是对原文的同义替换：contributed to = due to"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-reading-002"
+      ],
+      "source": {
+        "title": "TeacherAgent English question seed",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于练习设计，考查细节推理题的同义替换技巧。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "定位关键信息：\"profits increased by 20%\"和\"This growth is largely due to the new marketing strategy\"。",
+        "因果关系：利润增长$\\to$归功于新营销策略，选项$B$与此一致。",
+        "排除A（profits decreased与原文increased矛盾）；C（CEO被解雇无依据）；D（definitely过度推断，原文只说去年）。"
+      ],
+      "content": "根据下面段落，可以推断什么？\n\n\"The company's profits increased by 20% last year. This growth is largely due to the new marketing strategy implemented by the CEO.\"\n\n(A) The company's profits decreased last year.\n(B) The new marketing strategy contributed to the profit increase.\n(C) The CEO was fired because of poor performance.\n(D) The company will definitely perform better next year."
+    },
+    {
+      "id": "eng-reading-q-003",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "The Advantages of Online Education",
+        "The Disadvantages of Online Education",
+        "Online Education: Advantages and Disadvantages",
+        "The Future of Online Education"
+      ],
+      "answer": "C",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先把握段落主旨：既提到优点也提到缺点"
+        },
+        {
+          "level": "L2",
+          "text": "选项A和B都只覆盖部分内容，以偏概全"
+        },
+        {
+          "level": "L3",
+          "text": "选项C涵盖了整段内容，是最佳标题"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-reading-003"
+      ],
+      "source": {
+        "title": "TeacherAgent English question seed",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于练习设计，考查段落主旨题提取方法。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "通读段落，识别结构：先讲优点（flexibility and convenience），再讲缺点（drawbacks），用However转折。",
+        "标题应概括全文，不能只覆盖部分内容。",
+        "选C（Advantages and Disadvantages）：A只覆盖优点，B只覆盖缺点，D原文未提及未来。"
+      ],
+      "content": "阅读下面段落，选择最佳标题：\n\n\"Online education has become increasingly popular in recent years. It offers flexibility and convenience for students who cannot attend traditional classes. However, it also has drawbacks, such as lack of personal interaction and technical issues.\"\n\n(A) The Advantages of Online Education\n(B) The Disadvantages of Online Education\n(C) Online Education: Advantages and Disadvantages\n(D) The Future of Online Education"
+    },
+    {
+      "id": "eng-reading-q-004",
+      "type": "solution",
+      "difficulty": 2,
+      "options": [
+        "人类学",
+        "生物学",
+        "心理学",
+        "社会学"
+      ],
+      "answer": "A",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "注意看anthropology后面的解释：the study of human beings"
+        },
+        {
+          "level": "L2",
+          "text": "human beings = 人类，study = 研究/学"
+        },
+        {
+          "level": "L3",
+          "text": "所以anthropology = 研究人类的学科 = 人类学"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-reading-004"
+      ],
+      "source": {
+        "title": "TeacherAgent English question seed",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于练习设计，考查词义猜测题的定义解释法。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "定位解释性信息：\"Anthropology, the study of human beings and their cultures\"，逗号后是同位语解释。",
+        "同位语直接给出定义：研究人类及其文化的学科=人类学。",
+        "选A（人类学）；B（生物学研究生物）；C（心理学研究心理）；D（社会学研究社会结构），均与原文定义不符。"
+      ],
+      "content": "根据下面段落，猜猜\"anthropology\"是什么意思？\n\n\"Anthropology, the study of human beings and their cultures, is a fascinating field. It helps us understand how different societies develop and interact.\"\n\n(A) 人类学\n(B) 生物学\n(C) 心理学\n(D) 社会学"
+    },
+    {
+      "id": "eng-reading-q-005",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "例子说明Einstein喜欢读书",
+        "例子说明Reading is essential for personal growth",
+        "例子说明Einstein是天才",
+        "例子说明philosophy, mathematics, and physics很重要"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先找到例子（For example后面）"
+        },
+        {
+          "level": "L2",
+          "text": "然后读例子前面的句子（通常是观点）"
+        },
+        {
+          "level": "L3",
+          "text": "例子本身不重要，重要的是例子说明的观点"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-reading-006"
+      ],
+      "source": {
+        "title": "TeacherAgent English question seed",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于练习设计，考查例证题解题思路。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "识别例证关系：\"For example\"引出的例子服务于前面的论点句。",
+        "论点句：\"Reading is essential for personal growth\"（阅读对个人成长至关重要）。",
+        "选B：Einstein广泛阅读的例子是为了论证阅读对个人成长的重要性，而非单纯说明Einstein爱读书。"
+      ],
+      "content": "阅读下面段落，判断例子的功能：\n\n\"Reading is essential for personal growth. For example, Einstein read widely in philosophy, mathematics, and physics, which laid a solid foundation for his later discoveries.\"\n\n(A) 例子说明Einstein喜欢读书\n(B) 例子说明Reading is essential for personal growth\n(C) 例子说明Einstein是天才\n(D) 例子说明philosophy, mathematics, and physics很重要"
+    },
+    {
+      "id": "eng-reading-q-006",
+      "type": "solution",
+      "difficulty": 2,
+      "options": [
+        "河流和以前一样",
+        "河流被污染了，不再像以前那样清澈",
+        "河流变宽了",
+        "河流消失了"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先理解字面意思：not the same = 不一样"
+        },
+        {
+          "level": "L2",
+          "text": "然后结合上下文（如果有），判断为什么不一样"
+        },
+        {
+          "level": "L3",
+          "text": "通常这句话暗示河流被污染或改变了"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-reading-007"
+      ],
+      "source": {
+        "title": "TeacherAgent English question seed",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于练习设计，考查句子理解题解题方法。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "理解句子含义：\"The river is not the same as it was\"=河流和以前不一样了。",
+        "结合常识推断：河流\"不一样了\"最可能指环境变化（污染）。",
+        "选B（河流被污染了）；A（和以前一样与句意矛盾）；C（变宽）和D（消失）缺乏依据。"
+      ],
+      "content": "阅读下面句子，理解其含义：\n\n\"The river is not the same as it was.\"\n\n(A) 河流和以前一样\n(B) 河流被污染了，不再像以前那样清澈\n(C) 河流变宽了\n(D) 河流消失了"
+    },
+    {
+      "id": "eng-reading-q-007",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "提出观点",
+        "论证观点（提供论据）",
+        "反驳对立观点",
+        "总结全文"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先读第二段首句：A recent study shows..."
+        },
+        {
+          "level": "L2",
+          "text": "study shows是提供论据的标志"
+        },
+        {
+          "level": "L3",
+          "text": "第二段通过研究数据论证第一段提出的观点"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-reading-008"
+      ],
+      "source": {
+        "title": "TeacherAgent English question seed",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于练习设计，考查段落功能题解题方法。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "分析段落功能：Para 2引用研究数据（70% of students），为Para 1的论点提供证据支持。",
+        "\"A recent study shows...\"是典型的论据引出方式。",
+        "选B（论证观点/提供论据）；A（提出观点是Para 1的功能）；C和D不符合Para 2的作用。"
+      ],
+      "content": "阅读下面段落，判断第二段的功能：\n\n\"Para 1: Online education has become popular. Para 2: A recent study shows that 70% of students prefer online courses because of flexibility. Para 3: However, some experts argue that online education lacks personal interaction.\"\n\n(A) 提出观点\n(B) 论证观点（提供论据）\n(C) 反驳对立观点\n(D) 总结全文"
+    },
+    {
+      "id": "eng-reading-q-008",
+      "type": "solution",
+      "difficulty": 2,
+      "options": [
+        "Profit is the only measure of success.",
+        "Businesses should prioritize profit over social impact.",
+        "Businesses should prioritize social impact over profit.",
+        "Profit and social impact are equally important."
+      ],
+      "answer": "C",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先找到Nick Francis在文中的位置"
+        },
+        {
+          "level": "L2",
+          "text": "然后读他的直接引语或间接引语"
+        },
+        {
+          "level": "L3",
+          "text": "他说：Profit is not the only measure of success = 社会责任比利润更重要"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-reading-009"
+      ],
+      "source": {
+        "title": "TeacherAgent English question seed",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于练习设计，考查观点定位题解题方法。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "定位Nick Francis的观点：\"argues that businesses should prioritize social impact over profit\"。",
+        "直接引用：\"Profit is not the only measure of success\"进一步支持其立场。",
+        "选C（prioritize social impact over profit）；A和B与原文相反；D（equally important）不符合prioritize的含义。"
+      ],
+      "content": "根据下面段落，Nick Francis的观点是什么？\n\n\"Nick Francis, co-founder of a travel company, argues that businesses should prioritize social impact over profit. 'Profit is not the only measure of success,' he says.\"\n\n(A) Profit is the only measure of success.\n(B) Businesses should prioritize profit over social impact.\n(C) Businesses should prioritize social impact over profit.\n(D) Profit and social impact are equally important."
+    },
+    {
+      "id": "eng-reading-q-009",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "现象-解释-评价",
+        "提出问题-分析问题-解决问题",
+        "对立观点对比",
+        "时间顺序"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先读各段主题：Para 1是问题，Para $2-3$是分析，Para 4是解决"
+        },
+        {
+          "level": "L2",
+          "text": "这是典型的Problem-Solution结构"
+        },
+        {
+          "level": "L3",
+          "text": "标志词：problem, analysis, solution"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-reading-010"
+      ],
+      "source": {
+        "title": "TeacherAgent English question seed",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于练习设计，考查文章结构题解题方法。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "分析文章结构：Para 1提出问题，Para $2-3$分析问题，Para 4解决问题。",
+        "对照选项：这是典型的\"问题-分析-解决\"结构。",
+        "选B；A（现象-解释-评价）缺解决方案；C（对立观点）无正反对比；D（时间顺序）无时间线索。"
+      ],
+      "content": "阅读下面文章结构，判断文章是如何组织的？Para 1:提出问题（Problem）Para $2-3:$分析问题（Analysis）Para 4:解决问题（Solution）$(A)$现象-解释-评价$(B)$提出问题-分析问题-解决问题$(C)$对立观点对比$(D)$时间顺序"
+    },
+    {
+      "id": "eng-reading-q-010",
+      "type": "solution",
+      "difficulty": 2,
+      "options": [
+        "因为it reduces costs.",
+        "因为it improves productivity.",
+        "因为it attracts more customers.",
+        "因为it reduces competition."
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先找到结果：companies offer flexible working hours"
+        },
+        {
+          "level": "L2",
+          "text": "然后找原因标志词：because"
+        },
+        {
+          "level": "L3",
+          "text": "because后面就是原因：it improves productivity"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-reading-011"
+      ],
+      "source": {
+        "title": "TeacherAgent English question seed",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于练习设计，考查因果关系题解题方法。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "定位因果关系：\"because it improves productivity\"直接给出原因。",
+        "后文补充：\"leads to higher efficiency\"进一步印证。",
+        "选B（improves productivity）；A（reduces costs）、C（attracts customers）、D（reduces competition）均未在原文提及。"
+      ],
+      "content": "根据下面段落，公司提供弹性工作制的原因是什么？\n\n\"Many companies offer flexible working hours because it improves productivity. Employees can adjust their schedules to fit their personal needs, which leads to higher efficiency.\"\n\n(A) 因为it reduces costs.\n(B) 因为it improves productivity.\n(C) 因为it attracts more customers.\n(D) 因为it reduces competition."
+    },
+    {
+      "id": "eng-reading-q-011",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "Objective（客观的）",
+        "Supportive（支持的）",
+        "Critical（批评的）",
+        "Humorous（幽默的）"
+      ],
+      "answer": "C",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先找评价性词汇：disaster, fails, no idea"
+        },
+        {
+          "level": "L2",
+          "text": "这些词汇是负向的，说明作者是批评的语气"
+        },
+        {
+          "level": "L3",
+          "text": "文章基调是critical"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-reading-013"
+      ],
+      "source": {
+        "title": "TeacherAgent English question seed",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于练习设计，考查文章基调题解题方法。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "识别态度词：\"nothing but a disaster\"（完全是灾难）、\"fails to address\"（未能解决）、\"no idea what they are doing\"（毫无头绪）。",
+        "这些词汇都是强烈的批评性表达。",
+        "选C（critical批评的）；A（objective需要中立表述）；B（supportive与全文矛盾）；D（humorous无幽默元素）。"
+      ],
+      "content": "阅读下面段落，判断文章基调：\n\n\"The government's new policy on education is nothing but a disaster. It fails to address the real issues and instead creates more problems. Clearly, the policymakers have no idea what they are doing.\"\n\n(A) Objective（客观的）\n(B) Supportive（支持的）\n(C) Critical（批评的）\n(D) Humorous（幽默的）"
+    },
+    {
+      "id": "eng-reading-q-012",
+      "type": "solution",
+      "difficulty": 2,
+      "options": [
+        "The Benefits of Reading",
+        "How to Improve Vocabulary",
+        "The Importance of Writing Skills",
+        "Different Perspectives on Life"
+      ],
+      "answer": "A",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先读段落首句和末句，把握主旨"
+        },
+        {
+          "level": "L2",
+          "text": "段落提到improve vocabulary, enhances critical thinking, broadens perspective"
+        },
+        {
+          "level": "L3",
+          "text": "这些都是阅读的好处，所以最佳小标题是The Benefits of Reading"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-reading-015"
+      ],
+      "source": {
+        "title": "新题型",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于练习设计，考查小标题匹配题解题方法。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "段落核心内容：improve vocabulary、enhances critical thinking and writing skills、broadens perspective。",
+        "这三点都是阅读的好处，应选概括性标题。",
+        "选A（The Benefits of Reading）；B只覆盖词汇；C只覆盖写作；D只覆盖视角。"
+      ],
+      "content": "阅读下面段落，选择最佳小标题：\n\n\"Para: Reading widely can improve vocabulary. It also enhances critical thinking and writing skills. Moreover, it broadens one's perspective on life.\"\n\n(A) The Benefits of Reading\n(B) How to Improve Vocabulary\n(C) The Importance of Writing Skills\n(D) Different Perspectives on Life"
+    },
+    {
+      "id": "eng-reading-q-013",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "直接推理（同义替换）",
+        "间接推理（言外之意）",
+        "不是推理，是原文直接说的",
+        "过度推断"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断原文是否直接说The company is in financial trouble？"
+        },
+        {
+          "level": "L2",
+          "text": "原文说losing money和fired employees，没有直接说financial trouble"
+        },
+        {
+          "level": "L3",
+          "text": "需要结合两句话推理：亏钱+裁员=财务困难，这是间接推理"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-reading-016"
+      ],
+      "source": {
+        "title": "TeacherAgent English question seed",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于练习设计，考查推理题的细分类型。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "分析推理过程：原文说\"losing money for 3 years\"和\"fired 100 employees\"，需要推导出\"financial trouble\"。",
+        "原文没有直接说\"in financial trouble\"，需要通过两个事实间接推断。",
+        "选B（间接推理/言外之意）；A（同义替换需原文有近义表达）；C（原文未直接说）；D（过度推断需超出合理范围）。"
+      ],
+      "content": "阅读下面段落，判断推理类型：\n\n原文：\"The company has been losing money for 3 years. Last month, it fired 100 employees.\"\n选项：\"The company is in financial trouble.\"\n\n(A) 直接推理（同义替换）\n(B) 间接推理（言外之意）\n(C) 不是推理，是原文直接说的\n(D) 过度推断"
+    },
+    {
+      "id": "eng-reading-q-014",
+      "type": "solution",
+      "difficulty": 2,
+      "options": [
+        "In 1990",
+        "In",
+        "Nowadays",
+        "Not mentioned"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先找到时间词：1990, 2000, nowadays"
+        },
+        {
+          "level": "L2",
+          "text": "然后定位问题：expand to Europe"
+        },
+        {
+          "level": "L3",
+          "text": "文中说In 2000, it expanded to Europe，所以答案是2000"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-reading-018"
+      ],
+      "source": {
+        "title": "TeacherAgent English question seed",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于练习设计，考查时间线索定位技巧。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "定位时间线索：\"In [year], it expanded to Europe\"中空缺处应填时间。",
+        "原文按时间顺序：1990年创立$\\to$某年扩展到欧洲$\\to$现在20个国家。",
+        "选B（In [year]）；A（1990是创立时间）；C（Nowadays是现在状态）；D（原文有提及）。"
+      ],
+      "content": "阅读下面段落，找到时间线索：\n\n\"The company was founded in 1990. In , it expanded to Europe. Nowadays, it has offices in 20 countries.\"\n\n问：When did the company expand to Europe?\n\n(A) In 1990\n(B) In \n(C) Nowadays\n(D) Not mentioned"
+    },
+    {
+      "id": "eng-reading-q-015",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "70%",
+        "30%",
+        "50%",
+        "100%"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先找到数字：30%, 70%"
+        },
+        {
+          "level": "L2",
+          "text": "然后看问题：prefer online courses"
+        },
+        {
+          "level": "L3",
+          "text": "文中说30% prefer online courses，所以答案是30%"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-reading-019"
+      ],
+      "source": {
+        "title": "TeacherAgent English question seed",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于练习设计，考查数字信息定位技巧。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "定位数字信息：\"30% of students prefer online courses\"。",
+        "直接从原文提取数据：30%。",
+        "选B（30%）；A（70%是传统课堂的比例）；C和D原文未提及。"
+      ],
+      "content": "阅读下面段落，找到数字信息：\n\n\"A recent survey shows that 30% of students prefer online courses, while 70% still favor traditional classrooms.\"\n\n问：What percentage of students prefer online courses?\n\n(A) 70%\n(B) 30%\n(C) 50%\n(D) 100%"
+    },
+    {
+      "id": "eng-reading-q-016",
+      "type": "solution",
+      "difficulty": 2,
+      "options": [
+        "Gross Domestic Product",
+        "Global Development Plan",
+        "General Demand Price",
+        "Government Debt Policy"
+      ],
+      "answer": "A",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先找到专有名词：GDP"
+        },
+        {
+          "level": "L2",
+          "text": "然后看后面的解释：or Gross Domestic Product"
+        },
+        {
+          "level": "L3",
+          "text": "GDP是Gross Domestic Product的缩写"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-reading-020"
+      ],
+      "source": {
+        "title": "TeacherAgent English question seed",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于练习设计，考查专有名词定位技巧。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "定位同位语解释：\"GDP, or Gross Domestic Product\"中or后面是全称。",
+        "GDP= Gross Domestic Product（国内生产总值）。",
+        "选A；B、C、D都是编造的缩写展开，与原文不符。"
+      ],
+      "content": "阅读下面段落，找到专有名词的解释：\n\n\"GDP, or Gross Domestic Product, is the total value of goods and services produced within a country.\"\n\n问：What is GDP?\n\n(A) Gross Domestic Product\n(B) Global Development Plan\n(C) General Demand Price\n(D) Government Debt Policy"
+    },
+    {
+      "id": "eng-reading-q-017",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "正确，是对原文的同义替换",
+        "错误，是以偏概全（some → all）",
+        "错误，是偷换概念",
+        "错误，是过度推断"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先对比原文和选项的关键词"
+        },
+        {
+          "level": "L2",
+          "text": "原文是some students，选项是all students"
+        },
+        {
+          "level": "L3",
+          "text": "$some \\to$all，这是以偏概全的干扰项"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-reading-005"
+      ],
+      "source": {
+        "title": "TeacherAgent English question seed",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于练习设计，考查干扰项特征分析。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "对比原文和选项：原文说\"Some students\"，选项说\"All students\"。",
+        "$some\\to$all是以偏概全的典型错误：部分$\\to$整体的不当推广。",
+        "选$B$（以偏概全）；$A$（some$\\neq$all不是同义替换）；$C$（偷换概念是替换关键词）；$D$（过度推断是夸大程度）。"
+      ],
+      "content": "阅读下面段落，识别干扰项（以偏概全）：原文：\"Some students like online education because of its flexibility.\"选项：\"All students like online education$.\"\n\n(A)$正确，是对原文的同义替换$(B)$错误，是以偏概全（some $\\to$all）$(C)$错误，是偷换概念$(D)$错误，是过度推断"
+    },
+    {
+      "id": "eng-reading-q-018",
+      "type": "solution",
+      "difficulty": 2,
+      "options": [
+        "正确，profits和sales是同义词",
+        "错误，是偷换概念（profits利润 vs sales销售额）",
+        "错误，是以偏概全",
+        "错误，是因果倒置"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先对比原文和选项的关键词"
+        },
+        {
+          "level": "L2",
+          "text": "原文是profits（利润），选项是sales（销售额）"
+        },
+        {
+          "level": "L3",
+          "text": "$profits \\neq$sales，这是偷换概念"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-reading-005"
+      ],
+      "source": {
+        "title": "TeacherAgent English question seed",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于练习设计，考查干扰项特征分析。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "对比原文和选项：原文说\"profits\"（利润），选项说\"sales\"（销售额）。",
+        "profits和sales是不同概念：利润=收入-成本，销售额=总收入。",
+        "选$B$（偷换概念）；$A$（profits$\\neq$sales不是同义词）；$C$（以偏概全是数量词替换）；$D$（因果倒置是因果关系互换）。"
+      ],
+      "content": "阅读下面段落，识别干扰项（偷换概念）：\n\n原文：\"The company increased its profits by 20%.\"\n选项：\"The company increased its sales by 20%.\"\n\n(A) 正确，profits和sales是同义词\n(B) 错误，是偷换概念（profits利润 vs sales销售额）\n(C) 错误，是以偏概全\n(D) 错误，是因果倒置"
+    },
+    {
+      "id": "eng-reading-q-019",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "正确，是对原文的同义替换",
+        "错误，是过度推断（may → definitely）",
+        "错误，是以偏概全",
+        "错误，是偷换概念"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先对比原文和选项的关键词"
+        },
+        {
+          "level": "L2",
+          "text": "原文是may（可能），选项是definitely（一定）"
+        },
+        {
+          "level": "L3",
+          "text": "$may \\to$definitely，这是过度推断"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-reading-005"
+      ],
+      "source": {
+        "title": "TeacherAgent English question seed",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于练习设计，考查干扰项特征分析。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "对比原文和选项：原文说\"suggests\"和\"may\"，选项说\"proves\"和\"definitely\"。",
+        "$suggests\\to$proves（推测$\\to$确证）和may$\\to$definitely（可能$\\to$一定）都是程度升级。",
+        "选$B$（过度推断）；$A$（may$\\neq$definitely不是同义替换）；$C$（以偏概全是数量问题）；$D$（偷换概念是替换关键词）。"
+      ],
+      "content": "阅读下面段落，识别干扰项（过度推断）：原文：\"The study suggests that exercise may improve mental health.\"选项：\"The study proves that exercise will definitely improve mental health$.\"\n\n(A)$正确，是对原文的同义替换$(B)$错误，是过度推断（may $\\to$definitely）$(C)$错误，是以偏概全$(D)$错误，是偷换概念"
+    },
+    {
+      "id": "eng-reading-q-020",
+      "type": "solution",
+      "difficulty": 2,
+      "options": [
+        "1",
+        "2",
+        "3",
+        "Not mentioned"
+      ],
+      "answer": "A",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先读Paragraph A的主旨：Online education is convenient"
+        },
+        {
+          "level": "L2",
+          "text": "然后读匹配项：1是online education的好处"
+        },
+        {
+          "level": "L3",
+          "text": "Paragraph A匹配1，因为都讲online education的好处"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-reading-014"
+      ],
+      "source": {
+        "title": "新题型",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于练习设计，考查信息匹配题解题方法。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "分析段落内容：Paragraph A讲\"Online education is convenient\"=在线教育的好处。",
+        "匹配选项：1. The benefits of online education与Paragraph A内容一致。",
+        "选A（1）；B（2匹配Paragraph B）；C（3匹配Paragraph C）；D原文有提及。"
+      ],
+      "content": "阅读下面段落，完成信息匹配：\n\nParagraph A: Online education is convenient.\nParagraph B: Traditional education offers personal interaction.\nParagraph C: Both online and traditional education have advantages.\n\n选项：\n1. The benefits of online education.\n2. The benefits of traditional education.\n3. Comparison of online and traditional education.\n\n问：Paragraph A matches with...\n\n(A) 1\n(B) 2\n(C) 3\n(D) Not mentioned"
+    }
+  ]
+}

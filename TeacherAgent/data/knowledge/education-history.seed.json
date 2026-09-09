@@ -1,0 +1,686 @@
+{
+  "subject": "education",
+  "course": "history",
+  "chapter": "education-history",
+  "status": "draft",
+  "nodes": [
+    {
+      "id": "education-history-001",
+      "title": "孔子教育思想",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "孔子开创私学，主张'有教无类'；内容上'文、行、忠、信'，以六艺为基；方法重因材施教、举一反三、学思结合、温故知新；被尊'万世师表'。",
+      "prerequisites": [],
+      "misconceptions": [
+        "把'有教无类'理解为免费",
+        "忽视因材施教"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "有教无类打破等级。"
+        },
+        {
+          "level": "L2",
+          "text": "文行忠信是内容框架。"
+        },
+        {
+          "level": "L3",
+          "text": "因材施教是核心方法。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于教育部311教育学专业基础考试大纲（公开版）与公开权威资料（如《学记》、各教育家思想综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "education-history-002",
+      "title": "孟子教育思想",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "孟子持性善论，认为教育作用是'扩充'善端；目标是'明人伦'（父子有亲等五伦）；强调存心养性、深造自得。",
+      "prerequisites": [
+        "education-history-001"
+      ],
+      "misconceptions": [
+        "混淆性善与性恶",
+        "忽视明人伦"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "性善$\\to$教育为扩充。"
+        },
+        {
+          "level": "L2",
+          "text": "明人伦是目标。"
+        },
+        {
+          "level": "L3",
+          "text": "与荀子对照记。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于教育部311教育学专业基础考试大纲（公开版）与公开权威资料（如《学记》、各教育家思想综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "education-history-003",
+      "title": "荀子教育思想",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "荀子持性恶论，主张'化性起伪'（以人为改造本性）；重视'闻—见—知—行'的认知过程与'解蔽'；强调师法与礼法。",
+      "prerequisites": [
+        "education-history-001"
+      ],
+      "misconceptions": [
+        "混淆化性起伪含义",
+        "忽视闻见知行"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "性恶$\\to$教育为改造。"
+        },
+        {
+          "level": "L2",
+          "text": "化性起伪是关键。"
+        },
+        {
+          "level": "L3",
+          "text": "与孟子对立。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于教育部311教育学专业基础考试大纲（公开版）与公开权威资料（如《学记》、各教育家思想综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "education-history-004",
+      "title": "墨家教育",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "墨子主张'兼爱''非攻'；教育内容重科技与逻辑（三表法：本、原、用）；培养'兼士'，重视实践与实用。",
+      "prerequisites": [
+        "education-history-001"
+      ],
+      "misconceptions": [
+        "把墨家当儒家分支",
+        "忽视科技教育"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "墨家重科技与逻辑。"
+        },
+        {
+          "level": "L2",
+          "text": "三表法是判断法。"
+        },
+        {
+          "level": "L3",
+          "text": "兼士是培养目标。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于教育部311教育学专业基础考试大纲（公开版）与公开权威资料（如《学记》、各教育家思想综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "education-history-005",
+      "title": "《学记》",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "《学记》为《礼记》一篇，是中国古代最早专门论述教育、教学问题的论著（教育学的雏形）；提出教学相长、豫时孙摩、长善救失、启发诱导、藏息相辅、学不躐等等原则。",
+      "prerequisites": [
+        "education-history-001"
+      ],
+      "misconceptions": [
+        "把《学记》当孔子所著",
+        "漏记教学原则"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "《学记》在《礼记》中。"
+        },
+        {
+          "level": "L2",
+          "text": "七条原则要会列。"
+        },
+        {
+          "level": "L3",
+          "text": "它是最早教育学论著之一。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于教育部311教育学专业基础考试大纲（公开版）与公开权威资料（如《学记》、各教育家思想综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "education-history-006",
+      "title": "董仲舒与汉代儒学",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "董仲舒倡'独尊儒术''兴太学'；以察举取士，使儒经成为官方教育内容，奠定后世经学教育格局。",
+      "prerequisites": [
+        "education-history-002"
+      ],
+      "misconceptions": [
+        "忽视太学意义",
+        "混淆朝代"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "独尊儒术确立官学主流。"
+        },
+        {
+          "level": "L2",
+          "text": "太学是中央官学。"
+        },
+        {
+          "level": "L3",
+          "text": "汉代制度化。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于教育部311教育学专业基础考试大纲（公开版）与公开权威资料（如《学记》、各教育家思想综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "education-history-007",
+      "title": "韩愈《师说》",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "韩愈在《师说》中提出'师者，所以传道受业解惑也'，主张'道之所存，师之所存'，批判当时耻学于师之风。",
+      "prerequisites": [
+        "education-history-005"
+      ],
+      "misconceptions": [
+        "把《师说》当教法专论",
+        "忽视'传道'"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "教师三任务：传道授业解惑。"
+        },
+        {
+          "level": "L2",
+          "text": "择师标准是道。"
+        },
+        {
+          "level": "L3",
+          "text": "唐代古文运动背景。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于教育部311教育学专业基础考试大纲（公开版）与公开权威资料（如《学记》、各教育家思想综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "education-history-008",
+      "title": "朱熹与理学教育",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "朱熹集理学之大成，主张'存天理灭人欲'；读书法重'循序渐进、熟读精思'（朱子读书法）；重视书院与《四书》地位。",
+      "prerequisites": [
+        "education-history-006"
+      ],
+      "misconceptions": [
+        "混淆朱王",
+        "忽视读书法"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "朱子读书法六条是考点。"
+        },
+        {
+          "level": "L2",
+          "text": "天理人欲是其伦理观。"
+        },
+        {
+          "level": "L3",
+          "text": "与王阳明对立。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于教育部311教育学专业基础考试大纲（公开版）与公开权威资料（如《学记》、各教育家思想综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "education-history-009",
+      "title": "王守仁心学教育",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "王阳明倡'心即理''知行合一''致良知'；教学须'随人分限所及'（因材施教），反对机械记诵。",
+      "prerequisites": [
+        "education-history-008"
+      ],
+      "misconceptions": [
+        "混淆朱王",
+        "把知行合一当先后"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "知行合一=知行一体。"
+        },
+        {
+          "level": "L2",
+          "text": "致良知是核心。"
+        },
+        {
+          "level": "L3",
+          "text": "随人分限=量力。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于教育部311教育学专业基础考试大纲（公开版）与公开权威资料（如《学记》、各教育家思想综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "education-history-010",
+      "title": "书院制度",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "书院为宋明民间高等教育机构（如白鹿洞、岳麓），特点：自由讲学、藏书刻书、问难论辩；白鹿洞书院学规（朱熹）影响深远。",
+      "prerequisites": [
+        "education-history-005"
+      ],
+      "misconceptions": [
+        "把书院当官学",
+        "忽视讲学风"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "书院重自由讲学与论辩。"
+        },
+        {
+          "level": "L2",
+          "text": "白鹿洞学规是范本。"
+        },
+        {
+          "level": "L3",
+          "text": "与官学互补。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于教育部311教育学专业基础考试大纲（公开版）与公开权威资料（如《学记》、各教育家思想综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "education-history-011",
+      "title": "科举制度",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "隋唐确立科举，以考试选官，打破门第；内容重诗赋经义，后期偏八股；清末（1905）废除。既促进教育普及也固化应试。",
+      "prerequisites": [
+        "education-history-006"
+      ],
+      "misconceptions": [
+        "认为科举始于汉",
+        "忽视其双刃性"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "科举起于隋唐废于1905。"
+        },
+        {
+          "level": "L2",
+          "text": "它推动教育但也应试化。"
+        },
+        {
+          "level": "L3",
+          "text": "与学校关系紧密。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于教育部311教育学专业基础考试大纲（公开版）与公开权威资料（如《学记》、各教育家思想综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "education-history-012",
+      "title": "张之洞与'中体西用'",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "张之洞《劝学篇》系统阐发'中学为体，西学为用'，主张在维护纲常前提下学习西方技艺；影响洋务学堂与近代学制。",
+      "prerequisites": [
+        "education-history-008"
+      ],
+      "misconceptions": [
+        "把中体西用当全盘西化",
+        "忽视其局限"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "中体西用=保本位学西技。"
+        },
+        {
+          "level": "L2",
+          "text": "《劝学篇》是文本。"
+        },
+        {
+          "level": "L3",
+          "text": "有保守局限。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于教育部311教育学专业基础考试大纲（公开版）与公开权威资料（如《学记》、各教育家思想综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "education-history-013",
+      "title": "近代学制建立",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "壬寅学制（1902，未施行）与癸卯学制（1904，首个施行）仿日本确立近代学校系统；1922年壬戌学制（六三三）仿美国，影响至今。",
+      "prerequisites": [
+        "education-history-011"
+      ],
+      "misconceptions": [
+        "混淆壬寅癸卯",
+        "记错年份"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "癸卯是首个施行学制。"
+        },
+        {
+          "level": "L2",
+          "text": "壬戌='六三三'。"
+        },
+        {
+          "level": "L3",
+          "text": "癸卯仿日、壬戌仿美。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于教育部311教育学专业基础考试大纲（公开版）与公开权威资料（如《学记》、各教育家思想综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "education-history-014",
+      "title": "蔡元培教育思想",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "蔡元培倡'五育并举'（军国民、实利、公民道德、世界观、美育）；北大改革'思想自由、兼容并包'；主张教育独立，被誉'学界泰斗，人世楷模'。",
+      "prerequisites": [
+        "education-history-013"
+      ],
+      "misconceptions": [
+        "漏五育",
+        "忽视兼容并包"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "五育并举是核心。"
+        },
+        {
+          "level": "L2",
+          "text": "兼容并包改革北大。"
+        },
+        {
+          "level": "L3",
+          "text": "他是民国教育总长。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于教育部311教育学专业基础考试大纲（公开版）与公开权威资料（如《学记》、各教育家思想综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "education-history-015",
+      "title": "陶行知生活教育",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "陶行知提出'生活教育'：生活即教育、社会即学校、教学做合一；倡'小先生制'，创办晓庄师范，强调教育与生活、大众结合。",
+      "prerequisites": [
+        "education-history-014"
+      ],
+      "misconceptions": [
+        "把三者割裂",
+        "忽视小先生制"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "生活即教育=教育源于生活。"
+        },
+        {
+          "level": "L2",
+          "text": "教学做合一是方法论。"
+        },
+        {
+          "level": "L3",
+          "text": "晓庄是实践基地。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于教育部311教育学专业基础考试大纲（公开版）与公开权威资料（如《学记》、各教育家思想综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "education-history-016",
+      "title": "晏阳初平民教育",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "晏阳初倡导平民教育，针对'愚贫弱私'四大病症，实施文艺、生计、卫生、公民'四大教育'，以学校、社会、家庭'三大方式'推进。",
+      "prerequisites": [
+        "education-history-015"
+      ],
+      "misconceptions": [
+        "记错四大教育",
+        "混淆梁晏"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "四大教育对应四大病害。"
+        },
+        {
+          "level": "L2",
+          "text": "三大方式是途径。"
+        },
+        {
+          "level": "L3",
+          "text": "与梁漱溟乡村建设有别。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于教育部311教育学专业基础考试大纲（公开版）与公开权威资料（如《学记》、各教育家思想综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "education-history-017",
+      "title": "梁漱溟乡村建设",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "梁漱溟以文化重建切入乡村建设，认为中国问题是文化失调，主张以教育入手复兴农村，办山东乡村建设研究院。",
+      "prerequisites": [
+        "education-history-015"
+      ],
+      "misconceptions": [
+        "混淆晏阳初与梁漱溟",
+        "忽视文化视角"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "梁重文化重建。"
+        },
+        {
+          "level": "L2",
+          "text": "乡村建设是路径。"
+        },
+        {
+          "level": "L3",
+          "text": "与晏阳初侧重点不同。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于教育部311教育学专业基础考试大纲（公开版）与公开权威资料（如《学记》、各教育家思想综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "education-history-018",
+      "title": "杨贤江《新教育大纲》",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "杨贤江是中国最早的马克思主义教育理论家之一，《新教育大纲》系统阐述教育的本质与职能，批判超阶级教育观。",
+      "prerequisites": [
+        "education-history-014"
+      ],
+      "misconceptions": [
+        "忽视其马克思主义立场",
+        "混淆著作"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "《新教育大纲》是里程碑。"
+        },
+        {
+          "level": "L2",
+          "text": "他持阶级教育观。"
+        },
+        {
+          "level": "L3",
+          "text": "注意作者与书名对应。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于教育部311教育学专业基础考试大纲（公开版）与公开权威资料（如《学记》、各教育家思想综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "education-history-019",
+      "title": "洋务学堂与留学",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "洋务运动设京师同文馆（1862）等外语、军事、科技学堂，派幼童留美；开启中国近代新式教育，但'中体西用'框架内有局限。",
+      "prerequisites": [
+        "education-history-012"
+      ],
+      "misconceptions": [
+        "把洋务当维新",
+        "忽视同文馆"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "同文馆是首所新式学堂。"
+        },
+        {
+          "level": "L2",
+          "text": "幼童留美是举措。"
+        },
+        {
+          "level": "L3",
+          "text": "仍受中体西用约束。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于教育部311教育学专业基础考试大纲（公开版）与公开权威资料（如《学记》、各教育家思想综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "education-history-020",
+      "title": "教育史方法论",
+      "level": "method",
+      "difficulty": 3,
+      "summary": "研读教育史应将其置于社会政治经济基础中，比较古今中西，区分人性论前提、教育作用与制度变迁，避免孤立背诵人物语录。",
+      "prerequisites": [
+        "education-history-001"
+      ],
+      "misconceptions": [
+        "孤立记人物",
+        "忽视社会背景"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "先问时代与问题。"
+        },
+        {
+          "level": "L2",
+          "text": "比较脉络胜过死记。"
+        },
+        {
+          "level": "L3",
+          "text": "人性论是推导起点。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于教育部311教育学专业基础考试大纲（公开版）与公开权威资料（如《学记》、各教育家思想综述）核对事实；不含任何真题原文。"
+      }
+    }
+  ]
+}

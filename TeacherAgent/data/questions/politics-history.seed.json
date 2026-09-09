@@ -1,0 +1,890 @@
+{
+  "subject": "politics",
+  "course": "history",
+  "chapter": "politics-history",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "politics-history-q001",
+      "title": "鸦片战争的历史影响",
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "1840年鸦片战争是中国近代史的开端。鸦片战争对中国社会最根本的影响是：",
+      "options": [
+        "A. 中国开始沦为半殖民地半封建社会",
+        "B. 中国完全沦为殖民地社会",
+        "C. 中国封建社会彻底瓦解",
+        "D. 中国立即走上了资本主义道路"
+      ],
+      "answer": "A",
+      "solutionSteps": [
+        "鸦片战争后，中国的社会性质开始发生根本变化，由一个独立的封建社会逐步沦为半殖民地半封建社会，这是鸦片战争最根本的影响，A选项正确。",
+        "中国没有变成完全的殖民地（殖民地是完全丧失主权，半殖民地是主权部分丧失），B选项错误。",
+        "鸦片战争后中国封建社会并没有彻底瓦解，封建剥削制度仍然保持着，C选项错误。",
+        "鸦片战争后中国没有走上资本主义道路，而是逐步沦为半殖民地半封建社会，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "鸦片战争前后，中国的社会性质发生了什么变化？这是理解整个中国近现代史的逻辑起点。"
+        },
+        {
+          "level": "L2",
+          "text": "半殖民地半封建社会是理解中国近现代史的核心概念：'半殖民地'指主权部分丧失，'半封建'指封建制度开始解体但未完全消亡。"
+        },
+        {
+          "level": "L3",
+          "text": "判断鸦片战争的影响，从三个变化入手：社会性质（独立封建$\\to$半殖民地半封建）、主要矛盾（帝国主义和中华民族、封建主义和人民大众）、革命任务（反帝反封建）。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-history-001"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-history-q002",
+      "title": "太平天国运动的历史地位",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "太平天国运动是中国近代史上规模巨大的一次农民起义。下列关于太平天国运动历史地位的理解，正确的是：",
+      "options": [
+        "A. 太平天国运动是一场完全成功的农民革命",
+        "B. 太平天国运动沉重打击了封建统治和外国侵略势力",
+        "C. 太平天国运动建立了先进的社会主义制度",
+        "D. 太平天国运动的失败说明农民阶级没有任何历史作用"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "太平天国运动虽然最终失败，但它沉重打击了封建统治和外国侵略势力，动摇了清朝统治的根基，具有重大历史意义，B选项正确。",
+        "太平天国运动最终失败了，不是完全成功的革命，A选项错误。",
+        "太平天国运动没有建立社会主义制度，它追求的是农民平均主义（有空想性），不是科学社会主义，C选项错误。",
+        "农民阶级有历史作用（是革命的主力军），但因为自身局限性不能领导革命取得胜利，不能因此否定农民的历史作用，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "太平天国运动最终失败了，那它还算不算一场有历史意义的运动？失败等不等于没有意义。"
+        },
+        {
+          "level": "L2",
+          "text": "分析太平天国运动，要一分为二：功绩（打击封建统治和外国侵略势力）+ 缺陷（农民阶级局限性导致失败）。"
+        },
+        {
+          "level": "L3",
+          "text": "判断农民起义的历史地位，标准不是是否最终成功，而是是否推动了历史进步。太平天国运动虽然没有成功，但促进了中国人民的觉醒。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-history-002"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-history-q003",
+      "title": "洋务运动的历史作用",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "洋务运动是19世纪$60-90$年代清朝统治集团内部一部分官员以'自强''求富'为口号推行的新政。下列关于洋务运动历史作用的理解，正确的是：",
+      "options": [
+        "A. 洋务运动使中国走上了富强道路",
+        "B. 洋务运动主张学习西方资本主义政治制度",
+        "C. 洋务运动客观上对中国早期现代化起了推动作用",
+        "D. 洋务运动彻底瓦解了中国的封建制度"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "洋务运动虽然最终没有使中国富强，但它创办了一批近代工业，开办新式学堂，派遣留学生，客观上对中国早期现代化起了推动作用，C选项正确。",
+        "洋务运动没有使中国走上富强道路，甲午战争的失败宣告了洋务运动的破产，A选项错误。",
+        "洋务运动主张'中体西用'，只学西方技术，不学西方政治制度，B选项错误。",
+        "洋务运动的目的恰恰是维护清朝封建统治，不是瓦解封建制度，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "洋务运动最终没有让中国富强，那它还有历史意义吗？怎么评价一场失败的运动？"
+        },
+        {
+          "level": "L2",
+          "text": "洋务运动的历史作用具有两重性：主观目的是维护封建统治（失败），客观效果是促进早期现代化（有进步意义）。"
+        },
+        {
+          "level": "L3",
+          "text": "分析洋务运动的历史作用，抓住'中体西用'这个核心特征：它决定了运动不可能彻底，但在客观上打开了中国早期现代化的大门。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-history-003"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-history-q004",
+      "title": "戊戌变法失败的原因",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "戊戌变法（1898年）是资产阶级维新派推行的变法运动，但仅持续103天就失败了。戊戌变法失败的根本原因是：",
+      "options": [
+        "A. 光绪皇帝不够支持变法",
+        "B. 帝国主义列强的干涉",
+        "C. 民族资产阶级力量弱小，又脱离广大人民群众",
+        "D. 变法措施太多太急，无法推行"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "戊戌变法失败的根本原因是：民族资产阶级力量弱小，又脱离广大人民群众，得不到广泛的社会支持，在顽固派的反扑下必然失败，C选项正确。",
+        "光绪皇帝是支持变法的，变法失败是因为以慈禧太后为首的顽固派发动政变，A选项错误。",
+        "帝国主义列强对戊戌变法态度复杂，但不是变法失败的根本原因，B选项错误。",
+        "变法措施本身有积极意义，失败的原因不在措施多少，而在社会基础薄弱，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "维新派想通过皇帝自上而下地推行改革，他们依靠谁？脱离了谁？这是不是致命弱点？"
+        },
+        {
+          "level": "L2",
+          "text": "戊戌变法失败说明：在半殖民地半封建的中国，资产阶级改良道路行不通。必须发动广大人民群众，才能进行社会革命。"
+        },
+        {
+          "level": "L3",
+          "text": "分析改良道路在中国行不通的深层原因：半殖民地半封建社会性质+反动势力强大+民族资产阶级软弱=改良道路必然失败。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-history-004"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-history-q005",
+      "title": "辛亥革命的历史评价",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "辛亥革命是中国近代史上一次伟大的资产阶级民主革命。下列关于辛亥革命历史评价的理解，正确的是：",
+      "options": [
+        "A. 辛亥革命彻底完成了反帝反封建的革命任务",
+        "B. 辛亥革命推翻了封建君主专制制度，建立了中华民国",
+        "C. 辛亥革命后中国立即走上了资本主义道路",
+        "D. 辛亥革命没有任何积极意义"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "辛亥革命推翻了清朝统治，结束了中国两千多年的封建君主专制制度，建立了中华民国，这是辛亥革命的伟大历史功绩，B选项正确。",
+        "辛亥革命没有改变中国半殖民地半封建的社会性质，没有完成反帝反封建的革命任务，A选项错误。",
+        "辛亥革命后中国没有走上资本主义道路，帝国主义和封建势力仍然统治着中国，C选项错误。",
+        "辛亥革命有巨大历史功绩（推翻帝制、建立共和、促进思想解放），不是没有积极意义，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "辛亥革命推翻了皇帝，这很了不起。但革命后，中国社会的根本性质有没有改变？"
+        },
+        {
+          "level": "L2",
+          "text": "评价辛亥革命要坚持一分为二：功绩（推翻帝制、建立共和、思想解放）和缺陷（没有改变社会性质、没有发动广大人民群众）。"
+        },
+        {
+          "level": "L3",
+          "text": "分析辛亥革命的历史地位，抓住'没有改变社会性质'这个关键点：这是它和新民主主义革命的本质区别。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-history-005"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-history-q006",
+      "title": "五四运动是新民主主义革命的开端",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "五四运动是中国新民主主义革命的开端。五四运动成为新民主革命开端的主要依据是：",
+      "options": [
+        "A. 五四运动是一场彻底的反帝反封建爱国运动",
+        "B. 中国工人阶级开始以独立姿态登上政治舞台",
+        "C. 五四运动发生在十月革命之后",
+        "D. 五四运动促进了马克思主义在中国的传播"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "新民主主义革命和旧民主主义革命的根本区别是领导阶级不同：新民主革命由无产阶级领导，旧民主革命由资产阶级领导。五四运动中，中国工人阶级开始以独立姿态登上政治舞台，这表明中国革命领导阶级开始发生根本变化，因此五四运动成为新民主革命的开端，B选项正确。",
+        "A、C、D选项都是五四运动的重要特征，但不是它成为新民主革命开端的根本依据，根本依据是工人阶级登上政治舞台。",
+        "实际上，本题最佳答案是B，因为它直接回答了'为什么是新民主主义革命开端'（领导阶级变化）。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "新旧民主主义革命的根本区别是什么？是领导阶级不同。五四运动在哪个方面体现了这个根本变化？"
+        },
+        {
+          "level": "L2",
+          "text": "五四运动的历史意义，最重要的是：工人阶级开始登上政治舞台+马克思主义开始广泛传播=中国共产党创建的条件成熟。"
+        },
+        {
+          "level": "L3",
+          "text": "区分新旧民主主义革命，关键看四个'不同'：领导阶级、指导思想、革命前途、所属世界革命范畴。其中领导阶级是根本区别。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-history-007"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-history-q007",
+      "title": "中国共产党成立的伟大意义",
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "1921年中国共产党成立后，中国革命的面貌焕然一新。下列关于中国共产党成立历史意义的理解，正确的是：",
+      "options": [
+        "A. 中国共产党成立后立即取得了革命胜利",
+        "B. 中国共产党的成立使中国革命有了坚强的领导核心",
+        "C. 中国共产党的成立标志着社会主义建设已经开始",
+        "D. 中国共产党的成立是少数知识分子人为制造的结果"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "中国共产党的成立使中国革命有了坚强的领导核心、科学的指导思想（马克思主义）、明确的奋斗目标（社会主义）和广泛的群众基础，中国革命的面貌焕然一新，B选项正确。",
+        "中国共产党成立后，中国革命经历了艰难曲折，经历了28年奋斗才取得全国政权，不是立即取得胜利，A选项错误。",
+        "中国共产党成立于新民主主义革命时期，社会主义建设是新中国成立后的任务，C选项错误。",
+        "中国共产党的成立是马克思主义同中国工人运动相结合的产物，是历史的必然，不是人为制造的，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "在中国共产党成立之前，中国有别的政党（如国民党），它们为什么不能领导革命取得胜利？"
+        },
+        {
+          "level": "L2",
+          "text": "中国共产党成立的历史意义，概括为'焕然一新'：领导力量（坚强的无产阶级政党）、指导思想（马克思主义）、奋斗目标（社会主义）、依靠力量（广大人民群众）。"
+        },
+        {
+          "level": "L3",
+          "text": "分析中国共产党成立的历史必然性，从三个基础说：思想基础（马克思主义传播）、阶级基础（工人阶级壮大）、组织基础（各地共产主义小组建立）。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-history-008"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-history-q008",
+      "title": "农村包围城市道路的开辟",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "国民革命失败后，以毛泽东为代表的中国共产党人开辟了农村包围城市、武装夺取政权的革命道路。这条道路的核心依据是：",
+      "options": [
+        "A. 中国工人阶级人数多、力量强",
+        "B. 中国是一个半殖民地半封建的国家，内部没有民主制度，外部没有民族独立",
+        "C. 中国民族资产阶级非常软弱",
+        "D. 苏联十月革命走的就是这条道路"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "中国半殖民地半封建的社会性质，决定了内部没有民主制度（不能合法斗争），外部没有民族独立（不能依赖外部力量），只能以武装斗争为主要革命形式，同时农民是革命主力军，必须深入农村，建立农村革命根据地，B选项正确。",
+        "中国工人阶级人数少但力量集中，这不是选择农村包围城市道路的直接依据，A选项不准确。",
+        "民族资产阶级软弱性是事实，但这不是农村包围城市道路的核心依据，C选项不准确。",
+        "苏联走的是城市起义道路，中国走的是农村包围城市道路，两者不同，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "为什么在中国不能照搬俄国的城市起义道路？两国的国情有什么关键不同？"
+        },
+        {
+          "level": "L2",
+          "text": "农村包围城市道路的选择，体现了'实事求是'的思想路线：从本国国情出发，不照搬外国经验。"
+        },
+        {
+          "level": "L3",
+          "text": "分析革命道路选择，关键看国情依据：半殖民地半封建社会性质$\\to$武装斗争+农村根据地$\\to$农村包围城市。这是马克思主义中国化的光辉典范。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-history-010"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-history-q009",
+      "title": "抗日战争的胜利",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "抗日战争是近代以来中国人民第一次取得完全胜利的反帝斗争。下列关于抗日战争胜利原因的理解，正确的是：",
+      "options": [
+        "A. 抗日战争胜利完全是美国原子弹的作用",
+        "B. 中国共产党是抗日战争的中流砥柱",
+        "C. 抗日战争胜利主要是因为国民党正面战场的作战",
+        "D. 抗日战争胜利主要是因为日本主动投降"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "中国共产党是抗日战争的中流砥柱，这体现在：倡导和推动抗日民族统一战线，提出全面抗战路线和持久战战略方针，开辟和坚持敌后战场，加强根据地建设，B选项正确。",
+        "美国原子弹加速了日本投降的进程，但不是中国抗战胜利的根本原因，A选项错误。",
+        "国民党正面战场在抗战初期发挥了重要作用，但后期趋于消极，不能说是抗战胜利的主要原因，C选项不准确。",
+        "日本是在世界反法西斯联盟打击下被迫投降，不是主动投降，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "在抗日战争中，共产党和国民党分别起了什么作用？两个战场是什么关系？"
+        },
+        {
+          "level": "L2",
+          "text": "中国共产党是抗日战争的中流砥柱，这个论断有充分的历史依据：倡导和维护统一战线、提出正确战略方针、开辟敌后战场、加强根据地建设。"
+        },
+        {
+          "level": "L3",
+          "text": "分析抗日战争胜利的原因，从三个层面：国际（世界反法西斯联盟支持）、国内（抗日民族统一战线下的全民族抗战）、核心（中国共产党的中流砥柱作用）。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-history-011"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-history-q010",
+      "title": "解放战争胜利的原因",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "解放战争（$1946-1949$年）是中国人民在中国共产党领导下取得伟大胜利的革命战争。解放战争迅速胜利的根本原因是：",
+      "options": [
+        "A. 国民党军队人数少、武器差",
+        "B. 中国共产党的正确领导、人民解放军的英勇作战、广大人民群众的大力支持",
+        "C. 美国不支持国民党",
+        "D. 国民党内部不团结"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "解放战争胜利的根本原因是：中国共产党的正确领导（制定了正确的政治方针和军事战略），人民解放军的英勇作战，广大人民群众的大力支持（民心所向），B选项正确。",
+        "国民党在战争初期在人数和武器上占有优势，不是人数少武器差，A选项错误。",
+        "美国在整个解放战争期间都在支持国民党，只是后期支持效果有限，C选项错误。",
+        "国民党内部不团结是事实，但不是解放战争胜利的根本原因，D选项不准确。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "解放战争时期，为什么广大人民群众支持共产党而不是国民党？老百姓用脚投票说明了什么？"
+        },
+        {
+          "level": "L2",
+          "text": "解放战争胜利的根本原因，不在军事层面（武器、兵力），而在政治层面：共产党代表人民利益，得到人民支持；国民党代表少数利益，失去人民支持。"
+        },
+        {
+          "level": "L3",
+          "text": "分析解放战争胜利的历史启示：人心向背是决定战争胜负的关键。'军民鱼水情'是中国革命胜利的根本保证。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-history-012"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-history-q011",
+      "title": "中华人民共和国成立的历史意义",
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "1949年10月1日，中华人民共和国成立。下列关于新中国成立历史意义的理解，正确的是：",
+      "options": [
+        "A. 中华人民共和国成立标志着社会主义制度在中国已经建立",
+        "B. 中华人民共和国成立标志着新民主主义革命的胜利和半殖民地半封建社会的结束",
+        "C. 中华人民共和国成立标志着社会主义改造已经完成",
+        "D. 中华人民共和国成立标志着中国已经实现了社会主义现代化"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "中华人民共和国成立，标志着中国新民主主义革命取得了基本胜利，结束了帝国主义、封建主义和官僚资本主义在中国的统治，结束了旧中国半殖民地半封建社会的历史，B选项正确。",
+        "社会主义制度在中国基本确立是在1956年社会主义改造基本完成后，不是1949年，A选项错误。",
+        "社会主义改造是在新中国成立后才开始的，1949年时尚未开始，C选项错误。",
+        "社会主义现代化是一个长期历史过程，1949年新中国成立时远远没有实现，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "1949年新中国成立，对中国和世界分别意味着什么？它结束了什么，开启了什么？"
+        },
+        {
+          "level": "L2",
+          "text": "新中国成立的历史意义，从三个层面理解：国内（结束屈辱历史、实现国家独立）、制度（进入新民主主义社会）、国际（改变世界政治格局、鼓舞被压迫民族解放斗争）。"
+        },
+        {
+          "level": "L3",
+          "text": "注意区分：新中国成立标志着新民主主义革命基本胜利（不是完全胜利），标志着新民主主义社会的开始（不是社会主义社会）。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-history-013"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-history-q012",
+      "title": "社会主义基本制度确立的标志",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "社会主义基本制度在中国确立的标志是：",
+      "options": [
+        "A. 1949年中华人民共和国成立",
+        "B. 1956年社会主义改造基本完成",
+        "C. 1954年第一部《中华人民共和国宪法》颁布",
+        "D. 1978年中共十一届三中全会召开"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "1956年社会主义改造基本完成，生产资料公有制在国民经济中占据主导地位，这标志着社会主义基本制度在中国确立，B选项正确。",
+        "1949年中华人民共和国成立，标志着新民主主义社会的开始，还不是社会主义社会，A选项错误。",
+        "1954年宪法以国家根本大法形式确认了人民民主原则和社会主义方向，但社会主义基本制度尚未完全确立，C选项不准确。",
+        "1978年中共十一届三中全会开启了改革开放新时期，不是在社会主义制度确立的标志，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "1949年新中国成立后，中国是不是立即进入了社会主义社会？如果不是，是什么社会？这个社会持续了多长时间？"
+        },
+        {
+          "level": "L2",
+          "text": "社会主义基本制度确立的标志是：生产资料公有制占主导（经济基础）和人民民主专政的政权（上层建筑）。这两者在1956年社会主义改造完成后才基本具备。"
+        },
+        {
+          "level": "L3",
+          "text": "分析社会主义改造的历史意义，要放在当时历史条件下看：它为当代中国一切发展进步奠定了制度基础，这个历史功绩不能否定。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-history-014"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-history-q013",
+      "title": "中共十一届三中全会的伟大转折意义",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "1978年12月召开的中共十一届三中全会，是新中国成立以来党的历史上具有深远意义的伟大转折。下列关于这次会议历史意义的理解，正确的是：",
+      "options": [
+        "A. 会议作出了把党和国家工作中心转移到经济建设上来、实行改革开放的决策",
+        "B. 会议作出了全面建立社会主义市场经济的决策",
+        "C. 会议作出了全面建成小康社会决胜阶段的部署",
+        "D. 会议作出了全面推进依法治国的决定"
+      ],
+      "answer": "A",
+      "solutionSteps": [
+        "中共十一届三中全会重新确立了实事求是的思想路线，作出了把党和国家工作中心转移到经济建设上来、实行改革开放的历史性决策，开启了改革开放和社会主义现代化建设新时期，A选项正确。",
+        "建立社会主义市场经济的目标是中共十四大（1992年）提出的，不是十一届三中全会，B选项错误。",
+        "全面建成小康社会决胜阶段的部署是中共十八大（2012年）后提出的，不是十一届三中全会，C选项错误。",
+        "全面推进依法治国是中共十八届四中全会（2014年）作出的决定，不是十一届三中全会，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "1978年中共十一届三中全会作出了哪些重大决策？这些决策对中国的发展产生了什么影响？"
+        },
+        {
+          "level": "L2",
+          "text": "中共十一届三中全会的伟大历史意义，可以概括为'伟大转折'：思想路线（实事求是重新确立）、政治路线（以经济建设为中心）、组织路线（平反冤假错案）。"
+        },
+        {
+          "level": "L3",
+          "text": "分析改革开放开端的逻辑：真理标准大讨论（思想准备）$\\to$十一届三中全会（伟大决策）$\\to$农村改革率先突破 $\\to$城市改革全面展开。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-history-016"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-history-q014",
+      "title": "中国特色社会主义进入新时代的依据",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "中共十八大以来，中国特色社会主义进入新时代。中国特色社会主义进入新时代的重要依据是：",
+      "options": [
+        "A. 中国已经超越了社会主义初级阶段",
+        "B. 中国社会主要矛盾已经转化为人民日益增长的美好生活需要和不平衡不充分的发展之间的矛盾",
+        "C. 中国已经实现了社会主义现代化",
+        "D. 中国已经超越了发展中国家行列"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "中国特色社会主义进入新时代的重要依据是社会主要矛盾的变化：已经从人民日益增长的物质文化需要同落后的社会生产之间的矛盾，转化为人民日益增长的美好生活需要和不平衡不充分的发展之间的矛盾，B选项正确。",
+        "中国特色社会主义进入新时代，但中国仍然处于并将长期处于社会主义初级阶段，A选项错误。",
+        "社会主义现代化是一个长期历史过程，尚未完全实现，C选项错误。",
+        "中国仍然是世界上最大的发展中国家，没有超越发展中国家行列，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "中国特色社会主义进入'新时代'，'新'在哪里？中国社会的主要矛盾发生了什么变化？"
+        },
+        {
+          "level": "L2",
+          "text": "新时代的依据：社会主要矛盾变化（人民日益增长的美好生活需要和不平衡不充分的发展之间的矛盾）、党的历史使命变化（从全面建成小康社会到全面建设社会主义现代化强国）。"
+        },
+        {
+          "level": "L3",
+          "text": "分析'新时代'和'初级阶段'的关系：新时代仍然属于社会主义初级阶段，但初级阶段进入了新的发展阶段。两者不矛盾。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-history-017"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-history-q015",
+      "title": "实现中华民族伟大复兴的历史逻辑",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "实现中华民族伟大复兴是近代以来中国人民最伟大的梦想。下列关于中华民族伟大复兴历史逻辑的理解，正确的是：",
+      "options": [
+        "A. 中华民族伟大复兴就是恢复古代中国的版图和国际地位",
+        "B. 中华民族伟大复兴是轻轻松松、敲锣打鼓就能实现的",
+        "C. 实现中华民族伟大复兴，必须走中国特色社会主义道路",
+        "D. 中华民族伟大复兴只需要经济发展，不需要其他条件"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "实现中华民族伟大复兴，必须走中国特色社会主义道路，这是历史的选择、人民的选择，C选项正确。",
+        "中华民族伟大复兴不是恢复古代中国的版图和国际地位，而是实现现代化，让中国人民过上美好生活，A选项错误。",
+        "中华民族伟大复兴绝不是轻轻松松、敲锣打鼓就能实现的，需要全党全国各族人民付出艰苦努力，B选项错误。",
+        "中华民族伟大复兴是全面的，不仅包括经济发展，还包括政治、文化、社会、生态文明等各个方面的发展，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "中华民族伟大复兴的'复兴'是什么意思？是回到古代中国，还是实现现代化？"
+        },
+        {
+          "level": "L2",
+          "text": "中华民族伟大复兴的历史逻辑：近代衰落$\\to$奋斗探索（各阶层救国方案先后失败）$\\to$找到正确道路（中国共产党领导下走社会主义道路）$\\to$迎来光明前景（新时代）。"
+        },
+        {
+          "level": "L3",
+          "text": "分析中华民族伟大复兴，抓住'三个必须'：必须走中国道路、必须弘扬中国精神、必须凝聚中国力量。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-history-018"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-history-q016",
+      "title": "中国外交政策的宗旨",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "中国对外政策的宗旨是：",
+      "options": [
+        "A. 维护世界和平、促进共同发展",
+        "B. 建立世界霸权、称霸全球",
+        "C. 只管本国利益、不管国际责任",
+        "D. 输出中国模式、要求别国照搬"
+      ],
+      "answer": "A",
+      "solutionSteps": [
+        "中国始终奉行独立自主的和平外交政策，其宗旨是维护世界和平、促进共同发展，A选项正确。",
+        "中国坚持走和平发展道路，永远不称霸，B选项错误。",
+        "中国既维护本国利益，也兼顾他国合理关切，承担国际责任，C选项错误。",
+        "中国尊重各国人民自主选择发展道路的权利，不输出模式，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "中国坚持走和平发展道路，这意味着什么？中国还是不是要维护自己的正当利益？"
+        },
+        {
+          "level": "L2",
+          "text": "中国外交政策的宗旨是维护世界和平、促进共同发展，这体现了中国的大国担当和对构建人类命运共同体的贡献。"
+        },
+        {
+          "level": "L3",
+          "text": "分析中国外交政策，抓住'独立自主'（根本原则）和'和平发展'（道路选择）两个核心。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-history-020"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-history-q017",
+      "title": "中国近代各阶层救国方案的探索",
+      "type": "diagnostic",
+      "difficulty": 3,
+      "content": "中国近代以来，不同社会阶层先后提出了不同的救国方案。下列关于各阶层救国方案探索历程的理解，正确的是：",
+      "options": [
+        "A. 农民阶级的太平天国运动建立了先进的社会主义制度",
+        "B. 洋务派的洋务运动主张学习西方资本主义政治制度",
+        "C. 资产阶级的戊戌变法和辛亥革命都没有完成反帝反封建的革命任务",
+        "D. 只有走半殖民地半封建道路才能救中国"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "戊戌变法（资产阶级改良道路）和辛亥革命（资产阶级民主革命道路）先后失败，都没有改变中国半殖民地半封建的社会性质，都没有完成反帝反封建的革命任务，C选项正确。",
+        "太平天国运动是农民起义，没有建立社会主义制度，它追求的是农民平均主义，A选项错误。",
+        "洋务运动主张'中体西用'，只学西方技术，不学西方政治制度，B选项错误。",
+        "历史已经证明，半殖民地半封建道路使中国沦为被侵略被压迫的地位，只有社会主义才能救中国，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "中国近代以来，农民阶级、洋务派、资产阶级、无产阶级都提出了各自的救国方案。哪些成功了，哪些失败了？"
+        },
+        {
+          "level": "L2",
+          "text": "中国近代救国探索历程说明：农民阶级（局限性）、地主阶级洋务派（维护封建统治）、民族资产阶级（软弱性）都不能领导革命取得胜利，只有无产阶级（通过共产党）才能领导中国革命取得胜利。"
+        },
+        {
+          "level": "L3",
+          "text": "分析中国近代救国探索的历史结论：只有社会主义才能救中国，只有中国特色社会主义才能发展中国。这是历史的选择、人民的选择。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-history-002",
+        "politics-history-003",
+        "politics-history-004",
+        "politics-history-005"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-history-q018",
+      "title": "社会主义改造的历史意义",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "1956年社会主义改造基本完成，生产资料公有制在国民经济中占据主导地位。下列关于社会主义改造历史意义的理解，正确的是：",
+      "options": [
+        "A. 社会主义改造是完全错误的，应该否定",
+        "B. 社会主义改造为当代中国一切发展进步奠定了制度基础",
+        "C. 社会主义改造消灭了所有非公有制经济",
+        "D. 社会主义改造完成后中国立即实现了社会主义现代化"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "社会主义改造的基本完成，标志着社会主义基本制度在中国确立，为当代中国一切发展进步奠定了制度基础，实现了中华民族有史以来最广泛最深刻的社会变革，B选项正确。",
+        "社会主义改造是20世纪中国的一次深刻社会变革，其历史功绩不能否定，A选项错误。",
+        "社会主义改造后，中国仍然在一定范围内允许非公有制经济存在（如个体经济），不是消灭了所有非公有制经济，C选项不准确。",
+        "社会主义现代化是一个长期历史过程，1956年社会主义改造完成后远远没有实现，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "1956年社会主义改造完成后，中国社会发生了什么根本性变化？这个变化有什么历史意义？"
+        },
+        {
+          "level": "L2",
+          "text": "社会主义改造的历史意义，要放在当时历史条件下看：它建立了社会主义制度，为当代中国一切发展进步奠定了制度基础。"
+        },
+        {
+          "level": "L3",
+          "text": "分析社会主义改造，坚持'一分为二'：成就（建立社会主义制度、奠定制度基础）和探索中的不足（形式过于单一、要求过急过快）都客观存在。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-history-014"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-history-q019",
+      "title": "改革开放的历史意义",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "1978年中共十一届三中全会以来，中国实行了改革开放。下列关于改革开放历史意义的理解，正确的是：",
+      "options": [
+        "A. 改革开放是对社会主义制度的否定",
+        "B. 改革开放是决定当代中国命运的关键抉择",
+        "C. 改革开放就是完全照搬西方制度",
+        "D. 改革开放只是经济领域的政策，不涉及其他领域"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "改革开放是中国共产党在新的历史条件下带领人民进行的新的伟大革命，是决定当代中国命运的关键抉择，B选项正确。",
+        "改革开放是社会主义制度的自我完善和发展，不是对社会主义制度的否定，A选项错误。",
+        "改革开放是走中国特色社会主义道路，不是照搬西方制度，C选项错误。",
+        "改革开放是全面的，不仅包括经济领域，还包括政治、文化、社会、生态文明等各个领域，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "改革开放给中国带来了什么变化？为什么说它是'决定当代中国命运的关键抉择'？"
+        },
+        {
+          "level": "L2",
+          "text": "改革开放的历史意义：解放和发展了社会生产力，推动了中国社会主义现代化进程，使中国大踏步赶上了时代。"
+        },
+        {
+          "level": "L3",
+          "text": "分析改革开放，抓住'新的伟大革命'这个定位：它是革命（深刻社会变革），但是'新的'（社会主义制度自我完善，不是推翻制度）。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-history-016"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    },
+    {
+      "id": "politics-history-q020",
+      "title": "中国近现代史的基本经验",
+      "type": "diagnostic",
+      "difficulty": 3,
+      "content": "中国近代以来的历史，是中国人民接续奋斗、探索救国救民道路的历史。总结中国近现代史的基本经验，其核心结论是：",
+      "options": [
+        "A. 只有资本主义才能救中国",
+        "B. 只有社会主义才能救中国，只有中国特色社会主义才能发展中国",
+        "C. 只有回到封建社会才能避免被侵略",
+        "D. 只有依赖外国才能发展"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "中国近现代史的基本经验是：只有社会主义才能救中国（历史已经证明资本主义道路走不通），只有中国特色社会主义才能发展中国（改革开放以来的伟大成就已经证明），B选项正确。",
+        "历史已经证明，资本主义道路在中国走不通，A选项错误。",
+        "回到封建社会意味着倒退，不是出路，C选项错误。",
+        "依赖外国发展意味着丧失独立，不是正确发展道路，D选项错误。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "中国近代以来，各种救国方案先后失败了，最后是什么道路成功了？这个历史结论是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "中国近现代史的基本经验，可以概括为两个'只有'：只有社会主义才能救中国，只有中国特色社会主义才能发展中国。"
+        },
+        {
+          "level": "L3",
+          "text": "分析中国近现代史的基本经验，从历史逻辑（各阶层救国方案探索的成败）和实践逻辑（中国特色社会主义的伟大成就）两个层面论证。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "politics-history-018"
+      ],
+      "source": {
+        "title": "TeacherAgent original politics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft"
+    }
+  ]
+}

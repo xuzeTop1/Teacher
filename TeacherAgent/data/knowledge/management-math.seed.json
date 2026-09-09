@@ -1,0 +1,688 @@
+{
+  "subject": "management",
+  "course": "management-math",
+  "chapter": "management-math",
+  "status": "draft",
+  "nodes": [
+    {
+      "id": "management-math-001",
+      "title": "实数与运算",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "管综数学考初等数学：实数（整数、分数、比与比例、绝对值）是基础；绝对值|x|表示距离，分段讨论是常法。",
+      "prerequisites": [],
+      "misconceptions": [
+        "把初等数学当高数",
+        "忽视绝对值分段"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个概念在管综里常怎么考？"
+        },
+        {
+          "level": "L2",
+          "text": "回到定义再判断。"
+        },
+        {
+          "level": "L3",
+          "text": "先定性后计算。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-math-002",
+      "title": "应用题（比例/行程/工程）",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "应用题把文字转成数量关系：行程用速度$\\times$时间=路程，工程用效率$\\times$时间=总量，比例题设未知数按比例列式。",
+      "prerequisites": [
+        "management-math-001"
+      ],
+      "misconceptions": [
+        "漏设未知数",
+        "单位不统一"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "它和哪个易混点接近？"
+        },
+        {
+          "level": "L2",
+          "text": "列出异同避免误用。"
+        },
+        {
+          "level": "L3",
+          "text": "用例子固定理解。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-math-003",
+      "title": "浓度与利润问题",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "浓度=溶质/溶液；利润=售价-成本，利润率=利润/成本；十字交叉法是混合浓度的常用技巧。",
+      "prerequisites": [
+        "management-math-002"
+      ],
+      "misconceptions": [
+        "混淆利润率分母",
+        "浓度算错溶质"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "公式/规则的前提是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "缺前提不能套用。"
+        },
+        {
+          "level": "L3",
+          "text": "先检查适用条件。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-math-004",
+      "title": "整式与分式",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "整式运算含展开与因式分解（提公因式、公式法）；分式注意分母不为零，约分前先因式分解。",
+      "prerequisites": [
+        "management-math-001"
+      ],
+      "misconceptions": [
+        "忽略分母限制",
+        "因式分解不全"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这一步最容易错在哪？"
+        },
+        {
+          "level": "L2",
+          "text": "把易错点写下来。"
+        },
+        {
+          "level": "L3",
+          "text": "用反例验证边界。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-math-005",
+      "title": "一次函数与二次函数",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "一次函数 $y=kx+b$图象为直线；二次函数 $y=ax^2+bx+c$有顶点与对称轴，最值常出现在顶点或端点。",
+      "prerequisites": [
+        "management-math-001"
+      ],
+      "misconceptions": [
+        "记错顶点公式",
+        "忽视开口方向"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "题干给了哪些量？"
+        },
+        {
+          "level": "L2",
+          "text": "先列已知再找关系。"
+        },
+        {
+          "level": "L3",
+          "text": "建立方程或模型。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-math-006",
+      "title": "方程与不等式",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "一元二次 $ax^2+bx+c=0$用求根公式或因式分解；均值不等式 $a+b\\ge2\\\\sqrt{a}b$（$a,b>0$）求最值要先验证取等条件。",
+      "prerequisites": [
+        "management-math-004",
+        "management-math-005"
+      ],
+      "misconceptions": [
+        "滥用均值不等式",
+        "忽略取等条件"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这是哪类题型？"
+        },
+        {
+          "level": "L2",
+          "text": "先归类再调用方法。"
+        },
+        {
+          "level": "L3",
+          "text": "用题型模板组织思路。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-math-007",
+      "title": "数列（等差/等比）",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "等差通项为 $a_n=a_1+(n-1)d$、前 $n$项和 $S_n=n\\frac{(a_1+a_n)}{2}$；等比通项为 $a_1\\cdot q^{n-1}$，注意 $q\\neq0$与 $q=1$特例。",
+      "prerequisites": [
+        "management-math-001"
+      ],
+      "misconceptions": [
+        "混淆等差等比公式",
+        "忽略q=1"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "结论由什么条件推出？"
+        },
+        {
+          "level": "L2",
+          "text": "区分充分与必要。"
+        },
+        {
+          "level": "L3",
+          "text": "条件充分性判断靠此。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-math-008",
+      "title": "平面几何",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "三角形面积=底$\\times$高$/2$、勾股定理；圆面积$\\pi r^2$、周长$2\\pi r$；常用相似与面积比解题。",
+      "prerequisites": [
+        "management-math-001"
+      ],
+      "misconceptions": [
+        "用错面积公式",
+        "忽视相似条件"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "论证的漏洞可能在哪？"
+        },
+        {
+          "level": "L2",
+          "text": "先找断裂再分析。"
+        },
+        {
+          "level": "L3",
+          "text": "用逻辑缺陷清单排查。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-math-009",
+      "title": "立体几何（体积与表面积）",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "长方体体积=长$\\times$宽$\\times$高；圆柱体积$=\\pi r^2h$；球体积$=\\frac{4}{3}\\pi r^3$；表面积注意是否含底面。",
+      "prerequisites": [
+        "management-math-008"
+      ],
+      "misconceptions": [
+        "混淆体积表面积",
+        "漏算底面"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个概念在管综里常怎么考？"
+        },
+        {
+          "level": "L2",
+          "text": "回到定义再判断。"
+        },
+        {
+          "level": "L3",
+          "text": "先定性后计算。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-math-010",
+      "title": "解析几何初步",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "两点距离公式、直线方程（斜率截距）、圆方程 $(x-a)^2+(y-b)^2=r^2$；几何问题常代数化求解。",
+      "prerequisites": [
+        "management-math-008"
+      ],
+      "misconceptions": [
+        "斜率不存在情形漏判",
+        "配方错"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "它和哪个易混点接近？"
+        },
+        {
+          "level": "L2",
+          "text": "列出异同避免误用。"
+        },
+        {
+          "level": "L3",
+          "text": "用例子固定理解。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-math-011",
+      "title": "排列组合基础",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "加法原理分类相加、乘法原理分步相乘；排列 $A(n,k)=n!/(n-k)!$计顺序，组合 $C(n,k)$不计顺序。",
+      "prerequisites": [
+        "management-math-001"
+      ],
+      "misconceptions": [
+        "混淆排列组合",
+        "重复或遗漏"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "公式/规则的前提是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "缺前提不能套用。"
+        },
+        {
+          "level": "L3",
+          "text": "先检查适用条件。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-math-012",
+      "title": "概率初步",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "古典概型 P=有利/总；独立事件同时发生用乘积；互斥事件用相加；注意'至少'常取对立事件。",
+      "prerequisites": [
+        "management-math-011"
+      ],
+      "misconceptions": [
+        "混淆独立与互斥",
+        "忽视对立事件"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这一步最容易错在哪？"
+        },
+        {
+          "level": "L2",
+          "text": "把易错点写下来。"
+        },
+        {
+          "level": "L3",
+          "text": "用反例验证边界。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-math-013",
+      "title": "数据描述（均值/方差）",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "均值描述集中趋势，方差/标准差描述离散程度；图表（条形/扇形）用于读取与比较数据。",
+      "prerequisites": [
+        "management-math-001"
+      ],
+      "misconceptions": [
+        "混淆均值与方差",
+        "读图错误"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "题干给了哪些量？"
+        },
+        {
+          "level": "L2",
+          "text": "先列已知再找关系。"
+        },
+        {
+          "level": "L3",
+          "text": "建立方程或模型。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-math-014",
+      "title": "条件充分性判断（题型）",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "管综特色题型：判断条件$(1)(2)$能否推出结论。$A$(1独充) $B$(2独充) $C$(联合充) $D$(各自充) $E$(均不充)；充分=条件⇒结论。",
+      "prerequisites": [
+        "management-math-001"
+      ],
+      "misconceptions": [
+        "混淆充分与必要",
+        "误判联合"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这是哪类题型？"
+        },
+        {
+          "level": "L2",
+          "text": "先归类再调用方法。"
+        },
+        {
+          "level": "L3",
+          "text": "用题型模板组织思路。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-math-015",
+      "title": "绝对值最值与分段",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "含绝对值式求最值常按零点分段讨论；|x-a|+|x-b| 的最小值出现在区间内部，等于 |a-b|。",
+      "prerequisites": [
+        "management-math-001"
+      ],
+      "misconceptions": [
+        "不断段直接去绝对值",
+        "漏零点"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "结论由什么条件推出？"
+        },
+        {
+          "level": "L2",
+          "text": "区分充分与必要。"
+        },
+        {
+          "level": "L3",
+          "text": "条件充分性判断靠此。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-math-016",
+      "title": "容斥原理",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "两集合 $|A\\cup B|=|A|+|B|-|A\\cap B|$；三集合再加回三重交；用于计数避免重复。",
+      "prerequisites": [
+        "management-math-002"
+      ],
+      "misconceptions": [
+        "忘记减交集",
+        "三集合符号错"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "论证的漏洞可能在哪？"
+        },
+        {
+          "level": "L2",
+          "text": "先找断裂再分析。"
+        },
+        {
+          "level": "L3",
+          "text": "用逻辑缺陷清单排查。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-math-017",
+      "title": "几何最值问题",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "几何最值常转化为函数最值（如面积最大），或利用不等式；先建模型再求极值。",
+      "prerequisites": [
+        "management-math-005",
+        "management-math-008"
+      ],
+      "misconceptions": [
+        "不建模直接猜",
+        "忽略约束"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个概念在管综里常怎么考？"
+        },
+        {
+          "level": "L2",
+          "text": "回到定义再判断。"
+        },
+        {
+          "level": "L3",
+          "text": "先定性后计算。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-math-018",
+      "title": "植树与周期问题",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "线性植树：棵数=段数+1（两端都植）；周期问题用除以周期取余数定位。",
+      "prerequisites": [
+        "management-math-002"
+      ],
+      "misconceptions": [
+        "漏$\\pm1$",
+        "周期取余错"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "它和哪个易混点接近？"
+        },
+        {
+          "level": "L2",
+          "text": "列出异同避免误用。"
+        },
+        {
+          "level": "L3",
+          "text": "用例子固定理解。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-math-019",
+      "title": "综合解题策略",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "管综数学重速度与准确：先判题型、再套方法、最后验算；难题可特值法或反例快速排除。",
+      "prerequisites": [
+        "management-math-014"
+      ],
+      "misconceptions": [
+        "死算不取巧",
+        "不验算"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "公式/规则的前提是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "缺前提不能套用。"
+        },
+        {
+          "level": "L3",
+          "text": "先检查适用条件。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "management-math-020",
+      "title": "试卷结构与时间",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "管综数学75分（问题求解$15\\times3=45$、条件充分性判断$10\\times3=30$），整卷180分钟；数学宜控制在60分钟内。",
+      "prerequisites": [
+        "management-math-014"
+      ],
+      "misconceptions": [
+        "以为考高数",
+        "忽视时间分配"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这一步最容易错在哪？"
+        },
+        {
+          "level": "L2",
+          "text": "把易错点写下来。"
+        },
+        {
+          "level": "L3",
+          "text": "用反例验证边界。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (管理类联考199（综合能力）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
+      }
+    }
+  ]
+}

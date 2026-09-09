@@ -1,0 +1,266 @@
+{
+  "subject": "math",
+  "course": "calculus",
+  "chapter": "definite-integrals",
+  "status": "approved",
+  "questions": [
+    {
+      "id": "math-defint-q001-ftc",
+      "title": "微积分基本定理应用",
+      "knowledgeNodeIds": [
+        "math-defint-ftc"
+      ],
+      "type": "solution",
+      "difficulty": 1,
+      "content": "计算 $\\int_0^2 (3x^2 + 2x)dx$。",
+      "answer": "12",
+      "solutionSteps": [
+        "原函数 $F(x) = x^3 + x^2$",
+        "$F(2) = 8 + 4 = 12$",
+        "$F(0) = 0$",
+        "$\\int_0^2 (3x^2+2x)dx = F(2) - F(0) = 12$"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先求不定积分得到原函数，再代入上下限。"
+        },
+        {
+          "level": "L2",
+          "text": "牛顿-莱布尼茨公式：$\\int_a^b f(x)dx = F(b) - F(a)$。"
+        },
+        {
+          "level": "L3",
+          "text": "如果被积函数在区间内有可去间断点，还能用牛顿-莱布尼茨公式吗？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-defint-q002-substitution",
+      "title": "定积分换元",
+      "knowledgeNodeIds": [
+        "math-defint-substitution"
+      ],
+      "type": "solution",
+      "difficulty": 2,
+      "content": "计算 $\\int_0^1 x\\cdot e^{x^2}dx$。",
+      "answer": "$\\frac{e-1}{2}$",
+      "solutionSteps": [
+        "令 $u = x^2, du = 2x\\,dx, x\\,dx = \\frac{du}{2}$",
+        "x=0 时 u=0, x=1 时 u=1",
+        "$\\int_0^1 x\\cdot e^{x^2}dx = (\\frac{1}{2})\\int_0^1 e^u\\,du = (\\frac{1}{2})[e^u]_0^1 = \\frac{e-1}{2}$"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "令 $u = x^2$，同时换积分限。"
+        },
+        {
+          "level": "L2",
+          "text": "换元后不需要回代，直接用新变量的上下限。"
+        },
+        {
+          "level": "L3",
+          "text": "换元后如果新上限小于新下限，需要加负号吗？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-defint-q003-odd-function",
+      "title": "奇偶性简化积分",
+      "knowledgeNodeIds": [
+        "math-defint-properties"
+      ],
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "计算 $\\int_{-\\pi}^{\\pi} x\\cdot\\sin x dx$。（提示：判断被积函数的奇偶性）",
+      "answer": "$2\\pi$",
+      "solutionSteps": [
+        "$f(x) = x\\cdot\\sin x$，$f(-x) = (-x)\\cdot\\sin(-x) = x\\cdot\\sin x = f(x)$，是偶函数",
+        "$\\int_{-\\pi}^{\\pi} x\\cdot\\sin x dx = 2\\int_0^\\pi x\\cdot\\sin x dx$",
+        "分部积分：u=x, dv=sin x dx, du=dx, v=-cos x",
+        "$= 2[-x\\cdot\\cos x|_0^\\pi + \\int_0^\\pi \\cos x dx] = 2[\\pi + \\sin x|_0^\\pi] = 2\\pi$"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先检查 $x\\cdot\\sin x$是奇函数还是偶函数。"
+        },
+        {
+          "level": "L2",
+          "text": "偶函数在对称区间上的积分等于 2 倍正半轴积分。"
+        },
+        {
+          "level": "L3",
+          "text": "奇函数在对称区间积分为 0，偶函数呢？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-defint-q004-ftc-chain",
+      "title": "变上限积分求导",
+      "knowledgeNodeIds": [
+        "math-defint-ftc"
+      ],
+      "type": "solution",
+      "difficulty": 2,
+      "content": "设 $F(x) = \\int_0^{x^2} \\sin t\\,dt$，求 $F'(x)$。",
+      "answer": "$F'(x) = 2x\\cdot\\sin(x^2)$",
+      "solutionSteps": [
+        "令 $u = x^2$，则 $F(x) = \\int_0^u \\sin t dt$",
+        "由链式法则：$F'(x) = (\\frac{dF}{du})\\cdot(\\frac{du}{dx})$",
+        "$\\frac{dF}{du} = \\sin u = \\sin(x^2)$",
+        "du/dx = 2x",
+        "$F'(x) = \\sin(x^2) \\cdot 2x = 2x\\cdot\\sin(x^2)$"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "积分上限是 $x^2$而不是 $x$，需要什么额外法则？"
+        },
+        {
+          "level": "L2",
+          "text": "把 F 看成复合函数，用链式法则。"
+        },
+        {
+          "level": "L3",
+          "text": "如果 $F(x)=$积分从 $g(x)$到 $h(x)$的 $f(t)dt$，$F$怎么求导？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-defint-q005-improper",
+      "title": "反常积分判断",
+      "knowledgeNodeIds": [
+        "math-defint-improper"
+      ],
+      "type": "solution",
+      "difficulty": 3,
+      "content": "判断反常积分 $\\int_1^+\\infty \\frac{1}{x}^2 dx$是否收敛，若收敛求其值。",
+      "answer": "收敛，值为 1",
+      "solutionSteps": [
+        "$\\int_1^+\\infty \\frac{1}{x}^2 dx = \\lim_{b \\to +\\infty} \\int_1^b x^{-2}dx$",
+        "$= \\lim_{b \\to +\\infty} [-\\frac{1}{x}]_1^b$",
+        "$= \\lim_{b \\to +\\infty} (-\\frac{1}{b} + 1) = 0 + 1 = 1$",
+        "极限存在，故收敛，值为 1"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先写成极限形式，$\\int_1^b \\frac{1}{x}^2 dx$算出来。"
+        },
+        {
+          "level": "L2",
+          "text": "当 $b\\to+\\infty$时 $-\\frac{1}{b}$趋近什么？"
+        },
+        {
+          "level": "L3",
+          "text": "积分 0 到 1 的 1/x dx 是瑕积分还是无穷限？收敛吗？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-defint-q006-parts-definite",
+      "title": "定积分分部",
+      "knowledgeNodeIds": [
+        "math-defint-by-parts"
+      ],
+      "type": "solution",
+      "difficulty": 2,
+      "content": "计算 $\\int_0^1 x\\cdot e^xdx$。",
+      "answer": "1",
+      "solutionSteps": [
+        "$u = x, dv = e^xdx, du = dx, v = e^x$",
+        "$\\int_0^1 x\\cdot e^xdx = [xe^x]_0^1 - \\int_0^1 e^xdx$",
+        "$= (1\\cdot e - 0) - [e^x]_0^1 = e - (e - 1) = 1$"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "分部积分后 [uv$]_0^1$怎么算？"
+        },
+        {
+          "level": "L2",
+          "text": "注意 uv 项要代入上下限，剩下的积分也要代入。"
+        },
+        {
+          "level": "L3",
+          "text": "分部积分后 [uv] 的上下限代入顺序会影响结果吗？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-defint-q007-numerical",
+      "title": "梯形公式近似",
+      "knowledgeNodeIds": [
+        "math-defint-convergence"
+      ],
+      "type": "solution",
+      "difficulty": 2,
+      "content": "用梯形公式（$n=2$）近似计算 $\\int_0^2 x^2dx$，并与精确值比较。",
+      "answer": "近似值 3，精确值 $\\frac{8}{3}\\approx2.67$",
+      "solutionSteps": [
+        "$n=2$，步长 $h = \\frac{(2-0)}{2} = 1$，节点 $x_0=0, x_1=1, x_2=2$",
+        "$f(0)=0, f(1)=1, f(2)=4$",
+        "梯形公式：$T = (\\frac{h}{2})[f(0) + 2f(1) + f(2)] = (\\frac{1}{2})[0+2+4] = 3$",
+        "精确值 $\\int_0^2 x^2dx = [x^3/3]_0^2 = \\frac{8}{3} \\approx 2.67$"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "梯形公式 $T = (\\frac{h}{2})[f(x_0) + 2f(x_1) + ... + f(x_n)]$。"
+        },
+        {
+          "level": "L2",
+          "text": "n=2 意味着有几个子区间？步长 h 是多少？"
+        },
+        {
+          "level": "L3",
+          "text": "辛普森公式为什么通常比梯形公式更精确？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    }
+  ]
+}

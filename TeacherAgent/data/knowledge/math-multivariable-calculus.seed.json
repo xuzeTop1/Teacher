@@ -1,0 +1,260 @@
+{
+  "subject": "math",
+  "course": "calculus",
+  "chapter": "multivariable-calculus",
+  "status": "approved",
+  "nodes": [
+    {
+      "id": "math-multi-function",
+      "title": "多元函数概念",
+      "level": "undergraduate",
+      "difficulty": 2,
+      "summary": "多元函数 $z = f(x_1, x_2, ..., x_n)$是从 $R^n$的一个子集 $D$（定义域）到 $R$的映射。最常见的二元函数 $z = f(x, y)$的图像是三维空间中的曲面。定义域 $D$是 xy 平面上的区域，可以是开区域、闭区域或混合区域。常见的定义域约束：分母不为零、根号内非负、对数真数为正等。等值线（等高线）$f(x,y) = c$是理解二元函数的重要工具：等值线密集处函数变化剧烈，稀疏处变化平缓。",
+      "prerequisites": [
+        "math-continuity-point"
+      ],
+      "misconceptions": [
+        "将二元函数的图像想象成平面曲线而非空间曲面",
+        "在求定义域时忽略多元约束的交集",
+        "将等值线误认为函数的图像"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "一元函数 $y = f(x)$的图像是平面上的曲线，二元函数 $z = f(x,y)$的图像在什么空间中？"
+        },
+        {
+          "level": "L2",
+          "text": "地图上的等高线表示什么？它和二元函数的等值线有什么关系？"
+        },
+        {
+          "level": "L3",
+          "text": "二元函数 $z = f(x,y)$的图像是三维空间 ${(x, y, f(x,y)) | (x,y) \\in D}$中的曲面。等值线 $f(x,y) = c$是曲面被水平面 $z = c$截出的曲线在 xy 平面上的投影。通过等值线族可以「俯视」曲面的高低变化。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-multi-limit",
+      "title": "多元函数极限",
+      "level": "undergraduate",
+      "difficulty": 3,
+      "summary": "二元函数 $f(x,y)$在点 $(x_0, y_0)$处的极限定义为：对任意 $\\varepsilon > 0$，存在 $\\delta > 0$，当 $0 < \\sqrt{(x-x_0)^2 + (y-y_0)^2} < \\delta$时，$|f(x,y) - L| < \\varepsilon$。记为 $\\lim_{(x,y) \\to (x_0,y_0)} f(x,y) = L$。与一元函数的关键区别：$(x,y)$可以从任意方向趋近 $(x_0, y_0)$。判定极限不存在的常用方法：沿不同路径趋近得到不同的极限值。判定极限存在的方法：夹逼定理、转化为极坐标、利用连续性等。注意：沿所有直线路径极限相同不代表极限存在（可能存在曲线路径使极限不同）。",
+      "prerequisites": [
+        "math-multi-function",
+        "math-continuity-point"
+      ],
+      "misconceptions": [
+        "认为沿所有直线方向趋近极限相同就能保证极限存在",
+        "用一元函数的极限法则直接推广到多元（如不能直接用洛必达法则）",
+        "混淆「极限不存在」和「极限为无穷大」"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "一元函数趋近某个点只有「从左」和「从右」两个方向，二元函数呢？"
+        },
+        {
+          "level": "L2",
+          "text": "要证明极限不存在，只需找到两条不同路径，沿这两条路径趋近时极限值不同。你想到哪些「特殊路径」？"
+        },
+        {
+          "level": "L3",
+          "text": "常用路径：沿 $x$轴 $(y=0)$、沿 $y$轴 $(x=0)$、沿直线 $y = kx$、沿抛物线 $y = kx^2$等。例如 $f(x,y) = x\\frac{y}{(x^2+y^2)}$沿 $y = kx$趋近原点时极限为 $\\frac{k}{(1+k^2)}$，随 $k$变化，故极限不存在。但仅验证直线不够，还需考虑曲线路径。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-multi-continuity",
+      "title": "多元函数连续性",
+      "level": "undergraduate",
+      "difficulty": 2,
+      "summary": "$f(x,y)$在 $(x_0, y_0)$处连续的定义：$(1) f$在 $(x_0, y_0)$有定义；$(2) \\lim_{(x,y) \\to (x_0,y_0)} f(x,y)$存在；$(3)$极限值等于函数值。多元连续函数的性质与一元类似：有界闭区域上的连续函数有最大值和最小值（最值定理）；有界闭区域上的连续函数取到最大最小值之间的所有值（介值定理）。偏导数存在不保证连续——这是一元函数中「可导必连续」的推广失效之处。",
+      "prerequisites": [
+        "math-multi-limit",
+        "math-continuity-point"
+      ],
+      "misconceptions": [
+        "认为偏导数存在就能保证连续（反例：$f(x,y) = x\\frac{y}{(x^2+y^2)}$补充定义 $f(0,0)=0$，两个偏导都存在但不连续）",
+        "混淆「分别对各变量连续」和「联合连续」",
+        "忽略多元连续函数在闭区域上一定有最值这一重要性质"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "一元函数中「可导必连续」，多元函数中「偏导数存在」能保证连续吗？"
+        },
+        {
+          "level": "L2",
+          "text": "偏导数只考察沿坐标轴方向的变化。函数沿坐标轴方向表现良好，是否意味着在所有方向都表现良好？"
+        },
+        {
+          "level": "L3",
+          "text": "偏导数 $f_x(x_0,y_0)$只描述沿 $x$轴方向的变化率，$f_y(x_0,y_0)$只描述沿 $y$轴方向的。函数可能沿 $x$轴和 $y$轴方向都连续，但沿对角线方向不连续。因此偏导数存在不蕴含连续。连续性要求函数在所有方向上（以任意方式趋近）都有相同的极限行为。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-multi-partial-deriv",
+      "title": "偏导数",
+      "level": "undergraduate",
+      "difficulty": 2,
+      "summary": "偏导数是多元函数对某一个变量的导数（其余变量视为常数）。$\\partial f/\\partial x = \\lim_{h \\to 0} [f(x+h, y) - f(x, y)] / h$，几何意义是曲面沿 $x$方向的切线斜率。$\\partial f/\\partial y$类似。计算方法：对指定变量求导，其余变量当作常数处理，与一元函数求导法则完全相同。偏导数存在只反映沿坐标轴方向的光滑性，不能保证其他方向。高阶偏导数：$\\partial^2f/\\partial x^2, \\partial^2f/\\partial y^2, \\partial^2f/\\partial x\\partial y, \\partial^2f/\\partial y\\partial x$。当二阶混合偏导数连续时，Clairaut 定理保证它们相等。",
+      "prerequisites": [
+        "math-multi-function",
+        "math-deriv-definition"
+      ],
+      "misconceptions": [
+        "将偏导数符号 $\\partial$与普通微分符号 $d$混淆",
+        "认为混合偏导数总是相等的（需要连续性条件）",
+        "忘记求偏导时把其他变量当常数处理的含义"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "如果把二元函数 $f(x,y)$中的 $y$固定为某个常数，得到的是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "求 $\\partial f/\\partial x$时我们做了什么操作？这和一元函数的求导有什么异同？"
+        },
+        {
+          "level": "L3",
+          "text": "求 $\\partial f/\\partial x$就是把 $y$视为常数（相当于取了一条 $y = y_0$的「截面曲线」），然后对 $x$用一元函数的求导法则。几何上，这是曲面沿 $x$方向的切线斜率。同理 $\\partial f/\\partial y$是沿 $y$方向的切线斜率。注意：两个方向都光滑不意味着曲面在其他方向也光滑。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-multi-total-diff",
+      "title": "全微分",
+      "level": "undergraduate",
+      "difficulty": 3,
+      "summary": "若 $f(x,y)$在 $(x_0, y_0)$处的全增量可表示为 $\\Delta z = A\\Delta x + B\\Delta y + o(\\sqrt{\\Delta x^2+\\Delta y^2})$，则称 $f$在该点可微，$dz = A\\Delta x + B\\Delta y = (\\partial f/\\partial x)dx + (\\partial f/\\partial y)dy$称为全微分。可微的几何意义：曲面在该点有切平面。可微蕴含偏导数存在，但可微不蕴含偏导数连续（偏导数存在是可微的必要条件）。偏导数连续是可微的充分条件（$C^1$条件），但不是必要条件。全微分是线性近似：$f(x_0+\\Delta x, y_0+\\Delta y) \\approx f(x_0,y_0) + (\\partial f/\\partial x)\\Delta x + (\\partial f/\\partial y)\\Delta y$。",
+      "prerequisites": [
+        "math-multi-partial-deriv",
+        "math-multi-continuity"
+      ],
+      "misconceptions": [
+        "认为偏导数存在就一定可微（反例：$f(x,y) = |x| + |y|$在原点）",
+        "将全微分和偏微分混淆",
+        "忽略可微性的几何含义（切平面存在）"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "一元函数可微意味着可以用切线近似。二元函数可微意味着可以用什么近似？"
+        },
+        {
+          "level": "L2",
+          "text": "偏导数存在只保证沿两个坐标轴方向有切线。什么条件下曲面在某点有完整的切平面？"
+        },
+        {
+          "level": "L3",
+          "text": "可微意味着函数增量能被线性部分 $A\\Delta x + B\\Delta y$很好地逼近（误差是距离的高阶无穷小）。几何上这就是切平面：$z = f(x_0,y_0) + f_x\\cdot(x-x_0) + f_y\\cdot(y-y_0)$。偏导数存在是可微的必要条件但不充分。充分条件是偏导数连续（$C^1$条件）。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-multi-chain-rule",
+      "title": "多元复合函数求导",
+      "level": "undergraduate",
+      "difficulty": 3,
+      "summary": "多元复合函数的链式法则（链式规则）：若 $z = f(u,v)$，$u = u(x,y)$，$v = v(x,y)$，则 $\\partial z/\\partial x = (\\partial z/\\partial u)(\\partial u/\\partial x) + (\\partial z/\\partial v)(\\partial v/\\partial x)$，$\\partial z/\\partial y = (\\partial z/\\partial u)(\\partial u/\\partial y) + (\\partial z/\\partial v)(\\partial v/\\partial y)$。关键记忆法：画出变量依赖的树形图，从因变量到自变量的每条路径贡献一个乘积项，所有路径求和。特殊情况：全导数（中间变量是一元函数时）$\\frac{dz}{dt} = (\\partial z/\\partial x)\\frac{dx}{dt} + (\\partial z/\\partial y)\\frac{dy}{dt}$。隐函数求导也可视为链式法则的特殊应用。",
+      "prerequisites": [
+        "math-deriv-chain",
+        "math-multi-partial-deriv"
+      ],
+      "misconceptions": [
+        "遗漏某些变量依赖路径导致少加项",
+        "在一元复合时误用多元链式法则（多加了项）",
+        "混淆偏导数和全导数的记号"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "一元复合函数 dy/dx = (dy/du)(du/dx)。如果 z 同时依赖于 u 和 v，而 u、v 又依赖于 x，链式法则怎样推广？"
+        },
+        {
+          "level": "L2",
+          "text": "画一个树形图：z 在顶部，u 和 v 在中间，x 和 y 在底部。从 z 到 x 有几条路径？"
+        },
+        {
+          "level": "L3",
+          "text": "从 $z$到 $x$的每条路径贡献一个乘积：$z\\to u\\to x$贡献 $(\\partial z/\\partial u)(\\partial u/\\partial x)$，$z\\to v\\to x$贡献 $(\\partial z/\\partial v)(\\partial v/\\partial x)$。求和得 $\\partial z/\\partial x$。这本质上是多变量的全微分展开 $dz = (\\partial z/\\partial u)du + (\\partial z/\\partial v)dv$，其中 $du = (\\partial u/\\partial x)dx + (\\partial u/\\partial y)dy$，$dv$类似，代入后合并 $dx$和 $dy$的系数。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-multi-extrema",
+      "title": "多元函数极值",
+      "level": "undergraduate",
+      "difficulty": 3,
+      "summary": "二元函数 $f(x,y)$在 $(x_0, y_0)$取极值的必要条件：$f_x(x_0,y_0) = 0$且 $f_y(x_0,y_0) = 0$（驻点）。充分条件（二阶判定法）：设 $A = f_{xx}(x_0,y_0), B = f_{xy}(x_0,y_0), C = f_{yy}(x_0,y_0)$，令 $\\Delta = AC - B^2$。若 $\\Delta > 0$且 $A > 0$，为极小值；若 $\\Delta > 0$且 $A < 0$，为极大值；若 $\\Delta < 0$，非极值（鞍点）；若 $\\Delta = 0$，判定法失效。条件极值和拉格朗日乘数法：在约束 $g(x,y) = 0$下求 $f$的极值，解方程组 $\\nabla f = \\lambda\\nabla g$和 $g = 0$。",
+      "prerequisites": [
+        "math-multi-partial-deriv",
+        "math-multi-total-diff",
+        "math-app-deriv-extrema"
+      ],
+      "misconceptions": [
+        "只令 fx = 0 而忘记同时令 fy = 0",
+        "混淆 $\\Delta = AC - B^2$中各符号的含义",
+        "将鞍点误认为极值点（鞍点处沿某些方向取极大，另一些方向取极小）"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "一元函数极值点处 f' = 0。二元函数极值点处对 x 和 y 的偏导数分别是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "驻点可能是极大值、极小值或鞍点。如何区分这三种情况？"
+        },
+        {
+          "level": "L3",
+          "text": "利用二阶泰勒展开：$\\Delta f \\approx A(\\Delta x)^2 + 2B(\\Delta x)(\\Delta y) + C(\\Delta y)^2$。这是一个关于 $\\Delta x$、$\\Delta y$的二次型。当 $\\Delta = AC - B^2 > 0$时二次型定号（$A > 0$正定$\\to$极小，$A < 0$负定$\\to$极大）；$\\Delta < 0$时不定$\\to$鞍点。拉格朗日乘数法则处理约束极值：在约束曲面上，极值点处目标函数梯度与约束曲面法向量平行。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    }
+  ]
+}

@@ -1,0 +1,388 @@
+{
+  "subject": "physics",
+  "course": "大学物理",
+  "chapter": "波动与光学",
+  "status": "draft",
+  "nodes": [
+    {
+      "id": "physics-wo-wave-basics",
+      "title": "简谐波",
+      "summary": "简谐波是最基本的波动形式，其波形按正弦或余弦规律变化。描述简谐波的特征量包括振幅、频率、波长、波速等。波动方程是描述波传播的数学工具。",
+      "prerequisites": [
+        "physics-mech-kinematics"
+      ],
+      "keyPoints": [
+        "简谐波的波动方程",
+        "描述波的特征量：振幅、频率、波长、波速",
+        "波的能量密度与能流密度",
+        "波的叠加原理",
+        "波的衍射现象"
+      ],
+      "misconceptions": [
+        "误认为波速与介质无关",
+        "混淆振动速度与波速",
+        "误将波动方程中的x和t视为同等地位"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "波速与哪些因素有关？与波源振动频率有关吗？"
+        },
+        {
+          "level": "L2",
+          "text": "沿$x$轴正向传播的波，波动方程中是$kx-\\omega t$还是$\\omega t-kx$？为什么？"
+        },
+        {
+          "level": "L3",
+          "text": "考虑一个简谐波在弦上传播，弦上某点的振动速度与波速有什么关系？"
+        }
+      ],
+      "difficulty": 2,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-wo-interference",
+      "title": "波的干涉",
+      "summary": "波的干涉是波动的重要特征，需要相干条件（频率相同、振动方向相同、相位差恒定）。干涉现象产生稳定的加强和减弱分布。",
+      "prerequisites": [
+        "physics-wo-wave-basics"
+      ],
+      "keyPoints": [
+        "相干波的条件",
+        "干涉加强与减弱的条件",
+        "相位差与波程差的关系",
+        "干涉图样的分布特点",
+        "半波损失的概念"
+      ],
+      "misconceptions": [
+        "误认为任何两列波都能发生干涉",
+        "混淆干涉与衍射",
+        "误将干涉图样视为静止不变"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "两列波发生稳定干涉需要什么条件？"
+        },
+        {
+          "level": "L2",
+          "text": "干涉加强和减弱的条件是什么？与相位差有什么关系？"
+        },
+        {
+          "level": "L3",
+          "text": "考虑两列相干波在某点相遇，如果该点永远是加强的，这两列波来自同一个波源吗？"
+        }
+      ],
+      "difficulty": 2,
+      "level": "method",
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-wo-standing-wave",
+      "title": "驻波",
+      "summary": "驻波是由两列振幅相同、传播方向相反的相干波叠加而成。驻波中有些点始终静止（节点），有些点振幅最大（波腹）。",
+      "prerequisites": [
+        "physics-wo-interference"
+      ],
+      "keyPoints": [
+        "驻波的形成条件",
+        "节点与波腹的位置",
+        "半波损失在驻波中的体现",
+        "弦振动的简正模式",
+        "驻波与行波的区别"
+      ],
+      "misconceptions": [
+        "误认为驻波是波的一种特殊传播形式（实际不是传播，是振动）",
+        "混淆节点与波腹",
+        "误将驻波视为能量传播"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "驻波与行波有什么区别？能量是如何传播的？"
+        },
+        {
+          "level": "L2",
+          "text": "一端固定、一端自由的弦，其振动的基频波长是多少？"
+        },
+        {
+          "level": "L3",
+          "text": "考虑一个弦乐器，如何通过改变弦的张力来改变音调？这与驻波的什么特征有关？"
+        }
+      ],
+      "difficulty": 2,
+      "level": "application",
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-wo-doppler",
+      "title": "多普勒效应",
+      "summary": "多普勒效应是波源与观察者相对运动导致观测频率变化的现象。声波和光波的多普勒效应公式有所不同。",
+      "prerequisites": [
+        "physics-wo-wave-basics"
+      ],
+      "keyPoints": [
+        "多普勒效应的物理机理",
+        "声波多普勒效应公式（波源运动、观察者运动）",
+        "光波多普勒效应公式（相对论修正）",
+        "多普勒效应的应用：雷达测速、天体光谱红移",
+        "冲击波与马赫锥"
+      ],
+      "misconceptions": [
+        "误认为多普勒效应只发生在声速运动中",
+        "混淆波源运动与观察者运动的公式",
+        "误将光波多普勒效应视为与声波相同"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "当救护车驶向你和驶离你时，你听到的声音频率有什么不同？"
+        },
+        {
+          "level": "L2",
+          "text": "如果波源和观察者都运动，如何计算观测频率？"
+        },
+        {
+          "level": "L3",
+          "text": "考虑一个星系远离地球，其光谱线发生红移。这能用多普勒效应解释吗？需要注意什么？"
+        }
+      ],
+      "difficulty": 2,
+      "level": "application",
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-wo-young-double-slit",
+      "title": "杨氏双缝干涉",
+      "summary": "杨氏双缝实验是第一个证明光具有波动性的实验。通过分波前法获得两束相干光，在屏上产生明暗相间的干涉条纹。",
+      "prerequisites": [
+        "physics-wo-interference"
+      ],
+      "keyPoints": [
+        "杨氏双缝实验的装置与原理",
+        "干涉条纹的位置公式",
+        "条纹间距与波长、缝距、缝屏距的关系",
+        "光强分布公式",
+        "干涉条纹的可见度"
+      ],
+      "misconceptions": [
+        "误认为双缝干涉需要激光（实际单色光即可）",
+        "混淆明纹与暗纹条件",
+        "误将条纹间距视为与波长无关"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "杨氏双缝实验中，为什么需要用单色光？白光会产生什么现象？"
+        },
+        {
+          "level": "L2",
+          "text": "如果双缝间距减小，干涉条纹会变得更密还是更疏？"
+        },
+        {
+          "level": "L3",
+          "text": "考虑用非常细的缝（接近波长）做双缝实验，这时干涉图样会如何变化？这与衍射有什么关系？"
+        }
+      ],
+      "difficulty": 2,
+      "level": "method",
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-wo-single-slit",
+      "title": "单缝衍射",
+      "summary": "单缝衍射是波绕过障碍物继续传播的现象。夫琅禾费衍射是平行光衍射，可以用半波带法分析衍射条纹的分布。",
+      "prerequisites": [
+        "physics-wo-wave-basics",
+        "physics-wo-young-double-slit"
+      ],
+      "keyPoints": [
+        "衍射与干涉的区别和联系",
+        "惠更斯-菲涅耳原理",
+        "夫琅禾费单缝衍射的光强分布",
+        "单缝衍射暗纹条件",
+        "衍射中央明纹的角宽度"
+      ],
+      "misconceptions": [
+        "误认为衍射是波的“失败”（实际是波的基本属性）",
+        "混淆衍射与干涉的机理",
+        "误将单缝衍射中央明纹视为最亮但最窄"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "为什么光可以绕过障碍物？这与光的直线传播矛盾吗？"
+        },
+        {
+          "level": "L2",
+          "text": "单缝宽度变窄时，中央明纹会变得更宽还是更窄？"
+        },
+        {
+          "level": "L3",
+          "text": "考虑一个圆孔衍射，其中央亮斑（艾里斑）的角半径与什么有关？这与光学仪器的分辨率有什么关系？"
+        }
+      ],
+      "difficulty": 2,
+      "level": "method",
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-wo-thin-film",
+      "title": "薄膜干涉",
+      "summary": "薄膜干涉是光在薄膜上下表面反射后相互干涉的现象。等厚干涉和等倾干涉是薄膜干涉的两种基本形式。",
+      "prerequisites": [
+        "physics-wo-interference",
+        "physics-wo-young-double-slit"
+      ],
+      "keyPoints": [
+        "薄膜干涉的光程差计算",
+        "半波损失的条件",
+        "等厚干涉：劈尖、牛顿环",
+        "等倾干涉：平行平面薄膜",
+        "增透膜与增反膜的原理"
+      ],
+      "misconceptions": [
+        "误认为薄膜干涉需要光源是点光源（实际扩展光源也可以）",
+        "混淆等厚干涉与等倾干涉",
+        "误将半波损失视为总是发生"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "为什么肥皂泡在阳光下呈现彩色？这与波长有什么关系？"
+        },
+        {
+          "level": "L2",
+          "text": "在劈尖干涉中，如果劈尖角变小，干涉条纹会变得更密还是更疏？"
+        },
+        {
+          "level": "L3",
+          "text": "考虑一个光学镜头，其表面镀有增透膜。增透膜的厚度应该如何选择？这与光的波长有什么关系？"
+        }
+      ],
+      "difficulty": 3,
+      "level": "application",
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-wo-polarization",
+      "title": "偏振",
+      "summary": "偏振是横波的特有性质。自然光经反射、折射或透过偏振片后可以变成偏振光。马吕斯定律描述偏振光强的变化。",
+      "prerequisites": [
+        "physics-wo-wave-basics"
+      ],
+      "keyPoints": [
+        "横波与纵波在偏振上的区别",
+        "自然光与偏振光",
+        "偏振片的起偏与检偏",
+        "马吕斯定律",
+        "布儒斯特角与反射起偏"
+      ],
+      "misconceptions": [
+        "误认为所有波都能发生偏振（实际只有横波可以）",
+        "混淆偏振方向与振动方向",
+        "误将马吕斯定律适用于自然光"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "为什么光波可以偏振，而声波不能？"
+        },
+        {
+          "level": "L2",
+          "text": "如果两片偏振片的偏振化方向垂直，透过光强是多少？如果中间再插入一片偏振片呢？"
+        },
+        {
+          "level": "L3",
+          "text": "考虑一束自然光以布儒斯特角入射到玻璃表面，反射光是什么偏振态？折射光呢？"
+        }
+      ],
+      "difficulty": 2,
+      "level": "concept",
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-wo-geometric-optics",
+      "title": "几何光学",
+      "summary": "几何光学用光线模型研究光的传播。反射定律和折射定律是几何光学的基础。透镜成像是几何光学的核心应用。",
+      "prerequisites": [
+        "physics-mech-kinematics"
+      ],
+      "keyPoints": [
+        "光线模型与光的直线传播",
+        "反射定律与折射定律（斯涅耳定律）",
+        "全反射条件与应用",
+        "薄透镜成像公式",
+        "光学仪器的放大率"
+      ],
+      "misconceptions": [
+        "误认为光线是真实存在的（实际是模型）",
+        "混淆实像与虚像",
+        "误将透镜公式中的符号规则视为唯一（实际有多种符号规则）"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "为什么水中物体看起来比实际位置浅？这与什么定律有关？"
+        },
+        {
+          "level": "L2",
+          "text": "一个凸透镜，物体从远处向透镜移动，像的位置和大小如何变化？"
+        },
+        {
+          "level": "L3",
+          "text": "考虑一个光学系统由多个透镜组成，如何计算等效焦距？这与薄透镜公式有什么关系？"
+        }
+      ],
+      "difficulty": 2,
+      "level": "application",
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    }
+  ]
+}

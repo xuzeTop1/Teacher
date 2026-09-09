@@ -1,0 +1,129 @@
+{
+  "subject": "shenlun",
+  "course": "shenlun",
+  "chapter": "civil-shenlun-implementation",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "shenlun-impl-q001-proposal",
+      "title": "贯彻执行练习：倡议书提纲",
+      "knowledgeNodeIds": [
+        "shenlun-impl-format",
+        "shenlun-impl-outline",
+        "shenlun-impl-types"
+      ],
+      "type": "implementation_practice",
+      "difficulty": 2,
+      "content": "【练习】请以社区居委会名义，写一份「垃圾分类从我做起」倡议书的提纲（含标题、称谓、正文要点框架、落款，不展开成段，不超过 120 字）。",
+      "answer": "提纲：标题《垃圾分类从我做起——致全体居民倡议书》；称谓：广大居民朋友；正文要点：1. 为何分（环境与健康）；2. 怎么分（四分类要点）；3. 你我做（家庭源头、定时投放）；4. 齐参与（邻里监督、志愿岗）。落款：XX 社区居委会，日期。",
+      "solutionSteps": [
+        "确认文种格式：标题、称谓、正文、落款。",
+        "正文按「背景—要点—呼吁」列框架。",
+        "提纲只列要点，不展开段落。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "倡议书需要标题、称谓、落款吗？"
+        },
+        {
+          "level": "L2",
+          "text": "正文要点按什么逻辑列：背景—做法—呼吁？"
+        },
+        {
+          "level": "L3",
+          "text": "提纲要不要展开成完整段落？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲申论五大题型（归纳概括 / 综合分析 / 提出对策 / 贯彻执行 / 申发论述）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；申论辅导以材料拆解、结构、改写为核心，不默认代写整篇；具体题目与表述待人工复核（review_status=draft）。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "shenlun-impl-q002-speech",
+      "title": "贯彻执行练习：讲话稿要点",
+      "knowledgeNodeIds": [
+        "shenlun-impl-types",
+        "shenlun-impl-language"
+      ],
+      "type": "implementation_practice",
+      "difficulty": 2,
+      "content": "【练习】你作为街道负责人，在「敬老月」活动开场要讲几句话。列出讲话稿的核心要点（含开场、主体、结语，注意对象与语气，不超过 100 字）。",
+      "answer": "要点：开场问候长辈、点明「敬老月」意义；主体讲三项安排（免费体检、助餐上门、邻里陪伴）并感谢志愿者；结语倡议家家敬老、久久为功。语气亲切、面向老人与居民。",
+      "solutionSteps": [
+        "明确场合与对象：街道敬老活动，听众含老人。",
+        "结构：开场问候—主体安排—结语倡议。",
+        "语气亲切易懂，不官腔。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "这是给谁讲的，什么场合？"
+        },
+        {
+          "level": "L2",
+          "text": "开场、主体、结尾分别说什么？"
+        },
+        {
+          "level": "L3",
+          "text": "对老人讲话，语气要不要更亲切易懂？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲申论五大题型（归纳概括 / 综合分析 / 提出对策 / 贯彻执行 / 申发论述）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；申论辅导以材料拆解、结构、改写为核心，不默认代写整篇；具体题目与表述待人工复核（review_status=draft）。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "shenlun-impl-q003-format",
+      "title": "贯彻执行练习：格式判断",
+      "knowledgeNodeIds": [
+        "shenlun-impl-format",
+        "shenlun-impl-content"
+      ],
+      "type": "implementation_practice",
+      "difficulty": 1,
+      "content": "【练习】题目要求「写一份整改通知的提纲」。下列哪些要素必须写、哪些可省略？A. 标题  B. 主送机关  C. 正文要点  D. 落款日期",
+      "answer": "提纲必须：A 标题、C 正文要点；可省略：B 主送机关、D 落款日期（提纲类重结构框架，不要求完整公文格式）。",
+      "solutionSteps": [
+        "判断题型是「提纲」而非完整公文。",
+        "提纲重标题与要点框架。",
+        "称谓、落款在提纲中可省。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "题目写的是「一份通知」还是「提纲」？"
+        },
+        {
+          "level": "L2",
+          "text": "提纲要不要落款和主送机关？"
+        },
+        {
+          "level": "L3",
+          "text": "提纲最不能少的是哪两项？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲申论五大题型（归纳概括 / 综合分析 / 提出对策 / 贯彻执行 / 申发论述）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；申论辅导以材料拆解、结构、改写为核心，不默认代写整篇；具体题目与表述待人工复核（review_status=draft）。"
+      },
+      "reviewStatus": "draft"
+    }
+  ]
+}

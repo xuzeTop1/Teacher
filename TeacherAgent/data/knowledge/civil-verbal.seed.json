@@ -1,0 +1,184 @@
+{
+  "subject": "xingce",
+  "course": "xingce",
+  "chapter": "civil-verbal",
+  "status": "draft",
+  "nodes": [
+    {
+      "id": "xingce-verbal-cloze-context",
+      "title": "逻辑填空：语境分析",
+      "level": "method",
+      "summary": "逻辑填空优先看上下文线索：关联词（转折、递进、并列、因果）、标点、解释性语句和感情色彩。先定空处语义方向，再选词，不孤立看词语。",
+      "prerequisites": [],
+      "misconceptions": [
+        "只看词语本身意思，忽略上下文的感情色彩与逻辑指向",
+        "遇到近义词直接凭语感，不回原文找对应线索"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个空前后有没有转折词、递进词或解释性语句？"
+        },
+        {
+          "level": "L2",
+          "text": "空处要填的词，感情色彩应该是积极、消极还是中性？"
+        },
+        {
+          "level": "L3",
+          "text": "用关联词把前后句连起来，空处大概要表达什么方向的意思？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "xingce-verbal-cloze-contentword",
+      "title": "逻辑填空：实词辨析",
+      "level": "method",
+      "summary": "实词辨析看搭配、语义侧重与适用范围。先锁定文段强调的动作对象或主体，再比较选项词语的固定搭配与轻重程度。",
+      "prerequisites": [
+        "xingce-verbal-cloze-context"
+      ],
+      "misconceptions": [
+        "只比较词义差别，不看词语与前后文的固定搭配",
+        "把适用范围不同的词当作同义词替换"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "空处修饰或搭配的主语/宾语是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "哪个选项和这个搭配是文段里最常见的固定用法？"
+        },
+        {
+          "level": "L3",
+          "text": "两个近义词在语义轻重或范围上有什么差别，哪个更贴合语境？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "xingce-verbal-cloze-idiom",
+      "title": "逻辑填空：成语辨析",
+      "level": "method",
+      "summary": "成语辨析重点看语义侧重、感情色彩、适用对象和语境谦敬。排除语义重复、望文生义、对象误用的选项，优先选与文段语境一致的成语。",
+      "prerequisites": [
+        "xingce-verbal-cloze-context"
+      ],
+      "misconceptions": [
+        "望文生义，按字面推测成语意思",
+        "忽略成语的适用对象与感情色彩，导致褒贬误用"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个成语你知道它的准确意思和常见用法吗？"
+        },
+        {
+          "level": "L2",
+          "text": "文段的感情色彩是褒义还是贬义，和成语一致吗？"
+        },
+        {
+          "level": "L3",
+          "text": "这个成语一般用来形容什么对象，放这里会不会对象误用？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "xingce-verbal-reading-mainidea",
+      "title": "片段阅读：主旨概括",
+      "level": "method",
+      "summary": "主旨概括先找文段结构（总分、分总、转折后、因果果）。重点看首尾句、关联词后的结论句和重复出现的高频词，选项要全面且不过度引申。",
+      "prerequisites": [],
+      "misconceptions": [
+        "把文段中的例子或细节当主旨",
+        "选表述绝对化或过度推断的选项"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这段文字是总分、分总还是转折结构？重点落在哪一句？"
+        },
+        {
+          "level": "L2",
+          "text": "哪个选项覆盖了整段的核心，而不是某个细节？"
+        },
+        {
+          "level": "L3",
+          "text": "选项有没有偷换概念或过度引申？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "xingce-verbal-sentence-order",
+      "title": "语句排序：行文逻辑",
+      "level": "method",
+      "summary": "语句排序先找首句特征（下定义、背景引入，少指代和转折）和捆绑集团（指代、关联、话题一致）。用选项差异做排除，先定首尾再排中间。",
+      "prerequisites": [
+        "xingce-verbal-reading-mainidea"
+      ],
+      "misconceptions": [
+        "从头到尾硬读，不利用指代词和关联词找捆绑",
+        "忽视选项给出的首句差异，盲目全排"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "哪一句更适合做首句：下定义还是含指代词的句子？"
+        },
+        {
+          "level": "L2",
+          "text": "有没有两句话靠指代词或话题明显绑在一起？"
+        },
+        {
+          "level": "L3",
+          "text": "对比选项，首句或尾句不同处能不能直接排除？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。"
+      },
+      "reviewStatus": "draft"
+    }
+  ]
+}

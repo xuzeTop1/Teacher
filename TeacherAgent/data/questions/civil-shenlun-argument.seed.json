@@ -1,0 +1,128 @@
+{
+  "subject": "shenlun",
+  "course": "shenlun",
+  "chapter": "civil-shenlun-argument",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "shenlun-arg-q001-countermeasure",
+      "title": "对策归纳练习：问题—原因—对策",
+      "knowledgeNodeIds": [
+        "shenlun-arg-countermeasure",
+        "shenlun-arg-feasible"
+      ],
+      "type": "countermeasure_practice",
+      "difficulty": 2,
+      "content": "【练习】根据材料问题，提出针对性对策（每条含主体+动作，不超过 120 字）。\n材料：村里灌溉水渠淤塞，雨季排涝慢；青壮年外出，留守老人不会用手机申报维修；村集体没钱，年年小修小补。",
+      "answer": "对策：1. 乡镇水利站牵头清淤疏浚，建立汛期巡查；2. 村委上门帮老人代办维修申报，设热线；3. 整合涉农资金+一事一议筹资，列入年度维护预算。均针对原因（淤塞/不会申报/缺钱）。",
+      "solutionSteps": [
+        "从材料找原因：淤塞、老人不会申报、缺资金。",
+        "对策逐条对应原因。",
+        "每条补主体与可执行动作，避免空话。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "材料里这个问题的根因分别是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "针对每个原因，谁来做什么具体动作？"
+        },
+        {
+          "level": "L3",
+          "text": "把「加强管理」改成有主体有抓手的句子。"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲申论五大题型（归纳概括 / 综合分析 / 提出对策 / 贯彻执行 / 申发论述）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；申论辅导以材料拆解、结构、改写为核心，不默认代写整篇；具体题目与表述待人工复核（review_status=draft）。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "shenlun-arg-q002-meaning",
+      "title": "综合分析练习：词句含义",
+      "knowledgeNodeIds": [
+        "shenlun-arg-analyze",
+        "shenlun-arg-material"
+      ],
+      "type": "analysis_practice",
+      "difficulty": 2,
+      "content": "【练习】谈谈对「基层治理的最后一公里」的理解（按「是什么—为什么—怎么办」写要点，不超过 150 字）。\n材料：政策到了社区常卡在落实；群众办事多头跑；网格员人少事多。",
+      "answer": "是什么：指政策服务群众「最后一步」的落实环节。为什么重要：卡在落实导致群众多头跑、体验差；网格力量不足加剧脱节。怎么办：压实网格责任、一站式办理、数字赋能减跑动，打通落实末端。",
+      "solutionSteps": [
+        "释义：解释「最后一公里」在文中的数据语境。",
+        "分析重要性/问题（结合材料）。",
+        "给方向（怎么办），均回扣材料。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "这个词在材料里具体指什么环节？"
+        },
+        {
+          "level": "L2",
+          "text": "「为什么」要从材料的问题里找依据。"
+        },
+        {
+          "level": "L3",
+          "text": "「怎么办」能不能从材料的痛点反推？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲申论五大题型（归纳概括 / 综合分析 / 提出对策 / 贯彻执行 / 申发论述）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；申论辅导以材料拆解、结构、改写为核心，不默认代写整篇；具体题目与表述待人工复核（review_status=draft）。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "shenlun-arg-q003-revelation",
+      "title": "综合分析练习：启示",
+      "knowledgeNodeIds": [
+        "shenlun-arg-analyze",
+        "shenlun-arg-logic"
+      ],
+      "type": "analysis_practice",
+      "difficulty": 3,
+      "content": "【练习】某县把政务大厅搬到商场，周末也办公，群众好评。谈谈这对优化公共服务的启示（分条，不超过 120 字）。",
+      "answer": "启示：1. 空间下沉，把服务点设在群众高频到达处；2. 时间延展，周末办公贴合上班族；3. 以满意度为导向主动换位；4. 可复制为「服务进村进社区」常态机制。均从案例可推、不空泛。",
+      "solutionSteps": [
+        "从案例提炼可迁移做法（空间、时间、导向）。",
+        "每条写成对公共服务的启示，而非复述案例。",
+        "确保启示有材料依据。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "这个案例做对了哪几点，可以推广？"
+        },
+        {
+          "level": "L2",
+          "text": "把「商场办公」转成一条通用启示，而不是复述。"
+        },
+        {
+          "level": "L3",
+          "text": "每条启示有没有脱离案例、变成万能套话？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲申论五大题型（归纳概括 / 综合分析 / 提出对策 / 贯彻执行 / 申发论述）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；申论辅导以材料拆解、结构、改写为核心，不默认代写整篇；具体题目与表述待人工复核（review_status=draft）。"
+      },
+      "reviewStatus": "draft"
+    }
+  ]
+}

@@ -1,0 +1,868 @@
+{
+  "subject": "management",
+  "course": "math",
+  "chapter": "management-math",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "management-math-q001",
+      "title": "整除判断",
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "下列各组数中，能整除的是：",
+      "answer": "B",
+      "solutionSteps": [
+        "整除要求余数为0。",
+        "$15\\div5=3$余0，符合。",
+        "其余均有余数。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "整除↔余数为0。"
+        },
+        {
+          "level": "L2",
+          "text": "15被5整除。"
+        },
+        {
+          "level": "L3",
+          "text": "选B。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-math-001"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 10除以3",
+        "B. 15除以5",
+        "C. 7除以2",
+        "D. 9除以4"
+      ]
+    },
+    {
+      "id": "management-math-q002",
+      "title": "百分比比较",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "甲公司利润100万增长10%，乙公司利润1000万增长1%。下列说法正确的是：",
+      "answer": "B",
+      "solutionSteps": [
+        "增长额=基数$\\times$增长率：甲10万，乙10万？注意乙$=1000\\times1%=10$万，相同。重新核算：甲$100\\times10%=10$，乙$1000\\times1%=10$，相等。",
+        "百分比不能直接比，要看基数。",
+        "两者增长额恰相等。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "增长额=基数$\\times$增长率。"
+        },
+        {
+          "level": "L2",
+          "text": "甲10万，乙10万，相等。"
+        },
+        {
+          "level": "L3",
+          "text": "选C。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-math-002"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 甲增长额更大",
+        "B. 乙增长额更大",
+        "C. 二者增长额相同",
+        "D. 无法比较"
+      ]
+    },
+    {
+      "id": "management-math-q003",
+      "title": "加权平均",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "一组5人平均80分，另一组15人平均70分，全体平均约：",
+      "answer": "A",
+      "solutionSteps": [
+        "总平均$=\\frac{(5\\times80+15\\times70)}{2}0=\\frac{(400+1050)}{2}0=72.5$。",
+        "不能简单取$\\frac{(80+70)}{2}$。",
+        "权重在人数。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "加权：总分$\\div$总人数。"
+        },
+        {
+          "level": "L2",
+          "text": "计算$=145\\frac{0}{2}0=72.5$。"
+        },
+        {
+          "level": "L3",
+          "text": "选A。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-math-003"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 72.5",
+        "B. 75",
+        "C. 77.5",
+        "D. 80"
+      ]
+    },
+    {
+      "id": "management-math-q004",
+      "title": "相遇问题",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "甲乙相距300公里，甲速60、乙速40相向而行，几小时相遇？",
+      "answer": "B",
+      "solutionSteps": [
+        "相遇时间=路程和$\\div$速度和$=300\\div(60+40)=3$。",
+        "用速度和。",
+        "单位统一为公里/小时。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "相遇：$t=$总路程$/(v1+v2)$。"
+        },
+        {
+          "level": "L2",
+          "text": "$30\\frac{0}{1}00=3$小时。"
+        },
+        {
+          "level": "L3",
+          "text": "选B。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-math-004"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 2",
+        "B. 3",
+        "C. 4",
+        "D. 5"
+      ]
+    },
+    {
+      "id": "management-math-q005",
+      "title": "工程合作",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "甲单独6天完成，乙单独3天完成，合作需几天？",
+      "answer": "B",
+      "solutionSteps": [
+        "效率和$=\\frac{1}{6}+\\frac{1}{3}=\\frac{1}{2}$，时间$=\\frac{1}{(1/2)}=2$天。",
+        "合作加效率非加时间。",
+        "总量设为1。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "合作时间$=\\frac{1}{(1/6+1/3)}=2$。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "把结果代回原题条件快速验算一遍。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-math-005"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 1",
+        "B. 2",
+        "C. 3",
+        "D. 4"
+      ]
+    },
+    {
+      "id": "management-math-q006",
+      "title": "浓度混合",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "500克10%盐水与500克30%盐水混合，浓度约为：",
+      "answer": "B",
+      "solutionSteps": [
+        "溶质$=500\\times0.1+500\\times0.3=50+150=200$克，总液1000克，浓度20%。",
+        "溶质守恒。",
+        "等质量混合即浓度平均。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "混合浓度=总溶质/总溶液$=20\\frac{0}{1}000=20%$。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "先判题型再选公式，留意单位与数量级。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-math-006"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 15%",
+        "B. 20%",
+        "C. 25%",
+        "D. 40%"
+      ]
+    },
+    {
+      "id": "management-math-q007",
+      "title": "排列组合",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "从5人中选3人排成一排，方法数为：",
+      "answer": "B",
+      "solutionSteps": [
+        "排成一排要计顺序，用排列$A(5,3)=5\\times4\\times3=60$。",
+        "若不计顺序才用组合。",
+        "顺序有关用排列。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "排列$A(5,3)=60$。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "排除明显错项：先看数量级与边界情况。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-math-007"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. C(5,3)",
+        "B. A(5,3)=60",
+        "C. 5^3",
+        "D. 3^5"
+      ]
+    },
+    {
+      "id": "management-math-q008",
+      "title": "概率",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "掷两枚均匀硬币，至少一枚正面的概率是：",
+      "answer": "C",
+      "solutionSteps": [
+        "样本空间4种，仅(反,反)不利，概率$=\\frac{3}{4}$。",
+        "独立事件用列举更稳。",
+        "至少一正面=1-全反。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "$1-\\frac{1}{4}=\\frac{3}{4}$。"
+        },
+        {
+          "level": "L2",
+          "text": "选C。"
+        },
+        {
+          "level": "L3",
+          "text": "把已知量列清楚，再决定用哪条关系。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-math-008"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 1/4",
+        "B. 1/2",
+        "C. 3/4",
+        "D. 1"
+      ]
+    },
+    {
+      "id": "management-math-q009",
+      "title": "容斥原理",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "班中40人会英、30人会日，两种都会的有10人，至少会一种的有：",
+      "answer": "A",
+      "solutionSteps": [
+        "$|A\\cup B|=40+30-10=60$。",
+        "直接相加会重复算交集。",
+        "容斥去重。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "$40+30-10=60$。"
+        },
+        {
+          "level": "L2",
+          "text": "选A。"
+        },
+        {
+          "level": "L3",
+          "text": "检查是否混淆了'充分'与'必要'。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-math-009"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 60",
+        "B. 70",
+        "C. 50",
+        "D. 80"
+      ]
+    },
+    {
+      "id": "management-math-q010",
+      "title": "等差数列",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "等差数列首项2、公差3，第10项是：",
+      "answer": "A",
+      "solutionSteps": [
+        "$a10=2+(10-1)\\times3=2+27=29$。",
+        "等差用$a_n=a1+(n-1)d$。",
+        "别忘n-1。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "$2+9\\times3=29$。"
+        },
+        {
+          "level": "L2",
+          "text": "选A。"
+        },
+        {
+          "level": "L3",
+          "text": "把结果代回原题条件快速验算一遍。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-math-010"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 29",
+        "B. 30",
+        "C. 27",
+        "D. 32"
+      ]
+    },
+    {
+      "id": "management-math-q011",
+      "title": "不等式",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "解不等式 -2x > 6，结果为：",
+      "answer": "B",
+      "solutionSteps": [
+        "两边除以-2，不等号翻转：x < -3。",
+        "负数变号是关键。",
+        "可代x=-4验证。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "除以负数翻转：x<-3。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "先判题型再选公式，留意单位与数量级。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-math-011"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. x > -3",
+        "B. x < -3",
+        "C. x > 3",
+        "D. x = -3"
+      ]
+    },
+    {
+      "id": "management-math-q012",
+      "title": "函数性质",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "函数y随x增大而增大，则其图像：",
+      "answer": "B",
+      "solutionSteps": [
+        "单调递增对应图像上升。",
+        "横坐标x、纵坐标y。",
+        "交点对应方程解。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "递增⇔图像上升。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "排除明显错项：先看数量级与边界情况。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-math-012"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 下降",
+        "B. 上升",
+        "C. 水平",
+        "D. 无规律"
+      ]
+    },
+    {
+      "id": "management-math-q013",
+      "title": "平面几何",
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "直角三角形两直角边长为3和4，斜边长为：",
+      "answer": "A",
+      "solutionSteps": [
+        "勾股：$\\\\sqrt{3^2+4^2}=5$。",
+        "仅直角可用勾股。",
+        "勾三股四弦五。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "$\\\\sqrt{9+16}=5$。"
+        },
+        {
+          "level": "L2",
+          "text": "选A。"
+        },
+        {
+          "level": "L3",
+          "text": "把已知量列清楚，再决定用哪条关系。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-math-013"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 5",
+        "B. 6",
+        "C. 7",
+        "D. 12"
+      ]
+    },
+    {
+      "id": "management-math-q014",
+      "title": "面积体积",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "长方体长4、宽3、高2，体积是：",
+      "answer": "B",
+      "solutionSteps": [
+        "体积$=4\\times3\\times2=24$（立方单位）。",
+        "面积是二维，体积是三维。",
+        "先统一单位。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "$4\\times3\\times2=24$。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "检查是否混淆了'充分'与'必要'。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-math-014"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 9",
+        "B. 24",
+        "C. 14",
+        "D. 12"
+      ]
+    },
+    {
+      "id": "management-math-q015",
+      "title": "图表解读",
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "要展示某公司近10年营收变化趋势，最适合的图是：",
+      "answer": "C",
+      "solutionSteps": [
+        "趋势用折线图。",
+        "饼图看占比，条形比大小。",
+        "先明确目的再选图。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "看趋势$\\to$折线图。"
+        },
+        {
+          "level": "L2",
+          "text": "选C。"
+        },
+        {
+          "level": "L3",
+          "text": "把结果代回原题条件快速验算一遍。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-math-015"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 饼图",
+        "B. 条形图",
+        "C. 折线图",
+        "D. 散点图"
+      ]
+    },
+    {
+      "id": "management-math-q016",
+      "title": "最值",
+      "type": "diagnostic",
+      "difficulty": 3,
+      "content": "正数a,b满足a+b=10，则ab最大为：",
+      "answer": "B",
+      "solutionSteps": [
+        "由均值不等式，a+b定值时ab在a=b=5取最大25。",
+        "需满足正、定、等。",
+        "边界取等。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "a=b=5时ab=25最大。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "先判题型再选公式，留意单位与数量级。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-math-016"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 20",
+        "B. 25",
+        "C. 30",
+        "D. 50"
+      ]
+    },
+    {
+      "id": "management-math-q017",
+      "title": "比例分配",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "按2:3:5分100元，中间份额得：",
+      "answer": "B",
+      "solutionSteps": [
+        "总份10，每份10元，3份得30元。",
+        "连比设k。",
+        "先总份后每份。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "$10\\frac{0}{1}0\\times3=30$。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "排除明显错项：先看数量级与边界情况。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-math-017"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 20",
+        "B. 30",
+        "C. 50",
+        "D. 15"
+      ]
+    },
+    {
+      "id": "management-math-q018",
+      "title": "周期",
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "今天是周一，再过10天是：",
+      "answer": "A",
+      "solutionSteps": [
+        "$10 \\mod 7=3$，周一$+3=$周四。",
+        "星期以7为周期。",
+        "余数即偏移。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "$10\\div7$余3，周一$+3=$周四。"
+        },
+        {
+          "level": "L2",
+          "text": "选A。"
+        },
+        {
+          "level": "L3",
+          "text": "把已知量列清楚，再决定用哪条关系。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-math-018"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 周四",
+        "B. 周五",
+        "C. 周六",
+        "D. 周日"
+      ]
+    },
+    {
+      "id": "management-math-q019",
+      "title": "逻辑数学综合",
+      "type": "diagnostic",
+      "difficulty": 3,
+      "content": "甲、乙、丙三人分别教语、数、英，甲不教数学，乙教语文。则丙教：",
+      "answer": "B",
+      "solutionSteps": [
+        "乙=语文，甲不教数学则教英语，余数学归丙。",
+        "用表格排除。",
+        "结构化条件后枚举。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "乙语文$\\to$甲英语$\\to$丙数学。"
+        },
+        {
+          "level": "L2",
+          "text": "选B。"
+        },
+        {
+          "level": "L3",
+          "text": "检查是否混淆了'充分'与'必要'。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-math-019"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 语文",
+        "B. 数学",
+        "C. 英语",
+        "D. 不确定"
+      ]
+    },
+    {
+      "id": "management-math-q020",
+      "title": "估算",
+      "type": "diagnostic",
+      "difficulty": 2,
+      "content": "估算 $198\\times52$的数量级，最接近的整百结果是：",
+      "answer": "A",
+      "solutionSteps": [
+        "$200\\times50=10000$，原积约10300，接近10000。",
+        "估算抓数量级。",
+        "舍入方向互相抵消。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "$\\approx200\\times50=10000$。"
+        },
+        {
+          "level": "L2",
+          "text": "选A。"
+        },
+        {
+          "level": "L3",
+          "text": "把结果代回原题条件快速验算一遍。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "management-math-020"
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep questions",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft; no exam question text copied."
+      },
+      "status": "draft",
+      "options": [
+        "A. 约10000",
+        "B. 约20000",
+        "C. 约15000",
+        "D. 约5000"
+      ]
+    }
+  ]
+}

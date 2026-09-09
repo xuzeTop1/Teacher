@@ -1,0 +1,210 @@
+{
+  "id": "guide-openai-compatible",
+  "providerName": "openai-compatible",
+  "displayName": "通用 OpenAI Compatible",
+  "description": "适用于任何兼容 OpenAI API 格式的服务（DeepSeek、智谱、通义千问、硅基流动等）。不同服务的参数支持可能有差异。",
+  "status": "approved",
+  "guideVersion": "1.0.0",
+  "verifiedAt": "2026-07-28",
+  "baseUrlPresets": [
+    {
+      "id": "deepseek",
+      "label": "DeepSeek",
+      "url": "https://api.deepseek.com/v1",
+      "description": "DeepSeek 官方 API"
+    },
+    {
+      "id": "zhipu",
+      "label": "智谱 AI (GLM)",
+      "url": "https://open.bigmodel.cn/api/paas/v4",
+      "description": "智谱 AI 开放平台"
+    },
+    {
+      "id": "dashscope",
+      "label": "通义千问 (DashScope)",
+      "url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+      "description": "阿里云 DashScope OpenAI 兼容模式"
+    },
+    {
+      "id": "siliconflow",
+      "label": "硅基流动 (SiliconFlow)",
+      "url": "https://api.siliconflow.cn/v1",
+      "description": "硅基流动 API"
+    }
+  ],
+  "modelPresets": [],
+  "capabilities": {
+    "supportsStreaming": true,
+    "supportsVision": false,
+    "supportsEmbedding": false,
+    "supportsThinking": false
+  },
+  "fieldHelp": [
+    {
+      "field": "baseUrl",
+      "label": "Base URL",
+      "help": "填写 Provider 的 API 地址。不同服务格式不同：有的需要 /v1 后缀，有的需要 /v4。请参考对应服务的官方文档。不要添加 /chat/completions。",
+      "placeholder": "https://api.deepseek.com/v1"
+    },
+    {
+      "field": "model",
+      "label": "模型",
+      "help": "填写具体模型 ID（如 deepseek-chat、glm-4-plus、qwen-plus）。不是产品名称。每个服务的模型名不同，请查阅对应文档。",
+      "placeholder": "deepseek-chat"
+    },
+    {
+      "field": "apiKey",
+      "label": "API Key",
+      "help": "在对应平台控制台创建。保存后存入系统钥匙串，不会明文存储。",
+      "placeholder": "sk-..."
+    },
+    {
+      "field": "textModel",
+      "label": "Text Model（可选）",
+      "help": "纯文字对话使用的模型。留空则使用主模型。适用于主模型是视觉模型但日常对话想用更轻量模型的情况。"
+    },
+    {
+      "field": "visionModel",
+      "label": "Vision Model（可选）",
+      "help": "处理图片时使用的模型。需要对应服务支持视觉能力。不是所有 OpenAI Compatible 服务都支持图片输入。"
+    },
+    {
+      "field": "isLocal",
+      "label": "本地 Provider",
+      "help": "如果连接的是本地运行的服务（如 LM Studio、vLLM），勾选此项。勾选后不需要 API Key。"
+    }
+  ],
+  "setupSteps": [
+    {
+      "id": "oai-step-1",
+      "title": "确认 Base URL 格式",
+      "description": "不同服务的 Base URL 格式不同。常见格式：https://api.xxx.com/v1 或 https://api.xxx.com/v4。参考对应服务官方文档，不要猜测。"
+    },
+    {
+      "id": "oai-step-2",
+      "title": "获取 API Key",
+      "description": "在对应平台的控制台/仪表盘创建 API Key。通常在「API Keys」「密钥管理」等页面。"
+    },
+    {
+      "id": "oai-step-3",
+      "title": "确认模型 ID",
+      "description": "每个服务的模型 ID 不同。例如 DeepSeek 用 deepseek-chat，智谱用 glm-4-plus，通义用 qwen-plus。不要填产品名称。"
+    },
+    {
+      "id": "oai-step-4",
+      "title": "填写并保存",
+      "description": "填入 Base URL、模型 ID、API Key，点击保存。"
+    },
+    {
+      "id": "oai-step-5",
+      "title": "测试连接",
+      "description": "点击「测试连接」验证。如果失败，参考下方常见错误逐步排查。"
+    }
+  ],
+  "commonErrors": [
+    {
+      "id": "oai-err-401",
+      "matchPatterns": ["401", "403", "unauthorized", "forbidden", "invalid api key", "authentication"],
+      "title": "认证失败（401/403）",
+      "explanation": "API Key 无效、过期或权限不足。",
+      "resolutionSteps": [
+        "检查 API Key 是否完整复制",
+        "登录对应平台确认 Key 未被删除或禁用",
+        "确认账户余额/额度充足",
+        "如已失效，创建新 Key 并重新保存"
+      ],
+      "relatedFields": ["apiKey"]
+    },
+    {
+      "id": "oai-err-404",
+      "matchPatterns": ["404", "not found", "model_not_found", "does not exist", "invalid model"],
+      "title": "模型或端点不存在（404）",
+      "explanation": "模型 ID 不存在或 Base URL 格式错误。不同服务的模型名和 URL 格式不同。",
+      "resolutionSteps": [
+        "确认模型 ID 拼写正确（查阅对应服务文档）",
+        "确认 Base URL 格式正确（是否需要 /v1 或 /v4 后缀）",
+        "不要在 Base URL 末尾添加 /chat/completions",
+        "确认该服务确实提供你填写的模型"
+      ],
+      "relatedFields": ["model", "baseUrl"]
+    },
+    {
+      "id": "oai-err-400",
+      "matchPatterns": ["400", "bad request", "invalid request", "invalid parameter"],
+      "title": "请求参数错误（400）",
+      "explanation": "请求参数不被该服务接受。并非所有 OpenAI Compatible 服务都支持完全相同的参数（如 temperature、top_p、max_tokens 的范围可能不同）。",
+      "resolutionSteps": [
+        "检查模型名称是否正确",
+        "某些服务不支持特定参数组合，尝试更换模型",
+        "查阅对应服务文档确认支持的参数范围",
+        "如果是 temperature 相关错误，该模型可能需要固定采样参数"
+      ],
+      "relatedFields": ["model"]
+    },
+    {
+      "id": "oai-err-network",
+      "matchPatterns": ["network", "timeout", "econnrefused", "fetch failed", "connect", "etimedout"],
+      "title": "网络连接失败",
+      "explanation": "无法连接到 API 服务器。可能是网络问题、Base URL 错误或服务器暂时不可用。",
+      "resolutionSteps": [
+        "检查网络连接",
+        "确认 Base URL 拼写正确",
+        "如在公司/学校网络，检查代理或防火墙",
+        "如果是本地服务，确认服务正在运行",
+        "稍后重试（可能是临时服务波动）"
+      ],
+      "relatedFields": ["baseUrl"]
+    },
+    {
+      "id": "oai-err-rate-limit",
+      "matchPatterns": ["429", "rate limit", "too many requests", "quota"],
+      "title": "请求频率限制（429）",
+      "explanation": "请求过于频繁或超出配额。稍后重试通常可以解决。",
+      "resolutionSteps": [
+        "等待几秒后重试",
+        "检查账户额度/余额",
+        "如频繁出现，考虑降低使用频率或升级套餐"
+      ],
+      "relatedFields": []
+    }
+  ],
+  "officialSources": [
+    {
+      "title": "OpenAI API 文档（通用格式参考）",
+      "url": "https://platform.openai.com/docs/api-reference",
+      "verifiedAt": "2026-07-28"
+    },
+    {
+      "title": "DeepSeek 快速开始（base_url 说明）",
+      "url": "https://api-docs.deepseek.com/quick_start/pricing",
+      "verifiedAt": "2026-07-29"
+    },
+    {
+      "title": "智谱 AI HTTP API 文档（/api/paas/v4 端点）",
+      "url": "https://open.bigmodel.cn/dev/api/normal-model/glm-4",
+      "verifiedAt": "2026-07-29"
+    },
+    {
+      "title": "通义千问 DashScope OpenAI 兼容端点说明",
+      "url": "https://help.aliyun.com/zh/model-studio/developer-reference/compatibility-of-openai-with-dashscope",
+      "verifiedAt": "2026-07-29"
+    },
+    {
+      "title": "硅基流动 SiliconFlow API 端点示例",
+      "url": "https://docs.siliconflow.cn/api-reference/chat-completions/chat-completions",
+      "verifiedAt": "2026-07-29"
+    }
+  ],
+  "securityNotices": [
+    {
+      "id": "oai-sec-key-storage",
+      "title": "API Key 安全存储",
+      "description": "API Key 保存后存入操作系统钥匙串（Windows 凭据管理器），不会以明文形式存储在本地文件、数据库或前端状态中。"
+    },
+    {
+      "id": "oai-sec-compatibility",
+      "title": "兼容性差异",
+      "description": "并非所有声称「OpenAI Compatible」的服务都支持完全相同的参数。如果连接测试通过但对话异常，可能是参数兼容性问题，请查阅对应服务文档。"
+    }
+  ]
+}

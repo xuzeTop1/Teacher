@@ -1,0 +1,189 @@
+{
+  "subject": "math",
+  "course": "calculus",
+  "chapter": "mean-value-theorems",
+  "status": "approved",
+  "nodes": [
+    {
+      "id": "math-mvt-rolle",
+      "title": "罗尔定理",
+      "level": "undergraduate",
+      "difficulty": 2,
+      "summary": "罗尔定理：设 $f(x)$满足三个条件——$(1)$在闭区间 $[a,b]$上连续；$(2)$在开区间 $(a,b)$上可导；$(3) f(a) = f(b)$——则存在至少一点 $c \\in (a,b)$使得 $f'(c) = 0$。几何直觉：两端等高的光滑曲线上，必有一点切线是水平的。证明思路：若 $f$是常数则处处 $f' = 0$；否则必有最值不在端点处取得（因两端等值），该最值点处由费马引理知 $f'(c) = 0$。罗尔定理是拉格朗日中值定理和柯西中值定理的基石。",
+      "prerequisites": [
+        "math-deriv-definition",
+        "math-continuity-point"
+      ],
+      "misconceptions": [
+        "忽略三个条件中的任何一个（尤其是可导性条件）",
+        "认为满足条件的 c 是唯一的（定理只保证至少存在一个）",
+        "认为定理对开区间 [a,b) 也适用（端点处的连续性是必需的）"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "一座桥两端等高，桥面上是否有某个位置是完全水平的？"
+        },
+        {
+          "level": "L2",
+          "text": "如果 $f(a) = f(b)$，且函数不是常数，那它必然先升后降或先降后升。转折点处切线是什么方向？"
+        },
+        {
+          "level": "L3",
+          "text": "$f$在 $[a,b]$上连续，故有最大值 $M$和最小值 $m$。若 $M = m$则 $f$为常数，$f' \\equiv 0$。若 $M \\neq m$，因 $f(a) = f(b)$，最值必在内点 $c \\in (a,b)$处取得。由费马引理，$f$在内点最值处可导则 $f'(c) = 0$。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-mvt-lagrange",
+      "title": "拉格朗日中值定理",
+      "level": "undergraduate",
+      "difficulty": 3,
+      "summary": "拉格朗日中值定理：设 $f(x)$在 $[a,b]$上连续，在 $(a,b)$上可导，则存在 $c \\in (a,b)$使得 $f'(c) = (f(b) - f(a))/(b - a)$。几何意义：曲线上必有一点的切线平行于连接两端点的割线。证明思路：构造辅助函数 $g(x) = f(x) - f(a) - [(f(b)-f(a))/(b-a)](x-a)$，则 $g(a) = g(b) = 0$，对 $g$用罗尔定理即得。此定理是微积分的核心工具：单调性判定、不等式证明、误差估计等都依赖它。它是罗尔定理的推广（当 $f(a) = f(b)$时退化为罗尔定理）。",
+      "prerequisites": [
+        "math-mvt-rolle",
+        "math-deriv-definition"
+      ],
+      "misconceptions": [
+        "误认为 c 是区间的中点（c 的具体位置未知，只知存在性）",
+        "混淆中值定理的「中值」和「中间值」",
+        "认为定理在端点不可导时不成立（只需开区间内可导）"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "连接曲线上两点的割线，和曲线上某点的切线平行——这个「某点」一定存在吗？"
+        },
+        {
+          "level": "L2",
+          "text": "罗尔定理要求 $f(a) = f(b)$，但拉格朗日中值定理不要求。如何从罗尔定理推出拉格朗日中值定理？"
+        },
+        {
+          "level": "L3",
+          "text": "构造辅助函数 $g(x) = f(x) - L(x)$，其中 $L(x)$是连接 $(a,f(a))$和 $(b,f(b))$的割线方程。$g(a) = g(b) = 0$，满足罗尔定理条件，故存在 $c$使得 $g'(c) = 0$，即 $f'(c) = L'(c) = (f(b)-f(a))/(b-a)$。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-mvt-cauchy",
+      "title": "柯西中值定理",
+      "level": "undergraduate",
+      "difficulty": 3,
+      "summary": "柯西中值定理：设 $f(x)$和 $g(x)$都在 $[a,b]$上连续，在 $(a,b)$上可导，且 $g'(x) \\neq 0$，则存在 $c \\in (a,b)$使得 $\\frac{f'(c)}{g'(c)} = \\frac{f(b)-f(a)}{g(b)-g(a)}$。当 $g(x) = x$时退化为拉格朗日中值定理。柯西中值定理是洛必达法则的理论基础。证明思路：构造 $h(x) = f(x) - f(a) - [(f(b)-f(a))/(g(b)-g(a))](g(x)-g(a))$，则 $h(a) = h(b) = 0$，对 $h$用罗尔定理。几何意义：参数曲线 $(g(t), f(t))$上必有一点的切线方向与连接两端点的弦的方向相同。",
+      "prerequisites": [
+        "math-mvt-lagrange",
+        "math-deriv-definition"
+      ],
+      "misconceptions": [
+        "误用为 $\\frac{f'(c)}{g'(c)} = \\frac{f(c)}{g(c)}$",
+        "忘记条件 $g'(x) \\neq 0$（否则分母可能为零）",
+        "试图对 f 和 g 分别用拉格朗日中值定理再相除（两个中值点可能不同）"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "如果两个函数 f 和 g 都满足中值定理的条件，能把两个中值点的结论相除吗？"
+        },
+        {
+          "level": "L2",
+          "text": "为什么不能分别对 f 和 g 用拉格朗日中值定理？这和柯西中值定理的区别在哪里？"
+        },
+        {
+          "level": "L3",
+          "text": "对 $f$用拉格朗日中值定理得 $f'(c1) = (f(b)-f(a))/(b-a)$，对 $g$得 $g'(c2) = (g(b)-g(a))/(b-a)$。但 $c1$和 $c2$可能不同！柯西中值定理的关键是保证同一个 $c$同时出现在分子和分母中。通过构造辅助函数并用罗尔定理来实现。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-mvt-taylor-remainder",
+      "title": "泰勒公式的余项",
+      "level": "undergraduate",
+      "difficulty": 3,
+      "summary": "泰勒公式的余项描述了多项式近似与真实函数之间的误差。拉格朗日余项：$R_n(x) = \\frac{f^{(n+1)}(\\xi)}{(n+1)!}(x-x_0)^{n+1}$，其中 $\\xi$介于 $x_0$和 $x$之间。柯西余项：$R_n(x) = \\frac{f^{(n+1)}(\\xi)}{n!}(x-\\xi)^n(x-x_0)$。皮亚诺余项：$R_n(x) = o((x-x_0)^n)$，适用于 $x \\to x_0$时的局部近似。积分余项：$R_n(x) = \\frac{1}{n!}\\int_{x_0}^{x} f^{(n+1)}(t)(x-t)^n dt$。拉格朗日余项是柯西余项的特殊形式，最常用于估计近似精度。皮亚诺余项只说明误差是比 $(x-x_0)^n$更高阶的无穷小，不能给出具体误差大小。",
+      "prerequisites": [
+        "math-mvt-cauchy",
+        "math-app-deriv-linear-approx"
+      ],
+      "misconceptions": [
+        "认为皮亚诺余项可以用来估计具体的误差大小",
+        "混淆不同余项形式的适用场景",
+        "忘记余项中 $\\xi$的位置未知（只知道在区间内）"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "用泰勒多项式近似函数时，误差有多大？如何严格地估计这个误差？"
+        },
+        {
+          "level": "L2",
+          "text": "拉格朗日余项和拉格朗日中值定理有什么结构上的相似性？"
+        },
+        {
+          "level": "L3",
+          "text": "拉格朗日中值定理说 $f(b) = f(a) + f'(c)(b-a)$，即 0阶泰勒展开 +拉格朗日余项。拉格朗日余项 $R_n(x) = \\frac{f^{(n+1)}(\\xi)}{(n+1)!}(x-x_0)^{n+1}$是同样的结构：它把 $(n+1)$阶导数在某中间点的值与 $(x-x_0)^{n+1}$相乘，给出 $n$阶多项式近似的精确误差。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-mvt-applications",
+      "title": "中值定理的应用",
+      "level": "undergraduate",
+      "difficulty": 3,
+      "summary": "中值定理是证明许多重要结论的基础工具。主要应用方向：$(1)$证明不等式——利用 $f(b)-f(a) = f'(c)(b-a)$来放缩；$(2)$证明等式——构造函数使其中值定理的结论恰好是目标等式；$(3)$判断函数性质——若 $f' \\equiv 0$则 $f$为常数（拉格朗日中值定理的直接推论）；$(4)$估计误差——泰勒公式的拉格朗日余项；$(5)$证明极限——如洛必达法则的证明依赖柯西中值定理。关键技巧：选择合适的辅助函数是运用中值定理的核心难点。",
+      "prerequisites": [
+        "math-mvt-lagrange",
+        "math-mvt-cauchy",
+        "math-app-deriv-monotonicity"
+      ],
+      "misconceptions": [
+        "将中值定理直接用于「存在性」问题而忽略构造辅助函数的步骤",
+        "在证明不等式时忘记验证中值定理的使用条件",
+        "认为中值定理只在理论证明中有用（实际上在数值计算中也很重要）"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "如何证明：对 $x > 0$，有 $\\ln(1+x) < x$？中值定理能帮上忙吗？"
+        },
+        {
+          "level": "L2",
+          "text": "要证明 $f(b) - f(a)$满足某个不等式，用中值定理转化为 $f'(c)$的估计是否更简单？"
+        },
+        {
+          "level": "L3",
+          "text": "对 $f(t) = \\ln(1+t)$在 $[0,x]$上用拉格朗日中值定理：$\\ln(1+x) - \\ln(1) = x\\cdot f'(c) = \\frac{x}{(1+c)}$，其中 $0 < c < x$。因 $\\frac{1}{(1+c)} < 1$，得 $\\ln(1+x) < x$。这是中值定理证明不等式的典型方法。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus seed",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    }
+  ]
+}

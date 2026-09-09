@@ -1,0 +1,687 @@
+{
+  "subject": "psychology",
+  "course": "psychology-experimental",
+  "chapter": "psychology-experimental",
+  "status": "draft",
+  "nodes": [
+    {
+      "id": "psychology-experimental-001",
+      "title": "实验心理学方法概述",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "实验心理学以操纵自变量、控制无关变量、观测因变量来揭示因果关系；强调可重复、可量化与随机化。",
+      "prerequisites": [],
+      "misconceptions": [
+        "把相关当因果",
+        "忽视控制"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个概念的核心词是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "试着用自己的话复述它。"
+        },
+        {
+          "level": "L3",
+          "text": "先把定义拆成'对象+特征'两部分。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "psychology-experimental-002",
+      "title": "变量的类型",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "自变量由实验者操纵；因变量是被观测的行为/生理指标；额外变量需控制。三类变量界定了实验的基本结构。",
+      "prerequisites": [
+        "psychology-experimental-001"
+      ],
+      "misconceptions": [
+        "混淆自变量与因变量",
+        "忽视额外变量"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "它和我们之前学的哪个概念有关？"
+        },
+        {
+          "level": "L2",
+          "text": "找出相似与不同。"
+        },
+        {
+          "level": "L3",
+          "text": "用对比表梳理二者关系。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "psychology-experimental-003",
+      "title": "实验效度",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "内部效度指因果推断的可靠性；外部效度指结果推广性；构思效度指操作对理论构念的代表性。三者常需权衡。",
+      "prerequisites": [
+        "psychology-experimental-002"
+      ],
+      "misconceptions": [
+        "只重内部忽视外部",
+        "混淆效度类型"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个现象在生活中能找到例子吗？"
+        },
+        {
+          "level": "L2",
+          "text": "举例能帮你检验理解。"
+        },
+        {
+          "level": "L3",
+          "text": "抽象规律要落到具体情境。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "psychology-experimental-004",
+      "title": "反应时与唐德斯ABC",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "唐德斯将反应时分为A（简单）、B（辨别）、C（选择）三类；用减数法可由差求得特定心理过程时长。",
+      "prerequisites": [
+        "psychology-experimental-001"
+      ],
+      "misconceptions": [
+        "记错ABC对应关系",
+        "混淆减数法逻辑"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "它的前提条件是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "没有条件会怎样？"
+        },
+        {
+          "level": "L3",
+          "text": "先界定适用范围再下结论。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "psychology-experimental-005",
+      "title": "反应时减数法",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "减数法假设各心理过程串行且可相减；通过两种任务反应时之差分离某一过程（如辨别、选择）所需时间。",
+      "prerequisites": [
+        "psychology-experimental-004"
+      ],
+      "misconceptions": [
+        "认为过程可任意相减",
+        "忽视串行假设"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "谁提出/发现了它？"
+        },
+        {
+          "level": "L2",
+          "text": "提出背景有助于记忆。"
+        },
+        {
+          "level": "L3",
+          "text": "把人物—理论—年份三者绑定。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "psychology-experimental-006",
+      "title": "加因素法（斯滕伯格）",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "斯滕伯格提出若两个因素对反应时的影响可加，则对应串行独立阶段；若交互则属同一阶段。用于探测信息加工阶段。",
+      "prerequisites": [
+        "psychology-experimental-004"
+      ],
+      "misconceptions": [
+        "混淆加因素与减数法",
+        "误读交互含义"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "它回答的是'是什么'还是'为什么'？"
+        },
+        {
+          "level": "L2",
+          "text": "区分描述与解释。"
+        },
+        {
+          "level": "L3",
+          "text": "描述事实之后才谈机制。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "psychology-experimental-007",
+      "title": "阈限测量方法",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "心理物理学测绝对/差别阈限的三种方法：极限法、恒定刺激法、调整法；各在精度与效率上权衡。",
+      "prerequisites": [
+        "psychology-experimental-003"
+      ],
+      "misconceptions": [
+        "混淆三种方法",
+        "混淆阈限类型"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "测量的指标是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "如何用实验验证？"
+        },
+        {
+          "level": "L3",
+          "text": "可操作性定义是心理学关键。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "psychology-experimental-008",
+      "title": "韦伯定律与费希纳定律",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "韦伯定律：$\\Delta I/I=K$（差别阈限与原刺激成正比）；费希纳由此推导心理量$=K\\cdot\\log$(物理量)，即对数关系。",
+      "prerequisites": [
+        "psychology-experimental-007"
+      ],
+      "misconceptions": [
+        "混淆韦伯与费希纳",
+        "忽视对数形式"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "容易被误解成什么？"
+        },
+        {
+          "level": "L2",
+          "text": "典型误区在何处？"
+        },
+        {
+          "level": "L3",
+          "text": "先列误区再逐条辨析。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "psychology-experimental-009",
+      "title": "斯蒂文斯幂定律",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "斯蒂文斯通过数量估计法提出心理量与物理量呈幂函數关系（$P=b\\cdot I^a$），不同感觉的幂指数不同。",
+      "prerequisites": [
+        "psychology-experimental-008"
+      ],
+      "misconceptions": [
+        "把幂律当对数律",
+        "忽视指数差异"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个概念的核心词是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "试着用自己的话复述它。"
+        },
+        {
+          "level": "L3",
+          "text": "先把定义拆成'对象+特征'两部分。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "psychology-experimental-010",
+      "title": "信号检测论",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "信号检测论区分感受性（辨别力$d'$）与判断标准（$\\beta$）；用击中、虚报等构建受试者工作特征（ROC）曲线。",
+      "prerequisites": [
+        "psychology-experimental-007"
+      ],
+      "misconceptions": [
+        "把$d'$与$\\beta$混淆",
+        "忽视反应偏向"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "它和我们之前学的哪个概念有关？"
+        },
+        {
+          "level": "L2",
+          "text": "找出相似与不同。"
+        },
+        {
+          "level": "L3",
+          "text": "用对比表梳理二者关系。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "psychology-experimental-011",
+      "title": "被试间设计",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "被试间设计中每个被试只接受一种处理，可避免练习/疲劳效应，但需更多被试且个体差异构成误差来源。",
+      "prerequisites": [
+        "psychology-experimental-003"
+      ],
+      "misconceptions": [
+        "与组内混淆",
+        "忽视个体差异"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个现象在生活中能找到例子吗？"
+        },
+        {
+          "level": "L2",
+          "text": "举例能帮你检验理解。"
+        },
+        {
+          "level": "L3",
+          "text": "抽象规律要落到具体情境。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "psychology-experimental-012",
+      "title": "被试内设计",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "被试内设计每个被试接受所有处理，节省被试且控制个体差异；但需警惕练习、疲劳与顺序效应。",
+      "prerequisites": [
+        "psychology-experimental-003"
+      ],
+      "misconceptions": [
+        "忽视顺序效应",
+        "与组间混淆"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "它的前提条件是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "没有条件会怎样？"
+        },
+        {
+          "level": "L3",
+          "text": "先界定适用范围再下结论。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "psychology-experimental-013",
+      "title": "混合设计",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "混合设计同时含被试间与被试内因素；兼具二者优点，分析时需分别处理两类变异来源。",
+      "prerequisites": [
+        "psychology-experimental-011",
+        "psychology-experimental-012"
+      ],
+      "misconceptions": [
+        "以为全是组内",
+        "分析时混淆来源"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "谁提出/发现了它？"
+        },
+        {
+          "level": "L2",
+          "text": "提出背景有助于记忆。"
+        },
+        {
+          "level": "L3",
+          "text": "把人物—理论—年份三者绑定。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "psychology-experimental-014",
+      "title": "准实验与现场实验",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "准实验在不能随机分组时使用（如以既有班级为组）；现场实验在自然情境中操纵，外部效度较高但控制较弱。",
+      "prerequisites": [
+        "psychology-experimental-001"
+      ],
+      "misconceptions": [
+        "把准实验当真实验",
+        "忽视生态效度"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "它回答的是'是什么'还是'为什么'？"
+        },
+        {
+          "level": "L2",
+          "text": "区分描述与解释。"
+        },
+        {
+          "level": "L3",
+          "text": "描述事实之后才谈机制。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "psychology-experimental-015",
+      "title": "多因素实验设计",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "多因素设计含两个及以上自变量，可考察主效应与交互作用；交互作用指一因素效应随另一因素水平变化。",
+      "prerequisites": [
+        "psychology-experimental-013"
+      ],
+      "misconceptions": [
+        "混淆主效应与交互",
+        "忽视简单效应"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "测量的指标是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "如何用实验验证？"
+        },
+        {
+          "level": "L3",
+          "text": "可操作性定义是心理学关键。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "psychology-experimental-016",
+      "title": "额外变量控制方法",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "控制额外变量的常用手段：随机化、匹配、抵消平衡、恒定化与盲法（单/双盲），以保证内部效度。",
+      "prerequisites": [
+        "psychology-experimental-002"
+      ],
+      "misconceptions": [
+        "只用一种方法",
+        "忽视盲法"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "容易被误解成什么？"
+        },
+        {
+          "level": "L2",
+          "text": "典型误区在何处？"
+        },
+        {
+          "level": "L3",
+          "text": "先列误区再逐条辨析。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "psychology-experimental-017",
+      "title": "被试选取与分配",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "抽样应具代表性；分配可用随机分配使组间可比，或用匹配控制关键协变量，二者目的都是减少偏差。",
+      "prerequisites": [
+        "psychology-experimental-011"
+      ],
+      "misconceptions": [
+        "混淆抽样与分配",
+        "忽视代表性"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个概念的核心词是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "试着用自己的话复述它。"
+        },
+        {
+          "level": "L3",
+          "text": "先把定义拆成'对象+特征'两部分。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "psychology-experimental-018",
+      "title": "统计推断基础",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "实验数据常用t检验比较两组均值、用方差分析（ANOVA）比较多组；显著性检验关注差异是否超出随机波动。",
+      "prerequisites": [
+        "psychology-experimental-015"
+      ],
+      "misconceptions": [
+        "混淆t与ANOVA适用",
+        "把显著当重要"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "它和我们之前学的哪个概念有关？"
+        },
+        {
+          "level": "L2",
+          "text": "找出相似与不同。"
+        },
+        {
+          "level": "L3",
+          "text": "用对比表梳理二者关系。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "psychology-experimental-019",
+      "title": "实验伦理",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "实验须遵循知情同意、有利无害、保密与退出自由；涉及欺骗须在结束后充分解释（debriefing）。",
+      "prerequisites": [
+        "psychology-experimental-001"
+      ],
+      "misconceptions": [
+        "认为结果优先于伦理",
+        "忽视知情同意"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个现象在生活中能找到例子吗？"
+        },
+        {
+          "level": "L2",
+          "text": "举例能帮你检验理解。"
+        },
+        {
+          "level": "L3",
+          "text": "抽象规律要落到具体情境。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "psychology-experimental-020",
+      "title": "经典实验范式",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "Stroop范式测注意与自动化；启动范式测内隐记忆；眼动/脑电提供过程指标。范式是标准化的实验工具。",
+      "prerequisites": [
+        "psychology-experimental-004"
+      ],
+      "misconceptions": [
+        "把范式当结论",
+        "忽视范式适用条件"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "它的前提条件是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "没有条件会怎样？"
+        },
+        {
+          "level": "L3",
+          "text": "先界定适用范围再下结论。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    }
+  ]
+}

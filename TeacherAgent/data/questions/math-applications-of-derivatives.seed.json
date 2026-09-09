@@ -1,0 +1,309 @@
+{
+  "subject": "math",
+  "course": "calculus",
+  "chapter": "applications-of-derivatives",
+  "status": "approved",
+  "questions": [
+    {
+      "id": "math-app-deriv-q001-monotonicity",
+      "title": "判断单调区间",
+      "knowledgeNodeIds": [
+        "math-app-deriv-monotonicity"
+      ],
+      "type": "solution",
+      "difficulty": 2,
+      "content": "求 $f(x) = x^3 - 3x$的单调区间。",
+      "answer": "在 $(-\\infty, -1)$和 $(1, +\\infty)$上递增，在 $(-1, 1)$上递减",
+      "solutionSteps": [
+        "$f'(x) = 3x^2 - 3 = 3(x-1)(x+1)$",
+        "令 f'(x) = 0 得 x = -1, x = 1",
+        "当 x < -1 时 f'(x) > 0，递增",
+        "当 -1 < x < 1 时 f'(x) < 0，递减",
+        "当 x > 1 时 f'(x) > 0，递增"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先求 f'(x) 并令其为 0 找驻点。"
+        },
+        {
+          "level": "L2",
+          "text": "在驻点两侧检查 f' 的符号。"
+        },
+        {
+          "level": "L3",
+          "text": "如果 f 在驻点两侧导数都为 0，该区间上 f 是常数吗？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-app-deriv-q002-extrema",
+      "title": "求极值",
+      "knowledgeNodeIds": [
+        "math-app-deriv-extrema"
+      ],
+      "type": "solution",
+      "difficulty": 2,
+      "content": "求 $f(x) = x^3 - 3x + 2$的极值。",
+      "answer": "极大值 $f(-1) = 4$，极小值 $f(1) = 0$",
+      "solutionSteps": [
+        "$f'(x) = 3x^2 - 3 = 3(x-1)(x+1)$",
+        "驻点 x = -1, x = 1",
+        "x < -1: f'(x) > 0; -1 < x < 1: f'(x) < 0; x > 1: f'(x) > 0",
+        "$x = -1$处导数由正变负，极大值 $f(-1) = -1+3+2 = 4$",
+        "$x = 1$处导数由负变正，极小值 $f(1) = 1-3+2 = 0$"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先找驻点，再判断驻点两侧导数符号。"
+        },
+        {
+          "level": "L2",
+          "text": "导数由正变负是什么类型的极值？"
+        },
+        {
+          "level": "L3",
+          "text": "如果 f 在 x0 处不可导但连续，x0 能是极值点吗？举个例子。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-app-deriv-q003-optimization",
+      "title": "最值应用题",
+      "knowledgeNodeIds": [
+        "math-app-deriv-optimization"
+      ],
+      "type": "solution",
+      "difficulty": 3,
+      "content": "用一段 24cm 的铁丝围成一个矩形，矩形面积最大时的长和宽各是多少？",
+      "answer": "长 =宽 $= 6$cm，面积最大为 $36cm^2$",
+      "solutionSteps": [
+        "设矩形长为 $x$，宽为 $(12-x)$，$0 < x < 12$",
+        "面积 $S = x(12-x) = 12x - x^2$",
+        "$S' = 12 - 2x$，令 $S' = 0$得 $x = 6$",
+        "S'' = -2 < 0，故 x = 6 是极大值点",
+        "长 $= 6$cm，宽 $= 12-6 = 6$cm，$S = 36cm^2$"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "设长为 x，用周长 24 表示宽。"
+        },
+        {
+          "level": "L2",
+          "text": "目标函数 $S(x)$是关于 $x$的什么函数？求导找极值。"
+        },
+        {
+          "level": "L3",
+          "text": "如果约束条件改为表面积固定，目标函数怎么建？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-app-deriv-q004-concavity",
+      "title": "凹凸性与拐点",
+      "knowledgeNodeIds": [
+        "math-app-deriv-concavity"
+      ],
+      "type": "solution",
+      "difficulty": 2,
+      "content": "求 $f(x) = x^4 - 4x^3$的凹凸区间和拐点。",
+      "answer": "拐点为 $(0, 0)$和 $(2, -16)$；$(-\\infty, 0)$和 $(2, +\\infty)$上凹，$(0, 2)$上凸",
+      "solutionSteps": [
+        "$f'(x) = 4x^3 - 12x^2$",
+        "$f''(x) = 12x^2 - 24x = 12x(x - 2)$",
+        "令 f''(x) = 0 得 x = 0, x = 2",
+        "x < 0: f'' > 0（凹）; 0 < x < 2: f'' < 0（凸）; x > 2: f'' > 0（凹）",
+        "$x=0$处凹凸性改变，$f(0)=0$；$x=2$处凹凸性改变，$f(2)=-16$"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "求二阶导数并令其为 0。"
+        },
+        {
+          "level": "L2",
+          "text": "检查 f'' 在候选点两侧的符号变化。"
+        },
+        {
+          "level": "L3",
+          "text": "拐点处的切线穿过曲线还是贴着曲线？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-app-deriv-q005-related-rates",
+      "title": "相关变化率问题",
+      "knowledgeNodeIds": [
+        "math-app-deriv-related-rates"
+      ],
+      "type": "solution",
+      "difficulty": 3,
+      "content": "一个球形气球的半径以 $2\\text{ cm/s}$的速率增大。当半径为 10cm 时，体积的变化率是多少？（球体积 $V = 4\\pi r^3/3$）",
+      "answer": "$\\frac{dV}{dt} = 800\\pi cm^3/s$",
+      "solutionSteps": [
+        "$V = 4\\pi r^3/3$，对 $t$求导：$\\frac{dV}{dt} = 4\\pi r^2 \\cdot \\frac{dr}{dt}$",
+        "已知 dr/dt = 2 cm/s, r = 10 cm",
+        "$\\frac{dV}{dt} = 4\\pi(10)^2 \\cdot 2 = 800\\pi cm^3/s$"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "V 是 r 的函数，r 是 t 的函数，dV/dt 怎么算？"
+        },
+        {
+          "level": "L2",
+          "text": "用链式法则：$\\frac{dV}{dt} = \\frac{dV}{dr}\\cdot\\frac{dr}{dt}$。"
+        },
+        {
+          "level": "L3",
+          "text": "如果气球是圆锥形，体积和半径的关系会怎样？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-app-deriv-q006-curve-sketch",
+      "title": "综合作图分析",
+      "knowledgeNodeIds": [
+        "math-app-deriv-monotonicity",
+        "math-app-deriv-extrema",
+        "math-app-deriv-concavity"
+      ],
+      "type": "solution",
+      "difficulty": 3,
+      "content": "分析 $f(x) = \\frac{x}{(x^2+1)}$的单调性、极值、凹凸性和拐点。",
+      "answer": "在 $(-\\infty, -1)$递减，$(-1, 1)$递增，$(1, +\\infty)$递减；极大值 $f(1)=\\frac{1}{2}$，极小值 $f(-1)=-\\frac{1}{2}$；$(-\\sqrt{3}, 0)$和 $(\\sqrt{3}, +\\infty)$上凹，$(-\\infty, -\\sqrt{3})$和 $(0, \\sqrt{3})$上凸；拐点 $(-\\sqrt{3}, -\\frac{\\sqrt{3}}{4}), (0, 0), (\\sqrt{3}, \\frac{\\sqrt{3}}{4})$",
+      "solutionSteps": [
+        "$f'(x) = \\frac{1-x^2}{(x^2+1)^2}$，令 $f'=0$得 $x=\\pm1$",
+        "$f''(x) = \\frac{2x(x^2-3)}{(x^2+1)^3}$，令 $f''=0$得 $x=0, \\pm\\sqrt{3}$",
+        "x=-1 处 f' 由负变正，极小值；x=1 处 f' 由正变负，极大值",
+        "因 $(x^2+1)^3 > 0$，$f''$的符号由 $2x(x^2-3)$决定：$x < -\\sqrt{3}$时 $f'' < 0$（凸）；$-\\sqrt{3} < x < 0$时 $f'' > 0$（凹）；$0 < x < \\sqrt{3}$时 $f'' < 0$（凸）；$x > \\sqrt{3}$时 $f'' > 0$（凹）",
+        "拐点：$x = -\\sqrt{3}$处 $f(-\\sqrt{3}) = -\\frac{\\sqrt{3}}{4}$；$x = 0$处 $f(0) = 0$；$x = \\sqrt{3}$处 $f(\\sqrt{3}) = \\frac{\\sqrt{3}}{4}$，三处凹凸性均改变"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先用除法法则求 f'(x)。"
+        },
+        {
+          "level": "L2",
+          "text": "$f'(x) = \\frac{1-x^2}{(x^2+1)^2}$，分子为 0时 $x$等于多少？"
+        },
+        {
+          "level": "L3",
+          "text": "水平渐近线和斜渐近线的判定方法有什么不同？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-app-deriv-q007-taylor-approx",
+      "title": "泰勒展开近似",
+      "knowledgeNodeIds": [
+        "math-app-deriv-linear-approx"
+      ],
+      "type": "solution",
+      "difficulty": 3,
+      "content": "写出 $e^x$在 $x_0=0$处的前三项泰勒展开（到 $x^2$项），并用它近似 $e^{0.1}$。",
+      "answer": "$e^x \\approx 1 + x + x^2/2, e^{0.1} \\approx 1.105$",
+      "solutionSteps": [
+        "$f(0) = e^0 = 1, f'(0) = 1, f''(0) = 1$",
+        "泰勒展开：$e^x \\approx 1 + x + x^2/2$",
+        "代入 $x = 0.1$：$e^{0.1} \\approx 1 + 0.1 + 0.01/2 = 1.105$"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "$e^x$在 $x=0$处的各阶导数都是什么值？"
+        },
+        {
+          "level": "L2",
+          "text": "泰勒公式 $f(x) \\approx f(0) + f'(0)x + f''(0)x^2/2!$。"
+        },
+        {
+          "level": "L3",
+          "text": "泰勒展开到 n 项时的拉格朗日余项公式是什么？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-app-deriv-q008-extrema-test2",
+      "title": "第二充分条件判极值",
+      "knowledgeNodeIds": [
+        "math-app-deriv-extrema"
+      ],
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "$f(x) = x^3 - 3x^2 + 2$，用第二充分条件判断 $x=0$和 $x=2$处是极大值还是极小值。",
+      "answer": "$x=0$处 $f''(0)=-6<0$，极大值 $f(0)=2$；$x=2$处 $f''(2)=6>0$，极小值 $f(2)=-2$",
+      "solutionSteps": [
+        "$f'(x) = 3x^2 - 6x = 3x(x-2)$，驻点 $x=0, x=2$",
+        "f''(x) = 6x - 6",
+        "$f''(0) = -6 < 0$，$x=0$是极大值点，$f(0) = 2$",
+        "$f''(2) = 6 > 0$，$x=2$是极小值点，$f(2) = -2$"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "第二充分条件看什么？$f''(x_0)$的符号。"
+        },
+        {
+          "level": "L2",
+          "text": "$f''(x_0)<0$时是极大还是极小？"
+        },
+        {
+          "level": "L3",
+          "text": "如果二阶导数为0，第二充分条件失效，还需要什么信息？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    }
+  ]
+}

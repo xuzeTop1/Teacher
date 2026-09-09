@@ -1,0 +1,261 @@
+{
+  "subject": "math",
+  "course": "calculus",
+  "chapter": "mean-value-theorems",
+  "status": "approved",
+  "questions": [
+    {
+      "id": "math-mvt-q001-rolle",
+      "title": "罗尔定理验证",
+      "knowledgeNodeIds": [
+        "math-mvt-rolle"
+      ],
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "验证 $f(x) = x^2 - 4x + 3$在 [1, 3]上满足罗尔定理条件，并求出使 $f'(\\xi) = 0$的 $\\xi$。",
+      "answer": "$\\xi = 2$",
+      "solutionSteps": [
+        "$f(x)$在 [1,3]上连续，在 $(1,3)$内可导（多项式函数）",
+        "$f(1) = 1 - 4 + 3 = 0, f(3) = 9 - 12 + 3 = 0, f(1) = f(3)$",
+        "三个条件满足，由罗尔定理存在 $\\xi\\in(1,3)$使 $f'(\\xi)=0$",
+        "$f'(x) = 2x - 4,$令 $f'(\\xi)=0$得 $\\xi=2$"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "罗尔定理需要验证哪三个条件？"
+        },
+        {
+          "level": "L2",
+          "text": "$f(1)$和 $f(3)$相等吗？求 $f'$并令其为 0。"
+        },
+        {
+          "level": "L3",
+          "text": "如果 $f(a)=f(b)$但 $f$在 $(a,b)$内不可导，罗尔定理还成立吗？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-mvt-q002-lagrange",
+      "title": "拉格朗日中值定理应用",
+      "knowledgeNodeIds": [
+        "math-mvt-lagrange"
+      ],
+      "type": "solution",
+      "difficulty": 2,
+      "content": "对 $f(x) = x^3$在 [0, 2]上应用拉格朗日中值定理，求满足条件的 $\\xi$。",
+      "answer": "$\\frac{2\\sqrt{3}}{3}$",
+      "solutionSteps": [
+        "$f'(x) = 3x^2$",
+        "由中值定理：$f'(\\xi) = [f(2)-f(0)]/(2-0) = \\frac{(8-0)}{2} = 4$",
+        "$3\\xi^2 = 4, \\xi^2 = \\frac{4}{3}, \\xi = \\frac{2}{\\sqrt{3}} = \\frac{2\\sqrt{3}}{3}$"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "拉格朗日公式 $f'(\\xi) = [f(b)-f(a)]/(b-a)$。"
+        },
+        {
+          "level": "L2",
+          "text": "求 $f'$后令其等于割线斜率，解出 $\\xi$。"
+        },
+        {
+          "level": "L3",
+          "text": "用中值定理能证明若导数大于0则函数严格递增。你试试？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-mvt-q003-cauchy",
+      "title": "柯西中值定理理解",
+      "knowledgeNodeIds": [
+        "math-mvt-cauchy"
+      ],
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "柯西中值定理和拉格朗日中值定理有什么关系？当 $g(x)=x$时柯西中值定理退化成什么？",
+      "answer": "当 $g(x)=x$时，$g'(x)=1$，柯西中值定理退化为拉格朗日中值定理",
+      "solutionSteps": [
+        "柯西中值定理：$\\frac{f'(\\xi)}{g'(\\xi)} = \\frac{f(b)-f(a)}{g(b)-g(a)}$",
+        "令 $g(x)=x$，则 $g'(x)=1$，$g(b)-g(a)=b-a$",
+        "代入得 $f'(\\xi) = \\frac{f(b)-f(a)}{b-a}$",
+        "这正是拉格朗日中值定理"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "柯西中值定理涉及两个函数 f 和 g，拉格朗日呢？"
+        },
+        {
+          "level": "L2",
+          "text": "如果 $g(x)=x$，$g'(x)$和 $g(b)-g(a)$分别是什么？"
+        },
+        {
+          "level": "L3",
+          "text": "柯西中值定理的几何意义是什么？参数曲线上的割线。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-mvt-q004-lhopital-00",
+      "title": "洛必达法则 0/0 型",
+      "knowledgeNodeIds": [
+        "math-mvt-applications"
+      ],
+      "type": "solution",
+      "difficulty": 2,
+      "content": "求 $\\lim_{x \\to 0} \\frac{e^x - 1}{x}$。",
+      "answer": "1",
+      "solutionSteps": [
+        "$x\\to0$时分子 $e^x-1\\to0$，分母 $x\\to0$，是 $\\frac{0}{0}$型",
+        "用洛必达法则：$\\lim \\frac{(e^x - 1)}{x} = \\lim e^x/1 = 1$"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "直接代入 x=0 是什么类型？能用洛必达吗？"
+        },
+        {
+          "level": "L2",
+          "text": "分子分母分别求导后代入极限。"
+        },
+        {
+          "level": "L3",
+          "text": "$\\lim \\frac{1-\\cos x}{x^2}$用洛必达需要几次？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-mvt-q005-lhopital-inf",
+      "title": "洛必达法则 ∞/∞ 型",
+      "knowledgeNodeIds": [
+        "math-mvt-applications"
+      ],
+      "type": "solution",
+      "difficulty": 2,
+      "content": "求 $\\lim_{x \\to +\\infty} \\frac{\\ln x}{x}$。",
+      "answer": "0",
+      "solutionSteps": [
+        "$x\\to+\\infty$时 $\\ln x\\to+\\infty, x\\to+\\infty$，是 $\\infty/\\infty$型",
+        "用洛必达：$\\lim \\frac{\\ln x}{x} = \\lim \\frac{(\\frac{1}{x})}{1} = \\lim \\frac{1}{x} = 0$"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "$\\infty/\\infty$型也能用洛必达法则。"
+        },
+        {
+          "level": "L2",
+          "text": "求导后变成 $\\frac{1}{x}$，$x\\to+\\infty$时趋近什么？"
+        },
+        {
+          "level": "L3",
+          "text": "$\\lim \\frac{x}{e^x}$需要用几次洛必达法则？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-mvt-q006-lhopital-other",
+      "title": "其他不定式转化",
+      "knowledgeNodeIds": [
+        "math-mvt-applications"
+      ],
+      "type": "solution",
+      "difficulty": 3,
+      "content": "求 $\\lim_{x \\to 0^+} x \\ln x$。",
+      "answer": "0",
+      "solutionSteps": [
+        "$x\\to0^+$时 $x\\to0, \\ln x\\to-\\infty$，是 $0\\cdot\\infty$型",
+        "转化为：$\\lim x \\ln x = \\lim \\ln x / (\\frac{1}{x})$，变成 $\\infty/\\infty$型",
+        "用洛必达：$\\lim \\frac{(\\frac{1}{x})}{(-\\frac{1}{x}^2)} = \\lim (-x) = 0$"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "$0\\cdot\\infty$型不能直接用洛必达，需要转化。"
+        },
+        {
+          "level": "L2",
+          "text": "把 $x \\ln x$写成 $\\ln \\frac{x}{(\\frac{1}{x})}$或 $\\frac{\\ln x}{1/x}$。"
+        },
+        {
+          "level": "L3",
+          "text": "$\\lim (\\frac{1}{x-1} - \\ln x)$是什么不定式？怎么转化？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    },
+    {
+      "id": "math-mvt-q007-taylor-e",
+      "title": "泰勒展开求极限",
+      "knowledgeNodeIds": [
+        "math-mvt-taylor-remainder"
+      ],
+      "type": "solution",
+      "difficulty": 3,
+      "content": "用泰勒展开求 $\\lim_{x \\to 0} \\frac{e^x - 1 - x}{x^2}$。",
+      "answer": "$\\frac{1}{2}$",
+      "solutionSteps": [
+        "$e^x = 1 + x + x^2/2 + x^3/6 + ...$",
+        "$e^x - 1 - x = x^2/2 + x^3/6 + ...$",
+        "$\\frac{e^x - 1 - x}{x^2} = \\frac{1}{2} + \\frac{x}{6} + ...$",
+        "$x\\to0$时极限为 $\\frac{1}{2}$"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "$e^x$的泰勒展开前几项是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "代入后分子中最低次项决定极限值。"
+        },
+        {
+          "level": "L3",
+          "text": "用泰勒展开求 $\\lim \\frac{\\sin x - x}{x^3}$，结果是什么？"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original calculus questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent draft; no source text copied."
+      }
+    }
+  ]
+}

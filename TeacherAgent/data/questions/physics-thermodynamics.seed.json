@@ -1,0 +1,593 @@
+{
+  "subject": "physics",
+  "course": "大学物理",
+  "chapter": "热学",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "physics-thermo-q1",
+      "title": "理想气体状态方程应用",
+      "type": "solution",
+      "difficulty": 1,
+      "content": "一密闭容器中装有理想气体，体积 $V = 2\\times10^{-3} m^3$，压强 $p = 1.5\\times10^5$Pa，温度 $T = 300 K$。求气体的物质的量。（普适气体常量 $R = 8.31 \\frac{J}{(mol\\cdot K)}$）",
+      "options": [],
+      "answer": "n = 0.12 mol",
+      "solutionSteps": [
+        "理想气体状态方程：pV = nRT",
+        "变形得：n = pV/(RT)",
+        "代入数值：$n = 1.5\\times10^5\\times2\\times10^{-3}/(8.31\\times300)$",
+        "计算：$n = 30\\frac{0}{(2493)} = 0.12 mol$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-thermo-ideal-gas"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "理想气体状态方程是最基本的热学方程"
+        },
+        {
+          "level": "L2",
+          "text": "$pV =$nRT，注意单位统一：$p(Pa)$，$V(m^3)$，$T(K)$"
+        },
+        {
+          "level": "L3",
+          "text": "也可以先求分子数 $N = p\\frac{V}{(kT)}$，再求物质的量 $n = \\frac{N}{N}_A$"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-thermo-q2",
+      "title": "等温过程功的计算",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "1mol 理想气体，从状态 $1 (p_1 = 2\\times10^5 Pa, V_1 = 1\\times10^{-3} m^3)$等温膨胀到状态 $2 (V_2 = 2\\times10^{-3} m^3)$。求气体对外做的功。（普适气体常量 $R = 8.31 \\frac{J}{(mol\\cdot K)}$）",
+      "options": [],
+      "answer": "W = 138.6 J",
+      "solutionSteps": [
+        "等温过程温度不变，由 pV =nRT 得 $T = p_1V_1/(nR)$",
+        "计算温度：$T = 2\\times10^5\\times1\\times10^{-3}/(1\\times8.31) = 20\\frac{0}{8}.31 = 24.07 K$",
+        "等温过程功的公式：$W =$nRT $\\ln(V_2/V_1)$",
+        "代入：$W = 1\\times8.31\\times24.07\\times\\ln(2) = 199.9\\times0.693 = 138.6 J$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-thermo-ideal-gas"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "等温过程温度不变，pV = 常数"
+        },
+        {
+          "level": "L2",
+          "text": "等温过程功：$W =$nRT $\\ln(V_2/V_1) =$nRT $\\ln(p_1/p_2)$"
+        },
+        {
+          "level": "L3",
+          "text": "也可以由功的定义 $W = \\int p dV$积分得到"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-thermo-q3",
+      "title": "气体动理论：分子平均动能",
+      "type": "solution",
+      "difficulty": 1,
+      "content": "某种理想气体，温度 $T = 300 K$。求：$(1)$分子的平均平动动能；$(2) 1$mol 该气体的内能。（玻尔兹曼常量 $k = 1.38\\times10^{-23} \\frac{J}{K}$）",
+      "options": [],
+      "answer": "$(1) \\varepsilon_k = 6.21\\times10^{-21} J$；$(2) U = 3.74\\times10^3 J$",
+      "solutionSteps": [
+        "（1）分子平均平动动能：$\\varepsilon_k = 3k\\frac{T}{2}$",
+        "代入：$\\varepsilon_k = 1.5\\times1.38\\times10^{-23}\\times300 = 6.21\\times10^{-21} J$",
+        "（2）1mol 气体内能：$U = nC_V T = 1\\times(3\\frac{R}{2})\\times T$",
+        "代入：$U = 1.5\\times8.31\\times300 = 3739.5 J \\approx 3.74\\times10^3 J$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-thermo-kinetic-theory"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "理想气体分子平均平动动能只与温度有关"
+        },
+        {
+          "level": "L2",
+          "text": "$\\varepsilon_k = 3k\\frac{T}{2}$，内能 $U = nC_V T$（单原子分子 $C_V = 3\\frac{R}{2}$）"
+        },
+        {
+          "level": "L3",
+          "text": "注意区分分子平均动能和1 mol气体内能"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-thermo-q4",
+      "title": "方均根速率计算",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "氧气分子 $(O_2)$，摩尔质量 $M = 32\\times10^{-3} k\\frac{g}{m}$ol，温度 $T = 300 K$。求氧气分子的方均根速率。（普适气体常量 $R = 8.31 \\frac{J}{(mol\\cdot K)}$）",
+      "options": [],
+      "answer": "$v_rms = 484 \\frac{m}{s}$",
+      "solutionSteps": [
+        "方均根速率公式：$v_rms = \\\\sqrt{3R\\frac{T}{M}}$",
+        "代入数值：$v_rms = \\\\sqrt{3\\times8.31\\times30\\frac{0}{0}.032}$",
+        "计算：$v_rms = \\\\sqrt{747\\frac{9}{0}.032} = \\\\sqrt{2.34\\times10^5} = 484 \\frac{m}{s}$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-thermo-kinetic-theory"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "方均根速率是分子速率的一种统计平均值"
+        },
+        {
+          "level": "L2",
+          "text": "$v_rms = \\\\sqrt{3R\\frac{T}{M}} = \\\\sqrt{3k\\frac{T}{m}}$，$M$是摩尔质量，$m$是分子质量"
+        },
+        {
+          "level": "L3",
+          "text": "注意单位：$M$单位 $k\\frac{g}{m}$ol，$R$单位 $\\frac{J}{(mol\\cdot K)}$"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-thermo-q5",
+      "title": "热力学第一定律：等压过程",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "1mol 理想气体，从状态 $1 (p_1 = 1\\times10^5 Pa, V_1 = 1\\times10^{-3} m^3)$等压膨胀到状态 $2 (V_2 = 2\\times10^{-3} m^3)$。求：$(1)$气体吸收的热量；$(2)$气体内能的变化；$(3)$气体对外做的功。（普适气体常量 $R = 8.31 \\frac{J}{(mol\\cdot K)}$）",
+      "options": [],
+      "answer": "$(1) Q = 1246.5 J$；$(2) \\Delta U = 747.9 J$；$(3) W = 498.6 J$",
+      "solutionSteps": [
+        "（1）等压过程功：$W = p\\Delta V = 1\\times10^5\\times(2-1)\\times10^{-3} = 100 J$",
+        "（2）先求温度变化：$T_1 = p_1V_1/(nR) = 1\\times10^5\\times1\\times10^{-3}/(1\\times8.31) = 12.03 K$",
+        "$T_2 = p_1V_2/(nR) = 1\\times10^5\\times2\\times10^{-3}/(1\\times8.31) = 24.07 K$",
+        "$\\Delta T = T_2 - T_1 = 12.04 K$",
+        "内能变化：$\\Delta U = nC_V \\Delta T = 1\\times(3\\frac{R}{2})\\times12.04 = 1.5\\times8.31\\times12.04 = 150 J$",
+        "（3）热力学第一定律：$Q = \\Delta U + W$",
+        "代入：$Q = 150 + 100 = 250 J$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-thermo-first-law"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "热力学第一定律：$Q = \\Delta U + W$"
+        },
+        {
+          "level": "L2",
+          "text": "等压过程：$W = p\\Delta V$，$Q = nC_p \\Delta T$，$\\Delta U = nC_V \\Delta T$"
+        },
+        {
+          "level": "L3",
+          "text": "注意 $C_p = C_V + R$，单原子分子 $C_V = 3\\frac{R}{2}$，$C_p = 5\\frac{R}{2}$"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-thermo-q6",
+      "title": "热力学第一定律：绝热过程",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "1mol 理想气体，从状态 $1 (p_1 = 2\\times10^5 Pa, V_1 = 1\\times10^{-3} m^3)$绝热膨胀到状态 $2 (p_2 = 1\\times10^5 Pa)$。求：$(1)$气体内能的变化；$(2)$气体对外做的功。（普适气体常量 $R = 8.31 \\frac{J}{(mol\\cdot K)}$，绝热指数 $\\gamma = \\frac{5}{3}$）",
+      "options": [],
+      "answer": "$(1) \\Delta U = -150 J$；$(2) W = 150 J$",
+      "solutionSteps": [
+        "绝热过程 $Q = 0$，由热力学第一定律：$W = -\\Delta U$",
+        "先求温度：$T_1 = p_1V_1/(nR) = 2\\times10^5\\times1\\times10^{-3}/(1\\times8.31) = 24.07 K$",
+        "绝热过程方程：$p_1V_1^\\gamma = p_2V_2^\\gamma$",
+        "解得：$V_2 = V_1(p_1/p_2)^(1/\\gamma) = 1\\times10^{-3}\\times(2)^(\\frac{3}{5}) = 1.52\\times10^{-3} m^3$",
+        "$T_2 = p_2V_2/(nR) = 1\\times10^5\\times1.52\\times10^{-3}/(1\\times8.31) = 18.29 K$",
+        "$\\Delta U = nC_V \\Delta T = 1\\times(3\\frac{R}{2})\\times(18.29-24.07) = -150 J$",
+        "$W = -\\Delta U = 150 J$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-thermo-first-law"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "绝热过程 Q = 0，系统做功靠减少内能"
+        },
+        {
+          "level": "L2",
+          "text": "绝热过程方程：$pV^\\gamma =$常数，$TV^(\\gamma-1) =$常数"
+        },
+        {
+          "level": "L3",
+          "text": "也可以直接用 $W = \\frac{(p_1V_1 - p_2V_2)}{(\\gamma-1)}$计算功"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-thermo-q7",
+      "title": "热力学第二定律表述",
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "下列哪种表述违反热力学第二定律？",
+      "options": [
+        "A. 热量不能自发从低温物体传到高温物体",
+        "B. 不可能从单一热源吸热使之完全变为有用功而不产生其他影响",
+        "C. 自然界的一切自发过程都是不可逆的",
+        "D. 一个绝热系统从非平衡态向平衡态过渡时，熵可以减少"
+      ],
+      "answer": "D",
+      "solutionSteps": [
+        "热力学第二定律有多种表述，核心是不可逆性",
+        "A是克劳修斯表述，正确",
+        "B是开尔文表述，正确",
+        "C是普遍结论，正确",
+        "D错误：绝热系统熵只能增加或不变（熵增原理），不能减少"
+      ],
+      "knowledgeNodeIds": [
+        "physics-thermo-second-law"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "热力学第二定律的核心是不可逆性和熵增原理"
+        },
+        {
+          "level": "L2",
+          "text": "熵增原理：孤立系统或绝热系统的熵永不减少"
+        },
+        {
+          "level": "L3",
+          "text": "注意区分可逆过程和不可逆过程，自发过程都是不可逆的"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-thermo-q8",
+      "title": "卡诺循环效率计算",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "一卡诺热机，高温热源温度 $T_1 = 600 K$，低温热源温度 $T_2 = 300 K$。求：$(1)$卡诺热机的效率；$(2)$若热机每次循环从高温热源吸热 $Q_1 = 1000 J$，求每次循环对外做的功。",
+      "options": [],
+      "answer": "$(1) \\eta = 50%$；$(2) W = 500 J$",
+      "solutionSteps": [
+        "（1）卡诺热机效率公式：$\\eta = 1 - T_2/T_1$",
+        "代入：$\\eta = 1 - 30\\frac{0}{6}00 = 0.5 = 50%$",
+        "（2）热机效率定义：$\\eta = \\frac{W}{Q}_1$",
+        "变形得：$W = \\eta Q_1 = 0.5\\times1000 = 500 J$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-thermo-carnot"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "卡诺热机是理想热机，效率只与两个热源温度有关"
+        },
+        {
+          "level": "L2",
+          "text": "$\\eta = 1 - T_2/T_1$，注意温度必须用绝对温度（$K$）"
+        },
+        {
+          "level": "L3",
+          "text": "效率也可以表示为 $\\eta = \\frac{(Q_1 - Q_2)}{Q}_1 = \\frac{W}{Q}_1$"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-thermo-q9",
+      "title": "卡诺制冷机系数",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "一卡诺制冷机，低温热源温度 $T_2 = 250 K$，高温热源温度 $T_1 = 300 K$。求制冷系数。",
+      "options": [],
+      "answer": "$\\varepsilon = 5$",
+      "solutionSteps": [
+        "卡诺制冷机系数公式：$\\varepsilon = T_2/(T_1 - T_2)$",
+        "代入：$\\varepsilon = 25\\frac{0}{(300 - 250)} = 25\\frac{0}{5}0 = 5$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-thermo-carnot"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "制冷系数是制冷机从低温热源吸热与外界对系统做功的比值"
+        },
+        {
+          "level": "L2",
+          "text": "$\\varepsilon = Q_2/W = T_2/(T_1 - T_2)$（卡诺制冷机）"
+        },
+        {
+          "level": "L3",
+          "text": "注意制冷系数与热机效率的区别"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-thermo-q10",
+      "title": "熵变计算：等温过程",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "1mol 理想气体，温度 $T = 400 K$，从体积 $V_1 = 1\\times10^{-3} m^3$等温膨胀到 $V_2 = 2\\times10^{-3} m^3$。求此过程的熵变。",
+      "options": [],
+      "answer": "$\\Delta S = 5.76 \\frac{J}{K}$",
+      "solutionSteps": [
+        "等温过程熵变公式：$\\Delta S =$nR $\\ln(V_2/V_1)$",
+        "代入：$\\Delta S = 1\\times8.31\\times\\ln(2) = 8.31\\times0.693 = 5.76 \\frac{J}{K}$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-thermo-entropy"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "熵是状态函数，熵变只与初末状态有关"
+        },
+        {
+          "level": "L2",
+          "text": "等温过程：$\\Delta S =$nR $\\ln(V_2/V_1) =$nR $\\ln(p_1/p_2)$"
+        },
+        {
+          "level": "L3",
+          "text": "也可以用定义 $\\Delta S = \\int d\\frac{Q}{T}$计算，等温过程 dQ $= dW = pdV$"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-thermo-q11",
+      "title": "熵变计算：等压过程",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "1mol 理想气体，从温度 $T_1 = 300 K$等压加热到 $T_2 = 600 K$。求此过程的熵变。（该气体 $C_p = 5\\frac{R}{2}$）",
+      "options": [],
+      "answer": "$\\Delta S = 28.8 \\frac{J}{K}$",
+      "solutionSteps": [
+        "等压过程熵变公式：$\\Delta S = nC_p \\ln(T_2/T_1)$",
+        "代入：$\\Delta S = 1\\times(5\\frac{R}{2})\\times\\ln(60\\frac{0}{3}00) = 2.5\\times8.31\\times\\ln(2)$",
+        "计算：$\\Delta S = 20.775\\times0.693 = 14.4 \\frac{J}{K}$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-thermo-entropy"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "等压过程压强不变，体积和温度成正比"
+        },
+        {
+          "level": "L2",
+          "text": "等压过程：$\\Delta S = nC_p \\ln(T_2/T_1)$"
+        },
+        {
+          "level": "L3",
+          "text": "也可以用定义 $\\Delta S = \\int d\\frac{Q}{T}$计算，等压过程 dQ $= nC_p dT$"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-thermo-q12",
+      "title": "热力学过程判断",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "一理想气体系统经历一循环过程，在 p-V 图上为一顺时针闭合曲线。则此循环是：",
+      "options": [
+        "A. 热机循环",
+        "B. 制冷机循环",
+        "C. 可能是热机也可能是制冷机",
+        "D. 无法确定"
+      ],
+      "answer": "A",
+      "solutionSteps": [
+        "p-V 图上顺时针闭合曲线，表示系统对外做功（W > 0）",
+        "根据热力学第一定律，$Q = \\Delta U + W$，循环过程 $\\Delta U = 0$，所以 $Q = W > 0$",
+        "系统从外界吸热并对外做功，是热机循环"
+      ],
+      "knowledgeNodeIds": [
+        "physics-thermo-first-law",
+        "physics-thermo-second-law"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "p-V 图上闭合曲线面积表示功"
+        },
+        {
+          "level": "L2",
+          "text": "顺时针：系统对外做功（热机）；逆时针：外界对系统做功（制冷机）"
+        },
+        {
+          "level": "L3",
+          "text": "结合热力学第一定律分析吸热放热情况"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-thermo-q13",
+      "title": "混合气体分压",
+      "type": "solution",
+      "difficulty": 1,
+      "content": "一容器中装有氮气 $(N_2)$和氧气 $(O_2)$的混合气体，总压强 $p = 2\\times10^5$Pa。已知氮气分压 $p_N_2 = 1.2\\times10^5$Pa，求氧气分压。",
+      "options": [],
+      "answer": "$p_O_2 = 8\\times10^4 Pa$",
+      "solutionSteps": [
+        "道尔顿分压定律：混合气体总压强等于各组分分压之和",
+        "$p = p_N_2 + p_O_2$",
+        "代入：$2\\times10^5 = 1.2\\times10^5 + p_O_2$",
+        "解得：$p_O_2 = 0.8\\times10^5 = 8\\times10^4 Pa$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-thermo-ideal-gas"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "混合气体遵循道尔顿分压定律"
+        },
+        {
+          "level": "L2",
+          "text": "$p$_总 $= p_1 + p_2 + ... + p_n$"
+        },
+        {
+          "level": "L3",
+          "text": "分压是组分气体单独占据容器时的压强"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-thermo-q14",
+      "title": "热传导速率计算",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "一厚度为 $d = 0.1 m$的墙壁，面积 $S = 10 m^2$，导热系数 $\\lambda = 0.8 \\frac{W}{(m\\cdot K)}$。墙壁内外表面温度分别为 $T_1 = 20\\circ C$，$T_2 = -10\\circ C$。求通过墙壁的热传导速率。",
+      "options": [],
+      "answer": "P = 2400 W",
+      "solutionSteps": [
+        "热传导定律（傅里叶定律）：$P = \\lambda S\\Delta\\frac{T}{d}$",
+        "代入数值：$P = 0.8\\times10\\times(20-(-10))/0.1$",
+        "计算：$P = 8\\times3\\frac{0}{0}.1 = 2400 W$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-thermo-kinetic-theory"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "热传导速率与温差、面积成正比，与厚度成反比"
+        },
+        {
+          "level": "L2",
+          "text": "$P = \\lambda S\\frac{(T_1 - T_2)}{d}$，注意温度用摄氏度或开尔文差值相同"
+        },
+        {
+          "level": "L3",
+          "text": "导热系数 $\\lambda$是材料性质，单位 $\\frac{W}{(m\\cdot K)}$"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    },
+    {
+      "id": "physics-thermo-q15",
+      "title": "综合题：理想气体多方过程",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "1mol 理想气体，从状态 $1 (p_1 = 4\\times10^5 Pa, V_1 = 1\\times10^{-3} m^3, T_1 = 48.14 K)$经历一多方过程变化到状态 $2 (p_2 = 1\\times10^5 Pa, V_2 = 2\\times10^{-3} m^3)$。已知该多方过程的多方指数 $n = 2$。求：$(1)$状态 2的温度；$(2)$此过程气体吸收的热量；$(3)$此过程的熵变。（普适气体常量 $R = 8.31 \\frac{J}{(mol\\cdot K)}$，该气体 $C_V = 3\\frac{R}{2}$）",
+      "options": [],
+      "answer": "$(1) T_2 = 24.07 K$；$(2) Q = -150 J$（放热）；$(3) \\Delta S = 5.76 \\frac{J}{K}$",
+      "solutionSteps": [
+        "（1）由理想气体状态方程：$T_2 = p_2V_2/(nR) = 1\\times10^5\\times2\\times10^{-3}/(1\\times8.31) = 24.07 K$",
+        "（2）内能变化：$\\Delta U = nC_V (T_2 - T_1) = 1\\times1.5\\times8.31\\times(24.07 - 48.14) = -300 J$",
+        "功：$W = \\frac{(p_1V_1 - p_2V_2)}{(n-1)} = \\frac{(400 - 200)}{(2-1)} = 200 J$",
+        "热量：$Q = \\Delta U + W = -300 + 200 = -100 J$（负号表示放热）",
+        "（3）熵是状态函数，可以设计可逆路径计算：等温+等压",
+        "$\\Delta S =$nR $\\ln(V_2/V_1) + nC_p \\ln(T_2/T_1)$",
+        "代入：$\\Delta S = 1\\times8.31\\times\\ln(2) + 1\\times2.5\\times8.31\\times\\ln(0.5) = 5.76 - 14.4 = -8.64 \\frac{J}{K}$"
+      ],
+      "knowledgeNodeIds": [
+        "physics-thermo-first-law",
+        "physics-thermo-entropy",
+        "physics-thermo-ideal-gas"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "多方过程满足 $pV^n =$常数"
+        },
+        {
+          "level": "L2",
+          "text": "多方过程功：$W = \\frac{(p_1V_1 - p_2V_2)}{(n-1)}$；热量需要先用热一律求 $\\Delta U$"
+        },
+        {
+          "level": "L3",
+          "text": "熵变计算可以设计可逆路径，利用熵是状态函数"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original physics questions",
+        "license": "original_generated",
+        "sourceType": "human_authored",
+        "note": "Original TeacherAgent exam-style physics draft; based on common university physics and exam curriculum structure; no source text or textbook problem copied or adapted."
+      }
+    }
+  ]
+}

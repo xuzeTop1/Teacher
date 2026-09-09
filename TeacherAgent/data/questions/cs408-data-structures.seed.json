@@ -1,0 +1,1759 @@
+{
+  "subject": "cs408",
+  "course": "data_structures",
+  "chapter": "cs408-data-structures",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "cs408-ds-q-basic-001",
+      "title": "数据结构基本概念",
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "下列关于数据结构基本概念的叙述中，正确的是：",
+      "options": [
+        "A. 数据的逻辑结构唯一确定了其存储结构",
+        "B. 数据的运算定义与存储结构无关",
+        "C. 抽象数据类型（ADT）将数据的逻辑结构和操作封装在一起，隐藏实现细节",
+        "D. 链式存储结构中各节点在内存中必须连续存放"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "A 错误：同一种逻辑结构可以采用不同的存储方式，如线性表可以用顺序存储也可以用链式存储",
+        "B 错误：运算的具体实现与存储结构密切相关，不同存储结构下同一运算的实现方式和效率不同",
+        "C 正确：ADT = (数据对象, 数据关系, 基本操作)，强调逻辑特性和操作接口的封装",
+        "D 错误：链式存储的特点就是各节点在内存中可以不连续存放，通过指针链接"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-ds-basic-concepts"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "回忆数据结构三要素和 ADT 的定义"
+        },
+        {
+          "level": "L2",
+          "text": "逻辑结构和存储结构是不同层次的概念，它们之间不是一一对应的"
+        },
+        {
+          "level": "L3",
+          "text": "ADT 的核心思想是封装和抽象，对外暴露接口，对内隐藏实现"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-q-complexity-001",
+      "title": "时间复杂度计算",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "分析以下代码片段的时间复杂度：for $(int i = 1; i <= n; i++)$for $(int j = 1; j <= i; j++)$for $(int k = 1; k <= j; k++)\n            x++;$",
+      "options": [],
+      "answer": "$O(n^3)$",
+      "solutionSteps": [
+        "最内层 x++ 是基本操作，需要计算其执行总次数",
+        "执行次数 =sum$(i=1 to n)$sum$(j=1 to i)$sum$(k=1 to j) 1$",
+        "内层两重循环：sum$(j=1 to i) j = i\\frac{(i+1)}{2}$",
+        "总次数 =sum$(i=1 to n) i\\frac{(i+1)}{2} = (\\frac{1}{2}) *$sum$(i^2 + i) = (\\frac{1}{2}) * [n(n+1)\\frac{(2n+1)}{6} + n\\frac{(n+1)}{2}]$",
+        "取最高阶项得 $O(n^3)$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-ds-algorithm-complexity"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先确定基本操作是什么，再计算它的执行总次数"
+        },
+        {
+          "level": "L2",
+          "text": "三重嵌套循环，但内层循环次数不是固定的，依赖于外层循环变量"
+        },
+        {
+          "level": "L3",
+          "text": "总次数是 $1+$（$1+2$）+（$1+2+3$）+...+（$1+2+...+n$），利用求和公式化简后取最高阶项"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-q-linear-001",
+      "title": "顺序表插入分析",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "在一个长度为 n 的顺序表中，在第 i（1 <= i <= n）个位置插入一个新元素时，需要向后移动的元素个数为：",
+      "options": [
+        "A. n - i",
+        "B. n - i + 1",
+        "C. i",
+        "D. n - i - 1"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "在第 i 个位置插入，意味着原来的第 i、i+1、...、n 个元素都要向后移动一位",
+        "需要移动的元素是原来从第 i 个到第 n 个的元素",
+        "移动个数 = n - i + 1",
+        "例如 $n=5, i=3$时，原来第 3、4、5号元素要后移，共 3个 $= 5-3+1$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-ds-linear-list"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "想想哪些元素需要挪位置，哪些不需要"
+        },
+        {
+          "level": "L2",
+          "text": "第 i 个位置插入时，从第 i 个开始到第 n 个元素都要后移"
+        },
+        {
+          "level": "L3",
+          "text": "数一下：i, i+1, ..., n 共多少个元素？用 n-i+1 而不是 n-i"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-q-stack-001",
+      "title": "循环队列操作",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "设有一个循环队列，用数组 Q[0..6] 存储，front 和 rear 分别指向队头和队尾元素的下一个位置。初始 front = rear = 0。依次执行入队 A、B、C、D、E 后，再出队两个元素，此时 front 和 rear 的值分别是多少？队中还有几个元素？",
+      "options": [],
+      "answer": "front = 2, rear = 5, 队中有 3 个元素（C、D、E）",
+      "solutionSteps": [
+        "数组大小 maxSize = 7。初始 front = rear = 0",
+        "入队 $A$：$Q[0]=A,$rear $= (0+1)%7 = 1$",
+        "入队 B：Q[1]=B, rear = 2。入队 C：Q[2]=C, rear = 3。入队 D：Q[3]=D, rear = 4。入队 E：Q[4]=E, rear = 5",
+        "出队一个：取 $Q[0]=A,$front $= (0+1)%7 = 1$",
+        "出队两个：取 $Q[1]=B,$front $= (1+1)%7 = 2$",
+        "最终 front $= 2,$rear $= 5$。元素个数 $= (5-2+7)%7 = 3$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-ds-stack-queue"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "循环队列的入队和出队操作都要对 maxSize 取模"
+        },
+        {
+          "level": "L2",
+          "text": "入队：rear $= (rear+1)%maxSize$；出队：front $= (front+1)%maxSize$"
+        },
+        {
+          "level": "L3",
+          "text": "队列元素个数 = (rear - front + maxSize) % maxSize"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-q-array-001",
+      "title": "对称矩阵压缩",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "设有一个 6 阶对称矩阵 A，按行优先方式只存储下三角部分（含对角线）到一维数组 B 中，B 的下标从 0 开始。若 A[0][0] 存储在 B[0]，则 A[4][2] 存储在 B 的哪个位置？",
+      "options": [],
+      "answer": "B[12]",
+      "solutionSteps": [
+        "对称矩阵只存下三角（含对角线），即 i >= j 的元素",
+        "A[4][2]：i=4, j=2，满足 i >= j，属于下三角",
+        "按行优先存下三角，$A[i][j]$在 $B$中的位置 $k = i\\frac{(i+1)}{2} + j$",
+        "$k = 4*\\frac{5}{2} + 2 = 10 + 2 = 12$，即 $B[12]$",
+        "验证：第0行1个$(B[0])$，第1行2个$(B[1-2])$，第2行3个$(B[3-5])$，第3行4个$(B[6-9])$，第4行 $A[4][0]=B[10]$，$A[4][1]=B[11]$，$A[4][2]=B[12]$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-ds-array-matrix"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "对称矩阵只存下三角，需要确认 A[i][j] 中 i >= j"
+        },
+        {
+          "level": "L2",
+          "text": "第 0行到第 $i-1$行共存储了 $1+2+...+i = i\\frac{(i+1)}{2}$个元素"
+        },
+        {
+          "level": "L3",
+          "text": "$A[i][j]$在下三角中的位置 =前 $i$行的元素总数 $+ j = i\\frac{(i+1)}{2} + j$"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-q-tree-001",
+      "title": "完全二叉树计算",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "一棵完全二叉树共有 768 个节点，求该树的叶节点个数、度为 1 的节点个数和度为 2 的节点个数。",
+      "options": [],
+      "answer": "叶节点 384 个，度为 1 的节点 1 个，度为 2 的节点 383 个",
+      "solutionSteps": [
+        "设 n0 为叶节点数，n1 为度1节点数，n2 为度2节点数",
+        "由二叉树性质：$n0 = n2 + 1$，即 $n2 = n0 - 1$",
+        "总节点 $n = n0 + n1 + n2 = n0 + n1 + n0 - 1 = 2*n0 + n1 - 1 = 768$",
+        "完全二叉树中度为1的节点数 n1 只能是 0 或 1",
+        "若 $n1 = 0$：$2*n0 - 1 = 768$，$n0 = 384.5$（不是整数，排除）",
+        "若 $n1 = 1$：$2*n0 = 768$，$n0 = 384$。$n2 = 383$。验证：$384+1+383 = 768$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-ds-tree-binary"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "利用二叉树性质 $n0 = n2 + 1$和 $n = n0 + n1 + n2$"
+        },
+        {
+          "level": "L2",
+          "text": "完全二叉树中度为1的节点最多只有1个（n1 只能是 0 或 1）"
+        },
+        {
+          "level": "L3",
+          "text": "联立方程 $2*n0 + n1 - 1 = 768$，分别代入 $n1=0$和 $n1=1$验证哪个得整数解"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-q-traversal-001",
+      "title": "二叉树遍历还原",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "已知一棵二叉树的前序遍历序列为 ABDGCEF，中序遍历序列为 DGBAECF。请画出该二叉树，并给出其后序遍历序列。",
+      "options": [],
+      "answer": "后序遍历序列为 GDBEFCA",
+      "solutionSteps": [
+        "前序第一个元素 A 是根节点。在中序中找到 A，左边 DGB 是左子树，右边 ECF 是右子树",
+        "左子树前序 BDG，中序 DGB：B 是根，中序中 B 左边 DG 为左子树，右边空。D 在前序中先出现，所以 D 是 B 的左孩子，G 是 D 的右孩子",
+        "右子树前序 CEF，中序 ECF：C 是根，中序中 C 左边 E 为左子树，右边 F 为右子树",
+        "二叉树结构：$A(B(D,G),C(E,F))$",
+        "后序遍历（左-右-根）：G D B E F C A"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-ds-tree-traversal"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "前序确定根节点，中序划分左右子树"
+        },
+        {
+          "level": "L2",
+          "text": "递归地对左右子树重复这个过程"
+        },
+        {
+          "level": "L3",
+          "text": "画出树后，按左子树-右子树-根的顺序遍历即得后序"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-q-huffman-001",
+      "title": "哈夫曼WPL计算",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "设有 5 个字符，其权值分别为 {2, 4, 5, 8, 11}。请构造对应的哈夫曼树，并计算其带权路径长度（WPL）。",
+      "options": [],
+      "answer": "WPL = 66",
+      "solutionSteps": [
+        "初始森林：{2, 4, 5, 8, 11}，每次选最小两个合并",
+        "第1次：合并 2 和 4，得内部节点 6。森林：{5, 6, 8, 11}",
+        "第2次：合并 5 和 6，得内部节点 11。森林：{8, 11(叶), 11(内部)}",
+        "第3次：合并内部节点 11 和 8，得内部节点 19。森林：{11(叶), 19}",
+        "第4次：合并叶节点 11 和内部节点 19，得根节点 30。哈夫曼树构造完成",
+        "各叶节点路径长度：权11深度1，权8深度2，权5深度3，权2深度4，权4深度4",
+        "$WPL = 11*1 + 8*2 + 5*3 + 2*4 + 4*4 = 11 + 16 + 15 + 8 + 16 = 66$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-ds-huffman"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "每次从当前节点集合中选最小的两个合并"
+        },
+        {
+          "level": "L2",
+          "text": "合并 n-1 次后只剩一棵树，就是哈夫曼树"
+        },
+        {
+          "level": "L3",
+          "text": "WPL = 每个叶节点的权值乘以它到根的路径长度之和"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-q-heap-001",
+      "title": "堆概念辨析",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "下列关于堆的叙述中，错误的是：",
+      "options": [
+        "A. 大根堆中，根节点的值是所有节点中最大的",
+        "B. 堆可以用数组来存储，节点 i 的左孩子在位置 2i+1（0起始编号）",
+        "C. 堆是一棵二叉搜索树",
+        "D. 对一个包含 n 个元素的数组建堆，时间复杂度为 O(n)"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "A 正确：大根堆的定义就是每个节点的值不小于其子节点的值，根节点最大",
+        "B 正确：堆基于完全二叉树，用数组存储时左孩子 2i+1，右孩子 2i+2（0起始）",
+        "C 错误：堆只保证父子之间的大小关系，不保证左子树小于右子树，因此不是 BST",
+        "$D$正确：Floyd 建堆法从最后一个非叶节点开始做下沉调整，总时间 $O(n)$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-ds-union-find-heap"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "堆和二叉搜索树的区别在哪里？"
+        },
+        {
+          "level": "L2",
+          "text": "BST 要求左子树所有节点 < 根 < 右子树所有节点，堆只要求父 >= 子（大根堆）"
+        },
+        {
+          "level": "L3",
+          "text": "堆中同一层的节点之间没有大小约束，这与 BST 的有序性不同"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-q-graph-001",
+      "title": "图的存储结构",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "一个有向图有 10 个顶点、20 条弧。关于该图的邻接矩阵和邻接表，下列说法正确的是：",
+      "options": [
+        "A. 邻接矩阵有 100 个元素，其中非零元素有 20 个",
+        "B. 邻接表中每个顶点都有一个链表，所有链表节点总数为 40",
+        "C. 邻接矩阵是对称矩阵",
+        "D. 邻接表的空间复杂度为 O(V^2)"
+      ],
+      "answer": "A",
+      "solutionSteps": [
+        "$A$正确：10个顶点的邻接矩阵为 $10x10 = 100$个元素，20条弧对应20个非零元素",
+        "B 错误：有向图邻接表中，每个链表节点代表一条出弧，链表节点总数 = 弧数 = 20，不是 40",
+        "C 错误：有向图的邻接矩阵不一定对称，A[i][j]=1不代表A[j][i]=1",
+        "$D$错误：邻接表的空间复杂度为 $O(V+E)$，不是 $O(V^2)$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-ds-graph-basic"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "邻接矩阵的大小是 V*V，非零元素个数与边/弧数有关"
+        },
+        {
+          "level": "L2",
+          "text": "有向图邻接表中链表节点总数 = 弧数，无向图邻接表链表节点总数 = 2*边数"
+        },
+        {
+          "level": "L3",
+          "text": "有向图的邻接矩阵只有无向图或特殊有向图才对称"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-q-bfs-dfs-001",
+      "title": "DFS遍历序列",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "对以下无向图进行深度优先搜索（DFS），从顶点 A 出发，邻接点按字母序访问。给出 DFS 遍历序列。图的边为：(A,B), (A,C), (B,D), (B,E), (C,F), (D,F)。",
+      "options": [],
+      "answer": "DFS 序列：A -> B -> D -> F -> C -> E",
+      "solutionSteps": [
+        "从 A 出发，标记 A 已访问。邻接点按字母序：B、C",
+        "访问 $B$，标记已访问。$B$的邻接点按字母序：$A$(已访问)、$D$、$E$",
+        "访问 $D$，标记已访问。$D$的邻接点按字母序：$B$(已访问)、$F$",
+        "访问 $F$，标记已访问。$F$的邻接点：$C$、$D$(已访问)",
+        "访问 $C$，标记已访问。$C$的邻接点：$A$(已访问)、$F$(已访问)。$C$无未访问邻接点，回溯",
+        "回溯到 F，F 无其他未访问邻接点。回溯到 D，回溯到 B。B 还有 E 未访问",
+        "访问 $E$，标记已访问。$E$的邻接点只有 $B$(已访问)",
+        "遍历完成：A -> B -> D -> F -> C -> E"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-ds-graph-traversal"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "DFS 沿着一条路尽量深入，走不通了再回溯"
+        },
+        {
+          "level": "L2",
+          "text": "邻接点按字母序访问意味着先访问字母靠前的"
+        },
+        {
+          "level": "L3",
+          "text": "用 visited 数组记录已访问节点，避免重复和死循环"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-q-mst-001",
+      "title": "Kruskal最小生成树",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "用 Kruskal 算法求以下无向连通图的最小生成树。图的顶点和边如下：$V = {1, 2, 3, 4, 5}\nE = {(1,2,3), (1,3,7), (2,3,1), (2,4,5), (3,4,2), (3,5,6), (4,5,4)}$（边格式：($u, v,$权值)）请给出选边顺序和最小生成树的总权值。",
+      "options": [],
+      "answer": "选边顺序：$(2,3,1) \\to (3,4,2) \\to (1,2,3) \\to (4,5,4)$。总权值 $= 1+2+3+4 = 10$",
+      "solutionSteps": [
+        "将所有边按权值升序排列：$(2,3,1), (3,4,2), (1,2,3), (4,5,4), (2,4,5), (3,5,6), (1,3,7)$",
+        "选 $(2,3,1)$：2和 3不在同一集合，加入。已选 1条边",
+        "选 $(3,4,2)$：3和 4不在同一集合，加入。已选 2条边",
+        "选 $(1,2,3)$：1和 2不在同一集合，加入。已选 3条边",
+        "选 $(4,5,4)$：4和 5不在同一集合，加入。已选 4条边 $= V-1 = 5-1 = 4$，完成",
+        "验证：$(2,4,5)$会形成环（$2-3-4$），$(3,5,6)$会形成环（$3-4-5$），$(1,3,7)$也会形成环",
+        "最小生成树总权值 $= 1 + 2 + 3 + 4 = 10$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-ds-mst"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "Kruskal 先对边排序，然后从小到大选边"
+        },
+        {
+          "level": "L2",
+          "text": "用并查集判断两个顶点是否已连通（在同一集合中）"
+        },
+        {
+          "level": "L3",
+          "text": "选 V-1 条边后停止，总权值就是各选中边的权值之和"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-q-shortest-001",
+      "title": "Dijkstra最短路径",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "用 Dijkstra 算法求从顶点 $A$到其余各顶点的最短路径。有向带权图的边为：$(A,B,4), (A,C,2), (B,D,3), (C,B,1), (C,D,5), (D,E,2)$。请给出各顶点的最短距离。",
+      "options": [],
+      "answer": "A:0, B:3, C:2, D:6, E:8",
+      "solutionSteps": [
+        "初始化：dist = {A:0, B:inf, C:inf, D:inf, E:inf}，全部未确定",
+        "选 dist 最小的未确定顶点 $A(0)$。松弛：$B=\\min(\\inf, 0+4)=4$，$C=\\min(\\inf, 0+2)=2$。标记 $A$已确定",
+        "选未确定中最小的 $C(2)$。松弛：$B=\\min(4, 2+1)=3$，$D=\\min(\\inf, 2+5)=7$。标记 $C$已确定",
+        "选未确定中最小的 $B(3)$。松弛：$D=\\min(7, 3+3)=6$。标记 $B$已确定",
+        "选未确定中最小的 $D(6)$。松弛：$E=\\min(\\inf, 6+2)=8$。标记 $D$已确定",
+        "选 $E(8)$。无出边可松弛。标记 $E$已确定",
+        "最终结果：A:0, B:3, C:2, D:6, E:8"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-ds-shortest-path"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "每步选 dist 值最小的未确定顶点"
+        },
+        {
+          "level": "L2",
+          "text": "松弛操作：如果经过当前顶点到邻接点更短，就更新 dist"
+        },
+        {
+          "level": "L3",
+          "text": "已确定的顶点不需要再更新，Dijkstra 保证第一次确定时就是最短路径"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-q-topo-001",
+      "title": "关键路径求解",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "对以下 AOE 网求关键路径。顶点 $V0~V5$，活动（边）及其权值为：$(V0,V1,3), (V0,V2,2), (V1,V3,4), (V2,V3,5), (V2,V4,3), (V3,V5,2), (V4,V5,4)$。请给出关键活动和关键路径长度。",
+      "options": [],
+      "answer": "三条关键路径：$V0\\to V1\\to V3\\to V5(9), V0\\to V2\\to V3\\to V5(9), V0\\to V2\\to V4\\to V5(9)$，关键路径长度 $= 9$",
+      "solutionSteps": [
+        "拓扑排序：V0, V2, V1, V4, V3, V5（一种合法序列）",
+        "正推 ve：ve$(V0)=0,$ve$(V1)=3,$ve$(V2)=2,$ve$(V3)=\\max(3+4,2+5)=7,$ve$(V4)=2+3=5,$ve$(V5)=\\max(7+2,5+4)=9$",
+        "逆推 vl：vl$(V5)=9,$vl$(V3)=9-2=7,$vl$(V4)=9-4=5,$vl$(V2)=\\min(7-5,5-3)=2,$vl$(V1)=7-4=3,$vl$(V0)=\\min(3-3,2-2)=0$",
+        "各活动 $e$和 $l$：$a(V0,V1):e=0,l=0; a(V0,V2):e=0,l=0; a(V1,V3):e=3,l=3; a(V2,V3):e=2,l=2; a(V2,V4):e=2,l=2; a(V3,V5):e=7,l=7; a(V4,V5):e=5,l=5$",
+        "所有活动的 e=l，全部为关键活动。三条关键路径长度均为 9"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-ds-topo-critical"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "关键路径求解分三步：拓扑排序、正推 ve、逆推 vl"
+        },
+        {
+          "level": "L2",
+          "text": "ve 沿拓扑序取最大值正推，vl 沿逆拓扑序取最小值逆推"
+        },
+        {
+          "level": "L3",
+          "text": "活动 $e(i)=l(i)$的活动为关键活动，由关键活动组成的路径为关键路径"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-q-bst-001",
+      "title": "BST插入与删除",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "依次将关键字序列 {45, 24, 53, 12, 37, 90} 插入到一棵初始为空的二叉搜索树中。画出该 BST，然后删除节点 45，画出删除后的 BST。",
+      "options": [],
+      "answer": "原始 BST 以 45 为根；删除 45 后用其中序后继 53 替代（或用前驱 37 替代）",
+      "solutionSteps": [
+        "插入 45：根节点",
+        "插入 24：24<45，成为 45 的左孩子",
+        "插入 53：53>45，成为 45 的右孩子",
+        "插入 12：12<45 走左，12<24 成为 24 的左孩子",
+        "插入 37：37<45 走左，37>24 成为 24 的右孩子",
+        "插入 90：90>45 走右，90>53 成为 53 的右孩子",
+        "BST结构：$45(24(12,37), 53(-,90))$",
+        "删除 45（有两个子节点）：找中序后继，即右子树中最小值 53",
+        "用 53 替代 45 的位置，原 53 的位置由其子节点 90 上移替代",
+        "删除后：$53(24(12,37), 90)$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-ds-bst"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "BST 插入：小于走左，大于走右"
+        },
+        {
+          "level": "L2",
+          "text": "删除有两个子节点的节点时，用中序后继（右子树最小值）替代"
+        },
+        {
+          "level": "L3",
+          "text": "中序后继最多有一个右子节点（因为它没有左子节点），所以删除后继很简单"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-q-avl-001",
+      "title": "AVL树旋转",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "依次将 {16, 24, 36, 48, 32, 52} 插入一棵初始为空的 AVL 树。请给出每次插入后发生失衡时的旋转类型和旋转后的树结构。",
+      "options": [],
+      "answer": "插入 36 时触发 RR 旋转（对16做左旋）；后续插入 52 时触发 RR 旋转（对36做左旋）",
+      "solutionSteps": [
+        "插入 16：树为 16。平衡",
+        "插入 24：$16(24)$。平衡因子 BF$(16)=1-0...$不对，16没有左子树高度0，右子树高度1，$BF=-1$。平衡",
+        "插入 36：$16(-,24(-,36))$。BF$(16)=0-2=-2$，失衡。失衡路径为右右$(RR)$，对 16做左旋。旋转后：$24(16, 36)$",
+        "插入 48：$24(16, 36(-,48))$。BF$(24)=1-2=-1$。平衡",
+        "插入 32：$24(16, 36(32,48))$。BF$(24)=1-2=-1,$BF$(36)=1-1=0$。平衡",
+        "插入 52：$24(16, 36(32, 48(-,52)))$。检查 BF：BF$(48)=0-1=-1,$BF$(36)=1-2=-1,$BF$(24)=1-3=-2$。失衡在 24，路径为右-右$(RR)$，对 24做左旋",
+        "左旋后：$36(24(16,32), 48(-,52))$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-ds-balanced-tree"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "AVL 树插入后从新节点向上检查平衡因子"
+        },
+        {
+          "level": "L2",
+          "text": "判断旋转类型看失衡节点到失衡方向：右右用左旋(RR)，左左用右旋(LL)"
+        },
+        {
+          "level": "L3",
+          "text": "平衡因子 = 左子树高度 - 右子树高度，超过 [-1,1] 范围即失衡"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-q-btree-001",
+      "title": "B树概念辨析",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "下列关于 3 阶 B 树的叙述中，正确的有：（多选）",
+      "options": [
+        "A. 每个节点最多有 3 个子节点",
+        "B. 每个非根节点至少有 2 个关键字",
+        "C. 所有叶节点都在同一层",
+        "D. 根节点至少有 2 个子节点"
+      ],
+      "answer": "ACD",
+      "solutionSteps": [
+        "A 正确：m 阶 B 树每个节点最多 m 个子节点，3 阶即最多 3 个子节点",
+        "$B$错误：3阶 $B$树非根节点至少有 ceil$(\\frac{3}{2})=2$个子节点，即至少 1个关键字（不是 2个）",
+        "C 正确：B 树的所有叶节点（失败节点）在同一层，这是 B 树的定义要求",
+        "D 正确：B 树的根节点要么为空（空树），要么至少有 2 个子节点（除非它是叶节点）"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-ds-btree"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "B 树的阶数 m 决定了每个节点子节点数的上下界"
+        },
+        {
+          "level": "L2",
+          "text": "非根节点最少 ceil$(\\frac{m}{2})$个子节点 =ceil$(\\frac{m}{2})-1$个关键字"
+        },
+        {
+          "level": "L3",
+          "text": "3 阶 B 树非根节点至少 2 个子节点、1 个关键字、最多 3 个子节点、2 个关键字"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-q-hash-001",
+      "title": "散列ASL计算",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "设散列表长度为 11，散列函数 $H(key) =$key % 11，用线性探测法处理冲突。依次插入关键字 {22, 41, 53, 46, 30, 13}，求查找成功的平均查找长度（ASL）。",
+      "options": [],
+      "answer": "$ASL = \\frac{(1+1+1+1+3+2)}{6} = \\frac{9}{6} = \\frac{3}{2}$",
+      "solutionSteps": [
+        "插入 22：$H(22) = 22%11 = 0$，存入位置 0。探查 1次",
+        "插入 41：$H(41) = 41%11 = 8$，存入位置 8。探查 1次",
+        "插入 53：$H(53) = 53%11 = 9$，存入位置 9。探查 1次",
+        "插入 46：$H(46) = 46%11 = 2$，存入位置 2。探查 1次",
+        "插入 30：$H(30) = 30%11 = 8$，冲突$\\to$位置9(占)$\\to$位置10(空)，存入 10。探查 3次",
+        "插入 13：$H(13) = 13%11 = 2$，冲突$\\to$位置3(空)，存入 3。探查 2次",
+        "$ASL = \\frac{(1+1+1+1+3+2)}{6} = \\frac{9}{6} = \\frac{3}{2}$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-ds-hash"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先计算每个关键字的散列值，再按线性探测处理冲突"
+        },
+        {
+          "level": "L2",
+          "text": "查找某个关键字的探查次数 = 它在表中的实际位置与散列地址之间的距离 + 1"
+        },
+        {
+          "level": "L3",
+          "text": "$ASL =$所有关键字的探查次数之和 /关键字个数"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-q-sort-001",
+      "title": "排序算法综合",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "以下关于排序算法的叙述中，正确的有：（多选）",
+      "options": [
+        "A. 快速排序的平均时间复杂度为 O(nlogn)，最坏为 O(n^2)",
+        "B. 归并排序是稳定的，且时间复杂度始终为 O(nlogn)",
+        "C. 堆排序是稳定的，空间复杂度为 O(1)",
+        "D. 基数排序不属于基于比较的排序，其时间复杂度与关键字位数有关"
+      ],
+      "answer": "ABD",
+      "solutionSteps": [
+        "$A$正确：快排平均 $O(nlogn)$，当序列已有序且枢轴选端点时退化为 $O(n^2)$",
+        "$B$正确：归并排序合并时相等元素保持原顺序所以稳定，分治过程固定 $O(nlogn)$",
+        "C 错误：堆排序是不稳定的。在调整堆的过程中，相等元素的相对顺序可能被改变",
+        "$D$正确：基数排序按位分配和收集，时间 $O(d(n+r))$，$d$为关键字位数，不属于比较排序"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-ds-sorting-basic",
+        "cs408-ds-sorting-advanced"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "从时间复杂度、空间复杂度、稳定性三个维度分析每种排序"
+        },
+        {
+          "level": "L2",
+          "text": "堆排序在建堆和调整堆时会跨越交换元素，可能打乱相等元素顺序"
+        },
+        {
+          "level": "L3",
+          "text": "基于比较的排序下界 $O(nlogn)$，基数排序通过分配-收集实现不受此限制"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-q-kmp-001",
+      "title": "KMP模式匹配计算",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "对模式串 P = \"ababaaabab\"，求 KMP 算法的 next 数组和 nextval 数组。当主串 T = \"abababaaabab\" 时，用 KMP 算法匹配，给出第一次匹配成功时主串中的起始位置。",
+      "options": [],
+      "answer": "next 数组: [-1, 0, 0, 1, 2, 3, 1, 1, 2, 3]（从0起始）; nextval 数组: [-1, 0, -1, 0, -1, 3, 1, 0, 0, 1]; 第一次匹配起始位置为 4（0起始）",
+      "solutionSteps": [
+        "P = a b a b a a a b a b（下标 0~9）",
+        "next[0]=-1, next[1]=0",
+        "next[2]: P[2]=a, P[0]=a, 但P[2]前面最长相等前后缀长度=0, next[2]=0",
+        "逐步计算: next = [-1, 0, 0, 1, 2, 3, 1, 1, 2, 3]",
+        "nextval 修正: 当 P[j]=P[next[j]] 时，nextval[j]=nextval[next[j]]; 否则 nextval[j]=next[j]",
+        "nextval = [-1, 0, -1, 0, -1, 3, 1, 0, 0, 1]",
+        "KMP 匹配过程: i=0开始扫描T, 利用nextval回退, 第一次完整匹配在 T[4..13] = ababaaabab = P, 起始位置 = 4"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-ds-kmp-detail"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "next[j] 表示模式串前 j 个字符组成的子串的最长相等前后缀长度"
+        },
+        {
+          "level": "L2",
+          "text": "nextval 在 next 基础上修正：若 P[j]=P[next[j]] 则直接取 nextval[next[j]]"
+        },
+        {
+          "level": "L3",
+          "text": "匹配时 i 指向主串不回退，j 根据 nextval 回退"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-q-string-001",
+      "title": "串的基本概念",
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "下列关于串的基本概念的叙述中，正确的是：",
+      "options": [
+        "A. 串是一种特殊的线性表，其数据元素为单个字符",
+        "B. 空串是由空格组成的串",
+        "C. 子串是串中任意个字符组成的任意序列（不要求连续）",
+        "D. 串的块链存储中，每个节点只能存储一个字符"
+      ],
+      "answer": "A",
+      "solutionSteps": [
+        "A 正确：串是数据元素为字符的线性表，是一种特殊的线性表",
+        "B 错误：空串是长度为0的串，不包含任何字符；由空格组成的串称为空格串，长度不为0",
+        "C 错误：子串要求是串中连续的字符序列，不连续的称为子序列而非子串",
+        "D 错误：块链存储中每个节点可以存储多个字符（如4个或8个），以提高存储密度"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-ds-string-basic"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "串的元素是字符，回忆串与线性表的关系"
+        },
+        {
+          "level": "L2",
+          "text": "空串和空格串是两个不同概念，注意区分"
+        },
+        {
+          "level": "L3",
+          "text": "子串强调连续性，块链存储中节点可存多个字符以提高存储密度"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-q-kmp-next-001",
+      "title": "计算next数组",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "对模式串 P = \"abaabcac\"，求 KMP 算法的 next 数组（从0起始编号，next[0]=-1）。",
+      "options": [],
+      "answer": "next = [-1, 0, 0, 1, 1, 2, 0, 1]",
+      "solutionSteps": [
+        "P = a b a a b c a c（下标 0~7）",
+        "next[0] = -1（约定）",
+        "next[1] = 0（单字符无相等前后缀）",
+        "next[2]：P[0..1]=\"ab\"，最长相等前后缀长度=0，next[2]=0",
+        "next[3]：P[0..2]=\"aba\"，最长相等前后缀=\"a\"，长度=1，next[3]=1",
+        "next[4]：P[0..3]=\"abaa\"，最长相等前后缀=\"a\"，长度=1，next[4]=1",
+        "next[5]：P[0..4]=\"abaab\"，最长相等前后缀=\"ab\"，长度=2，next[5]=2",
+        "next[6]：P[0..5]=\"abaabc\"，最长相等前后缀长度=0，next[6]=0",
+        "next[7]：P[0..6]=\"abaabca\"，最长相等前后缀=\"a\"，长度=1，next[7]=1",
+        "最终 next = [-1, 0, 0, 1, 1, 2, 0, 1]"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-ds-kmp-detail"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "next[j] 表示 P[0..j-1] 的最长相等前后缀长度"
+        },
+        {
+          "level": "L2",
+          "text": "逐个检查：P[0..j-1] 的前缀和后缀有多少字符是相同的"
+        },
+        {
+          "level": "L3",
+          "text": "也可以递推计算：若 P[j]==P[next[j]]，则 next[j+1]=next[j]+1；否则回退继续比较"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-q-kmp-nextval-001",
+      "title": "计算nextval数组",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "对模式串 P = \"abaabcac\"，已知其 next 数组为 [-1, 0, 0, 1, 1, 2, 0, 1]。求 nextval 数组，并说明用 nextval 进行匹配相比 next 的优势。",
+      "options": [],
+      "answer": "nextval = [-1, 0, -1, 1, 0, 2, -1, 0]",
+      "solutionSteps": [
+        "nextval 修正规则：若 P[j] == P[next[j]]，则 nextval[j] = nextval[next[j]]；否则 nextval[j] = next[j]",
+        "nextval[0] = next[0] = -1",
+        "nextval[1]：P[1]='b', P[next[1]]=P[0]='a', 'b'!='a', nextval[1] = next[1] = 0",
+        "nextval[2]：P[2]='a', P[next[2]]=P[0]='a', 'a'=='a', nextval[2] = nextval[0] = -1",
+        "nextval[3]：P[3]='a', P[next[3]]=P[1]='b', 'a'!='b', nextval[3] = next[3] = 1",
+        "nextval[4]：P[4]='b', P[next[4]]=P[1]='b', 'b'=='b', nextval[4] = nextval[1] = 0",
+        "nextval[5]：P[5]='c', P[next[5]]=P[2]='a', 'c'!='a', nextval[5] = next[5] = 2",
+        "nextval[6]：P[6]='a', P[next[6]]=P[0]='a', 'a'=='a', nextval[6] = nextval[0] = -1",
+        "nextval[7]：P[7]='c', P[next[7]]=P[1]='b', 'c'!='b', nextval[7] = next[7] = 0",
+        "nextval = [-1, 0, -1, 1, 0, 2, -1, 0]",
+        "优势：nextval 跳过了不必要的重复比较。例如当 P[2]='a' 匹配失败时，next[2]=0 会回到 P[0]='a' 再比较，必然再次失败；nextval[2]=-1 直接跳过，减少了一次无效比较"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-ds-kmp-detail"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "nextval 在 next 基础上进一步优化，避免回退后必然失败的比较"
+        },
+        {
+          "level": "L2",
+          "text": "关键判断：P[j] 是否等于 P[next[j]]，若相等则回退到 next[j] 也没用"
+        },
+        {
+          "level": "L3",
+          "text": "若 P[j]==P[next[j]]，说明回退后还要比较相同的字符，直接取 nextval[next[j]] 跳过"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-q-threaded-001",
+      "title": "中序线索二叉树遍历",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "一棵二叉树的结构为：A 为根，A 的左孩子为 B，A 的右孩子为 C，B 的左孩子为 D，B 的右孩子为 E。请给出该二叉树中序线索化后的中序遍历序列。",
+      "options": [],
+      "answer": "中序遍历序列为 D, B, E, A, C",
+      "solutionSteps": [
+        "先确定中序遍历序列（左-根-右）",
+        "D 无左右子树，中序访问 D",
+        "B 的左子树已访问（D），访问 B",
+        "B 的右子树：E 无左右子树，访问 E",
+        "A 的左子树已访问（D,B,E），访问 A",
+        "A 的右子树：C 无左右子树，访问 C",
+        "中序遍历序列：D, B, E, A, C",
+        "中序线索化后，D 的右线索指向 B，E 的左线索指向 B、右线索指向 A，C 的左线索指向 A",
+        "利用线索可以不借助栈完成遍历：从最左下节点 D 开始，有右子树则找右子树最左节点，否则沿右线索走"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-ds-threaded-tree"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先写出普通的中序遍历序列，线索化不改变遍历顺序"
+        },
+        {
+          "level": "L2",
+          "text": "中序遍历中相邻的前驱后继节点之间可以用线索连接"
+        },
+        {
+          "level": "L3",
+          "text": "线索化后遍历：从最左下开始，有右子树走右子树的最左节点，无右子树则沿右线索"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-q-avl-rotate-001",
+      "title": "AVL旋转类型判断",
+      "type": "concept_check",
+      "difficulty": 3,
+      "content": "在一棵 AVL 树中插入一个节点后，发现某个失衡节点 A 的平衡因子为 -2（右子树过高），A 的右孩子 B 的平衡因子为 1（B 的左子树更高）。此时应进行的旋转操作是：",
+      "options": [
+        "A. 对 A 做一次左旋（RR 型）",
+        "B. 对 A 做一次右旋（LL 型）",
+        "C. 先对 B 做一次右旋，再对 A 做一次左旋（RL 型）",
+        "D. 先对 B 做一次左旋，再对 A 做一次右旋（LR 型）"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "A 的 BF = -2，说明 A 的右子树更高，失衡方向为右",
+        "A 的右孩子 B 的 BF = 1，说明 B 的左子树更高，即导致失衡的方向为左",
+        "失衡方向为右-左（RL 型），需要先对 B 右旋再对 A 左旋",
+        "A 错误：RR 型要求 B 的 BF 也为负（B 的右子树更高）",
+        "B 错误：LL 型对应 A 的 BF 为正（左子树更高）的情况",
+        "D 错误：LR 型对应 A 的 BF 为正且左孩子 BF 为负的情况",
+        "因此选 C：RL 型旋转"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-ds-avl-rotate"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "判断旋转类型需要看失衡节点和其子节点的平衡因子方向"
+        },
+        {
+          "level": "L2",
+          "text": "A 的 BF 为负（右高），B 的 BF 为正（左高），方向不一致说明是双旋转"
+        },
+        {
+          "level": "L3",
+          "text": "右-左（RL）型：先对右孩子右旋，再对失衡节点左旋"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-q-btree-del-001",
+      "title": "B树删除操作",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "在一棵 3 阶 B 树中依次插入关键字 10, 20, 30, 40, 50 后，删除关键字 10。请给出删除后的 B 树结构。",
+      "options": [],
+      "answer": "删除后 B 树：根节点 [40]，左子节点 [20, 30]，右子节点 [50]",
+      "solutionSteps": [
+        "依次插入 10, 20, 30, 40, 50 到 3 阶 B 树（每节点最多 2 个关键字，非根至少 1 个）",
+        "插入 10, 20：根节点 [10, 20]",
+        "插入 30：节点有 3 个关键字，超限，分裂。中间值 20 上移为新根，左 [10]，右 [30]",
+        "插入 40：进入右子节点，右子节点变为 [30, 40]",
+        "插入 50：进入右子节点，[30, 40, 50] 超限，分裂。中间值 40 上移到根，根变为 [20, 40]，子节点为 [10]、[30]、[50]",
+        "插入完成，B 树结构：根 [20, 40]，三个子节点 [10]、[30]、[50]",
+        "删除 10：10 在叶节点 [10] 中，删除后该节点为空",
+        "非根叶节点至少需要 1 个关键字，不满足。检查兄弟节点能否借出",
+        "右兄弟 [30] 仅有 1 个关键字（等于下限），无法借出",
+        "合并：将左子节点（空）、父节点关键字 20、右兄弟 [30] 合并为新节点 [20, 30]",
+        "父节点 [20, 40] 失去关键字 20 和两个子指针，剩余关键字 [40]，子节点为 [20, 30] 和 [50]",
+        "最终 B 树：根节点 [40]，左子节点 [20, 30]，右子节点 [50]",
+        "验证：根 1个关键字（合法），左子节点 2个关键字（$\\le2$合法），右子节点 1个关键字（$\\ge1$合法）"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-ds-btree-op"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "3 阶 B 树每个节点最多 2 个关键字，非根至少 1 个关键字"
+        },
+        {
+          "level": "L2",
+          "text": "删除后节点不够时，先看兄弟是否有多余关键字可借"
+        },
+        {
+          "level": "L3",
+          "text": "借关键字后如果导致其他节点超限，需要继续分裂调整"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-q-hash-chain-001",
+      "title": "链地址法ASL计算",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "设散列表长度为 7，散列函数 $H(key) =$key % 7，用链地址法处理冲突。依次插入关键字 {23, 14, 9, 32, 18, 44, 12}，求查找成功的平均查找长度（ASL）。",
+      "options": [],
+      "answer": "$ASL = \\frac{(1+1+2+1+2+1+2)}{7} = 1\\frac{0}{7}$",
+      "solutionSteps": [
+        "计算各关键字的散列地址：$H(23)=2, H(14)=0, H(9)=2, H(32)=4, H(18)=4, H(44)=2, H(12)=5$",
+        "链地址法构建各链表（按插入顺序链入）：",
+        "位置 0：14（1个元素）",
+        "位置 2：23 -> 9 -> 44（3个元素）",
+        "位置 4：32 -> 18（2个元素）",
+        "位置 5：12（1个元素）",
+        "查找成功时各元素的比较次数：",
+        "14：第1个，比较1次",
+        "23：第1个，比较1次",
+        "9：第2个，比较2次",
+        "32：第1个，比较1次",
+        "18：第2个，比较2次",
+        "44：第3个，比较3次",
+        "12：第1个，比较1次",
+        "$ASL = \\frac{(1+1+2+1+2+3+1)}{7} = 1\\frac{1}{7}$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-ds-hash-detail"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "链地址法中，同义词用链表连接，查找次数等于在链中的位置"
+        },
+        {
+          "level": "L2",
+          "text": "先计算每个关键字的散列地址，再看它在对应链表中的位置"
+        },
+        {
+          "level": "L3",
+          "text": "$ASL =$所有元素查找次数之和 /元素个数，注意链表按插入顺序排列"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-q-graph-floyd-001",
+      "title": "Floyd算法求所有点对最短路",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "对以下有向带权图用 Floyd 算法求所有点对最短路径。顶点 {0, 1, 2}，边为：$0\\to1$(权3)$, 0\\to2$(权5)$, 1\\to2$(权2)。请给出最终的 dist 矩阵。",
+      "options": [],
+      "answer": "最终 dist 矩阵：dist[0][1]=3, dist[0][2]=5, dist[1][0]=inf, dist[1][2]=2, dist[2][0]=inf, dist[2][1]=inf",
+      "solutionSteps": [
+        "初始化 dist 矩阵：dist[0][1]=3, dist[0][2]=5, dist[1][2]=2, 其余非对角为 inf, 对角为 0",
+        "初始 dist = [[0,3,5],[inf,0,2],[inf,inf,0]]",
+        "k=0（以顶点0为中间点）：检查 dist[i][0]+dist[0][j] < dist[i][j]？",
+        "  i=1,j=2: dist[1][0]+dist[0][2] = inf+5 = inf，不更新",
+        "  其他组合也不满足，k=0 无更新",
+        "k=1（以顶点1为中间点）：检查 dist[i][1]+dist[1][j] < dist[i][j]？",
+        "  $i=0,j=2:$dist$[0][1]+dist[1][2] = 3+2 = 5 =$dist[0][2]，不更新（相等不更新）",
+        "  其他组合也不满足",
+        "k=2（以顶点2为中间点）：检查 dist[i][2]+dist[2][j] < dist[i][j]？",
+        "  顶点2无出边（dist[2][j]均为inf或0），不更新",
+        "最终 dist = [[0,3,5],[inf,0,2],[inf,inf,0]]",
+        "解读：0到1最短距离3，0到2最短距离5（直达），1到2最短距离2"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-ds-graph-compare"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "Floyd 算法的核心：逐步引入中间顶点 k，检查是否经过 k 路径更短"
+        },
+        {
+          "level": "L2",
+          "text": "状态转移：dist$[i][j] = \\min(dist[i][j], dist[i][k]+dist[k][j])$"
+        },
+        {
+          "level": "L3",
+          "text": "三重循环：外层 k 从 0 到 n-1，内层 i 和 j 各遍历所有顶点"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-q-sort-process-001",
+      "title": "快速排序一趟结果",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "对序列 {49, 38, 65, 97, 76, 13, 27, 49} 进行快速排序，以第一个元素 49 为枢轴（pivot），给出第一趟划分后的结果。",
+      "options": [],
+      "answer": "第一趟划分后：{27, 38, 13, 49, 76, 65, 97, 49}，枢轴 49 在位置 3（0起始）",
+      "solutionSteps": [
+        "初始序列：49, 38, 65, 97, 76, 13, 27, 49。枢轴 pivot=49",
+        "采用从两端向中间的划分方式。保存 pivot=49，low=0, high=7",
+        "从 high 向左找小于 pivot 的元素：high=7, A[7]=49>=49, high--；high=6, A[6]=27<49，将 27 放到 low=0 位置",
+        "序列变为：27, 38, 65, 97, 76, 13, _, 49。low=0->1",
+        "从 low 向右找大于 pivot 的元素：low=1, A[1]=38<49, low++；low=2, A[2]=65>49，将 65 放到 high=6 位置",
+        "序列变为：27, 38, _, 97, 76, 13, 65, 49。high=6->5",
+        "从 high 向左找小于 pivot 的元素：high=5, A[5]=13<49，将 13 放到 low=2 位置",
+        "序列变为：27, 38, 13, 97, 76, _, 65, 49。low=2->3",
+        "从 low 向右找大于 pivot 的元素：low=3, A[3]=97>49，将 97 放到 high=5 位置",
+        "序列变为：27, 38, 13, _, 76, 97, 65, 49。high=5->4",
+        "从 high 向左找小于 pivot 的元素：high=4, A[4]=76>=49, high--；high=3=low，停止",
+        "将 pivot 放到 low=high=3 的位置",
+        "最终：{27, 38, 13, 49, 76, 97, 65, 49}",
+        "枢轴 49 在位置 3，左边 {27, 38, 13} 均 <=49，右边 {76, 97, 65, 49} 均 >=49"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-ds-sort-compare"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "快速排序一趟划分：选枢轴，从两端向中间扫描交换"
+        },
+        {
+          "level": "L2",
+          "text": "先从右向左找小于枢轴的元素，再从左向右找大于枢轴的元素"
+        },
+        {
+          "level": "L3",
+          "text": "当 low==high 时停止，将枢轴放到该位置，左边都小右边都大"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-q-sort-compare-001",
+      "title": "排序算法比较",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "以下关于排序算法的叙述中，正确的有：（多选）",
+      "options": [
+        "A. 直接插入排序在序列基本有序时效率最高，可达 O(n)",
+        "B. 简单选择排序是不稳定的排序算法",
+        "C. 冒泡排序每趟都能确定一个元素的最终位置",
+        "D. 归并排序的空间复杂度为 O(1)"
+      ],
+      "answer": "ABC",
+      "solutionSteps": [
+        "$A$正确：直接插入排序在基本有序时，每个元素只需少量比较即可找到位置，最好情况 $O(n)$",
+        "B 正确：简单选择排序在交换过程中可能跨越相等元素，是不稳定的",
+        "C 正确：冒泡排序每趟将当前最大（或最小）元素冒泡到最终位置",
+        "$D$错误：归并排序需要 $O(n)$的额外空间用于合并操作，空间复杂度为 $O(n)$，不是 $O(1)$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-ds-sort-compare"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "从时间复杂度、稳定性和空间复杂度三个角度分析"
+        },
+        {
+          "level": "L2",
+          "text": "插入排序在最好情况（已有序）下只需一趟比较，$O(n)$"
+        },
+        {
+          "level": "L3",
+          "text": "归并排序合并两个有序序列时需要临时数组，空间 $O(n)$"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-q-external-001",
+      "title": "外部排序概念",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "设对 2000 个初始归并段进行 40 路归并，则归并的趟数为：",
+      "options": [
+        "A. 1",
+        "B. 2",
+        "C. 3",
+        "D. 40"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "$k$路归并的归并趟数 =ceil$(log_k(m))$，其中 $m$为初始归并段个数，$k$为归并路数",
+        "本题 m=2000, k=40",
+        "$log_40(2000) = \\ln\\frac{(2000)}{l}n(40) \\approx 7.\\frac{6}{3}.69 \\approx 2.06$",
+        "$ceil(2.06) = 2$，即需要 2趟归并",
+        "第1趟：2000个段归并为 ceil$(200\\frac{0}{4}0) = 50$个段",
+        "第2趟：50个段归并为 ceil$(5\\frac{0}{4}0) = 2$个段，再归并为 1个段",
+        "实际上第2趟50个段需要再分，但总共2趟即可完成",
+        "因此选 B：2 趟"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-ds-external-sort"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "k 路归并每趟将 k 个段合并为 1 个段"
+        },
+        {
+          "level": "L2",
+          "text": "归并趟数 =ceil$(log_k(m))$，$m$是初始归并段数"
+        },
+        {
+          "level": "L3",
+          "text": "$log_40(2000) \\approx 2.06$，向上取整得 2"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-q-glist-001",
+      "title": "广义表深度长度",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "广义表 LS = ((a, (b, c)), d)，求 LS 的长度和深度。",
+      "options": [],
+      "answer": "长度 = 2，深度 = 3",
+      "solutionSteps": [
+        "LS = ((a, (b, c)), d)",
+        "长度 = 最外层元素个数。LS 的最外层有两个元素：(a, (b, c)) 和 d，所以长度 = 2",
+        "深度计算（递归定义）：",
+        "  原子的深度 = 0",
+        "  空表的深度 = 1",
+        "  非空广义表的深度 $= \\max$(各元素深度) $+ 1$",
+        "元素 d 是原子，深度 = 0",
+        "元素 (a, (b, c)) 的深度：",
+        "  a 是原子，深度 = 0",
+        "  $(b, c)$的深度：$b$原子深度 0，$c$原子深度 0，$\\max(0,0)+1 = 1$",
+        "  $(a, (b, c))$深度 $= \\max(0, 1) + 1 = 2$",
+        "LS深度 $= \\max(2, 0) + 1 = 3$",
+        "因此长度 = 2，深度 = 3"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-ds-glist"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "长度看最外层有几个元素，深度看括号嵌套了几层"
+        },
+        {
+          "level": "L2",
+          "text": "深度递归计算：非空表的深度 $= \\max$(各元素深度) $+ 1$"
+        },
+        {
+          "level": "L3",
+          "text": "也可以直接数括号层数：((a,(b,c)),d) 最外层()为第1层，(a,(b,c))为第2层，(b,c)为第3层"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-q-shell-001",
+      "title": "希尔排序一趟结果",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "对序列 {49, 38, 65, 97, 76, 13, 27, 49} 进行希尔排序，第一趟增量 d=4，给出第一趟排序后的结果。",
+      "options": [],
+      "answer": "第一趟（d=4）排序后：{27, 13, 49, 49, 49, 38, 65, 97}",
+      "solutionSteps": [
+        "初始序列：49, 38, 65, 97, 76, 13, 27, 49（下标 0~7）",
+        "增量 d=4，将序列分成 4 组：",
+        "  组0（下标0,4）：{49, 76}，排序后：{49, 76}",
+        "  组1（下标1,5）：{38, 13}，排序后：{13, 38}",
+        "  组2（下标2,6）：{65, 27}，排序后：{27, 65}",
+        "  组3（下标3,7）：{97, 49}，排序后：{49, 97}",
+        "将排序后的各组放回原位置：",
+        "  位置0,4：49, 76",
+        "  位置1,5：13, 38",
+        "  位置2,6：27, 65",
+        "  位置3,7：49, 97",
+        "第一趟（d=4）排序后：{49, 13, 27, 49, 76, 38, 65, 97}"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-ds-shell-sort"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "希尔排序增量为 d 时，将距离为 d 的元素组成子序列分别排序"
+        },
+        {
+          "level": "L2",
+          "text": "d=4 时，8 个元素分成 4 组，每组 2 个元素"
+        },
+        {
+          "level": "L3",
+          "text": "对每组分别做插入排序后放回原位置，注意保持组与组之间的位置对应关系"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-q-heap-process-001",
+      "title": "堆排序建堆过程",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "对序列 {12, 30, 45, 16, 28, 60, 35, 10} 建立大根堆（Floyd 建堆法），给出建堆完成后的序列和第一次取出堆顶元素后的序列。",
+      "options": [],
+      "answer": "建堆后：{60, 30, 45, 16, 28, 35, 12, 10}；取出堆顶后：{45, 30, 35, 16, 28, 10, 12, 60}",
+      "solutionSteps": [
+        "初始序列（完全二叉树，1起始编号）：1:12, 2:30, 3:45, 4:16, 5:28, 6:60, 7:35, 8:10",
+        "最后一个非叶节点编号 $= \\frac{8}{2} = 4$，从节点 4开始自底向上调整",
+        "调整节点 4（值16）：子节点$8(10)$。16>10，无需调整",
+        "调整节点 3（值45）：子节点$6(60),7(35)$。最大子节点60>45，交换45和60",
+        "  序列变为：12, 30, 60, 16, 28, 45, 35, 10",
+        "调整节点 2（值30）：子节点$4(16),5(28)$。最大子节点28<30，无需调整",
+        "调整节点 1（值12）：子节点$2(30),3(60)$。最大子节点60>12，交换12和60",
+        "  序列变为：60, 30, 12, 16, 28, 45, 35, 10",
+        "  继续下沉节点$3(12)$：子节点$6(45),7(35)$。最大子节点45>12，交换12和45",
+        "  序列变为：60, 30, 45, 16, 28, 12, 35, 10",
+        "建堆完成：{60, 30, 45, 16, 28, 12, 35, 10}",
+        "第一次取堆顶：将堆顶60与堆底10交换，堆大小减1",
+        "  序列变为：10, 30, 45, 16, 28, 12, 35, | 60",
+        "对新堆顶10做下沉调整：子节点$2(30),3(45)$。$\\max=45>10$，交换10和45",
+        "  序列：45, 30, 10, 16, 28, 12, 35, | 60",
+        "  继续下沉节点$3(10)$：子节点$6(12),7(35)$。$\\max=35>10$，交换10和35",
+        "  序列：45, 30, 35, 16, 28, 12, 10, | 60",
+        "  节点$7(10)$为叶节点，停止",
+        "取出堆顶后：{45, 30, 35, 16, 28, 12, 10, 60}"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-ds-heap-sort-detail"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "Floyd 建堆从最后一个非叶节点开始，自底向上做下沉调整"
+        },
+        {
+          "level": "L2",
+          "text": "下沉操作：将节点与较大的子节点比较，若小于则交换"
+        },
+        {
+          "level": "L3",
+          "text": "取堆顶后将堆底元素放到堆顶，堆大小减1，再对新堆顶做一次下沉调整"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-q-radix-001",
+      "title": "基数排序概念",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "以下关于基数排序的叙述中，正确的有：（多选）",
+      "options": [
+        "A. LSD 基数排序从最低位开始逐位进行分配和收集",
+        "B. MSD 基数排序从最低位开始，逐位对全体重复排序",
+        "C. 基数排序的每一位分配收集过程必须是稳定的",
+        "D. 对于 d 位关键字，每位取值范围为 0 到 r-1，基数排序的时间复杂度为 O(d(n+r))"
+      ],
+      "answer": "ACD",
+      "solutionSteps": [
+        "A 正确：LSD（Least Significant Digit first）从最低位开始，逐位向高位进行分配和收集",
+        "B 错误：MSD（Most Significant Digit first）从最高位开始，按最高位分组后对每组递归处理下一位，不是对全体重复排序",
+        "C 正确：LSD 方法中，每位排序必须是稳定的，否则前面排好的高位顺序会被打乱",
+        "$D$正确：每趟分配收集时间 $O(n+r)$，共 $d$趟，总时间 $O(d(n+r))$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-ds-radix-sort"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "基数排序分 LSD 和 MSD 两种，注意它们的区别"
+        },
+        {
+          "level": "L2",
+          "text": "LSD 从个位开始，MSD 从最高位开始"
+        },
+        {
+          "level": "L3",
+          "text": "LSD 要求每趟稳定排序，因为后处理的位会覆盖先处理的位的结果"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-q-topo-calc-001",
+      "title": "关键路径长度计算",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "某工程的 AOE 网如下：顶点 $V0$为工程起点，$V4$为工程终点。活动（边）及其持续时间（权值）为：$(V0,V1,4), (V0,V2,3), (V1,V3,5), (V2,V3,2), (V3,V4,3)$。求该工程的关键路径长度。",
+      "options": [],
+      "answer": "关键路径长度 = 12",
+      "solutionSteps": [
+        "拓扑排序：V0, V1, V2, V3, V4（一种合法序列）",
+        "正推 ve（事件最早发生时间）：",
+        "  ve$(V0) = 0$",
+        "  ve$(V1) =$ve$(V0) + 4 = 4$",
+        "  ve$(V2) =$ve$(V0) + 3 = 3$",
+        "  ve$(V3) = \\max(ve(V1)+5, ve(V2)+2) = \\max(9, 5) = 9$",
+        "  ve$(V4) =$ve$(V3) + 3 = 12$",
+        "逆推 vl（事件最迟发生时间）：",
+        "  vl$(V4) = 12$",
+        "  vl$(V3) =$vl$(V4) - 3 = 9$",
+        "  vl$(V2) =$vl$(V3) - 2 = 7$",
+        "  vl$(V1) =$vl$(V3) - 5 = 4$",
+        "  vl$(V0) = \\min(vl(V1)-4, vl(V2)-3) = \\min(0, 4) = 0$",
+        "各活动的最早/最迟开始时间：",
+        "  $a(V0,V1): e=ve(V0)=0, l=vl(V1)-4=0, e=l$，关键活动",
+        "  $a(V0,V2): e=ve(V0)=0, l=vl(V2)-3=4, e!=l$，非关键",
+        "  $a(V1,V3): e=ve(V1)=4, l=vl(V3)-5=4, e=l$，关键活动",
+        "  $a(V2,V3): e=ve(V2)=3, l=vl(V3)-2=7, e!=l$，非关键",
+        "  $a(V3,V4): e=ve(V3)=9, l=vl(V4)-3=9, e=l$，关键活动",
+        "关键路径：$V0\\to V1\\to V3\\to V4$，长度 $= 4+5+3 = 12$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-ds-dag-app"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "关键路径是 AOE 网中最长路径，需要先求 ve 和 vl"
+        },
+        {
+          "level": "L2",
+          "text": "ve 沿拓扑序正推取 max，vl 沿逆拓扑序逆推取 min"
+        },
+        {
+          "level": "L3",
+          "text": "关键活动满足 e=l（最早开始时间=最迟开始时间），关键活动组成的路径即关键路径"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-q-dijkstra-process-001",
+      "title": "Dijkstra每步结果",
+      "type": "solution",
+      "difficulty": 3,
+      "content": "用 Dijkstra 算法求从顶点 0出发到其余各顶点的最短路径。有向带权图的边为：$0\\to1$(权10)$, 0\\to2$(权3)$, 2\\to1$(权1)$, 1\\to3$(权2)$, 2\\to3$(权8)$, 3\\to4$(权7)。请给出每步确定的顶点及其最短距离。",
+      "options": [],
+      "answer": "确定顺序：$0(0) \\to 2(3) \\to 1(4) \\to 3(6) \\to 4(13)$",
+      "solutionSteps": [
+        "初始化 dist = {0:0, 1:inf, 2:inf, 3:inf, 4:inf}，全部未确定",
+        "步骤1：选最小未确定顶点 $0(0)$。松弛邻接点：dist$[1]=\\min(\\inf,0+10)=10,$dist$[2]=\\min(\\inf,0+3)=3$。确定 0",
+        "步骤2：未确定中最小 dist$[2]=3$。松弛：dist$[1]=\\min(10,3+1)=4,$dist$[3]=\\min(\\inf,3+8)=11$。确定 2",
+        "步骤3：未确定中最小 dist$[1]=4$。松弛：dist$[3]=\\min(11,4+2)=6$。确定 1",
+        "步骤4：未确定中最小 dist$[3]=6$。松弛：dist$[4]=\\min(\\inf,6+7)=13$。确定 3",
+        "步骤5：确定 $4(13)$",
+        "最终结果：0:0, 1:4, 2:3, 3:6, 4:13",
+        "确定顺序：$0(0) \\to 2(3) \\to 1(4) \\to 3(6) \\to 4(13)$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-ds-graph-compare"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "Dijkstra 每步选 dist 值最小的未确定顶点"
+        },
+        {
+          "level": "L2",
+          "text": "确定一个顶点后，对其所有邻接点做松弛操作"
+        },
+        {
+          "level": "L3",
+          "text": "松弛：若 dist$[u] +$weight$(u,v) <$dist$[v]$，则更新 dist$[v]$"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-q-merge-001",
+      "title": "归并排序过程",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "对序列 {38, 27, 49, 12} 进行 2-路归并排序，给出每趟归并的结果。",
+      "options": [],
+      "answer": "第1趟：{27, 38, 12, 49}；第2趟：{12, 27, 38, 49}",
+      "solutionSteps": [
+        "初始序列：{38, 27, 49, 12}，每个元素视为一个长度为 1 的有序段",
+        "第1趟归并（段长 1 -> 2）：",
+        "  合并 {38} 和 {27} -> {27, 38}",
+        "  合并 {49} 和 {12} -> {12, 49}",
+        "  第1趟结果：{27, 38, 12, 49}",
+        "第2趟归并（段长 2 -> 4）：",
+        "  合并 {27, 38} 和 {12, 49}：",
+        "    比较 27 和 12，取 12",
+        "    比较 27 和 49，取 27",
+        "    比较 38 和 49，取 38",
+        "    取 49",
+        "  结果：{12, 27, 38, 49}",
+        "  第2趟结果：{12, 27, 38, 49}，排序完成"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-ds-merge-sort-detail"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "归并排序每趟将相邻的有序段两两合并"
+        },
+        {
+          "level": "L2",
+          "text": "合并两个有序段时，依次比较两段的第一个元素，取较小的放入结果"
+        },
+        {
+          "level": "L3",
+          "text": "第1趟段长为1（每个元素独立），第2趟段长为2，直到段长>=n"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-q-sparse-calc-001",
+      "title": "稀疏矩阵三元组表示",
+      "type": "solution",
+      "difficulty": 2,
+      "content": "将以下 5x6 矩阵用三元组表表示（行号列号从1开始）：\nA = [[0, 0, 3, 0, 0, 0],\n     [0, 5, 0, 0, 0, 0],\n     [0, 0, 0, 0, 7, 0],\n     [1, 0, 0, 0, 0, 0],\n     [0, 0, 0, 4, 0, 0]]\n请写出三元组表，并计算非零元素个数。",
+      "options": [],
+      "answer": "非零元素 5个。三元组表：$(1,3,3), (2,2,5), (3,5,7), (4,1,1), (5,4,4)$",
+      "solutionSteps": [
+        "扫描矩阵，找出所有非零元素：",
+        "  A[1][3] = 3",
+        "  A[2][2] = 5",
+        "  A[3][5] = 7",
+        "  A[4][1] = 1",
+        "  A[5][4] = 4",
+        "非零元素共 5 个",
+        "三元组表（按行优先排列）：",
+        "  $(1, 3, 3)  --$第1行第3列，值为3",
+        "  $(2, 2, 5)  --$第2行第2列，值为5",
+        "  $(3, 5, 7)  --$第3行第5列，值为7",
+        "  $(4, 1, 1)  --$第4行第1列，值为1",
+        "  $(5, 4, 4)  --$第5行第4列，值为4",
+        "三元组表通常还包括矩阵的行数、列数和非零元素总数：$(5, 6, 5)$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-ds-sparse-matrix"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "三元组表只存储非零元素，每个用（行号, 列号, 值）表示"
+        },
+        {
+          "level": "L2",
+          "text": "按行优先排列：先按行号升序，同行则按列号升序"
+        },
+        {
+          "level": "L3",
+          "text": "三元组表头还需记录矩阵的行数、列数和非零元素总数"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-ds-q-bplus-001",
+      "title": "B+树特点",
+      "type": "concept_check",
+      "difficulty": 2,
+      "content": "以下关于 B+ 树的叙述中，正确的有：（多选）",
+      "options": [
+        "A. B+ 树的所有数据记录都存储在叶节点上",
+        "B. B+ 树的叶节点通过指针链接，便于顺序访问和范围查询",
+        "C. B+ 树的非叶节点也存储完整的数据记录",
+        "D. B+ 树的所有叶节点在同一层"
+      ],
+      "answer": "ABD",
+      "solutionSteps": [
+        "A 正确：B+ 树的核心特点之一，所有数据记录都在叶节点，非叶节点只存索引关键字",
+        "B 正确：B+ 树叶节点通过指针相连形成有序链表，支持高效的范围查询和顺序扫描",
+        "C 错误：B+ 树的非叶节点只存储索引关键字和子节点指针，不存储数据记录",
+        "D 正确：B+ 树继承 B 树的性质，所有叶节点在同一层（失败节点层），保证平衡"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-ds-bplus-tree"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "B+ 树与 B 树的核心区别在于数据存储位置"
+        },
+        {
+          "level": "L2",
+          "text": "B+ 树非叶节点只做索引，数据全在叶节点"
+        },
+        {
+          "level": "L3",
+          "text": "叶节点链表连接是 B+ 树的重要特性，使范围查询非常高效"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    }
+  ]
+}

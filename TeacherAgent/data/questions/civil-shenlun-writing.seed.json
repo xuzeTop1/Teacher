@@ -1,0 +1,127 @@
+{
+  "subject": "shenlun",
+  "course": "shenlun",
+  "chapter": "civil-shenlun-writing",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "shenlun-writing-q001-outline",
+      "title": "大作文练习：搭建提纲",
+      "knowledgeNodeIds": [
+        "shenlun-writing-topic",
+        "shenlun-writing-outline"
+      ],
+      "type": "outline_practice",
+      "difficulty": 2,
+      "content": "【练习】以「以绣花功夫提升基层治理精度」为题，搭建文章提纲：写出总论点与 2-3 个分论点（不写全文，不超过 100 字）。",
+      "answer": "总论点：基层治理要从粗放走向精细，以绣花功夫办好群众小事。分论点：1. 精细在摸清需求，建好网格台账；2. 精细在精准服务，分类施策解难题；3. 精细在长效运维，机制+数字双轮驱动。",
+      "solutionSteps": [
+        "审题立意：紧扣「绣花功夫=精细」「基层治理」。",
+        "总论点亮明态度。",
+        "分论点并列/递进，均支撑总论点。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "题目关键词是「绣花功夫」和「精度」，总论点怎么点？"
+        },
+        {
+          "level": "L2",
+          "text": "想几个角度作分论点，它们之间交叉吗？"
+        },
+        {
+          "level": "L3",
+          "text": "每个分论点能不能用「主题词+动作」写清楚？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲申论五大题型（归纳概括 / 综合分析 / 提出对策 / 贯彻执行 / 申发论述）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；申论辅导以材料拆解、结构、改写为核心，不默认代写整篇；具体题目与表述待人工复核（review_status=draft）。 去 AI 味以材料约束、文体稳定、结构清晰、表达去空话、贴近机关文风为核心，不以 humanizer 同义词替换为唯一方案。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "shenlun-writing-q002-structure",
+      "title": "大作文练习：结构设计",
+      "knowledgeNodeIds": [
+        "shenlun-writing-structure",
+        "shenlun-writing-argument"
+      ],
+      "type": "structure_practice",
+      "difficulty": 2,
+      "content": "【练习】给出总论点「数字赋能让政务服务更有温度」，设计本论段的写法：每段第一句写什么，论证后如何回扣（不超过 100 字）。",
+      "answer": "本论每段首句即分论点（如「数字赋能，先要让群众少跑腿」）；随后用材料事例/道理论证；段末回扣：技术只是手段，落脚到群众获得感才是温度所在。首尾呼应总论点。",
+      "solutionSteps": [
+        "本论段首句放清晰分论点。",
+        "论证用材料内事例或道理。",
+        "段末回扣分论点，不另起话题。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "本论每段第一句应该是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "举完例子要不要说明它和分论点的关系？"
+        },
+        {
+          "level": "L3",
+          "text": "段尾怎么回扣，而不是扯到别处？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲申论五大题型（归纳概括 / 综合分析 / 提出对策 / 贯彻执行 / 申发论述）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；申论辅导以材料拆解、结构、改写为核心，不默认代写整篇；具体题目与表述待人工复核（review_status=draft）。 去 AI 味以材料约束、文体稳定、结构清晰、表达去空话、贴近机关文风为核心，不以 humanizer 同义词替换为唯一方案。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "shenlun-writing-q003-rewrite",
+      "title": "申论文风练习：去 AI 味改写",
+      "knowledgeNodeIds": [
+        "shenlun-writing-style"
+      ],
+      "type": "rewrite_practice",
+      "difficulty": 3,
+      "content": "【练习】把下面这段改得更贴材料、更机关文风（少排比金句、有具体主体与动作）：\n原段：我们要以昂扬的姿态、磅礴的力量、坚定的信念，赋能基层、抓手闭环、打造亮点，让治理之花绚丽绽放。",
+      "answer": "改写：社区治理要落到具体事。网格员每月走访一遍独居老人，台账记清诉求；物业和业委会周周碰头，小修小补三天内办结；事项办结后回访到人。把功夫下在常态，群众自然有感。",
+      "solutionSteps": [
+        "识别原段空话：赋能、抓手、闭环、治理之花均悬浮。",
+        "替换为具体主体（网格员/物业/业委会）+具体动作（走访/碰头/办结/回访）。",
+        "保留机关文风但去排比金句，内容有对象有依据。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "原段里哪些词是悬浮的、没有具体所指？"
+        },
+        {
+          "level": "L2",
+          "text": "换成「谁+做什么具体动作」会不会更贴题？"
+        },
+        {
+          "level": "L3",
+          "text": "删掉排比金句，剩下的内容还成立吗？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲申论五大题型（归纳概括 / 综合分析 / 提出对策 / 贯彻执行 / 申发论述）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；申论辅导以材料拆解、结构、改写为核心，不默认代写整篇；具体题目与表述待人工复核（review_status=draft）。 去 AI 味以材料约束、文体稳定、结构清晰、表达去空话、贴近机关文风为核心，不以 humanizer 同义词替换为唯一方案。"
+      },
+      "reviewStatus": "draft"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">自律</string>
+    <string name="accessibility_service_description">「悬浮窗覆盖检测」可选辅助功能：只读取窗口存在性与窗口所属应用包名，用于判断是否有其他应用（如 Gemini、ChatGPT 悬浮窗）覆盖在自律上方。本服务不读取、不保存、不上传任何窗口内容、输入或对话文本。可在系统无障碍设置中随时停用；停用后所有相关功能自动降级，不影响计时、备份与普通学习功能。</string>
+</resources>

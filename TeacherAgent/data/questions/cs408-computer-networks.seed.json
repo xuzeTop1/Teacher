@@ -1,0 +1,1653 @@
+{
+  "subject": "cs408",
+  "course": "computer_networks",
+  "chapter": "cs408-computer-networks",
+  "status": "approved",
+  "questions": [
+    {
+      "id": "cs408-cn-q-arch-001",
+      "title": "协议三要素",
+      "content": "网络协议三要素是：",
+      "type": "concept_check",
+      "difficulty": 1,
+      "options": [
+        "A. 语法、语义、同步",
+        "B. 编码、调制、复用",
+        "C. 帧、分组、报文",
+        "D. 物理层、链路层、网络层"
+      ],
+      "answer": "A",
+      "solutionSteps": [
+        "协议三要素是语法、语义和同步（也称时序）",
+        "语法：数据的格式和结构",
+        "语义：需要发出何种控制信息、完成何种动作",
+        "同步（时序）：事件的先后顺序和速度匹配"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-cn-architecture"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "协议是通信双方必须遵守的规则"
+        },
+        {
+          "level": "L2",
+          "text": "三要素分别对应格式、含义和时序"
+        },
+        {
+          "level": "L3",
+          "text": "语法管格式，语义管含义，同步管时序"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-cn-q-osi-001",
+      "title": "OSI加密层",
+      "content": "OSI 参考模型中，负责数据加密和解密的是哪一层？",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "A. 应用层",
+        "B. 表示层",
+        "C. 会话层",
+        "D. 传输层"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "表示层负责数据的格式转换、加密解密和压缩解压",
+        "应用层提供用户接口和应用服务",
+        "会话层管理会话的建立、维护和释放",
+        "传输层提供端到端的可靠传输"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-cn-osi-model"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "OSI 上三层分别对应会话管理、数据表示和应用服务"
+        },
+        {
+          "level": "L2",
+          "text": "表示层处理数据的表示方式（格式、加密、压缩）"
+        },
+        {
+          "level": "L3",
+          "text": "在 TCP/IP 模型中这些功能被放到了应用层"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-cn-q-tcpip-001",
+      "title": "IP协议层次",
+      "content": "在 TCP/IP 模型中，IP 协议工作在哪一层？",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "A. 网络接口层",
+        "B. 网际层",
+        "C. 传输层",
+        "D. 应用层"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "TCP/IP四层：网络接口层$\\to$网际层$\\to$传输层$\\to$应用层",
+        "IP 协议工作在网际层（也称网络层），负责数据报的路由和转发",
+        "TCP/UDP 在传输层，HTTP/DNS/FTP 在应用层"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-cn-tcpip-model"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "TCP/IP 四层模型的核心协议分布"
+        },
+        {
+          "level": "L2",
+          "text": "IP 的全称是 Internet Protocol（网际协议）"
+        },
+        {
+          "level": "L3",
+          "text": "网际层 = 网络层，负责寻址和路由"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-cn-q-physical-001",
+      "title": "信道容量计算",
+      "content": "一个带宽为 3kHz 的无噪声信道，采用 8 种相位的调制方式，求最大数据传输速率。若信噪比为 30dB，按香农定理最大速率又是多少？",
+      "type": "solution",
+      "difficulty": 2,
+      "options": [],
+      "answer": "奈奎斯特：18kbps；香农：约 30kbps",
+      "solutionSteps": [
+        "奈奎斯特：$C = 2W log2(V) = 2 \\times 3000 \\times log2(8) = 6000 \\times 3 = 18000$bps $= 18kbps$",
+        "香农：$\\frac{S}{N}(dB) = 10 log10(\\frac{S}{N}) = 30$，所以 $\\frac{S}{N} = 1000$",
+        "$C = W log2(1+\\frac{S}{N}) = 3000 \\times log2(1001) \\approx 3000 \\times 9.97 \\approx 29900$bps $\\approx 30kbps$",
+        "实际最大速率取两者的较小值：18kbps"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-cn-physical-layer"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "奈奎斯特定理用于无噪声信道，香农定理用于有噪声信道"
+        },
+        {
+          "level": "L2",
+          "text": "dB转线性：$\\frac{S}{N} = 10^(dB/10)$"
+        },
+        {
+          "level": "L3",
+          "text": "实际速率不能超过两个定理中任何一个的限制"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-cn-q-datalink-001",
+      "title": "链路层服务辨析",
+      "content": "数据链路层提供的服务不包括：",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "A. 封装成帧",
+        "B. 差错检测",
+        "C. 端到端的可靠传输",
+        "D. 流量控制"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "数据链路层提供相邻节点间的传输，不是端到端",
+        "封装成帧、差错检测（CRC）和流量控制都是链路层功能",
+        "端到端的可靠传输是传输层（TCP）的职责"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-cn-datalink-basic"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "区分链路层（点到点）和传输层（端到端）"
+        },
+        {
+          "level": "L2",
+          "text": "链路层的差错检测只能发现错误不能纠正"
+        },
+        {
+          "level": "L3",
+          "text": "端到端可靠性需要传输层的确认和重传机制"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-cn-q-crc-001",
+      "title": "CRC校验计算",
+      "content": "待发送数据为 1101011011，生成多项式 $G(x) = x^4 + x + 1$（即 10011）。求 CRC 校验码和最终发送的帧。",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [],
+      "answer": "FCS = 1110，发送帧 = 1101011011 1110",
+      "solutionSteps": [
+        "生成多项式 10011，阶数 r = 4，在数据后补 4 个 0：1101011011 0000",
+        "模 2除法：$11010110110000 \\div 10011$",
+        "逐步异或：得到余数 1110",
+        "FCS = 1110，发送帧 = 原始数据 + FCS = 1101011011 1110",
+        "接收端收到后模 2 除以 10011，余数为 0 则无错"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-cn-framing-error"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "CRC 编码 = 数据左移 r 位 + 模 2 除法求余"
+        },
+        {
+          "level": "L2",
+          "text": "模 2 除法就是逐位异或运算"
+        },
+        {
+          "level": "L3",
+          "text": "最终发送帧 = 数据 + FCS（余数）"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-cn-q-gbn-001",
+      "title": "GBN窗口与重传",
+      "content": "在 GBN 协议中，序号位数为 3，发送窗口最大是多少？若发送方已发送帧 0~5，收到帧 0~2 的 ACK，帧 3 出错被丢弃。发送方接下来要重传哪些帧？",
+      "type": "solution",
+      "difficulty": 2,
+      "options": [],
+      "answer": "最大窗口 7；重传帧 3、4、5",
+      "solutionSteps": [
+        "GBN发送窗口 $W <= 2^n - 1 = 2^3 - 1 = 7$",
+        "收到帧 0~2 的 ACK，确认号累积到 2（期望收到帧 3）",
+        "帧 3 出错被接收方丢弃，后续帧 4、5 虽正确但因不是按序也被丢弃",
+        "GBN 从出错帧开始全部重传：重传帧 3、4、5"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-cn-flow-control-dl"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "GBN 窗口大小受序号位数限制"
+        },
+        {
+          "level": "L2",
+          "text": "GBN 出错帧之后的所有帧都要重传"
+        },
+        {
+          "level": "L3",
+          "text": "累积确认号表示该序号之前的帧都已正确接收"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-cn-q-mac-001",
+      "title": "最小帧长计算",
+      "content": "某以太网传输速率为 10Mbps，信号传播速率为 $2\\times10^8$ m/s，网络最大距离为 $2500m$。求最小帧长（以比特和字节为单位）。",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [],
+      "answer": "最小帧长 250 比特 = 31.25 字节，实际取 64 字节",
+      "solutionSteps": [
+        "单程传播时延 =距离/速率 $= 2500/(2\\times10^8) = 12.5\\mu s$",
+        "往返传播时延 $= 2 \\times 12.5 = 25\\mu s$",
+        "最小帧长 =传输速率 $\\times$往返时延 $= 10\\times10^6 \\times 25\\times10^-6 = 250$比特",
+        "250 比特 = 31.25 字节，以太网标准取 64 字节（512 比特）的最小帧长"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-cn-mac"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "最小帧长保证碰撞信号能在帧发完之前传回"
+        },
+        {
+          "level": "L2",
+          "text": "最小帧长 =数据传输速率 $\\times 2 \\times$最大传播时延"
+        },
+        {
+          "level": "L3",
+          "text": "实际以太网标准最小帧 64 字节，考虑了中继器等因素"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-cn-q-ethernet-001",
+      "title": "交换机泛洪",
+      "content": "以太网交换机转发帧时，若目的 MAC 地址不在地址表中，交换机会：",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "A. 丢弃该帧",
+        "B. 向除接收端口外的所有端口广播",
+        "C. 只发回源端口",
+        "D. 发送给默认网关"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "交换机收到帧时先学习源 MAC 和端口号",
+        "然后查目的 MAC：若找到则转发到对应端口",
+        "若找不到则泛洪（flood）：向除接收端口外的所有端口转发",
+        "这是交换机的未知单播帧处理方式"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-cn-ethernet"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "交换机的三种操作：转发、过滤、泛洪"
+        },
+        {
+          "level": "L2",
+          "text": "未知目的地址 = 泛洪"
+        },
+        {
+          "level": "L3",
+          "text": "泛洪时排除接收该帧的端口，避免环路"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-cn-q-ip-001",
+      "title": "子网划分计算",
+      "content": "某单位获得 IP 地址块 $202.118.1.0/24$，需要划分为 4个子网。求子网掩码、每个子网可用主机数，以及第 2个子网的地址范围。",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [],
+      "answer": "掩码 255.255.255.192（/26），每子网 62 台主机，第 2 子网 202.118.1.64~202.118.1.127",
+      "solutionSteps": [
+        "$/24$需划 4个子网，借 2位做子网号（$2^2=4$），前缀变为 $/26$",
+        "子网掩码 $= 255.255.255.192$（$11000000 = 192$）",
+        "主机位 $= 8-2 = 6$位，每子网可用主机 $= 2^6 - 2 = 62$",
+        "子网划分：子网$1: .0/26(.0~.63)$，子网$2: .64/26(.64~.127)$，子网$3: .128/26(.128~.191)$，子网$4: .192/26(.192~.255)$",
+        "第 2 子网地址范围：202.118.1.64~202.118.1.127（.64 为网络地址，.127 为广播地址不可分配）"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-cn-ip-address"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "借位数 $n$满足 $2^n >=$所需子网数"
+        },
+        {
+          "level": "L2",
+          "text": "每子网主机数 = 2^(主机位数) - 2"
+        },
+        {
+          "level": "L3",
+          "text": "子网块大小 = 256/子网数 = 2^(主机位数)"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-cn-q-cidr-001",
+      "title": "CIDR路由聚合",
+      "content": "路由器收到 4条路由：$192.168.0.0/24$、$192.168.1.0/24$、$192.168.2.0/24$、$192.168.3.0/24$。将它们聚合为一条 CIDR 路由，写出聚合后的网络地址和前缀长度。",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [],
+      "answer": "$192.168.0.0/22$",
+      "solutionSteps": [
+        "将 4 个网络号的第三字节展开为二进制：00000000、00000001、00000010、00000011",
+        "公共前缀为前 6 位（000000），后 2 位不同",
+        "加上前两字节的 16位，总前缀 $= 16 + 6 = 22$位",
+        "聚合后：$192.168.0.0/22$，覆盖 192.168.0.0 ~ 192.168.3.255"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-cn-cidr"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "路由聚合找多个子网的公共前缀"
+        },
+        {
+          "level": "L2",
+          "text": "将网络地址二进制展开，从高位开始找公共位"
+        },
+        {
+          "level": "L3",
+          "text": "前缀长度 = 公共前缀的位数"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-cn-q-arp-001",
+      "title": "ARP解析过程",
+      "content": "主机 A 向同网段的主机 B 发送 IP 数据报时，发现 ARP 缓存中没有 B 的 MAC 地址。A 会：",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "A. 向全网广播 ICMP 请求",
+        "B. 向全网广播 ARP 请求",
+        "C. 向 B 的 IP 单播 ARP 请求",
+        "D. 直接发送数据报不查 MAC"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "A 需要 B 的 MAC 地址来封装以太网帧",
+        "A 广播 ARP 请求：'谁的 IP 是 B 的地址？请告诉 A 的 MAC'",
+        "B 收到后单播回复自己的 MAC 地址",
+        "A 将 B 的 IP-MAC 映射存入 ARP 缓存"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-cn-arp-icmp"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "ARP 请求是广播，响应是单播"
+        },
+        {
+          "level": "L2",
+          "text": "ARP 在链路层广播，但解析的是网络层 IP 地址"
+        },
+        {
+          "level": "L3",
+          "text": "ARP 缓存有过期时间，避免使用过时映射"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-cn-q-routing-001",
+      "title": "RIP与OSPF比较",
+      "content": "下列关于 RIP 和 OSPF 的比较中，正确的是：",
+      "type": "concept_check",
+      "difficulty": 3,
+      "options": [
+        "A. RIP 基于链路状态，OSPF 基于距离向量",
+        "B. RIP 最大跳数为 15，OSPF 没有此限制",
+        "C. RIP 收敛速度比 OSPF 快",
+        "D. OSPF 使用跳数作为路由度量"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "A 错误：RIP 是距离向量，OSPF 是链路状态",
+        "B 正确：RIP 最大跳数 15（16 表示不可达），OSPF 基于代价无跳数限制",
+        "C 错误：RIP 周期性广播收敛慢，OSPF 触发更新收敛快",
+        "D 错误：OSPF 用带宽计算代价，RIP 用跳数"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-cn-routing"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "RIP = 距离向量，OSPF = 链路状态"
+        },
+        {
+          "level": "L2",
+          "text": "RIP 简单但慢，OSPF 复杂但快"
+        },
+        {
+          "level": "L3",
+          "text": "RIP 适合小网络，OSPF 适合大网络"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-cn-q-tcp-001",
+      "title": "TCP握手分析",
+      "content": "详细描述 TCP 三次握手过程中每一步的报文标志位和序号变化。假设客户端初始序号为 x，服务端初始序号为 y。",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [],
+      "answer": "第1步：客户端发 SYN=1,Seq=x；第2步：服务端发 SYN=1,ACK=1,Seq=y,Ack=x+1；第3步：客户端发 ACK=1,Seq=x+1,Ack=y+1",
+      "solutionSteps": [
+        "第 1 步：客户端发送 SYN 报文（SYN=1），携带初始序号 Seq=x",
+        "第 2 步：服务端收到 SYN，发送 SYN+ACK 报文（SYN=1, ACK=1），Seq=y, Ack=x+1（确认收到客户端的 SYN）",
+        "第 3 步：客户端收到 SYN+ACK，发送 ACK 报文（ACK=1），Seq=x+1, Ack=y+1（确认收到服务端的 SYN）",
+        "三次握手完成，连接建立。三次握手确保双方都能确认对方的发送和接收能力"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-cn-tcp"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "三次握手的每一步都有特定的标志位和序号"
+        },
+        {
+          "level": "L2",
+          "text": "SYN 消耗一个序号，所以确认号是 Seq+1"
+        },
+        {
+          "level": "L3",
+          "text": "三次握手防止历史连接被误认为新连接"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-cn-q-udp-001",
+      "title": "UDP特点辨析",
+      "content": "下列关于 UDP 的说法中，正确的有：（多选）",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "A. UDP 是无连接的",
+        "B. UDP 提供可靠传输",
+        "C. UDP 首部只有 8 字节",
+        "D. UDP 支持多播和广播"
+      ],
+      "answer": "ACD",
+      "solutionSteps": [
+        "A 正确：UDP 不建立连接直接发送数据报",
+        "B 错误：UDP 不保证可靠传输，这是 TCP 的功能",
+        "$C$正确：UDP 首部 =源端口$(2) +$目的端口$(2) +$长度$(2) +$校验和$(2) = 8$字节",
+        "D 正确：UDP 支持一对一、一对多（多播）和广播"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-cn-udp"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "UDP 的特点可以用'简单快速不可靠'来概括"
+        },
+        {
+          "level": "L2",
+          "text": "UDP 首部远小于 TCP 首部（TCP 最少 20 字节）"
+        },
+        {
+          "level": "L3",
+          "text": "UDP 面向报文而 TCP 面向字节流"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-cn-q-reliable-001",
+      "title": "累积确认机制",
+      "content": "TCP 发送方发送了序号为 1000~1999 的数据段，收到的确认号为 2000。这意味着：",
+      "type": "concept_check",
+      "difficulty": 3,
+      "options": [
+        "A. 序号 2000 的数据已经收到",
+        "B. 序号 1999 及之前的数据已全部收到",
+        "C. 序号 2000 之前的数据中有些丢失",
+        "D. 发送方应该重传序号 2000 的数据"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "TCP 使用累积确认：确认号 = 期望收到的下一个字节序号",
+        "确认号 2000 表示序号 2000 之前的所有字节（即 0~1999）已全部正确收到",
+        "发送方接下来应发送序号 2000 开始的数据"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-cn-reliable-transfer"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "确认号的含义是'期望收到的下一个序号'"
+        },
+        {
+          "level": "L2",
+          "text": "累积确认意味着该序号之前的所有数据都已正确接收"
+        },
+        {
+          "level": "L3",
+          "text": "确认号 = 已收到的最大序号 + 1"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-cn-q-congestion-001",
+      "title": "拥塞控制计算",
+      "content": "TCP 发送方采用慢开始和拥塞避免算法，ssthresh = 16，cwnd 从 1 开始。假设每次传输都能收到 ACK，当 cwnd 增长到 20 时发生超时丢包。问此时 ssthresh 和 cwnd 分别变为多少？之后 cwnd 如何增长？",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [],
+      "answer": "ssthresh = 10，cwnd = 1；之后从慢开始重新指数增长到 ssthresh",
+      "solutionSteps": [
+        "慢开始阶段：cwnd 从 1开始翻倍增长：$1\\to2\\to4\\to8\\to16$（达到 $ssthresh=16$切换到拥塞避免）",
+        "拥塞避免阶段：cwnd 每个 RTT 加 1：$16\\to17\\to18\\to19\\to20$",
+        "$cwnd=20$时超时丢包：ssthresh =cwnd $/2 = 10$，cwnd 回到 1",
+        "之后重新开始慢开始：$1\\to2\\to4\\to8\\to10$（达到新 ssthresh），然后切拥塞避免每次$+1$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-cn-congestion"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "超时丢包后 ssthresh 减半，cwnd 回到 1"
+        },
+        {
+          "level": "L2",
+          "text": "慢开始阶段 cwnd 指数增长，拥塞避免阶段线性增长"
+        },
+        {
+          "level": "L3",
+          "text": "3 个冗余 ACK 触发快重传（ssthresh 减半，cwnd 减半后进入拥塞避免），但超时是更严重的"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-cn-q-dns-001",
+      "title": "DNS查询类型",
+      "content": "DNS 解析过程中，本地 DNS 服务器向根 DNS 服务器查询属于什么类型的查询？",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "A. 递归查询",
+        "B. 迭代查询",
+        "C. 反向查询",
+        "D. 广播查询"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "客户端向本地 DNS 发出的通常是递归查询（客户端只问一次）",
+        "本地 DNS 向根、顶级域、权威 DNS 逐级询问属于迭代查询",
+        "根 DNS 返回顶级域 DNS 地址，顶级域返回权威 DNS 地址，权威返回最终结果",
+        "B 正确"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-cn-dns"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "区分客户端$\\to$本地DNS和本地DNS$\\to$其他DNS的查询类型"
+        },
+        {
+          "level": "L2",
+          "text": "递归查询只问一次等结果，迭代查询逐级追问"
+        },
+        {
+          "level": "L3",
+          "text": "通常客户端用递归，DNS服务器之间用迭代"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-cn-q-http-001",
+      "title": "HTTP状态码304",
+      "content": "HTTP 响应状态码 304 表示：",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "A. 请求成功",
+        "B. 资源未找到",
+        "C. 资源未修改（可使用缓存）",
+        "D. 服务器内部错误"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "304 Not Modified 表示资源自上次访问以来未被修改",
+        "客户端可以使用本地缓存的版本，不需要重新下载",
+        "配合 If-Modified-Since 或 ETag 请求头使用",
+        "200=成功，301=永久重定向，404=未找到，500=服务器错误"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-cn-http"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "HTTP 状态码分五类：1xx信息、2xx成功、3xx重定向、4xx客户端错误、5xx服务器错误"
+        },
+        {
+          "level": "L2",
+          "text": "304 属于 3xx 类但特殊地用于缓存验证"
+        },
+        {
+          "level": "L3",
+          "text": "304 响应不返回消息体，客户端用缓存内容"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-cn-q-app-001",
+      "title": "UDP应用协议",
+      "content": "下列应用层协议中，默认使用 UDP 的是：",
+      "type": "concept_check",
+      "difficulty": 1,
+      "options": [
+        "A. HTTP",
+        "B. FTP",
+        "C. DNS",
+        "D. SMTP"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "DNS 默认使用 UDP（端口 53），响应过大时改用 TCP",
+        "HTTP使用 TCP（端口 80），FTP 使用 TCP（端口 21），SMTP 使用 TCP（端口 25）",
+        "DNS 查询通常很短，UDP 的轻量级特性更适合"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-cn-app-layer",
+        "cs408-cn-dns"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "大多数应用层协议用 TCP，少数用 UDP"
+        },
+        {
+          "level": "L2",
+          "text": "DNS、DHCP、RIP、TFTP 是常见的使用 UDP 的协议"
+        },
+        {
+          "level": "L3",
+          "text": "实时应用（如 VoIP、视频流）倾向使用 UDP"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-cn-q-manchester-001",
+      "title": "曼彻斯特编码辨析",
+      "content": "关于曼彻斯特编码和差分曼彻斯特编码，下列说法正确的是：",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "A. 曼彻斯特编码的数据速率等于调制速率",
+        "B. 差分曼彻斯特编码用比特中间的跳变方向表示数据",
+        "C. 曼彻斯特编码每个比特中间都有跳变，具有自同步能力",
+        "D. 差分曼彻斯特编码用比特中间的跳变表示数据，边界无跳变表示0"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "$A$错误：曼彻斯特编码每个比特需要两次信号变化，数据速率是调制速率的$\\frac{1}{2}$",
+        "B错误：差分曼彻斯特编码中比特中间的跳变仅用于时钟同步，数据由边界跳变决定",
+        "C正确：曼彻斯特编码每个比特中间都有跳变，跳变既携带数据又提供同步时钟",
+        "D错误：差分曼彻斯特编码中边界有跳变表示0，无跳变表示1"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-cn-manchester"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "曼彻斯特编码的核心特点是每个比特中间都有跳变"
+        },
+        {
+          "level": "L2",
+          "text": "差分编码用边界跳变携带信息，中间跳变仅做同步"
+        },
+        {
+          "level": "L3",
+          "text": "两种编码的数据速率都是调制速率的一半"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-cn-q-multiplex-001",
+      "title": "复用技术概念",
+      "content": "下列关于复用技术的说法中，正确的是：",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "A. 频分复用（FDM）中各用户共享同一频率但不同时间",
+        "B. 统计时分复用（STDM）按固定顺序分配时隙，效率与TDM相同",
+        "C. 码分复用（CDM）中各用户使用相同的频率和时间，通过正交码片序列区分",
+        "D. 波分复用（WDM）只用于铜缆传输"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "A错误：FDM中各用户占用不同频率子信道，同时传输",
+        "B错误：STDM按需动态分配时隙，效率高于固定分配的TDM",
+        "C正确：CDM（CDMA）中各用户使用相同频率和时间，通过正交码片序列区分信号",
+        "D错误：WDM用于光纤传输，不同波长的光信号承载不同数据"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-cn-multiplexing"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "FDM按频率分、TDM按时间分、CDM按编码分"
+        },
+        {
+          "level": "L2",
+          "text": "统计TDM按需分配时隙，比固定TDM效率更高"
+        },
+        {
+          "level": "L3",
+          "text": "CDMA的正交码片序列保证用户之间互不干扰"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-cn-q-crc-calc-001",
+      "title": "CRC校验码计算",
+      "content": "待发送数据为 10110，生成多项式 $G(x) = x^3 + x + 1$（即 1011）。求CRC校验码（FCS）和最终发送的帧。",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [],
+      "answer": "FCS = 000，发送帧 = 10110000",
+      "solutionSteps": [
+        "生成多项式 $G(x) = x^3 + x + 1$，对应二进制 1011，阶数 $r = 3$",
+        "在数据 10110 后补 3 个 0，得到 10110000",
+        "模 2除法 $10110000 \\div 1011$：",
+        "取前 4位 1011，XOR $1011 = 0000$",
+        "落下后续位 0000，逐位均不够除（首位为 0），商 0",
+        "最终余数 = 000，即 FCS = 000",
+        "发送帧 =原始数据 +FCS $= 10110 000 = 10110000$",
+        "验证：$10110000 \\div 1011$模 2余数为 0，正确"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-cn-crc-detail"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "CRC编码 = 数据左移r位 + 模2除法求余"
+        },
+        {
+          "level": "L2",
+          "text": "模2除法是逐位异或，不进位不借位"
+        },
+        {
+          "level": "L3",
+          "text": "最终帧 = 原始数据 + FCS（余数）"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-cn-q-hamming-001",
+      "title": "海明码编码纠错",
+      "content": "数据为 1011（4位），使用海明码进行编码（偶校验）。求编码后的海明码。若传输后第5位出错，如何检测和纠正？",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [],
+      "answer": "编码结果：0110011；第5位出错时校正因子 $S3S2S1 = 101$（二进制）$= 5$，翻转第5位即可纠正",
+      "solutionSteps": [
+        "校验位 $k$满足 $2^k \\ge m+k+1$。$m=4$时，$k=3$有 $2^3=8 \\ge 4+3+1=8$，因此取 $k=3$",
+        "校验位放置在位号 1、2、4（2 的幂次），数据位依次填入位 3、5、6、7",
+        "数据 1011依次填入：$D1=1$（位3）、$D2=0$（位5）、$D3=1$（位6）、$D4=1$（位7）",
+        "$P1$（位1）覆盖位 1,3,5,7：$P1⊕1⊕0⊕1 = 0$（偶校验）$\\to P1 = 0$",
+        "$P2$（位2）覆盖位置 2,3,6,7：$P2⊕1⊕1⊕1 = 0 \\to P2 = 1$",
+        "$P3$（位4）覆盖位置 4,5,6,7：$P3⊕0⊕1⊕1 = 0 \\to P3 = 0$",
+        "编码结果：位$1=0,$位$2=1,$位$3=1,$位$4=0,$位$5=0,$位$6=1,$位$7=1 \\to 0110011$",
+        "若第 5 位出错，收到 0110111",
+        "校正因子：$S1 = 0⊕1⊕1⊕1 = 1$，$S2 = 1⊕1⊕1⊕1 = 0$，$S3 = 0⊕1⊕1⊕1 = 1$",
+        "$S3S2S1 = 101$（二进制）$= 5$，指出第 5位出错，翻转即可纠正"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-cn-hamming"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "校验位放在2的幂次位置（1、2、4...），数据位填其余位置"
+        },
+        {
+          "level": "L2",
+          "text": "每个校验位覆盖其位号二进制表示中对应位为1的所有位置"
+        },
+        {
+          "level": "L3",
+          "text": "校正因子 S3S2S1 的组合值直接指出出错位的编号"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-cn-q-window-001",
+      "title": "滑动窗口序号位数",
+      "content": "链路长度为 1000km，数据传输速率为 1Mbps，帧长为 1000比特，信号传播速率为 $2\\times10^5$ km/s。采用GBN协议，求使信道利用率达到最大所需的最少序号位数。",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [],
+      "answer": "最少需要 4 位序号",
+      "solutionSteps": [
+        "帧传输时延 $T_f =$帧长/速率 $= 1000/10^6 = 1ms$",
+        "单程传播时延 $T_p =$距离/传播速率 $= 1000/(2\\times10^5) = 5ms$",
+        "一个RTT内可发送的帧数 $N =$ceil$((T_f + 2\\times T_p)/T_f) =$ceil$((1+10)/1) = 11$",
+        "GBN发送窗口 $W <= 2^n - 1$，需 $2^n - 1 >= 11$",
+        "$n=3: 2^3-1=7 < 11$（不够）；$n=4: 2^4-1=15 >= 11$（满足）",
+        "因此最少需要 4 位序号"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-cn-sliding-window"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先计算一个RTT内能发送多少帧，这就是需要的最小窗口大小"
+        },
+        {
+          "level": "L2",
+          "text": "$RTT =$帧传输时延 $+ 2\\times$传播时延（忽略确认帧传输时延）"
+        },
+        {
+          "level": "L3",
+          "text": "GBN窗口上限为 $2^n - 1$，$n$为序号位数"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-cn-q-csma-cd-001",
+      "title": "CSMA/CD最小帧长",
+      "content": "某以太网数据传输速率为 100Mbps，信号在电缆中的传播速率为 $2\\times10^8$ m/s，网络最远两端距离为 2km。求该网络的最小帧长（比特数和字节数）。",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [],
+      "answer": "最小帧长 = 2000 比特 = 250 字节",
+      "solutionSteps": [
+        "单程传播时延 $\\tau = 2000/(2\\times10^8) = 10\\mu s$",
+        "往返传播时延 $= 2\\tau = 20\\mu s$",
+        "最小帧长 =数据速率 $\\times$往返时延 $= 100\\times10^6 \\times 20\\times10^-6 = 2000$比特 $= 250$字节"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-cn-csma-detail"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "最小帧长 =数据传输速率 $\\times$往返传播时延"
+        },
+        {
+          "level": "L2",
+          "text": "往返时延 $= 2 \\times$距离 /传播速率"
+        },
+        {
+          "level": "L3",
+          "text": "最小帧长保证碰撞信号能在帧发完之前传回发送方"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-cn-q-csma-ca-001",
+      "title": "CSMA/CA概念判断",
+      "content": "关于 CSMA/CA 协议，下列说法错误的是：",
+      "type": "concept_check",
+      "difficulty": 3,
+      "options": [
+        "A. CSMA/CA 通过 RTS/CTS 机制预约信道来避免碰撞",
+        "B. CSMA/CA 可以完全避免碰撞的发生",
+        "C. NAV（网络分配向量）是一种虚拟载波监听机制",
+        "D. CSMA/CA 能解决隐藏站问题但不能完全解决暴露站问题"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "A正确：RTS/CTS让发送方和接收方预约信道，其他站点通过NAV知道信道被占用",
+        "B错误：CSMA/CA只能降低碰撞概率，不能完全避免碰撞（例如RTS/CTS本身也可能碰撞）",
+        "C正确：NAV通过RTS/CTS中的持续时间字段设置虚拟忙碌状态",
+        "D正确：RTS/CTS解决了隐藏站问题，但暴露站问题（B听到A发送而C不在范围内，B不必要等待）仍存在"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-cn-csma-ca"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "CSMA/CA 是碰撞'避免'而非碰撞'检测'"
+        },
+        {
+          "level": "L2",
+          "text": "没有任何MAC协议能100%避免碰撞"
+        },
+        {
+          "level": "L3",
+          "text": "隐藏站和暴露站是无线网络的经典问题，需要区分理解"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-cn-q-frame-001",
+      "title": "以太网帧格式分析",
+      "content": "一个以太网帧的总长度为 1500 字节（不含前导码和SFD），类型字段值为 0x0800。求该帧中数据字段的实际长度，并说明类型字段的含义。",
+      "type": "solution",
+      "difficulty": 2,
+      "options": [],
+      "answer": "数据字段长度 = 1482 字节；类型 0x0800 表示上层协议为 IPv4",
+      "solutionSteps": [
+        "以太网帧结构：目的 MAC$(6B) +$源 MAC$(6B) +$类型$(2B) +$数据$(46~1500B) +$FCS$(4B)$",
+        "首部 +FCS 共 $6 + 6 + 2 + 4 = 18$字节",
+        "数据字段长度 $= 1500 - 18 = 1482$字节",
+        "1482 在 46~1500 范围内，合法",
+        "类型字段 0x0800 表示上层协议为 IPv4"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-cn-ethernet-frame"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "以太网帧的首部包括目的MAC、源MAC和类型字段"
+        },
+        {
+          "level": "L2",
+          "text": "FCS（帧检验序列）占4字节，使用CRC-32"
+        },
+        {
+          "level": "L3",
+          "text": "常见类型值：0x0800=IP, 0x0806=ARP, 0x86DD=IPv6"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-cn-q-fragment-001",
+      "title": "IP分片计算",
+      "content": "一个总长度为 3800 字节的 IP 数据报（首部长度 20 字节）需要经过一个 MTU = 1500 字节的链路，必须分片。求各分片的总长度、片偏移值和 MF 标志。",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [],
+      "answer": "第1片：总长1500B，偏移0，MF=1；第2片：总长1500B，偏移185，MF=1；第3片：总长840B，偏移370，MF=0",
+      "solutionSteps": [
+        "原始数据报数据部分 $= 3800 - 20 = 3780$字节",
+        "每个分片最大数据长度 =MTU -IP首部 $= 1500 - 20 = 1480$字节",
+        "分片数量 =ceil$(3780/1480) = 3$片",
+        "第1片：数据长度 1480，总长度 $1480+20=1500$，片偏移$=0/8=0$，$MF=1$",
+        "第2片：数据长度 1480，总长度 $1480+20=1500$，片偏移$=1480/8=185$，$MF=1$",
+        "第3片：数据长度 $3780-1480-1480=820$，总长度 $820+20=840$，片偏移$=(1480+1480)/8=2960/8=370$，$MF=0$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-cn-ip-fragment"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "片偏移 =数据偏移量 $/ 8$（以8字节为单位）"
+        },
+        {
+          "level": "L2",
+          "text": "MF=1表示后面还有分片，MF=0表示最后一片"
+        },
+        {
+          "level": "L3",
+          "text": "每个分片的数据长度必须是8的倍数（最后一片除外）"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-cn-q-subnet-001",
+      "title": "子网划分计算",
+      "content": "将 IP 地址块 $172.16.0.0/20$划分为 8个子网。求子网掩码、每个子网可用主机数，以及第 4个子网的网络地址和可用地址范围。",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [],
+      "answer": "子网掩码 255.255.254.0（$/23$），每子网 510台主机，第 4子网 $172.16.6.0/23$，可用地址 172.16.6.1~172.16.7.254",
+      "solutionSteps": [
+        "$/20$划 8个子网，需借 3位（$2^3 = 8$），新前缀长度 $= 20 + 3 = 23$",
+        "子网掩码 $= 255.255.254.0$（第 3字节 $11111110 = 254$）",
+        "主机位 $= 32 - 23 = 9$位，每子网可用主机数 $= 2^9 - 2 = 510$",
+        "子网块大小 $= 2^9 = 512$，第 3字节每次增加 2",
+        "子网 $1: 172.16.0.0/23$",
+        "子网 $2: 172.16.2.0/23$",
+        "子网 $3: 172.16.4.0/23$",
+        "子网 $4: 172.16.6.0/23$（起始 $= 0 + 3\\times2 = 6$）",
+        "第 4 子网：网络地址 172.16.6.0，广播地址 172.16.7.255",
+        "可用地址范围：172.16.6.1 ~ 172.16.7.254"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-cn-subnet-calc"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "借位数 $n$满足 $2^n >=$所需子网数"
+        },
+        {
+          "level": "L2",
+          "text": "子网块大小 = 2^主机位数"
+        },
+        {
+          "level": "L3",
+          "text": "第$k$个子网的起始地址 =基础地址 $+ (k-1) \\times$块大小"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-cn-q-cidr-agg-001",
+      "title": "CIDR路由聚合",
+      "content": "将以下 4个网络聚合为一条 CIDR 路由：$200.100.0.0/24$、$200.100.1.0/24$、$200.100.2.0/24$、$200.100.3.0/24$。写出聚合后的网络地址和前缀长度。",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [],
+      "answer": "聚合后：$200.100.0.0/22$",
+      "solutionSteps": [
+        "将第三字节展开为二进制：00000000、00000001、00000010、00000011",
+        "从高位开始比较：前6位相同（000000），第$7-8$位不同",
+        "公共前缀 =前两字节(16位) $+ 6$位 $= 22$位",
+        "聚合后网络地址：取公共前缀+补$0 \\to 200.100.0.0/22$",
+        "覆盖范围：200.100.0.0 ~ 200.100.3.255"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-cn-cidr-calc"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "路由聚合的关键是找多个子网的公共前缀"
+        },
+        {
+          "level": "L2",
+          "text": "将地址二进制展开后从高位逐位比较"
+        },
+        {
+          "level": "L3",
+          "text": "聚合后的地址空间可能大于原始子网的并集"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-cn-q-arp-002",
+      "title": "ARP跨网段判断",
+      "content": "主机 A（IP: 192.168.1.10，掩码: 255.255.255.0）要向主机 B（IP: 192.168.2.20）发送数据。关于 ARP 过程，下列说法正确的是：",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "A. A 直接广播 ARP 请求获取 B 的 MAC 地址",
+        "B. A 先将数据发给默认网关，ARP 解析的是网关的 MAC 地址",
+        "C. A 不需要 ARP，直接用 B 的 IP 地址封装帧",
+        "D. A 通过 DNS 获取 B 的 MAC 地址"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "A 用子网掩码判断：192.168.1.10 的网络号为 192.168.1.0，B 的网络号为 192.168.2.0",
+        "两者不在同一子网，A 不能直接广播 ARP 获取 B 的 MAC",
+        "A 将数据发给默认网关，ARP 解析的是网关（下一跳路由器）的 MAC 地址",
+        "路由器收到后再通过 ARP 解析下一跳或最终目标的 MAC 地址"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-cn-arp-detail"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "ARP 只能解析同一网段内的 MAC 地址"
+        },
+        {
+          "level": "L2",
+          "text": "跨网段通信时，ARP 解析的是下一跳路由器的 MAC"
+        },
+        {
+          "level": "L3",
+          "text": "ARP 请求是链路层广播，路由器不转发广播帧"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-cn-q-icmp-001",
+      "title": "ICMP报文类型",
+      "content": "下列关于 ICMP 的说法中，正确的是：",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "A. ICMP 是传输层协议",
+        "B. ping 命令使用的是 ICMP 回显请求和回显应答报文",
+        "C. ICMP 可以保证数据可靠传输",
+        "D. ICMP 报文直接封装在以太网帧中"
+      ],
+      "answer": "B",
+      "solutionSteps": [
+        "A错误：ICMP 是网络层协议，不是传输层",
+        "B正确：ping 使用 ICMP 类型8（回显请求）和类型0（回显应答）",
+        "C错误：ICMP 只报告差错，不保证可靠传输，IP 本身仍不可靠",
+        "D错误：ICMP 封装在 IP 数据报中，不是直接封装在以太网帧中"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-cn-icmp-detail"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "ICMP 是 IP 的辅助协议，工作在网络层"
+        },
+        {
+          "level": "L2",
+          "text": "ping 和 traceroute 是 ICMP 最典型的应用"
+        },
+        {
+          "level": "L3",
+          "text": "ICMP 报文封装在 IP 数据报的数据部分"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-cn-q-rip-001",
+      "title": "RIP路由表更新",
+      "content": "路由器$A$的当前路由表为：$N1$距离$=3$下一跳$=B$，$N2$距离$=5$下一跳$=C$，$N3$距离$=\\infty$（不可达）。现收到邻居路由器$B$发来的距离向量：$(N1,1), (N2,4), (N3,2)$。请写出$A$更新后的路由表。",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [],
+      "answer": "更新后：N1 距离=2 下一跳=B，N2 距离=5 下一跳=C（不变），N3 距离=3 下一跳=B",
+      "solutionSteps": [
+        "收到$B$的向量后，对每条路由距离$+1$：$N1\\to2$(经$B$)$, N2\\to5$(经$B$)$, N3\\to3$(经$B$)",
+        "N1：当前距离3经C，新距离2经B，2<3，更新为 N1 距离=2 下一跳=B",
+        "N2：当前距离5经C，新距离5经B，相等不更新（保持原路由），N2 距离=5 下一跳=C",
+        "$N3$：当前不可达$(\\infty)$，新距离3经$B$，$3<\\infty$，更新为 $N3$距离$=3$下一跳$=B$"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-cn-rip-detail"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "RIP更新规则：收到邻居的距离+1后与当前比较，取较小值"
+        },
+        {
+          "level": "L2",
+          "text": "距离相同时通常保持原路由不变"
+        },
+        {
+          "level": "L3",
+          "text": "距离16表示不可达（无穷大）"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-cn-q-ospf-001",
+      "title": "OSPF概念多选",
+      "content": "关于 OSPF 协议，下列说法正确的有：（多选）",
+      "type": "concept_check",
+      "difficulty": 3,
+      "options": [
+        "A. OSPF 使用 Dijkstra 最短路径算法计算路由",
+        "B. OSPF 最大跳数为 15",
+        "C. OSPF 支持分层区域设计",
+        "D. OSPF 比 RIP 收敛速度更快"
+      ],
+      "answer": "ACD",
+      "solutionSteps": [
+        "A正确：OSPF使用Dijkstra算法根据链路状态数据库计算最短路径",
+        "B错误：OSPF基于代价（cost），没有跳数限制；最大跳数15是RIP的特征",
+        "C正确：OSPF支持区域划分，区域0为骨干区域，其他区域连接到骨干区域",
+        "D正确：OSPF使用触发更新和链路状态算法，收敛速度远快于RIP的周期性广播"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-cn-ospf-detail"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "OSPF = 链路状态算法，RIP = 距离向量算法"
+        },
+        {
+          "level": "L2",
+          "text": "链路状态算法中每个路由器拥有完整拓扑图"
+        },
+        {
+          "level": "L3",
+          "text": "OSPF的代价与带宽成反比，带宽越大代价越小"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-cn-q-tcp-flow-001",
+      "title": "TCP滑动窗口流量控制",
+      "content": "TCP连接中，接收方通告的接收窗口 rwnd = 1000 字节，发送方拥塞窗口 cwnd = 2000 字节。发送方已发送序号 5000~6999 的字节且全部已确认。求发送方接下来能发送的最大字节范围。",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [],
+      "answer": "发送方可发送字节 7000~7999，共 1000 字节",
+      "solutionSteps": [
+        "实际发送窗口 $= \\min(rwnd, cwnd) = \\min(1000, 2000) = 1000$字节",
+        "已确认到序号 6999，即发送方可以继续从序号 7000 开始发送",
+        "发送窗口为 1000字节，因此可发送范围：$7000 ~ 7000+1000-1 = 7999$",
+        "发送方接下来能发送的最大字节范围为 7000~7999，共 1000 字节"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-cn-tcp-flow"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "发送窗口 $= \\min(rwnd, cwnd)$"
+        },
+        {
+          "level": "L2",
+          "text": "已确认的序号之后就是可以发送的起始位置"
+        },
+        {
+          "level": "L3",
+          "text": "rwnd 由接收方控制，cwnd 由网络拥塞程度决定"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-cn-q-congestion-002",
+      "title": "拥塞控制cwnd变化",
+      "content": "TCP拥塞控制中，初始 ssthresh $= 8$，cwnd $= 1$。发送方经历以下过程：慢开始$\\to$拥塞避免$\\to$收到3个冗余ACK（此时$cwnd=12$）$\\to$拥塞避免$\\to$超时丢包（此时$cwnd=16$）。求每次事件后 ssthresh 和 cwnd 的值。",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [],
+      "answer": "3个冗余ACK后：ssthresh=6, cwnd=6；超时后：ssthresh=8, cwnd=1",
+      "solutionSteps": [
+        "慢开始阶段：cwnd 从 1指数增长 $\\to 1, 2, 4, 8$（达到 $ssthresh=8$，切换到拥塞避免）",
+        "拥塞避免阶段：cwnd 每 RTT 加 $1 \\to 9, 10, 11, 12$",
+        "收到 3 个冗余 ACK（cwnd=12）：触发快重传与快恢复",
+        "快恢复：ssthresh $= \\lfloor 12/2 \\rfloor = 6$，cwnd $= 6$，进入拥塞避免",
+        "拥塞避免阶段：cwnd 每 RTT 加 $1 \\to 7, 8, 9, ..., 16$",
+        "超时丢包（$cwnd=16$）：ssthresh $= \\lfloor 16/2 \\rfloor = 8$，cwnd $= 1$，回到慢开始",
+        "最终结果：3 个冗余 ACK 后 ssthresh=6, cwnd=6；超时后 ssthresh=8, cwnd=1"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-cn-tcp-congestion"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "区分两种丢包：超时$\\to$慢开始，3个冗余ACK$\\to$快恢复"
+        },
+        {
+          "level": "L2",
+          "text": "两种情况都是 ssthresh = cwnd/2"
+        },
+        {
+          "level": "L3",
+          "text": "超时后 cwnd=1 回到慢开始；快恢复后 cwnd=ssthresh 进入拥塞避免"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-cn-q-dns-process-001",
+      "title": "DNS解析过程",
+      "content": "主机向 DNS 服务器查询域名 www.example.com 的 IP 地址。请按正确顺序描述完整的 DNS 解析过程，并说明每一步使用的查询类型。",
+      "type": "solution",
+      "difficulty": 2,
+      "options": [],
+      "answer": "客户端$\\to$本地DNS（递归查询）$\\to$根DNS$\\to$顶级域DNS$\\to$权威DNS（迭代查询）$\\to$返回IP并缓存",
+      "solutionSteps": [
+        "第1步：主机向本地DNS服务器发送递归查询请求（查询 www.example.com 的A记录）",
+        "第2步：本地DNS先查缓存，若无则向根DNS服务器发送迭代查询",
+        "第3步：根DNS返回 .com 顶级域DNS服务器的地址",
+        "第4步：本地DNS向 .com 顶级域DNS查询，获得 example.com 权威DNS的地址",
+        "第5步：本地DNS向权威DNS查询，获得 www.example.com 的IP地址",
+        "第6步：本地DNS将结果缓存（TTL时间内有效），并将IP地址返回给主机"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-cn-dns-detail"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "DNS解析分为递归查询和迭代查询两种方式"
+        },
+        {
+          "level": "L2",
+          "text": "客户端到本地DNS用递归，本地DNS到其他DNS用迭代"
+        },
+        {
+          "level": "L3",
+          "text": "DNS缓存可以显著减少后续查询的延迟"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-cn-q-http-002",
+      "title": "HTTP方法状态码",
+      "content": "关于 HTTP 协议，下列说法正确的是：",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "A. HTTP POST 方法是幂等的，多次执行效果相同",
+        "B. HTTP 状态码 403 表示请求的资源不存在",
+        "C. HTTP 状态码的第一位数字表示响应类别：2xx成功、3xx重定向、4xx客户端错误、5xx服务器错误",
+        "D. Cookie 存储在服务器端，Session 存储在客户端"
+      ],
+      "answer": "C",
+      "solutionSteps": [
+        "A错误：POST不是幂等的，多次提交可能创建多个资源；GET才是幂等的",
+        "B错误：403表示禁止访问（Forbidden），404才表示资源不存在（Not Found）",
+        "C正确：HTTP状态码分类——2xx成功、3xx重定向、4xx客户端错误、5xx服务器错误",
+        "D错误：Cookie存储在客户端，Session存储在服务器端（正好说反了）"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-cn-http-detail"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "HTTP状态码的第一位数字表示类别"
+        },
+        {
+          "level": "L2",
+          "text": "幂等性指多次执行同一操作效果相同"
+        },
+        {
+          "level": "L3",
+          "text": "Cookie在客户端，Session在服务器端"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    },
+    {
+      "id": "cs408-cn-q-nat-001",
+      "title": "NAT与NAPT概念",
+      "content": "关于 NAT 和 NAPT，下列说法正确的是：",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "A. NAPT 允许多个内网主机共享一个公网 IP 地址",
+        "B. NAT 会破坏 TCP 的可靠性机制",
+        "C. NAT 将公有 IP 转换为私有 IP",
+        "D. NAPT 只转换 IP 地址不转换端口号"
+      ],
+      "answer": "A",
+      "solutionSteps": [
+        "A正确：NAPT通过（IP,端口号）映射，使多个内网主机共享一个公网IP",
+        "B错误：NAT在网络层转换地址，不影响TCP的可靠性机制（TCP工作在传输层）",
+        "C错误：NAT将私有IP转换为公有IP（出站方向），而非公有转私有",
+        "D错误：NAPT同时转换IP地址和端口号，这是它与基本NAT的区别"
+      ],
+      "knowledgeNodeIds": [
+        "cs408-cn-nat"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "NAT解决的是IPv4地址不足的问题"
+        },
+        {
+          "level": "L2",
+          "text": "基本NAT一对一，NAPT多对一（通过端口号区分）"
+        },
+        {
+          "level": "L3",
+          "text": "NAPT的映射表记录：内网(IP:端口) ↔ 公网(IP:端口)"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original CS408 seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_exam_outline_reference",
+        "note": "Original TeacherAgent draft based on provided CS408 outline structure and common CS knowledge; no source text copied."
+      }
+    }
+  ]
+}

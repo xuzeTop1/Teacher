@@ -1,0 +1,688 @@
+{
+  "subject": "politics",
+  "course": "history",
+  "chapter": "politics-history",
+  "status": "draft",
+  "nodes": [
+    {
+      "id": "politics-history-001",
+      "title": "鸦片战争与中国近代史的开端",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "1840年鸦片战争是中国近代史的开端。鸦片战争后，中国的社会性质开始发生根本变化，由一个独立的封建社会逐步沦为半殖民地半封建社会。鸦片战争是中国遭受西方列强侵略的起点，也是中国人民反抗外来侵略、探索救国救民道路的起点。",
+      "prerequisites": [],
+      "misconceptions": [
+        "鸦片战争只是一场普通的贸易纠纷",
+        "鸦片战争后中国立即变成了完全的殖民地"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "为什么说1840年是一个重要的历史分水岭？这一年发生了什么改变中国命运的事件？"
+        },
+        {
+          "level": "L2",
+          "text": "鸦片战争改变了中国社会的性质：从独立的封建社会，变为半殖民地半封建社会。这是理解整个中国近现代史的逻辑起点。"
+        },
+        {
+          "level": "L3",
+          "text": "分析鸦片战争的影响，从三个维度入手：社会性质变化（半殖民地半封建）、主要矛盾变化（帝国主义和中华民族的矛盾上升）、革命任务变化（反帝反封建）。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-history-002",
+      "title": "太平天国运动",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "太平天国运动（$1851-1864$年）是中国近代史上规模巨大的一次农民起义。太平天国颁布了《天朝田亩制度》，主张平均分配土地，体现农民对土地的渴望。后期洪仁玕提出《资政新篇》，主张学习西方。太平天国运动沉重打击了封建统治和外国侵略势力，但终因农民阶级的局限性而失败。",
+      "prerequisites": [
+        "politics-history-001"
+      ],
+      "misconceptions": [
+        "太平天国运动是一场完全成功的革命",
+        "太平天国运动没有任何积极意义"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "太平天国运动是中国历史上规模最大的农民起义，它为什么会失败？农民阶级有什么局限性？"
+        },
+        {
+          "level": "L2",
+          "text": "分析太平天国运动，要一分为二：它打击了封建统治和外国侵略势力（积极意义），但因农民阶级局限性（没有科学理论指导、不能提出可行的救国方案）而失败。"
+        },
+        {
+          "level": "L3",
+          "text": "判断农民起义的历史作用，关键看它是否推动了历史进步。太平天国运动虽然没有成功，但它动摇了清朝统治，促进了中国人民的觉醒。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-history-003",
+      "title": "洋务运动",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "洋务运动（19世纪$60-90$年代）是清朝统治集团内部一部分官员（洋务派）以'自强''求富'为口号，主张学习西方先进技术以维护清朝统治的自救运动。洋务运动创办了一批近代军事工业和民用工业，开办新式学堂，派遣留学生。洋务运动没有使中国走上富强道路，但客观上对中国早期现代化起了推动作用。",
+      "prerequisites": [
+        "politics-history-001"
+      ],
+      "misconceptions": [
+        "洋务运动是一场完全失败的运动，没有任何积极意义",
+        "洋务运动主张学习西方政治制度"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "洋务派的主张是'中体西用'，这是什么意思？他们想学西方的什么，不学什么？"
+        },
+        {
+          "level": "L2",
+          "text": "洋务运动的历史地位：它没有改变中国半殖民地半封建的社会性质，没有使中国富强，但客观上促进了中国民族资本主义的产生和早期现代化。"
+        },
+        {
+          "level": "L3",
+          "text": "分析洋务运动，抓住'维护封建统治'（目的）和'学习西方技术'（手段）之间的矛盾：这种半吊子的现代化道路必然失败。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-history-004",
+      "title": "戊戌变法",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "戊戌变法（1898年）是康有为、梁启超等维新派人士在光绪皇帝支持下推行的变法运动。变法涉及政治、经济、军事、文教等方面，主张学习西方君主立宪制度。但由于资产阶级维新派力量弱小，又脱离广大人民群众，在慈禧太后为首的顽固派反对下，变法仅持续103天就失败了。戊戌变法的失败说明，在半殖民地半封建的中国，资产阶级改良道路行不通。",
+      "prerequisites": [
+        "politics-history-003"
+      ],
+      "misconceptions": [
+        "戊戌变法失败是因为光绪皇帝不够支持",
+        "戊戌变法如果成功，中国就能走上资本主义道路"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "维新派想通过皇帝自上而下地推行改革，这种方法有什么致命弱点？他们依靠谁，脱离了谁？"
+        },
+        {
+          "level": "L2",
+          "text": "戊戌变法失败的根本原因是：民族资产阶级力量弱小，又脱离人民群众，得不到广泛的社会支持。"
+        },
+        {
+          "level": "L3",
+          "text": "分析改良道路在中国行不通的原因，关键看当时中国的社会性质和阶级力量对比：半殖民地半封建社会+反动势力强大+民族资产阶级软弱=改良道路必然失败。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-history-005",
+      "title": "辛亥革命",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "辛亥革命（1911年）是中国近代史上一次伟大的资产阶级民主革命。辛亥革命推翻了清朝统治，结束了中国两千多年的封建君主专制制度，建立了中华民国。但辛亥革命没有改变中国半殖民地半封建的社会性质，没有完成反帝反封建的革命任务。辛亥革命失败的根本原因是：在帝国主义时代，在半殖民地半封建的中国，资本主义建国方案是行不通的。",
+      "prerequisites": [
+        "politics-history-004"
+      ],
+      "misconceptions": [
+        "辛亥革命是一场完全失败的革命",
+        "辛亥革命后中国就走上了资本主义道路"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "辛亥革命推翻了皇帝，这很了不起。但革命后，中国人民的处境有没有根本改善？这说明了什么？"
+        },
+        {
+          "level": "L2",
+          "text": "辛亥革命既有巨大功绩（推翻帝制、建立共和），又有根本缺陷（没有改变社会性质、没有发动广大人民群众）。要一分为二地评价。"
+        },
+        {
+          "level": "L3",
+          "text": "分析辛亥革命失败的原因，从主观（资产阶级软弱性妥协性）和客观（帝国主义和封建势力强大）两个方面入手。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-history-006",
+      "title": "新文化运动",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "新文化运动（1915年开始）是一场思想启蒙运动，以《新青年》杂志为主要阵地，提倡民主与科学（德先生、赛先生），反对旧道德、旧文化。新文化运动冲击了封建思想的统治地位，为马克思主义在中国的传播创造了有利条件。但运动初期存在形式主义偏向（全盘否定中国传统文化）。",
+      "prerequisites": [
+        "politics-history-005"
+      ],
+      "misconceptions": [
+        "新文化运动就是全盘否定中国传统文化",
+        "新文化运动对马克思主义传播没有任何作用"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "新文化运动高举'民主'和'科学'两面大旗，它们针对的是什么？为什么要反对旧道德、旧文化？"
+        },
+        {
+          "level": "L2",
+          "text": "新文化运动的历史意义在于思想启蒙：它冲破了封建思想的束缚，为各种新思潮（包括马克思主义）在中国的传播打开了闸门。"
+        },
+        {
+          "level": "L3",
+          "text": "分析新文化运动，要区分前期（资产阶级民主主义文化运动）和后期（马克思主义开始传播）。后期李大钊等人开始宣传马克思主义，这是运动的重要转向。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-history-007",
+      "title": "五四运动",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "五四运动（1919年）是中国新民主主义革命的开端。五四运动中，中国工人阶级开始以独立的姿态登上政治舞台。五四运动促进了马克思主义在中国的传播及其与中国工人运动的结合，为中国共产党的成立作了思想上和干部上的准备。五四运动具有彻底反帝反封建的革命性、追求救国强国真理的进步性、各族各界群众积极参与的广泛性。",
+      "prerequisites": [
+        "politics-history-006"
+      ],
+      "misconceptions": [
+        "五四运动只是一场学生爱国运动",
+        "五四运动和中国共产党的成立没有关系"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "为什么五四运动是新民主主义革命的开端？它和辛亥革命最根本的不同在哪里？"
+        },
+        {
+          "level": "L2",
+          "text": "五四运动之所以是新民主革命的开端，关键在于：工人阶级开始登上政治舞台，马克思主义开始广泛传播，这为中国共产党的成立准备了条件。"
+        },
+        {
+          "level": "L3",
+          "text": "区分新旧民主主义革命，关键看四个'不同'：领导阶级（资产阶级 vs 无产阶级）、指导思想（资产阶级民主主义 vs 马克思主义）、革命前途（资本主义 vs 社会主义）、所属世界革命范畴（旧殖民地革命 vs 无产阶级社会主义世界革命）。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-history-008",
+      "title": "中国共产党成立",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "中国共产党成立于1921年。中国共产党的成立，是近代中国社会矛盾发展和人民斗争深入的必然结果，是马克思主义与中国工人运动相结合的产物。中国共产党的成立，使中国革命的面貌焕然一新：有了坚强的领导核心、科学的指导思想、明确的奋斗目标、广泛的群众基础。",
+      "prerequisites": [
+        "politics-history-007"
+      ],
+      "misconceptions": [
+        "中国共产党的成立是少数知识分子人为制造的产物",
+        "中国共产党成立后立即取得了革命胜利"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "中国共产党为什么诞生在1921年？当时中国需要什么样的政党来领导革命？"
+        },
+        {
+          "level": "L2",
+          "text": "中国共产党成立的伟大历史意义，可以概括为'焕然一新'：领导力量（坚强的无产阶级政党）、指导思想（马克思主义）、奋斗目标（社会主义）、依靠力量（广大人民群众）都焕然一新。"
+        },
+        {
+          "level": "L3",
+          "text": "分析中国共产党成立的历史必然性，从三个层面说：思想基础（马克思主义传播）、阶级基础（工人阶级壮大）、组织基础（各地共产主义小组建立）。三者结合，必然产生中国共产党。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-history-009",
+      "title": "第一次国共合作与国民革命",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "第一次国共合作（$1924-1927$年）是在孙中山新三民主义（联俄、联共、扶助农工）基础上形成的。国共合作推动了北伐战争的胜利进军，沉重打击了北洋军阀和帝国主义势力。但由于国民党右派叛变革命（四一二政变、七一五政变），再加上中国共产党内右倾机会主义错误（以陈独秀为代表），国民革命最终失败。",
+      "prerequisites": [
+        "politics-history-008"
+      ],
+      "misconceptions": [
+        "第一次国共合作是平等的合作",
+        "国民革命失败是因为中国共产党力量太弱小"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "第一次国共合作是怎么破裂的？国民党右派为什么要背叛革命？"
+        },
+        {
+          "level": "L2",
+          "text": "国民革命失败的原因：客观上是敌人力量强大（帝国主义和封建势力联合），主观上是中国共产党还处在幼年时期，领导机关犯了右倾机会主义错误。"
+        },
+        {
+          "level": "L3",
+          "text": "分析国共合作与分裂的历史经验，关键结论：统一战线是重要法宝，但必须坚持无产阶级领导权，必须掌握革命武装。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-history-010",
+      "title": "农村革命根据地的建立",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "国民革命失败后，中国共产党开始探索新的革命道路。毛泽东领导秋收起义部队到达井冈山，创建了中国第一个农村革命根据地，开辟了农村包围城市、武装夺取政权的革命道路。到1930年，全国已建立起十几块农村革命根据地，红军发展到约7万人。农村革命根据地的建立，为中国革命找到了正确的发展道路。",
+      "prerequisites": [
+        "politics-history-009"
+      ],
+      "misconceptions": [
+        "农村革命根据地是在城市起义失败后的权宜之计",
+        "农村包围城市道路是照搬俄国经验的结果"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "国民革命失败后，中国共产党人是继续在城市搞武装起义，还是转向农村？为什么最终选择了农村？"
+        },
+        {
+          "level": "L2",
+          "text": "农村革命根据地的建立，标志着农村包围城市道路的开辟。这条道路是把马克思主义普遍真理同中国革命具体实际相结合的光辉典范。"
+        },
+        {
+          "level": "L3",
+          "text": "分析农村革命根据地得以建立的条件：主观（党的领导、红军存在）+ 客观（农村敌人力量薄弱、农民是革命主力军）。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-history-011",
+      "title": "抗日战争",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "抗日战争（$1937-1945$年）是中国人民反抗日本帝国主义侵略的民族解放战争。抗日战争是近代以来中国人民第一次取得完全胜利的反帝斗争。中国共产党是抗日战争的中流砥柱：倡导和推动抗日民族统一战线，提出全面抗战路线和持久战战略方针，开辟敌后战场。抗日战争的胜利，彻底粉碎了日本军国主义殖民奴役中国的图谋，重新确立了中国在世界上的大国地位。",
+      "prerequisites": [
+        "politics-history-009"
+      ],
+      "misconceptions": [
+        "抗日战争主要是国民党军队打的",
+        "抗日战争的胜利完全是美国原子弹的作用"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "在抗日战争中，国民党和共产党分别起了什么作用？两个战场是什么关系？"
+        },
+        {
+          "level": "L2",
+          "text": "中国共产党是抗日战争的中流砥柱，这体现在：倡导和维护抗日民族统一战线、提出全面抗战路线和持久战战略方针、开辟和坚持敌后战场、加强根据地建设。"
+        },
+        {
+          "level": "L3",
+          "text": "分析抗日战争胜利的原因，从三个层面：国际（世界反法西斯联盟支持）、国内（抗日民族统一战线下的全民族抗战）、核心（中国共产党的中流砥柱作用）。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-history-012",
+      "title": "解放战争",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "解放战争（$1946-1949$年）是中国人民在中国共产党领导下，为推翻国民党反动统治、解放全中国而进行的伟大革命战争。解放战争经历了战略防御、战略反攻、战略决战和战略追击四个阶段。解放战争迅速胜利的根本原因是：中国共产党的正确领导，人民解放军的英勇作战，广大人民群众的大力支持。1949年10月1日，中华人民共和国成立，标志着新民主主义革命的胜利。",
+      "prerequisites": [
+        "politics-history-011"
+      ],
+      "misconceptions": [
+        "解放战争胜利主要是因为国民党军队太弱",
+        "解放战争只是共产党和国民党之间的内战，没有正义性"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "解放战争时期，为什么广大人民群众支持共产党而不是国民党？老百姓用脚投票说明了什么？"
+        },
+        {
+          "level": "L2",
+          "text": "解放战争胜利的根本原因，不在军事层面（武器、兵力），而在政治层面：共产党代表人民利益，得到人民支持；国民党代表少数利益，失去人民支持。"
+        },
+        {
+          "level": "L3",
+          "text": "分析解放战争胜利的历史启示：人心向背是决定战争胜负的关键。'军民鱼水情'不是一句空话，而是胜利的根本保证。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-history-013",
+      "title": "中华人民共和国成立的历史意义",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "1949年10月1日，中华人民共和国成立。中华人民共和国的成立，标志着中国新民主主义革命取得了基本胜利，结束了帝国主义、封建主义和官僚资本主义在中国的统治，结束了旧中国半殖民地半封建社会的历史，结束了旧中国一百多年来任人宰割的屈辱历史。中国从此由半殖民地半封建社会进入新民主主义社会，开始了向社会主义社会的过渡。",
+      "prerequisites": [
+        "politics-history-012"
+      ],
+      "misconceptions": [
+        "中华人民共和国成立标志着社会主义制度在中国已经建立",
+        "中华人民共和国成立没有国际意义"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "1949年新中国成立，对中国和世界分别意味着什么？它结束了什么，开启了什么？"
+        },
+        {
+          "level": "L2",
+          "text": "新中国成立的历史意义，从三个层面理解：国内（结束屈辱历史、实现国家独立）、制度（进入新民主主义社会、向社会主义过渡）、国际（改变世界政治格局、鼓舞被压迫民族解放斗争）。"
+        },
+        {
+          "level": "L3",
+          "text": "注意区分：新中国成立标志着新民主主义革命基本胜利（不是完全胜利，因为台湾等岛屿尚未解放），标志着新民主主义社会的开始（不是社会主义社会）。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-history-014",
+      "title": "社会主义基本制度的确立",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "从1949年新中国成立到1956年社会主义改造基本完成，中国完成了从新民主主义社会到社会主义社会的过渡。1956年，社会主义改造基本完成，生产资料公有制在国民经济中占据主导地位，这标志着社会主义基本制度在中国确立。社会主义基本制度的确立，为当代中国一切发展进步奠定了制度基础，实现了中华民族有史以来最广泛最深刻的社会变革。",
+      "prerequisites": [
+        "politics-history-013"
+      ],
+      "misconceptions": [
+        "社会主义基本制度确立是在1949年新中国成立时",
+        "社会主义改造是完全错误的，应该否定"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "1949年新中国成立后，中国是不是立即进入了社会主义社会？如果不是，是什么社会？这个社会持续了多长时间？"
+        },
+        {
+          "level": "L2",
+          "text": "社会主义基本制度确立的标志是：生产资料公有制占主导（经济基础）和人民民主专政的政权（上层建筑）。这两者在1956年社会主义改造完成后才基本具备。"
+        },
+        {
+          "level": "L3",
+          "text": "分析社会主义改造的历史意义，要放在当时历史条件下看：它为当代中国一切发展进步奠定了制度基础，这个历史功绩不能否定。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-history-015",
+      "title": "社会主义建设探索",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "社会主义制度确立后，中国共产党开始探索适合中国国情的社会主义建设道路。《论十大关系》和中共八大是中国特色社会主义建设探索的重要成果。但由于缺乏经验，再加上复杂国际环境的影响，探索过程中也出现了严重曲折（如大跃进、人民公社化运动）。社会主义建设探索的成就和曲折，为后来改革开放提供了宝贵经验、理论准备和物质基础。",
+      "prerequisites": [
+        "politics-history-014"
+      ],
+      "misconceptions": [
+        "社会主义建设探索时期没有任何积极成果",
+        "社会主义建设探索的曲折是完全可以避免的"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "社会主义制度建立后，中国共产党面临什么新课题？之前的革命经验还能直接用吗？"
+        },
+        {
+          "level": "L2",
+          "text": "社会主义建设探索是一个'摸着石头过河'的过程，有成就（建立了独立的工业体系和国民经济体系），也有曲折（经济建设的急躁冒进）。两者都是宝贵财富。"
+        },
+        {
+          "level": "L3",
+          "text": "分析社会主义建设探索，坚持'一分为二'：成就（建立了社会主义制度、打下了工业基础、积累了建设经验）和曲折（经济建设的左倾错误）都客观存在，都要科学总结。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-history-016",
+      "title": "改革开放的开端",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "1978年12月召开的中共十一届三中全会，是新中国成立以来党的历史上具有深远意义的伟大转折。全会重新确立了实事求是的思想路线，作出了把党和国家工作中心转移到经济建设上来、实行改革开放的历史性决策。中共十一届三中全会标志着中国共产党重新确立了马克思主义的思想路线、政治路线、组织路线，开启了改革开放和社会主义现代化建设新时期。",
+      "prerequisites": [
+        "politics-history-015"
+      ],
+      "misconceptions": [
+        "改革开放是从中共十八大才开始的",
+        "改革开放就是对过去社会主义建设的全盘否定"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "1978年中共十一届三中全会作出了哪些重大决策？这些决策对中国的发展产生了什么影响？"
+        },
+        {
+          "level": "L2",
+          "text": "中共十一届三中全会的伟大历史意义，可以概括为'伟大转折'：思想路线（实事求是重新确立）、政治路线（以经济建设为中心）、组织路线（平反冤假错案、选拔大批干部）。"
+        },
+        {
+          "level": "L3",
+          "text": "分析改革开放开端的逻辑：真理标准大讨论（思想准备）$\\to$十一届三中全会（伟大决策）$\\to$农村改革率先突破（家庭联产承包责任制）$\\to$城市改革全面展开。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-history-017",
+      "title": "中国特色社会主义进入新时代",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "中共十八大（2012年）以来，中国特色社会主义进入新时代。新时代是承前启后、继往开来、在新的历史条件下继续夺取中国特色社会主义伟大胜利的时代，是决胜全面建成小康社会、进而全面建设社会主义现代化强国的时代。新时代我国社会主要矛盾已经转化为人民日益增长的美好生活需要和不平衡不充分的发展之间的矛盾。",
+      "prerequisites": [
+        "politics-history-016"
+      ],
+      "misconceptions": [
+        "中国特色社会主义进入新时代是从中共十九大才开始的",
+        "新时代意味着中国已经超越了社会主义初级阶段"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "中国特色社会主义进入'新时代'，'新'在哪里？中国的发展阶段发生了什么变化？"
+        },
+        {
+          "level": "L2",
+          "text": "中国特色社会主义进入新时代的依据：社会主要矛盾变化（人民日益增长的美好生活需要和不平衡不充分的发展之间的矛盾）、党的历史使命变化（从全面建成小康社会到全面建设社会主义现代化强国）。"
+        },
+        {
+          "level": "L3",
+          "text": "分析'新时代'和'初级阶段'的关系：新时代仍然属于社会主义初级阶段，但初级阶段进入了新的发展阶段。两者不矛盾。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-history-018",
+      "title": "中华民族伟大复兴的历史逻辑",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "实现中华民族伟大复兴是近代以来中国人民最伟大的梦想。中国近代以来的历史，就是一代又一代中国人为实现民族复兴而接续奋斗的历史。实现中华民族伟大复兴，必须走中国特色社会主义道路，必须弘扬以爱国主义为核心的民族精神，必须凝聚中国力量（全国各族人民大团结的力量）。中国共产党是实现中华民族伟大复兴的领导核心。",
+      "prerequisites": [
+        "politics-history-013",
+        "politics-history-017"
+      ],
+      "misconceptions": [
+        "中华民族伟大复兴就是恢复古代中国的版图和国际地位",
+        "中华民族伟大复兴是轻轻松松、敲锣打鼓就能实现的"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "中华民族伟大复兴的'复兴'是什么意思？是回到古代中国，还是实现现代化？"
+        },
+        {
+          "level": "L2",
+          "text": "中华民族伟大复兴的历史逻辑：近代衰落（鸦片战争后）$\\to$奋斗探索（各阶层救国方案先后失败）$\\to$找到正确道路（中国共产党领导下走社会主义道路）$\\to$迎来光明前景（新时代）。"
+        },
+        {
+          "level": "L3",
+          "text": "分析中华民族伟大复兴，抓住'三个必须'：必须走中国道路（中国特色社会主义道路）、必须弘扬中国精神（民族精神和时代精神）、必须凝聚中国力量（全国各族人民大团结）。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-history-019",
+      "title": "中国式现代化道路的历史探索",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "中国式现代化道路是中国共产党领导人民历经百年探索走出的正确道路。从洋务运动尝试西方现代化模式，到孙中山提出现代化设想，再到中国共产党成立后把马克思主义基本原理同中国具体实际相结合，探索出中国式现代化道路。中国式现代化既有各国现代化的共同特征，更有基于自己国情的中国特色，创造了人类文明新形态。",
+      "prerequisites": [
+        "politics-history-017",
+        "politics-history-018"
+      ],
+      "misconceptions": [
+        "中国式现代化道路是近年来才提出来的，没有历史基础",
+        "中国式现代化就是照搬西方现代化模式"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "中国近代以来，不同的人提出了不同的现代化方案，为什么最终是中国共产党找到了正确道路？"
+        },
+        {
+          "level": "L2",
+          "text": "中国式现代化道路的历史探索，经历了从被动模仿（洋务运动学技术、戊戌变法学制度）到主动探索（中国共产党把马克思主义同中国实际结合）的转变。"
+        },
+        {
+          "level": "L3",
+          "text": "分析中国式现代化道路的历史逻辑，从三个维度：历史必然性（其他道路都走不通）、实践探索性（百年奋斗持续探索）、理论创新性（马克思主义中国化时代化成果指导）。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-history-020",
+      "title": "新中国成立以来对外关系的发展",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "新中国成立以来，中国对外关系经历了三个重要发展阶段：新中国成立后，奉行'另起炉灶''打扫干净屋子再请客''一边倒'的外交方针；20世纪70年代，中美关系正常化，中国恢复在联合国的合法席位，外交打开新局面；改革开放以来，中国坚持独立自主的和平外交政策，推动构建新型国际关系，推动构建人类命运共同体。中国外交始终坚持维护世界和平、促进共同发展的宗旨。",
+      "prerequisites": [
+        "politics-history-013"
+      ],
+      "misconceptions": [
+        "新中国成立初期实行'一边倒'就是完全依赖苏联",
+        "中国坚持和平发展就意味着放弃正当维权"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "新中国成立初期，为什么选择'一边倒'（站在社会主义阵营一边）？当时有没有其他选择？"
+        },
+        {
+          "level": "L2",
+          "text": "中国外交政策的本质是独立自主的和平外交。'一边倒'是特定历史条件下的选择，但中国始终坚持独立自主，没有完全依赖苏联。"
+        },
+        {
+          "level": "L3",
+          "text": "分析中国外交政策的演变，抓住'独立自主'（根本原则）和'和平发展'（道路选择）两个核心，理解不同历史阶段外交政策的调整。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    }
+  ]
+}

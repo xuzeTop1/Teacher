@@ -1,0 +1,164 @@
+{
+  "subject": "xingce",
+  "course": "xingce",
+  "chapter": "civil-common-sense",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "xingce-sense-q001-politics",
+      "title": "常识判断：国家机构职权",
+      "knowledgeNodeIds": [
+        "xingce-sense-politics"
+      ],
+      "type": "sense_politics",
+      "difficulty": 1,
+      "content": "根据我国宪法，下列属于国家权力机关的是：A. 国务院  B. 全国人民代表大会  C. 最高人民法院  D. 国家监察委员会",
+      "answer": "B。全国人民代表大会是最高国家权力机关；国务院是行政机关，最高法为审判机关，监委为监察机关。",
+      "solutionSteps": [
+        "区分四类机关：权力、行政、审判、监察。",
+        "全国人大是权力机关。",
+        "其余分别属行政、审判、监察。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "题目问的是哪一类国家机构？"
+        },
+        {
+          "level": "L2",
+          "text": "全国人大、国务院、最高法分别是什么机关？"
+        },
+        {
+          "level": "L3",
+          "text": "把职权张冠李戴的选项排除掉。"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。本条为基于公开考试大纲范围生成的 AI 草稿，具体事实、法律条文和政策表述需以权威来源及人工审核为准。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "xingce-sense-q002-law",
+      "title": "常识判断：民事责任",
+      "knowledgeNodeIds": [
+        "xingce-sense-law"
+      ],
+      "type": "sense_law",
+      "difficulty": 1,
+      "content": "甲因过错损坏乙的财物，依法应承担：A. 刑事责任  B. 民事责任  C. 行政责任  D. 无需负责",
+      "answer": "B。损坏他人财物的，承担停止侵害、赔偿损失等民事责任；题干未涉犯罪或行政处罚。",
+      "solutionSteps": [
+        "定性：侵害财产权。",
+        "对应民事责任（赔偿损失）。",
+        "无犯罪或违法行政情节，不选刑/行责。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "这是民事、行政还是刑事问题？"
+        },
+        {
+          "level": "L2",
+          "text": "损坏财物一般承担什么责任？"
+        },
+        {
+          "level": "L3",
+          "text": "题干有没有提到触犯刑法或行政法规？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。本条为基于公开考试大纲范围生成的 AI 草稿，具体事实、法律条文和政策表述需以权威来源及人工审核为准。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "xingce-sense-q003-economy",
+      "title": "常识判断：货币政策",
+      "knowledgeNodeIds": [
+        "xingce-sense-economy"
+      ],
+      "type": "sense_economy",
+      "difficulty": 2,
+      "content": "中央银行下调存款准备金率，通常属于：A. 扩张性财政政策  B. 扩张性货币政策  C. 紧缩性货币政策  D. 收入政策",
+      "answer": "B。降准是央行（货币当局）增加市场流动性的手段，属扩张性货币政策；财政政策由政府收支实施。",
+      "solutionSteps": [
+        "判断主体：央行→货币政策。",
+        "降准→释放流动性→扩张。",
+        "结论：扩张性货币政策。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "这是央行手段还是政府收支手段？"
+        },
+        {
+          "level": "L2",
+          "text": "降准是往市场放水还是收水？"
+        },
+        {
+          "level": "L3",
+          "text": "放水对应扩张还是紧缩？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。本条为基于公开考试大纲范围生成的 AI 草稿，具体事实、法律条文和政策表述需以权威来源及人工审核为准。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "xingce-sense-q004-tech",
+      "title": "常识判断：科技常识",
+      "knowledgeNodeIds": [
+        "xingce-sense-tech"
+      ],
+      "type": "sense_tech",
+      "difficulty": 1,
+      "content": "下列关于电磁波的说法正确的是：A. 可见光不属于电磁波  B. 电磁波传播需要介质  C. 无线电、可见光、X 射线都是电磁波  D. 声波是电磁波",
+      "answer": "C。无线电波、可见光、X 射线同属电磁波谱；电磁波可在真空传播，声波是机械波不是电磁波。",
+      "solutionSteps": [
+        "确认电磁波谱包含无线电、可见光、X 射线。",
+        "电磁波无需介质即可传播。",
+        "声波是机械波，排除。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "可见光在电磁波谱里吗？"
+        },
+        {
+          "level": "L2",
+          "text": "电磁波传播需不需要介质？"
+        },
+        {
+          "level": "L3",
+          "text": "声波和电磁波是一回事吗？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。本条为基于公开考试大纲范围生成的 AI 草稿，具体事实、法律条文和政策表述需以权威来源及人工审核为准。"
+      },
+      "reviewStatus": "draft"
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "subject": "xingce",
+  "course": "xingce",
+  "chapter": "civil-data-analysis",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "xingce-data-q001-growth",
+      "title": "资料分析：增长率",
+      "knowledgeNodeIds": [
+        "xingce-data-growth"
+      ],
+      "type": "data_growth",
+      "difficulty": 1,
+      "content": "某县 2023 年游客量 120 万人次，2022 年为 100 万人次。2023 年游客量比上年增长百分之几？",
+      "answer": "增长 20%。(120-100)/100 = 0.2 = 20%。",
+      "solutionSteps": [
+        "确定现期 120、基期 100。",
+        "增长率 = (现期-基期)/基期 = 20/100。",
+        "结果 20%。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "现期和基期分别是多少？"
+        },
+        {
+          "level": "L2",
+          "text": "增长率公式是 (现期-基期)/基期 吗？"
+        },
+        {
+          "level": "L3",
+          "text": "算出来是 0.2，换算成百分数。"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "xingce-data-q002-proportion",
+      "title": "资料分析：比重变化",
+      "knowledgeNodeIds": [
+        "xingce-data-proportion"
+      ],
+      "type": "data_proportion",
+      "difficulty": 2,
+      "content": "某行业总营收增长 5%，其中线上业务营收增长 12%。据此可判断线上业务占总营收的比重比上年：",
+      "answer": "上升。部分（线上）增速 12% 大于整体增速 5%，比重上升。",
+      "solutionSteps": [
+        "识别部分增速与整体增速。",
+        "部分增速 > 整体增速 → 比重上升。",
+        "结论：线上业务比重上升。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "题目问的是比重「变化」还是比重「数值」？"
+        },
+        {
+          "level": "L2",
+          "text": "部分增速和整体增速谁大？"
+        },
+        {
+          "level": "L3",
+          "text": "记住：部分增速大于整体，比重升还是降？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "xingce-data-q003-estimate",
+      "title": "资料分析：截位估算",
+      "knowledgeNodeIds": [
+        "xingce-data-estimate"
+      ],
+      "type": "data_estimate",
+      "difficulty": 2,
+      "content": "估算 39876 / 198 的值最接近：A. 200  B. 201  C. 210  D. 250",
+      "answer": "B（约 201）。39876≈40000，198≈200，40000/200=200，修正后接近 201。",
+      "solutionSteps": [
+        "观察选项差距较大，可截位。",
+        "39876≈40000，198≈200。",
+        "40000/200=200，实际略高，选 201。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "四个选项首位差距大吗，能截位吗？"
+        },
+        {
+          "level": "L2",
+          "text": "把被除数和除数各保留前几位？"
+        },
+        {
+          "level": "L3",
+          "text": "估算值 200，实际是被略大还是略小，选哪个？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。"
+      },
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "xingce-data-q004-compare",
+      "title": "资料分析：直除法比较",
+      "knowledgeNodeIds": [
+        "xingce-data-directdiv"
+      ],
+      "type": "data_compare",
+      "difficulty": 2,
+      "content": "比较大小：A = 512/28，B = 530/30。哪个更大？",
+      "answer": "A 更大。直除：A≈18.3，B≈17.7；或看 A 的分母更小且分子相近，商更大。",
+      "solutionSteps": [
+        "用直除法看商的首位。",
+        "A：512/28≈18.3；B：530/30≈17.7。",
+        "A > B。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "不用精确算，看商的首位够不够比较？"
+        },
+        {
+          "level": "L2",
+          "text": "A 的分母比 B 小，分子又相近，商会怎样？"
+        },
+        {
+          "level": "L3",
+          "text": "各截前两位估算，谁的首位更大？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "ai_draft",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "内容依据该大纲行测五大模块（言语理解与表达 / 判断推理 / 资料分析 / 数量关系 / 常识判断）结构 AI 草拟，已通过 WebSearch 核对公开大纲与权威解读；具体题目与表述待人工复核（review_status=draft），不替代权威教材与当年最新大纲。"
+      },
+      "reviewStatus": "draft"
+    }
+  ]
+}

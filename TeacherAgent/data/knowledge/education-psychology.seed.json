@@ -1,0 +1,686 @@
+{
+  "subject": "education",
+  "course": "psychology",
+  "chapter": "education-psychology",
+  "status": "draft",
+  "nodes": [
+    {
+      "id": "education-psychology-001",
+      "title": "教育心理学概述",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "教育心理学研究学校情境中学与教的心理规律，核心主题是学习心理、教学心理、学生心理与发展。桑代克（试误说、准备律/练习律/效果律）被视作奠基人之一。",
+      "prerequisites": [],
+      "misconceptions": [
+        "把教育心理学等同于普通心理学",
+        "忽视'学校情境'限定"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "教育心理学的研究场域是什么？学校。"
+        },
+        {
+          "level": "L2",
+          "text": "桑代克的效果律强调反馈。"
+        },
+        {
+          "level": "L3",
+          "text": "先定位研究对象。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于教育部311教育学专业基础考试大纲（公开版）与公开权威资料（如《学记》、各教育家思想综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "education-psychology-002",
+      "title": "皮亚杰认知发展理论",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "皮亚杰（瑞士）提出认知发展四阶段：感知运动$(0-2)$、前运算$(2-7)$、具体运算$(7-11)$、形式运算(11岁以上)；机制为图式、同化、顺应与平衡，属发生认识论。",
+      "prerequisites": [
+        "education-psychology-001"
+      ],
+      "misconceptions": [
+        "阶段可跳跃",
+        "混淆同化与顺应"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "四阶段按顺序吗？是，不可跳跃。"
+        },
+        {
+          "level": "L2",
+          "text": "同化=纳入旧图式，顺应=改图式。"
+        },
+        {
+          "level": "L3",
+          "text": "年龄分界是常考点。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于教育部311教育学专业基础考试大纲（公开版）与公开权威资料（如《学记》、各教育家思想综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "education-psychology-003",
+      "title": "维果茨基社会文化理论",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "维果茨基提出最近发展区(ZPD)：现有水平与潜在发展水平之差；教学应走在发展前面，借助支架逐步撤除，强调语言等心理工具与内化。",
+      "prerequisites": [
+        "education-psychology-001"
+      ],
+      "misconceptions": [
+        "把ZPD当固定能力",
+        "忽视社会文化作用"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "ZPD是两水平之差，不是单点。"
+        },
+        {
+          "level": "L2",
+          "text": "支架要随能力提升而撤。"
+        },
+        {
+          "level": "L3",
+          "text": "社会互动促进内化。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于教育部311教育学专业基础考试大纲（公开版）与公开权威资料（如《学记》、各教育家思想综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "education-psychology-004",
+      "title": "布鲁纳认知结构学习",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "布鲁纳主张学科基本结构学习与发现学习，提出表征方式（动作—映像—符号），强调直觉思维与内在动机。",
+      "prerequisites": [
+        "education-psychology-002"
+      ],
+      "misconceptions": [
+        "把发现学习当成唯一方法",
+        "混淆结构与表征"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "学科基本结构指基本概念原理。"
+        },
+        {
+          "level": "L2",
+          "text": "表征三阶段是常考点。"
+        },
+        {
+          "level": "L3",
+          "text": "发现学习重学生主动。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于教育部311教育学专业基础考试大纲（公开版）与公开权威资料（如《学记》、各教育家思想综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "education-psychology-005",
+      "title": "奥苏贝尔有意义接受学习",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "奥苏贝尔区分有意义学习与机械学习、接受与发现；有意义学习须具备逻辑意义、潜在意义与心向，通过同化实现，提出先行组织者。",
+      "prerequisites": [
+        "education-psychology-002"
+      ],
+      "misconceptions": [
+        "认为接受学习=机械学习",
+        "忽视有意义条件"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "接受学习也可有意义。"
+        },
+        {
+          "level": "L2",
+          "text": "先行组织者在新旧间搭桥。"
+        },
+        {
+          "level": "L3",
+          "text": "三个条件缺一不可。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于教育部311教育学专业基础考试大纲（公开版）与公开权威资料（如《学记》、各教育家思想综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "education-psychology-006",
+      "title": "建构主义学习观",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "建构主义认为知识是学习者主动建构的，强调情境、协作、会话与意义建构；教学应创设真实情境并提供支架。",
+      "prerequisites": [
+        "education-psychology-003"
+      ],
+      "misconceptions": [
+        "把知识当客观静态",
+        "忽视学习者主动性"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "知识是建构而非灌输。"
+        },
+        {
+          "level": "L2",
+          "text": "情境与协作是关键。"
+        },
+        {
+          "level": "L3",
+          "text": "联系维果茨基的支架。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于教育部311教育学专业基础考试大纲（公开版）与公开权威资料（如《学记》、各教育家思想综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "education-psychology-007",
+      "title": "行为主义：操作性条件作用",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "斯金纳操作性条件作用：强化（正/负）增加行为概率，惩罚与消退降低概率；程序教学与机器教学源于此。",
+      "prerequisites": [
+        "education-psychology-001"
+      ],
+      "misconceptions": [
+        "混淆正强化与负强化",
+        "把惩罚当强化"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "负强化也是增加行为（移除厌恶）。"
+        },
+        {
+          "level": "L2",
+          "text": "惩罚是降低概率。"
+        },
+        {
+          "level": "L3",
+          "text": "程序教学来自斯金纳。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于教育部311教育学专业基础考试大纲（公开版）与公开权威资料（如《学记》、各教育家思想综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "education-psychology-008",
+      "title": "班杜拉社会学习理论",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "班杜拉提出观察学习（注意—保持—再现—动机）与自我效能感；替代强化指通过观察他人后果而习得。",
+      "prerequisites": [
+        "education-psychology-007"
+      ],
+      "misconceptions": [
+        "把观察学习当直接试误",
+        "混淆自我效能与自尊"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "观察学习四阶段是考点。"
+        },
+        {
+          "level": "L2",
+          "text": "自我效能是对能力的信念。"
+        },
+        {
+          "level": "L3",
+          "text": "替代强化区别于直接强化。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于教育部311教育学专业基础考试大纲（公开版）与公开权威资料（如《学记》、各教育家思想综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "education-psychology-009",
+      "title": "学习动机概述",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "动机由需要与诱因引起，分内部动机（兴趣）与外部动机（奖励）；适度动机水平最有利（耶克斯-多德森定律：任务越难，最佳动机越低）。",
+      "prerequisites": [
+        "education-psychology-001"
+      ],
+      "misconceptions": [
+        "认为动机越强越好",
+        "混淆内外动机"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "动机过强反而损害成绩。"
+        },
+        {
+          "level": "L2",
+          "text": "耶克斯-多德森定律是核心。"
+        },
+        {
+          "level": "L3",
+          "text": "内外部动机可转化。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于教育部311教育学专业基础考试大纲（公开版）与公开权威资料（如《学记》、各教育家思想综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "education-psychology-010",
+      "title": "归因理论",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "韦纳(B.Weiner)将成败归因分为三维度（内外、稳定/不稳定、可控/不可控）与六因素；引导学生把失败归于努力（可控、不稳定）更有利。",
+      "prerequisites": [
+        "education-psychology-009"
+      ],
+      "misconceptions": [
+        "把失败全归能力",
+        "忽视可控性维度"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "努力是可控不稳定因素。"
+        },
+        {
+          "level": "L2",
+          "text": "能力是稳定不可控。"
+        },
+        {
+          "level": "L3",
+          "text": "引导学生归因为努力。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于教育部311教育学专业基础考试大纲（公开版）与公开权威资料（如《学记》、各教育家思想综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "education-psychology-011",
+      "title": "自我效能感",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "班杜拉提出自我效能感：个体对完成某任务的信心；来源有成败经验、替代经验、言语说服、情绪生理状态。",
+      "prerequisites": [
+        "education-psychology-008"
+      ],
+      "misconceptions": [
+        "把自我效能当一般自尊",
+        "忽视来源"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "自我效能针对具体任务。"
+        },
+        {
+          "level": "L2",
+          "text": "成功经验最能提升效能。"
+        },
+        {
+          "level": "L3",
+          "text": "区别于泛化自尊。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于教育部311教育学专业基础考试大纲（公开版）与公开权威资料（如《学记》、各教育家思想综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "education-psychology-012",
+      "title": "知识的学习与表征",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "知识分陈述性（是什么）与程序性（怎么做）；程序性知识经陈述化阶段到自动化，以产生式表征。",
+      "prerequisites": [
+        "education-psychology-004"
+      ],
+      "misconceptions": [
+        "混淆两类知识",
+        "忽视自动化"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "'是什么'vs'怎么做'。"
+        },
+        {
+          "level": "L2",
+          "text": "程序性知识靠练习自动化。"
+        },
+        {
+          "level": "L3",
+          "text": "产生式是程序知识单元。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于教育部311教育学专业基础考试大纲（公开版）与公开权威资料（如《学记》、各教育家思想综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "education-psychology-013",
+      "title": "技能形成",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "技能分操作技能与心智技能；心智技能形成经原型定向、原型操作、原型内化（加里培林），存在泛化到分化的练习曲线。",
+      "prerequisites": [
+        "education-psychology-012"
+      ],
+      "misconceptions": [
+        "混淆心智与操作",
+        "忽视练习曲线"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "心智技能三阶段是考点。"
+        },
+        {
+          "level": "L2",
+          "text": "练习曲线先快后慢有高原期。"
+        },
+        {
+          "level": "L3",
+          "text": "区分两类技能。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于教育部311教育学专业基础考试大纲（公开版）与公开权威资料（如《学记》、各教育家思想综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "education-psychology-014",
+      "title": "学习迁移",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "迁移指一种学习影响另一种；分正/负、近/远、横向/纵向；形式训练说、共同要素说（桑代克）、概括化理论（贾德）、关系转换说（苛勒）解释其机制。",
+      "prerequisites": [
+        "education-psychology-004"
+      ],
+      "misconceptions": [
+        "认为迁移自动发生",
+        "混淆各理论"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "共同要素说强调情境相似。"
+        },
+        {
+          "level": "L2",
+          "text": "贾德重概括。"
+        },
+        {
+          "level": "L3",
+          "text": "正迁移要促进。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于教育部311教育学专业基础考试大纲（公开版）与公开权威资料（如《学记》、各教育家思想综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "education-psychology-015",
+      "title": "问题解决与创造性",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "问题解决经历发现问题—明确问题—提出假设—检验假设；创造性以发散思维为核心，受动机、个性、环境等影响。",
+      "prerequisites": [
+        "education-psychology-013"
+      ],
+      "misconceptions": [
+        "把创造性等同智商",
+        "忽视过程阶段"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "四阶段是常考点。"
+        },
+        {
+          "level": "L2",
+          "text": "发散思维是创造性核心。"
+        },
+        {
+          "level": "L3",
+          "text": "过程比结果更关键。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于教育部311教育学专业基础考试大纲（公开版）与公开权威资料（如《学记》、各教育家思想综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "education-psychology-016",
+      "title": "态度与品德学习",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "品德结构含道德认识、情感、意志、行为；科尔伯格道德发展三水平六阶段（前习俗/习俗/后习俗）；班杜拉与皮亚杰均有相关理论。",
+      "prerequisites": [
+        "education-psychology-003"
+      ],
+      "misconceptions": [
+        "把品德当纯认知",
+        "混淆三水平"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "三水平六阶段是重点。"
+        },
+        {
+          "level": "L2",
+          "text": "皮亚杰重他律到自律。"
+        },
+        {
+          "level": "L3",
+          "text": "知情意行统一。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于教育部311教育学专业基础考试大纲（公开版）与公开权威资料（如《学记》、各教育家思想综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "education-psychology-017",
+      "title": "加涅学习层级与教学事件",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "加涅将学习结果分为言语信息、智慧技能、认知策略、动作技能、态度五类；提出学习的信息加工八阶段与相应教学事件。",
+      "prerequisites": [
+        "education-psychology-001"
+      ],
+      "misconceptions": [
+        "混淆学习结果类别",
+        "忽视教学事件"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "五类学习结果是考点。"
+        },
+        {
+          "level": "L2",
+          "text": "八阶段对应教学事件。"
+        },
+        {
+          "level": "L3",
+          "text": "智慧技能可再分层级。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于教育部311教育学专业基础考试大纲（公开版）与公开权威资料（如《学记》、各教育家思想综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "education-psychology-018",
+      "title": "心智技能原型理论",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "加里培林提出心智技能按阶段形成：活动定向、物质/物质化、出声外部言语、无声外部言语、内部言语。",
+      "prerequisites": [
+        "education-psychology-013"
+      ],
+      "misconceptions": [
+        "跳步理解内化",
+        "混淆阶段顺序"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "五阶段顺序不可乱。"
+        },
+        {
+          "level": "L2",
+          "text": "内部言语是终点。"
+        },
+        {
+          "level": "L3",
+          "text": "原型内化是核心。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于教育部311教育学专业基础考试大纲（公开版）与公开权威资料（如《学记》、各教育家思想综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "education-psychology-019",
+      "title": "学习策略",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "学习策略含认知策略（复述、精细加工、组织）、元认知策略（计划、监视、调节）和资源管理策略；元认知是对认知的认知。",
+      "prerequisites": [
+        "education-psychology-012"
+      ],
+      "misconceptions": [
+        "把元认知当普通认知",
+        "忽视资源管理"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "元认知=对认知的监控。"
+        },
+        {
+          "level": "L2",
+          "text": "组织策略如提纲图表。"
+        },
+        {
+          "level": "L3",
+          "text": "策略可教可迁移。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于教育部311教育学专业基础考试大纲（公开版）与公开权威资料（如《学记》、各教育家思想综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "education-psychology-020",
+      "title": "个别差异与教育",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "学生在智力、认知风格、性格上存在差异；教学应因材施教，提供多样化路径与支架，兼顾公平与效能。",
+      "prerequisites": [
+        "education-psychology-003"
+      ],
+      "misconceptions": [
+        "用同一方式教所有人",
+        "忽视差异价值"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "差异是客观存在。"
+        },
+        {
+          "level": "L2",
+          "text": "因材施教呼应维果茨基。"
+        },
+        {
+          "level": "L3",
+          "text": "差异不是缺陷。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (教育学311)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于教育部311教育学专业基础考试大纲（公开版）与公开权威资料（如《学记》、各教育家思想综述）核对事实；不含任何真题原文。"
+      }
+    }
+  ]
+}

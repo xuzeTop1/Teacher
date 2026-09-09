@@ -1,0 +1,686 @@
+{
+  "subject": "psychology",
+  "course": "psychology-general",
+  "chapter": "psychology-general",
+  "status": "draft",
+  "nodes": [
+    {
+      "id": "psychology-general-001",
+      "title": "心理学的研究对象与任务",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "心理学研究心理与行为及其规律；基本任务在于描述、解释、预测和调控行为，兼具基础科学与应用科学属性。",
+      "prerequisites": [],
+      "misconceptions": [
+        "把心理学等同于常识",
+        "认为心理学只研究异常"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个概念的核心词是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "试着用自己的话复述它。"
+        },
+        {
+          "level": "L3",
+          "text": "先把定义拆成'对象+特征'两部分。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "psychology-general-002",
+      "title": "心理的神经生理基础",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "心理是脑的机能：神经元通过突触传递信息，中枢神经系（脑与脊髓）与周围神经系统协同；大脑皮层各叶分管感觉、运动、语言等功能。",
+      "prerequisites": [
+        "psychology-general-001"
+      ],
+      "misconceptions": [
+        "身心二元割裂",
+        "认为某心理功能仅由单点决定"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "它和我们之前学的哪个概念有关？"
+        },
+        {
+          "level": "L2",
+          "text": "找出相似与不同。"
+        },
+        {
+          "level": "L3",
+          "text": "用对比表梳理二者关系。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "psychology-general-003",
+      "title": "感觉概述：感受性与感觉阈限",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "感觉是对直接作用于感官的刺激的反映；感受性用感觉阈限衡量，二者成反比；有绝对阈限与差别阈限之分。",
+      "prerequisites": [
+        "psychology-general-002"
+      ],
+      "misconceptions": [
+        "把感受性与阈限混同",
+        "忽视差别阈限"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个现象在生活中能找到例子吗？"
+        },
+        {
+          "level": "L2",
+          "text": "举例能帮你检验理解。"
+        },
+        {
+          "level": "L3",
+          "text": "抽象规律要落到具体情境。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "psychology-general-004",
+      "title": "视觉与听觉",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "视觉依赖光波（波长辨色、振幅辨明度）；听觉依赖声波（频率辨音高、振幅辨响度）；二者均有专门的感受器与皮层区。",
+      "prerequisites": [
+        "psychology-general-003"
+      ],
+      "misconceptions": [
+        "混淆频率与振幅的含义",
+        "认为听觉仅靠鼓膜"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "它的前提条件是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "没有条件会怎样？"
+        },
+        {
+          "level": "L3",
+          "text": "先界定适用范围再下结论。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "psychology-general-005",
+      "title": "知觉的特性",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "知觉是对事物整体的反映，具选择性、整体性、理解性与恒常性；恒常性使距离/光照变化时对物体的知觉保持稳定。",
+      "prerequisites": [
+        "psychology-general-003"
+      ],
+      "misconceptions": [
+        "把知觉等同于感觉",
+        "忽视理解性的作用"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "谁提出/发现了它？"
+        },
+        {
+          "level": "L2",
+          "text": "提出背景有助于记忆。"
+        },
+        {
+          "level": "L3",
+          "text": "把人物—理论—年份三者绑定。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "psychology-general-006",
+      "title": "意识与注意",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "注意是心理活动对一定对象的指向与集中，是伴随状态而非独立心理过程；过滤器理论（如瓶颈模型）解释注意的选择机制。",
+      "prerequisites": [
+        "psychology-general-005"
+      ],
+      "misconceptions": [
+        "认为注意是独立过程",
+        "把集中与选择割裂"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "它回答的是'是什么'还是'为什么'？"
+        },
+        {
+          "level": "L2",
+          "text": "区分描述与解释。"
+        },
+        {
+          "level": "L3",
+          "text": "描述事实之后才谈机制。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "psychology-general-007",
+      "title": "记忆系统：感觉/短时/长时记忆",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "记忆分感觉记忆（容量大、极短）、短时记忆（容量约$7\\pm2$组块）、长时记忆（容量几乎无限）；信息经注意与复述在不同系统间转移。",
+      "prerequisites": [
+        "psychology-general-006"
+      ],
+      "misconceptions": [
+        "混淆短时与长时容量",
+        "忽视组块化作用"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "测量的指标是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "如何用实验验证？"
+        },
+        {
+          "level": "L3",
+          "text": "可操作性定义是心理学关键。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "psychology-general-008",
+      "title": "遗忘规律（艾宾浩斯）",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "艾宾浩斯1885年以无意义音节自证，发现遗忘先快后慢、呈负加速曲线；前摄抑制与倒摄抑制是两种重要的遗忘干扰机制。",
+      "prerequisites": [
+        "psychology-general-007"
+      ],
+      "misconceptions": [
+        "认为遗忘匀速发生",
+        "混淆两种抑制方向"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "容易被误解成什么？"
+        },
+        {
+          "level": "L2",
+          "text": "典型误区在何处？"
+        },
+        {
+          "level": "L3",
+          "text": "先列误区再逐条辨析。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "psychology-general-009",
+      "title": "思维与问题解决",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "思维是借助表象与概念对客观事物间接概括的反映；问题解决受表征、定势、功能固着等影响，可采用算法式或启发式策略。",
+      "prerequisites": [
+        "psychology-general-007"
+      ],
+      "misconceptions": [
+        "把思维等同于记忆",
+        "忽视定势的双面性"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个概念的核心词是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "试着用自己的话复述它。"
+        },
+        {
+          "level": "L3",
+          "text": "先把定义拆成'对象+特征'两部分。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "psychology-general-010",
+      "title": "语言与言语",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "语言是符号系统，言语是语言的实际运用；二者关系中语言制约言语、言语丰富语言；乔姆斯基提出先天语言获得装置（LAD）。",
+      "prerequisites": [
+        "psychology-general-009"
+      ],
+      "misconceptions": [
+        "混淆语言与言语",
+        "忽视先天因素"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "它和我们之前学的哪个概念有关？"
+        },
+        {
+          "level": "L2",
+          "text": "找出相似与不同。"
+        },
+        {
+          "level": "L3",
+          "text": "用对比表梳理二者关系。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "psychology-general-011",
+      "title": "需要与动机（马斯洛层次）",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "动机由需要驱动；马斯洛需要层次从生理、安全、归属与爱、尊重到自我实现逐级递进，低层满足后才更关注高层。",
+      "prerequisites": [
+        "psychology-general-006"
+      ],
+      "misconceptions": [
+        "认为层次必须严格逐级",
+        "把动机等同于需要"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个现象在生活中能找到例子吗？"
+        },
+        {
+          "level": "L2",
+          "text": "举例能帮你检验理解。"
+        },
+        {
+          "level": "L3",
+          "text": "抽象规律要落到具体情境。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "psychology-general-012",
+      "title": "情绪理论",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "詹姆斯-兰格认为情绪源于身体变化（先生理后情绪）；坎农-巴德主张丘脑同时引发生理与情绪；认知评价理论强调对刺激的解释决定情绪。",
+      "prerequisites": [
+        "psychology-general-006"
+      ],
+      "misconceptions": [
+        "混淆三种理论顺序",
+        "忽视认知评价作用"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "它的前提条件是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "没有条件会怎样？"
+        },
+        {
+          "level": "L3",
+          "text": "先界定适用范围再下结论。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "psychology-general-013",
+      "title": "意志与动机冲突",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "意志是有意识地确立目标并克服困难实现目标；动机冲突分双趋、双避、趋避与多重趋避四种类型。",
+      "prerequisites": [
+        "psychology-general-011"
+      ],
+      "misconceptions": [
+        "把冲突类型记混",
+        "认为意志无冲突"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "谁提出/发现了它？"
+        },
+        {
+          "level": "L2",
+          "text": "提出背景有助于记忆。"
+        },
+        {
+          "level": "L3",
+          "text": "把人物—理论—年份三者绑定。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "psychology-general-014",
+      "title": "智力与能力（主要理论）",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "斯皮尔曼提出$G$（一般）与$S$（特殊）因素；吉尔福特以内容$\\times$操作$\\times$产物构成立体模型；斯滕伯格三元智力含成分、经验、情境三方面。",
+      "prerequisites": [
+        "psychology-general-007"
+      ],
+      "misconceptions": [
+        "把G因素与多元论对立",
+        "混淆三维模型维度"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "它回答的是'是什么'还是'为什么'？"
+        },
+        {
+          "level": "L2",
+          "text": "区分描述与解释。"
+        },
+        {
+          "level": "L3",
+          "text": "描述事实之后才谈机制。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "psychology-general-015",
+      "title": "智力测验与智商",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "比纳-西蒙首创智力测验；智商（IQ）早期为心理年龄/实足年龄$\\times100$，现代多用离差智商（以同龄常模标准差表示）。",
+      "prerequisites": [
+        "psychology-general-014"
+      ],
+      "misconceptions": [
+        "把比率与离差智商混同",
+        "认为IQ固定不变"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "测量的指标是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "如何用实验验证？"
+        },
+        {
+          "level": "L3",
+          "text": "可操作性定义是心理学关键。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "psychology-general-016",
+      "title": "人格概述",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "人格是稳定的行为倾向与内在特质的总和；研究取向分特质论、类型论、精神分析与人本主义等。",
+      "prerequisites": [
+        "psychology-general-013"
+      ],
+      "misconceptions": [
+        "把人格等同于性格",
+        "忽视稳定性"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "容易被误解成什么？"
+        },
+        {
+          "level": "L2",
+          "text": "典型误区在何处？"
+        },
+        {
+          "level": "L3",
+          "text": "先列误区再逐条辨析。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "psychology-general-017",
+      "title": "大五人格模型",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "大五（OCEAN）含开放性、尽责性、外向性、宜人性、神经质五个相对稳定维度，是特质流派中被广泛支持的框架。",
+      "prerequisites": [
+        "psychology-general-016"
+      ],
+      "misconceptions": [
+        "记不全五维度",
+        "混淆维度含义"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个概念的核心词是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "试着用自己的话复述它。"
+        },
+        {
+          "level": "L3",
+          "text": "先把定义拆成'对象+特征'两部分。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "psychology-general-018",
+      "title": "精神分析人格论（弗洛伊德）",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "弗洛伊德以本我（快乐原则）、自我（现实原则）、超我（道德原则）解释人格结构，并提出压抑、投射等自我防御机制。",
+      "prerequisites": [
+        "psychology-general-016"
+      ],
+      "misconceptions": [
+        "混淆三我原则",
+        "把防御机制当病态"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "它和我们之前学的哪个概念有关？"
+        },
+        {
+          "level": "L2",
+          "text": "找出相似与不同。"
+        },
+        {
+          "level": "L3",
+          "text": "用对比表梳理二者关系。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "psychology-general-019",
+      "title": "人本主义人格论",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "罗杰斯强调无条件积极关注与自我概念，马斯洛以自我实现为人格发展高峰；该取向关注人的潜能与积极性。",
+      "prerequisites": [
+        "psychology-general-016"
+      ],
+      "misconceptions": [
+        "把人本与精神分析混同",
+        "忽视自我概念"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个现象在生活中能找到例子吗？"
+        },
+        {
+          "level": "L2",
+          "text": "举例能帮你检验理解。"
+        },
+        {
+          "level": "L3",
+          "text": "抽象规律要落到具体情境。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "psychology-general-020",
+      "title": "社会化与人格发展",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "社会化是个体学习社会规范、形成社会自我的过程；家庭、同伴、学校与文化共同塑造成年时的稳定人格倾向。",
+      "prerequisites": [
+        "psychology-general-019"
+      ],
+      "misconceptions": [
+        "把社会化限于童年",
+        "忽视文化作用"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "它的前提条件是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "没有条件会怎样？"
+        },
+        {
+          "level": "L3",
+          "text": "先界定适用范围再下结论。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (心理学312（统考）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    }
+  ]
+}

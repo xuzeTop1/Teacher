@@ -1,0 +1,847 @@
+{
+  "subject": "english",
+  "chapter": "english-translation",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "eng-translation-q-001",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "这本书被鲁迅写了。",
+        "这本书是鲁迅写的。",
+        "这本书鲁迅写了。",
+        "这本书由鲁迅写了。"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断是否是被动语态（be + done）？"
+        },
+        {
+          "level": "L2",
+          "text": "然后想中文怎么表达更自然？通常不用\"被\"字"
+        },
+        {
+          "level": "L3",
+          "text": "最后选择合适的转换方法（省略\"被\"字）"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-translation-001"
+      ],
+      "source": {
+        "title": "翻译",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于翻译练习设计，考查被动语态的中文主动化转换。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "找主干：The book was written by Lu Xun. 主语The book，谓语was written，by Lu Xun是施动者。",
+        "被动语态处理：中文少用\"被\"字，用\"是...的\"结构：这本书是鲁迅写的。",
+        "选B；A（\"被鲁迅写了\"生硬）；C（\"鲁迅写了\"省略了\"是...的\"结构，不够完整）；D（\"由鲁迅写了\"搭配不当）。"
+      ],
+      "content": "翻译下面句子，注意被动语态的转换：\n\n\"The book was written by Lu Xun.\"\n\n(A) 这本书被鲁迅写了。\n(B) 这本书是鲁迅写的。\n(C) 这本书鲁迅写了。\n(D) 这本书由鲁迅写了。"
+    },
+    {
+      "id": "eng-translation-q-002",
+      "type": "solution",
+      "difficulty": 2,
+      "options": [
+        "他说了他明天会来。",
+        "他说/他明天会来。",
+        "他说明天他会来。",
+        "他说：他明天会来。"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先找到句子的主干（主谓宾）？"
+        },
+        {
+          "level": "L2",
+          "text": "然后在逗号、从句连接词处断句？"
+        },
+        {
+          "level": "L3",
+          "text": "最后按中文习惯调整语序（顺译法）"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-translation-002"
+      ],
+      "source": {
+        "title": "翻译",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于翻译练习设计，考查长难句断句与语序重组。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "找主干：He said + that引导的宾语从句。从句he would come tomorrow。",
+        "断句处理：宾语从句较短，可直接顺译，不用断句。",
+        "选B（他说/他明天会来，断句清晰）；A（\"说了\"语气不当）；C（语序调整不当）；D（直接引语需用冒号，但原文是间接引语）。"
+      ],
+      "content": "翻译下面句子，注意长难句的断句与语序重组：\n\n\"He said that he would come tomorrow.\"\n\n(A) 他说了他明天会来。\n(B) 他说/他明天会来。\n(C) 他说明天他会来。\n(D) 他说：他明天会来。"
+    },
+    {
+      "id": "eng-translation-q-003",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "教育的重要性不能被忽视。",
+        "教育的重要价值/重要性不容忽视。",
+        "教育很重要，不能被忽视。",
+        "教育的重要性/重要意义不能被忽视。"
+      ],
+      "answer": "D",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断是否是抽象名词（importance）？"
+        },
+        {
+          "level": "L2",
+          "text": "然后想中文怎么表达更具体、更自然？"
+        },
+        {
+          "level": "L3",
+          "text": "最后选择合适的翻译方法（具体化为\"重要性\"或\"重要意义\"）"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-translation-004"
+      ],
+      "source": {
+        "title": "翻译",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于翻译练习设计，考查抽象名词的具体化翻译。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "找主干：The importance of education cannot be ignored. 主语The importance，谓语cannot be ignored。",
+        "抽象名词importance翻译：可译为\"重要性\"或\"重要价值\"，不宜直译为\"重要\"。",
+        "选D（重要性/重要意义不能被忽视）；A（\"被忽视\"生硬）；B（\"重要价值\"更具体但缺\"重要性\"）；C（断句不当）。"
+      ],
+      "content": "翻译下面句子，注意抽象名词的具体化翻译：\n\n\"The importance of education cannot be ignored.\"\n\n(A) 教育的重要性不能被忽视。\n(B) 教育的重要价值/重要性不容忽视。\n(C) 教育很重要，不能被忽视。\n(D) 教育的重要性/重要意义不能被忽视。"
+    },
+    {
+      "id": "eng-translation-q-004",
+      "type": "solution",
+      "difficulty": 2,
+      "options": [
+        "他给了一个演讲。",
+        "他发表了演讲。",
+        "他做了一个演讲。",
+        "他进行了演讲。"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断是否需要词性转换（speech名词 $\\to$发表演讲，名词转动词）？"
+        },
+        {
+          "level": "L2",
+          "text": "然后想中文怎么表达更自然？"
+        },
+        {
+          "level": "L3",
+          "text": "最后选择合适的翻译方法（名词转动词）"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-translation-005"
+      ],
+      "source": {
+        "title": "翻译",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于翻译练习设计，考查词性转换翻译法。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "找主干：He gave a speech. 主语He，谓语gave，宾语a speech。",
+        "词性转换：gave a speech中speech是名词，中文习惯说\"发表演讲\"（名词转动词）。",
+        "选B（他发表了演讲）；A（\"给了一个演讲\"直译生硬）；C（\"做了一个演讲\"口语化）；D（\"进行了演讲\"搭配不当）。"
+      ],
+      "content": "翻译下面句子，注意词性转换：\n\n\"He gave a speech.\"\n\n(A) 他给了一个演讲。\n(B) 他发表了演讲。\n(C) 他做了一个演讲。\n(D) 他进行了演讲。"
+    },
+    {
+      "id": "eng-translation-q-005",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "我有一个朋友他住在北京。",
+        "我有一个住在北京的朋友。",
+        "我有一个朋友，他住在北京。",
+        "我有一个朋友住在北京。"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断定语从句是限制性还是非限制性？"
+        },
+        {
+          "level": "L2",
+          "text": "然后看定语从句的长度（短则前置，长则后置）"
+        },
+        {
+          "level": "L3",
+          "text": "最后选择合适的翻译方法（前置法）"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-translation-006"
+      ],
+      "source": {
+        "title": "翻译",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于翻译练习设计，考查定语从句的翻译方法。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "找主干：I have a friend + who引导的定语从句。从句who lives in Beijing修饰friend。",
+        "定语从句翻译：从句较短，用前置法翻译成\"住在北京的朋友\"。",
+        "选B（我有一个住在北京的朋友）；A（断句不当）；C（\"他住在北京\"是后置法，但原文从句短，前置更简洁）；D（缺\"的\"字）。"
+      ],
+      "content": "翻译下面句子，注意定语从句的翻译：\n\n\"I have a friend who lives in Beijing.\"\n\n(A) 我有一个朋友他住在北京。\n(B) 我有一个住在北京的朋友。\n(C) 我有一个朋友，他住在北京。\n(D) 我有一个朋友住在北京。"
+    },
+    {
+      "id": "eng-translation-q-006",
+      "type": "solution",
+      "difficulty": 2,
+      "options": [
+        "当他到达时，我正在读书。",
+        "他到达时，我正在读书。",
+        "我正在读书当他到达时。",
+        "他到达，我正在读书。"
+      ],
+      "answer": "A",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断是什么类型的状语从句（时间状语从句）？"
+        },
+        {
+          "level": "L2",
+          "text": "然后想中文怎么表达更自然？通常状语从句在主句前"
+        },
+        {
+          "level": "L3",
+          "text": "最后选择合适的连词（当...时）"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-translation-007"
+      ],
+      "source": {
+        "title": "翻译",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于翻译练习设计，考查状语从句的翻译方法。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "找主干：When he arrived, I was reading. 时间状语从句+主句。",
+        "时间状语从句翻译：When he arrived翻译为\"当他到达时\"，放在句首。",
+        "选A（当他到达时，我正在读书）；B（省略\"当\"字不够正式）；C（语序颠倒）；D（缺\"时\"字）。"
+      ],
+      "content": "翻译下面句子，注意状语从句的翻译：\n\n\"When he arrived, I was reading.\"\n\n(A) 当他到达时，我正在读书。\n(B) 他到达时，我正在读书。\n(C) 我正在读书当他到达时。\n(D) 他到达，我正在读书。"
+    },
+    {
+      "id": "eng-translation-q-007",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "他所说的是真的。",
+        "他所说的是真的吗？",
+        "他所说的是真的吗？",
+        "他所说的是真的吗？"
+      ],
+      "answer": "A",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断是什么类型的名词性从句（主语从句）？"
+        },
+        {
+          "level": "L2",
+          "text": "然后想中文怎么表达更自然？通常用\"...的是...\"结构"
+        },
+        {
+          "level": "L3",
+          "text": "最后注意主语从句的翻译方法"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-translation-008"
+      ],
+      "source": {
+        "title": "翻译",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于翻译练习设计，考查名词性从句的翻译方法。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "找主干：What he said is true. 主语从句What he said + 谓语is + 表语true。",
+        "主语从句翻译：What he said=他所说的，整个从句作主语。",
+        "选A（他所说的是真的）；B、C、D都是疑问句，但原文是陈述句。"
+      ],
+      "content": "翻译下面句子，注意名词性从句的翻译：\n\n\"What he said is true.\"\n\n(A) 他所说的是真的。\n(B) 他所说的是真的吗？\n(C) 他所说的是真的吗？\n(D) 他所说的是真的吗？"
+    },
+    {
+      "id": "eng-translation-q-008",
+      "type": "solution",
+      "difficulty": 2,
+      "options": [
+        "每个人都同意这个观点。",
+        "不是每个人都同意这个观点。",
+        "每个人都不同意这个观点。",
+        "没有人同意这个观点。"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断是什么类型的否定（部分否定）？"
+        },
+        {
+          "level": "L2",
+          "text": "然后想中文怎么表达更自然？"
+        },
+        {
+          "level": "L3",
+          "text": "最后注意not everyone = 不是每个人都（部分否定）"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-translation-009"
+      ],
+      "source": {
+        "title": "翻译",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于翻译练习设计，考查否定句的翻译方法。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "找主干：Not everyone agrees with this view. 否定词Not + 主语everyone + 谓语agrees。",
+        "部分否定：Not everyone=不是每个人（部分否定，非全部否定）。",
+        "选$B$（不是每个人都同意这个观点）；$A$（完全肯定，忽略Not）；$C$（全部否定，Not everyone$\\neq$everyone not）；$D$（全部否定，过于绝对）。"
+      ],
+      "content": "翻译下面句子，注意否定句的翻译：\n\n\"Not everyone agrees with this view.\"\n\n(A) 每个人都同意这个观点。\n(B) 不是每个人都同意这个观点。\n(C) 每个人都不同意这个观点。\n(D) 没有人同意这个观点。"
+    },
+    {
+      "id": "eng-translation-q-009",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "他比我高。",
+        "他高比我。",
+        "他是高比我。",
+        "他高过我。"
+      ],
+      "answer": "A",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断是什么类型的比较结构（比较级）？"
+        },
+        {
+          "level": "L2",
+          "text": "然后想中文怎么表达更自然？通常用\"比...更...\"结构"
+        },
+        {
+          "level": "L3",
+          "text": "最后注意比较级的翻译方法"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-translation-010"
+      ],
+      "source": {
+        "title": "翻译",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于翻译练习设计，考查比较结构的翻译方法。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "找主干：He is taller than me. 主语He，系动词is，表语taller，比较状语than me。",
+        "比较结构翻译：taller than me=比我高，按中文习惯把比较对象放前面。",
+        "选A（他比我高）；B（\"高比我\"语序错误）；C（\"是高比我\"多余）；D（\"高过我\"口语化但不够规范）。"
+      ],
+      "content": "翻译下面句子，注意比较结构的翻译：\n\n\"He is taller than me.\"\n\n(A) 他比我高。\n(B) 他高比我。\n(C) 他是高比我。\n(D) 他高过我。"
+    },
+    {
+      "id": "eng-translation-q-010",
+      "type": "solution",
+      "difficulty": 2,
+      "options": [
+        "它是重要的学习英语。",
+        "学习英语很重要。",
+        "它很重要学习英语。",
+        "学习英语是重要的它。"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断it是否是形式主语？"
+        },
+        {
+          "level": "L2",
+          "text": "然后找到真正的主语（to study English）"
+        },
+        {
+          "level": "L3",
+          "text": "最后把真正的主语提前翻译，省略it不译"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-translation-011"
+      ],
+      "source": {
+        "title": "翻译",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于翻译练习设计，考查it作形式主语/宾语的翻译。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "找主干：It is important to study English. It是形式主语，真正主语是to study English。",
+        "形式主语翻译：中文不保留\"It\"，把真正主语提前：学习英语很重要。",
+        "选B（学习英语很重要）；A（\"它是重要的学习英语\"直译生硬）；C（语序错误）；D（语序混乱）。"
+      ],
+      "content": "翻译下面句子，注意it作形式主语的翻译：\n\n\"It is important to study English.\"\n\n(A) 它是重要的学习英语。\n(B) 学习英语很重要。\n(C) 它很重要学习英语。\n(D) 学习英语是重要的它。"
+    },
+    {
+      "id": "eng-translation-q-011",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "被有本书在桌子上。",
+        "桌子上有本书。",
+        "有本书在桌子上。",
+        "存在本书在桌子上。"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断是否是there be句型？"
+        },
+        {
+          "level": "L2",
+          "text": "然后想中文怎么表达更自然？通常用\"有\"、\"存在\"等"
+        },
+        {
+          "level": "L3",
+          "text": "最后注意there be句型的翻译方法"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-translation-012"
+      ],
+      "source": {
+        "title": "翻译",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于翻译练习设计，考查there be句型的翻译。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "找主干：There is a book on the table. There be句型，主语a book，地点状语on the table。",
+        "There be翻译：中文习惯说\"有\"，地点状语放句首。",
+        "选B（桌子上有本书）；A（\"被有\"不存在）；C（缺\"桌子\"作主语）；D（\"存在\"太书面）。"
+      ],
+      "content": "翻译下面句子，注意there be句型的翻译：\n\n\"There is a book on the table.\"\n\n(A) 被有本书在桌子上。\n(B) 桌子上有本书。\n(C) 有本书在桌子上。\n(D) 存在本书在桌子上。"
+    },
+    {
+      "id": "eng-translation-q-012",
+      "type": "solution",
+      "difficulty": 2,
+      "options": [
+        "这项政策，许多专家说，将会失败。",
+        "许多专家说，这项政策将会失败。",
+        "这项政策将会失败，许多专家说。",
+        "这项政策，将会失败，许多专家说。"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先找到插入语（两个逗号之间的内容）"
+        },
+        {
+          "level": "L2",
+          "text": "然后判断是否可以提前翻译？"
+        },
+        {
+          "level": "L3",
+          "text": "最后选择合适的翻译方法（提前插入语，更自然）"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-translation-013"
+      ],
+      "source": {
+        "title": "翻译",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于翻译练习设计，考查插入语的翻译方法。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "找主干：The policy will fail. 插入语many experts say在两个逗号之间。",
+        "插入语翻译：中文习惯把插入语放在句首或句末，不放在句中。",
+        "选B（许多专家说，这项政策将会失败）；A（保留英文插入语位置，不符合中文习惯）；C和D语序不当。"
+      ],
+      "content": "翻译下面句子，注意插入语的翻译：\n\n\"The policy, many experts say, will fail.\"\n\n(A) 这项政策，许多专家说，将会失败。\n(B) 许多专家说，这项政策将会失败。\n(C) 这项政策将会失败，许多专家说。\n(D) 这项政策，将会失败，许多专家说。"
+    },
+    {
+      "id": "eng-translation-q-013",
+      "type": "concept_check",
+      "difficulty": 3,
+      "options": [
+        "这项研究，耗时10年完成并涉及1000名参与者，表明在线教育是有效的。",
+        "这项耗时10年完成并涉及1000名参与者的研究表明，在线教育是有效的。",
+        "研究表明在线教育是有效的，这项研究耗时10年完成并涉及1000名参与者。",
+        "这项研究耗时10年完成并涉及1000名参与者，它表明在线教育是有效的。"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先断句（在逗号、从句连接词处断开）"
+        },
+        {
+          "level": "L2",
+          "text": "然后重组（按中文习惯调整语序，修饰成分在前，主干在后）"
+        },
+        {
+          "level": "L3",
+          "text": "最后润色（让译文更流畅、自然）"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-translation-014"
+      ],
+      "source": {
+        "title": "翻译",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于翻译练习设计，考查长难句的整体翻译策略。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "找主干：The study shows that online education is effective. 插入语which took 10 years...在主语后。",
+        "长难句处理：先拆分，插入语独立成句，主句单独翻译。",
+        "选B（这项耗时10年完成并涉及1000名参与者的研究表明在线教育是有效的）；A（插入语位置不当）；C和D结构混乱。"
+      ],
+      "content": "翻译下面长难句，注意整体翻译策略：\n\n\"The study, which took 10 years to complete and involved 1000 participants, shows that online education is effective.\"\n\n(A) 这项研究，耗时10年完成并涉及1000名参与者，表明在线教育是有效的。\n(B) 这项耗时10年完成并涉及1000名参与者的研究表明，在线教育是有效的。\n(C) 研究表明在线教育是有效的，这项研究耗时10年完成并涉及1000名参与者。\n(D) 这项研究耗时10年完成并涉及1000名参与者，它表明在线教育是有效的。"
+    },
+    {
+      "id": "eng-translation-q-014",
+      "type": "solution",
+      "difficulty": 2,
+      "options": [
+        "他是一个老师。",
+        "他是老师。",
+        "他是老师一个。",
+        "他是老师一个。"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断是否需要增词或减词？"
+        },
+        {
+          "level": "L2",
+          "text": "然后想中文怎么表达更简洁？通常减少冠词（a, an, the）"
+        },
+        {
+          "level": "L3",
+          "text": "最后选择合适的翻译方法（减词法：减少\"一个\"）"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-translation-015"
+      ],
+      "source": {
+        "title": "翻译",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于翻译练习设计，考查翻译中的增词法与减词法。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "找主干：He is a teacher. 简单的主系表结构。",
+        "增词法与减词法：中文习惯说\"他是老师\"（减掉\"一个\"），更简洁自然。",
+        "选B（他是老师）；A（\"一个老师\"多余）；C和D（\"老师一个\"语序错误）。"
+      ],
+      "content": "翻译下面句子，注意增词法与减词法：\n\n\"He is a teacher.\"\n\n(A) 他是一个老师。\n(B) 他是老师。\n(C) 他是老师一个。\n(D) 他是老师一个。"
+    },
+    {
+      "id": "eng-translation-q-015",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "他不是没意识到这个问题。",
+        "他意识到了这个问题。",
+        "他没有意识到这个问题。",
+        "他是意识到这个问题的。"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断是否需要正话反说或反话正说？"
+        },
+        {
+          "level": "L2",
+          "text": "然后想中文怎么表达更自然？"
+        },
+        {
+          "level": "L3",
+          "text": "最后选择合适的翻译方法（正话反说：not unaware = 意识到）"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-translation-016"
+      ],
+      "source": {
+        "title": "翻译",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于翻译练习设计，考查正话反说与反话正说。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "找主干：He is not unaware of the problem. 双重否定not unaware。",
+        "正话反说：not unaware=意识到（双重否定=肯定）。",
+        "选B（他意识到了这个问题）；A（保留双重否定，不够自然）；C（单重否定，意思相反）；D（\"是...的\"结构不当）。"
+      ],
+      "content": "翻译下面句子，注意正话反说与反话正说：\n\n\"He is not unaware of the problem.\"\n\n(A) 他不是没意识到这个问题。\n(B) 他意识到了这个问题。\n(C) 他没有意识到这个问题。\n(D) 他是意识到这个问题的。"
+    },
+    {
+      "id": "eng-translation-q-016",
+      "type": "solution",
+      "difficulty": 2,
+      "options": [
+        "他是一个老师。他教英语。",
+        "他是一个老师。他教英语。",
+        "他是老师。他教英语。",
+        "他是老师。他教英语。"
+      ],
+      "answer": "C",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先找到指代关系（代词指代）？"
+        },
+        {
+          "level": "L2",
+          "text": "然后想中文怎么表达更清楚？"
+        },
+        {
+          "level": "L3",
+          "text": "最后选择合适的翻译方法（翻译成\"他\"、减少\"一个\"）"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-translation-017"
+      ],
+      "source": {
+        "title": "翻译",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于翻译练习设计，考查指代关系处理。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "找主干：两个简单句He is a teacher和He teaches English。",
+        "指代关系：两个He指同一个人，中文用\"他\"保持一致。",
+        "选C（他是老师。他教英语。）；A和B（\"一个老师\"多余）；D（与C相同，选最简洁的）。"
+      ],
+      "content": "翻译下面句子，注意指代关系处理：\n\n\"He is a teacher. He teaches English.\"\n\n(A) 他是一个老师。他教英语。\n(B) 他是一个老师。他教英语。\n(C) 他是老师。他教英语。\n(D) 他是老师。他教英语。"
+    },
+    {
+      "id": "eng-translation-q-017",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "错误应该被避免。",
+        "我们应该避免错误。",
+        "错误应该避免。",
+        "错误是应该被避免的。"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断是否是被动语态（be + done）？"
+        },
+        {
+          "level": "L2",
+          "text": "然后想中文怎么表达更自然？通常不用\"被\"字"
+        },
+        {
+          "level": "L3",
+          "text": "最后转换成主动语态（找到隐含主语\"我们\"）"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-translation-018"
+      ],
+      "source": {
+        "title": "翻译",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于翻译练习设计，考查语态转换。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "找主干：Mistakes should be avoided. 被动语态should be avoided。",
+        "语态转换：中文少用\"被\"，可转换为主动语态\"我们应该避免错误\"。",
+        "选B（我们应该避免错误）；A（\"被避免\"生硬）；C（缺施动者）；D（\"是...被...的\"结构冗余）。"
+      ],
+      "content": "翻译下面句子，注意语态转换：\n\n\"Mistakes should be avoided.\"\n\n(A) 错误应该被避免。\n(B) 我们应该避免错误。\n(C) 错误应该避免。\n(D) 错误是应该被避免的。"
+    },
+    {
+      "id": "eng-translation-q-018",
+      "type": "solution",
+      "difficulty": 2,
+      "options": [
+        "如果我是你，我会去。",
+        "如果我是你，我就会去。",
+        "我是你，我会去。",
+        "如果我是你，我去。"
+      ],
+      "answer": "A",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断是什么语气（虚拟语气）？"
+        },
+        {
+          "level": "L2",
+          "text": "然后想中文怎么表达更自然？通常用\"如果...就会...\"结构"
+        },
+        {
+          "level": "L3",
+          "text": "最后注意虚拟语气的翻译方法"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-translation-019"
+      ],
+      "source": {
+        "title": "翻译",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于翻译练习设计，考查语气表达。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "找主干：If I were you, I would go. 虚拟语气条件句。",
+        "虚拟语气翻译：If I were you=如果我是你，按顺译法直接翻译。",
+        "选A（如果我是你，我会去。）；B（\"就\"字多余）；C（缺\"如果\"）；D（\"我去\"缺\"会\"字）。"
+      ],
+      "content": "翻译下面句子，注意语气表达：\n\n\"If I were you, I would go.\"\n\n(A) 如果我是你，我会去。\n(B) 如果我是你，我就会去。\n(C) 我是你，我会去。\n(D) 如果我是你，我去。"
+    },
+    {
+      "id": "eng-translation-q-019",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "GDP",
+        "GDP（国内生产总值）",
+        "国内生产总值",
+        "国内生产总值（GDP）"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先判断是否是文化负载词（专有名词）？"
+        },
+        {
+          "level": "L2",
+          "text": "然后想中文怎么表达更准确？"
+        },
+        {
+          "level": "L3",
+          "text": "最后注意专有名词的翻译方法（保留英文缩写，增加中文解释）"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-translation-020"
+      ],
+      "source": {
+        "title": "翻译",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于翻译练习设计，考查文化负载词处理。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "找主干：GDP是专有名词缩写。",
+        "文化负载词处理：首次出现需给出全称解释，GDP（国内生产总值）。",
+        "选B（GDP（国内生产总值））；A（只保留缩写，缺解释）；C（只给中文，缺缩写）；D（中文在前缩写在后，不符合首次出现规范）。"
+      ],
+      "content": "翻译下面句子，注意文化负载词处理：\n\n\"GDP\"\n\n(A) GDP\n(B) GDP（国内生产总值）\n(C) 国内生产总值\n(D) 国内生产总值（GDP）"
+    },
+    {
+      "id": "eng-translation-q-020",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [
+        "科技公司实力的增长受到许多人的欢迎但也引起了担忧。",
+        "科技公司实力的增长受到许多人的欢迎，但也引起了担忧。",
+        "科技公司实力的增长，受到许多人的欢迎，但也引起了担忧。",
+        "科技公司实力的增长受到许多人的欢迎，但也引起了担忧。"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "先断句（在逗号、从句连接词处断开）？"
+        },
+        {
+          "level": "L2",
+          "text": "然后重组（按中文习惯调整语序）？"
+        },
+        {
+          "level": "L3",
+          "text": "最后润色（让译文更流畅、自然）？"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-translation-014"
+      ],
+      "source": {
+        "title": "翻译",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于翻译练习设计，考查长难句的整体翻译策略。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "找主干：The growth of the power...has been welcomed...but also raised concerns. 并列谓语has been welcomed和raised。",
+        "断句处理：在but处断开，前半句讲受欢迎，后半句讲引起担忧。逗号使用需在转折词\"但\"前加逗号。",
+        "选B（转折前有逗号，符合中文标点规范）；A（缺逗号，转折关系不清晰）；C（逗号过多，割裂句子）；D与A相同。"
+      ],
+      "content": "翻译下面长难句，注意整体翻译策略：\n\n\"The growth of the power of the technology companies has been welcomed by many but also raised concerns.\"\n\n(A) 科技公司实力的增长受到许多人的欢迎但也引起了担忧。\n(B) 科技公司实力的增长受到许多人的欢迎，但也引起了担忧。\n(C) 科技公司实力的增长，受到许多人的欢迎，但也引起了担忧。\n(D) 科技公司实力的增长受到许多人的欢迎，但也引起了担忧。"
+    }
+  ]
+}

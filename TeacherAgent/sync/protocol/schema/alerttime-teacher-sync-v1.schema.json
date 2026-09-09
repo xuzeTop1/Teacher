@@ -1,0 +1,322 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://teacher-agent.local/schemas/alerttime-teacher-sync-v1.schema.json",
+  "title": "alerttime-teacher-sync v1",
+  "description": "AlertTime <-> TeacherAgent LAN sync protocol, schemaVersion 1. Both repositories keep an identical copy.",
+  "type": "object",
+  "properties": {
+    "format": { "const": "alerttime-teacher-sync" },
+    "schemaVersion": { "const": 1 },
+    "messageType": { "enum": ["pair", "pairAck", "unpairAck", "snapshot", "snapshotAck", "proposal", "proposalDecision", "decisionAck"] },
+    "deviceId": { "type": "string", "minLength": 8, "maxLength": 64 },
+    "snapshotId": { "type": "string", "minLength": 8, "maxLength": 64 },
+    "generatedAt": { "type": "integer", "minimum": 0 },
+    "appVersion": { "type": "string", "minLength": 1, "maxLength": 64 },
+    "protocolCapabilities": {
+      "type": "object",
+      "properties": {
+        "fullSnapshotV1": { "type": "boolean" },
+        "proposalsV1": { "type": "boolean" }
+      },
+      "additionalProperties": true
+    },
+    "cursor": {
+      "oneOf": [
+        { "type": "null" },
+        { "type": "object", "properties": { "proposalId": { "type": "string" } }, "required": ["proposalId"], "additionalProperties": false }
+      ]
+    },
+    "payload": { "type": "object" }
+  },
+  "required": ["format", "schemaVersion", "messageType", "deviceId", "generatedAt", "payload"],
+  "allOf": [
+    {
+      "if": { "properties": { "messageType": { "const": "snapshot" } }, "required": ["messageType"] },
+      "then": {
+        "properties": {
+          "snapshotId": { "type": "string", "minLength": 8, "maxLength": 64 },
+          "payload": { "$ref": "#/$defs/snapshotPayload" }
+        },
+        "required": ["snapshotId"]
+      }
+    },
+    {
+      "if": { "properties": { "messageType": { "const": "proposal" } }, "required": ["messageType"] },
+      "then": { "properties": { "payload": { "$ref": "#/$defs/proposalsList" } } }
+    },
+    {
+      "if": { "properties": { "messageType": { "const": "proposalDecision" } }, "required": ["messageType"] },
+      "then": { "properties": { "payload": { "$ref": "#/$defs/proposalDecision" } } }
+    }
+  ],
+  "$defs": {
+    "subject": {
+      "type": "object",
+      "properties": {
+        "remoteId": { "type": "string", "minLength": 8, "maxLength": 64 },
+        "name": { "type": "string", "minLength": 1, "maxLength": 100 },
+        "color": { "type": ["string", "null"], "maxLength": 32 },
+        "icon": { "type": ["string", "null"], "maxLength": 64 },
+        "sortOrder": { "type": "integer", "minimum": 0 },
+        "isArchived": { "type": "boolean" },
+        "createdAt": { "type": "integer", "minimum": 0 },
+        "updatedAt": { "type": "integer", "minimum": 0 },
+        "deletedAt": { "type": ["integer", "null"], "minimum": 0 },
+        "examTrackId": { "type": ["string", "null"], "maxLength": 200 },
+        "examSubjectId": { "type": ["string", "null"], "maxLength": 200 },
+        "examModuleId": { "type": ["string", "null"], "maxLength": 200 }
+      },
+      "required": ["remoteId", "name", "createdAt", "updatedAt"],
+      "additionalProperties": true
+    },
+    "weeklyGoal": {
+      "type": "object",
+      "properties": {
+        "remoteId": { "type": "string", "minLength": 8, "maxLength": 64 },
+        "weekStart": { "type": "integer", "minimum": 0 },
+        "title": { "type": "string", "minLength": 1, "maxLength": 200 },
+        "successCriteria": { "type": ["string", "null"], "maxLength": 20000 },
+        "sourceProposalId": { "type": ["string", "null"], "minLength": 8, "maxLength": 64, "pattern": "^[A-Za-z0-9_-]{8,64}$" },
+        "status": { "enum": [0, 1, 2, 3] },
+        "completedAt": { "type": ["integer", "null"], "minimum": 0 },
+        "deferredToWeekStart": { "type": ["integer", "null"], "minimum": 0 },
+        "exceptionReason": { "type": ["string", "null"], "maxLength": 20000 },
+        "createdAt": { "type": "integer", "minimum": 0 },
+        "updatedAt": { "type": "integer", "minimum": 0 },
+        "deletedAt": { "type": ["integer", "null"], "minimum": 0 }
+      },
+      "required": ["remoteId", "weekStart", "title", "status", "createdAt", "updatedAt"],
+      "additionalProperties": true
+    },
+    "task": {
+      "type": "object",
+      "properties": {
+        "remoteId": { "type": "string", "minLength": 8, "maxLength": 64 },
+        "subjectRemoteId": { "type": ["string", "null"], "minLength": 8, "maxLength": 64 },
+        "title": { "type": "string", "minLength": 1, "maxLength": 200 },
+        "content": { "type": ["string", "null"], "maxLength": 20000 },
+        "sourceProposalId": { "type": ["string", "null"], "minLength": 8, "maxLength": 64, "pattern": "^[A-Za-z0-9_-]{8,64}$" },
+        "type": { "enum": [0, 1, 2] },
+        "priority": { "enum": [0, 1, 2] },
+        "status": { "enum": [0, 1, 2] },
+        "targetDurationSeconds": { "type": ["integer", "null"], "minimum": 0 },
+        "dueAt": { "type": ["integer", "null"], "minimum": 0 },
+        "completedAt": { "type": ["integer", "null"], "minimum": 0 },
+        "sortOrder": { "type": "integer", "minimum": 0 },
+        "createdAt": { "type": "integer", "minimum": 0 },
+        "updatedAt": { "type": "integer", "minimum": 0 },
+        "deletedAt": { "type": ["integer", "null"], "minimum": 0 }
+      },
+      "required": ["remoteId", "title", "type", "priority", "status", "sortOrder", "createdAt", "updatedAt"],
+      "additionalProperties": true
+    },
+    "studySession": {
+      "type": "object",
+      "properties": {
+        "remoteId": { "type": "string", "minLength": 8, "maxLength": 64 },
+        "subjectRemoteId": { "type": ["string", "null"], "minLength": 8, "maxLength": 64 },
+        "taskRemoteId": { "type": ["string", "null"], "minLength": 8, "maxLength": 64 },
+        "title": { "type": ["string", "null"], "maxLength": 200 },
+        "startTime": { "type": "integer", "minimum": 0 },
+        "endTime": { "type": ["integer", "null"], "minimum": 0 },
+        "durationSeconds": { "type": "integer", "minimum": 0 },
+        "pauseSeconds": { "type": "integer", "minimum": 0 },
+        "focusScore": { "type": ["integer", "null"], "minimum": 0, "maximum": 100 },
+        "note": { "type": ["string", "null"], "maxLength": 20000 },
+        "status": { "enum": [0, 1, 2, 3] },
+        "createdAt": { "type": "integer", "minimum": 0 },
+        "updatedAt": { "type": "integer", "minimum": 0 },
+        "deletedAt": { "type": ["integer", "null"], "minimum": 0 },
+        "aiHelpSeconds": { "type": "integer", "minimum": 0 },
+        "aiHelpCount": { "type": "integer", "minimum": 0 },
+        "externalAiAppSeconds": { "type": ["integer", "null"], "minimum": 0 },
+        "aiUsageSource": { "enum": ["alerttime_ai_help", "usage_stats", "unknown"] }
+      },
+      "required": ["remoteId", "startTime", "durationSeconds", "pauseSeconds", "status", "createdAt", "updatedAt"],
+      "additionalProperties": true
+    },
+    "snapshotPayload": {
+      "type": "object",
+      "properties": {
+        "subjects": { "type": "array", "items": { "$ref": "#/$defs/subject" }, "maxItems": 5000 },
+        "weeklyGoals": { "type": "array", "items": { "$ref": "#/$defs/weeklyGoal" }, "maxItems": 50000 },
+        "tasks": { "type": "array", "items": { "$ref": "#/$defs/task" }, "maxItems": 100000 },
+        "studySessions": { "type": "array", "items": { "$ref": "#/$defs/studySession" }, "maxItems": 200000 },
+        "learningAnalysis": { "$ref": "#/$defs/learningAnalysis" }
+      },
+      "required": ["subjects", "weeklyGoals", "tasks", "studySessions"],
+      "additionalProperties": false
+    },
+    "learningAnalysis": {
+      "type": "object",
+      "properties": {
+        "analysisId": { "type": "string", "minLength": 8, "maxLength": 64 },
+        "sourceSnapshotId": { "type": "string", "minLength": 8, "maxLength": 64 },
+        "generatedAt": { "type": "integer", "minimum": 0 },
+        "promptVersion": { "type": "string", "minLength": 1, "maxLength": 100 },
+        "generator": { "enum": ["android_llm", "deterministic_fallback"] },
+        "inputSummary": { "$ref": "#/$defs/learningInputSummary" },
+        "profile": { "$ref": "#/$defs/learningProfile" },
+        "planEvaluation": { "$ref": "#/$defs/planEvaluation" },
+        "assessmentDraft": { "$ref": "#/$defs/assessmentDraft" },
+        "warnings": { "type": "array", "items": { "type": "string", "minLength": 1, "maxLength": 20000 }, "maxItems": 50 }
+      },
+      "required": ["analysisId", "sourceSnapshotId", "generatedAt", "promptVersion", "generator", "profile", "planEvaluation", "assessmentDraft", "warnings"],
+      "additionalProperties": false
+    },
+    "learningInputSummary": {
+      "type": "object",
+      "properties": {
+        "subjectCount": { "type": "integer", "minimum": 0 },
+        "weeklyGoalCount": { "type": "integer", "minimum": 0 },
+        "taskCount": { "type": "integer", "minimum": 0 },
+        "completedSessionCount": { "type": "integer", "minimum": 0 },
+        "source": { "const": "same_analysis_input_v1" }
+      },
+      "required": ["subjectCount", "weeklyGoalCount", "taskCount", "completedSessionCount", "source"],
+      "additionalProperties": false
+    },
+    "learningProfile": {
+      "type": "object",
+      "properties": {
+        "facts": { "type": "array", "maxItems": 100, "items": { "$ref": "#/$defs/learningFact" } },
+        "inferences": { "type": "array", "maxItems": 100, "items": { "$ref": "#/$defs/learningInference" } }
+      },
+      "required": ["facts", "inferences"],
+      "additionalProperties": false
+    },
+    "learningFact": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "string", "minLength": 1, "maxLength": 100 },
+        "label": { "type": "string", "minLength": 1, "maxLength": 200 },
+        "value": {},
+        "evidenceRefs": { "type": "array", "maxItems": 20, "items": { "type": "string", "minLength": 1, "maxLength": 200 } }
+      },
+      "required": ["code", "label", "value", "evidenceRefs"],
+      "additionalProperties": false
+    },
+    "learningInference": {
+      "type": "object",
+      "properties": {
+        "statement": { "type": "string", "minLength": 1, "maxLength": 20000 },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "evidenceRefs": { "type": "array", "maxItems": 20, "items": { "type": "string", "minLength": 1, "maxLength": 200 } }
+      },
+      "required": ["statement", "confidence", "evidenceRefs"],
+      "additionalProperties": false
+    },
+    "planEvaluation": {
+      "type": "object",
+      "properties": {
+        "verdict": { "enum": ["reasonable", "needs_adjustment", "insufficient_data"] },
+        "score": { "type": ["number", "null"], "minimum": 0, "maximum": 100 },
+        "dimensions": { "type": "array", "maxItems": 20, "items": { "$ref": "#/$defs/planDimension" } },
+        "risks": { "type": "array", "maxItems": 20, "items": { "type": "string", "minLength": 1, "maxLength": 20000 } },
+        "suggestions": { "type": "array", "maxItems": 20, "items": { "type": "string", "minLength": 1, "maxLength": 20000 } }
+      },
+      "required": ["verdict", "score", "dimensions", "risks", "suggestions"],
+      "additionalProperties": false
+    },
+    "planDimension": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "string", "minLength": 1, "maxLength": 100 },
+        "score": { "type": ["number", "null"], "minimum": 0, "maximum": 100 },
+        "summary": { "type": "string", "minLength": 1, "maxLength": 20000 }
+      },
+      "required": ["code", "score", "summary"],
+      "additionalProperties": false
+    },
+    "assessmentDraft": {
+      "type": "object",
+      "properties": {
+        "status": { "const": "draft" },
+        "scopeSummary": { "type": "string", "minLength": 1, "maxLength": 20000 },
+        "questions": { "type": "array", "maxItems": 50, "items": { "$ref": "#/$defs/assessmentDraftQuestion" } }
+      },
+      "required": ["status", "scopeSummary", "questions"],
+      "additionalProperties": false
+    },
+    "assessmentDraftQuestion": {
+      "type": "object",
+      "properties": {
+        "questionId": { "type": "string", "minLength": 8, "maxLength": 64 },
+        "subjectRemoteId": { "type": ["string", "null"], "minLength": 8, "maxLength": 64 },
+        "taskRemoteId": { "type": ["string", "null"], "minLength": 8, "maxLength": 64 },
+        "type": { "enum": ["concept_check", "diagnostic", "reflection"] },
+        "prompt": { "type": "string", "minLength": 1, "maxLength": 20000 },
+        "rationale": { "type": "string", "minLength": 1, "maxLength": 20000 },
+        "rubric": { "type": "array", "maxItems": 20, "items": { "type": "string", "minLength": 1, "maxLength": 20000 } }
+      },
+      "required": ["questionId", "type", "prompt", "rationale", "rubric"],
+      "propertyNames": {
+        "not": {
+          "anyOf": [
+            { "pattern": "[aA][nN][sS][wW][eE][rR]" },
+            { "pattern": "[sS][oO][lL][uU][tT][iI][oO][nN]" },
+            { "pattern": "^[eE][xX][pP][lL][aA][nN][aA][tT][iI][oO][nN]$" }
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "proposedWeeklyGoal": {
+      "type": "object",
+      "properties": {
+        "weekStart": { "type": "integer", "minimum": 0 },
+        "title": { "type": "string", "minLength": 1, "maxLength": 200 },
+        "successCriteria": { "type": ["string", "null"], "maxLength": 2000 }
+      },
+      "required": ["weekStart", "title"],
+      "additionalProperties": true
+    },
+    "proposedTask": {
+      "type": "object",
+      "properties": {
+        "title": { "type": "string", "minLength": 1, "maxLength": 200 },
+        "subjectRemoteId": { "type": ["string", "null"], "minLength": 8, "maxLength": 64 },
+        "targetDurationSeconds": { "type": ["integer", "null"], "minimum": 0 },
+        "dueAt": { "type": ["integer", "null"], "minimum": 0 }
+      },
+      "required": ["title"],
+      "additionalProperties": true
+    },
+    "proposal": {
+      "type": "object",
+      "properties": {
+        "proposalId": { "type": "string", "minLength": 8, "maxLength": 64 },
+        "deviceId": { "type": "string", "minLength": 8, "maxLength": 64 },
+        "version": { "type": "integer", "minimum": 1 },
+        "status": { "enum": ["pending", "accepted", "rejected", "superseded"] },
+        "rationale": { "type": "string", "maxLength": 20000 },
+        "proposedWeeklyGoals": { "type": "array", "items": { "$ref": "#/$defs/proposedWeeklyGoal" }, "maxItems": 20 },
+        "proposedTasks": { "type": "array", "items": { "$ref": "#/$defs/proposedTask" }, "maxItems": 100 },
+        "sourceAssessmentIds": { "type": "array", "items": { "type": "string", "minLength": 8, "maxLength": 64 }, "maxItems": 200 },
+        "createdAt": { "type": "integer", "minimum": 0 },
+        "expiresAt": { "type": ["integer", "null"], "minimum": 0 }
+      },
+      "required": ["proposalId", "deviceId", "version", "status", "rationale", "proposedWeeklyGoals", "proposedTasks", "sourceAssessmentIds", "createdAt"],
+      "additionalProperties": true
+    },
+    "proposalsList": {
+      "type": "object",
+      "properties": {
+        "proposals": { "type": "array", "items": { "$ref": "#/$defs/proposal" }, "maxItems": 200 },
+        "nextCursor": { "type": ["string", "null"], "minLength": 8, "maxLength": 64 }
+      },
+      "required": ["proposals", "nextCursor"],
+      "additionalProperties": false
+    },
+    "proposalDecision": {
+      "type": "object",
+      "properties": {
+        "proposalId": { "type": "string", "minLength": 8, "maxLength": 64 },
+        "decision": { "enum": ["accepted", "rejected"] },
+        "decidedAt": { "type": "integer", "minimum": 0 }
+      },
+      "required": ["proposalId", "decision", "decidedAt"],
+      "additionalProperties": true
+    }
+  }
+}

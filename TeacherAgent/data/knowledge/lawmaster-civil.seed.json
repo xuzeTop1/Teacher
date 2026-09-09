@@ -1,0 +1,686 @@
+{
+  "subject": "lawmaster",
+  "course": "lawmaster-civil",
+  "chapter": "lawmaster-civil",
+  "status": "draft",
+  "nodes": [
+    {
+      "id": "lawmaster-civil-001",
+      "title": "民法的概念与调整对象",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "民法调整平等主体之间的人身关系与财产关系；其精神在于平等、自由与意思自治。",
+      "prerequisites": [],
+      "misconceptions": [
+        "认为民法也调整纵向管理关系",
+        "把行政法关系混入"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个法律概念的关键词是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "它和相近概念差在哪？"
+        },
+        {
+          "level": "L3",
+          "text": "先下定义再找区分点。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-civil-002",
+      "title": "民法基本原则",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "民法基本原则含平等、自愿、公平、诚信、公序良俗与绿色原则；它们是解释与填补漏洞的依凭。",
+      "prerequisites": [
+        "lawmaster-civil-001"
+      ],
+      "misconceptions": [
+        "把原则当具体规则",
+        "忽视公序良俗"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "它的法律依据是哪一条？"
+        },
+        {
+          "level": "L2",
+          "text": "试着定位法条位置。"
+        },
+        {
+          "level": "L3",
+          "text": "把制度—条文—要件三者对应。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-civil-003",
+      "title": "民事法律关系",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "民事法律关系由主体、客体与内容（权利与义务）构成；其变动由法律事实（事件与行为）引起。",
+      "prerequisites": [
+        "lawmaster-civil-001"
+      ],
+      "misconceptions": [
+        "混淆主体与客体",
+        "忽视法律事实"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "构成要件有几项？"
+        },
+        {
+          "level": "L2",
+          "text": "逐项核对是否齐备。"
+        },
+        {
+          "level": "L3",
+          "text": "四要件/三阶层要记全。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-civil-004",
+      "title": "自然人：权利能力与行为能力",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "自然人自出生享有权利能力；行为能力分完全（$1\\frac{8}{1}6$以上以劳动收入为主）、限制（$8-18$）、无（不满8）三类。",
+      "prerequisites": [
+        "lawmaster-civil-003"
+      ],
+      "misconceptions": [
+        "混淆权利与行为能力",
+        "记错年龄界点"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个制度想解决什么问题？"
+        },
+        {
+          "level": "L2",
+          "text": "立法目的决定解释方向。"
+        },
+        {
+          "level": "L3",
+          "text": "从目的反推适用。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-civil-005",
+      "title": "监护制度",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "监护为无或限制行为能力人设保护；未成年人由父母等担任，成年监护可依意定与法定并行。",
+      "prerequisites": [
+        "lawmaster-civil-004"
+      ],
+      "misconceptions": [
+        "把监护当收养",
+        "忽视成年监护"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "谁享有权利、谁承担义务？"
+        },
+        {
+          "level": "L2",
+          "text": "主体资格是否具备？"
+        },
+        {
+          "level": "L3",
+          "text": "先定主体再看内容。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-civil-006",
+      "title": "法人制度",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "法人是具有民事权利能力和行为能力、依法独立承担民事责任的组织；分营利、非营利与特别法人三类。",
+      "prerequisites": [
+        "lawmaster-civil-003"
+      ],
+      "misconceptions": [
+        "认为法人等同法定代表人",
+        "混淆法人类型"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "责任如何归属？"
+        },
+        {
+          "level": "L2",
+          "text": "归责原则是过错还是无过错？"
+        },
+        {
+          "level": "L3",
+          "text": "归责原则决定举证方向。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-civil-007",
+      "title": "民事法律行为",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "民事法律行为是以意思表示设立、变更、终止民事法律关系的行为；有效须具备相应能力、真实意思表示与不违反强制/公序。",
+      "prerequisites": [
+        "lawmaster-civil-003"
+      ],
+      "misconceptions": [
+        "把事实行为当法律行为",
+        "忽视意思表示"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "情形A和情形B有何不同？"
+        },
+        {
+          "level": "L2",
+          "text": "区分关键事实是什么？"
+        },
+        {
+          "level": "L3",
+          "text": "用构成要件做判别。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-civil-008",
+      "title": "代理",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "代理是代理人在权限内以被代理人名义实施、效果归被代理人的行为；无权代理经追认生效，表见代理保护善意相对人。",
+      "prerequisites": [
+        "lawmaster-civil-007"
+      ],
+      "misconceptions": [
+        "混淆有权与无权代理",
+        "忽视表见代理"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "常见误解是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "把误区摆出来再纠正。"
+        },
+        {
+          "level": "L3",
+          "text": "辨析题先破后立。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-civil-009",
+      "title": "诉讼时效",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "普通诉讼时效为三年；可因起诉、请求、同意履行而中断并重新计算，因不可抗力等中止。",
+      "prerequisites": [
+        "lawmaster-civil-007"
+      ],
+      "misconceptions": [
+        "记错时效期间",
+        "混淆中止与中断"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个法律概念的关键词是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "它和相近概念差在哪？"
+        },
+        {
+          "level": "L3",
+          "text": "先下定义再找区分点。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-civil-010",
+      "title": "物权概述",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "物权是权利人对特定物直接支配并排他享有的权利；动产交付、不动产登记为其公示方法，公信原则保护善意取得。",
+      "prerequisites": [
+        "lawmaster-civil-003"
+      ],
+      "misconceptions": [
+        "混淆物权与债权",
+        "忽视公示公信"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "它的法律依据是哪一条？"
+        },
+        {
+          "level": "L2",
+          "text": "试着定位法条位置。"
+        },
+        {
+          "level": "L3",
+          "text": "把制度—条文—要件三者对应。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-civil-011",
+      "title": "所有权",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "所有权含占有、使用、收益、处分四项权能；善意取得须受让善意、合理对价且已公示，方可原始取得。",
+      "prerequisites": [
+        "lawmaster-civil-010"
+      ],
+      "misconceptions": [
+        "认为占有即所有",
+        "忽视善意取得要件"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "构成要件有几项？"
+        },
+        {
+          "level": "L2",
+          "text": "逐项核对是否齐备。"
+        },
+        {
+          "level": "L3",
+          "text": "四要件/三阶层要记全。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-civil-012",
+      "title": "用益物权",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "用益物权是对他人之物的使用收益权，如土地承包经营权、建设用地使用权、宅基地使用权与居住权。",
+      "prerequisites": [
+        "lawmaster-civil-010"
+      ],
+      "misconceptions": [
+        "把用益当担保",
+        "记不全类型"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个制度想解决什么问题？"
+        },
+        {
+          "level": "L2",
+          "text": "立法目的决定解释方向。"
+        },
+        {
+          "level": "L3",
+          "text": "从目的反推适用。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-civil-013",
+      "title": "担保物权",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "担保物权保障债权实现，含抵押权（不转移占有）、质权（转移占有）、留置权（法定占有）；优先于普通债权受偿。",
+      "prerequisites": [
+        "lawmaster-civil-010"
+      ],
+      "misconceptions": [
+        "混淆三类担保",
+        "忽视优先受偿"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "谁享有权利、谁承担义务？"
+        },
+        {
+          "level": "L2",
+          "text": "主体资格是否具备？"
+        },
+        {
+          "level": "L3",
+          "text": "先定主体再看内容。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-civil-014",
+      "title": "合同订立",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "合同自要约（内容确定、表明受约束）与承诺（同意要约）一致时成立；要约可因拒绝或过期失效。",
+      "prerequisites": [
+        "lawmaster-civil-007"
+      ],
+      "misconceptions": [
+        "混淆要约与要约邀请",
+        "忽视承诺一致"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "责任如何归属？"
+        },
+        {
+          "level": "L2",
+          "text": "归责原则是过错还是无过错？"
+        },
+        {
+          "level": "L3",
+          "text": "归责原则决定举证方向。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-civil-015",
+      "title": "合同效力",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "合同效力分有效、无效（违法/虚假）、可撤销（欺诈胁迫重大误解显失公平）、效力待定（限人超能力/无权代理）。",
+      "prerequisites": [
+        "lawmaster-civil-014"
+      ],
+      "misconceptions": [
+        "把可撤销当无效",
+        "混淆效力待定情形"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "情形A和情形B有何不同？"
+        },
+        {
+          "level": "L2",
+          "text": "区分关键事实是什么？"
+        },
+        {
+          "level": "L3",
+          "text": "用构成要件做判别。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-civil-016",
+      "title": "合同履行与违约责任",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "履行应遵循全面与诚信原则；违约方承担继续履行、补救、赔偿等责任，赔偿以可得利益为限且可预见。",
+      "prerequisites": [
+        "lawmaster-civil-014"
+      ],
+      "misconceptions": [
+        "认为违约只赔直接损失",
+        "忽视可预见规则"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "常见误解是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "把误区摆出来再纠正。"
+        },
+        {
+          "level": "L3",
+          "text": "辨析题先破后立。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-civil-017",
+      "title": "侵权责任概述",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "侵权责任的归责原则含过错责任（一般）与无过错责任（法定情形）；构成通常需违法行为、损害、因果关系与过错。",
+      "prerequisites": [
+        "lawmaster-civil-003"
+      ],
+      "misconceptions": [
+        "混淆违约与侵权",
+        "忽视归责原则"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个法律概念的关键词是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "它和相近概念差在哪？"
+        },
+        {
+          "level": "L3",
+          "text": "先下定义再找区分点。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-civil-018",
+      "title": "特殊侵权责任",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "特殊侵权含监护人、用人者、产品、机动车交通事故、环境污染等，多适用无过错或过错推定，减轻受害人举证。",
+      "prerequisites": [
+        "lawmaster-civil-017"
+      ],
+      "misconceptions": [
+        "认为都需过错",
+        "忽视过错推定"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "它的法律依据是哪一条？"
+        },
+        {
+          "level": "L2",
+          "text": "试着定位法条位置。"
+        },
+        {
+          "level": "L3",
+          "text": "把制度—条文—要件三者对应。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-civil-019",
+      "title": "婚姻与继承",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "法定继承按配偶、子女、父母为第一顺序；遗嘱继承优先于法定，但须为缺乏劳动能力又无生活来源者留必留份。",
+      "prerequisites": [
+        "lawmaster-civil-003"
+      ],
+      "misconceptions": [
+        "混淆遗嘱与法定顺序",
+        "忽视必留份"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "构成要件有几项？"
+        },
+        {
+          "level": "L2",
+          "text": "逐项核对是否齐备。"
+        },
+        {
+          "level": "L3",
+          "text": "四要件/三阶层要记全。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    },
+    {
+      "id": "lawmaster-civil-020",
+      "title": "民法典结构与施行",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "《中华人民共和国民法典》于2020年5月28日通过、2021年1月1日施行，取代原有单行法，是市民生活的百科全书。",
+      "prerequisites": [
+        "lawmaster-civil-001"
+      ],
+      "misconceptions": [
+        "记错通过/施行日期",
+        "忽视法典化意义"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这个制度想解决什么问题？"
+        },
+        {
+          "level": "L2",
+          "text": "立法目的决定解释方向。"
+        },
+        {
+          "level": "L3",
+          "text": "从目的反推适用。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original exam-prep seed (法律硕士（法学/非法学）)",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "原创表述，基于公开考试大纲与权威资料（如312统考大纲、民法典、刑法典、法理学教材综述）核对事实；不含任何真题原文。"
+      }
+    }
+  ]
+}

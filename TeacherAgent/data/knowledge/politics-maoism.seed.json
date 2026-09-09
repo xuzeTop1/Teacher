@@ -1,0 +1,688 @@
+{
+  "subject": "politics",
+  "course": "maoism",
+  "chapter": "politics-maoism",
+  "status": "draft",
+  "nodes": [
+    {
+      "id": "politics-maoism-001",
+      "title": "毛泽东思想的形成和发展",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "毛泽东思想是马克思主义中国化的第一个重大理论成果，是马克思列宁主义在中国的运用和发展，是被实践证明了的关于中国革命和建设的正确的理论原则和经验总结。毛泽东思想形成于新民主主义革命时期，在社会主义改造和社会主义建设时期继续发展。",
+      "prerequisites": [],
+      "misconceptions": [
+        "毛泽东思想就是毛泽东个人的思想",
+        "毛泽东思想已经过时，不适用于当代"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "想一想：为什么马克思主义传入中国后，需要形成'中国化的马克思主义'？照搬不行吗？"
+        },
+        {
+          "level": "L2",
+          "text": "马克思主义是普遍真理，但必须同中国具体实际相结合，才能发挥指导作用。这就是马克思主义中国化的必要性和意义。"
+        },
+        {
+          "level": "L3",
+          "text": "判断毛泽东思想的历史地位，要放在中国革命和建设的历史进程中看：它解决了在一个半殖民地半封建的东方大国进行革命的一系列问题。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-maoism-002",
+      "title": "新民主主义革命的总路线",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "新民主主义革命总路线是无产阶级领导的，人民大众的，反对帝国主义、封建主义和官僚资本主义的革命。无产阶级领导是新民主主义革命区别于旧民主主义革命的根本标志。新民主主义革命的目的是推翻压在中国人民头上的三座大山，建立一个无产阶级领导的、各革命阶级联合专政的新民主主义共和国。",
+      "prerequisites": [
+        "politics-maoism-001"
+      ],
+      "misconceptions": [
+        "新民主主义革命的领导者是民族资产阶级",
+        "新民主主义革命就是资产阶级民主革命，和旧民主主义革命完全一样"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "五四运动前后，中国革命的领导者发生了什么变化？这个变化对革命的前途有什么影响？"
+        },
+        {
+          "level": "L2",
+          "text": "新民主主义革命虽然是资产阶级民主革命的性质，但由无产阶级领导，这决定了革命的前途是社会主义，不是资本主义。"
+        },
+        {
+          "level": "L3",
+          "text": "区分新旧民主主义革命的关键：领导阶级不同（资产阶级 vs 无产阶级），这决定了革命的前途和命运不同。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-maoism-003",
+      "title": "农村包围城市革命道路",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "农村包围城市、武装夺取政权，是新民主主义革命道路的核心内容。这条道路的理论依据是：中国是一个半殖民地半封建的国家，内部没有民主制度，外部没有民族独立，只能以武装斗争为主要革命形式；农民是革命的主力军，必须深入农村，发动农民，建立农村革命根据地，以农村包围城市，最后夺取全国政权。",
+      "prerequisites": [
+        "politics-maoism-002"
+      ],
+      "misconceptions": [
+        "农村包围城市道路是'不得已而为之'的权宜之计",
+        "城市武装起义才是革命的正道"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "为什么俄国的十月革命走的是城市起义道路，而中国走的是农村包围城市道路？两国的国情有什么不同？"
+        },
+        {
+          "level": "L2",
+          "text": "农村包围城市道路不是被动的选择，而是基于中国国情（农民多、城市敌人力量强、农村统治薄弱）的主动战略选择。"
+        },
+        {
+          "level": "L3",
+          "text": "分析革命道路问题时，要坚持'实事求是'：不是看哪个国家走什么路，而是看本国的国情适合什么路。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-maoism-004",
+      "title": "新民主主义社会理论",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "新民主主义社会是介于半殖民地半封建社会和社会主义社会之间的过渡性社会形态。新民主主义社会的经济特征是：社会主义性质的国营经济、半社会主义性质的合作社经济、农民和手工业者的个体经济、私人资本主义经济和国家资本主义经济五种经济成分并存。政治特征是：工人阶级领导的、以工农联盟为基础的各革命阶级联合专政。",
+      "prerequisites": [
+        "politics-maoism-002"
+      ],
+      "misconceptions": [
+        "新民主主义社会是一个独立的社会形态",
+        "新民主主义社会就是社会主义社会"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "新中国成立后（$1949-1956$年），中国社会是什么性质？它是社会主义社会吗？"
+        },
+        {
+          "level": "L2",
+          "text": "新民主主义社会是一个过渡性社会，它的发展方向是社会主义，但当时还不具备直接进入社会主义的条件。"
+        },
+        {
+          "level": "L3",
+          "text": "判断社会性质，要看经济基础（哪种经济成分占主导）和上层建筑（哪个阶级掌握政权）。新民主主义社会两者都具有过渡性。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-maoism-005",
+      "title": "社会主义改造理论",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "社会主义改造是指新中国成立后，中国共产党对农业、手工业和资本主义工商业进行的生产资料私有制向社会主义公有制转变的改造。农业社会主义改造采取自愿互利、典型示范和国家帮助的原则，经过互助组、初级社、高级社三个步骤。资本主义工商业改造采取和平赎买政策，通过国家资本主义形式逐步过渡到社会主义公有制。",
+      "prerequisites": [
+        "politics-maoism-004"
+      ],
+      "misconceptions": [
+        "社会主义改造就是对资本家进行暴力剥夺",
+        "农业合作化违背了农民意愿，是完全错误的"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "中国共产党对民族资产阶级采取了什么政策？是像苏联那样直接剥夺，还是采取了更温和的方式？"
+        },
+        {
+          "level": "L2",
+          "text": "和平赎买是中国社会主义改造的创举，它把对资本主义工商业的改造和对资产阶级分子的改造结合起来。"
+        },
+        {
+          "level": "L3",
+          "text": "分析社会主义改造的历史意义，要放在当时历史条件下看：它建立了社会主义制度，为当代中国一切发展进步奠定了制度基础。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-maoism-006",
+      "title": "社会主义的本质",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "社会主义的本质是解放生产力，发展生产力，消灭剥削，消除两极分化，最终达到共同富裕。这一定义是邓小平对'什么是社会主义、怎样建设社会主义'这一根本问题的深刻回答。它突出了生产力的基础地位，突出了社会主义的根本目标是共同富裕，把对社会主义的认识提高到了新的科学水平。",
+      "prerequisites": [],
+      "misconceptions": [
+        "社会主义就是穷，越穷越社会主义",
+        "只要消灭了私有制，就是社会主义"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "如果一种制度叫'社会主义'，但人民生活长期贫困，我们能说它体现了社会主义本质吗？"
+        },
+        {
+          "level": "L2",
+          "text": "社会主义本质论把生产力（手段）和共同富裕（目标）统一起来，纠正了以往只讲生产关系、忽视生产力的片面认识。"
+        },
+        {
+          "level": "L3",
+          "text": "判断社会主义本质的五句话中，'解放生产力、发展生产力'是手段，'共同富裕'是目标，中间两句是途径。五句话是一个有机整体。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-maoism-007",
+      "title": "社会主义初级阶段理论",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "社会主义初级阶段不是泛指任何国家进入社会主义都会经历的起始阶段，而是特指我国在生产力落后、商品经济不发达条件下建设社会主义必然要经历的特定阶段。我国从20世纪50年代生产资料私有制的社会主义改造基本完成，到社会主义现代化基本实现，至少需要上百年时间，都属于社会主义初级阶段。这一阶段的主要矛盾是人民日益增长的物质文化需要同落后的社会生产之间的矛盾。",
+      "prerequisites": [
+        "politics-maoism-006"
+      ],
+      "misconceptions": [
+        "社会主义初级阶段就是社会主义的初级阶段，所有国家都一样",
+        "社会主义初级阶段可以超越，不必经历"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "为什么中国已经是社会主义社会，但又处在'初级阶段'？这两句话之间是什么关系？"
+        },
+        {
+          "level": "L2",
+          "text": "'社会主义初级阶段'包含两个层面：'社会主义'（社会性质）和'初级阶段'（发展程度），两者缺一不可。"
+        },
+        {
+          "level": "L3",
+          "text": "分析社会主义初级阶段，关键抓住'特指'二字：它是中国特有的，不是所有社会主义国家的普遍阶段。这决定了中国必须走自己的路。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-maoism-008",
+      "title": "改革开放理论",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "改革开放是中国共产党在新的历史条件下带领人民进行的新的伟大革命，是决定当代中国命运的关键抉择。改革是社会主义社会发展的直接动力，是社会主义制度的自我完善和发展。开放也是改革，对外开放是建设中国特色社会主义的一项基本国策。改革开放的目的是解放和发展社会生产力，推动我国社会主义制度自我完善和发展。",
+      "prerequisites": [
+        "politics-maoism-007"
+      ],
+      "misconceptions": [
+        "改革开放就是改旗易帜，走资本主义道路",
+        "改革是对社会主义制度的否定"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "改革和革命有什么区别？改革是'革命'吗？社会主义社会还需要'革命'吗？"
+        },
+        {
+          "level": "L2",
+          "text": "改革开放是'新的伟大革命'，但它不是推翻社会主义制度，而是社会主义制度的自我完善和发展。"
+        },
+        {
+          "level": "L3",
+          "text": "判断改革的性质和方向，关键看'三个有利于'：是否有利于发展生产力、增强综合国力、提高人民生活水平。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-maoism-009",
+      "title": "社会主义市场经济理论",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "社会主义市场经济理论是邓小平理论的重要组成部分。这一理论认为，计划和市场都是经济手段，不是社会主义与资本主义的本质区别。社会主义也可以搞市场经济。我国经济体制改革的目标是建立社会主义市场经济体制，使市场在国家宏观调控下对资源配置起决定性作用（十八大后表述为市场起决定性作用）。社会主义市场经济体制是同社会主义基本制度结合在一起的。",
+      "prerequisites": [
+        "politics-maoism-008"
+      ],
+      "misconceptions": [
+        "市场经济就是资本主义，两者是一回事",
+        "社会主义市场经济就是市场经济+社会主义口号"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "计划经济和市场经济，哪个姓'社'、哪个姓'资'？这个问题在改革开放初期为什么会引起激烈争论？"
+        },
+        {
+          "level": "L2",
+          "text": "邓小平的突破在于：把计划/市场从社会制度属性中解放出来，还原为资源配置手段。"
+        },
+        {
+          "level": "L3",
+          "text": "理解社会主义市场经济，抓住两个要点：市场机制（资源配置方式）+ 社会主义基本制度（所有制、分配制度、宏观调控）。两者结合是其本质特征。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-maoism-010",
+      "title": "习近平新时代中国特色社会主义思想",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "习近平新时代中国特色社会主义思想是当代中国马克思主义、二十一世纪马克思主义，是中华文化和中国精神的时代精华，实现了马克思主义中国化新的飞跃。这一思想系统回答了新时代坚持和发展什么样的中国特色社会主义、怎样坚持和发展中国特色社会主义等重大时代课题，是全党全国人民为实现中华民族伟大复兴而奋斗的行动指南。",
+      "prerequisites": [
+        "politics-maoism-006",
+        "politics-maoism-008"
+      ],
+      "misconceptions": [
+        "习近平新时代中国特色社会主义思想只是一个口号，没有实际内容",
+        "习近平新时代中国特色社会主义思想和之前的马克思主义中国化理论成果没有关系"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "马克思主义传入中国后，先后形成了哪些中国化的理论成果？它们之间是什么关系？"
+        },
+        {
+          "level": "L2",
+          "text": "马克思主义中国化是一个持续推进的过程，每一次飞跃都回答了特定的时代课题。习近平新时代中国特色社会主义思想回答的是'新时代'的课题。"
+        },
+        {
+          "level": "L3",
+          "text": "分析习近平新时代中国特色社会主义思想的历史地位，要放在马克思主义中国化的整体进程中看：它是最新成果，也是马克思主义中国化新的飞跃。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-maoism-011",
+      "title": "中国式现代化建设",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "中国式现代化是中国共产党领导的社会主义现代化，既有各国现代化的共同特征，更有基于自己国情的中国特色。中国式现代化是人口规模巨大的现代化、全体人民共同富裕的现代化、物质文明和精神文明相协调的现代化、人与自然和谐共生的现代化、走和平发展道路的现代化。这五个特征深刻揭示了中国式现代化的科学内涵。",
+      "prerequisites": [
+        "politics-maoism-010"
+      ],
+      "misconceptions": [
+        "中国式现代化就是西方现代化的翻版",
+        "中国式现代化只讲经济发展，不讲其他"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "中国的现代化道路和西方国家的现代化道路有什么不同？最大的区别在哪里？"
+        },
+        {
+          "level": "L2",
+          "text": "中国式现代化的最本质要求是坚持中国共产党领导，这是中国式现代化与西方现代化的根本区别。"
+        },
+        {
+          "level": "L3",
+          "text": "分析中国式现代化的五个特征，要抓住'人口规模巨大'（国情基础）、'共同富裕'（价值目标）、'两个文明协调'（全面性）、'人与自然和谐'（可持续性）、'和平发展'（世界意义）五个维度。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-maoism-012",
+      "title": "全面深化改革",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "全面深化改革是新时代坚持和发展中国特色社会主义的根本动力。全面深化改革的总目标是完善和发展中国特色社会主义制度，推进国家治理体系和治理能力现代化。全面深化改革必须坚持党对改革的集中统一领导，坚持改革沿着中国特色社会主义方向前进，坚持改革往有利于维护社会公平正义、增进人民福祉方向前进，坚持社会主义市场经济改革方向。",
+      "prerequisites": [
+        "politics-maoism-008",
+        "politics-maoism-010"
+      ],
+      "misconceptions": [
+        "全面深化改革就是全面否定过去的制度和政策",
+        "改革的总目标就是实现经济的快速增长"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "全面深化改革，'全面'是什么意思？'深化'又是什么意思？不是说好了的制度为什么要'深化'改革？"
+        },
+        {
+          "level": "L2",
+          "text": "全面深化改革不是否定社会主义制度，而是完善和发展中国特色社会主义制度，这是改革的方向和原则。"
+        },
+        {
+          "level": "L3",
+          "text": "判断改革举措是否正确，关键看是否坚持'四个有利于'：有利于促进社会公平正义、增进人民福祉、激发社会活力、实现国家长治久安。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-maoism-013",
+      "title": "全面依法治国",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "全面依法治国是新时代坚持和发展中国特色社会主义的基本方略之一。全面依法治国的总目标是建设中国特色社会主义法治体系、建设社会主义法治国家。全面依法治国必须坚持党的领导、人民当家作主、依法治国有机统一，坚持依法治国、依法执政、依法行政共同推进，坚持法治国家、法治政府、法治社会一体建设。",
+      "prerequisites": [
+        "politics-maoism-012"
+      ],
+      "misconceptions": [
+        "依法治国就是弱化党的领导",
+        "依法治国就是照搬西方宪政模式"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "党的领导和依法治国是什么关系？两者是对立的，还是统一的？"
+        },
+        {
+          "level": "L2",
+          "text": "党的领导是中国特色社会主义法治之魂，是我们的法治和西方资本主义法治最大的区别。"
+        },
+        {
+          "level": "L3",
+          "text": "分析全面依法治国，抓住'中国特色社会主义法治体系'这个总目标：它既包括法律规范体系，也包括法治实施、监督、保障等体系，是全面性的。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-maoism-014",
+      "title": "全面从严治党",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "全面从严治党是新时代党自我净化、自我完善、自我革新、自我提高的必然要求。全面从严治党要以思想建设为引领，以组织建设为基础，以作风建设为抓手，以纪律建设为保障，将制度建设贯穿其中，深入推进反腐败斗争。全面从严治党，核心是加强党的领导，基础在全面，关键在严，要害在治。",
+      "prerequisites": [
+        "politics-maoism-010"
+      ],
+      "misconceptions": [
+        "全面从严治党只是一阵风，不会长期坚持",
+        "全面从严治党就是处理更多党员干部"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "为什么中国共产党要强调'自我革命'？执政党面临的最大危险是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "全面从严治党是新时代党的建设的鲜明主题，它回答了'建设什么样的长期执政的马克思主义政党、怎样建设这样的党'的重大课题。"
+        },
+        {
+          "level": "L3",
+          "text": "分析全面从严治党，要抓住'全面'（对象全覆盖、领域全包括、责任全承担）和'严'（真管真严、敢管敢严、长管长严）两个关键词。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-maoism-015",
+      "title": "新发展理念",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "新发展理念即创新、协调、绿色、开放、共享的发展理念，是习近平经济思想的核心内容。创新是引领发展的第一动力，协调是持续健康发展的内在要求，绿色是永续发展的必要条件，开放是国家繁荣发展的必由之路，共享是中国特色社会主义的本质要求。新发展理念是一个系统的理论体系，回答了关于发展的目的、动力、方式、路径等一系列理论和实践问题。",
+      "prerequisites": [
+        "politics-maoism-010"
+      ],
+      "misconceptions": [
+        "新发展理念就是简单的五句话，没有内在联系",
+        "新发展理念只适用于经济领域"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "这五大发展理念中，哪一个解决的是'发展动力'问题？哪一个解决的是'发展目的'问题？"
+        },
+        {
+          "level": "L2",
+          "text": "新发展理念是一个整体：创新（动力）、协调（方式）、绿色（条件）、开放（路径）、共享（目的）。五者相互贯通、相互促进。"
+        },
+        {
+          "level": "L3",
+          "text": "分析新发展理念，要放在'高质量发展'这个主题下理解：新发展理念是高质量发展的理念引领，高质量发展是新发展理念的实践体现。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-maoism-016",
+      "title": "构建人类命运共同体",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "构建人类命运共同体是习近平外交思想的核心理念。这一理念主张各国放下成见、摒弃零和博弈思维，坚持对话协商、共建共享、合作共赢、交流互鉴、绿色低碳，建设持久和平、普遍安全、共同繁荣、开放包容、清洁美丽的世界。构建人类命运共同体理念体现了中国的大国担当，为全球治理体系改革和建设贡献了中国智慧和中国方案。",
+      "prerequisites": [
+        "politics-maoism-010"
+      ],
+      "misconceptions": [
+        "人类命运共同体就是否定国家利益，主张世界大同",
+        "构建人类命运共同体只是一句外交口号，没有实际意义"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "当今世界面临很多全球性问题（气候变化、疫情、贫困），单靠一个国家能解决吗？各国应该怎么办？"
+        },
+        {
+          "level": "L2",
+          "text": "人类命运共同体理念不是否定国家利益，而是主张在维护本国利益的同时，兼顾他国合理关切，促进共同发展。"
+        },
+        {
+          "level": "L3",
+          "text": "分析人类命运共同体理念，要抓住'共商共建共享'的全球治理观：这是对中国外交传统（和平共处五项原则）的继承和发展。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-maoism-017",
+      "title": "总体国家安全观",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "总体国家安全观是新时代国家安全工作的指导思想。总体国家安全观以人民安全为宗旨，以政治安全为根本，以经济安全为基础，以军事、文化、社会安全为保障，以促进国际安全为依托，维护各领域国家安全，构建国家安全体系。总体国家安全观强调国家安全工作的整体性、系统性，涵盖了政治、经济、文化、社会、生态、网络等多个领域。",
+      "prerequisites": [
+        "politics-maoism-010",
+        "politics-maoism-013"
+      ],
+      "misconceptions": [
+        "国家安全就是军事安全和政治安全",
+        "总体国家安全观只是应对外部威胁"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "在经济全球化时代，国家安全只靠军队就能维护吗？还有哪些领域的安全问题值得重视？"
+        },
+        {
+          "level": "L2",
+          "text": "总体国家安全观的'总体'二字，强调安全问题的综合性、跨领域性，不能孤立地看待某一领域的安全。"
+        },
+        {
+          "level": "L3",
+          "text": "分析总体国家安全观，抓住'宗旨—根本—基础—保障—依托'这个逻辑结构，理解各要素之间的关系。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-maoism-018",
+      "title": "坚持党对一切工作的领导",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "中国特色社会主义最本质的特征是中国共产党领导，中国特色社会主义制度的最大优势是中国共产党领导。党政军民学，东西南北中，党是领导一切的。坚持党对一切工作的领导，是党和国家的根本所在、命脉所在，是全国各族人民的利益所在、幸福所在。党的领导是全面的、系统的、整体的，必须体现到经济建设、政治建设、文化建设、社会建设、生态文明建设和国防军队、祖国统一、外交工作、党的建设等各方面。",
+      "prerequisites": [
+        "politics-maoism-001",
+        "politics-maoism-010"
+      ],
+      "misconceptions": [
+        "党的领导就是党包办一切具体事务",
+        "党的领导和依法治国是相互对立的"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "中国共产党的领导和西方国家的多党制，哪种更能集中力量办大事？为什么？"
+        },
+        {
+          "level": "L2",
+          "text": "党的领导、人民当家作主、依法治国三者是有机统一的，不是对立的。党的领导是人民当家作主和依法治国的根本保证。"
+        },
+        {
+          "level": "L3",
+          "text": "分析党的领导，要区分'政治领导'（方向）、'思想领导'（理论）、'组织领导'（干部）三个层面，党不是包办一切具体事务。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-maoism-019",
+      "title": "以人民为中心的发展思想",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "以人民为中心的发展思想，体现了全心全意为人民服务的根本宗旨，体现了人民是推动发展的根本力量的唯物史观。坚持以人民为中心的发展，就要坚持人民主体地位，坚持立党为公、执政为民，把党的群众路线贯彻到治国理政全部活动中，把人民对美好生活的向往作为奋斗目标，依靠人民创造历史伟业。",
+      "prerequisites": [
+        "politics-maoism-010"
+      ],
+      "misconceptions": [
+        "以人民为中心就是满足每个人的所有需求",
+        "以人民为中心只是一句政治口号"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "发展的'目的'是什么？是为了GDP数字增长，还是为了让人民生活更美好？"
+        },
+        {
+          "level": "L2",
+          "text": "以人民为中心的发展思想，回答了'发展为了谁、发展依靠谁、发展成果由谁共享'这三个根本问题。"
+        },
+        {
+          "level": "L3",
+          "text": "判断发展是否体现了以人民为中心，看'两个是否'：是否有利于提高人民生活水平、是否让改革发展成果更多更公平惠及全体人民。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-maoism-020",
+      "title": "推动构建人类命运共同体和新型国际关系",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "推动构建新型国际关系是习近平外交思想的重要组成部分。新型国际关系以相互尊重、公平正义、合作共赢为核心，主张走出一条国与国交往的新路。中国坚持独立自主的和平外交政策，坚持和平发展道路，坚持互利共赢的开放战略，推动建设相互尊重、公平正义、合作共赢的新型国际关系，推动构建人类命运共同体。",
+      "prerequisites": [
+        "politics-maoism-016"
+      ],
+      "misconceptions": [
+        "新型国际关系就是放弃国家利益，追求世界大同",
+        "中国坚持和平发展就意味着放弃正当维权"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "传统国际关系的特点是什么？新型国际关系'新'在哪里？"
+        },
+        {
+          "level": "L2",
+          "text": "新型国际关系的核心是'合作共赢'，它否定了零和博弈的旧思维，主张正和博弈。"
+        },
+        {
+          "level": "L3",
+          "text": "分析中国外交，要抓住'独立自主'（原则）和'和平发展'（道路）两个基本点，这两者缺一不可。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    }
+  ]
+}

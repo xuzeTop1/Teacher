@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TeacherAgent 系统架构图 v2</title>
+  <style>
+    :root {
+      --c-bg: #f8fafc;
+      --c-canvas: #ffffff;
+      --c-border: #cbd5e1;
+      --c-text-main: #0f172a;
+      --c-text-sub: #64748b;
+      --c-accent: #1e40af;
+      --c-accent-light: #dbeafe;
+      --font-ui: system-ui, -apple-system, 'Segoe UI', sans-serif;
+      --font-mono: 'SF Mono', Monaco, Consolas, monospace;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--c-bg);
+      font-family: var(--font-ui);
+      color: var(--c-text-main);
+      padding: 40px 20px;
+    }
+
+    .diagram-canvas {
+      background: var(--c-canvas);
+      border: 2px solid var(--c-border);
+      padding: 32px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    /* ===== Header ===== */
+    .diagram-header {
+      border-bottom: 1px solid var(--c-border);
+      padding-bottom: 16px;
+      margin-bottom: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .diagram-title {
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--c-text-main);
+    }
+    .diagram-subtitle {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--c-text-sub);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 4px;
+    }
+    .header-meta {
+      text-align: right;
+      font-size: 11px;
+      font-family: var(--font-mono);
+      color: var(--c-text-sub);
+      line-height: 1.8;
+    }
+
+    /* ===== Layer ===== */
+    .layer {
+      border: 1px solid var(--c-border);
+      position: relative;
+    }
+    .layer-head {
+      display: flex;
+      align-items: center;
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--c-border);
+      background: var(--c-bg);
+      gap: 8px;
+    }
+    .layer-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      border: 1px solid var(--c-text-main);
+      font-size: 12px;
+      font-weight: 700;
+      font-family: var(--font-mono);
+      flex-shrink: 0;
+    }
+    .layer-badge--filled {
+      background: var(--c-text-main);
+      color: var(--c-canvas);
+    }
+    .layer-badge--accent {
+      background: var(--c-accent);
+      color: #fff;
+      border-color: var(--c-accent);
+    }
+    .layer-label {
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .layer-label-en {
+      font-size: 11px;
+      font-family: var(--font-mono);
+      color: var(--c-text-sub);
+      font-weight: 400;
+      margin-left: 6px;
+    }
+
+    /* ===== Component Grid ===== */
+    .layer-body {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      padding: 12px 14px;
+    }
+    .layer-body--4col {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .comp {
+      border: 1px solid var(--c-border);
+      padding: 10px;
+      position: relative;
+    }
+    .comp--new {
+      border-color: var(--c-accent);
+      border-style: dashed;
+    }
+    .comp-name {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+    .comp-tech {
+      font-size: 10px;
+      font-family: var(--font-mono);
+      color: var(--c-text-sub);
+      margin-bottom: 5px;
+    }
+    .comp-desc {
+      font-size: 11px;
+      color: var(--c-text-sub);
+      line-height: 1.5;
+    }
+    .comp-tag {
+      display: inline-block;
+      font-size: 9px;
+      font-family: var(--font-mono);
+      padding: 1px 5px;
+      border: 1px solid var(--c-text-sub);
+      color: var(--c-text-sub);
+      text-transform: uppercase;
+      margin-top: 6px;
+      letter-spacing: 0.3px;
+    }
+    .comp-tag--new {
+      border-color: var(--c-accent);
+      color: var(--c-accent);
+      font-weight: 600;
+    }
+
+    /* ===== SVG Connectors ===== */
+    .conn-svg {
+      display: block;
+      width: 100%;
+      height: 44px;
+      margin: 4px 0;
+    }
+
+    /* ===== Bidirectional Annotation ===== */
+    .bidir-note {
+      text-align: center;
+      padding: 3px 0 1px;
+      font-size: 11px;
+      color: var(--c-text-sub);
+      position: relative;
+    }
+    .bidir-note span {
+      font-family: var(--font-mono);
+      letter-spacing: 2px;
+      font-size: 13px;
+    }
+
+    /* ===== Feedback Loop Annotation ===== */
+    .loop-annotation {
+      position: relative;
+      margin: 8px 0;
+      padding: 8px 16px;
+      border: 1px dashed var(--c-accent);
+      background: var(--c-accent-light);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .loop-annotation-icon {
+      font-family: var(--font-mono);
+      font-size: 18px;
+      color: var(--c-accent);
+      flex-shrink: 0;
+    }
+    .loop-annotation-text {
+      font-size: 12px;
+      color: var(--c-accent);
+      line-height: 1.5;
+    }
+    .loop-annotation-label {
+      font-weight: 600;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* ===== Legend ===== */
+    .legend {
+      margin-top: 24px;
+      border: 1px solid var(--c-border);
+      padding: 14px 16px;
+    }
+    .legend-title {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--c-text-sub);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+    .legend-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      color: var(--c-text-sub);
+    }
+    .legend-line {
+      width: 40px;
+      flex-shrink: 0;
+    }
+    .legend-line--solid {
+      height: 0;
+      border-top: 2px solid var(--c-text-main);
+    }
+    .legend-line--dashed {
+      height: 0;
+      border-top: 1.5px dashed var(--c-text-sub);
+    }
+    .legend-line--thick {
+      height: 0;
+      border-top: 3px solid var(--c-text-main);
+    }
+    .legend-box {
+      width: 16px;
+      height: 12px;
+      border: 1px dashed var(--c-accent);
+      flex-shrink: 0;
+    }
+
+    /* ===== Footer ===== */
+    .diagram-footer {
+      margin-top: 16px;
+      padding-top: 10px;
+      border-top: 1px solid var(--c-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-left, .footer-right {
+      font-size: 11px;
+      font-family: var(--font-mono);
+      color: var(--c-text-sub);
+    }
+    .footer-stack {
+      display: flex;
+      gap: 6px;
+    }
+    .footer-tag {
+      font-size: 10px;
+      font-family: var(--font-mono);
+      padding: 2px 8px;
+      border: 1px solid var(--c-border);
+      color: var(--c-text-sub);
+    }
+  </style>
+</head>
+<body>
+  <div class="diagram-canvas">
+
+    <!-- ==================== HEADER ==================== -->
+    <div class="diagram-header">
+      <div>
+        <h1 class="diagram-title">TeacherAgent 系统架构</h1>
+        <p class="diagram-subtitle">DESKTOP AI TUTORING APPLICATION &mdash; SYSTEM ARCHITECTURE v2.0</p>
+      </div>
+      <div class="header-meta">
+        v2.0<br>
+        2026-06-29<br>
+        + adaptive &amp; assessment
+      </div>
+    </div>
+
+    <!-- ==================== LAYER 1: 表现层 ==================== -->
+    <div class="layer">
+      <div class="layer-head">
+        <span class="layer-badge layer-badge--filled">1</span>
+        <span class="layer-label">表现层<span class="layer-label-en">Presentation Layer</span></span>
+      </div>
+      <div class="layer-body">
+        <div class="comp">
+          <div class="comp-name">对话界面</div>
+          <div class="comp-tech">Chat UI</div>
+          <div class="comp-desc">学生与AI导师的主交互窗口，支持多轮对话与公式渲染</div>
+          <span class="comp-tag">frontend</span>
+        </div>
+        <div class="comp">
+          <div class="comp-name">知识面板</div>
+          <div class="comp-tech">Knowledge Panel</div>
+          <div class="comp-desc">知识点可视化，思维导图与概念关系浏览</div>
+          <span class="comp-tag">frontend</span>
+        </div>
+        <div class="comp">
+          <div class="comp-name">练习模块</div>
+          <div class="comp-tech">Practice Module</div>
+          <div class="comp-desc">题目练习与即时反馈，自适应难度</div>
+          <span class="comp-tag">frontend</span>
+        </div>
+        <div class="comp">
+          <div class="comp-name">学习仪表盘</div>
+          <div class="comp-tech">Dashboard</div>
+          <div class="comp-desc">学习进度、统计与掌握度热力图</div>
+          <span class="comp-tag">frontend</span>
+        </div>
+        <div class="comp comp--new">
+          <div class="comp-name">学习规划面板</div>
+          <div class="comp-tech">Learning Plan View</div>
+          <div class="comp-desc">目标路径可视化、里程碑与进度追踪</div>
+          <span class="comp-tag comp-tag--new">new</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SVG: Layer 1 -> Layer 2 ===== -->
+    <svg class="conn-svg" viewBox="0 0 1200 80" preserveAspectRatio="none">
+      <defs>
+        <marker id="ah1" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+          <path d="M1,1 L7,4 L1,7" fill="none" stroke="#0f172a" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+        </marker>
+        <marker id="ad1" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+          <path d="M1,1 L7,4 L1,7" fill="none" stroke="#64748b" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+        </marker>
+        <marker id="dot1" markerWidth="5" markerHeight="5" refX="2.5" refY="2.5" orient="auto" markerUnits="userSpaceOnUse">
+          <circle cx="2.5" cy="2.5" r="2" fill="#0f172a"/>
+        </marker>
+      </defs>
+      <!-- 5 solid lines from each L1 component down -->
+      <line x1="120" y1="4" x2="120" y2="76" stroke="#0f172a" stroke-width="1.5" vector-effect="non-scaling-stroke" marker-start="url(#dot1)" marker-end="url(#ah1)"/>
+      <line x1="360" y1="4" x2="360" y2="76" stroke="#0f172a" stroke-width="1.5" vector-effect="non-scaling-stroke" marker-start="url(#dot1)" marker-end="url(#ah1)"/>
+      <line x1="600" y1="4" x2="600" y2="76" stroke="#0f172a" stroke-width="1.5" vector-effect="non-scaling-stroke" marker-start="url(#dot1)" marker-end="url(#ah1)"/>
+      <line x1="840" y1="4" x2="840" y2="76" stroke="#0f172a" stroke-width="1.5" vector-effect="non-scaling-stroke" marker-start="url(#dot1)" marker-end="url(#ah1)"/>
+      <line x1="1080" y1="4" x2="1080" y2="76" stroke="#0f172a" stroke-width="1.5" vector-effect="non-scaling-stroke" marker-start="url(#dot1)" marker-end="url(#ah1)"/>
+      <!-- Dashed cross: dashboard -> scaffolding -->
+      <line x1="840" y1="4" x2="600" y2="76" stroke="#64748b" stroke-width="1" stroke-dasharray="5,4" vector-effect="non-scaling-stroke" marker-end="url(#ad1)"/>
+    </svg>
+
+    <!-- ==================== LAYER 2: 教学引擎层 ==================== -->
+    <div class="layer">
+      <div class="layer-head">
+        <span class="layer-badge layer-badge--filled">2</span>
+        <span class="layer-label">教学引擎层<span class="layer-label-en">Pedagogical Engine</span></span>
+      </div>
+      <div class="layer-body">
+        <div class="comp">
+          <div class="comp-name">苏格拉底对话管理器</div>
+          <div class="comp-tech">Socratic Dialogue Mgr</div>
+          <div class="comp-desc">引导式提问策略，反问与追问促进深度思考</div>
+          <span class="comp-tag">core</span>
+        </div>
+        <div class="comp">
+          <div class="comp-name">脚手架控制器</div>
+          <div class="comp-tech">Scaffolding Controller</div>
+          <div class="comp-desc">提示阶梯管理，动态调整辅助力度</div>
+          <span class="comp-tag">core</span>
+        </div>
+        <div class="comp">
+          <div class="comp-name">学习路径规划器</div>
+          <div class="comp-tech">Path Planner</div>
+          <div class="comp-desc">基于知识图谱生成个性化学习序列</div>
+          <span class="comp-tag">core</span>
+        </div>
+        <div class="comp">
+          <div class="comp-name">护栏引擎</div>
+          <div class="comp-tech">Guardrail Engine</div>
+          <div class="comp-desc">防直接给答案，内容安全与教学合规</div>
+          <span class="comp-tag">core</span>
+        </div>
+        <div class="comp comp--new">
+          <div class="comp-name">对话式评估引擎</div>
+          <div class="comp-tech">Assessment Engine</div>
+          <div class="comp-desc">入学测试、目标定位、周期性复盘评估</div>
+          <span class="comp-tag comp-tag--new">new</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SVG: Layer 2 -> Layer 3 ===== -->
+    <svg class="conn-svg" viewBox="0 0 1200 80" preserveAspectRatio="none">
+      <defs>
+        <marker id="ah2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+          <path d="M1,1 L7,4 L1,7" fill="none" stroke="#0f172a" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+        </marker>
+        <marker id="ad2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+          <path d="M1,1 L7,4 L1,7" fill="none" stroke="#64748b" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+        </marker>
+        <marker id="dot2" markerWidth="5" markerHeight="5" refX="2.5" refY="2.5" orient="auto" markerUnits="userSpaceOnUse">
+          <circle cx="2.5" cy="2.5" r="2" fill="#0f172a"/>
+        </marker>
+      </defs>
+      <line x1="120" y1="4" x2="120" y2="76" stroke="#0f172a" stroke-width="1.5" vector-effect="non-scaling-stroke" marker-start="url(#dot2)" marker-end="url(#ah2)"/>
+      <line x1="360" y1="4" x2="360" y2="76" stroke="#0f172a" stroke-width="1.5" vector-effect="non-scaling-stroke" marker-start="url(#dot2)" marker-end="url(#ah2)"/>
+      <line x1="600" y1="4" x2="600" y2="76" stroke="#0f172a" stroke-width="1.5" vector-effect="non-scaling-stroke" marker-start="url(#dot2)" marker-end="url(#ah2)"/>
+      <line x1="840" y1="4" x2="840" y2="76" stroke="#0f172a" stroke-width="1.5" vector-effect="non-scaling-stroke" marker-start="url(#dot2)" marker-end="url(#ah2)"/>
+      <line x1="1080" y1="4" x2="1080" y2="76" stroke="#0f172a" stroke-width="1.5" vector-effect="non-scaling-stroke" marker-start="url(#dot2)" marker-end="url(#ah2)"/>
+      <!-- Dashed cross: assessment -> LLM adapter -->
+      <line x1="1080" y1="4" x2="120" y2="76" stroke="#64748b" stroke-width="1" stroke-dasharray="5,4" vector-effect="non-scaling-stroke" marker-end="url(#ad2)"/>
+    </svg>
+
+    <!-- ==================== LAYER 3: AI 服务层 ==================== -->
+    <div class="layer">
+      <div class="layer-head">
+        <span class="layer-badge layer-badge--filled">3</span>
+        <span class="layer-label">AI 服务层<span class="layer-label-en">AI Service Layer</span></span>
+      </div>
+      <div class="layer-body">
+        <div class="comp">
+          <div class="comp-name">LLM 适配器</div>
+          <div class="comp-tech">LLM Adapter</div>
+          <div class="comp-desc">统一接口对接本地/云端模型，支持热切换</div>
+          <span class="comp-tag">service</span>
+        </div>
+        <div class="comp">
+          <div class="comp-name">RAG 检索器</div>
+          <div class="comp-tech">RAG Retriever</div>
+          <div class="comp-desc">知识库语义检索增强，向量+关键词混合</div>
+          <span class="comp-tag">service</span>
+        </div>
+        <div class="comp">
+          <div class="comp-name">学生模型追踪器</div>
+          <div class="comp-tech">Student Model Tracker</div>
+          <div class="comp-desc">BKT/PFA 知识追踪，实时更新掌握度</div>
+          <span class="comp-tag">service</span>
+        </div>
+        <div class="comp">
+          <div class="comp-name">Prompt 构建器</div>
+          <div class="comp-tech">Prompt Builder</div>
+          <div class="comp-desc">上下文组装、策略注入与动态提示构建</div>
+          <span class="comp-tag">service</span>
+        </div>
+        <div class="comp comp--new">
+          <div class="comp-name">反思引擎</div>
+          <div class="comp-tech">Reflection Engine</div>
+          <div class="comp-desc">对话后自动提取认知特征，更新学生画像</div>
+          <span class="comp-tag comp-tag--new">new</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Feedback Loop Annotation ===== -->
+    <div class="loop-annotation">
+      <div class="loop-annotation-icon">&#x21BB;</div>
+      <div class="loop-annotation-text">
+        <div class="loop-annotation-label">自适应递归闭环 / Adaptive Feedback Loop</div>
+        对话结束 → 反思引擎提取认知特征 → 学生画像更新 → 下次对话检索注入 → 更精准的个性化引导。每次交互都在加深系统对学生的理解。
+      </div>
+    </div>
+
+    <!-- ===== SVG: Layer 3 -> Layer 4 ===== -->
+    <svg class="conn-svg" viewBox="0 0 1200 80" preserveAspectRatio="none">
+      <defs>
+        <marker id="ah3" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+          <path d="M1,1 L7,4 L1,7" fill="none" stroke="#0f172a" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+        </marker>
+        <marker id="ad3" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+          <path d="M1,1 L7,4 L1,7" fill="none" stroke="#64748b" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+        </marker>
+        <marker id="dot3" markerWidth="5" markerHeight="5" refX="2.5" refY="2.5" orient="auto" markerUnits="userSpaceOnUse">
+          <circle cx="2.5" cy="2.5" r="2" fill="#0f172a"/>
+        </marker>
+      </defs>
+      <line x1="120" y1="4" x2="120" y2="76" stroke="#0f172a" stroke-width="1.5" vector-effect="non-scaling-stroke" marker-start="url(#dot3)" marker-end="url(#ah3)"/>
+      <line x1="360" y1="4" x2="360" y2="76" stroke="#0f172a" stroke-width="1.5" vector-effect="non-scaling-stroke" marker-start="url(#dot3)" marker-end="url(#ah3)"/>
+      <line x1="600" y1="4" x2="600" y2="76" stroke="#0f172a" stroke-width="1.5" vector-effect="non-scaling-stroke" marker-start="url(#dot3)" marker-end="url(#ah3)"/>
+      <line x1="840" y1="4" x2="840" y2="76" stroke="#0f172a" stroke-width="1.5" vector-effect="non-scaling-stroke" marker-start="url(#dot3)" marker-end="url(#ah3)"/>
+      <line x1="1080" y1="4" x2="600" y2="76" stroke="#64748b" stroke-width="1" stroke-dasharray="5,4" vector-effect="non-scaling-stroke" marker-end="url(#ad3)"/>
+    </svg>
+
+    <!-- Bidirectional flow annotation -->
+    <div class="bidir-note">
+      <span>&#x2193; &#x2191;</span>&ensp;请求 / 响应双向数据流
+    </div>
+
+    <!-- ==================== LAYER 4: 数据层 ==================== -->
+    <div class="layer">
+      <div class="layer-head">
+        <span class="layer-badge layer-badge--filled">4</span>
+        <span class="layer-label">数据层<span class="layer-label-en">Data Layer</span></span>
+      </div>
+      <div class="layer-body layer-body--4col">
+        <div class="comp">
+          <div class="comp-name">知识图谱</div>
+          <div class="comp-tech">Knowledge Graph</div>
+          <div class="comp-desc">概念节点、前置依赖、课程标准对齐、考试目标映射</div>
+          <span class="comp-tag">data</span>
+        </div>
+        <div class="comp">
+          <div class="comp-name">题库</div>
+          <div class="comp-tech">Question Bank</div>
+          <div class="comp-desc">题目、分步解析、难度标签、知识点关联</div>
+          <span class="comp-tag">data</span>
+        </div>
+        <div class="comp">
+          <div class="comp-name">学生画像</div>
+          <div class="comp-tech">Student Profile + Embeddings</div>
+          <div class="comp-desc">学习历史、掌握度、认知特征向量、学习风格偏好</div>
+          <span class="comp-tag">data + vec</span>
+        </div>
+        <div class="comp">
+          <div class="comp-name">对话与评估记录</div>
+          <div class="comp-tech">History &amp; Assessments</div>
+          <div class="comp-desc">完整对话上下文、评估报告、能力快照时间线</div>
+          <span class="comp-tag">data</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SVG: Layer 4 -> Layer 5 ===== -->
+    <svg class="conn-svg" viewBox="0 0 1200 80" preserveAspectRatio="none">
+      <defs>
+        <marker id="ah4" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+          <path d="M1,1 L7,4 L1,7" fill="none" stroke="#0f172a" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+        </marker>
+        <marker id="dot4" markerWidth="5" markerHeight="5" refX="2.5" refY="2.5" orient="auto" markerUnits="userSpaceOnUse">
+          <circle cx="2.5" cy="2.5" r="2" fill="#0f172a"/>
+        </marker>
+      </defs>
+      <line x1="150" y1="4" x2="150" y2="76" stroke="#0f172a" stroke-width="2.5" vector-effect="non-scaling-stroke" marker-start="url(#dot4)" marker-end="url(#ah4)"/>
+      <line x1="450" y1="4" x2="450" y2="76" stroke="#0f172a" stroke-width="2.5" vector-effect="non-scaling-stroke" marker-start="url(#dot4)" marker-end="url(#ah4)"/>
+      <line x1="750" y1="4" x2="750" y2="76" stroke="#0f172a" stroke-width="2.5" vector-effect="non-scaling-stroke" marker-start="url(#dot4)" marker-end="url(#ah4)"/>
+      <line x1="1050" y1="4" x2="1050" y2="76" stroke="#0f172a" stroke-width="2.5" vector-effect="non-scaling-stroke" marker-start="url(#dot4)" marker-end="url(#ah4)"/>
+      <!-- Dashed horizontal: shared infrastructure -->
+      <line x1="40" y1="40" x2="1160" y2="40" stroke="#64748b" stroke-width="1" stroke-dasharray="4,6" vector-effect="non-scaling-stroke"/>
+    </svg>
+
+    <!-- ==================== LAYER 5: 基础设施层 ==================== -->
+    <div class="layer">
+      <div class="layer-head">
+        <span class="layer-badge layer-badge--filled">5</span>
+        <span class="layer-label">基础设施层<span class="layer-label-en">Infrastructure</span></span>
+      </div>
+      <div class="layer-body layer-body--4col">
+        <div class="comp">
+          <div class="comp-name">Tauri 2.x Runtime</div>
+          <div class="comp-tech">Rust Backend</div>
+          <div class="comp-desc">桌面应用运行时，系统级API与安全沙箱</div>
+          <span class="comp-tag">runtime</span>
+        </div>
+        <div class="comp">
+          <div class="comp-name">SQLite 本地存储</div>
+          <div class="comp-tech">Local RDBMS</div>
+          <div class="comp-desc">轻量级嵌入式数据库，离线优先</div>
+          <span class="comp-tag">storage</span>
+        </div>
+        <div class="comp">
+          <div class="comp-name">SQLite-vec 向量存储</div>
+          <div class="comp-tech">Embedding Store</div>
+          <div class="comp-desc">语义向量索引，支撑RAG检索与学生画像召回</div>
+          <span class="comp-tag">storage</span>
+        </div>
+        <div class="comp">
+          <div class="comp-name">LLM 运行时</div>
+          <div class="comp-tech">Ollama / llama.cpp sidecar</div>
+          <div class="comp-desc">本地大模型推理引擎，sidecar进程运行</div>
+          <span class="comp-tag">runtime</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== LEGEND ==================== -->
+    <div class="legend">
+      <div class="legend-title">图例 / Legend</div>
+      <div class="legend-grid">
+        <div class="legend-item">
+          <div class="legend-line legend-line--solid"></div>
+          <span>实线 &mdash; 主数据流</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-line legend-line--dashed"></div>
+          <span>虚线 &mdash; 可选/异步连接</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-line legend-line--thick"></div>
+          <span>粗实线 &mdash; 基础设施支撑</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-box"></div>
+          <span>蓝色虚线框 &mdash; v2 新增模块</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <div class="diagram-footer">
+      <div class="footer-left">TeacherAgent v2.0 &mdash; + 自适应递归学习 + 目标路径规划 + 对话式评估</div>
+      <div class="footer-right">
+        <div class="footer-stack">
+          <span class="footer-tag">Tauri 2.x</span>
+          <span class="footer-tag">Vue 3</span>
+          <span class="footer-tag">SQLite</span>
+          <span class="footer-tag">SQLite-vec</span>
+          <span class="footer-tag">Ollama</span>
+          <span class="footer-tag">RAG</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

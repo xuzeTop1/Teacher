@@ -1,0 +1,705 @@
+{
+  "subject": "english",
+  "chapter": "english-cloze",
+  "status": "draft",
+  "nodes": [
+    {
+      "id": "eng-cloze-001",
+      "title": "逻辑连词辨析（转折、因果、并列、递进）",
+      "content": "##逻辑连词辨析### 1.转折关系-but,however,yet,nevertheless,on the contrary,by contrast-表示：前后句意相反**示例**：```He is young,but he is smart.（年轻 $\\to$聪明，转折）```\n\n### 2.因果关系-because$, since,$as,therefore,thus,hence,so,as $a$result-表示：前因后果或前果后因**示例**：```He studied hard,so he passed the exam.（努力学习 $\\to$通过考试，因果）```\n\n### 3.并列关系-and,or,not only...but also...,either...or...,neither...nor...\n-表示：前后句意并列或选择**示例**：```He likes English and he likes math.（喜欢英语 +喜欢数学，并列）```\n\n### 4.递进关系-moreover,furthermore,in addition,besides,what$'s$more-表示：前后句意递进（程度加深）**示例**：```He is smart.Moreover,he is hardworking.（聪明 $\\to$努力，递进）```\n\n###解题步骤$1. **$读前一句和后一句$**\n2. **$判断逻辑关系**（转折、因果、并列、递进）$3. **$选择合适的逻辑连词**\n\n###示例（年完形）\"Some people $argue$that $A$is good. ___,others believe that $B$is better.\"答案：However（转折关系）",
+      "difficulty": 2,
+      "status": "draft",
+      "prerequisites": [],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "先读前一句和后一句，判断逻辑关系"
+        },
+        {
+          "level": "L2",
+          "text": "然后看选项是什么逻辑关系（转折、因果、并列、递进）？"
+        },
+        {
+          "level": "L3",
+          "text": "最后选择合适的逻辑连词"
+        }
+      ],
+      "misconceptions": [
+        "孤立看空格前后词，不判断两句之间的逻辑关系",
+        "把and当成万能连词，忽略前后句可能是转折关系",
+        "忽略逻辑连词在上下文中的提示（如前句有although，后句就不选but）"
+      ],
+      "summary": "掌握逻辑连词辨析（转折、因果、并列、递进），根据前后句逻辑关系选词。",
+      "source": {
+        "title": "TeacherAgent English knowledge seed",
+        "license": "original_generated",
+        "sourceType": "curriculum"
+      }
+    },
+    {
+      "id": "eng-cloze-002",
+      "title": "熟词生义（develop, process, observe等）",
+      "content": "## 熟词生义\n\n### 什么是熟词生义？\n- 常见词的不常见意思\n- 需要根据上下文判断具体意思\n\n### 常见熟词生义\n\n#### 1. develop\n- 常见意思：发展\n- 生义：冲洗（照片）、患（病）、形成（习惯）\n\n**示例**：\n```\ndevelop a film（冲洗照片）\ndevelop a disease（患病）\ndevelop a habit（形成习惯）\n```\n\n#### 2. process\n- 常见意思：过程\n- 生义：处理、加工\n\n**示例**：\n```\nprocess the data（处理数据）\nprocess the food（加工食物）\n```\n\n#### 3. observe\n- 常见意思：观察\n- 生义：遵守（法律、习俗）、庆祝（节日）\n\n**示例**：\n```\nobserve the law（遵守法律）\nobserve the festival（庆祝节日）\n```\n\n#### 4. address\n- 常见意思：地址\n- 生义：解决（问题）、演讲\n\n**示例**：\n```\naddress the problem（解决问题）\naddress the audience（向观众演讲）\n```\n\n### 解题步骤\n1. **看常见意思是否通顺**\n2. **如果不通顺，考虑生义**\n3. **结合上下文选择最合适的意思**\n\n### 示例（年完形）\n\"The company plans to ___ the problem.\"\n答案：address（解决）",
+      "difficulty": 2,
+      "status": "draft",
+      "prerequisites": [
+        "eng-cloze-001"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "先想常见意思是否通顺？"
+        },
+        {
+          "level": "L2",
+          "text": "如果不通顺，考虑生义"
+        },
+        {
+          "level": "L3",
+          "text": "最后结合上下文选择最合适的意思"
+        }
+      ],
+      "misconceptions": [
+        "只记单词常见意思，遇到熟悉单词在上下文中意思不通时不调整",
+        "把熟词生义当成不认识的生词，直接跳过不选",
+        "忽略上下文提供的语义线索，孤立地判断词义"
+      ],
+      "summary": "掌握熟词生义的判断方法，如address（解决）、develop（患）、process（加工）。",
+      "source": {
+        "title": "TeacherAgent English knowledge seed",
+        "license": "original_generated",
+        "sourceType": "curriculum"
+      }
+    },
+    {
+      "id": "eng-cloze-003",
+      "title": "动词短语搭配辨析",
+      "content": "## 动词短语搭配辨析\n\n### 常见动词短语\n\n#### 1. 动词 + 介词/副词\n- look at（看）, look for（寻找）, look after（照顾）\n- give up（放弃）, give in（让步）, give out（分发）\n- take off（起飞、脱掉）, take after（像）, take in（吸收）\n\n### 解题步骤\n1. **看空格前后的词**（动词和介词/副词）\n2. **想动词短语的意思**\n3. **结合上下文选择最合适的**\n\n### 示例（年完形）\n\"He decided to ___ up smoking.\"\n答案：give（give up = 放弃）",
+      "difficulty": 2,
+      "status": "draft",
+      "prerequisites": [
+        "eng-cloze-001"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "先想动词短语的意思"
+        },
+        {
+          "level": "L2",
+          "text": "然后结合上下文选择最合适的"
+        },
+        {
+          "level": "L3",
+          "text": "最后注意动词和介词/副词的搭配"
+        }
+      ],
+      "misconceptions": [
+        "把动词短语中的介词/副词当成独立介词题来做",
+        "熟悉give up但遇到take off（起飞/脱掉）时不区分语义",
+        "忽略动词和介词/副词搭配的整体意思"
+      ],
+      "summary": "掌握动词短语搭配辨析，如give up（放弃）、take up（开始）、look up（查阅）。",
+      "source": {
+        "title": "TeacherAgent English knowledge seed",
+        "license": "original_generated",
+        "sourceType": "curriculum"
+      }
+    },
+    {
+      "id": "eng-cloze-004",
+      "title": "句际关系推断（顺承、转折、让步、因果）",
+      "content": "##句际关系推断### 1.顺承关系-标志词：and,then,after that,furthermore-表示：前后句意同向，程度加深或顺序进行**示例**：```He got up.Then he had breakfast.（起床 $\\to$吃早餐，顺承）```\n\n### 2.转折关系-标志词：but,however,yet,nevertheless-表示：前后句意相反**示例**：```He is young,but he is smart.（年轻 $\\to$聪明，转折）```\n\n### 3.让步关系-标志词：although,though,even if,while-表示：前后句意相反，但语气较弱**示例**：```Although he is young,he is smart.（虽然年轻 $\\to$但聪明，让步）```\n\n### 4.因果关系-标志词：because$, since,$as,therefore,thus,so-表示：前因后果或前果后因**示例**：```He studied hard,so he passed the exam.（努力学习 $\\to$通过考试，因果）```\n\n###解题步骤$1. **$读前一句和后一句$**\n2. **$判断句际关系**（顺承、转折、让步、因果）$3. **$选择合适的逻辑词**\n\n###示例（年完形）\"He is young. ___,he is smart.\"答案：However（转折关系）",
+      "difficulty": 2,
+      "status": "draft",
+      "prerequisites": [
+        "eng-cloze-001"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "先读前一句和后一句，判断句际关系"
+        },
+        {
+          "level": "L2",
+          "text": "然后看选项是什么逻辑关系（顺承、转折、让步、因果）？"
+        },
+        {
+          "level": "L3",
+          "text": "最后选择合适的逻辑词"
+        }
+      ],
+      "misconceptions": [
+        "读前一句但忽略后一句，句际关系需要两句都读",
+        "把转折关系和让步关系混淆（but vs although）",
+        "忽略段首逻辑词对全段逻辑的限定作用"
+      ],
+      "summary": "掌握句际关系推断（顺承、转折、让步、因果），通过衔接词判断逻辑。",
+      "source": {
+        "title": "TeacherAgent English knowledge seed",
+        "license": "original_generated",
+        "sourceType": "curriculum"
+      }
+    },
+    {
+      "id": "eng-cloze-005",
+      "title": "上下文词汇复现（同义、反义、上下义）",
+      "content": "##上下文词汇复现### 1.同义复现-空格前/后的词与选项是同义词**示例**：```He is ___.He often helps others.选项：kind（善良的）（helps others $\\to$kind，同义复现）```\n\n### 2.反义复现-空格前/后的词与选项是反义词**示例**：```He is not ___.He often hurts others.选项：kind（善良的）（hurts others $\\to$not kind，反义复现）```\n\n### 3.上下义复现-空格前/后的词是选项的上义词或下义词**示例**：```He likes ___.He often reads novels.选项：reading（阅读）（novels是reading的下义词，上下义复现）```\n\n###解题步骤$1. **$找空格前/后的关键词$**\n2. **$判断是否是同义、反义、上下义$**\n3. **$选择合适的选项**\n\n###示例（年完形）\"He is ___.He often helps others.\"答案：kind（同义复现）",
+      "difficulty": 2,
+      "status": "draft",
+      "prerequisites": [
+        "eng-cloze-001"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "先找空格前/后的关键词"
+        },
+        {
+          "level": "L2",
+          "text": "然后判断是否是同义、反义、上下义复现"
+        },
+        {
+          "level": "L3",
+          "text": "最后选择合适的选项"
+        }
+      ],
+      "misconceptions": [
+        "找不到上下文的复现线索，孤立地看空格",
+        "把反义复现当成同义复现，选了意思相反的词",
+        "忽略上下义词复现（如fruit出现在apple之后，fruit是上义词）"
+      ],
+      "summary": "掌握上下文词汇复现技巧（同义、反义、上下义），利用复现线索选词。",
+      "source": {
+        "title": "TeacherAgent English knowledge seed",
+        "license": "original_generated",
+        "sourceType": "curriculum"
+      }
+    },
+    {
+      "id": "eng-cloze-006",
+      "title": "固定搭配与习惯用法",
+      "content": "## 固定搭配与习惯用法\n\n### 常见固定搭配\n\n#### 1. 动词 + 名词\n- make a decision（做决定）\n- take action（采取行动）\n- pay attention to（注意）\n\n#### 2. 形容词 + 介词\n- interested in（对...感兴趣）\n- afraid of（害怕...）\n- different from（与...不同）\n\n#### 3. 名词 + 介词\n- reason for（...的原因）\n- solution to（...的解决方案）\n- impact on（对...的影响）\n\n### 解题步骤\n1. **看空格前后的词**（动词、形容词、名词）\n2. **想固定搭配**\n3. **选择合适的介词或名词**\n\n### 示例（年完形）\n\"He paid attention ___ the problem.\"\n答案：to（pay attention to是固定搭配）",
+      "difficulty": 2,
+      "status": "draft",
+      "prerequisites": [
+        "eng-cloze-001"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "先想固定搭配"
+        },
+        {
+          "level": "L2",
+          "text": "然后看空格前后的词（动词、形容词、名词）"
+        },
+        {
+          "level": "L3",
+          "text": "最后选择合适的介词或名词"
+        }
+      ],
+      "misconceptions": [
+        "把固定搭配记错（如pay attention to 写成pay attention on）",
+        "根据中文习惯选介词（中文'注意...'没有to，英文必须有）",
+        "忽略搭配中的介词是固定用法，不能按逻辑推测"
+      ],
+      "summary": "掌握固定搭配与习惯用法，如make a decision、pay attention to、devote to。",
+      "source": {
+        "title": "TeacherAgent English knowledge seed",
+        "license": "original_generated",
+        "sourceType": "curriculum"
+      }
+    },
+    {
+      "id": "eng-cloze-007",
+      "title": "代词指代关系判断",
+      "content": "## 代词指代关系判断\n\n### 常见代词\n- 人称代词：he, she, it, they, we, you\n- 指示代词：this, that, these, those\n- 关系代词：who, whom, which, that\n\n### 解题步骤\n1. **找到代词在文中的位置**\n2. **找前一句的主语/宾语**（通常是指代对象）\n3. **判断单复数、阴阳性是否一致**\n\n### 示例（年完形）\n\"Tom likes English. He studies every day.\"\n（He指代Tom）",
+      "difficulty": 2,
+      "status": "draft",
+      "prerequisites": [
+        "eng-cloze-001"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "先找到代词在文中的位置"
+        },
+        {
+          "level": "L2",
+          "text": "然后找前一句的主语/宾语"
+        },
+        {
+          "level": "L3",
+          "text": "最后判断单复数、阴阳性是否一致"
+        }
+      ],
+      "misconceptions": [
+        "指代关系判断时找最近名词，但最近名词不一定是正确的指代对象",
+        "忽略代词单复数和先行词单复数必须一致的规则",
+        "把it当成实义代词，忽略it常作形式主语/宾语"
+      ],
+      "summary": "掌握代词指代关系判断，根据前后句主语一致性选择正确代词。",
+      "source": {
+        "title": "TeacherAgent English knowledge seed",
+        "license": "original_generated",
+        "sourceType": "curriculum"
+      }
+    },
+    {
+      "id": "eng-cloze-008",
+      "title": "时态与语态一致性",
+      "content": "## 时态与语态一致性\n\n### 常见时态\n- 现在时：do/does\n- 过去时：did\n- 将来时：will do\n- 现在完成时：have/has done\n\n### 解题步骤\n1. **找时间标志词**（now, yesterday, tomorrow等）\n2. **看全文基调**（是现在时还是过去时？）\n3. **选择合适时态**\n\n### 示例（年完形）\n\"He ___ to school every day.\"\n答案：goes（现在时，every day是时间标志）",
+      "difficulty": 2,
+      "status": "draft",
+      "prerequisites": [
+        "eng-cloze-001"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "先找时间标志词"
+        },
+        {
+          "level": "L2",
+          "text": "然后看全文基调"
+        },
+        {
+          "level": "L3",
+          "text": "最后选择合适时态"
+        }
+      ],
+      "misconceptions": [
+        "忽略时间标志词（every day/yesterday等），时态判断错误",
+        "全文是过去时但选项中有现在时，被错误选项干扰",
+        "忽略主从句时态一致性规则"
+      ],
+      "summary": "掌握时态与语态一致性，通过时间标志词判断应使用何种时态。",
+      "source": {
+        "title": "TeacherAgent English knowledge seed",
+        "license": "original_generated",
+        "sourceType": "curriculum"
+      }
+    },
+    {
+      "id": "eng-cloze-009",
+      "title": "主谓一致原则",
+      "content": "## 主谓一致原则\n\n### 常见情况\n\n#### 1. 单数主语 + 单数谓语\n```\nHe works every day.\n（He是单数，works是单数）\n```\n\n#### 2. 复数主语 + 复数谓语\n```\nThey work every day.\n（They是复数，work是复数）\n```\n\n#### 3. 不可数名词 + 单数谓语\n```\nThe water is cold.\n（water是不可数名词，is是单数）\n```\n\n### 解题步骤\n1. **找到真正的主语**（不是of/with等介词的宾语）\n2. **判断主语是单数还是复数**\n3. **选择合适谓语**\n\n### 示例（年完形）\n\"The number of students __ increasing.\"\n答案：is（主语是The number，单数）",
+      "difficulty": 2,
+      "status": "draft",
+      "prerequisites": [
+        "eng-cloze-001"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "先找到真正的主语"
+        },
+        {
+          "level": "L2",
+          "text": "然后判断主语是单数还是复数"
+        },
+        {
+          "level": "L3",
+          "text": "最后选择合适谓语"
+        }
+      ],
+      "misconceptions": [
+        "把主语从句中的主语当成句子主语（如That he came...的主语是That从句）",
+        "忽略The number of和A number of的主谓一致区别",
+        "把介词of的宾语当成句子主语"
+      ],
+      "summary": "掌握主谓一致原则，区分The number of（单数）与a number of（复数）。",
+      "source": {
+        "title": "TeacherAgent English knowledge seed",
+        "license": "original_generated",
+        "sourceType": "curriculum"
+      }
+    },
+    {
+      "id": "eng-cloze-010",
+      "title": "非谓语动词的用法（doing, done, to do）",
+      "content": "##非谓语动词的用法### 1.doing（现在分词/动名词）-表示主动、进行```He is reading. (reading是现在分词）```\n\n### 2.done（过去分词）-表示被动、完成```The book was written by Lu Xun. (written是过去分词）```\n\n### 3.to do（不定式）-表示目的、将来```He came to study. (to study是不定式）```\n\n###解题步骤$1. **$判断逻辑主语**（非谓语动词的动作发出者）$2. **$判断主动还是被动$**\n3. **$选择合适形式**（doing,done,to do）###示例（年完形）\"___the teacher entering,the students stood up.\"答案：Seeing（逻辑主语是the students，主动）",
+      "difficulty": 2,
+      "status": "draft",
+      "prerequisites": [
+        "eng-cloze-001"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "先判断逻辑主语"
+        },
+        {
+          "level": "L2",
+          "text": "然后判断主动还是被动"
+        },
+        {
+          "level": "L3",
+          "text": "最后选择合适形式（doing, done, to do）"
+        }
+      ],
+      "misconceptions": [
+        "非谓语动词语态判断错误（主动用doing，被动用done）",
+        "逻辑主语判断错误，非谓语动词的逻辑主语不一定是句子主语",
+        "忽略独立主格结构中逻辑主语和主句主语不一致的特点"
+      ],
+      "summary": "掌握非谓语动词的用法（doing表主动、done表被动、to do表目的）。",
+      "source": {
+        "title": "TeacherAgent English knowledge seed",
+        "license": "original_generated",
+        "sourceType": "curriculum"
+      }
+    },
+    {
+      "id": "eng-cloze-011",
+      "title": "介词用法辨析（in, on, at, by, for等）",
+      "content": "## 介词用法辨析\n\n### 常见介词\n\n#### 1. 时间介词\n- in + 年/月/季节（in , in May）\n- on + 具体日期/星期（on Monday, on May 1st）\n- at + 具体时间（at 3:00, at noon）\n\n#### 2. 地点介词\n- in + 大地方（in China, in Beijing）\n- on + 表面（on the table, on the wall）\n- at + 小地方（at home, at school）\n\n#### 3. 方式介词\n- by + 交通工具（by bus, by train）\n- with + 工具（with a pen, with a knife）\n\n### 解题步骤\n1. **看空格后的词**（是时间、地点还是方式？）\n2. **想介词用法**\n3. **选择合适的介词**\n\n### 示例（年完形）\n\"He arrived ___ Monday.\"\n答案：on（具体日期用on）",
+      "difficulty": 2,
+      "status": "draft",
+      "prerequisites": [
+        "eng-cloze-001"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "先判断是时间、地点还是方式介词？"
+        },
+        {
+          "level": "L2",
+          "text": "然后想介词用法"
+        },
+        {
+          "level": "L3",
+          "text": "最后选择合适的介词"
+        }
+      ],
+      "misconceptions": [
+        "时间介词in/on/at的用法混淆（in+年/月，on+具体日期，at+时刻）",
+        "地点介词in/at用法混淆（大地方用in，小地方用at）",
+        "方式介词by/with用法混淆（by+交通工具，with+工具）"
+      ],
+      "summary": "掌握介词用法辨析（in+年月、on+日期、at+时刻、by+截止时间）。",
+      "source": {
+        "title": "TeacherAgent English knowledge seed",
+        "license": "original_generated",
+        "sourceType": "curriculum"
+      }
+    },
+    {
+      "id": "eng-cloze-012",
+      "title": "冠词用法（a, an, the）",
+      "content": "##冠词用法### 1.不定冠词（$a,$an）-表示泛指（第一次提到）$```\nI$have $a$book. (book第一次提到）```\n\n### 2.定冠词（the）-表示特指（第二次提到或唯一事物）$```\nI$have $a$book.The book is interesting. (book第二次提到）```\n\n###解题步骤$1. **$看名词是泛指还是特指$**\n2. **$如果是泛指，用$\\frac{a}{a}n**\n3. **$如果是特指，用$the**\n\n###$示例（年完形）\"He has ___book. ___book is interesting.\"答案：$a,$The（第一次泛指，第二次特指）",
+      "difficulty": 2,
+      "status": "draft",
+      "prerequisites": [
+        "eng-cloze-001"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "先判断名词是泛指还是特指？"
+        },
+        {
+          "level": "L2",
+          "text": "然后如果是泛指，用a/an"
+        },
+        {
+          "level": "L3",
+          "text": "最后如果是特指，用the"
+        }
+      ],
+      "misconceptions": [
+        "泛指和特指判断错误，第一次提到不一定都用a（抽象名词前用零冠词）",
+        "忽略不定冠词a/an的区别（元音开头用an，不是元音字母）",
+        "专有名词前的冠词使用错误（普通专有名词用the，唯一事物用the）"
+      ],
+      "summary": "掌握冠词用法（a/an泛指、the特指），通过上下文判断首次还是再次提及。",
+      "source": {
+        "title": "TeacherAgent English knowledge seed",
+        "license": "original_generated",
+        "sourceType": "curriculum"
+      }
+    },
+    {
+      "id": "eng-cloze-013",
+      "title": "形容词与副词辨析",
+      "content": "## 形容词与副词辨析\n\n### 1. 形容词（修饰名词）\n```\nHe is a __ student.\n选项：good（形容词，修饰student）\n```\n\n### 2. 副词（修饰动词、形容词、副词）\n```\nHe studies __.\n选项：hard（副词，修饰studies）\n```\n\n### 解题步骤\n1. **判断空格修饰什么词**（名词、动词、形容词、副词）\n2. **如果是名词，用形容词**\n3. **如果是动词/形容词/副词，用副词**\n\n### 示例（年完形）\n\"He is a ___ student. He studies __.\"\n答案：good, hard（good修饰student，hard修饰studies）",
+      "difficulty": 2,
+      "status": "draft",
+      "prerequisites": [
+        "eng-cloze-001"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "先判断空格修饰什么词？"
+        },
+        {
+          "level": "L2",
+          "text": "然后如果是名词，用形容词"
+        },
+        {
+          "level": "L3",
+          "text": "最后如果是动词/形容词/副词，用副词"
+        }
+      ],
+      "misconceptions": [
+        "词性判断错误，-ly结尾的词不一定是副词（friendly是形容词）",
+        "形容词和副词用法混淆（修饰名词用形容词，修饰动词用副词）",
+        "忽略系动词后跟形容词的规则（look/sound/feel + adj）"
+      ],
+      "summary": "掌握形容词与副词辨析，形容词修饰名词，副词修饰动词/形容词/副词。",
+      "source": {
+        "title": "TeacherAgent English knowledge seed",
+        "license": "original_generated",
+        "sourceType": "curriculum"
+      }
+    },
+    {
+      "id": "eng-cloze-014",
+      "title": "虚拟语气在完形填空中的运用",
+      "content": "## 虚拟语气在完形填空中的运用\n\n### 1. 与现在事实相反\n```\nIf I were you, I would go.\n（were, would + do）\n```\n\n### 2. 与过去事实相反\n```\nIf I had known, I would have told you.\n（had + done, would have + done）\n```\n\n### 解题步骤\n1. **判断是否虚拟语气**（如果有if或without等）\n2. **判断是与现在还是过去事实相反**\n3. **选择合适动词形式**\n\n### 示例（年完形）\n\"If I ___ you, I would go.\"\n答案：were（与现在事实相反，用were）",
+      "difficulty": 2,
+      "status": "draft",
+      "prerequisites": [
+        "eng-cloze-001"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "先判断是否虚拟语气？"
+        },
+        {
+          "level": "L2",
+          "text": "然后判断是与现在还是过去事实相反？"
+        },
+        {
+          "level": "L3",
+          "text": "最后选择合适动词形式"
+        }
+      ],
+      "misconceptions": [
+        "虚拟语气时态判断错误（与现在相反用were，与过去相反用had done）",
+        "忽略if条件句省略had/were/should时的倒装规则",
+        "把真实条件句和虚拟条件句混淆"
+      ],
+      "summary": "掌握虚拟语气在完形填空中的运用（与现在/过去/将来事实相反的三种情况）。",
+      "source": {
+        "title": "TeacherAgent English knowledge seed",
+        "license": "original_generated",
+        "sourceType": "curriculum"
+      }
+    },
+    {
+      "id": "eng-cloze-015",
+      "title": "情态动词用法（can, may, must, should等）",
+      "content": "##情态动词用法###常见情态动词#### 1.ca$\\frac{n}{c}$ould（能力、许可）```He can swim. (能力）Can $I$go? (许可）```\n\n#### 2.ma$\\frac{y}{m}$ight（许可、可能）```May $I$go? (许可）It may rain. (可能）```\n\n#### 3.must（必须、肯定）```You must go. (必须）He must be tired. (肯定）```\n\n#### 4.should（应该）```You should study. (应该）```\n\n###解题步骤$1. **$判断句意**（是能力、许可、可能还是应该？）$2. **$想情态动词意思$**\n3. **$选择合适的情态动词**\n\n###示例（年完形）\"You ___study hard.\"答案：should（应该）",
+      "difficulty": 2,
+      "status": "draft",
+      "prerequisites": [
+        "eng-cloze-001"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "先判断句意（是能力、许可、可能还是应该？）"
+        },
+        {
+          "level": "L2",
+          "text": "然后想情态动词意思"
+        },
+        {
+          "level": "L3",
+          "text": "最后选择合适的情态动词"
+        }
+      ],
+      "misconceptions": [
+        "情态动词意思混淆（can表能力，may表许可，must表必须/肯定推测）",
+        "忽略情态动词的语气差异（should应该，must必须，语气强度不同）",
+        "把中文的'能'直接对应成can，忽略语境中的'可能'用may"
+      ],
+      "summary": "掌握情态动词用法（can表能力、may表许可、must表必须、should表应该）。",
+      "source": {
+        "title": "TeacherAgent English knowledge seed",
+        "license": "original_generated",
+        "sourceType": "curriculum"
+      }
+    },
+    {
+      "id": "eng-cloze-016",
+      "title": "倒装句在完形填空中的运用",
+      "content": "## 倒装句在完形填空中的运用\n\n### 1. 完全倒装\n```\nHere comes the bus.\n（主语 bus在谓语comes后面）\n```\n\n### 2. 部分倒装\n```\nNever have I seen such a beautiful sunset.\n（助动词have在主语I前面）\n```\n\n### 解题步骤\n1. **判断是否倒装句**（如果谓语在主语前面）\n2. **判断是完全倒装还是部分倒装**\n3. **选择合适语序**\n\n### 示例（年完形）\n\"Here ___ the bus.\"\n答案：comes（完全倒装）",
+      "difficulty": 2,
+      "status": "draft",
+      "prerequisites": [
+        "eng-cloze-001"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "先判断是否倒装句？"
+        },
+        {
+          "level": "L2",
+          "text": "然后判断是完全倒装还是部分倒装？"
+        },
+        {
+          "level": "L3",
+          "text": "最后选择合适语序"
+        }
+      ],
+      "misconceptions": [
+        "完全倒装和部分倒装混淆（Here comes...是完全倒装，Never have I...是部分倒装）",
+        "忽略否定词在句首时的部分倒装规则",
+        "倒装句主语和谓语判断错误"
+      ],
+      "summary": "掌握倒装句在完形填空中的运用（完全倒装和部分倒装的识别与判断）。",
+      "source": {
+        "title": "TeacherAgent English knowledge seed",
+        "license": "original_generated",
+        "sourceType": "curriculum"
+      }
+    },
+    {
+      "id": "eng-cloze-017",
+      "title": "强调句型在完形填空中的运用",
+      "content": "## 强调句型在完形填空中的运用\n\n### 强调句型结构\n```\nIt is/was + 被强调部分 + that/who + 句子剩余部分\n```\n\n### 解题步骤\n1. **判断是否强调句型**（如果去掉It is...that后句子仍完整）\n2. **找被强调部分**（主语、宾语、状语）\n3. **选择合适连接词**（that/who）\n\n### 示例（年完形）\n\"___ is this approach that has led to the success.\"\n答案：It（强调句型）",
+      "difficulty": 2,
+      "status": "draft",
+      "prerequisites": [
+        "eng-cloze-001"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "先判断是否强调句型？"
+        },
+        {
+          "level": "L2",
+          "text": "然后找被强调部分"
+        },
+        {
+          "level": "L3",
+          "text": "最后选择合适连接词（that/who）"
+        }
+      ],
+      "misconceptions": [
+        "强调句型和定语从句混淆（强调句型去掉It is...that后句子仍完整）",
+        "强调句型中that和who的使用错误（人被强调用who，其他用that）",
+        "忽略强调句型可以强调主语、宾语、状语，但不能强调谓语"
+      ],
+      "summary": "掌握强调句型It is/was...that/who在完形填空中的识别与运用。",
+      "source": {
+        "title": "TeacherAgent English knowledge seed",
+        "license": "original_generated",
+        "sourceType": "curriculum"
+      }
+    },
+    {
+      "id": "eng-cloze-018",
+      "title": "There be句型在完形填空中的运用",
+      "content": "## There be句型在完形填空中的运用\n\n### There be句型结构\n```\nThere is/are + 名词 + 地点/时间状语\n```\n\n### 解题步骤\n1. **判断是否there be句型**\n2. **看名词是单数还是复数**\n3. **选择合适动词**（is/are）\n\n### 示例（年完形）\n\"There ___ a book on the table.\"\n答案：is（名词book是单数）",
+      "difficulty": 2,
+      "status": "draft",
+      "prerequisites": [
+        "eng-cloze-001"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "先判断是否there be句型？"
+        },
+        {
+          "level": "L2",
+          "text": "然后看名词是单数还是复数？"
+        },
+        {
+          "level": "L3",
+          "text": "最后选择合适动词（is/are）"
+        }
+      ],
+      "misconceptions": [
+        "There be句型的主谓一致错误（主语在be动词后，不是there）",
+        "忽略There be句型的时态变化（$i\\frac{s}{a}$re$\\to$wa$\\frac{s}{w}$ere）",
+        "There be句型和have混淆（英文中there be和have不连用）"
+      ],
+      "summary": "掌握There be句型在完形填空中的运用，根据主语单复数选择be动词。",
+      "source": {
+        "title": "TeacherAgent English knowledge seed",
+        "license": "original_generated",
+        "sourceType": "curriculum"
+      }
+    },
+    {
+      "id": "eng-cloze-019",
+      "title": "比较级与最高级在完形填空中的运用",
+      "content": "## 比较级与最高级在完形填空中的运用\n\n### 1. 比较级\n```\nHe is taller than me.\n（taller是比较级）\n```\n\n### 2. 最高级\n```\nHe is the tallest in the class.\n（tallest是最高级）\n```\n\n### 解题步骤\n1. **判断是否比较级或最高级**\n2. **看后面是否有than或in/of短语**\n3. **选择合适形式**\n\n### 示例（年完形）\n\"He is ___ than me.\"\n答案：taller（后面有than，用比较级）",
+      "difficulty": 2,
+      "status": "draft",
+      "prerequisites": [
+        "eng-cloze-001"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "先判断是否比较级或最高级？"
+        },
+        {
+          "level": "L2",
+          "text": "然后看后面是否有than或in/of短语？"
+        },
+        {
+          "level": "L3",
+          "text": "最后选择合适形式"
+        }
+      ],
+      "misconceptions": [
+        "比较级和最高级形式错误（多音节词用more/most，不是-er/-est）",
+        "比较对象不一致（比较的应该是同类事物）",
+        "忽略than在比较级中的使用，或错误在最高级中用than"
+      ],
+      "summary": "掌握比较级与最高级在完形填空中的运用（单音节+er、多音节more）。",
+      "source": {
+        "title": "TeacherAgent English knowledge seed",
+        "license": "original_generated",
+        "sourceType": "curriculum"
+      }
+    },
+    {
+      "id": "eng-cloze-020",
+      "title": "完形填空的整体解题策略（上下文、逻辑、搭配）",
+      "content": "## 完形填空的整体解题策略\n\n### 步骤\n1. **通读全文**（把握主旨）\n2. **逐题解答**（结合上下文、逻辑、搭配）\n3. **复核答案**（通读全文，检查是否通顺）\n\n### 解题技巧\n1. **上下文线索**：\n   - 前一句或后一句可能有提示\n\n2. **逻辑关系**：\n   - 转折、因果、并列、递进\n\n3. **固定搭配**：\n   - 动词+介词、形容词+介词、名词+介词\n\n### 示例（年完形）\n先通读全文，把握主旨（关于GPS的讨论），然后逐题解答，最后复核答案。",
+      "difficulty": 2,
+      "status": "draft",
+      "prerequisites": [
+        "eng-cloze-001"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "先通读全文，把握主旨"
+        },
+        {
+          "level": "L2",
+          "text": "然后逐题解答，结合上下文、逻辑、搭配"
+        },
+        {
+          "level": "L3",
+          "text": "最后复核答案，通读全文检查是否通顺"
+        }
+      ],
+      "misconceptions": [
+        "不先通读全文就逐题做，导致上下文线索遗漏",
+        "忽略文章基调（positive/negative）对选项的影响",
+        "做完后不复核，错误选项破坏全文逻辑连贯性"
+      ],
+      "summary": "掌握完形填空的整体解题策略：通读全文$\\to$逐题解答$\\to$复核答案。",
+      "source": {
+        "title": "TeacherAgent English knowledge seed",
+        "license": "original_generated",
+        "sourceType": "curriculum"
+      }
+    }
+  ]
+}

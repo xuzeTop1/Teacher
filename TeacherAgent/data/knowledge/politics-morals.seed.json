@@ -1,0 +1,692 @@
+{
+  "subject": "politics",
+  "course": "morals",
+  "chapter": "politics-morals",
+  "status": "draft",
+  "nodes": [
+    {
+      "id": "politics-morals-001",
+      "title": "理想信念",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "理想是人们在实践中形成的、有实现可能性的、对未来社会和自身发展目标的向往与追求。信念是认知、情感和意志的有机统一体，是人们在一定的认识基础上确立的对某种思想或事物坚信不疑并身体力行的心理态度和精神状态。理想信念是人生精神的核心，指引人生奋斗方向，提供人生前进动力，提高人生精神境界。",
+      "prerequisites": [],
+      "misconceptions": [
+        "理想信念是虚无缥缈的，没有实际意义",
+        "理想信念就是空想，不能指导实际行动"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "想一想：为什么有些人面对困难能坚持不懈，有些人却轻易放弃？支撑他们的力量是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "理想信念不是空想，它是建立在理性认识基础上的价值追求，能够指引方向、提供动力。"
+        },
+        {
+          "level": "L3",
+          "text": "分析理想信念的作用，抓住三个维度：指引方向（奋斗目标）、提供动力（克服困难）、提升境界（精神追求）。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-morals-002",
+      "title": "中国精神",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "中国精神是民族精神和时代精神的统一。民族精神是一个民族在长期共同生活和社会实践中形成的，为本民族大多数成员所认同的价值取向、思维方式、道德规范和精神气质的总和。以爱国主义为核心的团结统一、爱好和平、勤劳勇敢、自强不息的伟大民族精神，是中华民族生生不息的精神血脉。以改革创新为核心的时代精神，是当代中国人民精神风貌的集中体现。",
+      "prerequisites": [
+        "politics-morals-001"
+      ],
+      "misconceptions": [
+        "民族精神是历史形成的，和当代没有关系",
+        "爱国主义就是盲目排外"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "为什么中华民族在几千年的历史中能够生生不息？支撑这个民族不断前进的精神力量是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "中国精神是民族精神和时代精神的统一：民族精神是根，时代精神是魂，两者相辅相成。"
+        },
+        {
+          "level": "L3",
+          "text": "分析中国精神，抓住'爱国主义'（民族精神核心）和'改革创新'（时代精神核心）两个关键词，理解它们的时代意义。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-morals-003",
+      "title": "社会主义核心价值观",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "社会主义核心价值观是当代中国精神的集中体现，凝结着全体人民共同的价值追求。社会主义核心价值观的基本内容是：富强、民主、文明、和谐（国家层面的价值目标），自由、平等、公正、法治（社会层面的价值取向），爱国、敬业、诚信、友善（公民层面的价值准则）。这24个字是社会主义核心价值观的基本内容。",
+      "prerequisites": [
+        "politics-morals-002"
+      ],
+      "misconceptions": [
+        "社会主义核心价值观就是简单的24个字，没有深刻内涵",
+        "社会主义核心价值观和西方价值观完全一样"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "一个国家、一个民族，如果没有共同的价值追求，会是什么样子？共同价值观有什么作用？"
+        },
+        {
+          "level": "L2",
+          "text": "社会主义核心价值观的三个层面（国家、社会、公民）是相互联系、相互贯通的有机整体，不是孤立的24个字。"
+        },
+        {
+          "level": "L3",
+          "text": "分析社会主义核心价值观，从三个层面理解：国家层面（奋斗目标）、社会层面（运行规则）、公民层面（行为准则）。三者统一于中国特色社会主义伟大实践。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-morals-004",
+      "title": "道德的本质和功能",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "道德是反映社会经济关系的特殊意识形态，是社会利益关系的特殊调节方式，是一种实践精神。道德的主要功能包括：认识功能（反映社会现实）、规范功能（约束人的行为）、调节功能（解决矛盾冲突）。道德通过评价、教育、指导、激励、沟通等方式，协调人与人、人与社会之间的关系。",
+      "prerequisites": [],
+      "misconceptions": [
+        "道德就是法律，两者是一回事",
+        "道德是固定不变的，和经济社会发展没有关系"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "道德和法律都是规范人的行为，它们有什么区别？一个靠制裁，一个靠什么？"
+        },
+        {
+          "level": "L2",
+          "text": "道德的本质要从三个层面理解：意识形态（反映经济关系）、调节方式（特殊方式）、实践精神（知行合一）。"
+        },
+        {
+          "level": "L3",
+          "text": "分析道德的功能，区分'认识'（明辨是非）、'规范'（确立准则）、'调节'（解决冲突）三者的不同作用方式。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-morals-005",
+      "title": "中华传统美德",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "中华传统美德是中华文化精髓，蕴含着丰富的思想道德资源。中华传统美德的基本精神包括：重视整体利益、强调责任奉献；推崇仁爱原则、注重以和为贵；注重人伦关系、重视道德义务；追求精神境界、向往理想人格；强调道德修养、注重道德践履。在对待中华传统美德的问题上，要坚持古为今用、推陈出新，实现创造性转化和创新性发展。",
+      "prerequisites": [
+        "politics-morals-004"
+      ],
+      "misconceptions": [
+        "中华传统美德已经过时，不适应现代社会",
+        "中华传统美德就是全盘继承，不能有任何批判"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "中华文化延续了五千年，其中蕴含的道德智慧，在今天还有没有价值？哪些仍然适用？"
+        },
+        {
+          "level": "L2",
+          "text": "对待中华传统美德，要坚持'创造性转化、创新性发展'的方针，不能全盘继承，也不能全盘否定。"
+        },
+        {
+          "level": "L3",
+          "text": "分析中华传统美德的当代价值，关键看哪些美德（如仁爱、诚信、正义）仍然符合时代要求，可以古为今用。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-morals-006",
+      "title": "社会公德",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "社会公德是指人们在社会交往和公共生活中应该遵守的行为准则，是维护公共利益、公共秩序、社会和谐稳定的起码的道德要求。社会公德的主要内容是：文明礼貌、助人为乐、爱护公物、保护环境、遵纪守法。遵守社会公德是社会公共生活的必然要求，是促进社会和谐、营造良好社会氛围的重要保障。",
+      "prerequisites": [
+        "politics-morals-004"
+      ],
+      "misconceptions": [
+        "社会公德是小事，不影响大节",
+        "社会公德只是对普通公民的要求，名人可以例外"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "在公共场所，为什么不能大声喧哗、不能乱扔垃圾？这些行为看似小事，实际上影响了什么？"
+        },
+        {
+          "level": "L2",
+          "text": "社会公德看似是'小事'，但它是社会文明程度的晴雨表，反映一个社会的整体道德水平。"
+        },
+        {
+          "level": "L3",
+          "text": "分析社会公德，抓住'公共性'这个核心：它调节的是人与人、人与社会、人与自然在公共生活中的关系。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-morals-007",
+      "title": "职业道德",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "职业道德是指从事一定职业的人在职业生活中应当遵循的具有职业特征的道德要求和行为准则。社会主义职业道德的主要内容是：爱岗敬业、诚实守信、办事公道、服务群众、奉献社会。其中，爱岗敬业是社会主义职业道德的最基本要求，奉献社会是社会主义职业道德的最高境界。遵守职业道德，是职业成功的重要保证，也是社会分工和协作的客观要求。",
+      "prerequisites": [
+        "politics-morals-004"
+      ],
+      "misconceptions": [
+        "职业道德只是对员工的约束，和职业成功没有关系",
+        "在市场经济中，讲职业道德就会吃亏"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "为什么有些企业、有些员工在竞争中胜出？除了技术能力，还有什么因素在起作用？"
+        },
+        {
+          "level": "L2",
+          "text": "职业道德不是束缚，而是职业发展的保障。诚实守信、爱岗敬业，最终受益的是自己。"
+        },
+        {
+          "level": "L3",
+          "text": "分析职业道德，抓住'基本要求'（爱岗敬业）和'最高境界'（奉献社会）两个层面，理解职业道德的层次性。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-morals-008",
+      "title": "家庭美德",
+      "level": "concept",
+      "difficulty": 1,
+      "summary": "家庭美德是调节家庭内部成员以及与家庭生活密切相关的人际关系的行为规范。家庭美德的主要内容是：尊老爱幼、男女平等、夫妻和睦、勤俭持家、邻里团结。家庭是社会的基本细胞，家庭美德建设是形成良好社会风尚的重要基础，对培养下一代、促进社会和谐具有重要意义。",
+      "prerequisites": [
+        "politics-morals-004"
+      ],
+      "misconceptions": [
+        "家庭美德是私事，和社会没有关系",
+        "家庭美德已经过时，不适应现代社会"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "家庭是社会的基本细胞，家庭和睦对社会和谐有什么影响？家庭美德建设为什么重要？"
+        },
+        {
+          "level": "L2",
+          "text": "家庭美德不是私事，家庭建设是社会建设的基础。良好家风对社会风气有重要影响。"
+        },
+        {
+          "level": "L3",
+          "text": "分析家庭美德，要放在'家风'建设的高度来理解：家庭美德不仅关乎家庭幸福，也关乎社会文明进步。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-morals-009",
+      "title": "个人品德",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "个人品德是通过社会道德教育和个人自觉的道德修养所形成的稳定的心理状态和行为习惯。个人品德在社会道德建设中具有基础性作用：个人品德是社会公德、职业道德、家庭美德建设的基础，是提高社会整体道德水平的前提。锤炼高尚个人品德，要走理论与实践相结合的道路，加强道德认知、激发道德情感、强化道德意志、落实道德行为。",
+      "prerequisites": [
+        "politics-morals-004",
+        "politics-morals-006",
+        "politics-morals-007",
+        "politics-morals-008"
+      ],
+      "misconceptions": [
+        "个人品德是天生的，不能通过后天的努力来改变",
+        "个人品德是私事，不影响社会"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "为什么有些人能做到'慎独'（没人监督时也严守道德）？这种品质是怎么养成的？"
+        },
+        {
+          "level": "L2",
+          "text": "个人品德不是天生的，而是通过'知—情—意—行'的道德修养过程逐步养成的。"
+        },
+        {
+          "level": "L3",
+          "text": "分析个人品德的养成，抓住'道德认知'（明辨是非）、'道德情感'（爱憎分明）、'道德意志'（坚持不懈）、'道德行为'（知行合一）四个环节。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-morals-010",
+      "title": "法律的概念和运行",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "法律是由国家制定或认可并以国家强制力保证实施的，反映由特定社会物质生活条件所决定的统治阶级意志，规定权利和义务，以确认、保护和发展有利于统治阶级的社会关系和社会秩序的行为规范体系。我国社会主义法律的运行包括法律制定（立法）、法律遵守（守法）、法律执行（执法）、法律适用（司法）四个环节。",
+      "prerequisites": [],
+      "misconceptions": [
+        "法律就是处罚，只是用来制裁人的",
+        "法律是永恒不变的，和经济社会发展没有关系"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "法律除了惩罚坏人，还有什么作用？它和普通百姓的日常生活有什么关系？"
+        },
+        {
+          "level": "L2",
+          "text": "法律不仅是制裁手段，更是确认权利、规范行为、化解矛盾、维护社会秩序的重要工具。"
+        },
+        {
+          "level": "L3",
+          "text": "分析法律的概念，从三个层面理解：'国家制定认可'（来源）、'国家强制力保证实施'（保障）、'规定权利义务'（内容）。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-morals-011",
+      "title": "宪法是国家的根本法",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "宪法是国家的根本法，是治国安邦的总章程，具有最高的法律地位、法律权威、法律效力。宪法规定了国家的根本制度、根本任务、国家权力配置、公民基本权利和义务等国家生活中最根本、最重要的问题。我国现行宪法是1982年宪法，经过1988年、1993年、1999年、2004年、2018年五次修正。宪法的生命在于实施，宪法的权威也在于实施。",
+      "prerequisites": [
+        "politics-morals-010"
+      ],
+      "misconceptions": [
+        "宪法离日常生活很远，和普通百姓没有关系",
+        "宪法和其他法律地位平等，没有高低之分"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "宪法被称为'根本大法'，它和其他法律有什么不同？为什么说它具有最高法律效力？"
+        },
+        {
+          "level": "L2",
+          "text": "宪法之所以是根本法，因为它规定国家最根本的问题，是一切法律的立法基础，任何法律都不得同宪法相抵触。"
+        },
+        {
+          "level": "L3",
+          "text": "分析宪法的最高法律效力，抓住'立法基础'（其他法律依据宪法制定）、'不得抵触'（违宪无效）、'监督保障'（宪法监督制度）三个要点。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-morals-012",
+      "title": "中国特色社会主义法治体系",
+      "level": "concept",
+      "difficulty": 3,
+      "summary": "中国特色社会主义法治体系是一个由多个子系统构成的复杂系统，包括：完备的法律规范体系（科学立法）、高效的法治实施体系（严格执法、公正司法）、严密的法治监督体系（权力监督）、有力的法治保障体系（人才和物质保障）、完善的党内法规体系（依规治党）。建设中国特色社会主义法治体系，是全面推进依法治国的总目标的重要组成部分。",
+      "prerequisites": [
+        "politics-morals-010",
+        "politics-morals-011"
+      ],
+      "misconceptions": [
+        "中国特色社会主义法治体系就是制定更多法律",
+        "法治体系建设和道德建设没有关系"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "有了法律，是不是就等于有了法治？法律制定出来后，还需要什么条件才能真正发挥作用？"
+        },
+        {
+          "level": "L2",
+          "text": "中国特色社会主义法治体系是一个系统工程，不仅包括立法（法律规范体系），还包括执法、司法、守法、监督等各个环节。"
+        },
+        {
+          "level": "L3",
+          "text": "分析中国特色社会主义法治体系，抓住'五个体系'：法律规范、法治实施、法治监督、法治保障、党内法规。五者相辅相成，缺一不可。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-morals-013",
+      "title": "法治思维",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "法治思维是以法治价值和法治精神为导向，运用法律原则、法律规则、法律方法思考和处理问题的思维模式。法治思维主要包括：法律至上（法律面前人人平等，任何组织和个人都不得有超越宪法的法律的特权）、权力制约（把权力关进制度的笼子里）、公平正义（社会利益分配合理、机会均等）、人权保障（尊重和保护人权）、正当程序（程序公正）。培养法治思维，是全面依法治国的必然要求。",
+      "prerequisites": [
+        "politics-morals-012"
+      ],
+      "misconceptions": [
+        "法治思维就是死抠法律条文",
+        "法治思维只适用于法律工作者"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "遇到矛盾和纠纷时，是找关系、托人情，还是走法律途径？这两种不同的处理方式反映了什么思维差异？"
+        },
+        {
+          "level": "L2",
+          "text": "法治思维不是死抠条文，而是以法治价值和法治精神为导向的思维模式，它包含公平正义、人权保障等价值追求。"
+        },
+        {
+          "level": "L3",
+          "text": "分析法治思维的内容，抓住五个要点：法律至上、权力制约、公平正义、人权保障、正当程序。这五者是法治思维的核心要义。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-morals-014",
+      "title": "法律权利和法律义务",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "法律权利是指法律赋予权利人实现其意志的许可和保障，法律义务是国家通过法律规定，对法律主体行为的一种约束。法律权利和法律义务是相互依存、相互促进、相互统一的关系。没有权利就无所谓义务，没有义务也就没有权利。在我国，公民享有广泛的权利，同时必须履行法定的义务。坚持权利义务相统一，是法治的基本原则之一。",
+      "prerequisites": [
+        "politics-morals-010"
+      ],
+      "misconceptions": [
+        "法律只规定权利，义务是道德的事",
+        "权利和义务是完全对立的，不能统一"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "享受权利的同时，要不要履行义务？只享受权利不履行义务，对社会来说意味着什么？"
+        },
+        {
+          "level": "L2",
+          "text": "法律权利和法律义务是相互依存、相互促进的关系：权利是义务的前提，义务是权利的保障。"
+        },
+        {
+          "level": "L3",
+          "text": "分析权利义务关系，坚持'相统一'原则：公民在行使权利时，不得损害国家、社会、集体的利益和其他公民的合法的自由和权利。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-morals-015",
+      "title": "宪法法律规定的权利",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "我国宪法法律规定的公民权利主要包括：政治权利（选举权和被选举权、政治自由）、人身权利（生命健康权、人身自由权、人格尊严权、住宅安全权、通信自由权）、财产权利（私有财产权、继承权）、社会经济权利（劳动权、休息权、社会保障权、物质帮助权）、文化教育权利（受教育权、文化权利）、监督权（批评、建议、申诉、控告、检举权）。公民在行使权利时，不得损害国家、社会、集体的利益和其他公民的合法的自由和权利。",
+      "prerequisites": [
+        "politics-morals-011",
+        "politics-morals-014"
+      ],
+      "misconceptions": [
+        "公民权利是绝对的，没有任何限制",
+        "公民权利只是写在宪法上的，没有实际保障"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "公民享有言论自由，但是不是可以在网上随意造谣诽谤他人？权利和自由的边界在哪里？"
+        },
+        {
+          "level": "L2",
+          "text": "公民权利不是绝对的，行使权利不得损害国家、社会、集体的利益和其他公民的合法权利。"
+        },
+        {
+          "level": "L3",
+          "text": "分析宪法法律规定的权利，要区分'权利'（法律赋予）和'滥用权利'（超出法律边界）的界限。权利有边界，自由有底线。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-morals-016",
+      "title": "宪法法律规定的义务",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "我国宪法法律规定的公民义务主要包括：维护国家统一和民族团结、遵守宪法和法律、维护祖国安全荣誉和利益、依法服兵役、依法纳税。此外，公民还有劳动的义务、受教育的义务、计划生育的义务、父母抚养教育未成年子女的义务、成年子女赡养扶助父母的义务等。公民在享有权利的同时，必须自觉履行义务，坚持权利义务相统一。",
+      "prerequisites": [
+        "politics-morals-011",
+        "politics-morals-014"
+      ],
+      "misconceptions": [
+        "履行义务只是被动服从，没有积极意义",
+        "义务和权利是对立的，履行义务就是牺牲自己"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "为什么要依法纳税？为什么要服兵役？这些义务对国家安全和社会发展有什么意义？"
+        },
+        {
+          "level": "L2",
+          "text": "履行义务不是被动服从，而是公民责任的体现。没有义务的履行，权利也就没有保障。"
+        },
+        {
+          "level": "L3",
+          "text": "分析宪法法律规定的义务，抓住'基本义务'（维护国家统一、守法、纳税、服兵役等）和'其他义务'（劳动、受教育、家庭义务等）两个层面。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-morals-017",
+      "title": "尊法学法守法用法",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "尊法学法守法用法是全面依法治国对公民的基本要求。尊法，就是要尊重法律、信仰法治；学法，就是要学习法律知识、增强法治意识；守法，就是要严格遵守法律、依法办事；用法，就是要学会运用法律武器维护自身合法权益。这四个方面是一个有机整体，体现了从法治观念到法治行为的完整过程。",
+      "prerequisites": [
+        "politics-morals-012",
+        "politics-morals-013"
+      ],
+      "misconceptions": [
+        "学法守法只是对普通百姓的要求，领导干部可以例外",
+        "只要自己不违法，就不需要学法"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "为什么有些人自己的合法权益受到侵害时，不知道用法律武器来保护自己？这说明了什么？"
+        },
+        {
+          "level": "L2",
+          "text": "尊法学法守法用法是一个有机整体：尊法是前提，学法是基础，守法是核心，用法是目的。"
+        },
+        {
+          "level": "L3",
+          "text": "分析尊法学法守法用法，抓住'观念—知识—行为—能力'这个逻辑链条：树立法治观念$\\to$学习法律知识$\\to$养成守法习惯$\\to$提高用法能力。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-morals-018",
+      "title": "依法行使权利",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "公民依法行使权利，是法治社会的基本要求。依法行使权利，要求公民在行使权利时，必须遵守宪法和法律的规定，不得损害国家、社会、集体的利益和其他公民的合法的自由和权利。当公民的权利受到侵害时，应当通过法律途径（如诉讼、仲裁、行政复议等）来维护自己的合法权益，不能采取违法的方式。依法行使权利，体现了权利义务相统一的法治原则。",
+      "prerequisites": [
+        "politics-morals-014",
+        "politics-morals-015"
+      ],
+      "misconceptions": [
+        "自己的权利受到侵害，可以采取任何方式维权",
+        "依法行使权利就是放弃自己的权利"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "如果你的合法权益受到侵害，你会怎么办？是找关系、托人情，还是走法律途径？哪种方式更可靠？"
+        },
+        {
+          "level": "L2",
+          "text": "依法行使权利，既包括依法享受权利，也包括依法维护权利。维权必须走法律途径，不能采取违法方式。"
+        },
+        {
+          "level": "L3",
+          "text": "分析依法行使权利，抓住'权利有边界'和'维权有途径'两个要点：行使权利不得损害他人合法权益，维权必须通过法律途径。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-morals-019",
+      "title": "依法履行义务",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "公民依法履行义务，是法治社会的基本要求。依法履行义务，要求公民自觉按照法律规定履行自己的义务，不因个人意愿而逃避义务。履行义务是享受权利的前提和保障，只有每个公民都自觉履行义务，社会才能正常运转，每个人的权利才能真正实现。坚持权利义务相统一，是全面依法治国的重要原则。",
+      "prerequisites": [
+        "politics-morals-014",
+        "politics-morals-016"
+      ],
+      "misconceptions": [
+        "履行义务就是被动服从，没有积极意义",
+        "履行义务只是普通百姓的事，名人可以例外"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "为什么依法纳税、依法服兵役是每个公民的义务？如果大家都不履行义务，社会会变成什么样子？"
+        },
+        {
+          "level": "L2",
+          "text": "履行义务不是被动服从，而是公民责任的体现。没有义务的履行，就没有权利的保障。"
+        },
+        {
+          "level": "L3",
+          "text": "分析依法履行义务，抓住'普遍义务'（人人都要履行）和'特定义务'（特定主体履行）两个层面，理解义务的全面性和严肃性。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    },
+    {
+      "id": "politics-morals-020",
+      "title": "法治中国建设",
+      "level": "concept",
+      "difficulty": 2,
+      "summary": "法治中国建设是全面依法治国的奋斗目标。法治中国建设的目标是：到2035年，法治国家、法治政府、法治社会基本建成，中国特色社会主义法治体系基本形成。法治中国建设的任务是：科学立法、严格执法、公正司法、全民守法。坚持依法治国、依法执政、依法行政共同推进，坚持法治国家、法治政府、法治社会一体建设，是法治中国建设的基本路径。",
+      "prerequisites": [
+        "politics-morals-012",
+        "politics-morals-013"
+      ],
+      "misconceptions": [
+        "法治中国建设只是立法机关的事",
+        "法治中国建设可以在很短时间内完成"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "建设法治中国，仅仅是立法机关制定更多法律就够了吗？还需要哪些方面的努力？"
+        },
+        {
+          "level": "L2",
+          "text": "法治中国建设是一个系统工程，需要科学立法、严格执法、公正司法、全民守法四个方面共同推进。"
+        },
+        {
+          "level": "L3",
+          "text": "分析法治中国建设，抓住'共同推进'（依法治国、依法执政、依法行政）和'一体建设'（法治国家、法治政府、法治社会）两个基本路径。"
+        }
+      ],
+      "source": {
+        "title": "TeacherAgent original politics seed",
+        "license": "original_generated",
+        "sourceType": "human_authored_with_curriculum_reference",
+        "note": "Original TeacherAgent draft based on public exam syllabus topics; no exam question text copied."
+      }
+    }
+  ]
+}

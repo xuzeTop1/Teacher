@@ -1,0 +1,848 @@
+{
+  "subject": "english",
+  "chapter": "english-grammar",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "eng-grammar-q-001",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "划线部分1是非限制性定语从句，划线部分2是宾语从句",
+        "划线部分1是限制性定语从句，划线部分2是主语从句",
+        "划线部分1是非限制性定语从句，划线部分2是同位语从句",
+        "划线部分1是限制性定语从句，划线部分2是表语从句"
+      ],
+      "answer": "A",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "观察which前面是否有逗号？"
+        },
+        {
+          "level": "L2",
+          "text": "that后面接的是一个完整的句子，在主句中作什么成分？"
+        },
+        {
+          "level": "L3",
+          "text": "非限制性定语从句用逗号隔开，that引导的从句如果是及物动词的宾语，就是宾语从句"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-grammar-001",
+        "eng-grammar-002"
+      ],
+      "source": {
+        "title": "TeacherAgent English question seed",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于练习长难句设计，用于语法分析练习。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "观察从句前是否有逗号：'The study, which...'有逗号，是非限制性定语从句；'...shows that...'中that引导宾语从句。",
+        "非限制性定语从句不能用that引导，只能用which/who/as；宾语从句that可以省略。",
+        "选A；B错误（非限制性不用that）；C错误（that不引导同位语从句，且show的宾语是that从句）；D错误（表语从句需在主句系动词后）。"
+      ],
+      "content": "阅读下面句子，判断划线部分是什么从句：$\\n\\n\"$The study,which took 15years to complete,shows that the new policy is effective$.\"\\n\\n(A)$划线部分1是非限制性定语从句，划线部分2是宾语从句$\\n(B)$划线部分1是限制性定语从句，划线部分2是主语从句$\\n(C)$划线部分1是非限制性定语从句，划线部分2是同位语从句$\\n(D)$划线部分1是限制性定语从句，划线部分2是表语从句"
+    },
+    {
+      "id": "eng-grammar-q-002",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [
+        "主语：That the evidence was inconclusive；谓语：does not mean",
+        "主语：the science；谓语：does not mean",
+        "主语：That the evidence was inconclusive, the science uncertain；谓语：does not mean",
+        "主语：the plan；谓语：should be abandoned"
+      ],
+      "answer": "C",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "找到句首的That，它引导的是什么从句？"
+        },
+        {
+          "level": "L2",
+          "text": "the science uncertain是什么结构？是主句的一部分吗？"
+        },
+        {
+          "level": "L3",
+          "text": "主语从句可以很长，包含多个并列成分。does not mean是主句的谓语。"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-grammar-002"
+      ],
+      "source": {
+        "title": "TeacherAgent English question seed",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "真实练习长难句，包含主语从句的嵌套结构。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "找到句首That，引导主语从句'That the evidence was inconclusive, the science uncertain'。",
+        "the science uncertain是主语从句中的并列部分（省略了系动词was），整个主语从句作主语。",
+        "选C；A只包含了主语从句的一部分；B只包含了并列部分的后一半；D是宾语从句的主语，不是全句主语。"
+      ],
+      "content": "分析下面句子的结构，指出主句的主语和谓语：$\\n\\n\"$That the evidence was inconclusive,the science uncertain,does not mean that the plan should be abandoned$.\"\\n\\n(A)$主语：That the evidence was inconclusive；谓语：does not mean$\\n(B)$主语：the science；谓语：does not mean$\\n(C)$主语：That the evidence was inconclusive,the science uncertain；谓语：does not mean$\\n(D)$主语：the plan；谓语：should be abandoned"
+    },
+    {
+      "id": "eng-grammar-q-003",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "作定语，修饰the students",
+        "作状语，修饰整个句子",
+        "作宾语，是stood up的宾语",
+        "作主语，the students是逻辑宾语"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "观察seeing前面是否有逗号？如果有，可能是状语。"
+        },
+        {
+          "level": "L2",
+          "text": "seeing的逻辑主语是谁？是the students吗？"
+        },
+        {
+          "level": "L3",
+          "text": "如果逻辑主语是句子的主语，且用逗号隔开，通常作状语"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-grammar-003"
+      ],
+      "source": {
+        "title": "TeacherAgent English question seed",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于练习句型设计，考查非谓语动词作状语的判断。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "Seeing the teacher entering...在句首且用逗号隔开，逻辑主语是句子主语the students。",
+        "students主动看见老师进来，主动关系用现在分词Seeing作状语。",
+        "选B；A（作定语应紧贴修饰的名词，这里不紧贴）；C（宾语应是及物动词的宾语，Seeing不是stood up的宾语）；D（作主语需用形式主语It）。"
+      ],
+      "content": "阅读下面句子，判断非谓语动词seeing在句中作什么成分：\n\n\"Seeing the teacher entering the classroom, the students immediately stood up.\"\n\n(A) 作定语，修饰the students\n(B) 作状语，修饰整个句子\n(C) 作宾语，是stood up的宾语\n(D) 作主语，the students是逻辑宾语"
+    },
+    {
+      "id": "eng-grammar-q-004",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [
+        "The weather being fine是原因状语从句",
+        "The weather being fine是独立主格结构，作状语",
+        "The weather being fine是定语从句",
+        "The weather being fine是宾语从句"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "观察the weather和we是否是同一个逻辑主语？"
+        },
+        {
+          "level": "L2",
+          "text": "如果不是，且有'名词+being+形容词/分词'的结构，可能是独立主格"
+        },
+        {
+          "level": "L3",
+          "text": "独立主格可以转换成状语从句（Because the weather was fine）"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-grammar-004"
+      ],
+      "source": {
+        "title": "翻译",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于翻译练习句型设计，考查独立主格结构识别。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "The weather和主句主语we不是同一个，且有being，是独立主格结构。",
+        "独立主格可以转换成状语从句：Because the weather was fine, we decided...。",
+        "选B；A（原因状语从句需要有连词because，这里没有）；C（定语从句需修饰先行词，这里不修饰）；D（宾语从句需在及物动词/介词后，这里不是）。"
+      ],
+      "content": "分析下面句子的结构，指出独立主格部分：\n\n\"The weather being fine, we decided to go out for a picnic.\"\n\n(A) The weather being fine是原因状语从句\n(B) The weather being fine是独立主格结构，作状语\n(C) The weather being fine是定语从句\n(D) The weather being fine是宾语从句"
+    },
+    {
+      "id": "eng-grammar-q-005",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "完全倒装",
+        "部分倒装",
+        "没有倒装",
+        "强调句型"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "观察句首是否有否定词？"
+        },
+        {
+          "level": "L2",
+          "text": "如果有，助动词/情态动词是否在主语前面？"
+        },
+        {
+          "level": "L3",
+          "text": "Never是否定词，have在主语I前面，这是部分倒装"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-grammar-005"
+      ],
+      "source": {
+        "title": "TeacherAgent English question seed",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于练习句型设计，考查部分倒装识别。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "句首有否定词Never，助动词have在主语I前面，是部分倒装。",
+        "完全倒装是状语在句首+谓语+主语（Here comes...），部分倒装是否定词+助动词+主语。",
+        "选B；A（完全倒装需是整个谓语在主语前，这里只有助动词）；C明显有倒装；D（强调句型是It is...that结构）。"
+      ],
+      "content": "阅读下面句子，判断倒装类型：\n\n\"Never have I seen such a beautiful sunset.\"\n\n(A) 完全倒装\n(B) 部分倒装\n(C) 没有倒装\n(D) 强调句型"
+    },
+    {
+      "id": "eng-grammar-q-006",
+      "type": "solution",
+      "difficulty": 2,
+      "options": [
+        "强调主语 this approach",
+        "强调宾语 the success",
+        "强调状语 has led to",
+        "强调谓语 led"
+      ],
+      "answer": "A",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "找到It is...that结构"
+        },
+        {
+          "level": "L2",
+          "text": "去掉It is...that后，句子应该是：This approach has led to the success."
+        },
+        {
+          "level": "L3",
+          "text": "This approach在句子中作主语，所以强调主语"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-grammar-006"
+      ],
+      "source": {
+        "title": "TeacherAgent English question seed",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于练习句型设计，考查强调句型识别。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "It is...that结构，去掉It is...that后：This approach has led to the success. 句子完整，说明是强调句型。",
+        "强调句型强调的部分是This approach，在主句中作主语，所以强调主语。",
+        "选A；B（the success是宾语，不被强调）；C（has led to是谓语，强调句型不强调谓语）；D（led是过去分词，不是强调部分）。"
+      ],
+      "content": "阅读下面句子，判断强调句型强调的部分：\n\n\"It is this approach that has led to the success.\"\n\n(A) 强调主语 this approach\n(B) 强调宾语 the success\n(C) 强调状语 has led to\n(D) 强调谓语 led"
+    },
+    {
+      "id": "eng-grammar-q-007",
+      "type": "concept_check",
+      "difficulty": 3,
+      "options": [
+        "是虚拟语气倒装，正常语序：If the researchers had considered...",
+        "不是虚拟语气倒装，是正常语序",
+        "是强调句型",
+        "是部分倒装"
+      ],
+      "answer": "A",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "观察句首是否有had/were/should？"
+        },
+        {
+          "level": "L2",
+          "text": "如果有，尝试还原成if条件句"
+        },
+        {
+          "level": "L3",
+          "text": "Had + 主语 + 过去分词 = If + 主语 + had + 过去分词"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-grammar-007"
+      ],
+      "source": {
+        "title": "TeacherAgent English question seed",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于练习句型设计，考查虚拟语气倒装识别。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "句首Had + 主语the researchers + 过去分词considered，是虚拟语气倒装。",
+        "还原：If the researchers had considered...（与过去事实相反的虚拟条件句）。",
+        "选A；B（不是正常语序）；C（不是强调句型，强调句型是It is...that）；D（是虚拟语气倒装，不是简单部分倒装）。"
+      ],
+      "content": "阅读下面句子，判断是否为虚拟语气的倒装形式：\n\n\"Had the researchers considered the alternative explanation, they would have reached a different conclusion.\"\n\n(A) 是虚拟语气倒装，正常语序：If the researchers had considered...\n(B) 不是虚拟语气倒装，是正常语序\n(C) 是强调句型\n(D) 是部分倒装"
+    },
+    {
+      "id": "eng-grammar-q-008",
+      "type": "solution",
+      "difficulty": 2,
+      "options": [
+        "省略了like，完整结构：others like writing",
+        "没有省略",
+        "省略了others，完整结构：others like writing",
+        "是定语从句"
+      ],
+      "answer": "A",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "观察两个分句是否对称？"
+        },
+        {
+          "level": "L2",
+          "text": "If对称，且有重复的动词，可能省略了"
+        },
+        {
+          "level": "L3",
+          "text": "Some students like A; others like B. 省略了第二个like"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-grammar-008"
+      ],
+      "source": {
+        "title": "TeacherAgent English question seed",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于练习句型设计，考查并列句省略结构。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "两个分句对称：Some students like reading; others like writing. 省略了第二个like。",
+        "并列句省略规则：并列连词后重复的词可以省略，避免重复。",
+        "选A；B（有省略）；C（省略的不是others）；D（不是定语从句）。"
+      ],
+      "content": "阅读下面句子，识别并列结构和省略：\n\n\"Some students like reading; others (like) writing.\"\n\n(A) 省略了like，完整结构：others like writing\n(B) 没有省略\n(C) 省略了others，完整结构：others like writing\n(D) 是定语从句"
+    },
+    {
+      "id": "eng-grammar-q-009",
+      "type": "concept_check",
+      "difficulty": 3,
+      "options": [
+        "定语从句",
+        "同位语从句",
+        "主语从句",
+        "宾语从句"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "判断that在从句中是否充当成分？"
+        },
+        {
+          "level": "L2",
+          "text": "如果that不充当成分，且前面的名词是抽象概念（assumption），可能是同位语从句"
+        },
+        {
+          "level": "L3",
+          "text": "同位语从句解释名词的具体内容：all people are equal是assumption的内容"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-grammar-009"
+      ],
+      "source": {
+        "title": "TeacherAgent English question seed",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于练习句型设计，考查同位语从句识别。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "that在从句'the assumption that all people are equal'中不充当成分，且assumption是抽象名词，是同位语从句。",
+        "同位语从句解释assumption的具体内容；定语从句that需充当成分（主语/宾语）。",
+        "选B；A（定语从句that需充当成分，这里that不充当成分）；C（主语从句需在句首引导主句）；D（宾语从句需接在及物动词/介词后）。"
+      ],
+      "content": "阅读下面句子，判断that引导的是什么从句：$\\n\\n\"$The assumption that all people are equal is widely accepted$.\"\\n\\n(A)$定语从句$\\n(B)$同位语从句$\\n(C)$主语从句$\\n(D)$宾语从句"
+    },
+    {
+      "id": "eng-grammar-q-010",
+      "type": "solution",
+      "difficulty": 2,
+      "options": [
+        "时间状语从句",
+        "原因状语从句",
+        "非限制性定语从句",
+        "让步状语从句"
+      ],
+      "answer": "C",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "观察as后面接的是动词is，还是完整句子？"
+        },
+        {
+          "level": "L2",
+          "text": "如果as在从句中充当主语/宾语，且指代整个主句，这是非限制性定语从句"
+        },
+        {
+          "level": "L3",
+          "text": "as is known to all是固定搭配，意为'众所周知'"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-grammar-010"
+      ],
+      "source": {
+        "title": "TeacherAgent English question seed",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于练习句型设计，考查as引导的从句类型。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "as在句首，且as后面是动词is，构成'as is known to all'固定结构，as指代整个主句。",
+        "as引导非限制性定语从句可放句首，which引导的非限制性定语从句不能放句首。",
+        "选C；A（时间状语从句as需表示'当...时'，这里不是）；B（原因状语从句as需表示'因为'，这里不是）；D（让步状语从句as需用在as + adj + as结构中）。"
+      ],
+      "content": "阅读下面句子，判断as引导的是什么从句：$\\n\\n\"$As is known to all,the earth moves around the sun$.\"\\n\\n(A)$时间状语从句$\\n(B)$原因状语从句$\\n(C)$非限制性定语从句$\\n(D)$让步状语从句"
+    },
+    {
+      "id": "eng-grammar-q-011",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "省略正确，符合省略规则",
+        "省略错误，不能省略",
+        "省略后意思改变",
+        "原句没有状语从句"
+      ],
+      "answer": "A",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "观察从句的主语是否与主句主语一致？"
+        },
+        {
+          "level": "L2",
+          "text": "如果一致，且有be动词，可以尝试省略"
+        },
+        {
+          "level": "L3",
+          "text": "Whenhe was young $\\to$When young（省略了he was）"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-grammar-011"
+      ],
+      "source": {
+        "title": "TeacherAgent English question seed",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于练习句型设计，考查状语从句省略结构。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "原句When he was young，主语he和主句主语一致，且有be动词was，可以省略he was。",
+        "状语从句省略规则：主语一致+be动词，可省略主语+be动词。",
+        "选A；B（省略正确，不是错误）；C（省略后意思不变）；D（原句有状语从句when引导）。"
+      ],
+      "content": "阅读下面句子，判断状语从句省略是否正确：$\\n\\n$原句：When he was young,he liked reading$.\\n$省略后：When young,he liked reading$.\\n\\n(A)$省略正确，符合省略规则$\\n(B)$省略错误，不能省略$\\n(C)$省略后意思改变$\\n(D)$原句没有状语从句"
+    },
+    {
+      "id": "eng-grammar-q-012",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [
+        "that指代climate，避免重复",
+        "that指代Beijing",
+        "that是强调句型的一部分",
+        "that引导定语从句"
+      ],
+      "answer": "A",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "比较的对象应该对称：the climate of Beijing vs the climate of Guangzhou"
+        },
+        {
+          "level": "L2",
+          "text": "为了避免重复，用that指代前面的climate"
+        },
+        {
+          "level": "L3",
+          "text": "比较级中常用that/those指代前面出现的名词"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-grammar-012"
+      ],
+      "source": {
+        "title": "TeacherAgent English question seed",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于练习句型设计，考查比较结构的特殊用法。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "比较对象：the climate of Beijing vs the climate of Guangzhou，为避免重复用that指代climate。",
+        "比较级中that/those指代前面出现的名词（单数用that，复数用those）。",
+        "选A；B（that不能指代Beijing，Beijing是地点不是气候）；C（不是强调句型）；D（不引导定语从句，定语从句需用which/that）。"
+      ],
+      "content": "阅读下面句子，分析比较结构：$\\n\\n\"$The climate of Beijing is colder than that of Guangzhou$.\"\\n\\n(A)$that指代climate，避免重复$\\n(B)$that指代Beijing$\\n(C)$that是强调句型的一部分$\\n(D)$that引导定语从句"
+    },
+    {
+      "id": "eng-grammar-q-013",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "基本there be句型",
+        "there + 不及物动词的变体",
+        "强调句型",
+        "倒装句"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "观察there后面是be还是其他动词？"
+        },
+        {
+          "level": "L2",
+          "text": "如果是seems/appears/exists等不及物动词，这是there be的变体"
+        },
+        {
+          "level": "L3",
+          "text": "There seems no doubt = There is no doubt (变体)"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-grammar-013"
+      ],
+      "source": {
+        "title": "TeacherAgent English question seed",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于练习句型设计，考查there be句型变体。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "There seems no doubt中there后面不是be动词，是seems（不及物动词），是There be句型的变体。",
+        "There be变体：There + seem/appear/exist/stand等不及物动词 + 主语。",
+        "选B；A（基本There be句型there后需是be动词）；C（不是强调句型）；D（不是倒装句，there不在句首时不倒装）。"
+      ],
+      "content": "阅读下面句子，判断there be句型的类型：\n\n\"There seems no doubt that he will succeed.\"\n\n(A) 基本there be句型\n(B) there + 不及物动词的变体\n(C) 强调句型\n(D) 倒装句"
+    },
+    {
+      "id": "eng-grammar-q-014",
+      "type": "solution",
+      "difficulty": 2,
+      "options": [
+        "many experts say是定语从句",
+        "many experts say是插入语",
+        "many experts say是主语从句",
+        "many experts say是独立主格"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "观察many experts say是否在两个逗号之间？"
+        },
+        {
+          "level": "L2",
+          "text": "尝试删除这部分，看主句是否仍然完整？"
+        },
+        {
+          "level": "L3",
+          "text": "如果完整，这就是插入语，阅读时可以跳过"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-grammar-014"
+      ],
+      "source": {
+        "title": "TeacherAgent English question seed",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于练习句型设计，考查插入语结构识别。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "many experts say在两个逗号之间，删除后主句'The policy will fail'仍完整，是插入语。",
+        "插入语特点是两个逗号隔开，删除后主句完整；定语从句删除后主句不完整。",
+        "选B；A（定语从句需修饰先行词，这里不修饰）；C（主语从句需在句首引导主句）；D（独立主格需有逻辑主语，这里没有）。"
+      ],
+      "content": "阅读下面句子，识别插入语：\n\n\"The policy, many experts say, will fail.\"\n\n(A) many experts say是定语从句\n(B) many experts say是插入语\n(C) many experts say是主语从句\n(D) many experts say是独立主格"
+    },
+    {
+      "id": "eng-grammar-q-015",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "it指代difficult",
+        "it是形式主语，真正主语是to say which solution is better",
+        "it指代which solution",
+        "it是强调句型的一部分"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "观察it后面是否有be动词？"
+        },
+        {
+          "level": "L2",
+          "text": "如果有be + 形容词，且后面有to do/that从句，it是形式主语"
+        },
+        {
+          "level": "L3",
+          "text": "真正主语是to say which solution is better"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-grammar-019"
+      ],
+      "source": {
+        "title": "TeacherAgent English question seed",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于练习句型设计，考查it作形式主语。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "It is difficult to say...中it在句首，后面有系动词is，且真正主语是to say which solution is better（在不定式后）。",
+        "形式主语it句型：It is + adj + to do/that从句，it指代真正主语。",
+        "选B；A（it不指代difficult，difficult是表语）；C（it不指代which solution，which solution在不定式中）；D（不是强调句型，强调句型需去掉It is...that后句子完整，这里去掉后不完整）。"
+      ],
+      "content": "阅读下面句子，判断代词it指代什么：\n\n\"It is difficult to say which solution is better.\"\n\n(A) it指代difficult\n(B) it是形式主语，真正主语是to say which solution is better\n(C) it指代which solution\n(D) it是强调句型的一部分"
+    },
+    {
+      "id": "eng-grammar-q-016",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [
+        "否定词not否定think",
+        "否定词not否定he is right（转移到从句）",
+        "否定词not否定I",
+        "没有否定词转移"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "观察动词是否是think/believe/suppose等？"
+        },
+        {
+          "level": "L2",
+          "text": "如果是，否定词通常转移到从句"
+        },
+        {
+          "level": "L3",
+          "text": "I don't think he is right = I think he is not right"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-grammar-017"
+      ],
+      "source": {
+        "title": "TeacherAgent English question seed",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于练习句型设计，考查否定词转移。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "动词think的否定词通常转移到宾语从句：I don't think he is right = I think he is not right。",
+        "否定词转移适用于think/believe/suppose/expect等动词，否定词从从句转移到主句。",
+        "选B；A（形式上not否定think，但实际上否定的是从句内容）；C（not不否定I）；D（有否定词转移）。"
+      ],
+      "content": "阅读下面句子，分析否定词的转移：\n\n\"I don't think he is right.\"\n\n(A) 否定词not否定think\n(B) 否定词not否定he is right（转移到从句）\n(C) 否定词not否定I\n(D) 没有否定词转移"
+    },
+    {
+      "id": "eng-grammar-q-017",
+      "type": "concept_check",
+      "difficulty": 3,
+      "options": [
+        "介词+which引导定语从句",
+        "介词+which引导宾语从句",
+        "介词+which引导主语从句",
+        "介词+which引导同位语从句"
+      ],
+      "answer": "A",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "观察介词about来自哪个搭配？"
+        },
+        {
+          "level": "L2",
+          "text": "如果是tell sb. about sth.，那么about which引导定语从句修饰book"
+        },
+        {
+          "level": "L3",
+          "text": "正常语序：I told you about the book."
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-grammar-018"
+      ],
+      "source": {
+        "title": "TeacherAgent English question seed",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于练习句型设计，考查介词+which引导的定语从句。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "介词about来自搭配tell sb. about sth.，所以about which中about是介词提前。",
+        "正常语序：$I$told you about the book$. \\to$定语从句：This is the book about which $I$told you.",
+        "选A；B（about which不引导宾语从句，需接在名词后）；C（不引导主语从句，主语从句在句首）；D（不引导同位语从句，同位语从句解释抽象名词）。"
+      ],
+      "content": "阅读下面句子，判断介词$+which$引导的是什么从句：$\\n\\n\"$This is the book about which $I$told you$.\"\\n\\n(A)$介词$+which$引导定语从句$\\n(B)$介词$+which$引导宾语从句$\\n(C)$介词$+which$引导主语从句$\\n(D)$介词$+which$引导同位语从句"
+    },
+    {
+      "id": "eng-grammar-q-018",
+      "type": "solution",
+      "difficulty": 3,
+      "options": [
+        "than是介词，I是宾语",
+        "than是连词，引导比较状语从句，省略了like English",
+        "than是关系词，引导定语从句",
+        "than是副词，修饰more"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "观察than后面是完整句子还是省略句？"
+        },
+        {
+          "level": "L2",
+          "text": "如果than后面是代词（I/me），需要判断是否省略了动词"
+        },
+        {
+          "level": "L3",
+          "text": "He likes English more than I like English. 省略了like English"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-grammar-020"
+      ],
+      "source": {
+        "title": "TeacherAgent English question seed",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于练习句型设计，考查than引导的比较状语从句省略。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "than后面是I（主格），说明than是连词引导比较状语从句，省略了like English。",
+        "完整句子：He likes English more than I like English. 省略了like English。",
+        "选B；A（如果than是介词，I应用宾格me）；C（than不引导定语从句，定语从句用which/that）；D（than不是副词，不能修饰more）。"
+      ],
+      "content": "阅读下面句子，分析than的用法：$\\n\\n\"$He likes English more than $I (like English).\"\\n\\n(A)$than是介词，$I$是宾语$\\n(B)$than是连词，引导比较状语从句，省略了like English$\\n(C)$than是关系词，引导定语从句$\\n(D)$than是副词，修饰more"
+    },
+    {
+      "id": "eng-grammar-q-019",
+      "type": "concept_check",
+      "difficulty": 2,
+      "options": [
+        "正确，主语是The number（单数）",
+        "错误，主语是students（复数）",
+        "正确，主语是students（复数）",
+        "错误，谓语应该用are"
+      ],
+      "answer": "A",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "找到真正的主语（不是of/with等介词的宾语）"
+        },
+        {
+          "level": "L2",
+          "text": "The number of... 的主语是number，不是students"
+        },
+        {
+          "level": "L3",
+          "text": "a number of... 的主语才是students"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-grammar-016"
+      ],
+      "source": {
+        "title": "TeacherAgent English question seed",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于练习句型设计，考查主谓一致的特殊情况。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "The number of + 复数名词，主语是number（单数），谓语用单数is。",
+        "a number of + 复数名词，主语是名词复数，谓语用复数are（常见混淆点）。",
+        "选A；B（错误，主语是number不是students）；C（主语是number单数）；D（谓语应用单数）。"
+      ],
+      "content": "阅读下面句子，判断主谓一致是否正确：$\\n\\n\"$The number of students is increasing$.\"\\n\\n(A)$正确，主语是The number（单数）$\\n(B)$错误，主语是students（复数）$\\n(C)$正确，主语是students（复数）$\\n(D)$错误，谓语应该用are"
+    },
+    {
+      "id": "eng-grammar-q-020",
+      "type": "solution",
+      "difficulty": 2,
+      "options": [
+        "he指代Tom",
+        "he指代John",
+        "he指代Tom和John",
+        "无法判断，需要更多上下文"
+      ],
+      "answer": "B",
+      "hints": [
+        {
+          "level": "L1",
+          "text": "观察he前面最近的名词是谁？"
+        },
+        {
+          "level": "L2",
+          "text": "根据就近原则，he通常指代最近的名词John"
+        },
+        {
+          "level": "L3",
+          "text": "但如果Tom是主语，且逻辑上Tom认为John错了，he也可能指代John"
+        }
+      ],
+      "knowledgeNodeIds": [
+        "eng-grammar-015"
+      ],
+      "source": {
+        "title": "TeacherAgent English question seed",
+        "license": "original_generated",
+        "sourceType": "practice",
+        "note": "基于练习句型设计，考查指代关系判断。"
+      },
+      "status": "draft",
+      "solutionSteps": [
+        "代词he的先行词判断：通常就近原则指向前一句最近的名词John。",
+        "但需结合语义：Tom told John that he was wrong. 逻辑上he指代John（Tom告诉John John错了）。",
+        "选B；A（he不指代Tom，否则句意变成Tom告诉John Tom错了，逻辑不通）；C（he不能指代两人）；D（根据上下文可以判断，不是无法判断）。"
+      ],
+      "content": "阅读下面句子，判断指代关系：$\\n\\n\"$Tom told John that he was wrong$.\"\\n\\n(A)$he指代Tom$\\n(B)$he指代John$\\n(C)$he指代Tom和John$\\n(D)$无法判断，需要更多上下文"
+    }
+  ]
+}
