@@ -2,7 +2,7 @@
 
 本目录包含论文《面向隐私保护的多端协同智能辅导系统设计与实现》所用的**评测脚本**、**脱敏汇总结果**，以及论文表格到文件的一一映射，用于第三方复现与核对。
 
-> **论文对应版本**：tag `paper-v1.0`（= branch `experiments-public-benchmark` @ `98a0c6b9`）。**引用请用 tag**，详见 §八。
+> **论文对应版本**：tag `paper-v1.0`（位于 branch `experiments-public-benchmark` 上）。**引用请用 tag**，详见 §八。
 >
 > ⚠ 本目录中的结果**仅覆盖论文第 7 章的基准实验**；`main` 分支承载系统完整源码。
 
@@ -145,6 +145,13 @@ python scripts/sync-benchmark.py scale                      # 表 10：不同规
 
 ## 八、引用本快照
 
-论文实验对应本仓库的 **tag `paper-v1.0`**（指向 branch `experiments-public-benchmark` 上的 commit `98a0c6b9`）。
+论文实验对应本仓库的 **tag `paper-v1.0`**（位于 branch `experiments-public-benchmark` 上）。
 
 **引用时请优先使用 tag 而非分支名**——tag 不会移动，可长期复现；分支名可能随后续修订指向更新的提交。该分支历史**不重写、不 force-push**，tag `paper-v1.0` 对应的提交内容永久固定。
+
+若需从本快照直接取用：
+
+```bash
+git clone --branch paper-v1.0 --depth 1 https://github.com/xuzeTop1/Teacher.git
+# 目录结构：TeacherAgent/（桌面端 + 本文实验）  AlertTime/（手机端）
+```
