@@ -47,7 +47,11 @@ WORK_DIR = os.path.join(EXPERIMENT_ROOT, "work")
 DEFAULT_EVAL_DB = os.path.join(WORK_DIR, "eval_corpus.sqlite3")
 MANIFEST_PATH = os.path.join(WORK_DIR, "chunk_vectors_manifest.json")
 
-PRODUCTION_DB = r"C:\Users\Acer\AppData\Roaming\com.teacheragent.app\teacher_agent.sqlite3"
+# 运行时数据库路径。按需通过环境变量 TEACHER_AGENT_DB 覆盖。
+PRODUCTION_DB = os.environ.get(
+    "TEACHER_AGENT_DB",
+    os.path.join(os.path.expanduser("~"), "AppData", "Roaming", "com.teacheragent.app", "teacher_agent.sqlite3"),
+)
 
 DEFAULT_ENDPOINT = "http://127.0.0.1:11434/api/embeddings"
 DEFAULT_MODEL = "bge-m3"

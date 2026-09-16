@@ -16,7 +16,8 @@ from datetime import datetime, timezone
 
 import numpy as np
 
-ZIP = r"C:\Users\Acer\Downloads\EdNet-KT1.zip"
+# EdNet-KT1 原始压缩包路径。按需通过环境变量 EDNET_KT1_ZIP 覆盖。
+ZIP = os.environ.get("EDNET_KT1_ZIP", os.path.join(os.path.expanduser("~"), "Downloads", "EdNet-KT1.zip"))
 OUT_DIR = os.path.dirname(os.path.abspath(__file__))
 SUMMARY = os.path.join(OUT_DIR, "kt1_user_summary.csv")
 STATS = os.path.join(OUT_DIR, "kt1_dataset_stats.json")

@@ -2,13 +2,17 @@
 """Repair only the provenance wording in the specified immutable-run manifest."""
 from __future__ import annotations
 
+import os
 import hashlib
 import json
 import shutil
 from datetime import datetime, timezone
 from pathlib import Path
 
-TARGET = Path(r"D:\TeacherAgent-alerttime-json\benchmark-results\20260915-213052-hybrid-retrieval-100q\run_manifest.json")
+# 仓库根目录：由本文件位置推导（experiments/submission_audit/ -> 仓库根）。
+# 按需通过环境变量 TEACHER_AGENT_ROOT 覆盖。
+ROOT = Path(os.environ.get("TEACHER_AGENT_ROOT", Path(__file__).resolve().parents[2]))
+TARGET = ROOT / "benchmark-results" / "20260915-213052-hybrid-retrieval-100q" / "run_manifest.json"
 
 
 def digest(path):

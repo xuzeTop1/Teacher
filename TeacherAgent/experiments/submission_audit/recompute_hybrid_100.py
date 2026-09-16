@@ -19,7 +19,9 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-ROOT = Path(r"D:\TeacherAgent-alerttime-json")
+# 仓库根目录：由本文件位置推导（experiments/submission_audit/ -> 仓库根）。
+# 按需通过环境变量 TEACHER_AGENT_ROOT 覆盖。
+ROOT = Path(os.environ.get("TEACHER_AGENT_ROOT", Path(__file__).resolve().parents[2]))
 WORK = ROOT / "experiments" / "hybrid_retrieval" / "work"
 ARCHIVE = ROOT / "benchmark-results"
 SOURCE_ARCHIVE = ARCHIVE / "20260915-213052-hybrid-retrieval-100q"

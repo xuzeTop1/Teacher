@@ -39,7 +39,11 @@ WORK_DIR = os.path.join(EXPERIMENT_ROOT, "work")
 ARCHIVE_ROOT = os.path.join(REPO_ROOT, "benchmark-results")
 TAURI_ROOT = os.path.join(REPO_ROOT, "src-tauri")
 
-DEFAULT_SOURCE_DB = r"C:\Users\Acer\AppData\Roaming\com.teacheragent.app\teacher_agent.sqlite3"
+# 运行时数据库路径。按需通过环境变量 TEACHER_AGENT_DB 覆盖。
+DEFAULT_SOURCE_DB = os.environ.get(
+    "TEACHER_AGENT_DB",
+    os.path.join(os.path.expanduser("~"), "AppData", "Roaming", "com.teacheragent.app", "teacher_agent.sqlite3"),
+)
 EVAL_DB = os.path.join(WORK_DIR, "eval_corpus.sqlite3")
 QA_PATH = os.path.join(WORK_DIR, "qa_100.jsonl")
 # 人工标注题集（正式评测口径）。build-qa 只产出机器题集，且当本文件存在时
