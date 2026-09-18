@@ -1,0 +1,39 @@
+{
+  "generatedAt": "2026-09-15T15:58:05.430399+00:00",
+  "workItem": "submission fix 2: 100-query unconditional retrieval metrics",
+  "sourceQa": "experiments/hybrid_retrieval/work/qa_100_human.jsonl",
+  "sourceQaSha256": "0df2906fde9aeb1495712ad9ab9251383a20fcb9084df991e589f774ac58d6e6",
+  "sourceRankingCache": "experiments/hybrid_retrieval/work/opt_B_{template,bare}.jsonl",
+  "sourceRankingCacheSha256": {
+    "template": "4e7a63b246e97b58bcfd18b762d210528eea6993817456ecb3dfa1a44e29128b",
+    "bare": "1e213753b28cd83f1717d3513c89877e6dee4cc2bd340c07beca47ea63ee2e66"
+  },
+  "totalQueries": 100,
+  "conditionalQueries": 93,
+  "excludedQids": [
+    "q073",
+    "q074",
+    "q087",
+    "q092",
+    "q095",
+    "q099",
+    "q100"
+  ],
+  "coverageRate": 0.93,
+  "metrics": [
+    "Hit@3",
+    "Hit@5",
+    "MRR",
+    "NDCG@5"
+  ],
+  "scopes": {
+    "conditional_93": "93 questions with at least one majority-relevant candidate",
+    "overall_100": "all 100 questions; the seven no-candidate questions are counted as misses"
+  },
+  "annotation": "2 human + 3 LLM annotators, equal-weight majority vote; template-generated questions; not a pure human gold standard",
+  "privateVectors": "159 private-chunk vectors exist only in the evaluation copy, not the default deployment database",
+  "notes": [
+    "No model or embedding endpoint was called; this is a deterministic re-aggregation of existing rankings.",
+    "The seven excluded queries are coverage failures, not silently dropped from the overall denominator."
+  ]
+}
