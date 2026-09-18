@@ -21,6 +21,9 @@
 | 表 9 | DKT 预先限定六组超参数配置的敏感性分析（EdNet first_tag 20 000 用户） | `paper_benchmark_summary/dkt_hyperparam_scan/`（`dkt_scan.csv`、`summary.json`） | `benchmark-results/20260915-000021-ednet-kt1-firsttag-20000u-dkt-scan/` | `experiments/ednet_kt1/dkt_hyperparam_scan.py` |
 | 表 10 | 局域网快照同步性能实测表（各 10 轮） | `paper_benchmark_summary/sync_realdevice/rounds.csv`（真机 10 轮）、`paper_benchmark_summary/sync_realdevice/protocol_scale.csv`（协议入库基准） | `benchmark-results/20260912-132057-sync-realdevice/rounds.csv`、`benchmark-results/20260909-005639/scale.csv` | `TeacherAgent/scripts/sync-benchmark.py` |
 | 表 11 | 同步协议异常输入鲁棒性与安全防护测试 | `paper_benchmark_summary/robustness/robustness.csv` | `benchmark-results/20260909-005747/robustness.csv` | `TeacherAgent/scripts/sync-benchmark.py` |
+| 新增（KT 模型族谱系） | EdNet-KT1 上 BKT / FB-BKT / DKT / AKT-NR / DKVMN **五模型在统一早停协议下**的预测精度对照（5 折，AUC/ACC/RMSE） | `paper_benchmark_summary/kt_5fold_baselines/`（`table.md`、`summary.json`） | `benchmark-results/20260918-020722-ednet-kt1-firsttag-20000u-kt-5fold-merged/` | `experiments/ednet_kt1/kt_unified_earlystop.py`、`akt_paper_protocol.py`；并表 `merge_kt_table.py` |
+
+> 最后一行为 **tag `paper-v1.0` 之后新增**的内容（知识追踪基线谱系扩展），其对应的论文表编号待论文定稿后回填。
 
 论文 §7.8 提到的案例材料（`benchmark-results/20260912-133100-case-study/`）与 DKT 快速实现一致性校验（`benchmark-results/20260915-000138-dkt-impl-verify/`）属过程性归档，未随本快照分发。
 
@@ -98,6 +101,27 @@ cd experiments/ednet_kt1
 python dkt_hyperparam_scan.py --features <EdNet features 路径> --label ednet-kt1-dkt-scan
 ```
 
+> ⚠️ 表 9 为**固定 50 轮、无早停**协议。其后新增的 KT 模型族谱系使用**统一早停协议**重跑了 DKT/DKVMN/AKT，两套 DKT 数字**不可混用**（见下）。
+
+**KT 模型族谱系（tag `paper-v1.0` 之后新增）**
+
+```bash
+cd experiments/ednet_kt1
+
+# DKT + DKVMN，统一早停协议（两者共用一个归档）
+python kt_unified_earlystop.py --features <EdNet features 路径> \
+       --models dkt,dkvmn --jobs 3 --label ednet-kt1-ktsym-earlystop
+
+# AKT 论文口径（按 arXiv:2007.12324：max 300 epoch + 验证集早停）
+python akt_paper_protocol.py --features <EdNet features 路径> \
+       --jobs 2 --label ednet-kt1-akt-paper-5fold
+
+# 并表出论文用表（幂等；--status 只看进度不写文件）
+python merge_kt_table.py
+```
+
+> 三个神经模型共用同一训练协议：学生级 5 折（seed=42）、训练池内 10% 验证集、批大小 128、Adam、掩码 BCELoss、最大 300 轮 + `patience=20` 验证集早停、以验证集最佳轮次权重评估测试折。逐序列落盘支持断点续跑。
+
 **表 10 / 表 11（同步链路与协议鲁棒性）**
 
 ```bash
@@ -119,7 +143,7 @@ python scripts/sync-benchmark.py scale                      # 表 10：不同规
 | 路径 | 内容 |
 |---|---|
 | `assistments/` | ASSISTments 数据集上的 FB-BKT 评测：`pipeline.py`（`prepare`/`features`/`smoke` 三个子命令）与 `run_eval.py`（逐折评测） |
-| `ednet_kt1/` | EdNet-KT1 上的知识追踪评测：`run_eval.py`（BKT/FB-BKT 对照）、`run_eval_batched_dkt.py`（DKT 对照）、`fit_bkt_cv_fair_baseline.py`（五折交叉验证拟合基线）、`dkt_hyperparam_scan.py`（DKT 超参扫描）、`ablation.py`（因素消融）；`data_prep/` 为语料与特征构建脚本 |
+| `ednet_kt1/` | EdNet-KT1 上的知识追踪评测：`run_eval.py`（BKT/FB-BKT 对照）、`run_eval_batched_dkt.py`（DKT 对照）、`fit_bkt_cv_fair_baseline.py`（五折交叉验证拟合基线）、`dkt_hyperparam_scan.py`（DKT 超参扫描）、`ablation.py`（因素消融）；**模型族谱系扩展**：`kt_deep_baselines.py`（AKT/DKVMN 模型实现）、`kt_unified_earlystop.py`（DKT/DKVMN 统一早停重跑）、`akt_paper_protocol.py`（AKT 论文口径）、`merge_kt_table.py`（并表出论文用表）、`EXPERIMENT_STATUS.md`（实验状态与口径记录）；`data_prep/` 为语料与特征构建脚本 |
 | `hybrid_retrieval/` | 私有文档混合检索的 100 题评测：`run_eval.py`（`prepare`/`build-qa`/`embed`/`run`/`all`）、`build_annotation_pack.py`、`merge_annotations*.py`（人工与 LLM 标注合并）、`build_chunk_vectors_eval.py` |
 | `submission_audit/` | 投稿前复核脚本：BKT 五折拟合复核、100 题混合检索复算、清单修复 |
 | `paper_benchmark_summary/` | 上述评测的**脱敏汇总结果**（CSV/JSON），含每个归档的来源说明，见该目录 README |
@@ -142,6 +166,10 @@ python scripts/sync-benchmark.py scale                      # 表 10：不同规
 - 候选池覆盖率为 93/100 = 93%，与条件口径的检索质量是两个不同指标。
 - 标注为「2 名真人 + 3 个 LLM 等权多数票」，**不是纯人工金标准**。
 - 训练折上拟合的 BKT 参数改善了 RMSE，但未使 AUC 超过固定先验 BKT；该负结果如实保留。
+- **知识追踪结果的两种训练协议不可混用**：表 9（`dkt_hyperparam_scan/`）为固定 50 轮、无早停、报第 50 轮 checkpoint；`kt_5fold_baselines/` 为统一早停协议（最大 300 轮 + 验证集早停 + 报验证集最佳轮次）。同一 DKT 在两种协议下分别为 0.6958 与 0.7006，**引用时必须标明协议**。
+- **5 折精确置换检验的 p 值下限为 0.0625**（仅枚举 2⁵=32 种符号组合），任何模型都达不到 p<0.05。因此模型间差异只能据 95% CI 与折同向数表述，**不得写作「显著优于」**。
+- **AKT 只能是无 Rasch 变体（AKT-NR）**：EdNet-KT1 不含题目标识，无法估计题目难度嵌入；其相对 DKT 的缺口量级与 AKT 原论文报告的 Rasch 贡献相符，可归因于题目级特征缺失。
+- 首轮 AKT 网格（lr∈{1×10⁻³,3×10⁻³}、50 轮、无早停）与原论文口径不符，**发现后即终止并排除**，未参与任何对照。
 
 ## 八、引用本快照
 
