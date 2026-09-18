@@ -16,7 +16,7 @@
 | `rag_index/` | `benchmark-results/rag-*.csv` | 2026-09 | RAG 检索索引的暴力余弦与索引加速对照（由 `scripts/rag-index-benchmark.py` 产出） |
 | `sync_realdevice/` | `benchmark-results/20260912-132057-sync-realdevice/rounds.csv`、`benchmark-results/20260909-005639/scale.csv` | 2026-09-12 / 2026-09-09 | 局域网真机快照同步 10 轮实测（表 10）与协议入库规模基准（每规模 3 次重复的报文体积与耗时） |
 | `robustness/` | `benchmark-results/20260909-005747/robustness.csv` | 2026-09-09 | 同步协议 15 项异常输入用例的期望判定、实际状态码与结论（表 11） |
-| `kt_5fold_baselines/` | `benchmark-results/20260918-020722-ednet-kt1-firsttag-20000u-kt-5fold-merged/` | 2026-09-18 02:07 | EdNet-KT1 上 BKT / FB-BKT / DKT / AKT-NR / DKVMN **五模型在统一早停协议下**的 5 折对照（含折级配对检验；本包为 JSON + Markdown） |
+| `kt_5fold_baselines/` | `benchmark-results/20260918-020722-ednet-kt1-firsttag-20000u-kt-5fold-merged/` | 2026-09-18 02:07 | EdNet-KT1 上 BKT / FB-BKT / DKT / AKT-NR / DKVMN **五模型在统一早停协议下**的 5 折对照（含折级配对检验；本包为 JSON + Markdown）。另含 `dkt_slice_alignment.json`：跨数据集对照表 DKT 列的四切片同协议重跑（0.066～0.140） |
 
 ## 关键口径
 
