@@ -2,7 +2,7 @@
   "subject": "politics",
   "course": "history",
   "chapter": "politics-history",
-  "status": "draft",
+  "status": "approved",
   "questions": [
     {
       "id": "politics-history-q001",
@@ -46,7 +46,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-history-q002",
@@ -90,7 +90,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-history-q003",
@@ -134,7 +134,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-history-q004",
@@ -178,7 +178,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-history-q005",
@@ -222,7 +222,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-history-q006",
@@ -265,7 +265,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-history-q007",
@@ -309,7 +309,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-history-q008",
@@ -353,7 +353,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-history-q009",
@@ -397,7 +397,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-history-q010",
@@ -441,7 +441,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-history-q011",
@@ -485,7 +485,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-history-q012",
@@ -529,7 +529,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-history-q013",
@@ -573,7 +573,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-history-q014",
@@ -617,7 +617,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-history-q015",
@@ -661,7 +661,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-history-q016",
@@ -705,7 +705,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-history-q017",
@@ -752,7 +752,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-history-q018",
@@ -796,7 +796,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-history-q019",
@@ -840,7 +840,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-history-q020",
@@ -884,7 +884,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     }
   ]
 }

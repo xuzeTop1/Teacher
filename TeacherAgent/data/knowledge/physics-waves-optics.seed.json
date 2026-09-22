@@ -2,7 +2,7 @@
   "subject": "physics",
   "course": "大学物理",
   "chapter": "波动与光学",
-  "status": "draft",
+  "status": "approved",
   "nodes": [
     {
       "id": "physics-wo-wave-basics",

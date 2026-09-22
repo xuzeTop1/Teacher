@@ -62,7 +62,7 @@ export const PACK_MANIFEST: KnowledgePack[] = [
     questionPath: "../../../data/questions/linear-algebra-basics.seed.json",
     expectedNodeCount: 10,
     expectedQuestionCount: 5,
-    status: "draft"
+    status: "approved"
   },
   {
     id: "probability-basics",
@@ -74,7 +74,7 @@ export const PACK_MANIFEST: KnowledgePack[] = [
     questionPath: "../../../data/questions/probability-basics.seed.json",
     expectedNodeCount: 8,
     expectedQuestionCount: 5,
-    status: "draft"
+    status: "approved"
   },
   {
     id: "math-derivatives",
@@ -182,7 +182,7 @@ export const PACK_MANIFEST: KnowledgePack[] = [
     questionPath: "../../../data/questions/linear-algebra-expanded.seed.json",
     expectedNodeCount: 7,
     expectedQuestionCount: 6,
-    status: "draft"
+    status: "approved"
   },
   // ── CS408 (408考研) ──────────────────────────────────────────────────────
   {
@@ -195,7 +195,7 @@ export const PACK_MANIFEST: KnowledgePack[] = [
     questionPath: "../../../data/questions/cs408-data-structures.seed.json",
     expectedNodeCount: 40,
     expectedQuestionCount: 40,
-    status: "draft"
+    status: "approved"
   },
   {
     id: "cs408-computer-organization",
@@ -207,7 +207,7 @@ export const PACK_MANIFEST: KnowledgePack[] = [
     questionPath: "../../../data/questions/cs408-computer-organization.seed.json",
     expectedNodeCount: 40,
     expectedQuestionCount: 40,
-    status: "draft"
+    status: "approved"
   },
   {
     id: "cs408-operating-systems",
@@ -219,7 +219,7 @@ export const PACK_MANIFEST: KnowledgePack[] = [
     questionPath: "../../../data/questions/cs408-operating-systems.seed.json",
     expectedNodeCount: 40,
     expectedQuestionCount: 40,
-    status: "draft"
+    status: "approved"
   },
   {
     id: "cs408-computer-networks",
@@ -244,7 +244,7 @@ export const PACK_MANIFEST: KnowledgePack[] = [
     questionPath: "../../../data/questions/physics-mechanics.seed.json",
     expectedNodeCount: 9,
     expectedQuestionCount: 15,
-    status: "draft"
+    status: "approved"
   },
   {
     id: "physics-electromagnetism",
@@ -256,7 +256,7 @@ export const PACK_MANIFEST: KnowledgePack[] = [
     questionPath: "../../../data/questions/physics-electromagnetism.seed.json",
     expectedNodeCount: 10,
     expectedQuestionCount: 15,
-    status: "draft"
+    status: "approved"
   },
   {
     id: "physics-thermodynamics",
@@ -268,7 +268,7 @@ export const PACK_MANIFEST: KnowledgePack[] = [
     questionPath: "../../../data/questions/physics-thermodynamics.seed.json",
     expectedNodeCount: 6,
     expectedQuestionCount: 15,
-    status: "draft"
+    status: "approved"
   },
   {
     id: "physics-waves-optics",
@@ -280,7 +280,7 @@ export const PACK_MANIFEST: KnowledgePack[] = [
     questionPath: "../../../data/questions/physics-waves-optics.seed.json",
     expectedNodeCount: 9,
     expectedQuestionCount: 15,
-    status: "draft"
+    status: "approved"
   },
   {
     id: "physics-modern",
@@ -292,7 +292,7 @@ export const PACK_MANIFEST: KnowledgePack[] = [
     questionPath: "../../../data/questions/physics-modern.seed.json",
     expectedNodeCount: 7,
     expectedQuestionCount: 15,
-    status: "draft"
+    status: "approved"
   },
   // ── English (考研英语) ──────────────────────────────────────────────────
   {
@@ -305,7 +305,7 @@ export const PACK_MANIFEST: KnowledgePack[] = [
     questionPath: "../../../data/questions/english-grammar.seed.json",
     expectedNodeCount: 20,
     expectedQuestionCount: 20,
-    status: "draft"
+    status: "approved"
   },
   {
     id: "english-reading",
@@ -317,7 +317,7 @@ export const PACK_MANIFEST: KnowledgePack[] = [
     questionPath: "../../../data/questions/english-reading.seed.json",
     expectedNodeCount: 20,
     expectedQuestionCount: 20,
-    status: "draft"
+    status: "approved"
   },
   {
     id: "english-translation",
@@ -329,7 +329,7 @@ export const PACK_MANIFEST: KnowledgePack[] = [
     questionPath: "../../../data/questions/english-translation.seed.json",
     expectedNodeCount: 20,
     expectedQuestionCount: 20,
-    status: "draft"
+    status: "approved"
   },
   {
     id: "english-cloze",
@@ -341,7 +341,7 @@ export const PACK_MANIFEST: KnowledgePack[] = [
     questionPath: "../../../data/questions/english-cloze.seed.json",
     expectedNodeCount: 20,
     expectedQuestionCount: 20,
-    status: "draft"
+    status: "approved"
   },
   // ── Politics (考研政治) ──────────────────────────────────────────────────
   {
@@ -354,7 +354,7 @@ export const PACK_MANIFEST: KnowledgePack[] = [
     questionPath: "../../../data/questions/politics-marxism.seed.json",
     expectedNodeCount: 20,
     expectedQuestionCount: 20,
-    status: "draft"
+    status: "approved"
   },
   {
     id: "politics-maoism",
@@ -366,7 +366,7 @@ export const PACK_MANIFEST: KnowledgePack[] = [
     questionPath: "../../../data/questions/politics-maoism.seed.json",
     expectedNodeCount: 20,
     expectedQuestionCount: 20,
-    status: "draft"
+    status: "approved"
   },
   {
     id: "politics-history",
@@ -378,7 +378,7 @@ export const PACK_MANIFEST: KnowledgePack[] = [
     questionPath: "../../../data/questions/politics-history.seed.json",
     expectedNodeCount: 20,
     expectedQuestionCount: 20,
-    status: "draft"
+    status: "approved"
   },
   {
     id: "politics-morals",
@@ -390,7 +390,7 @@ export const PACK_MANIFEST: KnowledgePack[] = [
     questionPath: "../../../data/questions/politics-morals.seed.json",
     expectedNodeCount: 20,
     expectedQuestionCount: 20,
-    status: "draft"
+    status: "approved"
   },
   // ── Management (管理类联考) ───────────────────────────────────────
   {
@@ -403,7 +403,7 @@ export const PACK_MANIFEST: KnowledgePack[] = [
     questionPath: "../../../data/questions/management-math.seed.json",
     expectedNodeCount: 20,
     expectedQuestionCount: 20,
-    status: "draft"
+    status: "approved"
   },
   {
     id: "management-logic",
@@ -415,7 +415,7 @@ export const PACK_MANIFEST: KnowledgePack[] = [
     questionPath: "../../../data/questions/management-logic.seed.json",
     expectedNodeCount: 20,
     expectedQuestionCount: 20,
-    status: "draft"
+    status: "approved"
   },
   {
     id: "management-writing",
@@ -427,7 +427,7 @@ export const PACK_MANIFEST: KnowledgePack[] = [
     questionPath: "../../../data/questions/management-writing.seed.json",
     expectedNodeCount: 20,
     expectedQuestionCount: 20,
-    status: "draft"
+    status: "approved"
   },
   // ── Education (教育学) ─────────────────────────────────────────────
   {
@@ -440,7 +440,7 @@ export const PACK_MANIFEST: KnowledgePack[] = [
     questionPath: "../../../data/questions/education-pedagogy.seed.json",
     expectedNodeCount: 20,
     expectedQuestionCount: 20,
-    status: "draft"
+    status: "approved"
   },
   {
     id: "education-psychology",
@@ -452,7 +452,7 @@ export const PACK_MANIFEST: KnowledgePack[] = [
     questionPath: "../../../data/questions/education-psychology.seed.json",
     expectedNodeCount: 20,
     expectedQuestionCount: 20,
-    status: "draft"
+    status: "approved"
   },
   {
     id: "education-history",
@@ -464,7 +464,7 @@ export const PACK_MANIFEST: KnowledgePack[] = [
     questionPath: "../../../data/questions/education-history.seed.json",
     expectedNodeCount: 20,
     expectedQuestionCount: 20,
-    status: "draft"
+    status: "approved"
   },
   // ── Psychology (心理学) ───────────────────────────────────────────
   {
@@ -477,7 +477,7 @@ export const PACK_MANIFEST: KnowledgePack[] = [
     questionPath: "../../../data/questions/psychology-general.seed.json",
     expectedNodeCount: 20,
     expectedQuestionCount: 20,
-    status: "draft"
+    status: "approved"
   },
   {
     id: "psychology-experimental",
@@ -489,7 +489,7 @@ export const PACK_MANIFEST: KnowledgePack[] = [
     questionPath: "../../../data/questions/psychology-experimental.seed.json",
     expectedNodeCount: 20,
     expectedQuestionCount: 20,
-    status: "draft"
+    status: "approved"
   },
   {
     id: "psychology-developmental",
@@ -501,7 +501,7 @@ export const PACK_MANIFEST: KnowledgePack[] = [
     questionPath: "../../../data/questions/psychology-developmental.seed.json",
     expectedNodeCount: 20,
     expectedQuestionCount: 20,
-    status: "draft"
+    status: "approved"
   },
   // ── Law Master (法律硕士) ──────────────────────────────────────────────
   {
@@ -514,7 +514,7 @@ export const PACK_MANIFEST: KnowledgePack[] = [
     questionPath: "../../../data/questions/lawmaster-civil.seed.json",
     expectedNodeCount: 20,
     expectedQuestionCount: 20,
-    status: "draft"
+    status: "approved"
   },
   {
     id: "lawmaster-criminal",
@@ -526,7 +526,7 @@ export const PACK_MANIFEST: KnowledgePack[] = [
     questionPath: "../../../data/questions/lawmaster-criminal.seed.json",
     expectedNodeCount: 20,
     expectedQuestionCount: 20,
-    status: "draft"
+    status: "approved"
   },
   {
     id: "lawmaster-jurisprudence",
@@ -538,7 +538,7 @@ export const PACK_MANIFEST: KnowledgePack[] = [
     questionPath: "../../../data/questions/lawmaster-jurisprudence.seed.json",
     expectedNodeCount: 20,
     expectedQuestionCount: 20,
-    status: "draft"
+    status: "approved"
   },
   // ── 考公 · 行测 ───────────────────────────────────────────────
   {
@@ -551,7 +551,7 @@ export const PACK_MANIFEST: KnowledgePack[] = [
     questionPath: "../../../data/questions/civil-verbal.seed.json",
     expectedNodeCount: 5,
     expectedQuestionCount: 4,
-    status: "draft"
+    status: "approved"
   },
   {
     id: "civil-logic",
@@ -563,7 +563,7 @@ export const PACK_MANIFEST: KnowledgePack[] = [
     questionPath: "../../../data/questions/civil-logic.seed.json",
     expectedNodeCount: 5,
     expectedQuestionCount: 4,
-    status: "draft"
+    status: "approved"
   },
   {
     id: "civil-data-analysis",
@@ -575,7 +575,7 @@ export const PACK_MANIFEST: KnowledgePack[] = [
     questionPath: "../../../data/questions/civil-data-analysis.seed.json",
     expectedNodeCount: 5,
     expectedQuestionCount: 4,
-    status: "draft"
+    status: "approved"
   },
   {
     id: "civil-quant",
@@ -587,7 +587,19 @@ export const PACK_MANIFEST: KnowledgePack[] = [
     questionPath: "../../../data/questions/civil-quant.seed.json",
     expectedNodeCount: 5,
     expectedQuestionCount: 4,
-    status: "draft"
+    status: "approved"
+  },
+  {
+    id: "civil-common-sense-scope",
+    subject: "xingce",
+    chapter: "civil-common-sense-scope",
+    title: "常识判断（范围与题型）",
+    shortTitle: "常识范围",
+    knowledgePath: "../../../data/knowledge/civil-common-sense-scope.seed.json",
+    questionPath: "../../../data/questions/civil-common-sense-scope.seed.json",
+    expectedNodeCount: 2,
+    expectedQuestionCount: 2,
+    status: "approved"
   },
   {
     id: "civil-common-sense",
@@ -612,7 +624,7 @@ export const PACK_MANIFEST: KnowledgePack[] = [
     questionPath: "../../../data/questions/civil-shenlun-summary.seed.json",
     expectedNodeCount: 5,
     expectedQuestionCount: 3,
-    status: "draft"
+    status: "approved"
   },
   {
     id: "civil-shenlun-argument",
@@ -624,7 +636,7 @@ export const PACK_MANIFEST: KnowledgePack[] = [
     questionPath: "../../../data/questions/civil-shenlun-argument.seed.json",
     expectedNodeCount: 5,
     expectedQuestionCount: 3,
-    status: "draft"
+    status: "approved"
   },
   {
     id: "civil-shenlun-implementation",
@@ -636,7 +648,7 @@ export const PACK_MANIFEST: KnowledgePack[] = [
     questionPath: "../../../data/questions/civil-shenlun-implementation.seed.json",
     expectedNodeCount: 5,
     expectedQuestionCount: 3,
-    status: "draft"
+    status: "approved"
   },
   {
     id: "civil-shenlun-writing",
@@ -648,7 +660,7 @@ export const PACK_MANIFEST: KnowledgePack[] = [
     questionPath: "../../../data/questions/civil-shenlun-writing.seed.json",
     expectedNodeCount: 5,
     expectedQuestionCount: 3,
-    status: "draft"
+    status: "approved"
   },
   // ── Programming ────────────────────────────────────────────────────
   {

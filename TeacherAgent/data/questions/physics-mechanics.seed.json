@@ -2,7 +2,7 @@
   "subject": "physics",
   "course": "大学物理",
   "chapter": "力学",
-  "status": "draft",
+  "status": "approved",
   "questions": [
     {
       "id": "physics-mechanics-q1",
@@ -15,8 +15,8 @@
       "solutionSteps": [
         "（1）使用速度公式：$v = v_0 + at$",
         "初速度 $v_0 = 0$，代入得：$v = 0 + 2\\times3 = 6 \\frac{m}{s}$",
-        "（2）使用位移公式：$s = v_0t + ½at^2$",
-        "代入得：$s = 0\\times3 + ½\\times2\\times3^2 = 9 m$"
+        "（2）使用位移公式：$s = v_0t + \\frac{1}{2}at^2$",
+        "代入得：$s = 0\\times3 + \\frac{1}{2}\\times2\\times3^2 = 9 m$"
       ],
       "knowledgeNodeIds": [
         "physics-mech-kinematics"
@@ -28,7 +28,7 @@
         },
         {
           "level": "L2",
-          "text": "速度公式：$v = v_0 +$at；位移公式：$s = v_0t + ½at^2$"
+          "text": "速度公式：$v = v_0 +$at；位移公式：$s = v_0t + \\frac{1}{2}at^2$"
         },
         {
           "level": "L3",
@@ -47,14 +47,14 @@
       "title": "斜抛运动射程计算",
       "type": "solution",
       "difficulty": 2,
-      "content": "一质点以初速度 $v_0 = 20 \\frac{m}{s}$从地面斜向上抛出，抛射角 $\\theta = 30\\circ$。不计空气阻力，$g = 10 \\frac{m}{s}^2$。求：$(1)$射程；$(2)$最大高度。",
+      "content": "一质点以初速度 $v_0 = 20 \\frac{m}{s}$从地面斜向上抛出，抛射角 $\\theta = 30^\\circ$。不计空气阻力，$g = 10 \\frac{m}{s}^2$。求：$(1)$射程；$(2)$最大高度。",
       "options": [],
-      "answer": "$(1) R = 20\\\\sqrt{3} \\approx 34.64 m$；$(2) H = 5 m$",
+      "answer": "$(1) R = 20\\sqrt{3} \\approx 34.64 m$；$(2) H = 5 m$",
       "solutionSteps": [
-        "（1）射程公式：$R = v_0^2sin\\frac{(2\\theta)}{g}$",
-        "代入：$R = 20^2\\times\\sin\\frac{(60\\circ)}{1}0 = 400\\times\\frac{(\\\\sqrt{3}/2)}{1}0 = 20\\\\sqrt{3} m$",
-        "（2）最大高度公式：$H = v_0^2sin^2\\theta/(2g)$",
-        "代入：$H = 20^2\\times\\sin^2\\frac{(30\\circ)}{(2\\times10)} = 400\\times\\frac{(1/4)}{2}0 = 5 m$"
+        "（1）射程公式：$R = \\frac{v_0^2\\sin(2\\theta)}{g}$",
+        "代入：$R = 20^2\\times\\sin\\frac{(60^\\circ)}{1}0 = 400\\times\\frac{(\\sqrt{3}/2)}{1}0 = 20\\sqrt{3} m$",
+        "（2）最大高度公式：$H = \\frac{v_0^2\\sin^2\\theta}{2g}$",
+        "代入：$H = \\frac{20^2\\times\\sin^2(30^\\circ)}{2\\times10} = \\frac{400\\times(1/4)}{20} = 5\\text{ m}$"
       ],
       "knowledgeNodeIds": [
         "physics-mech-kinematics"
@@ -66,11 +66,11 @@
         },
         {
           "level": "L2",
-          "text": "记忆射程公式 $R = v_0^2sin\\frac{(2\\theta)}{g}$和最大高度公式 $H = v_0^2sin^2\\theta/(2g)$"
+          "text": "记忆射程公式 $R = \\frac{v_0^2\\sin(2\\theta)}{g}$和最大高度公式 $H = \\frac{v_0^2\\sin^2\\theta}{2g}$"
         },
         {
           "level": "L3",
-          "text": "$\\sin(30\\circ) = \\frac{1}{2}$，$\\sin(60\\circ) = √\\frac{3}{2}$，代入计算"
+          "text": "$\\sin(30^\\circ) = \\frac{1}{2}$，$\\sin(60^\\circ) = \\frac{\\sqrt{3}}{2}$，代入计算"
         }
       ],
       "source": {
@@ -124,7 +124,7 @@
       "title": "斜面受力分析",
       "type": "solution",
       "difficulty": 2,
-      "content": "一质量为 $m = 5$kg 的物体放在倾角 $\\theta = 37\\circ$的光滑斜面上。求：$(1)$物体沿斜面方向的加速度；$(2)$斜面对物体的支持力。（取 $g = 10 \\frac{m}{s}^2$，$sin37\\circ = 0.6$，$cos37\\circ = 0.8$）",
+      "content": "一质量为 $m = 5$kg 的物体放在倾角 $\\theta = 37^\\circ$的光滑斜面上。求：$(1)$物体沿斜面方向的加速度；$(2)$斜面对物体的支持力。（取 $g = 10 \\frac{m}{s}^2$，$sin37^\\circ = 0.6$，$cos37^\\circ = 0.8$）",
       "options": [],
       "answer": "$(1) a = 6 \\frac{m}{s}^2$；$(2) N = 40 N$",
       "solutionSteps": [
@@ -168,9 +168,9 @@
       "solutionSteps": [
         "完全弹性碰撞，动量守恒和动能守恒",
         "动量守恒：$m_1v_1 + m_2v_2 = m_1v_1' + m_2v_2'$",
-        "代入：$2\\times4 + 3\\times(-2) = 2v_1' + 3v_2'$，即 $2 = 2v_1' + 3v_2' ... ①$",
-        "动能守恒：$½m_1v_1^2 + ½m_2v_2^2 = ½m_1v_1'^2 + ½m_2v_2'^2$",
-        "代入：$½\\times2\\times16 + ½\\times3\\times4 = v_1'^2 + 1.5v_2'^2$，即 $22 = v_1'^2 + 1.5v_2'^2 ... ②$",
+        "代入：$2\\times4 + 3\\times(-2) = 2v_1' + 3v_2'$，即 $2 = 2v_1' + 3v_2'$ ... ①",
+        "动能守恒：$\\frac{1}{2}m_1v_1^2 + \\frac{1}{2}m_2v_2^2 = \\frac{1}{2}m_1v_1'^2 + \\frac{1}{2}m_2v_2'^2$",
+        "代入：$\\frac{1}{2}\\times2\\times16 + \\frac{1}{2}\\times3\\times4 = v_1'^2 + 1.5v_2'^2$，即 $22 = v_1'^2 + 1.5v_2'^2$ ... ②",
         "联立①②解得：$v_1' = -2.8 \\frac{m}{s}$，$v_2' = 3.2 \\frac{m}{s}$"
       ],
       "knowledgeNodeIds": [
@@ -183,7 +183,7 @@
         },
         {
           "level": "L2",
-          "text": "动量守恒：$m_1v_1 + m_2v_2 = m_1v_1' + m_2v_2'$；动能守恒：$½m_1v_1^2 + ½m_2v_2^2 = ½m_1v_1'^2 + ½m_2v_2'^2$"
+          "text": "动量守恒：$m_1v_1 + m_2v_2 = m_1v_1' + m_2v_2'$；动能守恒：$\\frac{1}{2}m_1v_1^2 + \\frac{1}{2}m_2v_2^2 = \\frac{1}{2}m_1v_1'^2 + \\frac{1}{2}m_2v_2'^2$"
         },
         {
           "level": "L3",
@@ -248,7 +248,7 @@
         "应用动能定理：合外力做功 = 动能变化",
         "重力做功：$W_g =$mgh $= 1\\times10\\times5 = 50 J$",
         "空气阻力做功：$W_f$（负功）",
-        "动能变化：$\\Delta E_k = ½mv^2 - 0 = ½\\times1\\times64 = 32 J$",
+        "动能变化：$\\Delta E_k = \\frac{1}{2}mv^2 - 0 = \\frac{1}{2}\\times1\\times64 = 32 J$",
         "动能定理：$W_g + W_f = \\Delta E_k$",
         "代入：$50 + W_f = 32$，解得 $W_f = -18 J$"
       ],
@@ -266,7 +266,7 @@
         },
         {
           "level": "L3",
-          "text": "注意动能变化的计算：$\\Delta E_k = ½mv^2 - ½mv_0^2$，初速度 $v_0 = 0$"
+          "text": "注意动能变化的计算：$\\Delta E_k = \\frac{1}{2}mv^2 - \\frac{1}{2}mv_0^2$，初速度 $v_0 = 0$"
         }
       ],
       "source": {
@@ -288,15 +288,15 @@
         "只有重力和弹力做功，机械能守恒",
         "取弹簧原长位置为重力势能零点",
         "初始状态（弹簧伸长 x 处）：",
-        "弹性势能：$E_p$弹 $= ½kx^2 = ½\\times100\\times0.01 = 0.5 J$",
+        "弹性势能：$E_p$弹 $= \\frac{1}{2}kx^2 = \\frac{1}{2}\\times100\\times0.01 = 0.5 J$",
         "重力势能：$E_p$重 $= -mgx = -0.5\\times10\\times0.1 = -0.5 J$",
         "动能：$E_k = 0$",
         "末状态（原长位置）：",
         "弹性势能：$E_p$弹$' = 0$",
         "重力势能：$E_p$重$' = 0$",
-        "动能：$E_k' = ½mv^2$",
-        "机械能守恒：$0.5 - 0.5 + 0 = 0 + 0 + ½\\times0.5\\times v^2$",
-        "解得：$v^2 = 2$，$v = \\\\sqrt{2} \\approx 1.41 \\frac{m}{s}$"
+        "动能：$E_k' = \\frac{1}{2}mv^2$",
+        "机械能守恒：$0.5 - 0.5 + 0 = 0 + 0 + \\frac{1}{2}\\times0.5\\times v^2$",
+        "解得：$v^2 = 2$，$v = \\sqrt{2} \\approx 1.41 \\frac{m}{s}$"
       ],
       "knowledgeNodeIds": [
         "physics-mech-work-energy"
@@ -371,10 +371,10 @@
       "options": [],
       "answer": "$(1) \\omega = 10$ra$\\frac{d}{s}$；$(2) T = 0.628 s$；$(3) v_max = 0.2 \\frac{m}{s}$",
       "solutionSteps": [
-        "（1）角频率：$\\omega = \\\\sqrt{\\frac{k}{m}} = \\\\sqrt{5\\frac{0}{0}.5} = 10$ra$\\frac{d}{s}$",
+        "（1）角频率：$\\omega = \\sqrt{\\frac{k}{m}} = \\sqrt{\\frac{50}{0.5}} = 10$ra$\\frac{d}{s}$",
         "（2）周期：$T = 2\\pi/\\omega = 2\\pi/10 = \\pi/5 \\approx 0.628 s$",
-        "（3）机械能守恒：$½kx_0^2 = ½mv_max^2$",
-        "代入：$½\\times50\\times0.0004 = ½\\times0.5\\times v_max^2$",
+        "（3）机械能守恒：$\\frac{1}{2}kx_0^2 = \\frac{1}{2}mv_max^2$",
+        "代入：$\\frac{1}{2}\\times50\\times0.0004 = \\frac{1}{2}\\times0.5\\times v_max^2$",
         "解得：$v_max^2 = 0.04$，$v_max = 0.2 \\frac{m}{s}$"
       ],
       "knowledgeNodeIds": [
@@ -387,11 +387,11 @@
         },
         {
           "level": "L2",
-          "text": "$\\omega = \\\\sqrt{\\frac{k}{m}}$，$T = 2\\pi/\\omega$，最大速度 $v_max = \\omega A$（$A$是振幅）"
+          "text": "$\\omega = \\sqrt{\\frac{k}{m}}$，$T = 2\\pi/\\omega$，最大速度 $v_max = \\omega A$（$A$是振幅）"
         },
         {
           "level": "L3",
-          "text": "也可以用机械能守恒求解最大速度：$½kA^2 = ½mv_max^2$"
+          "text": "也可以用机械能守恒求解最大速度：$\\frac{1}{2}kA^2 = \\frac{1}{2}mv_max^2$"
         }
       ],
       "source": {
@@ -458,9 +458,9 @@
       "solutionSteps": [
         "卫星轨道半径：$r = R + h = 2R = 1.28\\times10^7 m$",
         "万有引力提供向心力：GM$\\frac{m}{r}^2 = mv^2/r$",
-        "化简得：v = √(GM/r)",
-        "代入：$v = \\\\sqrt{6.67\\times10^{-11}\\times6.0\\times10^{24}/1.28\\times10^7}$",
-        "计算：$v = \\\\sqrt{3.12\\times10^7} \\approx 5.59\\times10^3 \\frac{m}{s}$"
+        "化简得：$v = \\sqrt{GM/r}$",
+        "代入：$v = \\sqrt{\\frac{6.67\\times10^{-11}\\times6.0\\times10^{24}}{1.28\\times10^7}}$",
+        "计算：$v = \\sqrt{3.12\\times10^7} \\approx 5.59\\times10^3 \\frac{m}{s}$"
       ],
       "knowledgeNodeIds": [
         "physics-mech-gravitation"
@@ -539,7 +539,7 @@
       "answer": "$(1) a = -3 \\frac{m}{s}^2$；$(2) s \\approx 4.17 m$",
       "solutionSteps": [
         "（1）滑动摩擦力：$f = \\mu N = \\mu$mg $= 0.3\\times10\\times10 = 30 N$",
-        "加速度：$a = -\\frac{f}{m} = -3\\frac{0}{1}0 = -3 \\frac{m}{s}^2$（负号表示减速）",
+        "加速度：$a = -\\frac{f}{m} = -\\frac{30}{10} = -3 \\frac{m}{s}^2$（负号表示减速）",
         "（2）使用运动学公式：$v^2 - v_0^2 = 2as$",
         "末速度 $v = 0$，代入：$0 - 25 = 2\\times(-3)\\times s$",
         "解得：$s = 2\\frac{5}{6} \\approx 4.17 m$"
@@ -579,12 +579,12 @@
       "answer": "$(1) v = 4 \\frac{m}{s}$；$(2) x_max = 0.4 m$",
       "solutionSteps": [
         "（1）斜面部分：机械能守恒",
-        "$mgh = ½mv^2$",
-        "代入：$2\\times10\\times0.8 = ½\\times2\\times v^2$",
+        "$mgh = \\frac{1}{2}mv^2$",
+        "代入：$2\\times10\\times0.8 = \\frac{1}{2}\\times2\\times v^2$",
         "解得：$v^2 = 16$，$v = 4 \\frac{m}{s}$",
         "（2）水平面部分：滑块动能转化为弹簧弹性势能",
-        "$½mv^2 = ½kx_max^2$",
-        "代入：$½\\times2\\times16 = ½\\times200\\times x_max^2$",
+        "$\\frac{1}{2}mv^2 = \\frac{1}{2}kx_max^2$",
+        "代入：$\\frac{1}{2}\\times2\\times16 = \\frac{1}{2}\\times200\\times x_max^2$",
         "解得：$x_max^2 = 0.16$，$x_max = 0.4 m$"
       ],
       "knowledgeNodeIds": [

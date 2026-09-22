@@ -1,4 +1,4 @@
-# TeacherAgent Release Check Script
+﻿# TeacherAgent Release Check Script
 # 在构建安装包前后执行，验证发布产物安全性。
 # 用法: .\scripts\release-check.ps1
 
@@ -20,31 +20,28 @@ if ($mapFiles) {
     Write-Host "  PASS: No .map files in dist/" -ForegroundColor Green
 }
 
-# 2. 确认 bundle 中无 API Key 或敏感字符串
-Write-Host "[2/8] Scanning bundle for leaked secrets..." -ForegroundColor Yellow
-$distDir = Join-Path $projectRoot "dist"
-# 使用有最小长度的模式，避免 disk-*, risk-* 等误报
-# 注意：PowerShell 中 {n,} 会被解析为 script block，改用 .NET [regex] 匹配
-$secretPatterns = @(
-    'sk-[A-Za-z0-9_\-][A-Za-z0-9_\-][A-Za-z0-9_\-][A-Za-z0-9_\-][A-Za-z0-9_\-][A-Za-z0-9_\-][A-Za-z0-9_\-][A-Za-z0-9_\-][A-Za-z0-9_\-][A-Za-z0-9_\-][A-Za-z0-9_\-][A-Za-z0-9_\-][A-Za-z0-9_\-][A-Za-z0-9_\-][A-Za-z0-9_\-][A-Za-z0-9_\-][A-Za-z0-9_\-][A-Za-z0-9_\-][A-Za-z0-9_\-][A-Za-z0-9_\-]',
-    'Bearer\s+[A-Za-z0-9_\-][A-Za-z0-9_\-][A-Za-z0-9_\-][A-Za-z0-9_\-][A-Za-z0-9_\-][A-Za-z0-9_\-][A-Za-z0-9_\-][A-Za-z0-9_\-][A-Za-z0-9_\-][A-Za-z0-9_\-][A-Za-z0-9_\-][A-Za-z0-9_\-][A-Za-z0-9_\-][A-Za-z0-9_\-][A-Za-z0-9_\-][A-Za-z0-9_\-][A-Za-z0-9_\-][A-Za-z0-9_\-][A-Za-z0-9_\-][A-Za-z0-9_\-]'
-)
-$leakedFiles = @()
-if (Test-Path $distDir) {
-    Get-ChildItem -Path $distDir -Recurse -Include "*.js" | ForEach-Object {
-        $content = Get-Content $_.FullName -Raw -ErrorAction SilentlyContinue
-        foreach ($pattern in $secretPatterns) {
-            if ($content -match $pattern) {
-                $leakedFiles += "$($_.Name): matched pattern '$pattern'"
-            }
-        }
-    }
-}
-if ($leakedFiles.Count -gt 0) {
-    $failures += "FAIL: Potential secrets in bundle"
-    $leakedFiles | ForEach-Object { Write-Host "  $_" -ForegroundColor Red }
+# 2. 产物泄漏扫描：凭据形态 + 构建机绝对路径（由 scan_artifact_leakage.py 承担）
+Write-Host "[2/8] Scanning shipped artifacts for secrets and build-machine paths..." -ForegroundColor Yellow
+$scanner = Join-Path $projectRoot "scripts/scan_artifact_leakage.py"
+$releaseExe = Join-Path $projectRoot "src-tauri/target/release/teacher-agent.exe"
+if (-not (Test-Path $scanner)) {
+    $failures += "FAIL: scripts/scan_artifact_leakage.py is missing"
 } else {
-    Write-Host "  PASS: No obvious secrets in bundle" -ForegroundColor Green
+    $prevEAP = $ErrorActionPreference
+    $ErrorActionPreference = "Continue"
+    $scanOut = & python $scanner
+    $scanExit = $LASTEXITCODE
+    $ErrorActionPreference = $prevEAP
+    $scanOut | ForEach-Object { Write-Host "  $_" }
+    if ($scanExit -eq 0) {
+        Write-Host "  PASS: artifacts clean" -ForegroundColor Green
+    } elseif ($scanExit -eq 2 -and -not (Test-Path $releaseExe)) {
+        # Pre-build run: nothing to scan yet. Not a failure, but say so out loud.
+        $warnings += "WARN: release binaries not built yet - leakage scan skipped (run again after 'tauri build')"
+        Write-Host "  SKIP: release binaries not built yet" -ForegroundColor Yellow
+    } else {
+        $failures += "FAIL: artifact leakage scan reported findings or could not run (exit $scanExit)"
+    }
 }
 
 # 3. 确认 tauri.conf.json CSP 不为 null

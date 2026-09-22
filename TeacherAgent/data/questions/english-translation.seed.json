@@ -1,7 +1,7 @@
 {
   "subject": "english",
   "chapter": "english-translation",
-  "status": "draft",
+  "status": "approved",
   "questions": [
     {
       "id": "eng-translation-q-001",
@@ -37,7 +37,7 @@
         "sourceType": "practice",
         "note": "基于翻译练习设计，考查被动语态的中文主动化转换。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "找主干：The book was written by Lu Xun. 主语The book，谓语was written，by Lu Xun是施动者。",
         "被动语态处理：中文少用\"被\"字，用\"是...的\"结构：这本书是鲁迅写的。",
@@ -79,7 +79,7 @@
         "sourceType": "practice",
         "note": "基于翻译练习设计，考查长难句断句与语序重组。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "找主干：He said + that引导的宾语从句。从句he would come tomorrow。",
         "断句处理：宾语从句较短，可直接顺译，不用断句。",
@@ -121,7 +121,7 @@
         "sourceType": "practice",
         "note": "基于翻译练习设计，考查抽象名词的具体化翻译。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "找主干：The importance of education cannot be ignored. 主语The importance，谓语cannot be ignored。",
         "抽象名词importance翻译：可译为\"重要性\"或\"重要价值\"，不宜直译为\"重要\"。",
@@ -143,7 +143,7 @@
       "hints": [
         {
           "level": "L1",
-          "text": "先判断是否需要词性转换（speech名词 $\\to$发表演讲，名词转动词）？"
+          "text": "先判断是否需要词性转换（speech名词 →发表演讲，名词转动词）？"
         },
         {
           "level": "L2",
@@ -163,7 +163,7 @@
         "sourceType": "practice",
         "note": "基于翻译练习设计，考查词性转换翻译法。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "找主干：He gave a speech. 主语He，谓语gave，宾语a speech。",
         "词性转换：gave a speech中speech是名词，中文习惯说\"发表演讲\"（名词转动词）。",
@@ -205,7 +205,7 @@
         "sourceType": "practice",
         "note": "基于翻译练习设计，考查定语从句的翻译方法。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "找主干：I have a friend + who引导的定语从句。从句who lives in Beijing修饰friend。",
         "定语从句翻译：从句较短，用前置法翻译成\"住在北京的朋友\"。",
@@ -247,7 +247,7 @@
         "sourceType": "practice",
         "note": "基于翻译练习设计，考查状语从句的翻译方法。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "找主干：When he arrived, I was reading. 时间状语从句+主句。",
         "时间状语从句翻译：When he arrived翻译为\"当他到达时\"，放在句首。",
@@ -289,7 +289,7 @@
         "sourceType": "practice",
         "note": "基于翻译练习设计，考查名词性从句的翻译方法。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "找主干：What he said is true. 主语从句What he said + 谓语is + 表语true。",
         "主语从句翻译：What he said=他所说的，整个从句作主语。",
@@ -331,11 +331,11 @@
         "sourceType": "practice",
         "note": "基于翻译练习设计，考查否定句的翻译方法。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "找主干：Not everyone agrees with this view. 否定词Not + 主语everyone + 谓语agrees。",
         "部分否定：Not everyone=不是每个人（部分否定，非全部否定）。",
-        "选$B$（不是每个人都同意这个观点）；$A$（完全肯定，忽略Not）；$C$（全部否定，Not everyone$\\neq$everyone not）；$D$（全部否定，过于绝对）。"
+        "选B（不是每个人都同意这个观点）；A（完全肯定，忽略Not）；C（全部否定，Not everyone≠everyone not）；D（全部否定，过于绝对）。"
       ],
       "content": "翻译下面句子，注意否定句的翻译：\n\n\"Not everyone agrees with this view.\"\n\n(A) 每个人都同意这个观点。\n(B) 不是每个人都同意这个观点。\n(C) 每个人都不同意这个观点。\n(D) 没有人同意这个观点。"
     },
@@ -373,7 +373,7 @@
         "sourceType": "practice",
         "note": "基于翻译练习设计，考查比较结构的翻译方法。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "找主干：He is taller than me. 主语He，系动词is，表语taller，比较状语than me。",
         "比较结构翻译：taller than me=比我高，按中文习惯把比较对象放前面。",
@@ -415,7 +415,7 @@
         "sourceType": "practice",
         "note": "基于翻译练习设计，考查it作形式主语/宾语的翻译。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "找主干：It is important to study English. It是形式主语，真正主语是to study English。",
         "形式主语翻译：中文不保留\"It\"，把真正主语提前：学习英语很重要。",
@@ -457,7 +457,7 @@
         "sourceType": "practice",
         "note": "基于翻译练习设计，考查there be句型的翻译。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "找主干：There is a book on the table. There be句型，主语a book，地点状语on the table。",
         "There be翻译：中文习惯说\"有\"，地点状语放句首。",
@@ -499,7 +499,7 @@
         "sourceType": "practice",
         "note": "基于翻译练习设计，考查插入语的翻译方法。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "找主干：The policy will fail. 插入语many experts say在两个逗号之间。",
         "插入语翻译：中文习惯把插入语放在句首或句末，不放在句中。",
@@ -541,7 +541,7 @@
         "sourceType": "practice",
         "note": "基于翻译练习设计，考查长难句的整体翻译策略。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "找主干：The study shows that online education is effective. 插入语which took 10 years...在主语后。",
         "长难句处理：先拆分，插入语独立成句，主句单独翻译。",
@@ -583,7 +583,7 @@
         "sourceType": "practice",
         "note": "基于翻译练习设计，考查翻译中的增词法与减词法。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "找主干：He is a teacher. 简单的主系表结构。",
         "增词法与减词法：中文习惯说\"他是老师\"（减掉\"一个\"），更简洁自然。",
@@ -625,7 +625,7 @@
         "sourceType": "practice",
         "note": "基于翻译练习设计，考查正话反说与反话正说。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "找主干：He is not unaware of the problem. 双重否定not unaware。",
         "正话反说：not unaware=意识到（双重否定=肯定）。",
@@ -667,7 +667,7 @@
         "sourceType": "practice",
         "note": "基于翻译练习设计，考查指代关系处理。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "找主干：两个简单句He is a teacher和He teaches English。",
         "指代关系：两个He指同一个人，中文用\"他\"保持一致。",
@@ -709,7 +709,7 @@
         "sourceType": "practice",
         "note": "基于翻译练习设计，考查语态转换。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "找主干：Mistakes should be avoided. 被动语态should be avoided。",
         "语态转换：中文少用\"被\"，可转换为主动语态\"我们应该避免错误\"。",
@@ -751,7 +751,7 @@
         "sourceType": "practice",
         "note": "基于翻译练习设计，考查语气表达。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "找主干：If I were you, I would go. 虚拟语气条件句。",
         "虚拟语气翻译：If I were you=如果我是你，按顺译法直接翻译。",
@@ -793,7 +793,7 @@
         "sourceType": "practice",
         "note": "基于翻译练习设计，考查文化负载词处理。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "找主干：GDP是专有名词缩写。",
         "文化负载词处理：首次出现需给出全称解释，GDP（国内生产总值）。",
@@ -835,7 +835,7 @@
         "sourceType": "practice",
         "note": "基于翻译练习设计，考查长难句的整体翻译策略。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "找主干：The growth of the power...has been welcomed...but also raised concerns. 并列谓语has been welcomed和raised。",
         "断句处理：在but处断开，前半句讲受欢迎，后半句讲引起担忧。逗号使用需在转折词\"但\"前加逗号。",

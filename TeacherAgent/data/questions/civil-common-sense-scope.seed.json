@@ -1,0 +1,86 @@
+{
+  "subject": "xingce",
+  "course": "xingce",
+  "chapter": "civil-common-sense-scope",
+  "status": "approved",
+  "questions": [
+    {
+      "id": "xingce-sense-scope-q001",
+      "title": "常识判断：官方考查范围",
+      "knowledgeNodeIds": [
+        "xingce-sense-scope-distribution"
+      ],
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "根据国家公务员考试大纲，下列关于行政职业能力测验「常识判断」模块的表述，正确的是：A. 只考查政治和法律两个领域  B. 测查应知应会的基本知识及分析判断能力，涵盖政治、经济、法律、科技等领域  C. 采用主观论述题形式考查  D. 题量通常占整张试卷的一半以上",
+      "answer": "B。公务员考试大纲明确规定常识判断主要测查报考者应知应会的基本知识以及运用这些知识分析判断的基本能力，涵盖政治、经济、法律、历史、文化、地理、环境、自然、科技等领域，题型为单选题。",
+      "solutionSteps": [
+        "回顾大纲关于常识判断的定义与定位。",
+        "明确考查范围包括政治、经济、法律、科技、人文历史等多个领域，并非单一学科。",
+        "题型为客观单项选择题，非主观论述；题量通常为20题左右。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "常识判断是客观单选题还是主观论述题？"
+        },
+        {
+          "level": "L2",
+          "text": "大纲对常识判断模块的考查领域有哪些明确界定？"
+        },
+        {
+          "level": "L3",
+          "text": "排除将考查范围局限在个别单一领域的片面选项。"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "official_syllabus",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "本条为官方大纲所载考查范围，非事实断言。"
+      },
+      "reviewStatus": "approved"
+    },
+    {
+      "id": "xingce-sense-scope-q002",
+      "title": "常识判断：能力测查要求",
+      "knowledgeNodeIds": [
+        "xingce-sense-scope-competency"
+      ],
+      "type": "concept_check",
+      "difficulty": 1,
+      "content": "根据公务员录用考试公共科目大纲，行测「常识判断」模块重点测查报考者的哪项能力：A. 复杂的数学建模与公式推导能力  B. 深度专业学术论文撰写能力  C. 应知应会的基本知识以及运用这些知识分析判断的基本能力  D. 外语口语即时互译能力",
+      "answer": "C。常识判断模块重点测查报考者应知应会的基本知识以及运用这些知识分析判断的基本能力。",
+      "solutionSteps": [
+        "审题明确常识判断模块的能力测查目标。",
+        "公式推导对应数量关系，论文撰写对应申论，口译不属于公共笔试。",
+        "根据大纲原文锁定「应知应会的基本知识以及运用这些知识分析判断的基本能力」。"
+      ],
+      "hints": [
+        {
+          "level": "L1",
+          "text": "常识判断考查的是基础常识素养还是深奥的专业公式推导？"
+        },
+        {
+          "level": "L2",
+          "text": "对照大纲关于常识判断能力测查的原文表述进行辨析。"
+        },
+        {
+          "level": "L3",
+          "text": "排除属于数量关系、申论或专业加试特征的选项。"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "official_syllabus",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "本条为官方大纲所载考查范围，非事实断言。"
+      },
+      "reviewStatus": "approved"
+    }
+  ]
+}

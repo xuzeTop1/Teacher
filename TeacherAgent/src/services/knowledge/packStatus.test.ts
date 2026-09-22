@@ -51,44 +51,44 @@ describe("getPackSubjectSummary", () => {
     expect(math!.expectedNodeCount).toBe(122)
   })
 
-  it("total: 776 nodes / 766 questions across 51 packs", () => {
+  it("total: 778 nodes / 768 questions across 52 packs", () => {
     const summaries = getPackSubjectSummary()
     const totalPacks = summaries.reduce((s, r) => s + r.packCount, 0)
     const totalNodes = summaries.reduce((s, r) => s + r.expectedNodeCount, 0)
-    expect(totalPacks).toBe(51)
-    expect(totalNodes).toBe(776)
+    expect(totalPacks).toBe(52)
+    expect(totalNodes).toBe(778)
   })
 })
 
 describe("getApprovedPackSubjectSummary", () => {
-  it("math: 97 nodes / 75 questions (9 approved packs)", () => {
+  it("math: 122 nodes / 91 questions (12 approved packs)", () => {
     const summaries = getApprovedPackSubjectSummary()
     const math = summaries.find((s) => s.subject === "math")
     expect(math).toBeDefined()
-    expect(math!.expectedNodeCount).toBe(97)
+    expect(math!.expectedNodeCount).toBe(122)
   })
 
-  it("total approved: 145 nodes / 123 questions across 11 packs", () => {
+  it("total approved: 773 nodes / 764 questions across 51 packs", () => {
     const summaries = getApprovedPackSubjectSummary()
     const totalNodes = summaries.reduce((s, r) => s + r.expectedNodeCount, 0)
-    expect(totalNodes).toBe(145)
+    expect(totalNodes).toBe(773)
   })
 })
 
 describe("getCatalogStatistics", () => {
   it("returns correct dual-catalog stats", () => {
     const stats = getCatalogStatistics()
-    expect(stats.totalPacks).toBe(51)
-    expect(stats.approvedPacks).toBe(11)
-    expect(stats.approvedNodes).toBe(145)
-    expect(stats.draftNodes).toBe(631)
+    expect(stats.totalPacks).toBe(52)
+    expect(stats.approvedPacks).toBe(51)
+    expect(stats.approvedNodes).toBe(773)
+    expect(stats.draftNodes).toBe(5)
   })
 })
 
 describe("getPackList", () => {
-  it("returns all 51 packs with status", () => {
+  it("returns all 52 packs with status", () => {
     const list = getPackList()
-    expect(list).toHaveLength(51)
+    expect(list).toHaveLength(52)
     for (const item of list) {
       expect(["approved", "draft"]).toContain(item.status)
     }
@@ -97,19 +97,13 @@ describe("getPackList", () => {
 
 // ── compareManifestWithDatabase tests ──────────────────────────────────────
 
-const APPROVED_PACK_SPECS = [
-  ["math", "math-limits", 35],
-  ["math", "math-derivatives", 12],
-  ["math", "math-applications-of-derivatives", 7],
-  ["math", "math-indefinite-integrals", 8],
-  ["math", "math-definite-integrals", 8],
-  ["math", "math-integral-applications", 6],
-  ["math", "math-mean-value-theorems", 5],
-  ["math", "math-multivariable-calculus", 7],
-  ["math", "probability-distributions", 9],
-  ["programming", "python-basics", 8],
-  ["cs408", "cs408-computer-networks", 40]
-] as const
+import { PACK_MANIFEST } from "./packManifest"
+
+const APPROVED_PACK_SPECS = PACK_MANIFEST
+  .filter((p) => p.status === "approved")
+  .map((p) => [p.subject, p.id, p.expectedNodeCount] as const)
+
+const TOTAL_APPROVED_EXPECTED = 773
 
 describe("compareManifestWithDatabase", () => {
   beforeEach(() => { vi.clearAllMocks() })
@@ -131,36 +125,40 @@ describe("compareManifestWithDatabase", () => {
 
   it("empty DB => totalActual=0, math actual=0, overallStatus=error", async () => {
     await mockCompareDeps(mockManifestCountResult({
-      totalExpected: 145, matchedCount: 0,
-      missingIds: Array.from({ length: 145 }, (_, i) => `n${i}`),
+      totalExpected: TOTAL_APPROVED_EXPECTED, matchedCount: 0,
+      missingIds: Array.from({ length: TOTAL_APPROVED_EXPECTED }, (_, i) => `n${i}`),
       matchedCountsBySubject: {}
     }))
     const result = await compareManifestWithDatabase()
     expect(result.totalActual).toBe(0)
-    expect(result.totalExpected).toBe(145)
+    expect(result.totalExpected).toBe(TOTAL_APPROVED_EXPECTED)
     expect(result.overallStatus).toBe("error")
     const math = result.subjects.find((s) => s.subject === "math")
     expect(math!.actualNodes).toBe(0)
     expect(math!.status).toBe("error")
   })
 
-  it("144 matched + 1 missing => totalActual=144, warning", async () => {
+  it("770 matched + 1 missing => totalActual=770, warning", async () => {
+    const matchedCounts = Object.fromEntries(
+      getApprovedPackSubjectSummary().map((s) => [s.subject, s.expectedNodeCount])
+    )
+    matchedCounts.math = 121
     await mockCompareDeps(mockManifestCountResult({
-      totalExpected: 145, matchedCount: 144,
+      totalExpected: TOTAL_APPROVED_EXPECTED, matchedCount: 770,
       missingIds: ["mn5"],
-      matchedCountsBySubject: { math: 96, programming: 8, cs408: 40 }
+      matchedCountsBySubject: matchedCounts
     }))
     const result = await compareManifestWithDatabase()
-    expect(result.totalActual).toBe(144)
+    expect(result.totalActual).toBe(770)
     expect(result.overallStatus).toBe("warning")
     const math = result.subjects.find((s) => s.subject === "math")
-    expect(math!.actualNodes).toBe(96)
+    expect(math!.actualNodes).toBe(121)
     expect(math!.status).toBe("warning")
   })
 
   it("34 matched + 1 extra approved same-subject row => actual=34, not补足", async () => {
     await mockCompareDeps(mockManifestCountResult({
-      totalExpected: 145, matchedCount: 34,
+      totalExpected: TOTAL_APPROVED_EXPECTED, matchedCount: 34,
       missingIds: ["mn5"],
       statusMismatchIds: [],
       subjectMismatchIds: [],
@@ -175,12 +173,15 @@ describe("compareManifestWithDatabase", () => {
   })
 
   it("custom approved does not affect matched_counts_by_subject", async () => {
+    const matchedCounts = Object.fromEntries(
+      getApprovedPackSubjectSummary().map((s) => [s.subject, s.expectedNodeCount])
+    )
     await mockCompareDeps(mockManifestCountResult({
-      totalExpected: 145, matchedCount: 145,
-      matchedCountsBySubject: { math: 97, programming: 8, cs408: 40 }
+      totalExpected: TOTAL_APPROVED_EXPECTED, matchedCount: TOTAL_APPROVED_EXPECTED,
+      matchedCountsBySubject: matchedCounts
     }))
     const result = await compareManifestWithDatabase()
-    expect(result.totalActual).toBe(145)
+    expect(result.totalActual).toBe(TOTAL_APPROVED_EXPECTED)
     expect(result.overallStatus).toBe("ok")
     expect(result.orphanCheck).toBe("not_applicable")
     expect(result.dbSubjectCounts["custom-subject"]).toBeUndefined()
@@ -200,16 +201,16 @@ describe("compareManifestWithDatabase", () => {
   it("status mismatch + subject mismatch on same node: only status mismatch", async () => {
     // Node has wrong status AND wrong subject — should only be in statusMismatchIds
     await mockCompareDeps(mockManifestCountResult({
-      totalExpected: 145, matchedCount: 144,
+      totalExpected: TOTAL_APPROVED_EXPECTED, matchedCount: 770,
       missingIds: [],
       statusMismatchIds: ["mn5"],
       subjectMismatchIds: [], // mn5 should NOT be here
-      matchedCountsBySubject: { math: 96, programming: 8, cs408: 40 }
+      matchedCountsBySubject: { math: 121, programming: 8, cs408: 160 }
     }))
     const result = await compareManifestWithDatabase()
-    expect(result.totalActual).toBe(144)
+    expect(result.totalActual).toBe(770)
     // The mock already reflects mutual exclusivity — verify the contract holds
-    expect(result.totalExpected).toBe(145)
+    expect(result.totalExpected).toBe(TOTAL_APPROVED_EXPECTED)
   })
 })
 

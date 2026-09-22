@@ -258,16 +258,16 @@ export interface ContentSourceMetadata {
 
 ### 11.2 运行时隔离契约
 
-**发布基线（2026-07-27）**：
+**发布基线（2026-09-11）**：
 
 | 口径 | Pack 数 | 知识节点 | 题目 |
 |------|---------|----------|------|
-| **正式（approved）** | 11 | 145 | 123 |
-| **待审核（draft）** | 40 | 631 | 643 |
-| **总计** | 51 | 776 | 766 |
+| **正式（approved）** | 51 | 773 | 764 |
+| **待审核（draft）** | 1 | 5 | 4 |
+| **总计** | 52 | 778 | 768 |
 
-- 正式 Pack：`math-limits`、已审核的 8 个数学 Pack、`python-basics` 与 `cs408-computer-networks`
-- 其余 40 Pack 均为 draft，不进入默认检索、不计入正式统计
+- 正式 Pack：51 个审核通过的 Pack（详见 `docs/knowledge-review/2026-09-11-approved-pack-promotion.md` 及 `docs/knowledge-review/2026-09-11-civil-common-sense-scope-promotion.md`）
+- 待审核 Pack：仅 `civil-common-sense`（行测常识判断事实包，5 节点 / 4 题），不进入默认检索、不计入正式统计
 
 **隔离规则**：
 
@@ -280,6 +280,59 @@ export interface ContentSourceMetadata {
 7. **不自动删除 draft 数据**：现有数据库中的 draft 节点不会被自动删除。
 8. **localStorage 迁移**：旧格式（v1）中存储的 draft Pack ID 在迁移时被丢弃，不视为用户在新契约下的显式授权。
 9. **Approved 内容完整性门禁**：`packValidator` 对 approved seed 的所有用户可见字符串执行保守的公式完整性检查，拦截连续反斜杠、数字被拆进分式、行内公式花括号不配对和分式括号跨边界。draft 不因该检查自动获得批准；迁移为 approved 后门禁立即生效。
+
+## 11.3 审核授权契约（2026-09-19 补）
+
+本节回答一个此前未定义的问题：**§4.3 要求的"审核者"可以是受委托的自动化审查吗，包级 `approved` 到底认证了什么。**
+
+### 11.3.1 两级状态是两个不同的轴
+
+| 轴 | 载体 | 取值 | 含义 |
+|----|------|------|------|
+| **包级发布状态** | seed JSON 顶层 `status`、`PACK_MANIFEST.status` | `draft` / `approved` | 是否通过**发布门禁**，可进入默认 Seed / Embedding / 检索 |
+| **条目级事实复核** | 节点与题目内的 `reviewStatus`、`source.sourceType`、`source.note` | `draft` / `ai_draft` / 已复核 | 该条内容的**学科事实准确性**是否已被具领域知识的复核人确认 |
+
+**两轴独立。包级 `approved` 不蕴含条目级事实复核已完成。** 因此一个 pack 可以同时出现
+"顶层 `status: approved`" 与 "每条 `reviewStatus: draft`、`sourceType: ai_draft`、note 写着待人工复核"，
+这不是数据不一致，而是两类审核分别处于不同状态。**不得**为了让两者看起来一致而批量改写条目级字段。
+
+### 11.3.2 负责人可授权的代理审核及其边界
+
+项目负责人可以把审核工作委托给自动化门禁与 AI 代理执行。此类委托审核**必须**在晋升记录开头声明性质，
+措辞与 `docs/knowledge-review/2026-09-11-approved-pack-promotion.md:4` 一致：
+
+> 审查性质：负责人授权的代理内容审核（非外部独立学科专家认证）
+
+**代理审核可以认证**（这些是可判定、可回归的）：
+
+1. 公式可渲染：`katexRenderGate` 严格模式，零警告零抛错。
+2. 结构完整：`packValidator` 的 approved 高压线（连续反斜杠、数字被拆进分式、花括号/括号跨边界）。
+3. 数据一致：`dataIntegrity`、`manifestCountVerification`，manifest 与 seed 的 status 和计数相符。
+4. 来源标注齐备：每个节点与题目都有 `source` 的 title / license / sourceType / note，且 `license`
+   取值落在 §7 枚举内；`unknown` 不得 approved。
+5. 版权边界：内容为原创或明确开放授权，未复制商业教材、培训机构讲义、题库原文。
+
+**代理审核不能认证**（这些必须由具领域知识的人完成，代理审核无权代签）：
+
+1. 学科事实正确性——定义、定理、公式适用条件、史实、法条、政策表述是否准确。
+2. 题目答案与解析的学术正确性，以及干扰项的教学合理性。
+3. 时效性内容（时政、法律修订、考纲变化）的当前有效性。
+4. 是否符合外部专家认证或机构审定的要求。
+
+### 11.3.3 对表述的限制
+
+因为 11.3.2 后半部分尚未系统完成，对外文档与论文中：
+
+- **可以写**："通过 KaTeX 严格渲染门禁与包完整性校验""项目负责人授权的内容审核""原创撰写，逐条记录来源与许可"。
+- **不得写**："经人工审核""经学科专家审核""内容准确性已复核"这类会让读者认为完成了 11.3.2 后半部分的表述。
+- 若某 pack 的条目级事实复核确已完成，须把该条的 `reviewStatus` 与 `source.note` 更新为记录
+  **审核人、日期、结论**（§4.3 与 `docs/civil-service-governance.md:170` 的要求），逐条生效，不做批量。
+
+### 11.3.4 晋升记录必须入库
+
+晋升记录是 catalog 可复现性的唯一依据，**不得只存在于未跟踪文件**。任何把 pack 从 `draft` 改为
+`approved` 的变更，其对应记录必须与 seed、`PACK_MANIFEST` 在**同一提交**内，否则仓库的
+approved catalog 无法从版本库重建。
 
 ## 12. 孤立节点清理规则
 

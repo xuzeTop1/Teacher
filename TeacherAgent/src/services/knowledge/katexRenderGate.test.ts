@@ -77,17 +77,59 @@ function renderFormula(formula: string, display: boolean): { ok: boolean; error?
   }
 }
 
-// The 9 audited packs
+// All 51 approved knowledge packs (excluding draft civil-common-sense)
 const AUDITED_PACKS = [
+  "civil-common-sense-scope",
+  "civil-data-analysis",
+  "civil-logic",
+  "civil-quant",
+  "civil-shenlun-argument",
+  "civil-shenlun-implementation",
+  "civil-shenlun-summary",
+  "civil-shenlun-writing",
+  "civil-verbal",
+  "cs408-computer-networks",
+  "cs408-computer-organization",
+  "cs408-data-structures",
+  "cs408-operating-systems",
+  "education-history",
+  "education-pedagogy",
+  "education-psychology",
+  "english-cloze",
+  "english-grammar",
+  "english-reading",
+  "english-translation",
+  "lawmaster-civil",
+  "lawmaster-criminal",
+  "lawmaster-jurisprudence",
+  "linear-algebra-basics",
+  "linear-algebra-expanded",
+  "management-logic",
+  "management-math",
+  "management-writing",
+  "math-applications-of-derivatives",
+  "math-definite-integrals",
   "math-derivatives",
   "math-indefinite-integrals",
-  "probability-distributions",
   "math-integral-applications",
-  "math-definite-integrals",
+  "math-limits",
   "math-mean-value-theorems",
   "math-multivariable-calculus",
-  "math-applications-of-derivatives",
-  "cs408-computer-networks",
+  "physics-electromagnetism",
+  "physics-mechanics",
+  "physics-modern",
+  "physics-thermodynamics",
+  "physics-waves-optics",
+  "politics-history",
+  "politics-maoism",
+  "politics-marxism",
+  "politics-morals",
+  "probability-basics",
+  "probability-distributions",
+  "psychology-developmental",
+  "psychology-experimental",
+  "psychology-general",
+  "python-basics",
 ]
 
 function getPackFiles(): Array<{ packId: string; filePath: string }> {
@@ -105,8 +147,8 @@ function getPackFiles(): Array<{ packId: string; filePath: string }> {
 describe("KaTeX rendering gate", () => {
   const packFiles = getPackFiles()
 
-  it("finds all 18 seed files (9 knowledge + 9 questions)", () => {
-    expect(packFiles.length).toBe(18)
+  it("finds all 102 seed files (51 knowledge + 51 questions)", () => {
+    expect(packFiles.length).toBe(102)
   })
 
   for (const { packId, filePath } of packFiles) {

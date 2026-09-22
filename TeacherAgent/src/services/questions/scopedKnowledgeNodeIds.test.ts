@@ -26,16 +26,16 @@ describe("collectApprovedKnowledgeNodeIdsForScope", () => {
 
   it("does not trust a draft Manifest pack even when its seed claims approved", () => {
     const forgedDraftSeed: QuestionSeed = {
-      __packId: "cs408-operating-systems",
-      subject: "cs408",
+      __packId: "civil-common-sense",
+      subject: "xingce",
       status: "approved",
       questions: [
         {
-          id: "q-os",
-          content: "操作系统题",
+          id: "q-cs",
+          content: "常识题",
           type: "concept_check",
           difficulty: 1,
-          knowledgeNodeIds: ["cs408-os-process"],
+          knowledgeNodeIds: ["civil-cs-process"],
           source: { title: "test", license: "original" }
         }
       ]
@@ -43,8 +43,8 @@ describe("collectApprovedKnowledgeNodeIdsForScope", () => {
 
     expect(
       collectApprovedKnowledgeNodeIdsFromSeeds([forgedDraftSeed], {
-        examTrackId: "408",
-        subjectId: "408.operating-systems",
+        examTrackId: "civil-xingce",
+        subjectId: "civil-xingce.common-sense",
         moduleId: null
       })
     ).toEqual([])

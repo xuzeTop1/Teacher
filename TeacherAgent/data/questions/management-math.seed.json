@@ -2,7 +2,7 @@
   "subject": "management",
   "course": "management-math",
   "chapter": "management-math",
-  "status": "draft",
+  "status": "approved",
   "questions": [
     {
       "id": "management-math-q-001",
@@ -43,7 +43,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "management-math-q-002",
@@ -84,7 +84,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "management-math-q-003",
@@ -125,7 +125,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "management-math-q-004",
@@ -134,9 +134,9 @@
       "difficulty": 2,
       "content": "用均值不等式求 $x+\\frac{1}{x} (x>0)$的最小值，最小值是多少？何时取到？",
       "options": null,
-      "answer": "$x>0$时 $x+\\frac{1}{x} \\ge 2\\\\sqrt{x\\cdot\\frac{1}{x}}=2$。",
+      "answer": "$x>0$时 $x+\\frac{1}{x} \\ge 2\\sqrt{x\\cdot\\frac{1}{x}}=2$。",
       "solutionSteps": [
-        "$x>0$时 $x+\\frac{1}{x} \\ge 2\\\\sqrt{x\\cdot\\frac{1}{x}}=2$。",
+        "$x>0$时 $x+\\frac{1}{x} \\ge 2\\sqrt{x\\cdot\\frac{1}{x}}=2$。",
         "取等当 x=1/x 即 x=1。",
         "故最小值为2，x=1取到。"
       ],
@@ -163,7 +163,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "management-math-q-005",
@@ -204,7 +204,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "management-math-q-006",
@@ -245,7 +245,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "management-math-q-007",
@@ -286,7 +286,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "management-math-q-008",
@@ -327,7 +327,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "management-math-q-009",
@@ -365,7 +365,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "management-math-q-010",
@@ -403,7 +403,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "management-math-q-011",
@@ -444,7 +444,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "management-math-q-012",
@@ -485,7 +485,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "management-math-q-013",
@@ -523,7 +523,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "management-math-q-014",
@@ -561,7 +561,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "management-math-q-015",
@@ -599,7 +599,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "management-math-q-016",
@@ -640,7 +640,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "management-math-q-017",
@@ -681,7 +681,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "management-math-q-018",
@@ -690,10 +690,10 @@
       "difficulty": 2,
       "content": "甲乙合作一工程需6天，甲单独需10天，乙单独需几天？",
       "options": null,
-      "answer": "合作效率$\\frac{1}{6}$，甲效率$\\frac{1}{1}0$。",
+      "answer": "合作效率$\\frac{1}{6}$，甲效率$\\frac{1}{10}$。",
       "solutionSteps": [
-        "合作效率$\\frac{1}{6}$，甲效率$\\frac{1}{1}0$。",
-        "乙效率$=\\frac{1}{6}-\\frac{1}{1}0=\\frac{1}{1}5$。",
+        "合作效率$\\frac{1}{6}$，甲效率$\\frac{1}{10}$。",
+        "乙效率$=\\frac{1}{6}-\\frac{1}{10}=\\frac{1}{15}$。",
         "故乙单独需15天。"
       ],
       "hints": [
@@ -719,7 +719,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "management-math-q-019",
@@ -757,7 +757,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "management-math-q-020",
@@ -798,7 +798,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
       },
-      "status": "draft"
+      "status": "approved"
     }
   ]
 }

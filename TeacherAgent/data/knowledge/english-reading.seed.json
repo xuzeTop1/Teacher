@@ -1,14 +1,14 @@
 {
   "subject": "english",
   "chapter": "english-reading",
-  "status": "draft",
+  "status": "approved",
   "nodes": [
     {
       "id": "eng-reading-001",
       "title": "作者态度题的标志词甄别",
       "content": "## 作者态度题解题方法\n\n### 常见提问方式\nWhat is the author's attitude toward...?\nThe author's view of... is most likely...\nWhich of the following best describes the author's attitude...\n\n### 态度词分类\n\n#### 1. 正向态度（支持、乐观、肯定）\n- positive 积极的\n- optimistic 乐观的\n- supportive 支持的\n- approving 赞成的\n- sympathetic 同情的\n- appreciative 欣赏的\n\n#### 2. 负向态度（反对、悲观、批评）\n- negative 消极的\n- pessimistic 悲观的\n- critical 批评的\n- doubtful 怀疑的\n- skeptical 怀疑的\n- ironic 讽刺的\n- disappointed 失望的\n\n#### 3. 客观中立（不偏不倚）\n- objective 客观的\n- neutral 中立的\n- impartial 公正的\n- detached 超然的\n\n#### 4. 迷惑选项（绝对不能选）\n- indifferent 漠不关心的\n- biased 有偏见的\n- puzzled 困惑的\n- subjective 主观的\n- confused 困惑的\n\n### 解题步骤\n1. 找标志词：注意形容词、副词、动词的褒贬义\n2. 看转折词：but, however, yet 后面常是真正态度\n3. 排除极端词：绝对化表述通常不是答案\n4. 结合全文：不要以偏概全\n\n## 示例\n题干问作者对GPS的态度，文中出现troubling, surveillance等负面词汇，答案是critical。",
       "difficulty": 2,
-      "status": "draft",
+      "status": "approved",
       "prerequisites": [],
       "socraticHints": [
         {
@@ -39,9 +39,9 @@
     {
       "id": "eng-reading-002",
       "title": "细节推理题的同义替换与正话反说",
-      "content": "##细节推理题解题方法###常见提问方式It can be $inferred$from the text that...Which of the following is $true$according to the text?The author implies that...\n\n###解题技巧#### 1.同义替换（最常见）-正确选项通常是原文的同义改写-关键词：同义词、近义词、词性转换示例：原文：The company increased its profits by 20%.选项：The company$'s$profits rose by $one-fifth.$（increased $\\to$rose$, 20% \\to one-fifth$）#### 2.正话反说-原文说$A$导致$B$，选项说如果不$A$就不$B\n-$原文说$B$很重要，选项说没有$B$就不行示例：原文：Without education,the country cannot progress.选项：Education is indispensable for national development.（正话反说：没有教育$\\to$教育不可或缺）#### 3.推理步骤1.定位原文（找关键词）2.理解原句意思3.对比选项（找同义替换或正话反说）4.排除干扰项###干扰项特征-以偏概全：用部分代替整体-偷换概念：看似相同，实则不同-过度推断：原文没说，选项说得太绝对-因果倒置：把原因当结果，或反之##示例题干中问可以推断什么，正确选项是对原文某句话的同义替换，注意识别同义词。",
+      "content": "##细节推理题解题方法###常见提问方式It can be inferredfrom the text that...Which of the following is trueaccording to the text?The author implies that...\n\n###解题技巧#### 1.同义替换（最常见）-正确选项通常是原文的同义改写-关键词：同义词、近义词、词性转换示例：原文：The company increased its profits by 20%.选项：The company'sprofits rose by one-fifth.（increased →rose, 20% → one-fifth）#### 2.正话反说-原文说A导致B，选项说如果不A就不B\n-原文说B很重要，选项说没有B就不行示例：原文：Without education,the country cannot progress.选项：Education is indispensable for national development.（正话反说：没有教育→教育不可或缺）#### 3.推理步骤1.定位原文（找关键词）2.理解原句意思3.对比选项（找同义替换或正话反说）4.排除干扰项###干扰项特征-以偏概全：用部分代替整体-偷换概念：看似相同，实则不同-过度推断：原文没说，选项说得太绝对-因果倒置：把原因当结果，或反之##示例题干中问可以推断什么，正确选项是对原文某句话的同义替换，注意识别同义词。",
       "difficulty": 2,
-      "status": "draft",
+      "status": "approved",
       "prerequisites": [
         "eng-reading-001"
       ],
@@ -60,7 +60,7 @@
         }
       ],
       "misconceptions": [
-        "定位时只搜关键词原形，忽略同义替换（如problem$\\to$issue$\\to$dilemma）",
+        "定位时只搜关键词原形，忽略同义替换（如problem→issue→dilemma）",
         "定位到句后不读完整句，看到关键词就选，忽略句内转折",
         "把题干关键词在选项里的字面重复当成正确答案，忽略paraphrase规则"
       ],
@@ -76,7 +76,7 @@
       "title": "主旨大意题的解题方法",
       "content": "## 主旨大意题解题方法\n\n### 常见提问方式\nWhat is the main idea of the text?\nThe text mainly discusses...\nWhich of the following best expresses the main idea of the passage?\n\n### 解题步骤\n\n#### 第一步：读首段+各段首句\n- 考研阅读首段必读，往往点明主旨\n- 各段首句串联等于文章骨架\n- 注意首段末句，常是thesis statement\n\n#### 第二步：找主题词复现\n- 主题词在全文中高频出现\n- 正确选项必然包含主题词或其同义词\n- 干扰项往往以偏概全，只覆盖某一段\n\n#### 第三步：排除干扰项\n- 范围过大，说得太宽泛\n- 范围过小，只讲某一段的细节\n- 无中生有，文中未提及\n\n### 注意事项\n- 不要被细节干扰，主旨题看全局\n- 标题类题目同理，选最全面概括全文的选项",
       "difficulty": 2,
-      "status": "draft",
+      "status": "approved",
       "prerequisites": [],
       "socraticHints": [
         {
@@ -109,7 +109,7 @@
       "title": "词义猜测题的解题技巧",
       "content": "## 词义猜测题解题技巧\n\n### 常见提问方式\nThe word X most probably means...\nWhich of the following is closest in meaning to X?\n\n### 解题方法\n\n#### 方法一：并列关系猜词\n- and, or, as well as 连接的两个词意思相近\n- 例：She is kind and benevolent.  benevolent等于kind\n\n#### 方法二：转折关系猜词\n- but, however, yet 后面常解释前面的难词\n- 例：He is not frugal; however, he is extravagant.  extravagant等于奢侈的\n\n#### 方法三：因果关系猜词\n- because, since, therefore 可推出词义\n- 例：He was so parsimonious that he never bought new clothes.  parsimonious等于吝啬的\n\n#### 方法四：举例关系猜词\n- for example, such as 后面是前面词的解释\n- 例：He loves aquatic sports, such as swimming.  aquatic等于水中的\n\n### 注意事项\n- 不要选你认识的那个意思，注意熟词生义\n- 必须结合上下文，不能脱离语境\n- 考研常考：address等于解决, climate等于风气, school等于学派",
       "difficulty": 2,
-      "status": "draft",
+      "status": "approved",
       "prerequisites": [],
       "socraticHints": [
         {
@@ -142,7 +142,7 @@
       "title": "推理判断题的解题方法与干扰项分析",
       "content": "## 推理判断题解题方法\n\n### 常见提问方式\nIt can be inferred from the text that...\nThe author implies that...\n\n### 推理题的本质\n- 答案通常不是原文直接说的，而是需要推一步\n- 但绝不能过度推断，这是最常见错误\n- 正确推理：原文信息加逻辑等于答案\n\n### 解题步骤\n\n#### 第一步：定位原文\n- 根据题干关键词找到原文相关句子\n- 推理题往往没有明确定位词，需要读全段\n\n#### 第二步：理解原句的字面意思\n- 先搞懂原文说了什么\n- 再想作者为什么这么说\n\n#### 第三步：识别正确推理方式\n1. 同义改写：原文说A，选项说与A意思相同的B\n2. 正话反说：原文说没有A就不行，选项说A很重要\n3. 部分推断：原文说有些人认为X，选项说X并非所有人都接受\n\n#### 第四步：排除干扰项\n- 过度推断：原文没说，选项说得太绝对\n- 以偏概全：用细节代替主旨\n- 无中生有：文中完全没提\n\n### 示例\n原文讲自动化导致失业，题干问可以推断什么。正确选项：某些行业受自动化影响更大。",
       "difficulty": 3,
-      "status": "draft",
+      "status": "approved",
       "prerequisites": [
         "eng-reading-002"
       ],
@@ -177,7 +177,7 @@
       "title": "观点态度题的解题步骤与易错点",
       "content": "## 观点态度题解题步骤\n\n### 注意区分\n- 作者态度题：问作者本人的观点，看全文评价性词汇\n- 观点态度题：问某人的观点，定位到该人出现的段落\n\n### 解题步骤\n\n#### 第一步：区分谁的观点\n- 题干中是人名，定位到该人所在段落\n- 题干中是the author，看全文\n\n#### 第二步：找评价性词汇\n- 形容词、副词最能体现态度\n- 正向：positive, optimistic, supportive, approving\n- 负向：negative, pessimistic, critical, skeptical\n- 中立：objective, neutral, impartial\n\n#### 第三步：注意转折词\n- but, however, yet 后面常是真正态度\n- 例：Some people think X. But the author argues Y. 作者态度是Y\n\n#### 第四步：排除迷惑选项\n- indifferent：作者写文章就不可能漠不关心\n- biased：如果作者有偏见，文章就不客观\n- puzzled：作者写文章是为了说明问题，不会困惑\n\n### 示例\n题干问作者对GPS的态度，文中出现troubling, surveillance等负面词，答案是critical。",
       "difficulty": 3,
-      "status": "draft",
+      "status": "approved",
       "prerequisites": [
         "eng-reading-001"
       ],
@@ -212,7 +212,7 @@
       "title": "文章结构题与段落作用题解题方法",
       "content": "## 文章结构题解题方法\n\n### 常见提问方式\nWhich of the following best describes the organization of the passage?\nThe purpose of the third paragraph is to...\n\n### 文章常见结构\n\n#### 1. 问题-解决型\n- 第一段：提出问题\n- 中间段：分析原因或列举解决方案\n- 末段：评价方案或展望未来\n\n#### 2. 现象-解释型\n- 第一段：描述现象\n- 中间段：解释原因或分析影响\n- 末段：总结或提出建议\n\n#### 3. 对立观点型\n- 第一段：引入话题，提及传统观点\n- 第二段：提出作者观点，常由however引出\n- 后续段落：论证作者观点\n\n### 段落作用题\n- 首段：引入话题或提出论点\n- 中间段：支持论点、举例论证或反驳对立观点\n- 末段：总结全文、提出建议或展望未来\n\n### 解题技巧\n- 读各段首句，画出文章结构图\n- 注意转折词出现的位置",
       "difficulty": 3,
-      "status": "draft",
+      "status": "approved",
       "prerequisites": [
         "eng-reading-003"
       ],
@@ -247,7 +247,7 @@
       "title": "例证题的解题技巧",
       "content": "## 例证题解题技巧\n\n### 常见提问方式\nThe example of X is mentioned to show...\nWhy does the author mention X in Paragraph Y?\n\n### 核心原则\n例子本身不重要，例子所支持的观点才重要！\n\n### 解题步骤\n\n#### 第一步：找到例子在哪一段\n- 题干中会告诉你段落\n- 或者直接找例子关键词\n\n#### 第二步：读例子的前一句\n- 英语写作逻辑：观点在前，例子在后\n- 90%的情况下，答案在例子的前一句\n\n#### 第三步：把前一句的意思同义改写到选项\n- 正确选项是对观点的同义替换\n- 不要选例子本身的细节\n\n### 干扰项特征\n- 描述例子本身的细节，以偏概全\n- 与例子无关的其他观点\n- 过度推断\n\n### 示例\n文中举了某公司的例子，问为什么要举这个例子。答案在例子前一句：为了说明企业社会责任的重要性。\n\n### 注意事项\n- 如果例子在首段，可能是为了引入话题\n- 如果例子在末段，可能是为了总结全文",
       "difficulty": 2,
-      "status": "draft",
+      "status": "approved",
       "prerequisites": [],
       "socraticHints": [
         {
@@ -280,7 +280,7 @@
       "title": "句子简化题与插入题解题方法",
       "content": "## 句子简化题与插入题解题方法\n\n### 句子简化题\n\n#### 常见提问方式\nWhich of the following best expresses the essential information in the sentence?\n\n#### 解题步骤\n1. 读原句，找出核心意思，主谓宾\n2. 找出修饰成分，定语从句、状语从句等\n3. 对比选项：正确选项保留核心意思，省略修饰\n\n### 插入题\n\n#### 常见提问方式\nLook at the four squares in the passage. Where would the following sentence best fit?\n\n#### 解题步骤\n\n**第一步：分析要插入的句子**\n- 找逻辑词：however, therefore, for example\n- 找代词：this, these, he, it，指代前面内容\n- 找并列：also, in addition，前面应有同类内容\n\n**第二步：看四个位置的前后文**\n- 插入句有however，前面必须是相反意思\n- 插入句有this加名词，前面必须提到过这个名词\n- 插入句有for example，前面必须有观点句\n\n**第三步：验证逻辑连贯性**\n- 插入后，段落意思是否连贯\n- 插入句的下一句是否与之衔接",
       "difficulty": 3,
-      "status": "draft",
+      "status": "approved",
       "prerequisites": [],
       "socraticHints": [
         {
@@ -313,7 +313,7 @@
       "title": "段落主旨题与局部大意题解题方法",
       "content": "## 段落主旨题解题方法\n\n### 常见提问方式\nWhich of the following best summarizes Paragraph X?\nThe main idea of Paragraph Y is...\n\n### 解题步骤\n\n#### 第一步：读段落首句加末句\n- 首句：往往点明本段主旨\n- 末句：往往是总结或过渡\n- 如果首句是转折句，主旨可能在转折后\n\n#### 第二步：注意段落中的例子\n- 例子本身不是主旨\n- 例子前面的观点才是主旨\n- 如果整段都是例子，看上一段末句或本段首句\n\n#### 第三步：概括段落核心意思\n- 用一句话概括：这段在说什么\n- 正确选项应该覆盖整段，而非某个细节\n\n### 干扰项特征\n- 以偏概全：只讲段落中的某个细节\n- 无中生有：文中没提\n- 与段落意思相反\n\n### 注意事项\n- 段落主旨题不等于全文主旨题\n- 段落主旨只需要覆盖本段，不需要覆盖全文",
       "difficulty": 2,
-      "status": "draft",
+      "status": "approved",
       "prerequisites": [
         "eng-reading-003"
       ],
@@ -348,7 +348,7 @@
       "title": "作者目的题与写作意图题解题方法",
       "content": "## 作者目的题解题方法\n\n### 常见提问方式\nThe author writes this passage to...\nThe purpose of the text is to...\nWhy does the author mention X?\n\n### 区分三种目的\n\n#### 1. 写作目的（整体）\n- 作者写整篇文章是为了什么\n- 常见目的：to inform（告知）, to persuade（说服）, to criticize（批评）, to propose（建议）\n\n#### 2. 段落目的（局部）\n- 某一段的写作目的是什么\n- 常见目的：to support the thesis（支持论点）, to provide examples（举例）, to refute opposing views（反驳对立观点）\n\n#### 3. 例子目的（局部）\n- 某个例子是为了说明什么\n- 答案：例子前面的观点\n\n### 解题步骤\n\n#### 第一步：判断是问整体目的还是局部目的\n- 整体目的，看全文结构\n- 局部目的，看该段或该例子的前后文\n\n#### 第二步：找作者的态度词\n- 如果作者用批评性词汇，目的是to criticize\n- 如果作者提建议，目的是to propose solutions\n- 如果作者只是描述现象，目的是to inform\n\n#### 第三步：排除干扰项\n- 目的不能是to prove（证明），因为议论文不能用数学证明\n- 目的不能是to entertain（娱乐），考研阅读不是娱乐文章\n\n### 示例\n文章讲最高法院关于死刑的判决，作者态度是批评的，写作目的是to criticize the court's decision。",
       "difficulty": 3,
-      "status": "draft",
+      "status": "approved",
       "prerequisites": [
         "eng-reading-001",
         "eng-reading-007"
@@ -384,7 +384,7 @@
       "title": "比较对比题与因果关系题解题方法",
       "content": "## 比较对比题与因果关系题解题方法\n\n### 比较对比题\n\n#### 常见提问方式\nWhich of the following is true about X and Y?\nHow does X differ from Y?\nThe author compares X with Y in order to...\n\n#### 解题步骤\n1. 找到X和Y分别在文中出现的位置\n2. 读X和Y的相关句子，找出相同点和不同点\n3. 对比选项：\n   - 正确选项：准确描述X和Y的关系\n   - 错误选项：混淆X和Y，或无中生有\n\n#### 注意事项\n- 比较对比题常出现在对立观点型文章中\n- 注意：作者往往支持其中一个观点\n\n### 因果关系题\n\n#### 常见提问方式\nWhy does X happen?\nWhat is the reason for Y?\nThe author attributes Z to...\n\n#### 解题步骤\n1. 找到结果（题干中的X或Y）\n2. 在结果前面找原因（英语写作：原因在前，结果在后）\n3. 注意因果标志词：because, since, as, due to, lead to, result in, contribute to\n\n#### 干扰项特征\n- 因果倒置：把结果当原因\n- 相关当因果：A和B同时出现，但不一定是因果关系\n- 无中生有：文中没提的原因\n\n### 示例\n题干问为什么某现象发生，文中用because引出原因，正确选项是对原因的同义替换。",
       "difficulty": 2,
-      "status": "draft",
+      "status": "approved",
       "prerequisites": [
         "eng-reading-002"
       ],
@@ -419,7 +419,7 @@
       "title": "负面态度词与迷惑选项的深度辨析",
       "content": "## 负面态度词与迷惑选项辨析\n\n### 常见负面态度词（可能正确）\n- critical 批评的\n- doubtful 怀疑的\n- skeptical 怀疑的\n- pessimistic 悲观的\n- disappointed 失望的\n- ironic 讽刺的\n- objectionable 令人反感的\n- opposed 反对的\n\n### 绝对不能选的态度词（迷惑选项）\n- indifferent：作者写文章就不可能漠不关心\n- biased：如果作者有偏见，文章就不客观，不能选\n- puzzled or confused：作者写文章是为了说明问题，不会困惑\n- subjective：考研阅读要求客观，不能选subjective\n- neutral：如果文章有明显倾向，不能选neutral\n\n### 如何判断作者态度是负面还是正面\n\n#### 找评价性词汇\n- 负面词：troubling, harmful, threat, crisis, disaster, failure\n- 正面词：beneficial, successful, improvement, progress, advantage\n\n#### 看作者是否提出解决方案\n- 如果作者只提问题，不提解决方案，负面态度（批评）\n- 如果作者提问题，也提解决方案，正面态度（建设性）\n\n### 注意事项\n- 态度题选最精确的词，而不是最强烈的词\n- 如果文章既有正面又有负面，看末段（末段常是总结）",
       "difficulty": 3,
-      "status": "draft",
+      "status": "approved",
       "prerequisites": [
         "eng-reading-001",
         "eng-reading-006"
@@ -455,7 +455,7 @@
       "title": "阅读中的长难句分析技巧（找主干、剥修饰）",
       "content": "## 长难句分析技巧\n\n### 为什么阅读要看长难句\n- 考研阅读难点：句子长、结构复杂\n- 长难句往往包含作者核心观点\n- 题目常针对长难句提问（细节题、推理题）\n\n### 分析长难句的三步法\n\n#### 第一步：找谓语动词（主干）\n- 谓语动词是句子的核心\n- 一个句子只有一个主干谓语（从句除外）\n- 找谓语的方法：\n  1. 看动词前是否有主语（名词或代词）\n  2. 排除非谓语动词（to do, doing, done）\n  3. 排除情态动词后面的动词原形（是谓语的一部分）\n\n#### 第二步：找连接词（从句标志）\n- 定语从句：which, that, who, whom, whose, where, when\n- 状语从句：because, if, when, while, although, since\n- 名词性从句：what, that, whether, how\n\n#### 第三步：剥修饰成分（把修饰语暂时去掉）\n- 介词短语：of, in, on, for等\n- 分词短语：doing, done等\n- 插入语：两个逗号之间的内容\n\n### 示例分析\n原句：The study, which was conducted by researchers from Harvard University, found that people who sleep less are more likely to develop diseases.\n分析：\n1. 主干：The study found that...\n2. 定语从句1：which was conducted...（修饰study）\n3. 宾语从句：that people... are more likely to...\n4. 定语从句2：who sleep less（修饰people）\n\n### 注意事项\n- 长难句不用每个词都懂，懂主干意思即可\n- 如果长难句看不懂，先找主干，再猜修饰",
       "difficulty": 3,
-      "status": "draft",
+      "status": "approved",
       "prerequisites": [
         "eng-reading-002"
       ],
@@ -490,7 +490,7 @@
       "title": "细节题的解题步骤与干扰项特征",
       "content": "## 细节题解题步骤\n\n### 常见提问方式\nAccording to the text, which of the following is true?\nWhat does the author say about X?\nWhich of the following is mentioned in the text?\n\n### 解题步骤\n\n#### 第一步：定位（找关键词）\n- 题干中的专有名词、数字、大写字母都是定位词\n- 如果题干没有定位词，读选项，找选项中的关键词去定位\n\n#### 第二步：精读定位句加上下句\n- 答案往往在定位句本身\n- 但也可能在上下句（需要理解上下文）\n\n#### 第三步：对比选项（找同义替换）\n- 正确选项：原文的同义替换（最常见）\n- 正确选项：原文的正话反说（较少见）\n\n#### 第四步：排除干扰项\n\n**干扰项特征**：\n1. 以偏概全：用部分代替整体，用细节代替主旨\n2. 偷换概念：看似相同，实则不同\n3. 过度推断：原文没说，选项说得太绝对\n4. 因果倒置：把原因当结果，或反之\n5. 无中生有：文中完全没提\n6. 相反信息：与原文意思相反\n\n### 示例\n题干问关于某公司的哪个说法正确，定位到相关段落，正确选项是对原文某句话的同义替换。\n\n### 注意事项\n- 细节题占比最大（约40%），必须拿高分\n- 定位是关键，定位错了，后面都错",
       "difficulty": 2,
-      "status": "draft",
+      "status": "approved",
       "prerequisites": [],
       "socraticHints": [
         {
@@ -507,7 +507,7 @@
         }
       ],
       "misconceptions": [
-        "定位时只搜关键词原形，忽略同义替换（如problem$\\to$issue$\\to$dilemma）",
+        "定位时只搜关键词原形，忽略同义替换（如problem→issue→dilemma）",
         "定位到句后不读完整句，看到关键词就选，忽略句内转折",
         "把题干关键词在选项里的字面重复当成正确答案，忽略paraphrase规则"
       ],
@@ -523,7 +523,7 @@
       "title": "阅读中的指代关系题解题方法（it/they/this/that）",
       "content": "## 指代关系题解题方法\n\n### 常见提问方式\nThe word it refers to...\nWhat does they mean in the context?\nThe phrase this trend refers to...\n\n### 解题步骤\n\n#### 第一步：找到指代词在文中的位置\n- 注意：指代词往往在后面（回指前面的内容）\n\n#### 第二步：往前找先行词\n- 单数it：指代前面最近的单数名词（或不可数名词）\n- 复数they：指代前面最近的复数名词\n- this or that加名词：指代前面提到的整个事件或现象\n\n#### 第三步：验证一致性\n- 数的一致：单数指代单数，复数指代复数\n- 性的一致：he指代男性，she指代女性\n- 逻辑的一致：把先行词代入，看是否通顺\n\n### 特殊情况\n\n#### 1. 指代整个句子\n- this, that, which 可以指代前面整个句子的意思\n- 例：He failed the exam. This made his parents angry.  This指代他考试不及格这件事\n\n#### 2. 泛指代词\n- you（你或你们）：泛指一个人\n- one（一个人）：泛指\n- they（他们或人们）：泛指人们\n\n### 干扰项特征\n- 距离太远：先行词离指代词太远，不可能是正确答案\n- 数不一致：单数指代复数，或反之\n- 逻辑不通：代入后意思不通顺",
       "difficulty": 2,
-      "status": "draft",
+      "status": "approved",
       "prerequisites": [
         "eng-reading-004"
       ],
@@ -558,7 +558,7 @@
       "title": "阅读速度提升与跳读略读技巧",
       "content": "## 阅读速度提升技巧\n\n### 考研阅读的时间分配\n- 总时间：英语一180分钟，阅读占75到80分钟（4篇乘以18到20分钟）\n- 英语二180分钟，阅读占70分钟（4篇乘以17到18分钟）\n- 每篇文章建议：15到20分钟\n\n### 跳读（Skimming）技巧\n\n#### 目的：快速把握文章主旨\n#### 方法：\n1. 读首段（必读）\n2. 读各段首句（必读）\n3. 读末段（必读）\n4. 跳过：例子、数据、引用（除非题目问到）\n\n### 略读（Scanning）技巧\n\n#### 目的：快速找到特定信息\n#### 方法：\n1. 先看题干，找定位词（专有名词、数字、大写字母）\n2. 回到原文，快速扫描定位词\n3. 找到定位词后，精读定位句加上下句\n\n### 精读（Intensive Reading）技巧\n\n#### 目的：理解长难句和核心观点\n#### 方法：\n1. 找主干（主谓宾）\n2. 分析从句\n3. 理解修饰成分\n\n### 时间不够时的应急策略\n- 先做细节题（好定位，好得分）\n- 后做主旨题和结构题（需要读完全文）\n- 如果遇到完全看不懂的文章，先读题目，再回原文找关键词\n\n### 注意事项\n- 不要逐字逐句读，要抓重点\n- 例子、数据、引用可以跳过，除非题目问到\n- 平时练习要计时，培养时间感",
       "difficulty": 1,
-      "status": "draft",
+      "status": "approved",
       "prerequisites": [
         "eng-reading-003"
       ],
@@ -593,7 +593,7 @@
       "title": "阅读文章的学科背景知识与词汇积累",
       "content": "## 阅读学科背景知识\n\n### 考研阅读常见学科\n\n#### 1. 社会科学（最高频）\n- 社会学：社会阶层、教育公平、家庭结构\n- 心理学：行为心理学、认知心理学\n- 经济学：市场竞争、政府调控、消费者行为\n\n#### 2. 自然科学\n- 生物学：进化论、基因工程、生态保护\n- 医学：公共卫生、疾病防控、医疗改革\n- 环境科学：气候变化、可持续发展\n\n#### 3. 人文艺术\n- 文学评论（较少）\n- 历史文化（较少）\n\n### 各学科常见词汇\n\n#### 社会科学高频词\n- society, social class, inequality, discrimination, policy, reform, government, regulation, market, economy, consumer, demand, supply\n\n#### 自然科学高频词\n- research, study, experiment, data, evidence, theory, hypothesis, result, conclusion, scientist, discover, prove\n\n#### 批判类高频词（常表作者态度）\n- problem, issue, challenge, threat, harmful, crisis, fail, difficulty, criticize, doubt, question\n\n### 背景知识如何帮助解题\n- 如果你知道文章在讲什么话题，理解会更快\n- 但注意：不能依赖背景知识答题，必须基于原文\n- 背景知识只是辅助理解，不能代替原文\n\n### 词汇积累方法\n1. 做完练习后，整理生词（按学科分类）\n2. 重点记：动词、形容词、副词\n3. 重点记：熟词生义（address, climate, school等）",
       "difficulty": 1,
-      "status": "draft",
+      "status": "approved",
       "prerequisites": [],
       "socraticHints": [
         {
@@ -626,7 +626,7 @@
       "title": "选项对比法与排除法解题技巧",
       "content": "## 选项对比法与排除法\n\n### 什么情况下用排除法\n- 正面选择（直接选正确答案）困难时\n- 选项意思相近，难以区分时\n- 时间紧张，需要快速解题时\n\n### 排除法的步骤\n\n#### 第一步：读完全部四个选项\n- 不要看到一个看似正确的就选\n- 要对比四个选项，找最好的\n\n#### 第二步：逐个排除错误选项\n- 绝对化词（must, all, never, only）往往是错的\n- 比较级最高级（best, most, first）需要文中明确比较\n- 因果倒置，排除\n- 无中生有，排除\n- 以偏概全，排除\n\n#### 第三步：在剩下的选项中选最好的\n- 如果有2个选项剩下，对比哪个更准确\n- 注意：正确选项往往比较平淡，不极端\n\n### 选项对比法\n\n#### 当两个选项意思相近时：\n1. 看哪个覆盖范围更广（主旨题）\n2. 看哪个更符合原文细节（细节题）\n3. 看哪个有原文支持（不能凭感觉）\n\n#### 当两个选项意思相反时：\n1. 其中一个必对（考研阅读很少有两个正确选项）\n2. 回到原文，找证据支持哪一个\n\n### 注意事项\n- 排除法不是猜，而是有理有据地排除\n- 如果排除了3个，剩下的那个必须选（即使你不确定）\n- 平时练习要多用排除法，培养找错的直觉",
       "difficulty": 2,
-      "status": "draft",
+      "status": "approved",
       "prerequisites": [
         "eng-reading-002",
         "eng-reading-015"
@@ -662,7 +662,7 @@
       "title": "阅读理解综合训练与错题分析方法",
       "content": "## 阅读理解综合训练方法\n\n### 训练计划\n\n#### 第一阶段：分题型训练（基础）\n- 每周专攻一个题型（如这周只做细节题）\n- 目标：掌握该题型的答题技巧\n- 时间：2到3周\n\n#### 第二阶段：按文章训练（提高）\n- 每天做1到2篇完整文章（4题）\n- 目标：提高阅读速度和理解能力\n- 时间：4到6周\n\n#### 第三阶段：整套训练（冲刺）\n- 每周做2到3套完整阅读（4篇乘以4题等于16题）\n- 目标：适应考试节奏，提高正确率\n- 时间：考前4周\n\n### 错题分析方法\n\n#### 第一步：找出错题\n- 用红笔标出错题\n- 统计各题型错误数量（哪些题型是弱项）\n\n#### 第二步：分析错误原因\n- 定位错误：没有找到原文相关句子\n- 理解错误：找到了句子，但理解错了\n- 选项错误：理解了句子，但选错了选项\n- 词汇错误：因为生词太多，看不懂\n\n#### 第三步：对症下药\n- 定位错误，多练略读\n- 理解错误，多分析长难句\n- 选项错误，多练排除法\n- 词汇错误，多背单词\n\n### 做题后的整理\n1. 整理生词（按学科分类）\n2. 整理长难句（分析结构）\n3. 整理错题（写明错误原因和正确思路）\n\n### 注意事项\n- 不要只刷题不总结，总结比刷题更重要\n- 不要追求速度而牺牲正确率，先保证正确率，再提高速度",
       "difficulty": 2,
-      "status": "draft",
+      "status": "approved",
       "prerequisites": [
         "eng-reading-001",
         "eng-reading-002",

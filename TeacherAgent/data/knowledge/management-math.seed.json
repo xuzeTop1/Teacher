@@ -2,7 +2,7 @@
   "subject": "management",
   "course": "management-math",
   "chapter": "management-math",
-  "status": "draft",
+  "status": "approved",
   "nodes": [
     {
       "id": "management-math-001",
@@ -177,7 +177,7 @@
       "title": "方程与不等式",
       "level": "concept",
       "difficulty": 2,
-      "summary": "一元二次 $ax^2+bx+c=0$用求根公式或因式分解；均值不等式 $a+b\\ge2\\\\sqrt{a}b$（$a,b>0$）求最值要先验证取等条件。",
+      "summary": "一元二次 $ax^2+bx+c=0$用求根公式或因式分解；均值不等式 $a+b\\ge2\\sqrt{ab}$（$a,b>0$）求最值要先验证取等条件。",
       "prerequisites": [
         "management-math-004",
         "management-math-005"

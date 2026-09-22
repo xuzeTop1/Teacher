@@ -2,7 +2,7 @@
   "subject": "physics",
   "course": "大学物理",
   "chapter": "电磁学",
-  "status": "draft",
+  "status": "approved",
   "nodes": [
     {
       "id": "physics-em-coulomb",
@@ -182,7 +182,7 @@
         "电容定义：C=Q/U",
         "平行板电容器：$C=\\varepsilon_0\\frac{S}{d}$",
         "电容器串联与并联",
-        "电容器的储能：$W=½CU^2$",
+        "电容器的储能：$W = \\frac{1}{2}CU^2$",
         "电介质对电容的影响"
       ],
       "misconceptions": [

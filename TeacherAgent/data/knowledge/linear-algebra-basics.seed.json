@@ -1,7 +1,7 @@
 {
   "subject": "math",
   "course": "linear_algebra",
-  "status": "draft",
+  "status": "approved",
   "nodes": [
     {
       "id": "la-matrix-definition",
@@ -106,7 +106,7 @@
     {
       "id": "la-determinant-2x2",
       "title": "二阶行列式",
-      "summary": "$2\\times2$行列式 $\\begin{vmatrix} a & b \\\\\\ c & d \\end{vmatrix} =$ad -bc。行列式是一个数，不是矩阵。",
+      "summary": "$2\\times2$行列式 $\\det([a, b; c, d]) =$ad -bc。行列式是一个数，不是矩阵。",
       "level": "concept",
       "difficulty": 1,
       "prerequisites": [

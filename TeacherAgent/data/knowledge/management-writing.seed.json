@@ -2,7 +2,7 @@
   "subject": "management",
   "course": "management-writing",
   "chapter": "management-writing",
-  "status": "draft",
+  "status": "approved",
   "nodes": [
     {
       "id": "management-writing-001",
@@ -483,7 +483,7 @@
       "title": "卷面与字数",
       "level": "concept",
       "difficulty": 1,
-      "summary": "两篇均有字数下限（约$60\\frac{0}{7}00$），不足扣分；卷面整洁、分段清晰影响阅卷印象。",
+      "summary": "两篇均有字数下限（约600~700），不足扣分；卷面整洁、分段清晰影响阅卷印象。",
       "prerequisites": [
         "management-writing-001"
       ],
