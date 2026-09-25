@@ -2,7 +2,7 @@
 
 [中文](README.md) | **English**
 
-A privacy-first multi-device system for individual learners: the desktop app **TeacherAgent** handles knowledge management and intelligent tutoring, the Android app **AlertTime** handles learning-behavior capture and on-device analysis, and the two ends form a "collect → assess → suggest → decision feedback" loop over a purpose-built LAN sync protocol.
+A privacy-first, local-first AI learning companion spanning desktop and Android. **TeacherAgent** provides private-document RAG, knowledge management, and intelligent tutoring, while **AlertTime** captures learning behavior and performs on-device analysis; the two coordinate over a local-network sync protocol.
 
 ## Privacy Constraints
 
