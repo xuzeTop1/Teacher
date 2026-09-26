@@ -2,7 +2,7 @@
   "subject": "lawmaster",
   "course": "lawmaster-civil",
   "chapter": "lawmaster-civil",
-  "status": "draft",
+  "status": "approved",
   "nodes": [
     {
       "id": "lawmaster-civil-001",
@@ -109,7 +109,7 @@
       "title": "自然人：权利能力与行为能力",
       "level": "concept",
       "difficulty": 2,
-      "summary": "自然人自出生享有权利能力；行为能力分完全（$1\\frac{8}{1}6$以上以劳动收入为主）、限制（$8-18$）、无（不满8）三类。",
+      "summary": "自然人自出生享有权利能力；行为能力分完全（16~18周岁以劳动收入为主）、限制（$8-18$）、无（不满8）三类。",
       "prerequisites": [
         "lawmaster-civil-003"
       ],

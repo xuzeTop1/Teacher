@@ -1,7 +1,7 @@
 {
   "subject": "english",
   "chapter": "english-cloze",
-  "status": "draft",
+  "status": "approved",
   "questions": [
     {
       "id": "eng-cloze-q-001",
@@ -21,7 +21,7 @@
         },
         {
           "level": "L2",
-          "text": "年轻 $\\to$聪明，这是转折关系"
+          "text": "年轻 →聪明，这是转折关系"
         },
         {
           "level": "L3",
@@ -37,7 +37,7 @@
         "sourceType": "practice",
         "note": "基于完形填空练习设计，考查逻辑连词辨析。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "读前句'He is young'和后句'he is smart'，判断逻辑关系：年轻和聪明是相反特征，应为转折关系。",
         "转折关系用but/however，因果关系用so/because，并列关系用and。",
@@ -79,7 +79,7 @@
         "sourceType": "practice",
         "note": "基于完形填空练习设计，考查熟词生义。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "先想address常见意思'地址'，代入'the problem'不通顺，排除常见意思。",
         "考虑address生义'解决'，address the problem=解决问题，符合语境。",
@@ -121,7 +121,7 @@
         "sourceType": "practice",
         "note": "基于完形填空练习设计，考查动词短语搭配辨析。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "动词短语give up=放弃，take up=占据/开始，look up=查阅，put up=张贴/建造。",
         "smoking与give up搭配：give up smoking=戒烟，符合语境。",
@@ -147,7 +147,7 @@
         },
         {
           "level": "L2",
-          "text": "年轻 $\\to$聪明，这是转折关系"
+          "text": "年轻 →聪明，这是转折关系"
         },
         {
           "level": "L3",
@@ -163,7 +163,7 @@
         "sourceType": "practice",
         "note": "基于完形填空练习设计，考查句际关系推断。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "前句'He is young'和后句'he is smart'是转折关系（年轻通常被认为不成熟，但他聪明）。",
         "However表转折，Therefore表因果，Moreover表递进，Although是连词（不单独用）。",
@@ -189,7 +189,7 @@
         },
         {
           "level": "L2",
-          "text": "helpsothers $\\to$kind，同义复现"
+          "text": "helpsothers →kind，同义复现"
         },
         {
           "level": "L3",
@@ -205,9 +205,9 @@
         "sourceType": "practice",
         "note": "基于完形填空练习设计，考查上下文词汇复现。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
-        "上下文线索：后句'He often helps others'（他经常帮助别人）$\\to$说明他善良。",
+        "上下文线索：后句'He often helps others'（他经常帮助别人）→说明他善良。",
         "kind=善良的，mean=刻薄的，lazy=懒惰的，stupid=愚蠢的。",
         "选A（kind）；其他三个选项与'helps others'矛盾。"
       ],
@@ -247,7 +247,7 @@
         "sourceType": "practice",
         "note": "基于完形填空练习设计，考查固定搭配与习惯用法。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "固定搭配pay attention to（注意...），to是介词不能更改。",
         "类似搭配：look forward to（期待），devote to（致力于）。",
@@ -289,7 +289,7 @@
         "sourceType": "practice",
         "note": "基于完形填空练习设计，考查代词指代关系判断。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "前一句主语Tom是男性单数，后一句代词应与之保持一致。",
         "He指代男性单数，She指代女性单数，It指代物，They指代复数。",
@@ -331,7 +331,7 @@
         "sourceType": "practice",
         "note": "基于完形填空练习设计，考查时态与语态一致性。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "时间标志词every day（每天）表示现在时，排除过去时C（went）和将来时D（will go）。",
         "主语He是第三人称单数，现在时谓语用goes，排除A（go）。",
@@ -373,7 +373,7 @@
         "sourceType": "practice",
         "note": "基于完形填空练习设计，考查主谓一致原则。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "The number of + 复数名词，主语是number（单数），谓语用单数is。",
         "a number of + 复数名词，主语是名词复数，谓语用复数are（这是混淆点）。",
@@ -415,7 +415,7 @@
         "sourceType": "practice",
         "note": "基于完形填空练习设计，考查非谓语动词的用法。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "非谓语动词seeing的逻辑主语是the students（学生主动看见老师进来）。",
         "主动关系用Seeing（现在分词），被动关系用Seen（过去分词）。",
@@ -457,7 +457,7 @@
         "sourceType": "practice",
         "note": "基于完形填空练习设计，考查介词用法辨析。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "Monday是具体日期（星期几），具体日期前用介词on。",
         "in+年/月/季节，on+具体日期/星期，at+时刻。",
@@ -499,7 +499,7 @@
         "sourceType": "practice",
         "note": "基于完形填空练习设计，考查冠词用法。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "第一次提到book是泛指，用不定冠词a；第二次提到book是特指，用定冠词the。",
         "泛指用a/an，特指用the；抽象名词前通常用零冠词。",
@@ -541,7 +541,7 @@
         "sourceType": "practice",
         "note": "基于完形填空练习设计，考查形容词与副词辨析。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "第一空修饰student（名词）用形容词good；第二空修饰studies（动词）用副词hard。",
         "形容词修饰名词，副词修饰动词/形容词/副词；-ly结尾的不一定是副词（friendly是形容词）。",
@@ -583,7 +583,7 @@
         "sourceType": "practice",
         "note": "基于完形填空练习设计，考查虚拟语气在完形填空中的运用。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "If I were you是虚拟语气与现在事实相反，be动词用were（不用was）。",
         "虚拟语气与现在相反：if + 主语 + 过去时（be动词用were），主句 + would/could/might + do。",
@@ -625,7 +625,7 @@
         "sourceType": "practice",
         "note": "基于完形填空练习设计，考查情态动词用法。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "句意：你应该努力学习。should表示'应该'，符合建议语境。",
         "can表能力，may表许可/可能，must表必须（语气过强），should表应该（语气适中）。",
@@ -667,7 +667,7 @@
         "sourceType": "practice",
         "note": "基于完形填空练习设计，考查倒装句在完形填空中的运用。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "Here comes the bus是完全倒装，主语bus在谓语comes后面。",
         "完全倒装：状语（Here/There/Out等）+ 谓语 + 主语；部分倒装：否定词 + 助动词 + 主语。",
@@ -709,7 +709,7 @@
         "sourceType": "practice",
         "note": "基于完形填空练习设计，考查强调句型在完形填空中的运用。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "强调句型：It is/was + 被强调部分 + that/who + 剩余部分。",
         "去掉It is...that后句子仍完整：This approach has led to the success. 说明是强调句型。",
@@ -751,7 +751,7 @@
         "sourceType": "practice",
         "note": "基于完形填空练习设计，考查There be句型在完形填空中的运用。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "There be句型：There + be动词 + 主语 + 地点/时间。",
         "主语a book是单数，be动词用is；主语是复数用are。",
@@ -793,7 +793,7 @@
         "sourceType": "practice",
         "note": "基于完形填空练习设计，考查比较级与最高级在完形填空中的运用。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "than是比较级标志，tall的比较级是taller（单音节词+er）。",
         "比较级+than，最高级+in/of；more tall是错误的比较级形式（tall是单音节词）。",
@@ -835,7 +835,7 @@
         "sourceType": "practice",
         "note": "基于完形填空练习设计，考查完形填空的整体解题策略。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "完形填空解题步骤：先通读全文把握主旨，再逐题解答结合上下文，最后复核答案。",
         "不选B（先逐题再通读，效率低）；C（通读后立即复核再逐题，逻辑不对）；D（顺序完全错误）。",

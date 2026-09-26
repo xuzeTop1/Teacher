@@ -2,7 +2,7 @@
   "subject": "education",
   "course": "psychology",
   "chapter": "education-psychology",
-  "status": "draft",
+  "status": "approved",
   "questions": [
     {
       "id": "education-psychology-q001",
@@ -38,7 +38,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 0-2岁",
         "B. 2-7岁",
@@ -80,7 +80,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 现有水平",
         "B. 潜在水平",
@@ -122,7 +122,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 动作表征",
         "B. 映像表征",
@@ -164,7 +164,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 替代练习",
         "B. 在新旧知识间搭桥",
@@ -206,7 +206,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 表扬",
         "B. 撤销处分以增进行为",
@@ -248,7 +248,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 言语说服",
         "B. 替代经验",
@@ -290,7 +290,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 稳定不可控",
         "B. 不稳定可控",
@@ -332,7 +332,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 越高",
         "B. 越低",
@@ -374,7 +374,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 贾德",
         "B. 桑代克",
@@ -416,7 +416,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 三阶段",
         "B. 三水平六阶段",
@@ -458,7 +458,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 言语信息",
         "B. 智慧技能",
@@ -500,7 +500,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 复述",
         "B. 计划、监视、调节",
@@ -542,7 +542,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 物质化",
         "B. 出声外部言语",
@@ -584,7 +584,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 注意",
         "B. 保持",
@@ -626,7 +626,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 陈述性知识",
         "B. 程序性知识",
@@ -669,7 +669,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "education-psychology-q017",
@@ -706,7 +706,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "education-psychology-q018",
@@ -743,7 +743,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "education-psychology-q019",
@@ -780,7 +780,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "education-psychology-q020",
@@ -817,7 +817,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft"
+      "status": "approved"
     }
   ]
 }

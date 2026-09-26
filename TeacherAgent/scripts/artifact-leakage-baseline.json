@@ -1,0 +1,38 @@
+{
+  "_purpose": "发布产物泄漏扫描的「受控已知残留」基线。闸门默认零容忍，这里只登记唯一一类例外，并卡来源、形态与数量。改这个文件等同于放宽闸门，需要理由。",
+  "_why_not_zero": "rustc 的 --remap-path-prefix 只作用于 Rust 编译单元，管不到 cl.exe；aws-lc-sys 的 C 源码把 __FILE__ 编进 .rdata，cl.exe 也没有路径重映射选项。为消掉这些字符串给密码学依赖强塞 /DNDEBUG 会改变其 C 断言构建语义，收益只是少暴露一个依赖缓存目录，不划算。",
+  "_reaudit_trigger": "任一情况都必须重新审计并更新本文件：aws-lc-sys 版本变化（crate 目录名不再匹配会直接 FAIL）、出现新的 crate 或新的路径前缀、残留总数超过 total_max_per_file、或敏感类别（用户名 / 仓库根 / TEMP / 计算机名 / 凭据形态）任何一次命中。83 不是常数。",
+  "_no_machine_paths": "本文件不写任何绝对路径：identity_token 指向扫描器从当前环境推导出的值，所以同一份基线在任何构建机上都成立。",
+
+  "allowed": [
+    {
+      "id": "aws-lc-sys C __FILE__（长路径）",
+      "identity_token": "CARGO_HOME",
+      "crate_dir": "aws-lc-sys-0.43.0",
+      "max_per_file": 51,
+      "shape": "<CARGO_HOME>\\registry\\src\\<index>\\aws-lc-sys-0.43.0\\aws-lc\\...\\*.c"
+    },
+    {
+      "id": "aws-lc-sys C __FILE__（8.3 短路径）",
+      "identity_token": "CARGO_HOME-83",
+      "crate_dir": "AWS-LC~1.0",
+      "max_per_file": 32,
+      "shape": "<CARGO_HOME 的 8.3 形式>\\registry\\src\\<index>\\AWS-LC~1.0\\aws-lc\\...\\*.c",
+      "note": "aws-lc 的构建为绕开路径长度限制自行缩短过路径，因此长前缀的 remap 对它不匹配；这一类必须单独登记。"
+    }
+  ],
+
+  "total_max_per_file": 83,
+
+  "recorded": {
+    "date": "2026-09-19",
+    "artifact": "teacher-agent.exe",
+    "sha256_prefix": "dfd97b65",
+    "toolchain": "rustc 1.96.0 + MSVC 14.51.36231 + aws-lc-sys 0.43.0",
+    "long": 51,
+    "short": 32,
+    "total": 83,
+    "before_remap": { "total": 482, "rustup": 46, "cargo_long": 500, "short": 32 },
+    "zero_everywhere": ["USERNAME", "USERDOMAIN", "COMPUTERNAME", "HOME", "USERPROFILE", "TEMP", "RUSTUP_HOME", "VCS-ROOT"]
+  }
+}

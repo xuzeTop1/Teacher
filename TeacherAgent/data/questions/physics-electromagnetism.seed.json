@@ -2,7 +2,7 @@
   "subject": "physics",
   "course": "大学物理",
   "chapter": "电磁学",
-  "status": "draft",
+  "status": "approved",
   "questions": [
     {
       "id": "physics-em-q1",
@@ -280,8 +280,8 @@
       "answer": "$(1) C$_串 $= 5.45 \\mu F$；$(2) C$_并 $= 60 \\mu F$",
       "solutionSteps": [
         "（1）串联等效电容：$\\frac{1}{C}$_串 $= \\frac{1}{C}_1 + \\frac{1}{C}_2 + \\frac{1}{C}_3$",
-        "代入：$\\frac{1}{C}$_串 $= \\frac{1}{1}0 + \\frac{1}{2}0 + \\frac{1}{3}0 = \\frac{(6+3+2)}{6}0 = 1\\frac{1}{6}0$",
-        "解得：$C$_串 $= 6\\frac{0}{1}1 \\approx 5.45 \\mu F$",
+        "代入：$\\frac{1}{C}$_串 $= \\frac{1}{10} + \\frac{1}{20} + \\frac{1}{30} = \\frac{6+3+2}{60} = \\frac{11}{60}$",
+        "解得：$C$_串 $= \\frac{60}{11} \\approx 5.45 \\mu F$",
         "（2）并联等效电容：$C$_并 $= C_1 + C_2 + C_3$",
         "代入：$C$_并 $= 10 + 20 + 30 = 60 \\mu F$"
       ],
@@ -319,7 +319,7 @@
       "answer": "$(1) I = 2 A$；$(2) P = 40 W$",
       "solutionSteps": [
         "（1）欧姆定律：I = U/R",
-        "代入：$I = 2\\frac{0}{1}0 = 2 A$",
+        "代入：$I = \\frac{20}{10} = 2 A$",
         "（2）功率公式：$P =$UI $= I^2R = U^2/R$",
         "代入：$P = 20\\times2 = 40 W$"
       ],
@@ -432,13 +432,13 @@
       "title": "安培力计算",
       "type": "solution",
       "difficulty": 2,
-      "content": "一长为 $L = 0.5 m$的直导线，载有电流 $I = 3 A$，放置在匀强磁场中。磁场磁感应强度 $B = 0.4 T$，方向水平向右。导线方向与磁场方向夹角 $\\theta = 60\\circ$。求导线受到的安培力大小和方向。",
+      "content": "一长为 $L = 0.5 m$的直导线，载有电流 $I = 3 A$，放置在匀强磁场中。磁场磁感应强度 $B = 0.4 T$，方向水平向右。导线方向与磁场方向夹角 $\\theta = 60^\\circ$。求导线受到的安培力大小和方向。",
       "options": [],
       "answer": "F = 0.52 N，方向垂直导线和磁场所在平面",
       "solutionSteps": [
-        "安培力公式：$F =$BIL $sin\\theta$",
-        "代入数值：$F = 0.4\\times3\\times0.5\\times\\sin(60\\circ)$",
-        "计算：$F = 0.6\\times(√\\frac{3}{2}) = 0.3\\\\sqrt{3} \\approx 0.52 N$",
+        "安培力公式：$F = BIL \\sin\\theta$",
+        "代入数值：$F = 0.4\\times3\\times0.5\\times\\sin(60^\\circ)$",
+        "计算：$F = 0.6\\times\\frac{\\sqrt{3}}{2} = 0.3\\sqrt{3} \\approx 0.52\\text{ N}$",
         "方向：由左手定则判断，垂直导线和磁场所在平面"
       ],
       "knowledgeNodeIds": [

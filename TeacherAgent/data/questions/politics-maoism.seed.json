@@ -2,7 +2,7 @@
   "subject": "politics",
   "course": "maoism",
   "chapter": "politics-maoism",
-  "status": "draft",
+  "status": "approved",
   "questions": [
     {
       "id": "politics-maoism-q001",
@@ -46,7 +46,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-maoism-q002",
@@ -90,7 +90,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-maoism-q003",
@@ -134,7 +134,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-maoism-q004",
@@ -177,7 +177,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-maoism-q005",
@@ -221,7 +221,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-maoism-q006",
@@ -265,7 +265,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-maoism-q007",
@@ -309,7 +309,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-maoism-q008",
@@ -352,7 +352,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-maoism-q009",
@@ -396,7 +396,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-maoism-q010",
@@ -440,7 +440,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-maoism-q011",
@@ -484,7 +484,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-maoism-q012",
@@ -528,7 +528,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-maoism-q013",
@@ -573,7 +573,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-maoism-q014",
@@ -617,7 +617,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-maoism-q015",
@@ -661,7 +661,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-maoism-q016",
@@ -705,7 +705,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-maoism-q017",
@@ -749,7 +749,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-maoism-q018",
@@ -792,7 +792,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-maoism-q019",
@@ -836,7 +836,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-maoism-q020",
@@ -881,7 +881,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     }
   ]
 }

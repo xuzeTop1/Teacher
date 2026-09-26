@@ -56,8 +56,8 @@ describe("searchLocalQuestionBankLazy", () => {
   ])("rejects a draft Manifest pack with %s on the non-exam path", async (_label, seedStatus) => {
     vi.spyOn(packLoader, "loadQuestionPacksBySubject").mockResolvedValue([
       {
-        __packId: "linear-algebra-basics",
-        subject: "math",
+        __packId: "civil-common-sense",
+        subject: "xingce",
         status: seedStatus,
         questions: [draftPackQuestion]
       }
@@ -65,7 +65,7 @@ describe("searchLocalQuestionBankLazy", () => {
 
     const result = await searchLocalQuestionBankLazy({
       query: "draft pack question",
-      subject: "math",
+      subject: "xingce",
       purpose: "practice",
       topK: 3
     })

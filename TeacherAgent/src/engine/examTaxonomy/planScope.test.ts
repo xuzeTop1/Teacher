@@ -164,23 +164,29 @@ describe("今日计划驱动：规则 3（只映射到父级考试组）", () =>
     expect(decision.needsUserChoice).toBe(false)
     expect(decision.strategy).not.toBeNull()
     expect(decision.strategy!.kind).toBe("rotation")
-    // 408 当前只有计网 approved，综合模式只能轮换计网并如实展示。
-    expect(decision.strategy!.leaves.map((l) => l.stableId)).toEqual(["408.computer-networks"])
+    // 408 包含 4 门 approved 子科目，综合模式轮换全部 4 门。
+    expect(decision.strategy!.leaves.map((l) => l.stableId)).toEqual([
+      "408.data-structures",
+      "408.computer-organization",
+      "408.operating-systems",
+      "408.computer-networks"
+    ])
     expect(decision.subjectId).toBe("408.computer-networks")
     expect(decision.evidenceText).toContain("综合复习")
     expect(decision.evidenceText).toContain("计算机网络")
   })
 
   it("综合复习弱项优先：掌握度最低的叶子优先", () => {
-    // 无 approved 的英语综合模式没有可出题子科目。
     const decision = decideQuestionScope({
       ...emptyInput(),
       todayTasks: [],
       selection: { examTrackId: "kaoyan-english", subjectId: null, moduleId: null, comprehensive: true },
       weakMastery: { "kaoyan-english.grammar": 0.2 }
     })
-    expect(decision.mode).toBe("requires-choice")
-    expect(decision.reason).toContain("approved")
+    expect(decision.mode).toBe("comprehensive")
+    expect(decision.strategy!.kind).toBe("weakness-first")
+    expect(decision.subjectId).toBe("kaoyan-english.grammar")
+    expect(decision.evidenceText).toContain("掌握度最低优先")
   })
 })
 

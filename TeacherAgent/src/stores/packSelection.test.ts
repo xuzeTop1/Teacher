@@ -260,29 +260,28 @@ describe("packSelection store", () => {
   describe("batch operations", () => {
     it("enableAllPacks explicitly enables approved and draft packs", () => {
       const store = usePackSelectionStore()
-      // physics has 5 draft packs and 0 approved packs
-      const physicsPacks = store.getSubjectPacks("physics")
-      const draftPacks = physicsPacks.filter((p) => p.status === "draft")
+      // xingce has approved packs and 1 draft pack (civil-common-sense)
+      const xingcePacks = store.getSubjectPacks("xingce")
+      const draftPacks = xingcePacks.filter((p) => p.status === "draft")
       expect(draftPacks.length).toBeGreaterThan(0)
 
-      store.enableAllPacks("physics")
+      store.enableAllPacks("xingce")
 
-      expect(store.getEnabledPackIds("physics")).toEqual(physicsPacks.map((pack) => pack.id))
-      expect(store.getEnabledPackIds("physics").some((id) =>
-        physicsPacks.find((pack) => pack.id === id)?.status === "draft"
+      expect(store.getEnabledPackIds("xingce")).toEqual(xingcePacks.map((pack) => pack.id))
+      expect(store.getEnabledPackIds("xingce").some((id) =>
+        xingcePacks.find((pack) => pack.id === id)?.status === "draft"
       )).toBe(true)
     })
 
-    it("enableAllPacks works for an all-draft subject", () => {
+    it("enableAllPacks works for a fully-approved subject", () => {
       const store = usePackSelectionStore()
-      // shenlun is still all-draft (4 packs, 0 approved)
-      const shenlunPacks = store.getSubjectPacks("shenlun")
-      expect(shenlunPacks.length).toBeGreaterThan(0)
-      expect(shenlunPacks.every((pack) => pack.status === "draft")).toBe(true)
+      const mathPacks = store.getSubjectPacks("math")
+      expect(mathPacks.length).toBeGreaterThan(0)
+      expect(mathPacks.every((pack) => pack.status === "approved")).toBe(true)
 
-      store.enableAllPacks("shenlun")
+      store.enableAllPacks("math")
 
-      expect(store.getEnabledPackIds("shenlun")).toEqual(shenlunPacks.map((pack) => pack.id))
+      expect(store.getEnabledPackIds("math")).toEqual(mathPacks.map((pack) => pack.id))
     })
 
     it("disableAllPacks keeps one currently enabled pack", () => {
@@ -566,8 +565,7 @@ describe("packSelection store", () => {
       }
     })
 
-    it("migrates all-draft subject to empty default", () => {
-      // xingce has all draft packs (5 packs, 0 approved)
+    it("migrates v1 data discarding draft packs for mixed subject (xingce)", () => {
       const allXingcePackIds = PACK_MANIFEST
         .filter((p) => p.subject === "xingce")
         .map((p) => p.id)
@@ -578,8 +576,9 @@ describe("packSelection store", () => {
       const store = usePackSelectionStore()
       const enabledIds = store.getEnabledPackIds("xingce")
 
-      // All xingce packs are draft, so migration should result in empty list
-      expect(enabledIds.length).toBe(0)
+      // Draft pack civil-common-sense must be discarded; only 5 approved packs retained
+      expect(enabledIds).not.toContain("civil-common-sense")
+      expect(enabledIds).toHaveLength(5)
     })
 
     it("v2 format is preserved correctly", () => {
@@ -631,12 +630,10 @@ describe("packSelection store", () => {
       localStorage.setItem("teacher-agent-enabled-packs", JSON.stringify(v1Data))
 
       const store = usePackSelectionStore()
-      // Trigger a write by enabling a draft pack (physics still has draft packs)
-      const draftPack = PACK_MANIFEST.find(
-        (p) => p.subject === "physics" && p.status === "draft"
-      )
+      // Trigger a write by enabling a draft pack
+      const draftPack = PACK_MANIFEST.find((p) => p.status === "draft")
       if (draftPack) {
-        store.enablePack("physics", draftPack.id)
+        store.enablePack(draftPack.subject, draftPack.id)
       }
 
       const saved = JSON.parse(localStorage.getItem("teacher-agent-enabled-packs") ?? "{}")
@@ -646,82 +643,74 @@ describe("packSelection store", () => {
 
     it("user can explicitly enable draft after migration", () => {
       const store = usePackSelectionStore()
-      const draftPack = PACK_MANIFEST.find(
-        (p) => p.subject === "math" && p.status === "draft"
-      )
+      const draftPack = PACK_MANIFEST.find((p) => p.status === "draft")
       if (!draftPack) return
 
-      store.enablePack("math", draftPack.id)
-      expect(store.isPackEnabled("math", draftPack.id)).toBe(true)
+      store.enablePack(draftPack.subject, draftPack.id)
+      expect(store.isPackEnabled(draftPack.subject, draftPack.id)).toBe(true)
 
       // Verify it persists in v2 format
       const saved = JSON.parse(localStorage.getItem("teacher-agent-enabled-packs") ?? "{}")
       expect(saved.version).toBe(2)
-      expect(saved.packs.math).toContain(draftPack.id)
+      expect(saved.packs[draftPack.subject]).toContain(draftPack.id)
     })
 
     it("v2 draft explicit authorization persists across store rebuild", () => {
-      const draftPack = PACK_MANIFEST.find(
-        (p) => p.subject === "math" && p.status === "draft"
-      )
+      const draftPack = PACK_MANIFEST.find((p) => p.status === "draft")
       if (!draftPack) return
 
       // Step 1: Create store, explicitly enable draft
       const store1 = usePackSelectionStore()
-      store1.enablePack("math", draftPack.id)
-      expect(store1.isPackEnabled("math", draftPack.id)).toBe(true)
+      store1.enablePack(draftPack.subject, draftPack.id)
+      expect(store1.isPackEnabled(draftPack.subject, draftPack.id)).toBe(true)
 
       // Step 2: Verify v2 format written
       const saved = JSON.parse(localStorage.getItem("teacher-agent-enabled-packs") ?? "{}")
       expect(saved.version).toBe(2)
-      expect(saved.packs.math).toContain(draftPack.id)
+      expect(saved.packs[draftPack.subject]).toContain(draftPack.id)
 
       // Step 3: Create new Pinia + new store (simulates app restart)
       setActivePinia(createPinia())
       const store2 = usePackSelectionStore()
 
       // Step 4: Draft should still be enabled
-      expect(store2.isPackEnabled("math", draftPack.id)).toBe(true)
-      expect(store2.getEnabledPackIds("math")).toContain(draftPack.id)
+      expect(store2.isPackEnabled(draftPack.subject, draftPack.id)).toBe(true)
+      expect(store2.getEnabledPackIds(draftPack.subject)).toContain(draftPack.id)
     })
 
     it("v1 draft IDs are discarded even if same ID exists in v2", () => {
-      const draftPack = PACK_MANIFEST.find(
-        (p) => p.subject === "math" && p.status === "draft"
-      )
+      const draftPack = PACK_MANIFEST.find((p) => p.status === "draft")
       if (!draftPack) return
 
       // Write v1 data that includes a draft pack ID
-      const v1Data = { math: ["math-limits", draftPack.id] }
+      const v1Data = { [draftPack.subject]: ["civil-verbal", draftPack.id] }
       localStorage.setItem("teacher-agent-enabled-packs", JSON.stringify(v1Data))
 
       // Create store — v1 migration should discard the draft ID
       const store = usePackSelectionStore()
-      const enabledIds = store.getEnabledPackIds("math")
+      const enabledIds = store.getEnabledPackIds(draftPack.subject)
 
       // Only approved pack should be retained
-      expect(enabledIds).toContain("math-limits")
+      expect(enabledIds).toContain("civil-verbal")
       expect(enabledIds).not.toContain(draftPack.id)
     })
 
     it("v2 preserves draft ID for correct subject", () => {
-      const draftPack = PACK_MANIFEST.find(
-        (p) => p.subject === "math" && p.status === "draft"
-      )
+      const draftPack = PACK_MANIFEST.find((p) => p.status === "draft")
       if (!draftPack) return
 
       // Write v2 data with a draft pack
       const v2Data = {
         version: 2,
-        packs: { math: ["math-limits", draftPack.id] }
+        packs: { [draftPack.subject]: ["civil-verbal", draftPack.id] }
       }
       localStorage.setItem("teacher-agent-enabled-packs", JSON.stringify(v2Data))
 
       const store = usePackSelectionStore()
-      const enabledIds = store.getEnabledPackIds("math")
+      const enabledIds = store.getEnabledPackIds(draftPack.subject)
 
       // Both approved and draft should be retained in v2
-      expect(enabledIds).toContain("math-limits")
+      expect(enabledIds).toContain("civil-verbal")
       expect(enabledIds).toContain(draftPack.id)
     })
 
@@ -729,7 +718,7 @@ describe("packSelection store", () => {
       // Write v2 data with a cross-subject draft ID
       const v2Data = {
         version: 2,
-        packs: { math: ["math-limits", "cs408-data-structures"] }
+        packs: { math: ["math-limits", "civil-common-sense"] }
       }
       localStorage.setItem("teacher-agent-enabled-packs", JSON.stringify(v2Data))
 
@@ -738,7 +727,7 @@ describe("packSelection store", () => {
 
       // Cross-subject ID should be dropped
       expect(enabledIds).toContain("math-limits")
-      expect(enabledIds).not.toContain("cs408-data-structures")
+      expect(enabledIds).not.toContain("civil-common-sense")
     })
   })
 })

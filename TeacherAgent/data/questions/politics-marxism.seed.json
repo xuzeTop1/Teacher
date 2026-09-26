@@ -2,7 +2,7 @@
   "subject": "politics",
   "course": "marxism",
   "chapter": "politics-marxism",
-  "status": "draft",
+  "status": "approved",
   "questions": [
     {
       "id": "politics-marxism-q001",
@@ -46,7 +46,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-marxism-q002",
@@ -90,7 +90,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-marxism-q003",
@@ -134,7 +134,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-marxism-q004",
@@ -178,7 +178,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-marxism-q005",
@@ -222,7 +222,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-marxism-q006",
@@ -266,7 +266,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-marxism-q007",
@@ -310,7 +310,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-marxism-q008",
@@ -354,7 +354,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-marxism-q009",
@@ -398,7 +398,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-marxism-q010",
@@ -442,7 +442,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-marxism-q011",
@@ -486,7 +486,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-marxism-q012",
@@ -529,7 +529,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-marxism-q013",
@@ -573,7 +573,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-marxism-q014",
@@ -617,7 +617,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-marxism-q015",
@@ -661,7 +661,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-marxism-q016",
@@ -704,7 +704,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-marxism-q017",
@@ -748,7 +748,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-marxism-q018",
@@ -792,7 +792,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-marxism-q019",
@@ -835,7 +835,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-marxism-q020",
@@ -879,7 +879,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     }
   ]
 }
