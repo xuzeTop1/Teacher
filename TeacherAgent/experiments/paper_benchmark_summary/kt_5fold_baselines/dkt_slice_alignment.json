@@ -1,0 +1,97 @@
+{
+  "note": "论文跨数据集对照表的 DKT 列在统一早停协议下的四切片重跑（只跑先验配置）。",
+  "fourSliceRange": {
+    "lo": 0.065582,
+    "hi": 0.140394,
+    "paperWording": "0.066～0.140",
+    "supersedes": "0.065～0.136（旧协议）"
+  },
+  "slices": {
+    "EdNet first_tag 2000": {
+      "archive": "20260918-110431-ednet-kt1-firsttag-2000u-dkt-unified",
+      "dktAuc": 0.688091,
+      "dktAucStd": 0.002713,
+      "bktAuc": 0.561478,
+      "deltaVsBkt": 0.126613,
+      "acc": 0.640136,
+      "rmse": 0.471306,
+      "bestEpochs": [
+        28,
+        23,
+        45,
+        26,
+        32
+      ],
+      "protocol": "unified early stopping, prior config hidden=100 lr=1e-3"
+    },
+    "EdNet first_tag 20000": {
+      "archive": "20260917-235517-ednet-kt1-firsttag-20000u-ktsym-earlystop",
+      "dktAuc": 0.700604,
+      "dktAucStd": 0.001248,
+      "bktAuc": 0.56021,
+      "deltaVsBkt": 0.140394,
+      "acc": 0.648605,
+      "rmse": 0.466457,
+      "bestEpochs": [
+        24,
+        24,
+        29,
+        31,
+        35
+      ],
+      "protocol": "unified early stopping, prior config hidden=100 lr=1e-3"
+    },
+    "EdNet single_tag 10000": {
+      "archive": "20260918-110530-ednet-kt1-singletag-10000u-dkt-unified",
+      "dktAuc": 0.63963,
+      "dktAucStd": 0.003169,
+      "bktAuc": 0.552377,
+      "deltaVsBkt": 0.087253,
+      "acc": 0.634568,
+      "rmse": 0.47487,
+      "bestEpochs": [
+        67,
+        59,
+        55,
+        57,
+        58
+      ],
+      "protocol": "unified early stopping, prior config hidden=100 lr=1e-3"
+    },
+    "EdNet part 20000": {
+      "archive": "20260918-111046-ednet-kt1-part-20000u-dkt-unified",
+      "dktAuc": 0.67998,
+      "dktAucStd": 0.001354,
+      "bktAuc": 0.614398,
+      "deltaVsBkt": 0.065582,
+      "acc": 0.633788,
+      "rmse": 0.472316,
+      "bestEpochs": [
+        61,
+        59,
+        56,
+        58,
+        51
+      ],
+      "protocol": "unified early stopping, prior config hidden=100 lr=1e-3"
+    },
+    "ASSISTments sparse 200": {
+      "archive": "20260918-111941-assistments-200-dkt-unified",
+      "dktAuc": 0.677282,
+      "dktAucStd": 0.034014,
+      "bktAuc": 0.695519,
+      "deltaVsBkt": -0.018237,
+      "acc": 0.64158,
+      "rmse": 0.475972,
+      "bestEpochs": [
+        17,
+        98,
+        20,
+        75,
+        85
+      ],
+      "protocol": "unified early stopping, prior config hidden=100 lr=1e-3"
+    }
+  },
+  "script": "../../ednet_kt1/run_dkt_slices_unified.py"
+}

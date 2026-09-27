@@ -1,0 +1,84 @@
+{
+  "tag": "assistments-200",
+  "features": "D:\\TeacherAgent-alerttime-json\\experiments\\assistments\\work\\features_assist_200.parquet",
+  "students": 200,
+  "folds": 5,
+  "standard_bkt": {
+    "note": "经典四参数 BKT（基线）",
+    "aucMean": 0.6955186848635406,
+    "aucStd": 0.033300628749876604,
+    "accMean": 0.6434899930372192,
+    "rmseMean": 0.47219846500833407
+  },
+  "fb_none": {
+    "note": "λ=0, α=0 —— 极限验证，应与基线逐点一致",
+    "aucMean": 0.6955182399400575,
+    "aucStd": 0.03330191193283494,
+    "accMean": 0.6434899930372192,
+    "rmseMean": 0.4721984650082858,
+    "deltaVsBaseline": -4.449234831671589e-07,
+    "foldWiseDelta": [
+      0.0,
+      0.0,
+      2e-06,
+      0.0,
+      -4e-06
+    ]
+  },
+  "fb_decay_only": {
+    "note": "只开遗忘衰减（α=0）",
+    "aucMean": 0.6975351237540461,
+    "aucStd": 0.030699652828796987,
+    "accMean": 0.6401733750652894,
+    "rmseMean": 0.4719576567711911,
+    "deltaVsBaseline": 0.002016438890505512,
+    "foldWiseDelta": [
+      0.001624,
+      0.001645,
+      -0.005739,
+      0.009132,
+      0.00342
+    ]
+  },
+  "fb_focus_only": {
+    "note": "只开专注调节（λ=0）",
+    "aucMean": 0.6884521195064955,
+    "aucStd": 0.03154649567684613,
+    "accMean": 0.6459743944708793,
+    "rmseMean": 0.47252708293545653,
+    "deltaVsBaseline": -0.007066565357045085,
+    "foldWiseDelta": [
+      -0.007332,
+      -0.008855,
+      -0.010289,
+      -0.00543,
+      -0.003427
+    ]
+  },
+  "fb_full": {
+    "note": "两者全开（论文默认 λ=0.05, α=0.5, β=0.3）",
+    "aucMean": 0.6905601345506314,
+    "aucStd": 0.02909732777579259,
+    "accMean": 0.6440913460701713,
+    "rmseMean": 0.47172781154295806,
+    "deltaVsBaseline": -0.00495855031290926,
+    "foldWiseDelta": [
+      -0.005575,
+      -0.005611,
+      -0.015929,
+      0.002595,
+      -0.000274
+    ]
+  },
+  "equalityCheck": {
+    "maxAbsDiffPerFold": [
+      9.64783808399261e-14,
+      6.019629239517599e-13,
+      2.4424906541753444e-14,
+      1.5644752160426378e-10,
+      3.3573144264664734e-13
+    ],
+    "maxAbsDiffOverall": 1.5644752160426378e-10,
+    "bitwiseIdentical": false
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "generatedAt": "2026-09-14T16:00:21.884343+00:00",
+  "featuresFile": "D:\\TeacherAgent-alerttime-json\\experiments\\ednet_kt1\\work\\features_ednet_20000.parquet",
+  "students": 20000,
+  "responses": 1031844,
+  "folds": 5,
+  "seed": 42,
+  "declaredGrid": {
+    "hidden": [
+      64,
+      100,
+      200
+    ],
+    "lr": [
+      0.001,
+      0.003
+    ],
+    "configs": 6,
+    "fixed": {
+      "epochs": 50,
+      "batchSize": 128,
+      "impl": "fast",
+      "mode": "batched",
+      "optimizer": "Adam",
+      "loss": "BCELoss(masked)"
+    },
+    "notSwept": [
+      "epochs",
+      "batch",
+      "dropout",
+      "weightDecay",
+      "architecture",
+      "earlyStopping"
+    ]
+  },
+  "standardBucktFoldAucs": [
+    0.562084,
+    0.559564,
+    0.561058,
+    0.558182,
+    0.560161
+  ],
+  "standardBktAucMean": 0.56021,
+  "configs": [
+    {
+      "hidden": 64,
+      "lr": 0.001,
+      "aucMean": 0.6989875367363793,
+      "aucStd": 0.0011600636213341385,
+      "foldAucs": [
+        0.701246,
+        0.698918,
+        0.698132,
+        0.698323,
+        0.698318
+      ],
+      "seconds": 74.2,
+      "deltaVsStandardBkt": 0.138778
+    },
+    {
+      "hidden": 64,
+      "lr": 0.003,
+      "aucMean": 0.6781998529480435,
+      "aucStd": 0.0016190515193925186,
+      "foldAucs": [
+        0.680984,
+        0.678027,
+        0.676569,
+        0.676663,
+        0.678756
+      ],
+      "seconds": 70.6,
+      "deltaVsStandardBkt": 0.11799
+    },
+    {
+      "hidden": 100,
+      "lr": 0.001,
+      "aucMean": 0.6958029490706856,
+      "aucStd": 0.0018386624458747096,
+      "foldAucs": [
+        0.699128,
+        0.696112,
+        0.693652,
+        0.695168,
+        0.694955
+      ],
+      "seconds": 82.0,
+      "deltaVsStandardBkt": 0.135593
+    },
+    {
+      "hidden": 100,
+      "lr": 0.003,
+      "aucMean": 0.662631452137503,
+      "aucStd": 0.0012944182517807517,
+      "foldAucs": [
+        0.664102,
+        0.66212,
+        0.661714,
+        0.661013,
+        0.66421
+      ],
+      "seconds": 84.2,
+      "deltaVsStandardBkt": 0.102422
+    },
+    {
+      "hidden": 200,
+      "lr": 0.001,
+      "aucMean": 0.6769072256425093,
+      "aucStd": 0.007104063686983552,
+      "foldAucs": [
+        0.675743,
+        0.682151,
+        0.667079,
+        0.672353,
+        0.68721
+      ],
+      "seconds": 130.7,
+      "deltaVsStandardBkt": 0.116698
+    },
+    {
+      "hidden": 200,
+      "lr": 0.003,
+      "aucMean": 0.6301223098976516,
+      "aucStd": 0.0016138285734924682,
+      "foldAucs": [
+        0.631001,
+        0.628899,
+        0.628025,
+        0.630045,
+        0.632642
+      ],
+      "seconds": 131.1,
+      "deltaVsStandardBkt": 0.069913
+    }
+  ],
+  "headlineConfig": {
+    "note": "先验配置，用于论文正文引用",
+    "hidden": 100,
+    "lr": 0.001,
+    "aucMean": 0.6958029490706856,
+    "aucStd": 0.0018386624458747096,
+    "foldAucs": [
+      0.699128,
+      0.696112,
+      0.693652,
+      0.695168,
+      0.694955
+    ],
+    "seconds": 82.0,
+    "deltaVsStandardBkt": 0.135593,
+    "pairedVsStandardBkt": {
+      "meanDiff": 0.13559346143223708,
+      "ci95": [
+        0.1332223778124427,
+        0.13796454505203146
+      ],
+      "tStatistic": 158.74912457475054,
+      "degreesOfFreedom": 4,
+      "foldDeltas": [
+        0.137044,
+        0.136548,
+        0.132594,
+        0.136986,
+        0.134794
+      ],
+      "foldsSameDirection": 5,
+      "permutationsExact": 32,
+      "permutationPExact": 0.0625,
+      "permutationPMinAchievable": 0.0625
+    }
+  },
+  "bestOfGrid": {
+    "note": "仅作为上界证据，不作为正文结论口径",
+    "hidden": 64,
+    "lr": 0.001,
+    "aucMean": 0.6989875367363793,
+    "deltaVsStandardBkt": 0.138778,
+    "deltaVsHeadline": 0.003185
+  },
+  "fairnessNote": "FB-BKT 侧已获得 36 组 λ/α/β 网格搜索；本扫描仅 6 组且不扫结构/正则，因此对 DKT 并不更宽松。"
+}

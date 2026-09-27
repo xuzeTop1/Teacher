@@ -1,0 +1,62 @@
+{
+  "generatedAt": "2026-09-15T16:11:06.479674+00:00",
+  "workItem": "submission fix 1: training-fold-fitted BKT fairness baseline",
+  "queues": [
+    "first_tag_2000u",
+    "first_tag_20000u",
+    "single_tag_10000u",
+    "part_20000u"
+  ],
+  "seed": 42,
+  "folding": "student-level 5-fold assignment, seed 42; test fold is evaluation-only",
+  "selection": {
+    "objective": "minimize training-fold Bernoulli predictive negative log-likelihood",
+    "grid": {
+      "pL0": [
+        0.1,
+        0.3,
+        0.5
+      ],
+      "pT": [
+        0.05,
+        0.1,
+        0.2
+      ],
+      "pG": [
+        0.1,
+        0.25,
+        0.4
+      ],
+      "pS": [
+        0.05,
+        0.1,
+        0.2
+      ]
+    },
+    "gridSize": 81,
+    "tieBreak": "first candidate in lexicographic product order",
+    "testUse": "selected parameters are applied once to the held-out test fold; no test AUC enters selection"
+  },
+  "fixedBaseline": {
+    "pL0": 0.3,
+    "pT": 0.1,
+    "pG": 0.25,
+    "pS": 0.1,
+    "masteryThreshold": 0.8
+  },
+  "existingComparisonArchives": {
+    "first_tag_2000u": "20260914-233838-ednet-kt1-firsttag-2000u-batched-dkt",
+    "first_tag_20000u": "20260914-232621-ednet-kt1-firsttag-20000u-batched-dkt",
+    "single_tag_10000u": "20260914-234626-ednet-kt1-singletag-10000u-dkt",
+    "part_20000u": "20260914-234900-ednet-kt1-part-20000u-dkt"
+  },
+  "notes": [
+    "Fixed BKT remains the deployment-oriented no-training baseline.",
+    "Fold-level summaries are exploratory because five CV folds are not independent repetitions.",
+    "The DKT and FB-BKT columns in comparison_summary.csv are copied from prior immutable archives; this run only adds fitted BKT and recomputes fixed BKT."
+  ],
+  "environment": {
+    "python": "3.12.10",
+    "numpy": "2.4.6"
+  }
+}

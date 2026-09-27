@@ -1,0 +1,22 @@
+{
+  "totalQueries": 100,
+  "candidatePoolCoveredQueries": 93,
+  "candidatePoolCoverage": 0.93,
+  "noMajorityRelevantCandidateQueries": 7,
+  "excludedQids": [
+    "q073",
+    "q074",
+    "q087",
+    "q092",
+    "q095",
+    "q099",
+    "q100"
+  ],
+  "conditionalScope": "only the 93 queries with at least one majority-relevant candidate",
+  "overallScope": "all 100 questions; excluded seven contribute zero Hit/MRR/NDCG",
+  "rankingSource": {
+    "template": "experiments/hybrid_retrieval/work/opt_B_template.jsonl",
+    "bare": "experiments/hybrid_retrieval/work/opt_B_bare.jsonl"
+  },
+  "rankingConsistency": "opt_B rankings for the 93 retained qids exactly match the archived hybrid_raw_{form}.jsonl hit keys"
+}
