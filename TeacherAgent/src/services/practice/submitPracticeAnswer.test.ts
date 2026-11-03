@@ -29,6 +29,23 @@ const mockBktUpdate = vi.fn(async (pKnow: number, _correct: boolean) => ({
 const mockSaveAssessment = vi.fn(async () => ({}))
 
 describe("submitPracticeAnswer", () => {
+  it("uses durable mastery and counters, and appends newly learned nodes", async () => {
+    const states = [{knowledgeNodeId:"node-001",masteryProbability:0.42,attemptsCount:7,correctCount:3,title:"Durable title"}]
+    const studentKnowledge = [{knowledgeNodeId:"node-001",masteryProbability:0.5,attemptsCount:0,correctCount:0,title:"Old"}]
+    const run = (knowledge: typeof studentKnowledge) => submitPracticeAnswer({question:mockQuestion,studentAnswer:"2",subjectCode:"math",studentId:"test",revealedHintsCount:0,studentKnowledge:knowledge,conversationId:"conv-001",bktUpdateMastery:mockBktUpdate,saveAssessmentResult:vi.fn().mockResolvedValue({knowledgeUpdates:states})})
+    expect((await run(studentKnowledge)).knowledgeUpdated).toBe(true)
+    expect(studentKnowledge).toEqual(states)
+    const empty: typeof studentKnowledge = []
+    await run(empty)
+    expect(empty).toEqual(states)
+  })
+  it("does not claim a mastery update when the durable response has none", async () => {
+    const states = [{knowledgeNodeId:"node-001",masteryProbability:0.5,attemptsCount:0,correctCount:0,title:"Old"}]
+    const result = await submitPracticeAnswer({question:mockQuestion,studentAnswer:"2",subjectCode:"math",studentId:"test",revealedHintsCount:0,studentKnowledge:states,conversationId:"conv-001",bktUpdateMastery:mockBktUpdate,saveAssessmentResult:vi.fn().mockResolvedValue({knowledgeUpdates:[]})})
+    expect(result.assessmentSaved).toBe(true)
+    expect(result.knowledgeUpdated).toBe(false)
+    expect(states[0].masteryProbability).toBe(0.5)
+  })
   it("答对时 correct=true", async () => {
     const result = await submitPracticeAnswer({
       question: mockQuestion,

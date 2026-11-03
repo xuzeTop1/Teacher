@@ -2,7 +2,7 @@
   "subject": "politics",
   "course": "morals",
   "chapter": "politics-morals",
-  "status": "draft",
+  "status": "approved",
   "questions": [
     {
       "id": "politics-morals-q001",
@@ -46,7 +46,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-morals-q002",
@@ -89,7 +89,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-morals-q003",
@@ -133,7 +133,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-morals-q004",
@@ -177,7 +177,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-morals-q005",
@@ -221,7 +221,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-morals-q006",
@@ -264,7 +264,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-morals-q007",
@@ -308,7 +308,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-morals-q008",
@@ -352,7 +352,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-morals-q009",
@@ -396,7 +396,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-morals-q010",
@@ -440,7 +440,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-morals-q011",
@@ -484,7 +484,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-morals-q012",
@@ -528,7 +528,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-morals-q013",
@@ -572,7 +572,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-morals-q014",
@@ -616,7 +616,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-morals-q015",
@@ -660,7 +660,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-morals-q016",
@@ -703,7 +703,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-morals-q017",
@@ -747,7 +747,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-morals-q018",
@@ -791,7 +791,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-morals-q019",
@@ -835,7 +835,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "politics-morals-q020",
@@ -880,7 +880,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "Original TeacherAgent draft; no exam question text copied."
       },
-      "status": "draft"
+      "status": "approved"
     }
   ]
 }

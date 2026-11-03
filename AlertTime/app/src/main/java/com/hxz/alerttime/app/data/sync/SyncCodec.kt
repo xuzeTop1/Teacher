@@ -47,17 +47,26 @@ object SyncCodec {
         if (payload.studySessions.any { it.note != null }) {
             throw SyncValidationException("studySession.note 禁止上传：v1 客户端永不发送会话笔记")
         }
+        // 携带聚合特征时按协议 v2 出站（桌面端对 v1/v2 都接受）；
+        // 无聚合时保持 v1 线格式逐字不变。
+        val carriesFocusAggregates = payload.focusAggregates != null
+        val capabilities = if (carriesFocusAggregates) {
+            mapOf("fullSnapshotV1" to true, "fullSnapshotV2" to true, "proposalsV1" to true)
+        } else {
+            mapOf("fullSnapshotV1" to true, "proposalsV1" to true)
+        }
         return json.encodeToString(
             SyncEnvelopeDto.serializer(SyncSnapshotPayload.serializer()),
             SyncEnvelopeDto(
                 format = SyncProtocol.FORMAT,
-                schemaVersion = SyncProtocol.SCHEMA_VERSION,
+                schemaVersion = if (carriesFocusAggregates) SyncProtocol.SCHEMA_VERSION_V2
+                else SyncProtocol.SCHEMA_VERSION,
                 messageType = SyncProtocol.MESSAGE_TYPE_SNAPSHOT,
                 deviceId = deviceId,
                 snapshotId = snapshotId,
                 generatedAt = System.currentTimeMillis(),
                 appVersion = null,
-                protocolCapabilities = mapOf("fullSnapshotV1" to true, "proposalsV1" to true),
+                protocolCapabilities = capabilities,
                 payload = payload
             )
         )
@@ -328,7 +337,9 @@ object SyncCodec {
     ) {
         val errors = mutableListOf<String>()
         if (format != SyncProtocol.FORMAT) errors += "不支持的协议 format: $format"
-        if (schemaVersion != SyncProtocol.SCHEMA_VERSION) errors += "不支持的协议版本: $schemaVersion"
+        if (schemaVersion != SyncProtocol.SCHEMA_VERSION && schemaVersion != SyncProtocol.SCHEMA_VERSION_V2) {
+            errors += "不支持的协议版本: $schemaVersion"
+        }
         if (!isPlausibleId(deviceId)) errors += "deviceId 非法"
         if (generatedAt < 0) errors += "generatedAt 非法"
         appVersion?.let {
@@ -631,6 +642,31 @@ object SyncCodec {
                 analysis.profile.inferences.flatMap { it.evidenceRefs }
             evidenceRefs.filterNot(::isBoundEvidenceRef).forEach {
                 errors += "learningAnalysis.evidenceRef 未绑定本快照证据"
+            }
+        }
+
+        // 协议 v2：focusAggregates 的形状/取值/下标引用必须自洽（论文 §4.3）。
+        payload.focusAggregates?.let { aggregates ->
+            if (aggregates.perSubject.size > SyncProtocol.MAX_COLLECTION_SIZE_SUBJECTS) {
+                errors += "focusAggregates.perSubject 数量超过上限"
+            }
+            val seenTempIds = mutableSetOf<Int>()
+            aggregates.perSubject.forEach { entry ->
+                if (entry.subjectTempId < 0 || entry.subjectTempId >= payload.subjects.size) {
+                    errors += "focusAggregates.subjectTempId 越界: ${entry.subjectTempId}"
+                }
+                if (!seenTempIds.add(entry.subjectTempId)) {
+                    errors += "focusAggregates.subjectTempId 重复: ${entry.subjectTempId}"
+                }
+                if (!entry.rFocus.isFinite() || entry.rFocus < 0.0 || entry.rFocus > 1.0) {
+                    errors += "focusAggregates.rFocus 超出 [0, 1]: ${entry.rFocus}"
+                }
+                if (entry.nDistract < 0) {
+                    errors += "focusAggregates.nDistract 不能为负: ${entry.nDistract}"
+                }
+                entry.windowDays?.let { window ->
+                    if (window !in 1..365) errors += "focusAggregates.windowDays 超出 [1, 365]: $window"
+                }
             }
         }
 

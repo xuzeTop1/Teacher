@@ -23,3 +23,25 @@ __pycache__/
 # 本地实验产物与开发日志（含截图，不入库）
 benchmark-results/
 tauri-dev.log
+
+# 实验的原始数据与工作副本（work/ 含运行时库副本，内含真实学习数据，绝不入库）
+experiments/**/raw/
+experiments/**/work/
+
+# 第三方数据集本体与其派生中间文件：许可边界与获取方式见 experiments/README.md「数据来源与许可」，
+# 一律不入库（未确认上游许可前不得镜像再分发）。
+experiments/ednet_kt1/data_prep/contents/
+experiments/ednet_kt1/data_prep/wiki_cache/
+experiments/ednet_kt1/data_prep/ednet-content.zip
+experiments/ednet_kt1/data_prep/kt1_raw_*
+experiments/ednet_kt1/data_prep/*.parquet
+
+# ⚠ 论文 B（proxy_norm 公开基准检索研究）专用目录：按约定**整体不得推入公开仓**，
+# 含第三方语料（MIRACL-zh / C-MTEB）、已编码向量池、评测结果与 bge-m3 权重。
+experiments/public_retrieval/
+
+# 第三方模型权重（bge-m3 等）：按上游下载说明自行获取，不入库
+experiments/**/models/
+
+# 实验脚本 pip 解包到本地的第三方依赖（pyarrow 等二进制）：可随时重装，不入库
+experiments/python-deps/

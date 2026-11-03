@@ -1,17 +1,10 @@
 package com.hxz.alerttime.app.ui.home.components
 
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.heightIn
-import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -22,10 +15,15 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
-import androidx.compose.foundation.text.KeyboardOptions
 import com.hxz.alerttime.app.core.notifications.ReminderSettings
+import com.hxz.alerttime.app.ui.components.FormButtonRow
+import com.hxz.alerttime.app.ui.components.FormCaption
+import com.hxz.alerttime.app.ui.components.FormNumberField
+import com.hxz.alerttime.app.ui.components.FormScrollColumn
+import com.hxz.alerttime.app.ui.components.FormSection
+import com.hxz.alerttime.app.ui.components.FormSwitchRow
+import com.hxz.alerttime.app.ui.components.FormTimeField
 
 @Composable
 internal fun ReminderSettingsDialog(
@@ -65,75 +63,79 @@ internal fun ReminderSettingsDialog(
         shape = MaterialTheme.shapes.large,
         title = { Text("提醒设置", fontWeight = FontWeight.SemiBold) },
         text = {
-            Column(
-                modifier = Modifier
-                    .verticalScroll(rememberScrollState())
-                    .heightIn(max = 520.dp),
-                verticalArrangement = Arrangement.spacedBy(8.dp)
-            ) {
-                ReminderToggle("每日未完成计划提醒", settings.planRemindersEnabled) {
-                    settings = settings.copy(planRemindersEnabled = it)
-                }
-                ReminderToggle("休息日周目标提醒", settings.weeklyGoalRemindersEnabled) {
-                    settings = settings.copy(weeklyGoalRemindersEnabled = it)
-                }
-                // 时长输入并入开关行：左标签、中数字框、右开关，纵向行数减半。
-                ReminderToggleWithMinutes(
-                    label = "离开应用提醒（离开后）",
-                    checked = settings.awayReminderEnabled,
-                    value = awayMinutes,
-                    onCheckedChange = { settings = settings.copy(awayReminderEnabled = it) },
-                    onValueChange = { awayMinutes = it }
-                )
-                ReminderToggleWithMinutes(
-                    label = "手动暂停提醒（暂停后）",
-                    checked = settings.manualPauseReminderEnabled,
-                    value = pauseMinutes,
-                    onCheckedChange = { settings = settings.copy(manualPauseReminderEnabled = it) },
-                    onValueChange = { pauseMinutes = it }
-                )
-                ReminderToggleWithMinutes(
-                    label = "AI 求助暂停提醒（求助后）",
-                    checked = settings.aiPauseReminderEnabled,
-                    value = aiMinutes,
-                    onCheckedChange = { settings = settings.copy(aiPauseReminderEnabled = it) },
-                    onValueChange = { aiMinutes = it }
-                )
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(8.dp),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    OutlinedTextField(
-                        value = dailyHour,
-                        onValueChange = { dailyHour = it.filter(Char::isDigit).take(2) },
-                        modifier = Modifier.weight(0.9f),
-                        label = { Text("每日提醒（0—23 时）") },
-                        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
-                        singleLine = true
+            FormScrollColumn {
+                FormSection("提醒开关") {
+                    FormSwitchRow(
+                        label = "每日未完成计划提醒",
+                        checked = settings.planRemindersEnabled,
+                        onCheckedChange = { settings = settings.copy(planRemindersEnabled = it) }
                     )
-                    OutlinedTextField(
-                        value = quietStart,
-                        onValueChange = { quietStart = it.take(5) },
-                        modifier = Modifier.weight(1f),
-                        label = { Text("免打扰开始") },
-                        placeholder = { Text("22:30") },
-                        singleLine = true
-                    )
-                    OutlinedTextField(
-                        value = quietEnd,
-                        onValueChange = { quietEnd = it.take(5) },
-                        modifier = Modifier.weight(1f),
-                        label = { Text("免打扰结束") },
-                        placeholder = { Text("08:00") },
-                        singleLine = true
+                    FormSwitchRow(
+                        label = "休息日周目标提醒",
+                        checked = settings.weeklyGoalRemindersEnabled,
+                        onCheckedChange = { settings = settings.copy(weeklyGoalRemindersEnabled = it) }
                     )
                 }
-                Text(
-                    text = "免打扰开始与结束相同表示关闭免打扰；锁屏或息屏不会被视为离开；同一次暂停只提醒一次。",
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
+
+                FormSection("离开与暂停提醒") {
+                    FormSwitchRow(
+                        label = "离开应用提醒",
+                        supporting = "离开应用后多久提醒",
+                        checked = settings.awayReminderEnabled,
+                        onCheckedChange = { settings = settings.copy(awayReminderEnabled = it) },
+                        control = {
+                            FormNumberField(awayMinutes, { awayMinutes = it }, suffix = "分")
+                        }
+                    )
+                    FormSwitchRow(
+                        label = "手动暂停提醒",
+                        supporting = "暂停后多久提醒",
+                        checked = settings.manualPauseReminderEnabled,
+                        onCheckedChange = { settings = settings.copy(manualPauseReminderEnabled = it) },
+                        control = {
+                            FormNumberField(pauseMinutes, { pauseMinutes = it }, suffix = "分")
+                        }
+                    )
+                    FormSwitchRow(
+                        label = "AI 求助暂停提醒",
+                        supporting = "求助后多少分钟提醒",
+                        checked = settings.aiPauseReminderEnabled,
+                        onCheckedChange = { settings = settings.copy(aiPauseReminderEnabled = it) },
+                        control = {
+                            FormNumberField(aiMinutes, { aiMinutes = it }, suffix = "分")
+                        }
+                    )
+                }
+
+                FormSection("每日提醒与免打扰") {
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(12.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text(
+                            text = "每日提醒（0—23 时）",
+                            modifier = Modifier.weight(1f),
+                            style = MaterialTheme.typography.bodyMedium
+                        )
+                        FormNumberField(dailyHour, { dailyHour = it }, suffix = "时", maxDigits = 2)
+                    }
+                    FormButtonRow {
+                        FormTimeField(
+                            value = quietStart,
+                            onValueChange = { quietStart = it },
+                            label = "免打扰开始",
+                            modifier = Modifier.weight(1f)
+                        )
+                        FormTimeField(
+                            value = quietEnd,
+                            onValueChange = { quietEnd = it },
+                            label = "免打扰结束",
+                            modifier = Modifier.weight(1f)
+                        )
+                    }
+                    FormCaption("免打扰开始与结束相同表示关闭免打扰；锁屏或息屏不会被视为离开；同一次暂停只提醒一次。")
+                }
             }
         },
         confirmButton = {
@@ -146,45 +148,6 @@ internal fun ReminderSettingsDialog(
         },
         dismissButton = { TextButton(onClick = onDismiss) { Text("取消") } }
     )
-}
-
-@Composable
-private fun ReminderToggle(label: String, checked: Boolean, onCheckedChange: (Boolean) -> Unit) {
-    Row(
-        modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.SpaceBetween,
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        Text(label, modifier = Modifier.weight(1f), style = MaterialTheme.typography.bodyMedium)
-        Switch(checked = checked, onCheckedChange = onCheckedChange)
-    }
-}
-
-@Composable
-private fun ReminderToggleWithMinutes(
-    label: String,
-    checked: Boolean,
-    value: String,
-    onCheckedChange: (Boolean) -> Unit,
-    onValueChange: (String) -> Unit
-) {
-    Row(
-        modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.spacedBy(8.dp),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        Text(label, modifier = Modifier.weight(1f), style = MaterialTheme.typography.bodyMedium)
-        OutlinedTextField(
-            value = value,
-            onValueChange = { onValueChange(it.filter(Char::isDigit).take(3)) },
-            modifier = Modifier.width(96.dp),
-            suffix = { Text("分", style = MaterialTheme.typography.bodySmall) },
-            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
-            singleLine = true,
-            textStyle = MaterialTheme.typography.bodyMedium
-        )
-        Switch(checked = checked, onCheckedChange = onCheckedChange)
-    }
 }
 
 private fun formatMinuteOfDay(value: Int): String {

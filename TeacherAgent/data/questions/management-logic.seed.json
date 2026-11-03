@@ -2,7 +2,7 @@
   "subject": "management",
   "course": "management-logic",
   "chapter": "management-logic",
-  "status": "draft",
+  "status": "approved",
   "questions": [
     {
       "id": "management-logic-q-001",
@@ -43,7 +43,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "management-logic-q-002",
@@ -84,7 +84,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "management-logic-q-003",
@@ -123,7 +123,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "management-logic-q-004",
@@ -164,7 +164,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "management-logic-q-005",
@@ -205,7 +205,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "management-logic-q-006",
@@ -246,7 +246,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "management-logic-q-007",
@@ -287,7 +287,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "management-logic-q-008",
@@ -328,7 +328,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "management-logic-q-009",
@@ -369,7 +369,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "management-logic-q-010",
@@ -410,7 +410,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "management-logic-q-011",
@@ -451,7 +451,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "management-logic-q-012",
@@ -492,7 +492,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "management-logic-q-013",
@@ -530,7 +530,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "management-logic-q-014",
@@ -571,7 +571,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "management-logic-q-015",
@@ -609,7 +609,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "management-logic-q-016",
@@ -650,7 +650,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "management-logic-q-017",
@@ -691,7 +691,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "management-logic-q-018",
@@ -732,7 +732,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "management-logic-q-019",
@@ -773,7 +773,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "management-logic-q-020",
@@ -812,7 +812,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，基于管理类联考(199)综合能力公开考试大纲与权威资料核对事实；不含任何真题原文。"
       },
-      "status": "draft"
+      "status": "approved"
     }
   ]
 }

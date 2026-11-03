@@ -48,6 +48,7 @@ import com.hxz.alerttime.app.core.window.WindowMode
 import com.hxz.alerttime.app.core.window.displayLabel
 import com.hxz.alerttime.app.data.local.AlertTimeDatabase
 import com.hxz.alerttime.app.ui.assessment.LearningAnalysisDialogHost
+import com.hxz.alerttime.app.ui.localcoach.LocalCoachDialog
 import com.hxz.alerttime.app.ui.backup.DataBackupDialogHost
 import com.hxz.alerttime.app.ui.components.AppPageHeader
 import com.hxz.alerttime.app.ui.sync.TeacherSyncDialogHost
@@ -102,6 +103,7 @@ fun HomeScreen(
     var showBackupDialog by rememberSaveable { mutableStateOf(false) }
     var showTeacherSyncDialog by rememberSaveable { mutableStateOf(false) }
     var showLearningAnalysisDialog by rememberSaveable { mutableStateOf(false) }
+    var showLocalCoach by rememberSaveable { mutableStateOf(false) }
     Scaffold(
         modifier = modifier.fillMaxSize(),
         containerColor = MaterialTheme.colorScheme.background,
@@ -141,8 +143,12 @@ fun HomeScreen(
             onOpenBackup = { showBackupDialog = true },
             onOpenTeacherSync = { showTeacherSyncDialog = true },
             onOpenLearningAnalysis = { showLearningAnalysisDialog = true },
+            onOpenLocalCoach = { showLocalCoach = true },
             modifier = Modifier.padding(innerPadding)
         )
+    }
+    if (showLocalCoach) {
+        LocalCoachDialog(onDismiss = { showLocalCoach = false })
     }
     if (showBackupDialog) {
         DataBackupDialogHost(
@@ -187,6 +193,7 @@ private fun HomeContent(
     onOpenBackup: () -> Unit,
     onOpenTeacherSync: () -> Unit = {},
     onOpenLearningAnalysis: () -> Unit = {},
+    onOpenLocalCoach: () -> Unit = {},
     modifier: Modifier = Modifier
 ) {
     var showStudyContextDialog by rememberSaveable { mutableStateOf(false) }
@@ -259,6 +266,9 @@ private fun HomeContent(
         }
 
         uiState.lastCompletionSummary?.let { CompletionSummaryCard(summary = it) }
+        TextButton(onClick = onOpenLocalCoach, modifier = Modifier.fillMaxWidth()) {
+            Text("本地学习助手 · 打卡复盘与计划建议")
+        }
 
         NextPlanCard(nextPlan = uiState.visibleNextPlan, onAddPlan = onAddPlan)
         HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.55f))

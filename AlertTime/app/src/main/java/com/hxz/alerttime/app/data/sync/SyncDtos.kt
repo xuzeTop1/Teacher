@@ -1,5 +1,6 @@
 package com.hxz.alerttime.app.data.sync
 
+import kotlinx.serialization.EncodeDefault
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -13,6 +14,10 @@ import kotlinx.serialization.Serializable
 object SyncProtocol {
     const val FORMAT = "alerttime-teacher-sync"
     const val SCHEMA_VERSION = 1
+    /** 协议 v2：快照可携带 focusAggregates（端侧专注聚合特征，供 FB-BKT 消费）。 */
+    const val SCHEMA_VERSION_V2 = 2
+    /** focusAggregates 的默认聚合窗口（天）。 */
+    const val FOCUS_AGGREGATE_WINDOW_DAYS = 7
 
     /** 请求体上限（与 TeacherAgent 一致）。 */
     const val MAX_SYNC_BYTES = 8L * 1024L * 1024L
@@ -99,7 +104,29 @@ data class SyncSnapshotPayload(
     val tasks: List<SyncTaskDto>,
     @SerialName("studySessions") val studySessions: List<SyncStudySessionDto>,
     /** 每次同步都应生成；旧版本快照缺失时仍可被 TeacherAgent 兼容读取。 */
-    @SerialName("learningAnalysis") val learningAnalysis: SyncLearningAnalysisDto? = null
+    @SerialName("learningAnalysis") val learningAnalysis: SyncLearningAnalysisDto? = null,
+    /**
+     * 协议 v2：端侧专注聚合特征（论文 §4.3），供桌面端 FB-BKT 消费。
+     * 仅在 schemaVersion=2 的快照中携带；v1 载荷不得出现该字段。
+     */
+    @EncodeDefault(EncodeDefault.Mode.NEVER)
+    @SerialName("focusAggregates") val focusAggregates: SyncFocusAggregatesDto? = null
+)
+
+/** 端侧专注聚合特征集合（协议 v2）。 */
+@Serializable
+data class SyncFocusAggregatesDto(
+    @SerialName("perSubject") val perSubject: List<SyncFocusAggregateEntryDto> = emptyList()
+)
+
+/** 单学科聚合特征；subjectTempId 为该快照 subjects 数组的 0-based 下标。 */
+@Serializable
+data class SyncFocusAggregateEntryDto(
+    @SerialName("subjectTempId") val subjectTempId: Int,
+    @SerialName("rFocus") val rFocus: Double,
+    @SerialName("nDistract") val nDistract: Int,
+    @EncodeDefault(EncodeDefault.Mode.NEVER)
+    @SerialName("windowDays") val windowDays: Int? = null
 )
 
 @Serializable

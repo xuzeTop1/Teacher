@@ -1,10 +1,14 @@
 # TeacherAgent 项目状态记录
 
-最后更新：2026-08-11
+最后更新：2026-10-03
 当前阶段：Phase 3 + approved/draft 发布级运行时隔离 + AlertTime 同步扩展 + 考试体系（ExamTaxonomy）+ Android 独立学习分析（自动验证完成，待实机）
 维护对象：项目负责人、Codex、Claude Code、后续开发者
 
 ## 1. 当前结论
+
+**2026-10-03 最新修复状态（本工作树）**：10 月 2 日 Review 的 R01–R13 已修复，启动命令 `npm run tauri:dev` 与兼容别名 `npm run tarui-dev` 均可用。实际安装新版依赖后，75 个前端测试文件 / 1563 项测试、前端构建通过；Rust 356 项通过、5 项忽略，格式检查通过；npm 官方审计 0 项受影响包；正常用户环境中的发布检查通过。下方 8 月记录为历史结果。
+
+原生独立验证目录中已打开对话、练习、仪表盘、知识图谱和设置页，并确认同步页默认关闭；这只完成页面启动检查，不替代真实 Provider、手机同步、升级历史异常库和安装包验收。更新依赖后的最后一次窗口操作被用户按 Esc 停止，因此该次 GUI 复验未完成。该次启动日志仍出现 10 秒兜底，随后将主窗口改为初始可见显示已有加载页；最终显窗配置完成编译检查，尚未再次 GUI 验收。安装包没有重建；主 bundle 600.68 kB 的构建警告仍需性能优化。修复详情见 `docs/audits/2026-10-03-review-fixes.md`。
 
 TeacherAgent Phase 3 核心功能已完成，approved/draft 发布级运行时隔离已完成；AlertTime 单手机局域网同步扩展（`docs/decisions/2026-08-03-alerttime-lan-sync.md`）与考试体系层级模型（`docs/exam-taxonomy.md`）已落地。
 
@@ -20,12 +24,12 @@ fail-closed。Android 只允许当前用户未删除、未归档的科目被建�
 
 | 口径 | Pack 数 | 知识节点 | 题目 |
 |------|---------|----------|------|
-| **正式（approved）** | 11 | 145 | 123 |
-| **待审核（draft）** | 40 | 631 | 643 |
-| **总计** | 51 | 776 | 766 |
+| **正式（approved）** | 51 | 773 | 764 |
+| **待审核（draft）** | 1 | 5 | 4 |
+| **总计** | 52 | 778 | 768 |
 
-- 正式 Pack：`math-limits`、已审核的 8 个数学 Pack、`python-basics` 与 `cs408-computer-networks`
-- 其余 40 Pack 均为 draft，不进入默认检索、不计入正式统计
+- 正式 Pack：51 个已审核 Pack（详见 docs/knowledge-review/2026-09-11-approved-pack-promotion.md 与 docs/knowledge-review/2026-09-11-civil-common-sense-scope-promotion.md）
+- 待审核 Pack：仅 civil-common-sense（5 节点 / 4 题），不进入默认检索、不计入正式统计
 
 截至 2026-08-11 的最新自动门禁：Teacher Vitest 69 个测试文件 / 1309 个测试全部通过，`npm run build` 通过且 main bundle 为 473.78 kB；Rust `cargo test --all-targets` 283/283 通过，`cargo fmt --check` 通过，`user_version` 为 13；Android 36 suites / 264 tests 全通过，`lintDebug`（0 errors / 12 warnings）、`assembleDebug`、`assembleDebugAndroidTest` 通过。Node 协议镜像使用独立 `npm run test:protocol-mirror`，6 项通过、1 项因 Windows 符号链接权限按预期 skip，exit 0；双端 `sync/protocol` 10 个文件和 Android JVM 8 个 canonical fixture 文件逐字节一致；无设备离线跨仓闭环 exit 0。
 
@@ -751,7 +755,7 @@ cargo test                       # 全部 Rust 测试通过（132 条）
 ### 2026-07-03（CS408 知识库升级至每科 40 节点 / 40 题）
 
 - **目标**：将 QoderWork 已审计通过的 CS408 知识库从每科 20 节点 / 20 题升级为每科 40 节点 / 40 题。
-- **数据来源**：`D:\Qoder_output\cs408`（QoderWork 输出），8 个 seed 文件覆盖 4 个 CS408 学科。
+- **数据来源**：`<TOOL_OUTPUT>\cs408`（QoderWork 输出），8 个 seed 文件覆盖 4 个 CS408 学科。
 - **变更内容**：
   - 覆盖 8 个 CS408 seed 文件（4 knowledge + 4 questions），每科 40 节点 / 40 题
   - `packManifest.ts`：4 个 CS408 pack 的 `expectedNodeCount` 和 `expectedQuestionCount` 从 20 改为 40
@@ -798,7 +802,7 @@ cargo test                       # 全部 Rust 测试通过（132 条）
 ### 2026-07-04（接入物理知识库 Pack）
 
 - **目标**：接入 WorkBuddy 生成的大学物理知识库（力学、电磁学、热学、波动与光学、近代物理）。
-- **数据来源**：`D:\WorkBuddy_output\physics`（5 knowledge + 5 questions seed 文件）。
+- **数据来源**：`<TOOL_OUTPUT>\physics`（5 knowledge + 5 questions seed 文件）。
 - **变更内容**：
   - 拷入 10 个 seed 文件到 `data/knowledge/` 和 `data/questions/`
   - `packManifest.ts`：新增 5 个 physics Pack（mechanics/electromagnetism/thermodynamics/waves-optics/modern）
@@ -1095,7 +1099,7 @@ cargo test                       # 全部 Rust 测试通过（132 条）
 
 ### 2026-08-11（无设备跨层回放门禁）
 
-- **单命令入口（主 Agent 已实际复跑）**：Windows PowerShell 5.1 AST 解析通过；Node mirror 单测 7 项中 6 passed、1 skipped，跳过原因为 Windows 无符号链接权限且逻辑为明确拒绝。执行 `npm run verify:alerttime-offline -- -AlertTimeRoot "C:\Users\Acer\Documents\AlertTime-teacheragent-json" -RustToolchainBin "D:\DevEnv\Caches\.rustup\toolchains\stable-x86_64-pc-windows-msvc\bin"` 完整 exit 0。Teacher canonical Vitest 10 passed，Rust `snapshot_route_` 2 passed，Android `LearningAnalysisOfflineReplayTest` JVM 类通过且 Gradle `BUILD SUCCESSFUL`；双端协议 10 files identical。
+- **单命令入口（主 Agent 已实际复跑）**：Windows PowerShell 5.1 AST 解析通过；Node mirror 单测 7 项中 6 passed、1 skipped，跳过原因为 Windows 无符号链接权限且逻辑为明确拒绝。执行 `npm run verify:alerttime-offline -- -AlertTimeRoot "<ALERTTIME_ROOT>" -RustToolchainBin "<RUSTUP_HOME>\toolchains\stable-x86_64-pc-windows-msvc\bin"` 完整 exit 0。Teacher canonical Vitest 10 passed，Rust `snapshot_route_` 2 passed，Android `LearningAnalysisOfflineReplayTest` JVM 类通过且 Gradle `BUILD SUCCESSFUL`；双端协议 10 files identical。
 - **离线边界与守卫结果**：无 ADB、无设备、无安装/卸载/清数据、无 connectedAndroidTest；`local.properties` 未创建或修改，脚本守卫通过；无 rustup 自动修复、无 Git 暂存/提交。该结果不替代 instrumentation、真实 Provider 或局域网手机—桌面真机闭环。
 
 - **Teacher HTTP 回放**：在 Axum Router 内直接回放 canonical `snapshot-valid.json`，覆盖凭据鉴权、信封与学习分析校验、SQLite 导入、`snapshotAck` 和 read model 读取；错误 `sourceSnapshotId` 返回 422，并确认 `sync_snapshots` / `sync_learning_analyses` 均无残留。测试不监听端口、不访问网络。

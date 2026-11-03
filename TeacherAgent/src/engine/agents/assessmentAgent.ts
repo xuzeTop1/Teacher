@@ -35,6 +35,15 @@ export function assessTutorTurn(input: AssessmentAgentInput): AssessmentResult {
 function inferCorrectness(input: AssessmentAgentInput): AssessmentCorrectness {
   const message = input.userMessage
   const reply = input.tutorReply
+  const negatedConfirmation = /(?:并?不(?:是|算|一定)?|并非|不能说|未必|没有|尚未)[^。！？?\n]{0,12}(?:完全正确|是正确的|推理正确|你的答案正确)/.test(reply)
+  // Negative or mixed feedback must not become a positive observation just
+  // because it contains "完全正确". Explicit partial feedback remains partial.
+  if (negatedConfirmation && !/(?:不会|不懂|看不懂|卡住|没思路|算不出来)/.test(message)
+    && /(?:我算|我觉得|我认为|因为|所以|=|≈|->|→|得出|答案是)/.test(message)) {
+    if (/(?:关键错误|问题在于|错在|需要重新)/.test(reply)) return "incorrect"
+    if (/(?:部分正确|方向是对|这一步对|还差)/.test(reply)) return "partially_correct"
+    return "unknown"
+  }
 
   if (/(?:不会|不懂|看不懂|卡住|没思路|算不出来)/.test(message)) {
     return "unknown"

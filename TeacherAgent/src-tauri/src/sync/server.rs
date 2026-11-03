@@ -597,6 +597,12 @@ async fn handle_snapshots(
     if let Err(errors) = validate_learning_analysis(&envelope.payload, &snapshot_id) {
         return ApiError::new(422, "invalid_learning_analysis", errors.join("；")).into();
     }
+    // 协议 v2：focusAggregates 的形状/取值/下标引用必须自洽（v1 快照无此字段直接通过）。
+    if let Err(errors) =
+        super::protocol::validate_focus_aggregates(&envelope.payload, envelope.schema_version)
+    {
+        return ApiError::new(422, "invalid_focus_aggregates", errors.join("；")).into();
+    }
 
     let mut connection = match state.db.lock() {
         Ok(connection) => connection,

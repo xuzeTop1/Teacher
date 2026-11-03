@@ -116,6 +116,7 @@ export interface StoredAssessmentResult {
   assessmentType: string
   overallLevel: string
   createdAt: string
+  knowledgeUpdates: StudentKnowledgeMastery[]
 }
 
 export interface StoredProviderConfig {
@@ -1008,6 +1009,36 @@ export async function searchPrivateDocumentChunks(
   return invoke<PrivateChunkSearchResult[]>("search_private_document_chunks", {
     query,
     subjectCode,
+    limit: limit ?? 5
+  })
+}
+
+/**
+ * 跨源混合检索（论文 §4.2）：私有文档倒排通道 + 知识库向量稠密通道，服务端 RRF 融合。
+ * queryEmbedding 缺省时自动退化为纯倒排结果（前端未配置嵌入服务时的安全默认）。
+ */
+export interface HybridSearchHit {
+  /** 来源：私有资料片段 / 种子知识点 / 题库 */
+  source: "private_chunk" | "knowledge_node" | "question"
+  id: string
+  rrfScore: number
+  bm25Rank: number | null
+  denseRank: number | null
+  denseScore: number | null
+}
+
+export async function searchHybridContext(
+  query: string,
+  embeddingModel: string,
+  queryEmbedding?: number[],
+  subjectCode?: string,
+  limit?: number
+): Promise<HybridSearchHit[]> {
+  return invoke<HybridSearchHit[]>("search_hybrid_context", {
+    query,
+    embeddingModel,
+    queryEmbedding: queryEmbedding ?? null,
+    subjectCode: subjectCode ?? null,
     limit: limit ?? 5
   })
 }

@@ -8,6 +8,9 @@
 -keepattributes InnerClasses
 -keepattributes EnclosingMethod
 
+# JNI entry names must remain stable after R8.
+-keep class com.hxz.alerttime.app.data.localmodel.QwenNative { *; }
+
 # ---- Kotlin ----
 -dontwarn kotlin.**
 -keep class kotlin.Metadata { *; }

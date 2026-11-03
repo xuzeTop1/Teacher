@@ -11,5 +11,6 @@
 pub(crate) mod commands;
 pub(crate) mod db;
 pub(crate) mod protocol;
+mod local_coach;
 pub(crate) mod server;
 pub(crate) mod tls;

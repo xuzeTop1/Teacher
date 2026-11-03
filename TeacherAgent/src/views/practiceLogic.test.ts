@@ -11,6 +11,18 @@ import type { QuestionBankSearchOutput } from "../types/tool"
 // ─── evaluateAnswer ────────────────────────────────────────────────────────────
 
 describe("evaluateAnswer", () => {
+  it.each(["不是2，答案是3", "2+2=4", "2或3", "答案不是2", "2米", "0x2"])(
+    "does not turn ambiguous numeric input %s into a correct answer", (answer) => {
+      expect(evaluateAnswer(answer, "2")).toBe(false)
+    },
+  )
+  it.each(["答案为2", "the answer is 2", "2.0", "2e0"])("accepts a complete numeric answer %s", (answer) => {
+    expect(evaluateAnswer(answer, "2")).toBe(true)
+  })
+  it("compares a labelled scientific-notation answer as a whole", () => {
+    expect(evaluateAnswer("答案是 2e3", "2000")).toBe(true)
+    expect(evaluateAnswer("答案是 2e3", "2")).toBe(false)
+  })
   describe("纯数字答案：严格数值比较", () => {
     it("correctAnswer=0, studentAnswer=10 => false", () => {
       expect(evaluateAnswer("10", "0")).toBe(false)

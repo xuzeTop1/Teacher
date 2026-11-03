@@ -65,7 +65,7 @@ schemaVersion：`1`
 | 字段 | 类型 | 说明 |
 | --- | --- | --- |
 | `format` | string | 固定 `alerttime-teacher-sync`，严格校验 |
-| `schemaVersion` | int | 固定 `1`；不支持其他版本，否则整批拒绝 |
+| `schemaVersion` | int | `1` 或 `2`；其他版本整批拒绝。`2` 表示 snapshot 载荷可携带 `focusAggregates`（见 4.1.1） |
 | `messageType` | string | `pair`、`pairAck`、`unpairAck`、`snapshot`、`snapshotAck`、`proposal`、`proposalDecision`、`decisionAck` 之一 |
 | `deviceId` | string | 跨设备稳定 ID，配对时由 TeacherAgent 生成（UUID） |
 | `snapshotId` | string | 快照消息的幂等 ID（UUID）；`messageType` 非 snapshot 时可省略或为 `batchId` |
@@ -183,6 +183,54 @@ schemaVersion：`1`
 ```
 
 `snapshotAck` 信封中的 `snapshotId` 必须回显请求中的 `snapshotId`，手机端据此关联确认。
+
+### 4.1.1 snapshot v2：focusAggregates（端侧专注聚合特征）
+
+`schemaVersion = 2` 的快照载荷可携带可选字段 `focusAggregates`，用于把手机端的专注行为
+聚合后交给桌面端的 FB-BKT（论文 §4.3）。`schemaVersion = 1` 的快照不得携带该字段
+（v1 JSON Schema 对该载荷 `additionalProperties = false`，携带即整批拒绝）。
+
+```jsonc
+"payload": {
+  // ...subjects / weeklyGoals / tasks / studySessions / learningAnalysis 不变
+  "focusAggregates": {
+    "perSubject": [
+      { "subjectTempId": 0, "rFocus": 0.813, "nDistract": 3, "windowDays": 7 }
+    ]
+  }
+}
+```
+
+| 字段 | 类型 | 语义与约束 |
+| --- | --- | --- |
+| `perSubject` | array | 每个学科至多一条；不要求覆盖全部学科（缺失表示该学科暂无可靠聚合） |
+| `perSubject[].subjectTempId` | int | 该学科在**同一快照** `payload.subjects` 数组中的 0-based 下标；越界或重复即拒绝 |
+| `perSubject[].rFocus` | number | 前序学习会话的有效专注率，取值 `[0, 1]` |
+| `perSubject[].nDistract` | int | 分心事件计数，非负整数 |
+| `perSubject[].windowDays` | int? | 聚合窗口天数，可选；出现时取值 `[1, 365]` |
+
+校验与落库语义：
+
+- 快照整体校验（4.1 节）通过后，再校验 `focusAggregates`；任一条目越界即返回
+  `422 invalid_focus_aggregates`，整批不写库。
+- 桌面端按**全量替换**语义维护 `sync_focus_aggregates`（逐设备一张最新表），
+  并把 `subjectTempId` 解析为对应 `subjects[i].remoteId` 保存，供学科映射后消费。
+- 版本协商：校验通过的 v1/v2 快照均返回 `snapshotAck(accepted=true)`；手机端可在
+  `protocolCapabilities` 中声明 `fullSnapshotV2`。同步只保存专注聚合，不按版本选择掌握度算法。
+- 桌面持久化评估时，二元对错配合有效专注特征才使用 FB-BKT：隐式特征须来自未撤销设备，
+  owner 与学科映射匹配，且聚合在最近 24 小时内收到；调用方显式提供的特征优先，不受该查询限制。
+  否则使用“掌握度加增量”；增量来自练习中的旧 BKT 辅助函数或对话规则（练习辅助调用失败时用固定增量）。
+
+相关 fixture（两端逐字一致，见 8 节）：
+
+| fixture | 期望 |
+| --- | --- |
+| `snapshot-v2-valid.json` | 接受 |
+| `snapshot-v2-empty-focus-aggregates.json` | 接受（聚合暂空） |
+| `snapshot-v2-rfocus-out-of-range.json` | 拒绝（`rFocus > 1`） |
+| `snapshot-v2-ndistract-negative.json` | 拒绝（`nDistract < 0`） |
+| `snapshot-v2-subject-temp-id-out-of-range.json` | 拒绝（下标越界） |
+| `snapshot-v2-version-mismatch.json` | 拒绝（v1 信封携带 v2 字段） |
 
 ### 4.2 proposal（TeacherAgent → AlertTime）
 
@@ -332,3 +380,21 @@ fixture 清单：
 | `pair-valid.json` | 合法配对请求 |
 
 两端测试必须从各自仓库读取同一份 fixture，并校验 SHA-256 与 `SHA256SUMS` 一致；任何一侧修改 fixture 必须同步另一侧并重新生成 `SHA256SUMS`。
+
+## 2026-10-19 本地推断扩展 B1（当前线格式）
+
+本节替代 A1 试验扩展；旧 A1 方案已归档，不得与当前线格式混用。快照在 `payload.learningAnalysis.inferences` 增加可选数组，与 `profile.facts` 分开。旧客户端缺少该区块时按空列表处理，继续保存原快照；能力位为 `localInferencesV1`，协议主版本仍按既有规则选择 v1/v2，能力位表示字段支持情况。来源端在编码含本地区块的快照时声明该能力。
+
+每项记录为严格扁平对象，公共白名单为 `task, source, fallback_reason, model_id, model_sha256, schema_version, created_at`；任务字段仅允许：
+
+- `extract_factors`：`r_focus, n_distract, perceived_difficulty, confidence`。
+- `plan_create_advice`：`risk, commitment`。
+- `plan_delete_inference`：`abandon_reason, frustration_level, suggest_action, bkt_signal`。
+
+`source` 为 `model | fallback_rule | fallback_default`；`fallback_reason` 为 `none | model_missing | hash_mismatch | oom | low_battery | timeout | invalid_output | runtime_error`。模型记录须使用 `none`；失败记录须有具体原因。Task 1 的默认值为 `r_focus=1.0, n_distract=0`，其余两个数值缺省；Task 2 风险只能是规则结果，降级建议为固定模板；Task 3 失败不写推断区记录，不更新 BKT。
+
+对象拒绝未知字段、非法枚举、重复任务、超过三个任务、类型/范围错误、Task 3 降级记录，以及任何在 `facts` 中复制本地推断字段的快照。`evidence` 与自由文本 `advice` 不属于同步格式；不得将它们放入快照、应用日志或崩溃报告。推断区仅存任务结构化字段，桌面端仅持久化与展示，不触发掌握度/BKT 计算、检索或建议。
+
+正向 fixture：`snapshot-inferences-task1-valid.json`、`snapshot-inferences-task2-valid.json`、`snapshot-inferences-task3-valid.json`、`snapshot-inferences-all-valid.json`、`snapshot-inferences-fallback-valid.json`。负向 fixture 覆盖 evidence、advice、白名单外字段、枚举、BKT 越界、Task 3 降级和 facts 提升。Kotlin、Rust 与桌面 TypeScript 校验器以同一 fixture 集验证；文件摘要位于 `fixtures/SHA256SUMS`。
+
+本扩展不变更协议主版本，不新增数据库迁移，不改动 TeacherAgent 的 FB-BKT 计算；缺区块兼容维持。实现批次 B 当前仍为**未冻结**，本段是实现协议说明，不代表实验冻结或正式实验已运行。

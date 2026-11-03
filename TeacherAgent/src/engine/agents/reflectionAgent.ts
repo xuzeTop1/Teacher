@@ -1,3 +1,4 @@
+import { filterProviderHistory } from "../../services/privacy/authorizationEpoch"
 import type {
   NextBestActionType,
   ObservedPerformance,
@@ -416,14 +417,21 @@ interface LlmReflectionInput {
  */
 export async function reflectOnTutorTurnWithLlm(
   input: ReflectionAgentInput,
-  providerConfig: { baseUrl: string; apiKeyRef: string; model: string }
+  providerConfig: { baseUrl: string; apiKeyRef: string; model: string; isLocal?: boolean }
 ): Promise<ReflectionAgentResult> {
+  // A reply to a pre-reduction request is treated as part of that old turn,
+  // including when the reply finishes after permissions changed.
+  if (!filterProviderHistory([input], providerConfig.isLocal).length) return reflectOnTutorTurn(input)
+  const outboundInput = {
+    ...input,
+    recentMessages: filterProviderHistory(input.recentMessages ?? [], providerConfig.isLocal)
+  }
   try {
     const contextMessages = [
       { role: "system" as const, content: LLM_REFLECTION_PROMPT },
       {
         role: "user" as const,
-        content: buildReflectionPrompt(input)
+        content: buildReflectionPrompt(outboundInput)
       }
     ]
 

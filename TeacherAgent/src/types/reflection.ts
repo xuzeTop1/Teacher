@@ -68,12 +68,13 @@ export interface ReflectionProfileUpdates {
 }
 
 export interface ReflectionAgentInput {
+  createdAt?: string
   studentId: string
   conversationId: string
   subjectCode: SubjectCode
   userMessage: string
   tutorReply: string
-  recentMessages?: Array<{ role: string; content: string }>
+  recentMessages?: Array<{ role: string; content: string; createdAt?: string }>
   mode: string
   maxHintLevel: HintLevel
   strategy: string

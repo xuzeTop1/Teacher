@@ -1,0 +1,13 @@
+{
+  "format": "alerttime-local-coach-v1",
+  "baseModel": "Qwen/Qwen2.5-0.5B-Instruct",
+  "fineTune": "bkt-v2",
+  "file": "qwen2.5-0.5b-bkt-v2-q4_k_m.gguf",
+  "bytes": 397807424,
+  "sha256": "daed6c55a53da9196c8ce1f6ce5b645d731ad628d3b78946b0f564dd56e83cf8",
+  "engine": "llama.cpp",
+  "engineCommit": "932a68e06845a1240227b6cb8d8c6ba38fdbef8d",
+  "tasks": ["extract_factors", "plan_create_advice", "plan_delete_inference"],
+  "execution": "on-device-cpu",
+  "automaticStateChanges": false
+}

@@ -5,12 +5,15 @@ from __future__ import annotations
 import re
 from ..schema import PageOrSheet, ParseResult
 
-MAX_FILE_SIZE = 50 * 1024 * 1024  # 50MB（预览解析上限）
+MAX_FILE_SIZE = 50 * 1024 * 1024  # 50MB（唯一的内容级上限）
 
-# ── 预览模式限制 ────────────────────────────────────────────────────────────
-MAX_PREVIEW_PAGES = 20       # 最多解析页数
-MAX_PLAIN_TEXT_CHARS = 30000  # 全文最大字符数
-MAX_PAGE_TEXT_CHARS = 3000    # 单页最大字符数
+# ── 解析上限（内存 / 子进程超时兜底，不是内容上限）────────────────────────
+# 这些值原先按"预览模式"设得很小，但同一份 payload 也被入库复用，会静默截断长文档。
+# 注意：Rust 侧子进程超时 WORKER_TIMEOUT = 30s，而 PDF 走 pdfplumber/pymupdf 较慢，
+# 所以页数上限要留余量；需要解析更大的 PDF 时应同时调大 WORKER_TIMEOUT。
+MAX_PREVIEW_PAGES = 100          # 最多解析页数
+MAX_PLAIN_TEXT_CHARS = 1_000_000  # 全文最大字符数
+MAX_PAGE_TEXT_CHARS = 20_000      # 单页最大字符数
 
 # ── Unicode 清理 ────────────────────────────────────────────────────────────
 # 匹配 U+100000 以上的 private-use 字符（SMP 区域），以及 U+E000-U+FFFF 的 BMP PUA
@@ -31,6 +34,28 @@ def _clean_text(text: str) -> str:
     text = _CONTROL_RE.sub('', text)
     text = _MULTI_SPACE_RE.sub('  ', text)
     return text.strip()
+
+
+def _clean_pdf_title(raw_title: str) -> str:
+    """清理并解码 PDF 元数据标题（支持十六进制转义与 GBK/UTF-8 编码）。"""
+    if not raw_title:
+        return ""
+    title = raw_title.strip()
+    if title.startswith("<") and title.endswith(">") and len(title) > 2:
+        hex_content = title[1:-1].strip()
+        if len(hex_content) % 2 == 0:
+            try:
+                raw_bytes = bytes.fromhex(hex_content)
+                for enc in ("utf-8", "gbk", "gb18030", "utf-16-be", "utf-16-le"):
+                    try:
+                        decoded = raw_bytes.decode(enc).strip()
+                        if decoded:
+                            return decoded
+                    except (UnicodeDecodeError, LookupError):
+                        continue
+            except ValueError:
+                pass
+    return title
 
 
 def _check_encrypted(file_path: str, warnings: list[str]) -> None:
@@ -101,11 +126,15 @@ def _try_pymupdf(file_path: str, warnings: list[str]) -> ParseResult | None:
     pages_to_parse = min(total_pages, MAX_PREVIEW_PAGES)
 
     if total_pages > MAX_PREVIEW_PAGES:
-        warnings.append(f"文档共 {total_pages} 页，已仅解析前 {MAX_PREVIEW_PAGES} 页用于预览。")
+        warnings.append(
+            f"文档共 {total_pages} 页，超过单次解析上限，已截取前 {MAX_PREVIEW_PAGES} 页；建议拆分后重新导入。"
+        )
 
     for i in range(pages_to_parse):
         if total_chars >= MAX_PLAIN_TEXT_CHARS:
-            warnings.append(f"内容较长，已截取前 {MAX_PLAIN_TEXT_CHARS} 字符用于预览。")
+            warnings.append(
+                f"内容超过 {MAX_PLAIN_TEXT_CHARS} 字符的安全上限，已截取；建议拆分后重新导入。"
+            )
             break
 
         try:
@@ -132,7 +161,7 @@ def _try_pymupdf(file_path: str, warnings: list[str]) -> ParseResult | None:
     try:
         meta = doc.metadata
         if meta:
-            title = meta.get("title", "") or ""
+            title = _clean_pdf_title(meta.get("title", "") or "")
     except Exception:
         pass
     doc.close()
@@ -220,7 +249,7 @@ def _try_pdfplumber(file_path: str, warnings: list[str]) -> ParseResult | None:
             title = ""
             try:
                 meta = pdf.metadata or {}
-                title = meta.get("Title", "") or ""
+                title = _clean_pdf_title(meta.get("Title", "") or "")
             except Exception:
                 pass
 
@@ -302,7 +331,8 @@ def _try_pypdf(file_path: str, warnings: list[str]) -> ParseResult | None:
         title = ""
         try:
             meta = reader.metadata or {}
-            title = meta.get("/Title", "") or meta.get("title", "") or ""
+            raw_title = meta.get("/Title", "") or meta.get("title", "") or ""
+            title = _clean_pdf_title(raw_title)
         except Exception:
             pass
 

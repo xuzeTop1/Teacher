@@ -62,9 +62,25 @@ fn open_connection(app: &AppHandle) -> Result<rusqlite::Connection, String> {
 /// 虚拟/隧道/非直连网卡名称片断，枚举局域网 IPv4 时排除，避免把已断开或
 /// 虚拟网卡（VirtualBox、OpenVPN、Teredo、蓝牙 PAN 等）的遗留地址当可用接口。
 const VIRTUAL_IFACE_KEYWORDS: &[&str] = &[
-    "virtualbox", "vmware", "vbox", "virtual", "teredo", "wintun", "openvpn",
-    "surfshark", "tailscale", "zerotier", "tunnel", "vpn", "bluetooth",
-    "蓝牙", "虚拟", "windows.nt.host-window", "wi-fi direct", "热点", "wlan 2",
+    "virtualbox",
+    "vmware",
+    "vbox",
+    "virtual",
+    "teredo",
+    "wintun",
+    "openvpn",
+    "surfshark",
+    "tailscale",
+    "zerotier",
+    "tunnel",
+    "vpn",
+    "bluetooth",
+    "蓝牙",
+    "虚拟",
+    "windows.nt.host-window",
+    "wi-fi direct",
+    "热点",
+    "wlan 2",
 ];
 
 fn is_usable_ipv4(ip: &Ipv4Addr, iface_name: &str) -> bool {
@@ -100,16 +116,21 @@ mod windows_net {
         // 先获取所需缓冲区大小。
         let flags = 0u32;
         let err = unsafe {
-            GetAdaptersAddresses(AF_INET as u32, flags, ptr::null(), ptr::null_mut(), &mut size)
+            GetAdaptersAddresses(
+                AF_INET as u32,
+                flags,
+                ptr::null(),
+                ptr::null_mut(),
+                &mut size,
+            )
         };
         if err != windows_sys::Win32::Foundation::ERROR_BUFFER_OVERFLOW && size == 0 {
             return result;
         }
         let mut buffer = vec![0u8; size as usize];
         let adapter = buffer.as_mut_ptr() as *mut IP_ADAPTER_ADDRESSES_LH;
-        let err = unsafe {
-            GetAdaptersAddresses(AF_INET as u32, flags, ptr::null(), adapter, &mut size)
-        };
+        let err =
+            unsafe { GetAdaptersAddresses(AF_INET as u32, flags, ptr::null(), adapter, &mut size) };
         if err != 0 {
             return result;
         }
@@ -651,7 +672,10 @@ mod tests {
 
     #[test]
     fn usable_ipv4_accepts_private_and_public_rfc1918() {
-        assert!(is_usable_ipv4(&"10.248.148.58".parse().unwrap(), "Remote NDIS Compatible Device"));
+        assert!(is_usable_ipv4(
+            &"10.248.148.58".parse().unwrap(),
+            "Remote NDIS Compatible Device"
+        ));
         assert!(is_usable_ipv4(&"192.168.1.5".parse().unwrap(), "以太网"));
         assert!(is_usable_ipv4(&"172.16.0.9".parse().unwrap(), "Wi-Fi"));
     }
@@ -659,23 +683,44 @@ mod tests {
     #[test]
     fn usable_ipv4_rejects_loopback_apipa_and_unspecified() {
         assert!(!is_usable_ipv4(&"127.0.0.1".parse().unwrap(), "Loopback"));
-        assert!(!is_usable_ipv4(&"169.254.250.250".parse().unwrap(), "以太网 3"));
+        assert!(!is_usable_ipv4(
+            &"169.254.250.250".parse().unwrap(),
+            "以太网 3"
+        ));
         assert!(!is_usable_ipv4(&"0.0.0.0".parse().unwrap(), "以太网"));
     }
 
     #[test]
     fn usable_ipv4_rejects_virtual_tunnel_and_bluetooth_ifaces() {
-        assert!(!is_usable_ipv4(&"192.168.56.1".parse().unwrap(), "VirtualBox Host-Only Ethernet Adapter"));
-        assert!(!is_usable_ipv4(&"10.248.148.58".parse().unwrap(), "Teredo Tunneling Pseudo-Interface"));
-        assert!(!is_usable_ipv4(&"192.168.50.1".parse().unwrap(), "OpenVPN Data Channel Offload"));
-        assert!(!is_usable_ipv4(&"10.64.219.224".parse().unwrap(), "蓝牙网络连接"));
+        assert!(!is_usable_ipv4(
+            &"192.168.56.1".parse().unwrap(),
+            "VirtualBox Host-Only Ethernet Adapter"
+        ));
+        assert!(!is_usable_ipv4(
+            &"10.248.148.58".parse().unwrap(),
+            "Teredo Tunneling Pseudo-Interface"
+        ));
+        assert!(!is_usable_ipv4(
+            &"192.168.50.1".parse().unwrap(),
+            "OpenVPN Data Channel Offload"
+        ));
+        assert!(!is_usable_ipv4(
+            &"10.64.219.224".parse().unwrap(),
+            "蓝牙网络连接"
+        ));
     }
 
     #[test]
     fn usable_ipv4_rejects_disconnected_names_case_insensitive() {
         // Wintun（WireGuard）与 Wi-Fi Direct 不应出现在局域网同步列表。
-        assert!(!is_usable_ipv4(&"10.0.0.5".parse().unwrap(), "Wintun Userspace Tunnel"));
-        assert!(!is_usable_ipv4(&"10.0.0.6".parse().unwrap(), "Microsoft Wi-Fi Direct Virtual Adapter #3"));
+        assert!(!is_usable_ipv4(
+            &"10.0.0.5".parse().unwrap(),
+            "Wintun Userspace Tunnel"
+        ));
+        assert!(!is_usable_ipv4(
+            &"10.0.0.6".parse().unwrap(),
+            "Microsoft Wi-Fi Direct Virtual Adapter #3"
+        ));
     }
 
     #[test]
@@ -794,8 +839,15 @@ mod tests {
             ))
             .expect("proposal source id schema");
         connection
-            .execute_batch(include_str!("../../migrations/0014_sync_owner_identity.sql"))
+            .execute_batch(include_str!(
+                "../../migrations/0014_sync_owner_identity.sql"
+            ))
             .expect("owner identity schema");
+        connection
+            .execute_batch(include_str!(
+                "../../migrations/0017_sync_focus_aggregates.sql"
+            ))
+            .expect("focus aggregates schema");
         connection
     }
 

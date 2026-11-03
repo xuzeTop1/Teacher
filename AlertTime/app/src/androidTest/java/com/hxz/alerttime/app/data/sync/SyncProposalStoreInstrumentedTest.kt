@@ -186,10 +186,12 @@ class SyncProposalStoreInstrumentedTest {
     @Test
     fun invalidSubjectReference_rollsBackWholeBatch() = runBlocking {
         seedSubjectWithRemoteId()
-        // 引用了不存在的科目 → 整批拒绝，周目标也不得创建（单事务回滚）。
+        // 引用了不属于当前用户活跃科目集合的科目 → 整批拒绝，周目标也不得创建（单事务回滚）。
+        // 实现只抛一条统一文案（不区分「不存在」与「已归档/已删除」，见 SyncProposalStore.kt:165），
+        // 故按统一文案断言；本用例真正的断言点是下面的零写入与回滚。
         val p = proposal(subjectRemoteId = "subject-does-not-exist")
         val error = acceptExpectingFailure(p)
-        assertTrue(error.message!!.contains("不存在"))
+        assertTrue(error.message!!.contains("未删除未归档"))
         assertEquals(0, database.weeklyGoalDao().exportAll().size)
         assertEquals(0, database.taskDao().exportAll().size)
         assertFalse(store.processedProposalIds().contains(p.proposalId))
@@ -292,7 +294,7 @@ class SyncProposalStoreInstrumentedTest {
         // 第二个建议引用非法科目 → 事务失败，旧数据完整。
         val bad = proposal(id = "bbbb-2222", subjectRemoteId = "missing-subject")
         val error = acceptExpectingFailure(bad)
-        assertTrue(error.message!!.contains("不存在"))
+        assertTrue(error.message!!.contains("未删除未归档"))
 
         assertEquals(goalsBefore, database.weeklyGoalDao().exportAll().size)
         assertEquals(tasksBefore, database.taskDao().exportAll().size)

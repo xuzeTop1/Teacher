@@ -110,6 +110,22 @@ pub(crate) struct SaveAssessmentResultInput {
     pub(crate) recommendations_json: String,
     pub(crate) evidence_json: String,
     pub(crate) created_at: Option<String>,
+    /// 端侧专注聚合特征（论文 §4.3）：提供时本次评估走 FB-BKT，否则沿用原 delta 路径。
+    #[serde(default)]
+    pub(crate) focus_features: Option<FocusFeatures>,
+}
+
+/// 同步快照携带的端侧专注聚合特征，用于 FB-BKT 的两项行为输入。
+#[derive(Deserialize, Serialize, Clone, Debug)]
+#[serde(rename_all = "camelCase")]
+pub(crate) struct FocusFeatures {
+    /// 前序学习会话有效专注率 R_focus ∈ [0,1]
+    pub(crate) r_focus: f64,
+    /// 分心事件计数 N_distract
+    pub(crate) n_distract: u32,
+    /// 提供本次特征的快照 ID（可解释性回放用）
+    #[serde(default)]
+    pub(crate) snapshot_id: Option<String>,
 }
 
 #[derive(Serialize)]
@@ -122,6 +138,8 @@ pub(crate) struct StoredAssessmentResult {
     pub(crate) assessment_type: String,
     pub(crate) overall_level: String,
     pub(crate) created_at: String,
+    /// Authoritative node state after the assessment transaction commits.
+    pub(crate) knowledge_updates: Vec<StoredStudentKnowledgeMastery>,
 }
 
 #[derive(Serialize)]

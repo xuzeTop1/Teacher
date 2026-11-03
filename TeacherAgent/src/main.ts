@@ -8,7 +8,13 @@ import App from "./App.vue"
 import { router } from "./router"
 import { vuetify } from "./plugins/vuetify"
 
-createApp(App).use(createPinia()).use(router).use(vuetify).mount("#app")
+const app = createApp(App)
+
+app.config.errorHandler = (err, instance, info) => {
+  console.error("[TeacherAgent Global Error]", err, info)
+}
+
+app.use(createPinia()).use(router).use(vuetify).mount("#app")
 
 void router.isReady()
   .then(() => {

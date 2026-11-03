@@ -744,4 +744,50 @@ mod tests {
         let watchdog_ms = 30000u64.saturating_add(WATCHDOG_BUFFER_MS);
         assert_eq!(watchdog_ms, 32000);
     }
+
+    fn runner_input() -> CodeRunnerInput {
+        CodeRunnerInput {
+            code: "print(1)".to_string(),
+            stdin: String::new(),
+            test_cases: vec![],
+            timeout_ms: 5000,
+        }
+    }
+
+    /// 闸门必须先于 sidecar 定位生效。
+    ///
+    /// 若顺序反了，"环境未授权"会被报成"sidecar 未找到"，用户按安装包损坏去修，
+    /// 而真实原因是安全闸门关闭——错误归因会掩盖安全行为本身。
+    #[test]
+    fn test_gate_closed_rejects_before_sidecar_resolution() {
+        std::env::remove_var(TRUSTED_EXECUTION_ENV);
+        std::env::remove_var(TRUSTED_EXECUTION_UI_ENV);
+
+        let err = run_code_with_worker(&runner_input()).unwrap_err();
+        assert_eq!(err, TRUSTED_EXECUTION_ERROR);
+        assert!(!err.contains("sidecar 未找到"));
+    }
+
+    /// Release 构建里闸门是编译期常量 false：两个绕过开关都打开也必须拒绝。
+    ///
+    /// 该用例只在 `cargo test --release` 下存在；它被执行本身就证明测试
+    /// 目标用的是 `debug_assertions = false` 的 release 配置。
+    #[cfg(not(debug_assertions))]
+    #[test]
+    fn test_release_gate_is_closed_even_with_both_bypass_switches() {
+        std::env::set_var(TRUSTED_EXECUTION_ENV, "1");
+        std::env::set_var(TRUSTED_EXECUTION_UI_ENV, "1");
+
+        assert!(
+            !trusted_code_execution_enabled(),
+            "release 构建里闸门不得被环境变量打开"
+        );
+        assert_eq!(
+            run_code_with_worker(&runner_input()).unwrap_err(),
+            TRUSTED_EXECUTION_ERROR
+        );
+
+        std::env::remove_var(TRUSTED_EXECUTION_ENV);
+        std::env::remove_var(TRUSTED_EXECUTION_UI_ENV);
+    }
 }

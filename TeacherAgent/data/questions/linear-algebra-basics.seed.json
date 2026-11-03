@@ -1,7 +1,7 @@
 {
   "subject": "math",
   "course": "linear_algebra",
-  "status": "draft",
+  "status": "approved",
   "questions": [
     {
       "id": "la-q001",
@@ -42,7 +42,7 @@
     {
       "id": "la-q002",
       "title": "二阶行列式计算",
-      "content": "计算行列式 $\\begin{vmatrix} 3 & 1 \\\\ 2 & 4 \\end{vmatrix}$的值。",
+      "content": "计算行列式 $\\det([3, 1; 2, 4])$ 的值。",
       "type": "solution",
       "difficulty": 1,
       "knowledgeNodeIds": [
@@ -50,8 +50,8 @@
       ],
       "answer": "10",
       "solutionSteps": [
-        "二阶行列式 $\\begin{vmatrix} a & b \\\\\\ c & d \\end{vmatrix} =$ad $- bc$",
-        "$\\begin{vmatrix} 3 & 1 \\\\ 2 & 4 \\end{vmatrix} = 3\\times4 - 1\\times2 = 12 - 2 = 10$"
+        "二阶行列式 $\\det([a, b; c, d]) = ad - bc$",
+        "$\\det([3, 1; 2, 4]) = 3\\times4 - 1\\times2 = 12 - 2 = 10$"
       ],
       "hints": [
         {
@@ -77,7 +77,7 @@
     {
       "id": "la-q003",
       "title": "逆矩阵存在条件",
-      "content": "矩阵 $A = \\begin{bmatrix} 1 & 2 \\\\\\ 2 & 4 \\end{bmatrix}$有逆矩阵吗？为什么？",
+      "content": "矩阵 $A = [1, 2; 2, 4]$ 有逆矩阵吗？为什么？",
       "type": "concept_check",
       "difficulty": 2,
       "knowledgeNodeIds": [
@@ -159,8 +159,8 @@
       ],
       "answer": "x = 1, y = 2",
       "solutionSteps": [
-        "增广矩阵：$\\begin{bmatrix} 1 & 1 & 3 \\\\\\ 2 & 3 & 8 \\end{bmatrix}$",
-        "$R2 ← R2 - 2*R1$：$\\begin{bmatrix} 1 & 1 & 3 \\\\\\ 0 & 1 & 2 \\end{bmatrix}$",
+        "增广矩阵：$[1, 1, 3; 2, 3, 8]$",
+        "$R2 ← R2 - 2*R1$：$[1, 1, 3; 0, 1, 2]$",
         "从第二行得 y = 2",
         "代入第一行：$x + 2 = 3$，得 $x = 1$"
       ],

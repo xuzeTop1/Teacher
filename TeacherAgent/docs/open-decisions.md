@@ -1,8 +1,8 @@
 # TeacherAgent 待决策清单
 
-版本：v1.1  
+版本：v1.2  
 状态：开放决策池  
-最后更新：2026-08-09
+最后更新：2026-10-03
 适用对象：产品负责人、Codex、Claude Code、项目维护者
 
 ## 1. 用途
@@ -63,7 +63,39 @@
 | D-405 | decided | 是否引入考试体系（ExamTaxonomy）层级模型？ | 是；数据驱动目录 `data/exam-taxonomy/catalog.json`（考试组→学科→模块，stableId/别名/状态/questionScope/来源许可），Registry 加载并与 PACK_MANIFEST 交叉校验；只有叶子 SUBJECT/MODULE 可出题，父级考试组只做聚合与综合复习；同名课程在不同考试组使用不同 stableId；同步协议 subject 增加可选 examTrackId/examSubjectId/examModuleId（旧版兼容）；手机科目按「用户映射表 + 精确别名匹配」解析，未映射保留 unresolved 不猜测 | `docs/exam-taxonomy.md`, `docs/data-model.md`, `docs/decisions/2026-08-07-exam-taxonomy.md` |
 | D-406 | decided | 是否允许 AlertTime Android 调用 LLM 生成学习分析？ | 用户明确授权对“手机端不做 LLM”的窄范围覆盖：Provider 地址/模型/Key 全部由用户在 Android 独立设置中填写，不内置默认；手机在未配对、桌面离线时也可生成并本地保存 profile、planEvaluation 与无答案 assessmentDraft，稍后同步再生成绑定新 snapshotId 的分析。用户填写的学习目的、考试/项目、科目和目标日期进入版本化最小 Prompt；API Key Keystore，失败 deterministic_fallback。学习时长不更新 mastery，draft 不进入 approved/assessment_results/student_knowledge；Teacher 按 untrusted sync-side data 校验后只读展示。云端数据库、账号和后台上传留待后续决策；自动验证已完成，真实 Provider 与实机仍待验收 | `docs/decisions/2026-08-09-alerttime-android-plan-assessment.md`, `docs/project-governance.md`, `docs/prompt-governance.md`, `docs/data-model.md` |
 
+## 4.6 检索链路缺陷与排序（2026-09-11 新增）
+
+背景：工作项 E 的检索质量评测（`experiments/hybrid_retrieval/`）暴露了倒排通道两处缺陷
+与融合层一处排序偏置，详见 `docs/decisions/2026-09-11-hybrid-retrieval-optimization.md`。
+其中"索引与主表脱节"已按 `0018_private_chunks_fts_rebuild.sql` 修复，以下两条改变
+检索返回结果，待拍板。
+
+| ID | 状态 | 决策问题 | 默认建议 | 影响文档 |
+| --- | --- | --- | --- | --- |
+| D-407 | decided | 【已实施 2026-09-11】无空格的自然问句（如"偏振光是什么意思"）应如何在倒排通道召回？现状是整串短语匹配，trigram 下等价于要求文档包含该整串，导致召回为空、混合检索静默退化为纯稠密（实测问句形态 BM25 Hit@3 仅 0.07，裸词形态 0.39） | 已按两步实施：三阶段召回 = OR 分词（原有）→ 剥离问句壳后的整串短语 → 3-gram OR 兜底（上限 32 窗口）。不引入分词依赖，保留"无 C++ 外部依赖"立论。接入 jieba-rs 真正分词留待后续版本。回归测试 `bm25_channel_recalls_question_form_query`、`trigram_fallback_recalls_when_phrase_misses`、`question_shell_stripping_keeps_core_term` | `docs/decisions/2026-09-11-hybrid-retrieval-optimization.md`, 论文 §4.2/§7.8 |
+| D-408 | decided | 【已实施 2026-09-11】RRF 融合在并列分时按 id 字典序排序，`knowledge_node:`/`question:` 恒排在 `private_chunk:` 之前，导致私有文档片段被系统性压低（实测片段金标 MRR 由纯 BM25 的 0.962 降到融合后 0.635，Hit@3 不变） | 已实施：① 去掉 `K+1` 平坦兜底改用标准 RRF（未入榜记 0，双通道命中者自然优先）；② 并列破局改为**按名次奇偶交替**（奇数名次倒排优先、偶数名次稠密优先），以全序排序键实现，保证比较器传递；③ `retrieve_context` 增加每源保底槽位 `PER_SOURCE_FLOOR=2` 抗饿死；④ `eval.rs` 输出补齐 `rrfScore`/`bm25Rank`/`denseRank`。不做通道加权。回归测试 `tied_ranks_alternate_between_sources`、`source_quota_reserves_slots_for_each_source`、`rrf_fusion_matches_hand_computed_scores` | `docs/decisions/2026-09-11-hybrid-retrieval-optimization.md`, 论文 §4.2 |
+
+## 4.7 学情回显与输出侧护栏（2026-09-22 新增）
+
+背景：`experiments/privacy_egress/` 的 D 组用植入私有资料正文的越权指令 + 写死的"已服从"回复
+测出：当学情数据**确实已随授权进入出站 payload** 时，把该数据原样回显给学生的回复
+4/4 全部通过护栏（0 项违规），而 PII 形态与内部组件名两个阳性对照都能被拦。根因是
+`GuardrailInput` 不含授权上下文，护栏在结构上无法判断"这条回复是否回显了学生数据"。
+同轮已修掉一个真实缺陷：扣留私有资料时 `topic`/`notes` 仍带出文档标题（见 §7.1.2）。
+
+| ID | 状态 | 决策问题 | 默认建议 | 影响文档 |
+| --- | --- | --- | --- | --- |
+| D-409 | decided | 学情数据回显要不要加一道确定性输出侧关卡？候选做法是把本轮**已授权注入的字符串集合**（画像字段值、私有资料正文）随 `GuardrailInput` 传给护栏，对回复做原文重叠检测 | **不加**（2026-09-22 定案）。① 回复不出设备：同步协议两个方向都不含对话消息——`SnapshotPayload` 只有 subjects / weekly_goals / tasks / study_sessions / learning_analysis / focus_aggregates，桌面→手机只有 `proposal`，其 `rationale` 由 `src/engine/sync/proposalPlanner.ts` **纯规则**生成，无 LLM 调用、不引用私有资料（见 `sync/protocol/protocol.md` §4.1/§4.2，`sync/server.rs` 仅 6 条路由）。② 出站那一跳已由默认拒绝覆盖。③ 输出侧过滤对"接收者即数据主体"的场景没有可保护对象，且**不可完备**（改写/概述/翻译可绕过子串检测），加上它会让文档与论文能声称一个并不成立的控制，比不加更糟。**更正记录**：本行初稿写作"对话会落 SQLite 并经局域网同步到手机"，该陈述与同步协议不符（协议不含消息），据此推出的"回显延长手机侧驻留"论据不成立，已于同日删除。若后续出现共享账号、家长查看，或新增对话导出/分享功能，本项须重新评估 | `docs/project-governance.md` §7.1.2, `experiments/privacy_egress/README.md` §五, 论文隐私小节 |
+| D-410 | open | 真实模型的指令遵循率是否要测？D 组刻意把回复写死，未测任何模型会不会服从注入 | 若要测，需要用户自行配置 Provider 与 Key、固定 N 次重复、人工判读，且不进无头闸门；论文当前措辞已限定为"系统分层验证"，不含遵循率主张，故可按 deferred 处理 | `experiments/privacy_egress/README.md` §六 |
+
 ## 5. 目录与工程结构
+
+### 2026-10-03 审计修复决定
+
+| ID | 状态 | 决定 | 原因与边界 | 影响文档 |
+| --- | --- | --- | --- | --- |
+| D-410 | decided | 隐式同步专注聚合仅使用未撤销设备最近 24 小时内收到的数据 | 用户授权修复 R04 后采用保守接收时效，避免无限复用历史特征；不是对原始活动时间的质量认证；无有效数据时回退普通更新 | `docs/data-model.md`, `docs/project-governance.md` |
+| D-411 | decided | 部分正确保留既有 delta 路径，不进入二元 FB-BKT，不增加正确次数 | 用户授权修复 R07 后消除与完全正确相同的观测；不在修复中扩展模型或重算历史记录 | `docs/data-model.md`, `docs/project-governance.md` |
 
 | ID | 状态 | 决策问题 | 默认建议 | 影响文档 |
 | --- | --- | --- | --- | --- |

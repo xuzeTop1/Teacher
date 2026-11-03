@@ -46,7 +46,7 @@ if os.name == "nt":
     except Exception:
         pass
 
-DEFAULT_DB = r"C:\Users\Acer\AppData\Roaming\com.teacheragent.app\teacher_agent.sqlite3"
+DEFAULT_DB = r"<APPDATA>\Roaming\com.teacheragent.app\teacher_agent.sqlite3"
 SYNC_PORT = 8787
 PROCESS_NAMES = ("TeacherAgent", "teacher-agent", "teacheragent")
 

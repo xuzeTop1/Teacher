@@ -1,4 +1,5 @@
 import type { HintLevel } from "../../types/agent"
+import { filterProviderHistory } from "../../services/privacy/authorizationEpoch"
 import type { LlmMessage, LlmProvider } from "../../services/llm/types"
 import type { TutorMode } from "../prompts/tutorPromptBuilder"
 
@@ -21,6 +22,8 @@ export interface GuardrailReview {
 }
 
 export interface GuardrailInput {
+  createdAt?: string
+  isLocal?: boolean
   studentMessage: string
   candidateReply: string
   mode: TutorMode
@@ -142,6 +145,7 @@ export function reviewTutorReply(input: GuardrailInput): GuardrailReview {
 }
 
 export async function reviewTutorReplyWithLlm(provider: LlmProvider, input: GuardrailInput): Promise<GuardrailReview> {
+  if (!filterProviderHistory([input], input.isLocal).length) return reviewTutorReply(input)
   const result = await provider.complete({
     messages: buildGuardrailReviewMessages(input),
     temperature: 0,
@@ -154,6 +158,7 @@ export async function rewriteTutorReplyOnce(
   provider: LlmProvider,
   input: GuardrailInput & { rewriteInstruction?: string }
 ): Promise<string> {
+  if (!filterProviderHistory([input], input.isLocal).length) return ""
   const result = await provider.complete({
     messages: buildGuardrailRewriteMessages(input),
     temperature: 0.2,

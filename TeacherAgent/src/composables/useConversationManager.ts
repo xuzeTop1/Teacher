@@ -1,4 +1,5 @@
 import { computed, reactive, ref } from "vue"
+import { createProviderMessageTimestamp } from "../services/privacy/authorizationEpoch"
 import type { ChatMessage } from "../types/chat"
 import type { TutorPromptMessage } from "../engine/prompts/tutorPromptBuilder"
 import {
@@ -41,6 +42,7 @@ export function useConversationManager(options: ConversationManagerOptions = {})
   const pendingDeleteId = ref<string | null>(null)
   const persistenceStatus = ref<"memory" | "sqlite" | "error">("memory")
   const pendingMessages = reactive(new Map<string, ChatMessage>())
+  let selectionVersion = 0
 
   const currentConversation = computed(() =>
     conversations.value.find((c) => c.conversationId === conversationId.value)
@@ -89,11 +91,13 @@ export function useConversationManager(options: ConversationManagerOptions = {})
       .slice(-8)
       .map((m) => ({
         role: m.role === "student" ? "user" : "assistant",
+        ...(m.createdAt === undefined ? {} : { createdAt: m.createdAt }),
         content: m.role === "tutor" ? stripTimingPrefix(m.content) : m.content
       }))
   }
 
   async function persistChatMessage(message: ChatMessage, targetConversationId: string = conversationId.value) {
+    message.createdAt ??= createProviderMessageTimestamp()
     if (persistenceStatus.value !== "sqlite" || message.id === "welcome") return
 
     try {
@@ -108,7 +112,7 @@ export function useConversationManager(options: ConversationManagerOptions = {})
         toolRefsJson: serializeChatMessageToolRefs(message),
         guardrailJson: message.guardrailJson ?? "{}",
         attachmentsJson: message.attachments?.length ? JSON.stringify(message.attachments) : "[]",
-        createdAt: new Date().toISOString()
+        createdAt: message.createdAt
       })
     } catch {
       persistenceStatus.value = "error"
@@ -118,10 +122,14 @@ export function useConversationManager(options: ConversationManagerOptions = {})
   // ── Conversation CRUD ─────────────────────────────────────────────
 
   async function initializeConversation() {
+    const version = ++selectionVersion
+    const subject = appStore.selectedSubject
+    const isCurrent = () => version === selectionVersion && subject === appStore.selectedSubject
     isLoadingHistory.value = true
 
     try {
       const databaseStatus = await initializeDatabase()
+      if (!isCurrent()) return
       appStore.setDatabaseStatus(databaseStatus)
 
       try {
@@ -138,11 +146,14 @@ export function useConversationManager(options: ConversationManagerOptions = {})
         appStore.setCustomSubjects(customs)
       } catch { /* non-blocking */ }
 
-      const defaultConversation = await ensureDefaultConversation(appStore.selectedSubject)
+      if (!isCurrent()) return
+      const defaultConversation = await ensureDefaultConversation(subject)
+      if (!isCurrent()) return
       const [activeConversations, archivedConversations] = await Promise.all([
-        listConversations(appStore.selectedSubject, 30, "active"),
-        listConversations(appStore.selectedSubject, 30, "archived")
+        listConversations(subject, 30, "active"),
+        listConversations(subject, 30, "archived")
       ])
+      if (!isCurrent()) return
       const availableConversations = [...activeConversations, ...archivedConversations]
       const selectedConversation =
         availableConversations.find((c) => c.conversationId === conversationId.value) ??
@@ -151,38 +162,47 @@ export function useConversationManager(options: ConversationManagerOptions = {})
 
       conversations.value = availableConversations.length ? availableConversations : [defaultConversation]
       persistenceStatus.value = "sqlite"
-      await loadConversation(selectedConversation)
+      await loadConversation(selectedConversation, version)
     } catch {
+      if (!isCurrent()) return
       persistenceStatus.value = "error"
       conversations.value = []
       if (!messages.value.length) {
         messages.value = createWelcomeMessages()
       }
     } finally {
-      isLoadingHistory.value = false
+      if (isCurrent()) isLoadingHistory.value = false
     }
   }
 
   async function refreshConversationList(preferredConversationId = conversationId.value) {
     if (persistenceStatus.value !== "sqlite") return
+    const version = selectionVersion
+    const subject = appStore.selectedSubject
+    const isCurrent = () => version === selectionVersion && subject === appStore.selectedSubject
 
     try {
       const [activeConversations, archivedConversations] = await Promise.all([
-        listConversations(appStore.selectedSubject, 30, "active"),
-        listConversations(appStore.selectedSubject, 30, "archived")
+        listConversations(subject, 30, "active"),
+        listConversations(subject, 30, "archived")
       ])
+      if (!isCurrent()) return
       conversations.value = [...activeConversations, ...archivedConversations]
     } catch {
-      persistenceStatus.value = "error"
+      if (isCurrent()) persistenceStatus.value = "error"
     }
   }
 
-  async function loadConversation(conversation: LocalConversation) {
+  async function loadConversation(conversation: LocalConversation, version = ++selectionVersion) {
+    const subject = appStore.selectedSubject
+    const isCurrent = () => version === selectionVersion && subject === appStore.selectedSubject
+    if (!isCurrent()) return
     isLoadingHistory.value = true
     options.onClearDocumentState?.()
 
     try {
       const storedMessages = await listMessages(conversation.conversationId, 80)
+      if (!isCurrent()) return
       studentId.value = conversation.studentId
       conversationId.value = conversation.conversationId
 
@@ -195,31 +215,36 @@ export function useConversationManager(options: ConversationManagerOptions = {})
 
       options.onScrollToBottom?.("auto")
     } catch {
-      persistenceStatus.value = "error"
+      if (isCurrent()) persistenceStatus.value = "error"
     } finally {
-      isLoadingHistory.value = false
+      if (isCurrent()) isLoadingHistory.value = false
     }
   }
 
   async function startNewConversation() {
+    const version = ++selectionVersion
+    const subject = appStore.selectedSubject
+    const isCurrent = () => version === selectionVersion && subject === appStore.selectedSubject
     options.onClearDocumentState?.()
 
     if (persistenceStatus.value !== "sqlite") {
       messages.value = createWelcomeMessages()
       conversationId.value = createMessageId()
+      isLoadingHistory.value = false
       return
     }
 
     isLoadingHistory.value = true
 
     try {
-      const conversation = await createConversation(appStore.selectedSubject)
+      const conversation = await createConversation(subject)
+      if (!isCurrent()) return
       conversations.value = [conversation, ...conversations.value.filter((item) => item.conversationId !== conversation.conversationId)]
-      await loadConversation(conversation)
+      await loadConversation(conversation, version)
     } catch {
-      persistenceStatus.value = "error"
+      if (isCurrent()) persistenceStatus.value = "error"
     } finally {
-      isLoadingHistory.value = false
+      if (isCurrent()) isLoadingHistory.value = false
     }
   }
 
@@ -259,7 +284,7 @@ export function useConversationManager(options: ConversationManagerOptions = {})
     try {
       const storedMessages = await listMessages(targetConversationId, 20)
       const title = await generateConversationTitle({
-        messages: storedMessages.map(m => ({ role: m.role, content: m.content })),
+        messages: storedMessages.map(m => ({ role: m.role, content: m.content, createdAt: m.createdAt })),
         subjectCode: appStore.selectedSubject,
         providerConfig: appStore.activeLlmConfig ?? undefined
       })

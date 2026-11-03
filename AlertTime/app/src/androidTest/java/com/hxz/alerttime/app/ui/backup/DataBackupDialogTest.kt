@@ -65,8 +65,8 @@ class DataBackupDialogTest {
             state = BackupUiState(hasRecentBackupFile = true, recentBackup = recentBackupMeta()),
             timerBusy = true
         )
-        composeRule.onNodeWithText("创建本地备份").assertIsNotEnabled()
-        composeRule.onNodeWithText("合并最近本地备份").assertIsNotEnabled()
+        composeRule.onNodeWithText("备份到手机文件夹").assertIsNotEnabled()
+        composeRule.onNodeWithText("合并最近手机备份").assertIsNotEnabled()
         composeRule.onNodeWithText("导出 JSON 备份").assertIsNotEnabled()
         composeRule.onNodeWithText("从 JSON 文件合并恢复").assertIsNotEnabled()
         composeRule.onNodeWithText("请先结束当前专注，再进行数据备份", substring = true).assertIsDisplayed()
@@ -75,8 +75,8 @@ class DataBackupDialogTest {
     @Test
     fun restoreRecent_disabled_whenNoRecentBackup_exists() {
         showDialog(state = BackupUiState())
-        composeRule.onNodeWithText("合并最近本地备份").assertIsNotEnabled()
-        composeRule.onNodeWithText("创建本地备份").assertIsEnabled()
+        composeRule.onNodeWithText("合并最近手机备份").assertIsNotEnabled()
+        composeRule.onNodeWithText("备份到手机文件夹").assertIsEnabled()
     }
 
     @Test
@@ -88,7 +88,7 @@ class DataBackupDialogTest {
                 recentBackupUnreadable = true
             )
         )
-        composeRule.onNodeWithText("合并最近本地备份").assertIsNotEnabled()
+        composeRule.onNodeWithText("合并最近手机备份").assertIsNotEnabled()
     }
 
     @Test
@@ -96,7 +96,7 @@ class DataBackupDialogTest {
         showDialog(
             state = BackupUiState(hasRecentBackupFile = true, recentBackup = recentBackupMeta())
         )
-        composeRule.onNodeWithText("合并最近本地备份").assertIsEnabled()
+        composeRule.onNodeWithText("合并最近手机备份").assertIsEnabled()
     }
 
     @Test

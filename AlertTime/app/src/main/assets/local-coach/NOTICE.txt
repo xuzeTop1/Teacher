@@ -1,0 +1,19 @@
+AlertTime local learning coach
+
+Base model: Qwen/Qwen2.5-0.5B-Instruct, Qwen team, Apache License 2.0.
+Source: https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct
+The bundled bkt-v2 Q4_K_M weights are a locally fine-tuned, merged and quantized
+derivative provided by the user. They are not the unmodified Qwen base model.
+No additional training or quantization was performed during this integration.
+The upstream Apache License is included as Qwen2.5-LICENSE.txt.
+
+Inference engine: llama.cpp, Copyright (c) 2023-2026 The ggml authors.
+Source: https://github.com/ggml-org/llama.cpp
+Pinned commit: 932a68e06845a1240227b6cb8d8c6ba38fdbef8d
+MIT License is included as llama.cpp-LICENSE.txt.
+See also the third-party licenses under llama.cpp source licenses/ for the
+corresponding vendored code. Optional GPU, OpenSSL, OpenMP and KleidiAI
+components are disabled in this CPU build.
+
+Predictions are estimates. They do not update recorded focus time, mastery,
+plans or completion status. The three local tasks make no network requests.

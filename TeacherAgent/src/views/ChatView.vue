@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import { computed, onMounted, onUnmounted, ref, watch } from "vue"
+import { computed, onActivated, onMounted, onUnmounted, ref, watch } from "vue"
+import { createProviderMessageTimestamp } from "../services/privacy/authorizationEpoch"
+import { useRoute, useRouter } from "vue-router"
 import ChatComposer from "../components/chat/ChatComposer.vue"
 import ConversationSidebar from "../components/chat/ConversationSidebar.vue"
 import ConversationTitleBar from "../components/chat/ConversationTitleBar.vue"
@@ -15,6 +17,7 @@ import {
   createTutorTurnToolRefsJson
 } from "../components/chat/chatMessageMetadata"
 import { createTutorOrchestrator } from "../engine/agents/tutorOrchestrator"
+import { persistAssessment } from "../services/assessment/assessmentPersistence"
 import { shouldTriggerPlanner } from "../engine/agents/plannerAgent"
 import { isTurnAborted } from "../services/llm/turnAbort"
 import { sanitizeErrorMessage } from "../utils/errorMessage"
@@ -96,9 +99,72 @@ const currentMentorStyle = computed(() =>
   appStore.selectedSubject === "programming" ? "调试伙伴" : "循循善诱"
 )
 
-onMounted(() => {
-  void initializeConversation()
+const route = useRoute()
+const router = useRouter()
+let isConsumingRouteMessage = false
+
+async function consumeRouteMessage() {
+  const rawQueryMessage = route.query.message
+  const messageText = (Array.isArray(rawQueryMessage) ? rawQueryMessage[0] : rawQueryMessage)?.trim()
+  if (!messageText || isConsumingRouteMessage) return
+
+  isConsumingRouteMessage = true
+  try {
+    // 1. Immediately prefill draft so input box always has the text visible
+    draft.value = messageText
+
+    // 2. If history is currently loading, wait for it to complete
+    if (isLoadingHistory.value) {
+      await new Promise<void>((resolve) => {
+        const timer = setTimeout(resolve, 3000)
+        const unwatch = watch(isLoadingHistory, (loading) => {
+          if (!loading) {
+            clearTimeout(timer)
+            unwatch()
+            resolve()
+          }
+        })
+      })
+    }
+
+    // 3. Send message through existing flow
+    if (draft.value === messageText) {
+      await sendMessage()
+    }
+
+    // 4. Clean query parameter afterwards to avoid refresh repeat
+    const nextQuery = { ...route.query }
+    delete nextQuery.message
+    await router.replace({ path: route.path, query: nextQuery }).catch(() => {})
+  } finally {
+    isConsumingRouteMessage = false
+  }
+}
+
+function retryTurn(prompt?: string) {
+  if (!prompt || isSending.value) return
+  draft.value = prompt
+  void sendMessage()
+}
+
+onMounted(async () => {
+  await initializeConversation()
+  await consumeRouteMessage()
 })
+
+onActivated(async () => {
+  await consumeRouteMessage()
+})
+
+watch(
+  () => route.query.message,
+  (newMsg) => {
+    if (newMsg) {
+      void consumeRouteMessage()
+    }
+  },
+  { immediate: true }
+)
 
 watch(
   () => appStore.selectedSubject,
@@ -130,12 +196,13 @@ function removeCancelledPlaceholder(tutorMessage: ChatMessage) {
 async function sendMessage(attachments: ChatAttachment[] = []) {
   const content = draft.value.trim()
   if (!content && !attachments.length) return
-  if (isSending.value) return
+  if (isSending.value || isLoadingHistory.value) return
 
   const currentConversationId = conversationId.value
   const recentMessages = toPromptHistory(messages.value)
 
   const studentMessage: ChatMessage = {
+    createdAt: createProviderMessageTimestamp(),
     id: createMessageId(),
     role: "student",
     content: content || "（请识别图片中的题目内容）",
@@ -151,7 +218,10 @@ async function sendMessage(attachments: ChatAttachment[] = []) {
     const missingProviderMessage: ChatMessage = {
       id: createMessageId(),
       role: "tutor",
-      content: "还没有可用的 LLM Provider 配置。请先到\u201c设置\u201d里填写 Base URL、模型和 API Key，并点击\u201c保存本次运行配置\u201d。"
+      content: "还没有可用的 LLM Provider 配置。请先到“设置”里填写 Base URL、模型和 API Key，并点击“保存本次运行配置”。",
+      isError: true,
+      errorType: "missing_provider",
+      retryPrompt: content
     }
 
     messages.value.push(missingProviderMessage)
@@ -161,6 +231,7 @@ async function sendMessage(attachments: ChatAttachment[] = []) {
   }
 
   const rawTutorMessage: ChatMessage = {
+    createdAt: studentMessage.createdAt,
     id: createMessageId(),
     role: "tutor",
     content: "",
@@ -182,6 +253,7 @@ async function sendMessage(attachments: ChatAttachment[] = []) {
     let streamDoneContent: string | undefined
 
     const result = await tutorOrchestrator.handleTurnStream({
+      createdAt: studentMessage.createdAt,
       userMessage: content || "请识别图片中的题目内容，并按当前学科进行辅导。",
       recentMessages,
       subjectCode: appStore.selectedSubject,
@@ -220,6 +292,7 @@ async function sendMessage(attachments: ChatAttachment[] = []) {
     }
 
     tutorMessage.plannerResult = result.plannerResult
+    tutorMessage.assessmentResult = result.assessmentResult
     tutorMessage.knowledgeRefsJson = createKnowledgeRefsJson(result)
     tutorMessage.toolRefsJson = createTutorTurnToolRefsJson(tutorMessage, result)
     tutorMessage.guardrailJson = createGuardrailSummaryJson(result)
@@ -245,6 +318,9 @@ async function sendMessage(attachments: ChatAttachment[] = []) {
       resetStreamingState()
     } else {
       tutorMessage.content = `这次调用模型失败了：${sanitizeErrorMessage(error)}\n\n你可以先检查设置页的 Base URL、模型名和 API Key。`
+      tutorMessage.isError = true
+      tutorMessage.errorType = "llm_error"
+      tutorMessage.retryPrompt = content
       resetStreamingState()
       void persistChatMessage(tutorMessage, currentConversationId)
       if (conversationId.value === currentConversationId) scrollMessagesToBottom()
@@ -253,6 +329,18 @@ async function sendMessage(attachments: ChatAttachment[] = []) {
     pendingMessages.delete(currentConversationId)
     isStreamingActive.value = false
     if (conversationId.value === currentConversationId) scrollMessagesToBottomIfNear()
+  }
+}
+async function retryAssessment(messageId: string) {
+  const message = messages.value.find((item) => item.id === messageId)
+  if (!message?.assessmentResult || message.isSavingAssessment) return
+  message.isSavingAssessment = true
+  try {
+    message.assessmentResult.persistenceStatus = await persistAssessment(message.assessmentResult)
+  } catch {
+    message.assessmentResult.persistenceStatus = "failed"
+  } finally {
+    message.isSavingAssessment = false
   }
 }
 </script>
@@ -354,7 +442,7 @@ async function sendMessage(attachments: ChatAttachment[] = []) {
           v-if="appStore.selectedSubject === 'programming' && showPythonPlayground"
           @close="showPythonPlayground = false"
         />
-        <MessageList ref="messageListRef" :messages="messages" />
+        <MessageList ref="messageListRef" :messages="messages" @retry="retryTurn" @retry-assessment="retryAssessment" />
 
         <!-- 流式输出状态：左下角小字提示 -->
         <div v-if="isStreamingActive" class="streaming-status-text">
@@ -399,7 +487,7 @@ async function sendMessage(attachments: ChatAttachment[] = []) {
 
                 <ChatComposer
                   v-model="draft"
-                  :is-sending="isSending"
+                  :is-sending="isSending || isLoadingHistory"
                   :is-attaching="isImportingDocument"
                   @send="(atts) => sendMessage(atts)"
                   @attach="attachDocumentToCurrentConversation"

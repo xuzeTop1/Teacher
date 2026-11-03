@@ -40,7 +40,11 @@ fn load_hash_manifest(dir: &Path) -> Result<Option<HashMap<String, String>>, Str
     }
     let content = std::fs::read_to_string(&manifest_path)
         .map_err(|_| "sidecar 完整性校验失败：manifest 无法读取。".to_string())?;
-    let manifest = serde_json::from_str(&content)
+    // Manifest 由 PowerShell 生成，而 Windows PowerShell 5.1 的
+    // `Set-Content -Encoding UTF8` 会写出**带 BOM** 的 UTF-8；serde_json 不接受
+    // 前导 BOM，会报"格式无效"。这里剥离 BOM —— 读取端容错比要求每个生成脚本各自小心更可靠。
+    let content = content.strip_prefix('\u{feff}').unwrap_or(&content);
+    let manifest = serde_json::from_str(content)
         .map_err(|_| "sidecar 完整性校验失败：manifest 格式无效。".to_string())?;
     Ok(Some(manifest))
 }
@@ -205,6 +209,126 @@ mod tests {
             verify_sidecar_integrity_with_policy(&sidecar_path, "worker.exe", true, true)
                 .unwrap_err()
                 .contains("格式无效")
+        );
+        let _ = std::fs::remove_dir_all(&dir);
+    }
+
+    /// 发布产物目录。`cargo test` 的工作目录是包根（`src-tauri/`），
+    /// 因此这里用相对路径，避免把构建机绝对路径写进测试二进制。
+    fn release_dir() -> std::path::PathBuf {
+        std::path::Path::new("target").join("release")
+    }
+
+    /// 正对照：未篡改的真实发布 sidecar 必须通过 release 策略校验。
+    ///
+    /// 没有这条，下面"篡改被拒"的断言可能是恒真的——如果 manifest 与产物
+    /// 本来就对不上，任何副本都会被拒，篡改与否根本不影响判定。
+    #[test]
+    fn shipped_release_sidecar_matches_shipped_manifest() {
+        let dir = release_dir();
+        let sidecar = dir.join("code-worker.exe");
+        if !sidecar.exists() || !dir.join("sidecar-hashes.json").exists() {
+            eprintln!("[skip] 未构建 target/release，跳过真实产物负向验收");
+            return;
+        }
+        verify_sidecar_integrity_with_policy(&sidecar, "code-worker.exe", false, false)
+            .expect("未篡改的发布 sidecar 未通过校验：manifest 与产物不一致，篡改判定失去意义");
+    }
+
+    /// 篡改真实发布 sidecar 的一个字节：release 策略与真实入口都必须拒绝。
+    #[test]
+    fn tampered_real_sidecar_is_rejected() {
+        let dir = release_dir();
+        let real = dir.join("code-worker.exe");
+        if !real.exists() || !dir.join("sidecar-hashes.json").exists() {
+            eprintln!("[skip] 未构建 target/release，跳过真实产物篡改验收");
+            return;
+        }
+
+        let work = std::env::temp_dir().join(format!("sidecar-tamper-{}", std::process::id()));
+        std::fs::create_dir_all(&work).unwrap();
+        std::fs::copy(
+            dir.join("sidecar-hashes.json"),
+            work.join("sidecar-hashes.json"),
+        )
+        .unwrap();
+        let victim = work.join("code-worker.exe");
+        std::fs::copy(&real, &victim).unwrap();
+
+        // 副本未篡改时先过一次，确保后续拒绝不是"目录搬错了"
+        verify_sidecar_integrity_with_policy(&victim, "code-worker.exe", false, false)
+            .expect("未篡改的副本未通过校验，篡改判定不可信");
+
+        let mut bytes = std::fs::read(&victim).unwrap();
+        let mid = bytes.len() / 2;
+        bytes[mid] ^= 0xff;
+        std::fs::write(&victim, &bytes).unwrap();
+
+        let policy_err =
+            verify_sidecar_integrity_with_policy(&victim, "code-worker.exe", false, false)
+                .expect_err("release 策略未拒绝被篡改的真实 sidecar");
+        assert!(
+            policy_err.contains("篡改"),
+            "错误信息未指明篡改: {policy_err}"
+        );
+
+        let entry_err = verify_sidecar_integrity(&victim, "code-worker.exe")
+            .expect_err("真实入口未拒绝被篡改的 sidecar");
+        assert!(
+            entry_err.contains("篡改"),
+            "错误信息未指明篡改: {entry_err}"
+        );
+
+        let _ = std::fs::remove_dir_all(&work);
+    }
+
+    /// Release 下 manifest 缺失时必须拒绝，且两个绕过开关同时打开也不生效。
+    ///
+    /// 只在 `cargo test --release` 下存在；它被执行即证明测试目标用的是
+    /// `debug_assertions = false` 的 release 配置。
+    #[cfg(not(debug_assertions))]
+    #[test]
+    fn release_missing_manifest_rejects_even_with_both_bypass_switches() {
+        let work =
+            std::env::temp_dir().join(format!("sidecar-release-noManifest-{}", std::process::id()));
+        std::fs::create_dir_all(&work).unwrap();
+        let sidecar = work.join("code-worker.exe");
+        std::fs::write(&sidecar, b"content").unwrap();
+
+        std::env::set_var(ALLOW_UNVERIFIED_SIDECARS_ENV, "1");
+        std::env::set_var(ALLOW_UNVERIFIED_SIDECARS_UI_ENV, "1");
+
+        let err = verify_sidecar_integrity(&sidecar, "code-worker.exe")
+            .expect_err("release 构建在 manifest 缺失时未拒绝");
+        assert!(
+            err.contains("未找到 sidecar-hashes.json"),
+            "错误信息不符: {err}"
+        );
+
+        std::env::remove_var(ALLOW_UNVERIFIED_SIDECARS_ENV);
+        std::env::remove_var(ALLOW_UNVERIFIED_SIDECARS_UI_ENV);
+        let _ = std::fs::remove_dir_all(&work);
+    }
+
+    #[test]
+    fn bom_prefixed_manifest_is_accepted() {
+        // 回归：PowerShell 5.1 的 `Set-Content -Encoding UTF8` 写出带 BOM 的 JSON，
+        // 读取端必须容忍——否则 App 导入文档时直接报"manifest 格式无效"（已实际发生）。
+        let dir = std::env::temp_dir().join(format!("sidecar-bom-manifest-{}", std::process::id()));
+        std::fs::create_dir_all(&dir).unwrap();
+        let sidecar_path = dir.join("worker.exe");
+        std::fs::write(&sidecar_path, b"content").unwrap();
+
+        let hash = compute_file_sha256(&sidecar_path).unwrap();
+        let manifest_json = format!("{{\"worker.exe\":\"{hash}\"}}");
+        std::fs::write(
+            dir.join("sidecar-hashes.json"),
+            format!("\u{feff}{manifest_json}"),
+        )
+        .unwrap();
+
+        assert!(
+            verify_sidecar_integrity_with_policy(&sidecar_path, "worker.exe", false, false).is_ok()
         );
         let _ = std::fs::remove_dir_all(&dir);
     }

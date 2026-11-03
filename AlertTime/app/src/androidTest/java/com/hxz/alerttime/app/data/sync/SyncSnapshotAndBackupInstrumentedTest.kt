@@ -160,6 +160,13 @@ class SyncSnapshotAndBackupInstrumentedTest {
                 userId = userId,
                 title = "AI 会话",
                 startTime = 1,
+                // 已完成会话必须带 endTime：SyncSnapshotBuilder 只对
+                // endTime != null && endTime > startTime 的会话读取外部 AI 用时
+                // （SyncSnapshotBuilder.kt:120-131），而本用例的 fakeReader 也以
+                // endTime != null 作为返回 240 的条件。原 fixture 漏设 endTime（默认 null），
+                // 于是走到"进行中会话"分支拿到 null，断言得到 expected:<240> but was:<null>。
+                // status 本就是 SESSION_COMPLETED(0)，补齐 endTime 才自洽。
+                endTime = 501,
                 durationSeconds = 500,
                 pauseSeconds = 100,
                 aiHelpSeconds = 60,
@@ -223,7 +230,9 @@ class SyncSnapshotAndBackupInstrumentedTest {
                 updatedAt = 1000
             )
         )
-        val runningDto = snapshot.studySessions.first { it.title == "进行中" }
+        // 快照是时间点载荷：上面那次 buildSnapshot() 之后才插入进行中会话，
+        // 必须重新构建才能看到它。（原写法在旧快照上 first{}，必然抛 NoSuchElementException。）
+        val runningDto = builder.buildSnapshot().studySessions.first { it.title == "进行中" }
         assertNull(runningDto.externalAiAppSeconds)
         assertEquals("unknown", runningDto.aiUsageSource)
     }
@@ -279,8 +288,9 @@ class SyncSnapshotAndBackupInstrumentedTest {
             backupGate = gate,
             recentBackupRoot = recentBackupDir
         )
-        // 构造一个绕过 validator 的预览（直接构造 RestorePreview），
-        // 内含 sync_* key：即使校验被绕过，恢复/合并也绝不写入。
+        // 构造一个绕过"构造期 validator"的预览（直接 new RestorePreview），内含 sync_* key，
+        // 用来验证 restoreValidated / mergeValidated 自身的二次校验（revalidatePreview）
+        // 会整批拒绝这类载荷，而不是照单写入。
         val data = repository.exportSnapshot().copy(
             appSettings = (repository.exportSnapshot().appSettings.orEmpty()) + listOf(
                 com.hxz.alerttime.app.data.backup.AppSettingDto(
@@ -304,9 +314,15 @@ class SyncSnapshotAndBackupInstrumentedTest {
             source = com.hxz.alerttime.app.data.backup.RestoreSource.FILE
         )
 
-        // 全量恢复。
+        // 全量恢复。双重防线：即使调用方直接构造出含 sync_* 的预览、绕过构造期校验，
+        // restoreValidated 仍会在 revalidatePreview 处整批拒绝（校验器把 sync_* 视为
+        // "设备敏感配置"）。拒绝比"接受后过滤"更强——一个字节都不会落库。
         val restoreResult = repository.restoreValidated(preview)
-        assertTrue(restoreResult is com.hxz.alerttime.app.data.backup.BackupOperationResult.Success)
+        assertTrue(
+            "含 sync_* 的预览必须被整批拒绝，实际：$restoreResult",
+            restoreResult is com.hxz.alerttime.app.data.backup.BackupOperationResult.Failure &&
+                restoreResult.message.contains("不允许的设备敏感配置")
+        )
         assertNull(database.appSettingDao().getSetting("sync_credential_v1"))
         assertNull(database.appSettingDao().getSetting("sync_server_info_v1"))
 
@@ -319,12 +335,19 @@ class SyncSnapshotAndBackupInstrumentedTest {
                 updatedAt = 2
             )
         )
-        // 合并恢复同样不写入 sync_*。
+        // 合并恢复同样整批拒绝，不写入 sync_*。
         val mergeResult = repository.mergeValidated(preview)
-        assertTrue(mergeResult is com.hxz.alerttime.app.data.backup.BackupOperationResult.Success)
+        assertTrue(
+            "含 sync_* 的预览必须被整批拒绝，实际：$mergeResult",
+            mergeResult is com.hxz.alerttime.app.data.backup.BackupOperationResult.Failure &&
+                mergeResult.message.contains("不允许的设备敏感配置")
+        )
         assertNull(database.appSettingDao().getSetting("sync_credential_v1"))
         assertNull(database.appSettingDao().getSetting("sync_server_info_v1"))
-        assertNull(database.appSettingDao().getSetting(ProposalSourceMappingCodec.KEY))
+        // 本地既有的 sync_proposal_sources_v1 在整批拒绝后必须原样保留——拒绝即"什么都没发生"，
+        // 这正是事务原子性。原断言是 assertNull（期望它被清除），但那建立在"恢复会被接受"的前提上；
+        // 现在这类含 sync_* 的载荷在校验处就被整批拒绝，走不到写入/清除，故改为断言本地未被改动。
+        assertNotNull(database.appSettingDao().getSetting(ProposalSourceMappingCodec.KEY))
     }
 
     @Test

@@ -1,3 +1,5 @@
+import java.security.MessageDigest
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -9,6 +11,8 @@ plugins {
 android {
     namespace = "com.hxz.alerttime.app"
     compileSdk = 36
+    ndkVersion = "28.2.13676358"
+    providers.gradleProperty("alerttime.ndkPath").orNull?.let { ndkPath = it }
 
     defaultConfig {
         applicationId = "com.hxz.alerttime.app"
@@ -16,11 +20,26 @@ android {
         targetSdk = 36
         versionCode = 1
         versionName = "0.1.0"
+        manifestPlaceholders["appLabel"] = "@string/app_name"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        ndk { abiFilters += "arm64-v8a" }
+        externalNativeBuild {
+            cmake {
+                arguments += listOf("-DANDROID_STL=c++_shared", "-DCMAKE_BUILD_TYPE=Release")
+            }
+        }
     }
 
     buildTypes {
+        debug {
+            // Opt-in separate install for real-device tests when the original signing key is unavailable.
+            if (providers.gradleProperty("alerttime.isolatedModelTest").orNull == "true") {
+                applicationIdSuffix = ".localcoach"
+                versionNameSuffix = "-localcoach"
+                manifestPlaceholders["appLabel"] = "Alert 本地模型测试"
+            }
+        }
         release {
             isMinifyEnabled = true
             proguardFiles(
@@ -44,6 +63,14 @@ android {
         buildConfig = true
     }
 
+    externalNativeBuild {
+        cmake {
+            path = file("src/main/cpp/CMakeLists.txt")
+            version = "3.22.1"
+        }
+    }
+    androidResources { noCompress += "gguf" }
+
     sourceSets {
         getByName("androidTest").assets.srcDir("$projectDir/schemas")
     }
@@ -53,10 +80,33 @@ ksp {
     arg("room.schemaLocation", "$projectDir/schemas")
 }
 
+// A source checkout without prepared weights must fail before packaging a misleading APK.
+val verifyLocalModelAssets by tasks.registering {
+    val model = layout.projectDirectory.file("src/main/assets/local-coach/qwen2.5-0.5b-bkt-v2-q4_k_m.gguf")
+    inputs.file(model)
+    doLast {
+        check(model.asFile.isFile) { "Run scripts/prepare-local-model.ps1 first" }
+        val digest = MessageDigest.getInstance("SHA-256")
+        model.asFile.inputStream().use { stream ->
+            val buffer = ByteArray(1024 * 1024)
+            while (true) {
+                val count = stream.read(buffer)
+                if (count < 0) break
+                digest.update(buffer, 0, count)
+            }
+        }
+        check(digest.digest().joinToString("") { "%02x".format(it) } ==
+            "daed6c55a53da9196c8ce1f6ce5b645d731ad628d3b78946b0f564dd56e83cf8") {
+            "Bundled model does not match the pinned Qwen v2 weights"
+        }
+    }
+}
+tasks.named("preBuild") { dependsOn(verifyLocalModelAssets) }
+
 dependencies {
     val roomVersion = "2.7.2"
 
-    implementation(platform("androidx.compose:compose-bom:2025.06.01"))
+    implementation(platform("androidx.compose:compose-bom:2026.01.00"))
     implementation("androidx.activity:activity-compose:1.10.1")
     implementation("androidx.core:core-ktx:1.16.0")
     implementation("androidx.compose.material3:material3")
@@ -82,10 +132,11 @@ dependencies {
 
     testImplementation("junit:junit:4.13.2")
 
-    androidTestImplementation(platform("androidx.compose:compose-bom:2025.06.01"))
+    androidTestImplementation(platform("androidx.compose:compose-bom:2026.01.00"))
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
     androidTestImplementation("androidx.test:core-ktx:1.6.1")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.7.0")
     androidTestImplementation("androidx.room:room-testing:$roomVersion")
 
     debugImplementation("androidx.compose.ui:ui-tooling")

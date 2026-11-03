@@ -3,5 +3,5 @@
   "identifier": "default",
   "description": "Default desktop permissions for TeacherAgent.",
   "windows": ["main"],
-  "permissions": ["core:default"]
+  "permissions": ["core:default", "core:window:allow-show", "core:window:allow-set-focus"]
 }

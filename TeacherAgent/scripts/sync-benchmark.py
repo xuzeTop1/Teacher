@@ -68,7 +68,7 @@ if sys.stdout and hasattr(sys.stdout, "reconfigure"):
 PROTOCOL_FORMAT = "alerttime-teacher-sync"
 SCHEMA_VERSION = 1
 APP_VERSION = "sync-benchmark/1.0"
-DEFAULT_DB = r"C:\Users\Acer\AppData\Roaming\com.teacheragent.app\teacher_agent.sqlite3"
+DEFAULT_DB = r"<APPDATA>\Roaming\com.teacheragent.app\teacher_agent.sqlite3"
 DEFAULT_PORT = 8787
 DAY_MS = 24 * 3600 * 1000
 

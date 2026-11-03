@@ -2,7 +2,7 @@
   "subject": "education",
   "course": "pedagogy",
   "chapter": "education-pedagogy",
-  "status": "draft",
+  "status": "approved",
   "questions": [
     {
       "id": "education-pedagogy-q001",
@@ -38,7 +38,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 传授知识",
         "B. 培养人",
@@ -80,7 +80,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 提高劳动力素质",
         "B. 传承文化",
@@ -122,7 +122,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 顺序性",
         "B. 不平衡性",
@@ -164,7 +164,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 二者完全等同",
         "B. 方针含目的但范围更宽",
@@ -206,7 +206,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 双轨制",
         "B. 单轨制",
@@ -248,7 +248,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 学科课程",
         "B. 活动课程",
@@ -290,7 +290,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 教师单方面的讲授",
         "B. 学生的自学",
@@ -332,7 +332,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 直接经验",
         "B. 间接经验",
@@ -374,7 +374,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 因材施教",
         "B. 灌输式",
@@ -416,7 +416,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 赫尔巴特",
         "B. 杜威",
@@ -458,7 +458,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 道德认识",
         "B. 道德情感",
@@ -500,7 +500,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 民主平等",
         "B. 尊师爱生",
@@ -542,7 +542,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 诊断性评价",
         "B. 形成性评价",
@@ -584,7 +584,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 仅学校阶段",
         "B. 贯穿人的一生",
@@ -626,7 +626,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 阅读导致成绩提高",
         "B. 二者相关但不等于因果",
@@ -669,7 +669,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "education-pedagogy-q017",
@@ -706,7 +706,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "education-pedagogy-q018",
@@ -743,7 +743,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "education-pedagogy-q019",
@@ -780,7 +780,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "education-pedagogy-q020",
@@ -817,7 +817,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft"
+      "status": "approved"
     }
   ]
 }

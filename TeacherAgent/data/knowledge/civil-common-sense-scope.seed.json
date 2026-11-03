@@ -1,0 +1,78 @@
+{
+  "subject": "xingce",
+  "course": "xingce",
+  "chapter": "civil-common-sense-scope",
+  "status": "approved",
+  "nodes": [
+    {
+      "id": "xingce-sense-scope-distribution",
+      "title": "常识判断：考查范围与题量分布",
+      "level": "concept",
+      "summary": "依据国家公务员局官方公共科目考试大纲，行测常识判断模块重点测查报考者应知应会的基本知识以及运用这些知识分析判断的基本能力。考试范围涵盖政治、经济、法律、历史、文化、地理、环境、自然、科技等诸多领域，题量通常为20题，题目均为单项选择题。",
+      "prerequisites": [],
+      "misconceptions": [
+        "认为常识判断只考政治或法律，忽视科技、历史与地理等交叉领域",
+        "误以为常识题目考查深奥学术理论，而非应知应会的基础知识与综合运用能力"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "公务员考试大纲中常识判断模块涉及哪些领域？"
+        },
+        {
+          "level": "L2",
+          "text": "常识判断题主要考查深奥理论还是应知应会的基本知识？"
+        },
+        {
+          "level": "L3",
+          "text": "面对广泛的常识考查范围，应当采取何种复习和做题策略？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "official_syllabus",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "本条为官方大纲所载考查范围，非事实断言。"
+      },
+      "reviewStatus": "approved"
+    },
+    {
+      "id": "xingce-sense-scope-competency",
+      "title": "常识判断：测查能力与题型特点",
+      "level": "concept",
+      "summary": "常识判断主要测查报考者在日常学习与实践中积累的基本素养，强调运用常识进行推理、辨析和分析解决实际问题的能力。题型主要为四选一单项选择题，考查特点包括综合性强、时代感突出、贴近国情与社会生活。",
+      "prerequisites": [
+        "xingce-sense-scope-distribution"
+      ],
+      "misconceptions": [
+        "以为常识判断完全靠死记硬背，忽视基于生活常识与逻辑推理排除干扰项的能力",
+        "在常识单选题上花费过长做题时间，影响行测全卷时间分配"
+      ],
+      "socraticHints": [
+        {
+          "level": "L1",
+          "text": "大纲明确指出常识判断测查的核心能力是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "常识判断题目在设问上有何综合性与时代性特点？"
+        },
+        {
+          "level": "L3",
+          "text": "如何结合题干信息与逻辑常理进行选项辨析与排除？"
+        }
+      ],
+      "source": {
+        "title": "国家公务员局《中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲》（行测/申论）",
+        "url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d19780e4080199ddabd11200f1&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007",
+        "license": "original",
+        "sourceType": "official_syllabus",
+        "sourceCategory": "official_syllabus_reference",
+        "note": "本条为官方大纲所载考查范围，非事实断言。"
+      },
+      "reviewStatus": "approved"
+    }
+  ]
+}

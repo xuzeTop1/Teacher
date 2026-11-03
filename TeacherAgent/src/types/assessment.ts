@@ -47,6 +47,8 @@ export interface AssessmentResult {
   diagnosticReport?: AssessmentDiagnosticReport
   diagnosticProvenance?: DiagnosticProvenance
   createdAt: string
+  /** Runtime persistence outcome; a failed write is retryable with the same id. */
+  persistenceStatus?: "saved" | "preview" | "failed"
 }
 
 export interface AssessmentAgentInput {

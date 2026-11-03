@@ -1,7 +1,7 @@
 {
   "subject": "english",
   "chapter": "english-grammar",
-  "status": "draft",
+  "status": "approved",
   "questions": [
     {
       "id": "eng-grammar-q-001",
@@ -38,13 +38,13 @@
         "sourceType": "practice",
         "note": "基于练习长难句设计，用于语法分析练习。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "观察从句前是否有逗号：'The study, which...'有逗号，是非限制性定语从句；'...shows that...'中that引导宾语从句。",
         "非限制性定语从句不能用that引导，只能用which/who/as；宾语从句that可以省略。",
         "选A；B错误（非限制性不用that）；C错误（that不引导同位语从句，且show的宾语是that从句）；D错误（表语从句需在主句系动词后）。"
       ],
-      "content": "阅读下面句子，判断划线部分是什么从句：$\\n\\n\"$The study,which took 15years to complete,shows that the new policy is effective$.\"\\n\\n(A)$划线部分1是非限制性定语从句，划线部分2是宾语从句$\\n(B)$划线部分1是限制性定语从句，划线部分2是主语从句$\\n(C)$划线部分1是非限制性定语从句，划线部分2是同位语从句$\\n(D)$划线部分1是限制性定语从句，划线部分2是表语从句"
+      "content": "阅读下面句子，判断划线部分分别是什么从句：\n\n\"The study, **[① which took 15 years to complete]**, shows **[② that the new policy is effective]**.\"\n\n(A) 划线部分①是非限制性定语从句，划线部分②是宾语从句\n(B) 划线部分①是限制性定语从句，划线部分②是主语从句\n(C) 划线部分①是非限制性定语从句，划线部分②是同位语从句\n(D) 划线部分①是限制性定语从句，划线部分②是表语从句"
     },
     {
       "id": "eng-grammar-q-002",
@@ -80,13 +80,13 @@
         "sourceType": "practice",
         "note": "真实练习长难句，包含主语从句的嵌套结构。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "找到句首That，引导主语从句'That the evidence was inconclusive, the science uncertain'。",
         "the science uncertain是主语从句中的并列部分（省略了系动词was），整个主语从句作主语。",
         "选C；A只包含了主语从句的一部分；B只包含了并列部分的后一半；D是宾语从句的主语，不是全句主语。"
       ],
-      "content": "分析下面句子的结构，指出主句的主语和谓语：$\\n\\n\"$That the evidence was inconclusive,the science uncertain,does not mean that the plan should be abandoned$.\"\\n\\n(A)$主语：That the evidence was inconclusive；谓语：does not mean$\\n(B)$主语：the science；谓语：does not mean$\\n(C)$主语：That the evidence was inconclusive,the science uncertain；谓语：does not mean$\\n(D)$主语：the plan；谓语：should be abandoned"
+      "content": "分析下面句子的结构，指出主句的主语和谓语：\n\n\"That the evidence was inconclusive, the science uncertain, does not mean that the plan should be abandoned.\"\n\n(A) 主语：That the evidence was inconclusive；谓语：does not mean\n(B) 主语：the science；谓语：does not mean\n(C) 主语：That the evidence was inconclusive, the science uncertain；谓语：does not mean\n(D) 主语：the plan；谓语：should be abandoned"
     },
     {
       "id": "eng-grammar-q-003",
@@ -122,7 +122,7 @@
         "sourceType": "practice",
         "note": "基于练习句型设计，考查非谓语动词作状语的判断。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "Seeing the teacher entering...在句首且用逗号隔开，逻辑主语是句子主语the students。",
         "students主动看见老师进来，主动关系用现在分词Seeing作状语。",
@@ -164,7 +164,7 @@
         "sourceType": "practice",
         "note": "基于翻译练习句型设计，考查独立主格结构识别。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "The weather和主句主语we不是同一个，且有being，是独立主格结构。",
         "独立主格可以转换成状语从句：Because the weather was fine, we decided...。",
@@ -206,7 +206,7 @@
         "sourceType": "practice",
         "note": "基于练习句型设计，考查部分倒装识别。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "句首有否定词Never，助动词have在主语I前面，是部分倒装。",
         "完全倒装是状语在句首+谓语+主语（Here comes...），部分倒装是否定词+助动词+主语。",
@@ -248,7 +248,7 @@
         "sourceType": "practice",
         "note": "基于练习句型设计，考查强调句型识别。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "It is...that结构，去掉It is...that后：This approach has led to the success. 句子完整，说明是强调句型。",
         "强调句型强调的部分是This approach，在主句中作主语，所以强调主语。",
@@ -290,7 +290,7 @@
         "sourceType": "practice",
         "note": "基于练习句型设计，考查虚拟语气倒装识别。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "句首Had + 主语the researchers + 过去分词considered，是虚拟语气倒装。",
         "还原：If the researchers had considered...（与过去事实相反的虚拟条件句）。",
@@ -332,7 +332,7 @@
         "sourceType": "practice",
         "note": "基于练习句型设计，考查并列句省略结构。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "两个分句对称：Some students like reading; others like writing. 省略了第二个like。",
         "并列句省略规则：并列连词后重复的词可以省略，避免重复。",
@@ -374,13 +374,13 @@
         "sourceType": "practice",
         "note": "基于练习句型设计，考查同位语从句识别。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "that在从句'the assumption that all people are equal'中不充当成分，且assumption是抽象名词，是同位语从句。",
         "同位语从句解释assumption的具体内容；定语从句that需充当成分（主语/宾语）。",
         "选B；A（定语从句that需充当成分，这里that不充当成分）；C（主语从句需在句首引导主句）；D（宾语从句需接在及物动词/介词后）。"
       ],
-      "content": "阅读下面句子，判断that引导的是什么从句：$\\n\\n\"$The assumption that all people are equal is widely accepted$.\"\\n\\n(A)$定语从句$\\n(B)$同位语从句$\\n(C)$主语从句$\\n(D)$宾语从句"
+      "content": "阅读下面句子，判断that引导的是什么从句：\n\n\"The assumption that all people are equal is widely accepted.\"\n\n(A) 定语从句\n(B) 同位语从句\n(C) 主语从句\n(D) 宾语从句"
     },
     {
       "id": "eng-grammar-q-010",
@@ -416,13 +416,13 @@
         "sourceType": "practice",
         "note": "基于练习句型设计，考查as引导的从句类型。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "as在句首，且as后面是动词is，构成'as is known to all'固定结构，as指代整个主句。",
         "as引导非限制性定语从句可放句首，which引导的非限制性定语从句不能放句首。",
         "选C；A（时间状语从句as需表示'当...时'，这里不是）；B（原因状语从句as需表示'因为'，这里不是）；D（让步状语从句as需用在as + adj + as结构中）。"
       ],
-      "content": "阅读下面句子，判断as引导的是什么从句：$\\n\\n\"$As is known to all,the earth moves around the sun$.\"\\n\\n(A)$时间状语从句$\\n(B)$原因状语从句$\\n(C)$非限制性定语从句$\\n(D)$让步状语从句"
+      "content": "阅读下面句子，判断as引导的是什么从句：\n\n\"As is known to all, the earth moves around the sun.\"\n\n(A) 时间状语从句\n(B) 原因状语从句\n(C) 非限制性定语从句\n(D) 让步状语从句"
     },
     {
       "id": "eng-grammar-q-011",
@@ -446,7 +446,7 @@
         },
         {
           "level": "L3",
-          "text": "Whenhe was young $\\to$When young（省略了he was）"
+          "text": "Whenhe was young →When young（省略了he was）"
         }
       ],
       "knowledgeNodeIds": [
@@ -458,13 +458,13 @@
         "sourceType": "practice",
         "note": "基于练习句型设计，考查状语从句省略结构。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "原句When he was young，主语he和主句主语一致，且有be动词was，可以省略he was。",
         "状语从句省略规则：主语一致+be动词，可省略主语+be动词。",
         "选A；B（省略正确，不是错误）；C（省略后意思不变）；D（原句有状语从句when引导）。"
       ],
-      "content": "阅读下面句子，判断状语从句省略是否正确：$\\n\\n$原句：When he was young,he liked reading$.\\n$省略后：When young,he liked reading$.\\n\\n(A)$省略正确，符合省略规则$\\n(B)$省略错误，不能省略$\\n(C)$省略后意思改变$\\n(D)$原句没有状语从句"
+      "content": "阅读下面句子，判断状语从句省略是否正确：\n\n原句：When he was young, he liked reading.\n省略后：When young, he liked reading.\n\n(A) 省略正确，符合省略规则\n(B) 省略错误，不能省略\n(C) 省略后意思改变\n(D) 原句没有状语从句"
     },
     {
       "id": "eng-grammar-q-012",
@@ -500,13 +500,13 @@
         "sourceType": "practice",
         "note": "基于练习句型设计，考查比较结构的特殊用法。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "比较对象：the climate of Beijing vs the climate of Guangzhou，为避免重复用that指代climate。",
         "比较级中that/those指代前面出现的名词（单数用that，复数用those）。",
         "选A；B（that不能指代Beijing，Beijing是地点不是气候）；C（不是强调句型）；D（不引导定语从句，定语从句需用which/that）。"
       ],
-      "content": "阅读下面句子，分析比较结构：$\\n\\n\"$The climate of Beijing is colder than that of Guangzhou$.\"\\n\\n(A)$that指代climate，避免重复$\\n(B)$that指代Beijing$\\n(C)$that是强调句型的一部分$\\n(D)$that引导定语从句"
+      "content": "阅读下面句子，分析比较结构：\n\n\"The climate of Beijing is colder than that of Guangzhou.\"\n\n(A) that指代climate，避免重复\n(B) that指代Beijing\n(C) that是强调句型的一部分\n(D) that引导定语从句"
     },
     {
       "id": "eng-grammar-q-013",
@@ -542,7 +542,7 @@
         "sourceType": "practice",
         "note": "基于练习句型设计，考查there be句型变体。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "There seems no doubt中there后面不是be动词，是seems（不及物动词），是There be句型的变体。",
         "There be变体：There + seem/appear/exist/stand等不及物动词 + 主语。",
@@ -584,7 +584,7 @@
         "sourceType": "practice",
         "note": "基于练习句型设计，考查插入语结构识别。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "many experts say在两个逗号之间，删除后主句'The policy will fail'仍完整，是插入语。",
         "插入语特点是两个逗号隔开，删除后主句完整；定语从句删除后主句不完整。",
@@ -626,7 +626,7 @@
         "sourceType": "practice",
         "note": "基于练习句型设计，考查it作形式主语。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "It is difficult to say...中it在句首，后面有系动词is，且真正主语是to say which solution is better（在不定式后）。",
         "形式主语it句型：It is + adj + to do/that从句，it指代真正主语。",
@@ -668,7 +668,7 @@
         "sourceType": "practice",
         "note": "基于练习句型设计，考查否定词转移。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "动词think的否定词通常转移到宾语从句：I don't think he is right = I think he is not right。",
         "否定词转移适用于think/believe/suppose/expect等动词，否定词从从句转移到主句。",
@@ -710,13 +710,13 @@
         "sourceType": "practice",
         "note": "基于练习句型设计，考查介词+which引导的定语从句。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "介词about来自搭配tell sb. about sth.，所以about which中about是介词提前。",
-        "正常语序：$I$told you about the book$. \\to$定语从句：This is the book about which $I$told you.",
+        "正常语序：Itold you about the book. →定语从句：This is the book about which Itold you.",
         "选A；B（about which不引导宾语从句，需接在名词后）；C（不引导主语从句，主语从句在句首）；D（不引导同位语从句，同位语从句解释抽象名词）。"
       ],
-      "content": "阅读下面句子，判断介词$+which$引导的是什么从句：$\\n\\n\"$This is the book about which $I$told you$.\"\\n\\n(A)$介词$+which$引导定语从句$\\n(B)$介词$+which$引导宾语从句$\\n(C)$介词$+which$引导主语从句$\\n(D)$介词$+which$引导同位语从句"
+      "content": "阅读下面句子，判断介词+which引导的是什么从句：\n\n\"This is the book about which I told you.\"\n\n(A) 介词+which引导定语从句\n(B) 介词+which引导宾语从句\n(C) 介词+which引导主语从句\n(D) 介词+which引导同位语从句"
     },
     {
       "id": "eng-grammar-q-018",
@@ -752,13 +752,13 @@
         "sourceType": "practice",
         "note": "基于练习句型设计，考查than引导的比较状语从句省略。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "than后面是I（主格），说明than是连词引导比较状语从句，省略了like English。",
         "完整句子：He likes English more than I like English. 省略了like English。",
         "选B；A（如果than是介词，I应用宾格me）；C（than不引导定语从句，定语从句用which/that）；D（than不是副词，不能修饰more）。"
       ],
-      "content": "阅读下面句子，分析than的用法：$\\n\\n\"$He likes English more than $I (like English).\"\\n\\n(A)$than是介词，$I$是宾语$\\n(B)$than是连词，引导比较状语从句，省略了like English$\\n(C)$than是关系词，引导定语从句$\\n(D)$than是副词，修饰more"
+      "content": "阅读下面句子，分析than的用法：\n\n\"He likes English more than I (like English).\"\n\n(A) than是介词，I是宾语\n(B) than是连词，引导比较状语从句，省略了like English\n(C) than是关系词，引导定语从句\n(D) than是副词，修饰more"
     },
     {
       "id": "eng-grammar-q-019",
@@ -794,13 +794,13 @@
         "sourceType": "practice",
         "note": "基于练习句型设计，考查主谓一致的特殊情况。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "The number of + 复数名词，主语是number（单数），谓语用单数is。",
         "a number of + 复数名词，主语是名词复数，谓语用复数are（常见混淆点）。",
         "选A；B（错误，主语是number不是students）；C（主语是number单数）；D（谓语应用单数）。"
       ],
-      "content": "阅读下面句子，判断主谓一致是否正确：$\\n\\n\"$The number of students is increasing$.\"\\n\\n(A)$正确，主语是The number（单数）$\\n(B)$错误，主语是students（复数）$\\n(C)$正确，主语是students（复数）$\\n(D)$错误，谓语应该用are"
+      "content": "阅读下面句子，判断主谓一致是否正确：\n\n\"The number of students is increasing.\"\n\n(A) 正确，主语是The number（单数）\n(B) 错误，主语是students（复数）\n(C) 错误，主语是students（复数）\n(D) 错误，谓语应该用are"
     },
     {
       "id": "eng-grammar-q-020",
@@ -836,13 +836,13 @@
         "sourceType": "practice",
         "note": "基于练习句型设计，考查指代关系判断。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "代词he的先行词判断：通常就近原则指向前一句最近的名词John。",
         "但需结合语义：Tom told John that he was wrong. 逻辑上he指代John（Tom告诉John John错了）。",
         "选B；A（he不指代Tom，否则句意变成Tom告诉John Tom错了，逻辑不通）；C（he不能指代两人）；D（根据上下文可以判断，不是无法判断）。"
       ],
-      "content": "阅读下面句子，判断指代关系：$\\n\\n\"$Tom told John that he was wrong$.\"\\n\\n(A)$he指代Tom$\\n(B)$he指代John$\\n(C)$he指代Tom和John$\\n(D)$无法判断，需要更多上下文"
+      "content": "阅读下面句子，判断指代关系：\n\n\"Tom told John that he was wrong.\"\n\n(A) he指代Tom\n(B) he指代John\n(C) he指代Tom和John\n(D) 无法判断，需要更多上下文"
     }
   ]
 }

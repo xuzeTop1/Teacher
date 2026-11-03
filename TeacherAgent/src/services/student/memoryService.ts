@@ -41,6 +41,7 @@ export interface LearningMemoryPromptContext {
 }
 
 export interface LearningMemoryTurnInput extends LearningMemoryContextInput {
+  createdAt?: string
   userMessage: string
   tutorReply: string
   recentMessages?: TutorPromptMessage[]
@@ -79,6 +80,7 @@ export class LearningMemoryService {
     const studentId = input.studentId ?? DEFAULT_STUDENT_ID
     const conversationId = input.conversationId ?? DEFAULT_CONVERSATION_ID
     const reflectionInput = {
+      createdAt: input.createdAt,
       studentId,
       conversationId,
       subjectCode: input.subjectCode,
@@ -95,7 +97,7 @@ export class LearningMemoryService {
     const useLlmReflection = Boolean(input.providerConfig)
       && (input.isLocalProvider || input.enableCloudReflection === true)
     const reflection = useLlmReflection && input.providerConfig
-      ? await reflectOnTutorTurnWithLlm(reflectionInput, input.providerConfig)
+      ? await reflectOnTutorTurnWithLlm(reflectionInput, { ...input.providerConfig, isLocal: input.isLocalProvider })
       : reflectOnTutorTurn(reflectionInput)
     const updated = updateStateWithTutorTurn(state, input, reflection)
     writeState(updated.state)

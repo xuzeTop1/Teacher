@@ -3,11 +3,12 @@ import { computed } from "vue"
 import type { SyncLearningAnalysisDto } from "../types/sync"
 import { formatLearningFactValue, learningAnalysisWarningLabel, toTrustedLearningAnalysisModel } from "../engine/sync/learningAnalysis"
 import { resolveLearnerGoalScope } from "../engine/examTaxonomy/learnerGoalScope"
+import { localCoachSourceLabel, localCoachValueLabel } from "../engine/sync/localCoach"
 
 const props = defineProps<{ analysis: SyncLearningAnalysisDto | null | undefined; snapshotId: string | null | undefined }>()
 const model = computed(() => toTrustedLearningAnalysisModel(props.analysis, props.snapshotId))
 const learnerGoalScope = computed(() => resolveLearnerGoalScope(model.value))
-const generatorLabel = computed(() => model.value?.generator === "android_llm" ? "Android LLM（手机端生成）" : model.value?.generator === "deterministic_fallback" ? "确定性降级（未使用模型）" : "未知")
+const generatorLabel = computed(() => model.value?.generator === "android_llm" ? "Android LLM（手机端生成）" : model.value?.generator === "deterministic_fallback" ? "基础分析：确定性评估" : "未知")
 const verdictLabel = computed(() => ({ reasonable: "计划基本合理", needs_adjustment: "计划需要调整", insufficient_data: "证据不足" }[model.value?.planEvaluation.verdict ?? "insufficient_data"] ?? "—"))
 const generatedAtLabel = computed(() => model.value ? new Date(model.value.generatedAt).toLocaleString("zh-CN") : "—")
 </script>
@@ -39,7 +40,7 @@ const generatedAtLabel = computed(() => model.value ? new Date(model.value.gener
           <div v-else class="text-body-2 text-medium-emphasis">暂无事实字段。</div>
         </v-col>
         <v-col cols="12" md="6">
-          <h3 class="text-subtitle-2 mb-2">模型推断</h3>
+            <h3 class="text-subtitle-2 mb-2">推断与默认值</h3>
           <v-list v-if="model.inferences.length > 0" density="compact" class="pa-0">
             <v-list-item v-for="inference in model.inferences" :key="inference.statement" class="px-0">
               <v-list-item-title>{{ inference.statement }}</v-list-item-title>

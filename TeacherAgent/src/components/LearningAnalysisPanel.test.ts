@@ -108,7 +108,7 @@ describe("LearningAnalysisPanel", () => {
     expect(html).toContain("手机同步事实")
     expect(html).toContain("今日完成计划")
     expect(html).toContain("task:task-linear-algebra-01")
-    expect(html).toContain("模型推断")
+    expect(html).toContain("推断与默认值")
     expect(html).toContain("今天的计划执行较完整，但计算机网络仍需要复习")
     expect(html).toContain("置信度 85%")
     expect(html).toContain("计划合理性评估：计划需要调整")

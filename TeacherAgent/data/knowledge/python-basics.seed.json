@@ -16,9 +16,18 @@
         "认为 '123' 和 123 是同一个值"
       ],
       "socraticHints": [
-        { "level": "L1", "text": "先想想这个变量存的是什么类型的值？" },
-        { "level": "L2", "text": "用 type() 打印一下这个变量，看看它是什么类型。" },
-        { "level": "L3", "text": "字符串 '123' 和整数 123 能直接相加吗？试试看。" }
+        {
+          "level": "L1",
+          "text": "先想想这个变量存的是什么类型的值？"
+        },
+        {
+          "level": "L2",
+          "text": "用 type() 打印一下这个变量，看看它是什么类型。"
+        },
+        {
+          "level": "L3",
+          "text": "字符串 '123' 和整数 123 能直接相加吗？试试看。"
+        }
       ],
       "source": {
         "title": "TeacherAgent original Python seed",
@@ -32,16 +41,27 @@
       "title": "条件判断 if/elif/else",
       "level": "concept",
       "summary": "Python 用缩进（通常 4 空格）表示代码块，不用花括号。if/elif/else 按顺序检查条件，只执行第一个为 True 的分支。条件表达式可以用比较运算符（==, !=, <, >, <=, >=）和逻辑运算符（and, or, not）。",
-      "prerequisites": ["py-variables-types"],
+      "prerequisites": [
+        "py-variables-types"
+      ],
       "misconceptions": [
         "用 = 代替 == 做比较（赋值 vs 等于）",
         "忘记冒号 : 在 if/elif/else 行末",
         "缩进不一致导致 IndentationError"
       ],
       "socraticHints": [
-        { "level": "L1", "text": "这个条件表达式的结果是 True 还是 False？" },
-        { "level": "L2", "text": "if 后面的条件用了 = 还是 ==？一个是赋值，一个是比较。" },
-        { "level": "L3", "text": "如果有多个 elif，Python 会检查所有条件还是只检查第一个为 True 的？" }
+        {
+          "level": "L1",
+          "text": "这个条件表达式的结果是 True 还是 False？"
+        },
+        {
+          "level": "L2",
+          "text": "if 后面的条件用了 = 还是 ==？一个是赋值，一个是比较。"
+        },
+        {
+          "level": "L3",
+          "text": "如果有多个 elif，Python 会检查所有条件还是只检查第一个为 True 的？"
+        }
       ],
       "source": {
         "title": "TeacherAgent original Python seed",
@@ -55,16 +75,27 @@
       "title": "循环 for 和 while",
       "level": "concept",
       "summary": "for 循环遍历可迭代对象（列表、字符串、range() 等），while 循环在条件为 True 时重复执行。break 立即退出循环，continue 跳过当前迭代进入下一轮。range(n) 生成 0 到 n-1 的整数序列。",
-      "prerequisites": ["py-conditionals"],
+      "prerequisites": [
+        "py-conditionals"
+      ],
       "misconceptions": [
         "while True 没有 break 会导致无限循环",
         "range(5) 生成 0-4 不包含 5",
         "在 for 循环中修改正在遍历的列表"
       ],
       "socraticHints": [
-        { "level": "L1", "text": "这个循环的条件什么时候会变成 False？" },
-        { "level": "L2", "text": "range(5) 生成的序列是什么？写出来看看。" },
-        { "level": "L3", "text": "如果把 break 换成 continue，输出会有什么不同？" }
+        {
+          "level": "L1",
+          "text": "这个循环的条件什么时候会变成 False？"
+        },
+        {
+          "level": "L2",
+          "text": "range(5) 生成的序列是什么？写出来看看。"
+        },
+        {
+          "level": "L3",
+          "text": "如果把 break 换成 continue，输出会有什么不同？"
+        }
       ],
       "source": {
         "title": "TeacherAgent original Python seed",
@@ -78,16 +109,28 @@
       "title": "函数定义与调用",
       "level": "concept",
       "summary": "用 def 关键字定义函数，函数名后跟括号和冒号。参数可以有默认值。return 返回值，没有 return 的函数返回 None。函数内部的变量是局部变量，函数外部不能访问。",
-      "prerequisites": ["py-variables-types", "py-conditionals"],
+      "prerequisites": [
+        "py-variables-types",
+        "py-conditionals"
+      ],
       "misconceptions": [
         "忘记 return 导致函数返回 None",
         "在函数内修改全局变量没有用 global 声明",
         "混淆参数名和外部变量名"
       ],
       "socraticHints": [
-        { "level": "L1", "text": "这个函数接收几个参数？调用时传了几个？" },
-        { "level": "L2", "text": "函数里有没有 return 语句？如果没有，调用它会返回什么？" },
-        { "level": "L3", "text": "函数内部对参数做了修改，但外部变量没变——为什么？Python 传的是引用还是值？" }
+        {
+          "level": "L1",
+          "text": "这个函数接收几个参数？调用时传了几个？"
+        },
+        {
+          "level": "L2",
+          "text": "函数里有没有 return 语句？如果没有，调用它会返回什么？"
+        },
+        {
+          "level": "L3",
+          "text": "函数内部对参数做了修改，但外部变量没变——为什么？Python 传的是引用还是值？"
+        }
       ],
       "source": {
         "title": "TeacherAgent original Python seed",
@@ -101,16 +144,28 @@
       "title": "列表与字典",
       "level": "concept",
       "summary": "列表 list 是有序可变序列，用 [] 创建，支持索引和切片。字典 dict 是键值对映射，用 {} 创建，通过键访问值。列表适合有序数据，字典适合关联数据。两者都是可变对象。",
-      "prerequisites": ["py-variables-types", "py-loops"],
+      "prerequisites": [
+        "py-variables-types",
+        "py-loops"
+      ],
       "misconceptions": [
         "列表索引从 0 开始而不是 1",
         "用不存在的键访问字典会 KeyError（应用 .get()）",
         "列表切片 [1:3] 返回索引 1 和 2 的元素，不包含 3"
       ],
       "socraticHints": [
-        { "level": "L1", "text": "这个列表有多少个元素？第一个元素的索引是什么？" },
-        { "level": "L2", "text": "用 for 循环遍历这个列表，每次循环变量是什么？" },
-        { "level": "L3", "text": "如果用不存在的键访问字典会怎样？怎么避免这个错误？" }
+        {
+          "level": "L1",
+          "text": "这个列表有多少个元素？第一个元素的索引是什么？"
+        },
+        {
+          "level": "L2",
+          "text": "用 for 循环遍历这个列表，每次循环变量是什么？"
+        },
+        {
+          "level": "L3",
+          "text": "如果用不存在的键访问字典会怎样？怎么避免这个错误？"
+        }
       ],
       "source": {
         "title": "TeacherAgent original Python seed",
@@ -124,16 +179,27 @@
       "title": "字符串操作",
       "level": "concept",
       "summary": "字符串是不可变序列，用单引号或双引号创建。常用操作：拼接（+）、重复（*）、切片、len()、.split()、.join()、.strip()、.replace()、f-string 格式化。字符串方法返回新字符串，不修改原字符串。",
-      "prerequisites": ["py-variables-types"],
+      "prerequisites": [
+        "py-variables-types"
+      ],
       "misconceptions": [
         "试图用索引修改字符串中的字符（字符串不可变）",
         "混淆 str.split() 和 list.split()",
         "f-string 中忘记 f 前缀"
       ],
       "socraticHints": [
-        { "level": "L1", "text": "这个字符串有多长？用 len() 看看。" },
-        { "level": "L2", "text": "字符串是可变的还是不可变的？能用索引修改某个字符吗？" },
-        { "level": "L3", "text": "f\"Hello {name}\" 和 \"Hello {name}\" 有什么区别？" }
+        {
+          "level": "L1",
+          "text": "这个字符串有多长？用 len() 看看。"
+        },
+        {
+          "level": "L2",
+          "text": "字符串是可变的还是不可变的？能用索引修改某个字符吗？"
+        },
+        {
+          "level": "L3",
+          "text": "f\"Hello {name}\" 和 \"Hello {name}\" 有什么区别？"
+        }
       ],
       "source": {
         "title": "TeacherAgent original Python seed",
@@ -147,16 +213,27 @@
       "title": "异常处理 try/except",
       "level": "concept",
       "summary": "try/except 捕获运行时异常，防止程序崩溃。except 后可以指定异常类型（如 ValueError、TypeError）。else 在 try 无异常时执行，finally 无论如何都执行。不要用 try/except 隐藏所有错误。",
-      "prerequisites": ["py-functions"],
+      "prerequisites": [
+        "py-functions"
+      ],
       "misconceptions": [
         "用 except 捕获所有异常但不处理（吞掉错误）",
         "把正常逻辑放在 try 块里而不是只包裹可能出错的代码",
         "混淆语法错误（SyntaxError）和运行时异常"
       ],
       "socraticHints": [
-        { "level": "L1", "text": "这个 try 块里哪一行可能抛出异常？" },
-        { "level": "L2", "text": "except 捕获的是什么类型的异常？如果发生其他类型的异常会怎样？" },
-        { "level": "L3", "text": "如果去掉 try/except，程序会在哪一行崩溃？错误信息是什么？" }
+        {
+          "level": "L1",
+          "text": "这个 try 块里哪一行可能抛出异常？"
+        },
+        {
+          "level": "L2",
+          "text": "except 捕获的是什么类型的异常？如果发生其他类型的异常会怎样？"
+        },
+        {
+          "level": "L3",
+          "text": "如果去掉 try/except，程序会在哪一行崩溃？错误信息是什么？"
+        }
       ],
       "source": {
         "title": "TeacherAgent original Python seed",
@@ -170,16 +247,30 @@
       "title": "常见错误类型与调试",
       "level": "concept",
       "summary": "Python 常见错误：SyntaxError（语法错误）、IndentationError（缩进错误）、NameError（未定义变量）、TypeError（类型不匹配）、ValueError（值不合法）、IndexError（索引越界）、KeyError（字典键不存在）、ZeroDivisionError（除以零）。调试时先看错误信息的最后一行，找到错误类型和行号。",
-      "prerequisites": ["py-variables-types", "py-conditionals", "py-loops", "py-functions"],
+      "prerequisites": [
+        "py-variables-types",
+        "py-conditionals",
+        "py-loops",
+        "py-functions"
+      ],
       "misconceptions": [
         "看到 Traceback 不知道从哪里开始读",
         "把 NameError 当成变量未赋值而不是拼写错误",
         "忽略错误信息中的行号"
       ],
       "socraticHints": [
-        { "level": "L1", "text": "错误信息的最后一行是什么？错误类型和行号分别是？" },
-        { "level": "L2", "text": "这个 NameError 说明什么？变量名是不是拼写错了？" },
-        { "level": "L3", "text": "Traceback 从上到下读，哪一行是实际出错的地方？" }
+        {
+          "level": "L1",
+          "text": "错误信息的最后一行是什么？错误类型和行号分别是？"
+        },
+        {
+          "level": "L2",
+          "text": "这个 NameError 说明什么？变量名是不是拼写错了？"
+        },
+        {
+          "level": "L3",
+          "text": "Traceback 从上到下读，哪一行是实际出错的地方？"
+        }
       ],
       "source": {
         "title": "TeacherAgent original Python seed",

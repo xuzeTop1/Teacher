@@ -5,6 +5,10 @@ use serde::{Deserialize, Deserializer, Serialize};
 
 pub(crate) const PROTOCOL_FORMAT: &str = "alerttime-teacher-sync";
 pub(crate) const SCHEMA_VERSION: i64 = 1;
+/// 快照协议 v2（论文 §4.3）：snapshot payload 增可选的 focusAggregates。
+pub(crate) const SCHEMA_VERSION_V2: i64 = 2;
+/// 服务端同时接受 v1（无聚合特征，走标准 BKT）与 v2（携带聚合特征，走 FB-BKT）。
+pub(crate) const SUPPORTED_SCHEMA_VERSIONS: [i64; 2] = [SCHEMA_VERSION, SCHEMA_VERSION_V2];
 
 /// Request body limit for the sync HTTP server (bytes).
 pub(crate) const MAX_SYNC_BYTES: usize = 8 * 1024 * 1024;
@@ -54,6 +58,27 @@ pub(crate) struct SnapshotPayload {
     /// Android 端每次同步生成的学习分析。缺失时兼容旧版快照；新版客户端必须生成。
     #[serde(default)]
     pub learning_analysis: Option<LearningAnalysisDto>,
+    /// 协议 v2：端侧专注聚合特征（论文 §4.3），供桌面端 FB-BKT 消费。v1 快照缺失。
+    #[serde(default)]
+    pub focus_aggregates: Option<FocusAggregatesDto>,
+}
+
+/// 端侧专注聚合特征集合（协议 v2）。
+#[derive(Debug, Deserialize, Serialize, Clone)]
+#[serde(rename_all = "camelCase")]
+pub(crate) struct FocusAggregatesDto {
+    pub per_subject: Vec<FocusAggregateEntryDto>,
+}
+
+/// 单个学科的聚合特征；`subject_temp_id` 为 payload.subjects 的 0-based 下标。
+#[derive(Debug, Deserialize, Serialize, Clone)]
+#[serde(rename_all = "camelCase")]
+pub(crate) struct FocusAggregateEntryDto {
+    pub subject_temp_id: i64,
+    pub r_focus: f64,
+    pub n_distract: i64,
+    #[serde(default)]
+    pub window_days: Option<i64>,
 }
 
 #[derive(Debug, Deserialize, Serialize, Clone)]
@@ -68,6 +93,8 @@ pub(crate) struct LearningAnalysisDto {
     /// 存在时必须与同一快照的未软删除实体计数完全一致（见 validate_learning_analysis）。
     #[serde(default)]
     pub input_summary: Option<LearningInputSummaryDto>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub inferences: Option<Vec<serde_json::Value>>,
     pub profile: LearningProfileDto,
     pub plan_evaluation: PlanEvaluationDto,
     pub assessment_draft: AssessmentDraftDto,
@@ -480,7 +507,7 @@ pub(crate) fn validate_envelope_head(
     if format != PROTOCOL_FORMAT {
         errors.push(format!("不支持的协议 format: {format}"));
     }
-    if schema_version != SCHEMA_VERSION {
+    if !SUPPORTED_SCHEMA_VERSIONS.contains(&schema_version) {
         errors.push(format!("不支持的协议版本: {schema_version}"));
     }
     if !matches!(message_type, "pair" | "snapshot" | "proposalDecision") {
@@ -830,6 +857,66 @@ pub(crate) fn validate_snapshot(payload: &SnapshotPayload) -> Result<(), Vec<Str
 /// Validate the optional analysis after the envelope snapshotId is known.
 /// Missing analysis is accepted for old Android clients; if present it is
 /// never treated as assessment evidence or approved question-bank content.
+/// 协议 v2 校验：focusAggregates 的形状、取值范围与下标引用必须自洽。
+/// v1 快照（无该字段）直接通过；带字段的 v1 报文已由 v1 schema 的
+/// additionalProperties=false 拦下，这里只校验 v2 载荷。
+pub(crate) fn validate_focus_aggregates(
+    payload: &SnapshotPayload,
+    schema_version: i64,
+) -> Result<(), Vec<String>> {
+    let Some(aggregates) = payload.focus_aggregates.as_ref() else {
+        return Ok(());
+    };
+    let mut errors = Vec::new();
+    if schema_version < SCHEMA_VERSION_V2 {
+        errors.push("focusAggregates 仅允许出现在 schemaVersion 2 的快照中".to_string());
+        return Err(errors);
+    }
+    if aggregates.per_subject.len() > MAX_COLLECTION_SIZE_SUBJECTS {
+        errors.push(format!(
+            "focusAggregates.perSubject 数量超过上限 {MAX_COLLECTION_SIZE_SUBJECTS}"
+        ));
+    }
+    let subject_count = payload.subjects.len() as i64;
+    let mut seen = std::collections::HashSet::new();
+    for entry in &aggregates.per_subject {
+        if entry.subject_temp_id < 0 || entry.subject_temp_id >= subject_count {
+            errors.push(format!(
+                "focusAggregates.subjectTempId 越界: {}（subjects 数量 {subject_count}）",
+                entry.subject_temp_id
+            ));
+        }
+        if !seen.insert(entry.subject_temp_id) {
+            errors.push(format!(
+                "focusAggregates.subjectTempId 重复: {}",
+                entry.subject_temp_id
+            ));
+        }
+        if !(0.0..=1.0).contains(&entry.r_focus) || !entry.r_focus.is_finite() {
+            errors.push(format!(
+                "focusAggregates.rFocus 超出 [0,1]: {}",
+                entry.r_focus
+            ));
+        }
+        if entry.n_distract < 0 {
+            errors.push(format!(
+                "focusAggregates.nDistract 不能为负: {}",
+                entry.n_distract
+            ));
+        }
+        if let Some(window) = entry.window_days {
+            if !(1..=365).contains(&window) {
+                errors.push(format!("focusAggregates.windowDays 超出 [1,365]: {window}"));
+            }
+        }
+    }
+    if errors.is_empty() {
+        Ok(())
+    } else {
+        Err(errors)
+    }
+}
+
 pub(crate) fn validate_learning_analysis(
     payload: &SnapshotPayload,
     snapshot_id: &str,
@@ -935,6 +1022,11 @@ pub(crate) fn validate_learning_analysis_against_ids(
     session_ids: &std::collections::HashSet<&str>,
 ) -> Result<(), Vec<String>> {
     let mut errors = Vec::new();
+    if !super::local_coach::valid_records(analysis.inferences.as_deref().unwrap_or(&[])) { errors.push("learningAnalysis.inferences 非法".to_string()); }
+    for fact in &analysis.profile.facts {
+        if super::local_coach::fact_contains_inference(&fact.code, &fact.value) { errors.push("推断不得进入 facts".to_string()); }
+    }
+
     check(
         plausible_id(&analysis.analysis_id),
         &mut errors,
@@ -1965,6 +2057,82 @@ mod tests {
         assert!(result.is_err(), "missing required field must be rejected");
     }
 
+    fn read_v2_fixture(name: &str) -> (i64, SnapshotPayload) {
+        let text = read_fixture(name);
+        let envelope: Envelope<SnapshotPayload> =
+            serde_json::from_str(&text).expect("parse v2 fixture");
+        (envelope.schema_version, envelope.payload)
+    }
+
+    #[test]
+    fn focus_aggregates_v2_valid_fixture_accepted() {
+        let (version, payload) = read_v2_fixture("snapshot-v2-valid.json");
+        assert_eq!(version, SCHEMA_VERSION_V2);
+        assert!(validate_snapshot(&payload).is_ok());
+        assert!(validate_focus_aggregates(&payload, version).is_ok());
+        let aggregates = payload.focus_aggregates.expect("aggregates");
+        assert_eq!(aggregates.per_subject.len(), 2);
+        assert_eq!(aggregates.per_subject[0].subject_temp_id, 0);
+        assert!((aggregates.per_subject[0].r_focus - 0.813).abs() < 1e-12);
+    }
+
+    #[test]
+    fn focus_aggregates_empty_per_subject_is_valid() {
+        let (version, payload) = read_v2_fixture("snapshot-v2-empty-focus-aggregates.json");
+        assert!(validate_focus_aggregates(&payload, version).is_ok());
+        assert!(payload
+            .focus_aggregates
+            .expect("aggregates")
+            .per_subject
+            .is_empty());
+    }
+
+    #[test]
+    fn focus_aggregates_rfocus_out_of_range_rejected() {
+        let (version, payload) = read_v2_fixture("snapshot-v2-rfocus-out-of-range.json");
+        let errors = validate_focus_aggregates(&payload, version).expect_err("must reject");
+        assert!(errors.iter().any(|e| e.contains("rFocus")), "{errors:?}");
+    }
+
+    #[test]
+    fn focus_aggregates_negative_distraction_rejected() {
+        let (version, payload) = read_v2_fixture("snapshot-v2-ndistract-negative.json");
+        let errors = validate_focus_aggregates(&payload, version).expect_err("must reject");
+        assert!(errors.iter().any(|e| e.contains("nDistract")), "{errors:?}");
+    }
+
+    #[test]
+    fn focus_aggregates_subject_temp_id_out_of_range_rejected() {
+        let (version, payload) = read_v2_fixture("snapshot-v2-subject-temp-id-out-of-range.json");
+        let errors = validate_focus_aggregates(&payload, version).expect_err("must reject");
+        assert!(errors.iter().any(|e| e.contains("越界")), "{errors:?}");
+    }
+
+    #[test]
+    fn focus_aggregates_on_v1_envelope_rejected() {
+        let (version, payload) = read_v2_fixture("snapshot-v2-version-mismatch.json");
+        assert_eq!(version, SCHEMA_VERSION);
+        let errors = validate_focus_aggregates(&payload, version).expect_err("must reject");
+        assert!(
+            errors.iter().any(|e| e.contains("schemaVersion 2")),
+            "{errors:?}"
+        );
+    }
+
+    #[test]
+    fn duplicate_and_window_bounds_are_rejected() {
+        let (version, mut payload) = read_v2_fixture("snapshot-v2-valid.json");
+        let aggregates = payload.focus_aggregates.as_mut().expect("aggregates");
+        aggregates.per_subject[1].subject_temp_id = 0;
+        aggregates.per_subject[1].window_days = Some(0);
+        let errors = validate_focus_aggregates(&payload, version).expect_err("must reject");
+        assert!(errors.iter().any(|e| e.contains("重复")), "{errors:?}");
+        assert!(
+            errors.iter().any(|e| e.contains("windowDays")),
+            "{errors:?}"
+        );
+    }
+
     #[test]
     fn snapshot_unsupported_version_fixture_rejected() {
         let text = read_fixture("snapshot-unsupported-version.json");
@@ -2205,6 +2373,7 @@ mod tests {
             exam_module_id: None,
         };
         let payload = SnapshotPayload {
+            focus_aggregates: None,
             subjects: vec![subject; MAX_COLLECTION_SIZE_SUBJECTS + 1],
             weekly_goals: vec![],
             tasks: vec![],
@@ -2239,6 +2408,7 @@ mod tests {
         };
         let _ = &mut session;
         let errors = validate_snapshot(&SnapshotPayload {
+            focus_aggregates: None,
             subjects: vec![],
             weekly_goals: vec![],
             tasks: vec![],
@@ -2273,6 +2443,7 @@ mod tests {
             ai_usage_source: Some("usage_stats".to_string()),
         };
         validate_snapshot(&SnapshotPayload {
+            focus_aggregates: None,
             subjects: vec![],
             weekly_goals: vec![],
             tasks: vec![],
@@ -2287,6 +2458,7 @@ mod tests {
             ..session.clone()
         };
         let errors = validate_snapshot(&SnapshotPayload {
+            focus_aggregates: None,
             subjects: vec![],
             weekly_goals: vec![],
             tasks: vec![],
@@ -2302,6 +2474,7 @@ mod tests {
             ..session.clone()
         };
         let errors = validate_snapshot(&SnapshotPayload {
+            focus_aggregates: None,
             subjects: vec![],
             weekly_goals: vec![],
             tasks: vec![],

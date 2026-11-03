@@ -1,4 +1,5 @@
 import { defineStore } from "pinia"
+import { recordAuthorizationReduction } from "../services/privacy/authorizationEpoch"
 import type { LlmProviderConfig } from "../services/llm/types"
 import type { DatabaseStatus, StoredProviderConfig } from "../services/tauri/commands"
 import type { CloudPrivacyConfig } from "../types/cloudPrivacy"
@@ -48,10 +49,17 @@ function saveEmbeddingConfig(config: EmbeddingProviderConfig | null): void {
   }
 }
 
+/**
+ * 前端不再提供的科目：这些科目没有对应 Pack（知识包为空），
+ * 留在界面上会让用户点开一个空科目，并触发后端 ensure_default_conversation
+ * 按 code 自动补建 subjects 行。若日后补齐 Pack，把对应 code 从这里移除即可。
+ */
+const RETIRED_SUBJECT_CODES = new Set<string>(["law", "accounting"])
+
 function loadSelectedSubject(): SubjectCode {
   try {
     const stored = localStorage.getItem(SELECTED_SUBJECT_STORAGE_KEY)?.trim()
-    if (stored) return stored as SubjectCode
+    if (stored && !RETIRED_SUBJECT_CODES.has(stored)) return stored as SubjectCode
   } catch {
     // ignore — the app can still use the default subject without storage
   }
@@ -184,7 +192,9 @@ export const useAppStore = defineStore("app", {
       this.databaseStatus = { ...status }
     },
     updateCloudPrivacy(patch: Partial<CloudPrivacyConfig>) {
-      this.cloudPrivacy = { ...this.cloudPrivacy, ...patch }
+      const next = { ...this.cloudPrivacy, ...patch }
+      recordAuthorizationReduction(this.cloudPrivacy, next)
+      this.cloudPrivacy = next
       saveCloudPrivacyConfig(this.cloudPrivacy)
     },
     setCustomSubjects(subjects: CustomSubjectDescriptor[]) {
@@ -213,8 +223,6 @@ export const useAppStore = defineStore("app", {
 const BUILT_IN_SUBJECTS: Array<{ code: SubjectCode; name: string }> = [
   { code: "math", name: "数学" },
   { code: "english", name: "英语" },
-  { code: "law", name: "法学" },
-  { code: "accounting", name: "会计" },
   { code: "programming", name: "编程" },
   { code: "cs408", name: "408考研" },
   { code: "physics", name: "物理" },

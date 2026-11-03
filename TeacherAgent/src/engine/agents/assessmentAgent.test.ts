@@ -12,6 +12,18 @@ const baseInput: AssessmentAgentInput = {
 }
 
 describe("assessTutorTurn", () => {
+  it.each(["你的答案并不是完全正确，关键错误在于计算过程。", "不完全正确，需要重新检查。", "并非推理正确，问题在于第三步。"])(
+    "does not record negated tutor feedback as a correct observation: %s", (tutorReply) => {
+      const result = assessTutorTurn({ ...baseInput, tutorReply, knowledgeNodes:[{id:"k1",title:"测试",subjectCode:"math"}] })
+      expect(result.correctness).toBe("incorrect")
+      expect(result.knowledgeUpdates[0].masteryDelta).toBeLessThan(0)
+    },
+  )
+  it("withholds mastery updates for uncertain negated confirmation", () => {
+    const result = assessTutorTurn({ ...baseInput, tutorReply:"你的答案不一定是正确的。",knowledgeNodes:[{id:"k1",title:"测试",subjectCode:"math"}] })
+    expect(result.correctness).toBe("unknown")
+    expect(result.knowledgeUpdates).toEqual([])
+  })
   describe("correctness classification", () => {
     it("classifies correct when tutor confirms", () => {
       const result = assessTutorTurn({

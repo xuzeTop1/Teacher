@@ -11,7 +11,14 @@ keystore.properties
 /.kotlin/
 
 /app/build/
-/app/schemas/
+/app/.cxx/
+/app/src/main/cpp/vendor/llama.cpp/
+/app/src/main/assets/local-coach/*.gguf
+
+# 注：/app/schemas/ 原先在此被忽略，2026-09-11 起改为纳入版本控制。
+# 原因：Room 导出的 schema 是 MigrationTestHelper 的判定基准，且**历史版本无法由构建再生**
+# （KSP 只导出当前版本，一旦缺失即永久丢失）。详见 docs/android-instrumented-test-status.md。
+
 /artifacts/
 
 # 本地调试脚本与产物

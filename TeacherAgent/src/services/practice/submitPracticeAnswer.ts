@@ -70,7 +70,7 @@ export async function submitPracticeAnswer(input: SubmitPracticeAnswerInput): Pr
 
   // 保存 assessment 结果
   try {
-    await saveAssessmentResult({
+    const saved = await saveAssessmentResult({
       id: `practice-${question.questionId}-${Date.now()}`,
       studentId,
       conversationId: effectiveConversationId,
@@ -100,16 +100,18 @@ export async function submitPracticeAnswer(input: SubmitPracticeAnswerInput): Pr
       ...(diagnosticProvenance ? { diagnosticProvenance } : {}),
       createdAt: new Date().toISOString()
     })
-    // Only reflect the new values after the durable assessment write succeeds.
-    for (const delta of knowledgeDeltas) {
-      const existing = studentKnowledge.find((item) => item.knowledgeNodeId === delta.knowledgeNodeId)
-      if (existing) {
-        existing.masteryProbability = Math.max(0.001, Math.min(0.999, existing.masteryProbability + delta.masteryDelta))
-        existing.attemptsCount++
-        if (correct) existing.correctCount++
-      }
+    // The backend may use FB-BKT and a newer prior. Never recompute its durable
+    // result in the UI, including when this is the first attempt at a node.
+    const persistedUpdates = saved?.knowledgeUpdates ?? []
+    for (const state of persistedUpdates) {
+      const existing = studentKnowledge.find((item) => item.knowledgeNodeId === state.knowledgeNodeId)
+      if (existing) Object.assign(existing, state)
+      else studentKnowledge.push({ ...state })
     }
-    return { success: true, correct, bktUpdated: bktOk, assessmentSaved: true, knowledgeUpdated: true }
+    const knowledgeUpdated = question.knowledgeNodeIds.every((id) =>
+      persistedUpdates.some((state: { knowledgeNodeId: string }) => state.knowledgeNodeId === id),
+    )
+    return { success: true, correct, bktUpdated: bktOk, assessmentSaved: true, knowledgeUpdated }
   } catch (error) {
     const errorMsg = error instanceof Error ? error.message : String(error)
     return { success: false, correct, bktUpdated: bktOk, assessmentSaved: false, knowledgeUpdated: false, error: errorMsg }

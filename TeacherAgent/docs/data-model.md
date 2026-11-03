@@ -2,7 +2,7 @@
 
 版本：v1.0  
 状态：MVP 开发基线  
-最后更新：2026-08-11
+最后更新：2026-10-03
 适用对象：前端/后端实现者、Codex、Claude Code
 
 ## 1. 数据模型目标
@@ -363,6 +363,8 @@ CREATE TABLE student_knowledge (
 - `attempts_count === 0`：冷启动记录，显示"未开始/待学习"，不显示百分比
 - `attempts_count < 3`：数据不足，显示"初始评估"
 - `attempts_count >= 3`：真实学习记录，正常显示百分比
+
+这里的 0.5 是业务入口对新节点使用的有效先验。旧 `BktParams.p_lo` 虽声明为 0.3，当前更新函数并不读取它，而是使用调用方传入的先验。数据库 DDL 的 `mastery_probability` 裸默认值为 0.0；业务更新的 INSERT 均显式传入计算值，不依赖该默认值。
 
 ### 3.13 reflection_records
 
@@ -969,9 +971,25 @@ id DESC
 - Android 最近分析以 `learning_analysis_runtime_*` AppSetting 派生缓存持久化，可由原始业务数据重新生成，故不进入备份 JSON；用户填写的 `learner_context_*` 属于普通设置，可随明文备份迁移。每次同步生成新分析并在首个桌面网络请求前写入缓存。
 - 当前仍是手动私有局域网同步；云端数据库、账号、后台上传、云画像和完整历史上传均不在范围内。
 
+
+#### 本地 Qwen 推断快照扩展 B1（2026-10-19）
+
+并存测试版的结构化本地模型结果使用 `learningAnalysis.inferences[]`，与上述历史 profile facts/inferences、手机事实表以及 evidenceRefs 记录分开。记录为严格白名单、无自由文本：只包含公共来源/模型/时间元数据和相应任务的数值/枚举字段；不携带 evidence 或 advice。该块不得复制进 facts，不参与 mastery、FB-BKT、assessment 或检索触发。旧同步快照缺块时按无本地记录兼容。详见 `docs/decisions/2026-10-19-local-coach-provenance-b1.md` 与 `sync/protocol/protocol.md`。
 ## 9. 与其他文档的关系
 
 - MVP 范围：`docs/mvp-spec.md`
+
+### 2026-10-03 评估提交与迁移事务补充
+
+本次修复不新增迁移，数据库仍为 v18。迁移 runner 使用 `BEGIN IMMEDIATE`，统一提交 DDL、`schema_migrations` 与 `user_version`；任一步失败均回滚本次升级。外键在事务外开启。不对过去已产生的半迁移库进行猜测式自动修复。
+
+`save_assessment_result` 在同一 `BEGIN IMMEDIATE` 事务内进行证据结构校验、幂等检查、评估保存、知识快照与所有节点更新，提交成功才返回。`StoredAssessmentResult` 的 IPC 返回值新增 `knowledgeUpdates: StudentKnowledgeMastery[]`，包含本次涉及的正式节点当前数据库状态；同 ID 重试返回当前状态而不重复应用 delta。这个字段属于响应 DTO，不是新的数据库列。
+
+同步专注聚合按 `sync_devices` 的 `owner_identity`（空值兼容设备 ID）连接 `subject_mappings`，再通过 `subjects.code` 转成内部 subject ID。隐式读取排除已撤销设备，只接受 `received_at_ms` 位于当前时刻前 24 小时内的数据；这是接收时效限制，不宣称手机原始活动发生在最近 24 小时。无有效特征时回退普通更新。
+
+新节点先验为 0.5。`partially_correct` 不进入二元 FB-BKT，保留既有 delta 与尝试计数路径，正确次数不增加；不得把部分正确写成完全正确观测。历史评估与掌握度不在本次修复中重算。
+
+该先验指业务入口的有效值：旧参数结构中的 `p_lo=0.3` 是当前更新函数未使用的声明值；DDL 的 mastery 裸默认仍为 0.0，业务 INSERT 显式传入计算后的掌握度，不依赖这一默认值。
 - 知识库来源和许可证：`docs/knowledge-base-governance.md`
 - 工具接口：`docs/tool-interface.md`
 - Agent 数据结构：`docs/agent-architecture.md`

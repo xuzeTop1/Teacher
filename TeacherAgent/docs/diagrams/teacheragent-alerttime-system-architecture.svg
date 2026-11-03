@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1650" height="1100" viewBox="0 0 1650 1100" role="img" aria-labelledby="sysTitle sysDesc">
+  <title id="sysTitle">TeacherAgent × AlertTime 多端协同系统总体架构</title>
+  <desc id="sysDesc">端侧行为感知、局域网零信任同步、认知建模FB-BKT、私有混合检索RRF与闭环自适应辅导系统总体架构图</desc>
+  
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgCanvas" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+
+    <!-- Desktop Blue Gradient -->
+    <linearGradient id="headerDesktop" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    
+    <!-- Mobile Green/Teal Gradient -->
+    <linearGradient id="headerMobile" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#065f46"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+
+    <!-- LAN Channel Purple Gradient -->
+    <linearGradient id="headerLan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3730a3"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+
+    <!-- External LLM Sky Gradient -->
+    <linearGradient id="headerExternal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0369a1"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+
+    <!-- AI Core Violet Gradient -->
+    <linearGradient id="aiCoreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fdf4ff"/>
+      <stop offset="100%" stop-color="#fae8ff"/>
+    </linearGradient>
+
+    <!-- Marker arrows -->
+    <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M1,1 L7,4 L1,7 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrowTeal" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M1,1 L7,4 L1,7 Z" fill="#059669"/>
+    </marker>
+    <marker id="arrowIndigo" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M1,1 L7,4 L1,7 Z" fill="#4f46e5"/>
+    </marker>
+    <marker id="arrowAmber" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M1,1 L7,4 L1,7 Z" fill="#d97706"/>
+    </marker>
+    <marker id="arrowGray" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M1,1 L7,4 L1,7 Z" fill="#64748b"/>
+    </marker>
+
+    <style>
+      .font-main { font-family: "Segoe UI", "Microsoft YaHei", "PingFang SC", -apple-system, sans-serif; }
+      .txt-title { font-weight: 800; font-size: 23px; fill: #0f172a; letter-spacing: -0.5px; }
+      .txt-subtitle { font-weight: 500; font-size: 13.5px; fill: #475569; }
+      .txt-header { font-weight: 700; font-size: 15px; fill: #ffffff; }
+      .txt-badge { font-weight: 600; font-size: 11px; }
+      .txt-card-title { font-weight: 700; font-size: 13.5px; fill: #0f172a; }
+      .txt-body { font-weight: 400; font-size: 12px; fill: #334155; line-height: 1.5; }
+      .txt-body-bold { font-weight: 600; font-size: 12px; fill: #1e293b; }
+      .txt-mono { font-family: Consolas, "Courier New", "JetBrains Mono", monospace; font-size: 11px; }
+      .txt-formula { font-family: "Cambria Math", "Times New Roman", serif; font-style: italic; font-size: 12px; fill: #4338ca; }
+      .txt-footer { font-weight: 500; font-size: 12px; fill: #1e293b; }
+      
+      .box-container { fill: #ffffff; stroke-width: 2px; rx: 12px; }
+      .subcard { fill: #ffffff; stroke-width: 1.2px; rx: 8px; }
+    </style>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1650" height="1100" fill="url(#bgCanvas)"/>
+
+  <!-- Top Title Banner -->
+  <g transform="translate(60, 28)">
+    <text class="font-main txt-title" x="0" y="24">TeacherAgent × AlertTime 多端协同系统总体架构</text>
+    <text class="font-main txt-subtitle" x="0" y="48">端侧行为感知 · 局域网零信任同步 · 认知建模(FB-BKT) · 私有混合检索(RRF RAG) · 闭环自适应辅导</text>
+    
+    <!-- Top System Badges -->
+    <g transform="translate(860, 6)">
+      <rect x="0" y="0" width="130" height="24" rx="12" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.2"/>
+      <text class="font-main txt-badge" x="65" y="16" fill="#1d4ed8" text-anchor="middle">Tauri 2.x + Axum</text>
+      
+      <rect x="140" y="0" width="130" height="24" rx="12" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1.2"/>
+      <text class="font-main txt-badge" x="205" y="16" fill="#047857" text-anchor="middle">Android 14 + Room</text>
+
+      <rect x="280" y="0" width="125" height="24" rx="12" fill="#faf5ff" stroke="#e9d5ff" stroke-width="1.2"/>
+      <text class="font-main txt-badge" x="342" y="16" fill="#6b21a8" text-anchor="middle">FB-BKT 认知模型</text>
+
+      <rect x="415" y="0" width="130" height="24" rx="12" fill="#fffbeb" stroke="#fde68a" stroke-width="1.2"/>
+      <text class="font-main txt-badge" x="480" y="16" fill="#b45309" text-anchor="middle">混合检索 RRF (k=60)</text>
+
+      <rect x="555" y="0" width="120" height="24" rx="12" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+      <text class="font-main txt-badge" x="615" y="16" fill="#334155" text-anchor="middle">真机实测 5.6s E2E</text>
+    </g>
+  </g>
+
+  <!-- ==================== TOP CENTER: EXTERNAL AI PROVIDERS ==================== -->
+  <g transform="translate(560, 95)">
+    <rect width="530" height="88" rx="12" fill="#ffffff" stroke="#38bdf8" stroke-width="1.8"/>
+    <rect width="530" height="30" rx="12" fill="url(#headerExternal)"/>
+    <rect y="18" width="530" height="12" fill="url(#headerExternal)"/>
+    <text class="font-main txt-header" x="265" y="20" text-anchor="middle">[外部服务] 大语言模型与向量嵌入服务 (AI Providers)</text>
+    
+    <g transform="translate(20, 42)">
+      <rect x="0" y="0" width="235" height="36" rx="6" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1.2"/>
+      <text class="font-main txt-card-title" x="12" y="17" fill="#0369a1">云端 OpenAI 兼容 API</text>
+      <text class="font-main txt-body" x="12" y="30" fill="#64748b">DeepSeek / GLM-4 / Claude 等推理</text>
+    </g>
+
+    <g transform="translate(275, 42)">
+      <rect x="0" y="0" width="235" height="36" rx="6" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.2"/>
+      <text class="font-main txt-card-title" x="12" y="17" fill="#15803d">本地 Ollama Sidecar 引擎</text>
+      <text class="font-main txt-body" x="12" y="30" fill="#64748b">bge-m3 1024维向量 / qwen2.5 本地模型</text>
+    </g>
+  </g>
+
+  <!-- ==================== LEFT COLUMN: TEACHERAGENT DESKTOP ==================== -->
+  <g transform="translate(60, 205)">
+    <!-- Container -->
+    <rect class="box-container" width="540" height="805" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <!-- Header -->
+    <rect width="540" height="46" fill="url(#headerDesktop)" rx="12"/>
+    <rect y="34" width="540" height="12" fill="url(#headerDesktop)"/>
+    <text class="font-main txt-header" x="20" y="29">桌面端 · TeacherAgent (Windows / Tauri 2.x)</text>
+    <rect x="420" y="11" width="105" height="24" rx="12" fill="#3b82f6"/>
+    <text class="font-main txt-badge" x="472" y="27" fill="#ffffff" text-anchor="middle">助教核心与诊断</text>
+
+    <!-- Card 1: Vue 3 UI -->
+    <g transform="translate(18, 60)">
+      <rect class="subcard" width="504" height="98" stroke="#bfdbfe"/>
+      <rect x="0" y="0" width="6" height="98" rx="3" fill="#2563eb"/>
+      <text class="font-main txt-card-title" x="16" y="24" fill="#1e3a8a">Vue 3 + Vuetify 3 响应式交互层</text>
+      <text class="font-main txt-body" x="16" y="44"><tspan class="txt-body-bold">组件体系：</tspan>AlertTimeSyncView · 动态配对二维码渲染 · 设备列表与吊销</text>
+      <text class="font-main txt-body" x="16" y="64"><tspan class="txt-body-bold">状态编排：</tspan>Pinia alertTimeSyncStore (管理连接态/快照指标/建议多维审核)</text>
+      <rect x="16" y="74" width="472" height="18" rx="4" fill="#eff6ff"/>
+      <text class="font-main txt-mono" x="22" y="87" fill="#1d4ed8">[架构护栏] 仅经 Tauri commands 调用后端能力，不直接监听端口与读写DB</text>
+    </g>
+
+    <!-- Arrow down -->
+    <line x1="270" y1="160" x2="270" y2="173" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowGray)"/>
+
+    <!-- Card 2: Rust Backend -->
+    <g transform="translate(18, 175)">
+      <rect class="subcard" width="504" height="114" stroke="#bfdbfe"/>
+      <rect x="0" y="0" width="6" height="114" rx="3" fill="#1d4ed8"/>
+      <text class="font-main txt-card-title" x="16" y="24" fill="#1e3a8a">Rust 核心层 · Tauri Commands &amp; 同步服务端</text>
+      <text class="font-main txt-body" x="16" y="44"><tspan class="txt-body-bold">同步服务：</tspan>Axum + rustls 构建私有局域网 HTTPS 服务端 (绑定私有 IPv4:8787)</text>
+      <text class="font-main txt-body" x="16" y="64"><tspan class="txt-body-bold">协议解析：</tspan>严格 JSON Schema v1/v2 校验 · 8 MiB 负载保护 · snapshotId 幂等防重</text>
+      <text class="font-main txt-body" x="16" y="84"><tspan class="txt-body-bold">安全凭据：</tspan>自签 TLS 1.2+ 证书 · SPKI SHA-256 提取 · 10分钟高熵 Token 验证</text>
+      <rect x="16" y="90" width="472" height="18" rx="4" fill="#f8fafc"/>
+      <text class="font-main txt-mono" x="22" y="103" fill="#475569">[密钥安全] TLS 私钥与大模型 API Key 统一由系统 Windows Credential 管理</text>
+    </g>
+
+    <!-- Arrow down -->
+    <line x1="270" y1="291" x2="270" y2="304" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowGray)"/>
+
+    <!-- Card 3: Multi-Agent & Cognitive Reasoning -->
+    <g transform="translate(18, 306)">
+      <rect class="subcard" width="504" height="268" stroke="#c084fc" fill="url(#aiCoreGrad)"/>
+      <rect x="0" y="0" width="6" height="268" rx="3" fill="#7c3aed"/>
+      <text class="font-main txt-card-title" x="16" y="24" fill="#581c87">多 Agent 智能协同与认知推理核心 (AI Core)</text>
+      
+      <!-- Sub-module 3.1: FB-BKT -->
+      <g transform="translate(16, 34)">
+        <rect width="472" height="66" rx="6" fill="#ffffff" stroke="#e9d5ff"/>
+        <text class="font-main txt-card-title" x="10" y="18" fill="#6b21a8" font-size="12.5px">FB-BKT 认知模型 (遗忘感知与端侧行为联合追踪)</text>
+        <text class="font-main txt-body" x="10" y="36">
+          <tspan class="txt-body-bold">先验遗忘衰减：</tspan>
+          <tspan class="txt-formula">P(L_t⁻) = P(L_{t-1}) · exp(-λ · Δt)</tspan> (艾宾浩斯衰减率 λ=0.05)
+        </text>
+        <text class="font-main txt-body" x="10" y="55">
+          <tspan class="txt-body-bold">端侧行为调节：</tspan>
+          <tspan class="txt-formula">P_T' = P_T · (1 + α · R_focus / (1 + β · N_distract))</tspan> (专注增益α=0.5, 分心惩罚β=0.3)
+        </text>
+      </g>
+
+      <!-- Sub-module 3.2: Hybrid RAG -->
+      <g transform="translate(16, 108)">
+        <rect width="472" height="74" rx="6" fill="#ffffff" stroke="#e9d5ff"/>
+        <text class="font-main txt-card-title" x="10" y="18" fill="#6b21a8" font-size="12.5px">私有混合检索 RAG (Hybrid Retrieval Pipeline)</text>
+        <text class="font-main txt-body" x="10" y="36"><tspan class="txt-body-bold">倒排通道 (FTS5 BM25)：</tspan>Trigram 3-gram 分词 · 剥离中文提问外壳 · Top-20</text>
+        <text class="font-main txt-body" x="10" y="52"><tspan class="txt-body-bold">稠密通道 (Vector Cosine)：</tspan>bge-m3 1024-dim 嵌入 · 暴力余弦检索 · Top-20</text>
+        <text class="font-main txt-body" x="10" y="68"><tspan class="txt-body-bold">RRF 倒数排名融合：</tspan><tspan class="txt-formula">RRF(d) = Σ [ 1 / (60 + rank_m(d)) ]</tspan> · 保底抗饿死槽位 Floor=2</text>
+      </g>
+
+      <!-- Sub-module 3.3: Agent Roles -->
+      <g transform="translate(16, 190)">
+        <rect width="472" height="68" rx="6" fill="#ffffff" stroke="#e9d5ff"/>
+        <text class="font-main txt-card-title" x="10" y="18" fill="#6b21a8" font-size="12.5px">协同教学 Agent 编排体系 (Agent Orchestration)</text>
+        <text class="font-main txt-body" x="10" y="36"><tspan class="txt-body-bold">Tutor Orchestrator：</tspan>苏格拉底式启发提问，反例/分解/引导，绝不代答</text>
+        <text class="font-main txt-body" x="10" y="51"><tspan class="txt-body-bold">PlannerAgent：</tspan>分析快照认知差距，拟定周目标与任务调整建议稿 (Proposal)</text>
+        <text class="font-main txt-body" x="10" y="65"><tspan class="txt-body-bold">GuardrailAgent：</tspan>教学伦理与安全护栏，拦截直接透露解题关键步骤</text>
+      </g>
+    </g>
+
+    <!-- Arrow down -->
+    <line x1="270" y1="576" x2="270" y2="589" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowGray)"/>
+
+    <!-- Card 4: Local Storage SQLite -->
+    <g transform="translate(18, 591)">
+      <rect class="subcard" width="504" height="198" stroke="#a7f3d0"/>
+      <rect x="0" y="0" width="6" height="198" rx="3" fill="#059669"/>
+      <text class="font-main txt-card-title" x="16" y="24" fill="#065f46">本地持久化数据层 (SQLite Database)</text>
+      
+      <g transform="translate(16, 36)">
+        <rect width="472" height="74" rx="6" fill="#f0fdf4" stroke="#bbf7d0"/>
+        <text class="font-main txt-card-title" x="10" y="18" fill="#047857" font-size="12px">同步事实表与读模型 (Sync Read Models)</text>
+        <text class="font-main txt-mono" x="10" y="35" fill="#15803d">sync_devices: 记录配对设备公钥哈希、Bearer凭据散列、吊销状态</text>
+        <text class="font-main txt-mono" x="10" y="50" fill="#15803d">sync_snapshots: 存储 Schema v2 快照、focusAggregates 端侧聚合特征</text>
+        <text class="font-main txt-mono" x="10" y="65" fill="#15803d">sync_proposals / sync_decisions: 暂存规划建议草稿与学生裁决日志</text>
+      </g>
+
+      <g transform="translate(16, 118)">
+        <rect width="472" height="70" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+        <text class="font-main txt-card-title" x="10" y="18" fill="#334155" font-size="12px">教学与知识图谱资产 (Knowledge &amp; Questions)</text>
+        <text class="font-main txt-mono" x="10" y="35" fill="#475569">knowledge_nodes (43正式/776总节点) · questions (20正式/766总题)</text>
+        <text class="font-main txt-mono" x="10" y="50" fill="#475569">knowledge_fts (FTS5 Trigram 倒排索引表) · vector_embeddings (向量表)</text>
+        <text class="font-main txt-mono" x="10" y="65" fill="#475569">BKT 状态表 (记录学生每个知识概念的历史答题、时间间隔与掌握度)</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ==================== CENTER COLUMN: SECURE LAN CHANNEL ==================== -->
+  <g transform="translate(630, 205)">
+    <!-- Container -->
+    <rect class="box-container" width="390" height="805" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+    <!-- Header -->
+    <rect width="390" height="46" fill="url(#headerLan)" rx="12"/>
+    <rect y="34" width="390" height="12" fill="url(#headerLan)"/>
+    <text class="font-main txt-header" x="195" y="29" text-anchor="middle">私有局域网 HTTPS 同步通道 (Local Sync Channel)</text>
+
+    <!-- Subcard 1: Zero Trust Security -->
+    <g transform="translate(18, 60)">
+      <rect class="subcard" width="354" height="142" stroke="#c7d2fe"/>
+      <rect x="0" y="0" width="6" height="142" rx="3" fill="#4f46e5"/>
+      <text class="font-main txt-card-title" x="16" y="24" fill="#312e81">零信任安全握手体系 (Zero-Trust)</text>
+      
+      <rect x="16" y="36" width="322" height="24" rx="4" fill="#eef2ff"/>
+      <text class="font-main txt-mono" x="177" y="52" fill="#3730a3" text-anchor="middle">TLS 1.2+ · 自签证书 · 无外部 CA 依赖</text>
+
+      <text class="font-main txt-body" x="16" y="78"><tspan class="txt-body-bold">公钥固定 (Pinning)：</tspan>严格校验 SPKI SHA-256 指纹</text>
+      <text class="font-main txt-body" x="16" y="96"><tspan class="txt-body-bold">一次性握手：</tspan>10分钟高熵 Token，仅限单次消费</text>
+      <text class="font-main txt-body" x="16" y="114"><tspan class="txt-body-bold">扫码引导：</tspan>动态生成 ta-sync:// 协议二维码 (免配网络)</text>
+      <text class="font-main txt-body" x="16" y="132"><tspan class="txt-body-bold">凭据隔离：</tspan>手机 Keystore 保存 Bearer Token，支持撤销</text>
+    </g>
+
+    <!-- Subcard 2: RESTful DTO Protocol -->
+    <g transform="translate(18, 216)">
+      <rect class="subcard" width="354" height="284" stroke="#c7d2fe"/>
+      <rect x="0" y="0" width="6" height="284" rx="3" fill="#4338ca"/>
+      <text class="font-main txt-card-title" x="16" y="24" fill="#312e81">四阶段核心交互协议 (Schema v2)</text>
+
+      <!-- Protocol Flow 1 -->
+      <g transform="translate(16, 36)">
+        <rect width="322" height="50" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+        <rect x="8" y="8" width="90" height="20" rx="10" fill="#e0e7ff"/>
+        <text class="font-main txt-mono" x="53" y="22" fill="#3730a3" font-weight="700" text-anchor="middle">POST /v1/pair</text>
+        <text class="font-main txt-body" x="108" y="22" fill="#475569">一次性 Token 握手配对</text>
+        <text class="font-main txt-mono" x="10" y="40" fill="#64748b">← 返回 pairAck (下发长期 Bearer 凭据)</text>
+      </g>
+
+      <!-- Protocol Flow 2 -->
+      <g transform="translate(16, 94)">
+        <rect width="322" height="66" rx="6" fill="#f0fdf4" stroke="#bbf7d0"/>
+        <rect x="8" y="8" width="130" height="20" rx="10" fill="#dcfce7"/>
+        <text class="font-main txt-mono" x="73" y="22" fill="#15803d" font-weight="700" text-anchor="middle">POST /v1/snapshots</text>
+        <text class="font-main txt-body" x="146" y="22" fill="#166534">全量快照上报 (v2)</text>
+        <text class="font-main txt-mono" x="10" y="41" fill="#15803d">载荷: subjects, goals, tasks, study_sessions</text>
+        <text class="font-main txt-mono" x="10" y="57" fill="#15803d">关键增量: focusAggregates (R_focus, N_distract)</text>
+      </g>
+
+      <!-- Protocol Flow 3 -->
+      <g transform="translate(16, 168)">
+        <rect width="322" height="50" rx="6" fill="#fffbeb" stroke="#fde68a"/>
+        <rect x="8" y="8" width="125" height="20" rx="10" fill="#fef3c7"/>
+        <text class="font-main txt-mono" x="70" y="22" fill="#b45309" font-weight="700" text-anchor="middle">GET /v1/proposals</text>
+        <text class="font-main txt-body" x="140" y="22" fill="#92400e">拉取学习建议</text>
+        <text class="font-main txt-mono" x="10" y="40" fill="#b45309">基于 Keyset 游标 cursor 分页 · 仅查本设备建议</text>
+      </g>
+
+      <!-- Protocol Flow 4 -->
+      <g transform="translate(16, 226)">
+        <rect width="322" height="48" rx="6" fill="#faf5ff" stroke="#e9d5ff"/>
+        <rect x="8" y="8" width="175" height="20" rx="10" fill="#f3e8ff"/>
+        <text class="font-main txt-mono" x="95" y="22" fill="#6b21a8" font-weight="700" text-anchor="middle">POST /v1/proposal-decisions</text>
+        <text class="font-main txt-mono" x="10" y="40" fill="#6b21a8">学生明确采纳/拒绝决策回传 ← 返回 decisionAck</text>
+      </g>
+    </g>
+
+    <!-- Subcard 3: Real-device Benchmarks -->
+    <g transform="translate(18, 514)">
+      <rect class="subcard" width="354" height="275" stroke="#fcd34d" fill="#fffdfa"/>
+      <rect x="0" y="0" width="6" height="275" rx="3" fill="#f59e0b"/>
+      <text class="font-main txt-card-title" x="16" y="24" fill="#92400e">真机实测压测指标 (Paper §5 实证)</text>
+
+      <!-- Metric Grid -->
+      <g transform="translate(16, 36)">
+        <rect width="154" height="58" rx="6" fill="#ffffff" stroke="#fef3c7"/>
+        <text class="font-main txt-body" x="10" y="18" fill="#78350f">实测快照实体规模</text>
+        <text class="font-main txt-title" x="10" y="44" fill="#b45309" font-size="18px">10,021 个</text>
+      </g>
+
+      <g transform="translate(184, 36)">
+        <rect width="154" height="58" rx="6" fill="#ffffff" stroke="#fef3c7"/>
+        <text class="font-main txt-body" x="10" y="18" fill="#78350f">端到端传输+落库耗时</text>
+        <text class="font-main txt-title" x="10" y="44" fill="#047857" font-size="18px">均值 5.6 秒</text>
+      </g>
+
+      <!-- Detail rows -->
+      <g transform="translate(16, 104)">
+        <rect width="322" height="74" rx="6" fill="#ffffff" stroke="#fde68a"/>
+        <text class="font-main txt-body" x="10" y="18"><tspan class="txt-body-bold">真实设备环境：</tspan>桌面 Windows (以太网) ↔ 手机 (rndis0)</text>
+        <text class="font-main txt-body" x="10" y="34"><tspan class="txt-body-bold">实体结构分布：</tspan>13 学科 + 58 周目标 + 1725 任务 + 8225 会话</text>
+        <text class="font-main txt-body" x="10" y="50"><tspan class="txt-body-bold">真机 10 轮测量：</tspan>成功率 100% · 最短 5.2s · 最长 8.1s</text>
+        <text class="font-main txt-body" x="10" y="66"><tspan class="txt-body-bold">幂等重放保护：</tspan>重复快照秒级短路回显，避免重复写库</text>
+      </g>
+
+      <g transform="translate(16, 186)">
+        <rect width="322" height="76" rx="6" fill="#eff6ff" stroke="#bfdbfe"/>
+        <text class="font-main txt-card-title" x="10" y="18" fill="#1e40af" font-size="11.5px">完整闭环端到端验证 (Case Study)</text>
+        <text class="font-main txt-body" x="10" y="34">① 手机分心事件感知 → ② 聚合上报快照(Schema v2)</text>
+        <text class="font-main txt-body" x="10" y="50">③ 桌面 FB-BKT 更新掌握度 → ④ 混合检索 RRF 召回材料</text>
+        <text class="font-main txt-body" x="10" y="66">⑤ 建议生成与推送 → ⑥ 手机学生确认采纳 → ⑦ 回传决策</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ==================== RIGHT COLUMN: ALERTTIME MOBILE ==================== -->
+  <g transform="translate(1050, 205)">
+    <!-- Container -->
+    <rect class="box-container" width="540" height="805" fill="#ffffff" stroke="#059669" stroke-width="2"/>
+    <!-- Header -->
+    <rect width="540" height="46" fill="url(#headerMobile)" rx="12"/>
+    <rect y="34" width="540" height="12" fill="url(#headerMobile)"/>
+    <text class="font-main txt-header" x="20" y="29">手机端 · AlertTime (Android / Kotlin)</text>
+    <rect x="420" y="11" width="105" height="24" rx="12" fill="#10b981"/>
+    <text class="font-main txt-badge" x="472" y="27" fill="#ffffff" text-anchor="middle">执行终端与真机</text>
+
+    <!-- Card 1: Jetpack Compose UI -->
+    <g transform="translate(18, 60)">
+      <rect class="subcard" width="504" height="114" stroke="#a7f3d0"/>
+      <rect x="0" y="0" width="6" height="114" rx="3" fill="#059669"/>
+      <text class="font-main txt-card-title" x="16" y="24" fill="#065f46">Jetpack Compose 现代化响应式界面</text>
+      <text class="font-main txt-body" x="16" y="44"><tspan class="txt-body-bold">交互组件：</tspan>TeacherSyncDialog · TeacherSyncViewModel (Material 3 规范)</text>
+      <text class="font-main txt-body" x="16" y="64"><tspan class="txt-body-bold">扫码配对：</tspan>集成 ZXing 摄像头扫码 (ScanContract)，解析 ta-sync 链接并绑定</text>
+      <text class="font-main txt-body" x="16" y="84"><tspan class="txt-body-bold">建议呈现：</tspan>直观展示桌面端发来的周目标与补弱任务建议，提供多维审阅信息</text>
+      <rect x="16" y="90" width="472" height="18" rx="4" fill="#f0fdf4"/>
+      <text class="font-main txt-mono" x="22" y="103" fill="#047857">[决策护栏] 建议仅作只读呈现，学生明确点击「采纳」后才开启写事务</text>
+    </g>
+
+    <!-- Arrow down -->
+    <line x1="270" y1="176" x2="270" y2="189" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowGray)"/>
+
+    <!-- Card 2: Sync Engine & Behavior Analysis -->
+    <g transform="translate(18, 191)">
+      <rect class="subcard" width="504" height="175" stroke="#a7f3d0"/>
+      <rect x="0" y="0" width="6" height="175" rx="3" fill="#047857"/>
+      <text class="font-main txt-card-title" x="16" y="24" fill="#065f46">端侧同步调度与行为分析引擎 (Sync Engine)</text>
+      
+      <text class="font-main txt-body" x="16" y="44"><tspan class="txt-body-bold">SyncCoordinator：</tspan>协同状态机管理，驱动自动定时同步、手动立即同步与重试</text>
+      <text class="font-main txt-body" x="16" y="62"><tspan class="txt-body-bold">SyncHttpClient：</tspan>OkHttp 注入自定义 TrustManager，只信任二维码固定 SPKI Pin</text>
+      <text class="font-main txt-body" x="16" y="80"><tspan class="txt-body-bold">SyncSnapshotBuilder：</tspan>开启只读事务提取全量数据，组装 Schema v2 协议格式</text>
+
+      <g transform="translate(16, 92)">
+        <rect width="472" height="74" rx="6" fill="#ecfdf5" stroke="#a7f3d0"/>
+        <text class="font-main txt-card-title" x="10" y="18" fill="#065f46" font-size="12px">专注特征聚合与端侧分析 (Focus Aggregation)</text>
+        <text class="font-main txt-body" x="10" y="36"><tspan class="txt-body-bold">聚合指标计算：</tspan>统计前序学习有效专注率 <tspan class="txt-formula">R_focus ∈ [0, 1]</tspan> 与分心次数 <tspan class="txt-formula">N_distract</tspan></text>
+        <text class="font-main txt-body" x="10" y="52"><tspan class="txt-body-bold">学习分析 DTO：</tspan>生成 LearningAnalysisDto (端侧微模型或本地确定性启发规则)</text>
+        <text class="font-main txt-body" x="10" y="68"><tspan class="txt-body-bold">分心事件感知：</tspan>记录学习期间跳出应用、切屏摸鱼等事件流，作为认知模型特征</text>
+      </g>
+    </g>
+
+    <!-- Arrow down -->
+    <line x1="270" y1="368" x2="270" y2="381" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowGray)"/>
+
+    <!-- Card 3: Room DB & Android Keystore -->
+    <g transform="translate(18, 383)">
+      <rect class="subcard" width="504" height="235" stroke="#6ee7b7"/>
+      <rect x="0" y="0" width="6" height="235" rx="3" fill="#059669"/>
+      <text class="font-main txt-card-title" x="16" y="24" fill="#065f46">本地唯一数据权威 (Room DB) &amp; 硬件安全</text>
+
+      <g transform="translate(16, 36)">
+        <rect width="472" height="106" rx="6" fill="#f0fdf4" stroke="#a7f3d0"/>
+        <text class="font-main txt-card-title" x="10" y="18" fill="#047857" font-size="12.5px">Room 数据库 —— 学习日程与任务的【唯一权威源】</text>
+        <text class="font-main txt-body" x="10" y="36"><tspan class="txt-body-bold">权威范围：</tspan>科目 (subjects)、周目标 (weekly_goals)、任务 (tasks)、会话 (sessions)</text>
+        <text class="font-main txt-body" x="10" y="54"><tspan class="txt-body-bold">单事务原子性：</tspan>采纳建议时，调用 insertWeeklyGoalAndTasks 触发单原子事务</text>
+        <text class="font-main txt-body" x="10" y="72"><tspan class="txt-body-bold">ACID 保证：</tspan>恰好一次创建周目标与全部关联任务，绝无脏数据与重复插入</text>
+        <text class="font-main txt-body" x="10" y="90"><tspan class="txt-body-bold">快照一致性：</tspan>采用只读事务隔离，确保 10,000+ 条实体导出时数据视图绝对一致</text>
+      </g>
+
+      <g transform="translate(16, 150)">
+        <rect width="472" height="74" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+        <text class="font-main txt-card-title" x="10" y="18" fill="#334155" font-size="12px">Android Keystore 硬件级安全防护</text>
+        <text class="font-main txt-body" x="10" y="36"><tspan class="txt-body-bold">凭据加密保护：</tspan>配对所得 Bearer Token 使用系统硬件密钥加密存储</text>
+        <text class="font-main txt-body" x="10" y="52"><tspan class="txt-body-bold">生命周期绑定：</tspan>App 卸载重装后密钥自动销毁，旧凭据失效，强制扫码重配</text>
+        <text class="font-main txt-body" x="10" y="68"><tspan class="txt-body-bold">零明文泄露：</tspan>防 root 逆向提取，防第三方应用跨沙箱窃听设备凭据</text>
+      </g>
+    </g>
+
+    <!-- Arrow down -->
+    <line x1="270" y1="620" x2="270" y2="633" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowGray)"/>
+
+    <!-- Card 4: Study Session & Focus Tracking -->
+    <g transform="translate(18, 635)">
+      <rect class="subcard" width="504" height="154" stroke="#a7f3d0"/>
+      <rect x="0" y="0" width="6" height="154" rx="3" fill="#10b981"/>
+      <text class="font-main txt-card-title" x="16" y="24" fill="#065f46">日常专注会话执行与防沉迷系统</text>
+      <text class="font-main txt-body" x="16" y="44"><tspan class="txt-body-bold">番茄钟与自由计时：</tspan>记录学习开始时刻、结束时刻与有效净学习时长</text>
+      <text class="font-main txt-body" x="16" y="64"><tspan class="txt-body-bold">分心拦截统计：</tspan>Accessibility / UsageStats 监控应用跳出与通知干扰频次</text>
+      <text class="font-main txt-body" x="16" y="84"><tspan class="txt-body-bold">反哺认知闭环：</tspan>专注度数据不仅在端侧展示统计图表，更作为特征注入 FB-BKT 引擎</text>
+      <rect x="16" y="96" width="472" height="48" rx="6" fill="#f0fdf4"/>
+      <text class="font-main txt-body" x="24" y="114" fill="#166534">权威原则: 手机端只记录学习投入与行为事实；不直接判定知识点掌握状态</text>
+      <text class="font-main txt-body" x="24" y="132" fill="#166534">掌握度判定与策略生成的重任全权委托给桌面端 TeacherAgent 深度执行</text>
+    </g>
+  </g>
+
+  <!-- ==================== CONNECTING INTER-DEVICE ARROWS ==================== -->
+  <!-- Cloud Connections -->
+  <path d="M330,265 C330,165 520,140 560,140" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#arrowBlue)"/>
+  <rect x="365" y="165" width="130" height="22" rx="4" fill="#e0f2fe" stroke="#bae6fd" stroke-width="1"/>
+  <text class="font-main txt-badge" x="430" y="180" fill="#0369a1" text-anchor="middle">辅导对话 / 向量检索</text>
+
+  <path d="M1320,265 C1320,165 1130,140 1090,140" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#arrowBlue)"/>
+  <rect x="1155" y="165" width="130" height="22" rx="4" fill="#e0f2fe" stroke="#bae6fd" stroke-width="1"/>
+  <text class="font-main txt-badge" x="1220" y="180" fill="#0369a1" text-anchor="middle">端侧分析轻量推理</text>
+
+  <!-- LAN Interaction Channels -->
+  <!-- Pairing & Proposals: Desktop -> Mobile -->
+  <path d="M600,430 L630,430" stroke="#2563eb" stroke-width="3" marker-end="url(#arrowBlue)"/>
+  <path d="M1020,430 L1050,430" stroke="#2563eb" stroke-width="3" marker-end="url(#arrowBlue)"/>
+
+  <!-- Snapshots & Decisions: Mobile -> Desktop -->
+  <path d="M1050,550 L1020,550" stroke="#059669" stroke-width="3" marker-end="url(#arrowTeal)"/>
+  <path d="M630,550 L600,550" stroke="#059669" stroke-width="3" marker-end="url(#arrowTeal)"/>
+
+  <!-- ==================== BOTTOM ARCHITECTURAL BOUNDARY BANNER ==================== -->
+  <g transform="translate(60, 1025)">
+    <rect width="1530" height="52" rx="10" fill="#1e293b"/>
+    <text class="font-main txt-footer" x="20" y="24" fill="#f8fafc">
+      <tspan font-weight="700" fill="#38bdf8">[权威边界与闭环原则]</tspan>
+      <tspan fill="#e2e8f0"> ① AlertTime 手机端独占计划、任务与日程的【唯一权威写源】，TeacherAgent 绝不越权强写；</tspan>
+      <tspan fill="#e2e8f0"> ② TeacherAgent 桌面端独占认知诊断、掌握度(FB-BKT)与私有混合检索的【深度推理权】；</tspan>
+    </text>
+    <text class="font-main txt-footer" x="20" y="42" fill="#94a3b8">
+      ③ 学生是【唯一决策主体】；多端协同遵循「端侧感知专注 → 局域网加密上报 → 桌面深度推理 → 建议人机复核 → 原子合入计划」的完整自适应教学闭环。
+    </text>
+  </g>
+
+</svg>

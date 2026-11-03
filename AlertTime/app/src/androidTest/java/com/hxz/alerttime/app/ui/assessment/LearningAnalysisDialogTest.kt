@@ -1,18 +1,24 @@
 package com.hxz.alerttime.app.ui.assessment
 
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.ui.semantics.SemanticsProperties
+import androidx.compose.ui.test.SemanticsMatcher
+import androidx.compose.ui.test.assert
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.assertIsEnabled
+import androidx.compose.ui.test.assertTextContains
 import androidx.compose.ui.test.assertTextEquals
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
+import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.test.performTextInput
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import androidx.test.espresso.Espresso
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
@@ -78,7 +84,7 @@ class LearningAnalysisDialogTest {
             .performTextInput("moonshot-v1-8k")
         composeRule.onNodeWithTag("learning-analysis-provider-api-key")
             .performTextInput("secret-value")
-        composeRule.onNodeWithTag("learning-analysis-provider-save").performClick()
+        composeRule.onNodeWithTag("learning-analysis-provider-save").performScrollTo().performClick()
 
         composeRule.runOnIdle {
             assertEquals(
@@ -109,7 +115,7 @@ class LearningAnalysisDialogTest {
                                 model = form.model,
                                 authMode = form.authMode,
                                 hasStoredApiKey = true,
-                                savedVersion = uiState.provider.savedVersion + 1
+                                apiKeyClearVersion = uiState.provider.apiKeyClearVersion + 1
                             ),
                             errorMessage = null
                         )
@@ -127,11 +133,11 @@ class LearningAnalysisDialogTest {
             .performTextInput("moonshot-v1-8k")
         composeRule.onNodeWithTag("learning-analysis-provider-api-key")
             .performTextInput("secret-value")
-        composeRule.onNodeWithTag("learning-analysis-provider-save").performClick()
+        composeRule.onNodeWithTag("learning-analysis-provider-save").performScrollTo().performClick()
         composeRule.waitForIdle()
 
         composeRule.onNodeWithText("设置有未保存修改", substring = true).assertDoesNotExist()
-        composeRule.onNodeWithTag("learning-analysis-provider-api-key").assertTextEquals("")
+        composeRule.onNodeWithText("secret-value", substring = true).assertDoesNotExist()
     }
 
     @Test
@@ -143,7 +149,14 @@ class LearningAnalysisDialogTest {
                     state = uiState,
                     onSaveContext = { _, _, _, _ -> },
                     onSaveProvider = {
-                        uiState = uiState.copy(errorMessage = "模型设置保存失败，请检查地址、模型和认证方式")
+                        // 与 ViewModel 的失败分支保持一致：报错 + 递增清空信号。
+                        // 保存未成功即撤下明文密钥（本项目不对模型服务发密钥做校验）。
+                        uiState = uiState.copy(
+                            errorMessage = "模型设置保存失败，请检查地址、模型和认证方式",
+                            provider = uiState.provider.copy(
+                                apiKeyClearVersion = uiState.provider.apiKeyClearVersion + 1
+                            )
+                        )
                     },
                     onDisableProvider = {},
                     onGenerate = {},
@@ -158,15 +171,35 @@ class LearningAnalysisDialogTest {
             .performTextInput("moonshot-v1-8k")
         composeRule.onNodeWithTag("learning-analysis-provider-api-key")
             .performTextInput("secret-value")
-        composeRule.onNodeWithTag("learning-analysis-provider-save").performClick()
+        composeRule.onNodeWithTag("learning-analysis-provider-save").performScrollTo().performClick()
+        composeRule.waitForIdle()
+
+        // 软键盘会把对话框窗口顶偏（实测窗口相对组合根偏移约 981px），
+        // 使 inWindow 变负、assertIsDisplayed() 恒判不可见。断言前先收起输入法。
+        Espresso.closeSoftKeyboard()
         composeRule.waitForIdle()
 
         composeRule.onNodeWithTag("learning-analysis-provider-base-url")
-            .assertTextEquals("https://api.moonshot.cn/v1")
+            .assertTextContains("https://api.moonshot.cn/v1")
         composeRule.onNodeWithTag("learning-analysis-provider-model")
-            .assertTextEquals("moonshot-v1-8k")
-        composeRule.onNodeWithText("设置有未保存修改", substring = true).assertIsDisplayed()
-        composeRule.onNodeWithText("模型设置保存失败", substring = true).assertIsDisplayed()
+            .assertTextContains("moonshot-v1-8k")
+        composeRule.onNodeWithText("设置有未保存修改", substring = true).performScrollTo().assertIsDisplayed()
+        composeRule.onNodeWithText("模型设置保存失败", substring = true)
+            .performScrollTo()
+            .assertIsDisplayed()
+            .assertTextEquals("模型设置保存失败，请检查地址、模型和认证方式")
+
+        // 保存失败后明文密钥必须被撤下：本项目不对模型服务发送密钥做校验，
+        // 因此拿不到"密钥是否有效"的结论，凡保存未成功即清空密钥输入框
+        // （与论文"密钥类秘密不外发、不落明文"的原则一致）。
+        // 注意 baseUrl / model 的草稿仍然保留（见上一条断言），只有密钥被清空。
+        composeRule.onNodeWithTag("learning-analysis-provider-api-key")
+            .assert(
+                SemanticsMatcher.expectValue(
+                    SemanticsProperties.EditableText,
+                    AnnotatedString("")
+                )
+            )
         composeRule.onNodeWithText("secret-value", substring = true).assertDoesNotExist()
     }
 
@@ -190,7 +223,7 @@ class LearningAnalysisDialogTest {
             .performTextInput("https://api.moonshot.cn/v1")
         composeRule.onNodeWithTag("learning-analysis-provider-api-key")
             .performTextInput("secret-value")
-        composeRule.onNodeWithTag("learning-analysis-provider-save").performClick()
+        composeRule.onNodeWithTag("learning-analysis-provider-save").performScrollTo().performClick()
 
         composeRule.onNodeWithTag("learning-analysis-provider-error")
             .performScrollTo()
@@ -199,7 +232,12 @@ class LearningAnalysisDialogTest {
 
         composeRule.onNodeWithTag("learning-analysis-provider-base-url")
             .performScrollTo()
-            .assertTextEquals("")
+            .assert(
+                SemanticsMatcher.expectValue(
+                    SemanticsProperties.EditableText,
+                    AnnotatedString("")
+                )
+            )
     }
 
     @Test
@@ -228,7 +266,7 @@ class LearningAnalysisDialogTest {
             .performTextInput("moonshot-v1-8k")
         composeRule.onNodeWithTag("learning-analysis-provider-api-key")
             .performTextInput("secret-value")
-        composeRule.onNodeWithTag("learning-analysis-provider-save").performClick()
+        composeRule.onNodeWithTag("learning-analysis-provider-save").performScrollTo().performClick()
         composeRule.waitForIdle()
 
         composeRule.onNodeWithTag("learning-analysis-provider-error")

@@ -2,7 +2,7 @@
   "subject": "lawmaster",
   "course": "lawmaster-criminal",
   "chapter": "lawmaster-criminal",
-  "status": "draft",
+  "status": "approved",
   "nodes": [
     {
       "id": "lawmaster-criminal-001",
@@ -75,7 +75,7 @@
       "title": "犯罪主体",
       "level": "concept",
       "difficulty": 2,
-      "summary": "犯罪主体含自然人与单位；自然人须达责任年龄（完全$1\\frac{2}{1}\\frac{4}{1}6$分档）且具有责任能力（精神正常）。",
+      "summary": "犯罪主体含自然人与单位；自然人须达责任年龄（完全，按12/14/16周岁分档）且具有责任能力（精神正常）。",
       "prerequisites": [
         "lawmaster-criminal-002"
       ],

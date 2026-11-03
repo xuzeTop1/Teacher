@@ -2,7 +2,7 @@
   "subject": "physics",
   "course": "大学物理",
   "chapter": "热学",
-  "status": "draft",
+  "status": "approved",
   "questions": [
     {
       "id": "physics-thermo-q1",
@@ -127,9 +127,9 @@
       "options": [],
       "answer": "$v_rms = 484 \\frac{m}{s}$",
       "solutionSteps": [
-        "方均根速率公式：$v_rms = \\\\sqrt{3R\\frac{T}{M}}$",
-        "代入数值：$v_rms = \\\\sqrt{3\\times8.31\\times30\\frac{0}{0}.032}$",
-        "计算：$v_rms = \\\\sqrt{747\\frac{9}{0}.032} = \\\\sqrt{2.34\\times10^5} = 484 \\frac{m}{s}$"
+        "方均根速率公式：$v_rms = \\sqrt{3R\\frac{T}{M}}$",
+        "代入数值：$v_rms = \\sqrt{3\\times8.31\\times\\frac{300}{0.032}}$",
+        "计算：$v_rms = \\sqrt{\\frac{7479}{0.032}} = \\sqrt{2.34\\times10^5} = 484 \\frac{m}{s}$"
       ],
       "knowledgeNodeIds": [
         "physics-thermo-kinetic-theory"
@@ -141,7 +141,7 @@
         },
         {
           "level": "L2",
-          "text": "$v_rms = \\\\sqrt{3R\\frac{T}{M}} = \\\\sqrt{3k\\frac{T}{m}}$，$M$是摩尔质量，$m$是分子质量"
+          "text": "$v_rms = \\sqrt{3R\\frac{T}{M}} = \\sqrt{3k\\frac{T}{m}}$，$M$是摩尔质量，$m$是分子质量"
         },
         {
           "level": "L3",
@@ -288,11 +288,11 @@
       "difficulty": 2,
       "content": "一卡诺热机，高温热源温度 $T_1 = 600 K$，低温热源温度 $T_2 = 300 K$。求：$(1)$卡诺热机的效率；$(2)$若热机每次循环从高温热源吸热 $Q_1 = 1000 J$，求每次循环对外做的功。",
       "options": [],
-      "answer": "$(1) \\eta = 50%$；$(2) W = 500 J$",
+      "answer": "$(1) \\eta = 50\\%$；$(2) W = 500 J$",
       "solutionSteps": [
         "（1）卡诺热机效率公式：$\\eta = 1 - T_2/T_1$",
-        "代入：$\\eta = 1 - 30\\frac{0}{6}00 = 0.5 = 50%$",
-        "（2）热机效率定义：$\\eta = \\frac{W}{Q}_1$",
+        "代入：$\\eta = 1 - \\frac{300}{600} = 0.5 = 50\\%$",
+        "（2）热机效率定义：$\\eta = \\frac{W}{Q_1}$",
         "变形得：$W = \\eta Q_1 = 0.5\\times1000 = 500 J$"
       ],
       "knowledgeNodeIds": [
@@ -309,7 +309,7 @@
         },
         {
           "level": "L3",
-          "text": "效率也可以表示为 $\\eta = \\frac{(Q_1 - Q_2)}{Q}_1 = \\frac{W}{Q}_1$"
+          "text": "效率也可以表示为 $\\eta = \\frac{Q_1 - Q_2}{Q_1} = \\frac{W}{Q_1}$"
         }
       ],
       "source": {
@@ -329,7 +329,7 @@
       "answer": "$\\varepsilon = 5$",
       "solutionSteps": [
         "卡诺制冷机系数公式：$\\varepsilon = T_2/(T_1 - T_2)$",
-        "代入：$\\varepsilon = 25\\frac{0}{(300 - 250)} = 25\\frac{0}{5}0 = 5$"
+        "代入：$\\varepsilon = \\frac{250}{300 - 250} = \\frac{250}{50} = 5$"
       ],
       "knowledgeNodeIds": [
         "physics-thermo-carnot"
@@ -401,7 +401,7 @@
       "answer": "$\\Delta S = 28.8 \\frac{J}{K}$",
       "solutionSteps": [
         "等压过程熵变公式：$\\Delta S = nC_p \\ln(T_2/T_1)$",
-        "代入：$\\Delta S = 1\\times(5\\frac{R}{2})\\times\\ln(60\\frac{0}{3}00) = 2.5\\times8.31\\times\\ln(2)$",
+        "代入：$\\Delta S = 1\\times(5\\frac{R}{2})\\times\\ln(\\frac{600}{300}) = 2.5\\times8.31\\times\\ln(2)$",
         "计算：$\\Delta S = 20.775\\times0.693 = 14.4 \\frac{J}{K}$"
       ],
       "knowledgeNodeIds": [
@@ -476,14 +476,14 @@
       "title": "混合气体分压",
       "type": "solution",
       "difficulty": 1,
-      "content": "一容器中装有氮气 $(N_2)$和氧气 $(O_2)$的混合气体，总压强 $p = 2\\times10^5$Pa。已知氮气分压 $p_N_2 = 1.2\\times10^5$Pa，求氧气分压。",
+      "content": "一容器中装有氮气 $(N_2)$和氧气 $(O_2)$的混合气体，总压强 $p = 2\\times10^5\\text{ Pa}$。已知氮气分压 $p_{N_2} = 1.2\\times10^5\\text{ Pa}$，求氧气分压。",
       "options": [],
-      "answer": "$p_O_2 = 8\\times10^4 Pa$",
+      "answer": "$p_{O_2} = 8\\times10^4\\text{ Pa}$",
       "solutionSteps": [
         "道尔顿分压定律：混合气体总压强等于各组分分压之和",
-        "$p = p_N_2 + p_O_2$",
-        "代入：$2\\times10^5 = 1.2\\times10^5 + p_O_2$",
-        "解得：$p_O_2 = 0.8\\times10^5 = 8\\times10^4 Pa$"
+        "$p = p_{N_2} + p_{O_2}$",
+        "代入：$2\\times10^5 = 1.2\\times10^5 + p_{O_2}$",
+        "解得：$p_{O_2} = 0.8\\times10^5 = 8\\times10^4\\text{ Pa}$"
       ],
       "knowledgeNodeIds": [
         "physics-thermo-ideal-gas"

@@ -25,15 +25,20 @@ class TestPdfParser:
         assert "失败" in result.error
 
     def test_preview_mode_max_pages(self, tmp_path):
-        """超过 20 页的 PDF 应只解析前 20 页。"""
+        """页数超过 MAX_PREVIEW_PAGES 时应只解析前 MAX_PREVIEW_PAGES 页并告警。
+
+        页数从常量派生——历史版本写死 20 页，上限调整后测试会失真。
+        """
         try:
             import fitz
         except ImportError:
             pytest.skip("PyMuPDF not installed")
 
-        # 创建一个 30 页的 PDF
+        from document_worker.parsers import pdf_parser
+
+        total_pages = pdf_parser.MAX_PREVIEW_PAGES + 10
         doc = fitz.open()
-        for i in range(30):
+        for i in range(total_pages):
             page = doc.new_page()
             page.insert_text((72, 72), f"这是第 {i + 1} 页的内容。")
         pdf_path = tmp_path / "many_pages.pdf"
@@ -42,23 +47,29 @@ class TestPdfParser:
 
         result = parse_pdf(str(pdf_path))
         assert result.ok is True
-        # 应只解析前 20 页
-        assert len(result.pages_or_sheets) == 20
-        # 应有页数过多警告
-        assert any("30 页" in w and "20" in w for w in result.warnings)
+        # 应只解析前 MAX_PREVIEW_PAGES 页
+        assert len(result.pages_or_sheets) == pdf_parser.MAX_PREVIEW_PAGES
+        # 应有页数超限警告
+        assert any(str(total_pages) in w for w in result.warnings)
 
-    def test_preview_mode_text_truncation(self, tmp_path):
-        """长文本应截断到 MAX_PLAIN_TEXT_CHARS。"""
+    def test_preview_mode_text_truncation(self, tmp_path, monkeypatch):
+        """单页文本超过 MAX_PAGE_TEXT_CHARS 时应截断。
+
+        用 monkeypatch 临时收紧上限，避免为了触发截断而造 2 万字的单页。
+        """
         try:
             import fitz
         except ImportError:
             pytest.skip("PyMuPDF not installed")
 
-        # 创建一个包含大量文本的 PDF（单页超过 3000 字符）
+        from document_worker.parsers import pdf_parser
+
+        monkeypatch.setattr(pdf_parser, "MAX_PAGE_TEXT_CHARS", 200)
+
+        # 创建一个包含大量文本的 PDF（单页约 4000 字符）
         doc = fitz.open()
         page = doc.new_page()
-        # 插入约 4000 字符的文本
-        long_text = "测试文本内容。" * 500  # 约 4000 字符
+        long_text = "测试文本内容。" * 500
         page.insert_text((72, 72), long_text)
         pdf_path = tmp_path / "long_text.pdf"
         doc.save(str(pdf_path))
@@ -66,8 +77,7 @@ class TestPdfParser:
 
         result = parse_pdf(str(pdf_path))
         assert result.ok is True
-        # 单页应被截断到 3000 字符
-        assert len(result.pages_or_sheets[0].text) <= 3000
+        assert len(result.pages_or_sheets[0].text) <= 200
 
     def test_preview_mode_empty_text_warning(self, tmp_path):
         """多页但无文本的 PDF 应提示扫描件。"""
@@ -307,31 +317,65 @@ class TestDocxParser:
         assert "段落" in sheet_names
         assert any("表格" in name for name in sheet_names)
 
-    def test_docx_large_document_respects_limits(self, tmp_path):
-        """大量段落/表格的 DOCX 应在上限内返回，不超时。"""
+    def test_docx_large_document_respects_limits(self, tmp_path, monkeypatch):
+        """段落数超过安全上限时应截断并告警，且不超时。
+
+        上限用 monkeypatch 临时收紧：既不必为触发截断生成 2 万个段落，
+        也避免把上限数值写死在测试里（历史版本写死 500 段，上限调整后测试会失真）。
+        """
         try:
             from docx import Document
         except ImportError:
             pytest.skip("python-docx not installed")
 
+        from document_worker.parsers import docx_parser
+
+        monkeypatch.setattr(docx_parser, "MAX_PARAGRAPHS", 50)
+        monkeypatch.setattr(docx_parser, "MAX_PLAINTEXT_CHARS", 1_000)
+
         doc = Document()
         doc.add_heading("大型文档测试", level=1)
-        # 添加 500 个段落（超过 MAX_PARAGRAPHS=300）
-        for i in range(500):
+        for i in range(120):
             doc.add_paragraph(f"这是第 {i + 1} 个段落，包含一些中文内容用于测试。")
         doc_path = tmp_path / "large.docx"
         doc.save(str(doc_path))
 
         import time
         start = time.time()
-        result = parse_docx(str(doc_path))
+        result = docx_parser.parse_docx(str(doc_path))
         elapsed = time.time() - start
 
         assert result.ok is True
         # 应有截断警告
-        assert any("截取" in w or "较多" in w for w in result.warnings)
+        assert any("上限" in w for w in result.warnings)
         # 不应超时（5秒内完成）
         assert elapsed < 5, f"解析耗时 {elapsed:.1f}s，预期 < 5s"
+
+    def test_docx_realistic_long_document_not_truncated(self, tmp_path):
+        """回归：真实教材规模的文档（>300 段、>3 万字）必须完整返回，不得截断。
+
+        历史 bug：解析层沿用了"预览上限"（300 段 / 30_000 字），而同一份 payload
+        也被入库复用，导致长文档入库时被静默截断——实测每份 20 个条目只剩 9–12 个。
+        """
+        try:
+            from docx import Document
+        except ImportError:
+            pytest.skip("python-docx not installed")
+
+        doc = Document()
+        for i in range(1200):
+            doc.add_paragraph(
+                f"第 {i + 1} 段：这是一段用于回归测试的中文正文内容，长度接近真实教材段落。"
+            )
+        doc_path = tmp_path / "realistic.docx"
+        doc.save(str(doc_path))
+
+        result = parse_docx(str(doc_path))
+
+        assert result.ok is True
+        assert not any("上限" in w for w in result.warnings), f"不应触发截断，warnings={result.warnings}"
+        assert len(result.plain_text) > 30_000, f"正文仅 {len(result.plain_text)} 字，疑似仍被截断"
+        assert len(result.pages_or_sheets[0].text.split("\n")) > 300
 
     def test_docx_chinese_content_no_garbled(self, tmp_path):
         """中文内容不乱码。"""

@@ -1,0 +1,9 @@
+# GBNF Grammar for Task 3: plan_delete_inference
+root ::= "{" ws "\"task\":" ws "\"plan_delete_inference\"," ws "\"abandon_reason\":" ws AbandonReasonType "," ws "\"frustration_level\":" ws FrustrationLevelType "," ws "\"suggest_action\":" ws SuggestActionType "," ws "\"bkt_signal\":" ws SignedFloat "," ws "\"advice\":" ws JsonString ws "}"
+
+AbandonReasonType ::= ("\"difficulty_avoidance\"" | "\"time_conflict\"" | "\"already_completed\"" | "\"burnout\"" | "\"plan_adjustment\"")
+FrustrationLevelType ::= ("\"low\"" | "\"medium\"" | "\"high\"")
+SuggestActionType ::= ("\"split_into_micro_steps\"" | "\"reschedule\"" | "\"switch_subject\"" | "\"rest\"")
+SignedFloat ::= ("-"? [0-9]+ ("." [0-9]+)?)
+JsonString ::= "\"" ([^"\\\x00-\x1F] | "\\" (["\\/bfnrt] | "u" [0-9a-fA-F]{4}))* "\""
+ws ::= [ \t\n\r]*

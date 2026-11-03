@@ -108,7 +108,7 @@ strip = "symbols"
 | 检查项 | 结果 | 详情 |
 |--------|------|------|
 | 调试目录 / RSDS | ⚠️ 残留 | 嵌入 `teacher_agent.pdb` 引用路径。`strip="symbols"` 去除了符号表但保留了 debug 目录头中的 PDB 文件名 |
-| 源文件绝对路径 | ⚠️ ~879 处 | 包括 `C:\Users\Acer\.cargo\registry\src\...` — 暴露构建机器用户名 `Acer` 和 crate 源码路径 |
+| 源文件绝对路径 | ⚠️ ~879 处 | 包括 `<CARGO_HOME>\registry\src\...` — 暴露构建机器用户名 `<user>` 和 crate 源码路径 |
 | Rust panic 路径 | ⚠️ 部分 | `futures-channel-0.3.32\src\mpsc\queue.rs`、`mod.rs` 等 panic 消息中包含源文件路径 |
 | API Key | ✅ 无真实密钥 | `api_key` 字符串来自 serde `rename_all="camelCase"` 的 struct 字段名，非真实凭据 |
 | 私钥 | ✅ 无 | |
@@ -117,7 +117,7 @@ strip = "symbols"
 ### 判定
 
 - `strip="symbols"` 生效但**不完全**：去除了 DWARF/PDB 符号，但 RSDS 调试目录头和 panic 位置信息中的源文件路径仍然残留。
-- 暴露构建机器用户名 (`Acer`) 和 crate 源路径是**信息泄露（P3）**，属于 Rust 编译的正常残留，非安全漏洞。
+- 暴露构建机器用户名 (`<user>`) 和 crate 源路径是**信息泄露（P3）**，属于 Rust 编译的正常残留，非安全漏洞。
 - 预期进一步减少残留需要 `panic="abort"`（但会破坏 Tauri IPC 错误恢复）或在 build.rs 中使用 `rustc-cfg` 去除 panic 路径。
 
 ---
@@ -385,7 +385,7 @@ CSP 策略 `script-src 'self' 'wasm-unsafe-eval'` 的含义：
 - API Key / token: **无泄露**
 - PDB 路径: **`teacher_agent.pdb` 引用残留在 PE 中**（P3）
 - Source map: **无泄露**（`vite.config.ts` 正确配置）
-- 构建机器用户名: **泄露**（`C:\Users\Acer\...` 路径残留在 PE 中，P3）
+- 构建机器用户名: **泄露**（`<USER_HOME>\...` 路径残留在 PE 中，P3）
 
 ### Tauri commands 是否存在任意文件/命令执行面？
 
@@ -442,7 +442,7 @@ CSP 策略 `script-src 'self' 'wasm-unsafe-eval'` 的含义：
 | # | 标题 | 证据 |
 |---|------|------|
 | P3-1 | **PE 嵌入 PDB 路径 `teacher_agent.pdb`** | teacher-agent.exe RSDS 调试目录 |
-| P3-2 | **PE 嵌入构建机器用户名 `Acer` 和 crate 源路径** | `C:\Users\Acer\.cargo\registry\...` |
+| P3-2 | **PE 嵌入构建机器用户名 `<user>` 和 crate 源路径** | `<CARGO_HOME>\registry\...` |
 | P3-3 | **源文件路径残留在 panic 消息中** ~879 处 | `futures-channel-0.3.32\src\mpsc\queue.rs` 等 |
 | P3-4 | ✅ **2026-07-30 已修复** — `sk-ant-` 原本已被 `sk-` 覆盖；现进一步覆盖 `gsk_`、`AIza`、`hf_`、GitHub、Slack、Stripe、AWS、OAuth/JWT 等常见形态，并正确清洗 Authorization/Bearer 头 | `shared.rs` |
 

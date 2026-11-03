@@ -2,7 +2,7 @@
 
 版本：v1.3  
 状态：MVP 开发基线  
-最后更新：2026-07-06  
+最后更新：2026-10-03
 适用对象：TutorAgent、SocraticAgent、GuardrailAgent、AssessmentAgent、ReflectionAgent、Prompt Builder
 
 ## 1. Prompt 治理目标
@@ -662,3 +662,11 @@ MVP Prompt Builder v1 已落到以下文件：
 - assessmentDraft.status 固定为 draft；题目不包含 answer、solution 或等价答案字段，不调用 approved 题库入库、`saveAssessmentResult`、`assessment_results` 或 `student_knowledge` 写入链路。
 - Provider 上下文必须最小化，不发送 API Key、配对凭据、remote UUID、本地主键、日记、会话备注、完整历史或与本次分析无关的个人信息；API Key 只由 Android Keystore 保护的服务层读取，UI 不得接触。
 - TeacherAgent 收到的分析属于 untrusted sync-side data。展示前必须验证 `sourceSnapshotId === snapshotId`、枚举、范围和 draft 边界；Teacher UI 只能只读展示，且必须把“手机同步事实”“模型推断”“计划合理性”“自评题草稿”分区呈现。
+
+## 18. 2026-10-03 评估规则修复
+
+本次不修改导师系统 Prompt 或 Guardrail 顺序，只修复 AssessmentAgent 的规则兜底。识别“并不是完全正确”“不完全正确”等否定确认时，不能因为包含“完全正确”子串就归为 correct。明确错误归为 incorrect，明确部分正确归为 partially_correct；只有否定或冲突而无足够判定证据时归为 unknown，不产生虚假的正确证据。
+
+普通数字练习只接受完整数值或明确单一答案前缀后的完整数值（含科学记数法）。否定、多数值、算式和带单位的文本不因出现标准数字而判对；复杂表达式和单位换算不由该简易判分函数推断。
+
+本轮评估保存结果区分 saved / preview / failed。正式桌面失败保留导师回复，显示未保存并允许同 ID 重试；取消发生于评估保存等待期间时，不再启动新的记忆/反思操作或返回本轮结果。已经发往数据库的提交不能由前端取消信号撤销。

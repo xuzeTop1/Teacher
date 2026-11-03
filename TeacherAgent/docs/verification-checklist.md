@@ -1,10 +1,12 @@
 # TeacherAgent Verification Checklist
 
-最后更新：2026-08-11（无设备跨层回放门禁）
+最后更新：2026-10-03（审计修复回归）
 
 本文是当前 Phase 0 / MVP 的操作型验证清单。它不替代 `docs/mvp-spec.md` 的验收标准，而是把验收标准转成可以逐项执行和记录结果的步骤。
 
 ## 0. 当前前置状态
+
+2026-10-03 本工作树最新结果见第 18 节；下列 2026-08-11 自动门禁属于历史记录。
 
 - 最新自动门禁已通过：Teacher Vitest 69 个测试文件 / 1309 个测试，`npm run build`（main bundle 473.78 kB），Rust `cargo test --all-targets` 283/283、`cargo fmt --check`，Android 36 suites / 264 tests、`lintDebug`（0 errors / 12 warnings）、`assembleDebug`、`assembleDebugAndroidTest`。
 - Node 协议镜像单独执行 `npm run test:protocol-mirror`：6 项通过、1 项因 Windows 符号链接权限按预期 skip、exit 0；`npm run test` 不再误收集 `node:test` 文件。
@@ -44,6 +46,9 @@ cargo test
 - 2026-07-06 实机长回复滚动 + 资料总结防编造 + 练习题 prompt 修复：`npm run test -- --maxWorkers=1`（437 条通过）、`npm run build` 通过。
 - 2026-07-06 对话内资料导入 + 最近资料 RAG 指代：`npm run test -- --maxWorkers=1`（438 条通过）、`npm run build` 通过。
 - 2026-07-06 对话内资料上下文管理 MVP：`npm run test -- --maxWorkers=1`（457 条通过）、`npm run build` 通过。
+- 2026-09-22 云端出站上下文契约 + 注入对抗用例：`npm run test -- --maxWorkers=1`（1,536 条通过）、
+  `npx vue-tsc --noEmit` 通过。同轮修掉私有资料扣留时 `topic`/`notes` 仍带出文档标题的缺陷，
+  见 §4.3 与 `experiments/privacy_egress/README.md`。
 
 ## 2. Tauri 窗口基础验证
 
@@ -119,6 +124,33 @@ npm run tauri:dev
 | 复制反馈 | 点击官方文档链接的复制按钮 | 显示"已复制"或"复制失败"反馈 |
 | 原有功能 | 不使用教程直接配置 | 保存和连接测试功能不回归 |
 | 隔离验证 | 对话中搜索"Provider 配置" | 不出现在学生知识库检索结果中 |
+
+### 4.3 云端出站上下文契约（2026-09-22）
+
+自动化部分（无头，进 `npm run test`）：
+
+| 项 | 判据 | 断言位置 |
+| --- | --- | --- |
+| 默认拒绝 | 云端 + 默认配置下 `<student_context>`、`<session_memory>` 层不存在，私有资料节点数 0 | `outboundEgress.test.ts` C2 |
+| 缺省即拒绝 | `cloudPrivacy` 整个不传时 payload 与显式默认值 **sha256 相同** | C2 / C3 |
+| 门控是开关不是恒假 | 逐条显式授权后三层齐全，且与本地 Provider payload **sha256 相同** | C1 / C4 |
+| 按类别独立 | 只关私有资料时画像与会话记忆仍在，内置检索保留 | C5 |
+| 私有资料连派生物一起剥 | 文档标题、正文、"本轮已检索到用户本地私有资料"说明均不出站；内置检索仍出站 | D0 |
+| 扣留不得泄露持有事实 | 含注入指令的私有资料 vs 无私有资料，payload **sha256 相同** | D0 vs C2 |
+| payload 无本机信息 | 绝对路径、凭据形态、`apiKeyRef`、baseUrl、用户名/机器名/家目录均为 0 | 出站内容不得携带本机信息 |
+| 分类不得漏 | 任何 prompt 层消息归不进分类表即失败（`unclassified` 必须为 0） | 测量结果输出 |
+| 输出侧阳性对照 | PII 形态与内部组件名两类回显必须被护栏拦下并落到兜底文案 | D 组对照用例 |
+
+已知**不**由自动化覆盖：真实模型的指令遵循率（需用户配置 Provider，见 D-410）、
+护栏复核/改写请求自身的出站体积、多模态附件体积、真实在线数据库下的画像字节数。
+
+手工部分（实机，需真实 Provider）：
+
+| 项 | 操作 | 期望 |
+| --- | --- | --- |
+| 抓包核对 | 云端 Provider 下发起一轮带私有资料的对话，用本地代理观测请求体 | 请求体不含文档标题、画像字段与会话记忆 |
+| 授权后放行 | 在云端隐私设置里逐条打开开关后重试 | 仅被打开的那一类出现 |
+| 本机信息 | 检查上述请求体 | 无绝对路径、无用户名/机器名、无 `apiKeyRef` 字面量 |
 
 ## 5. 教学链路验证
 
@@ -401,6 +433,36 @@ cargo test
 
 以上勾选表示代码路径与自动化/发布产物验证通过，不代替 Windows 目标机上的交互式 UI、Keychain、网络代理和安装升级验收。
 
+## 14.1 发布行为负向验收（2026-09-22 新增）
+
+补 §14 未覆盖的两项：**篡改真实发布 sidecar 二进制**，以及**代码执行 Release fail-closed**
+的产物级取证。§14 覆盖的是"manifest 缺失/畸形一律拒绝"（配置侧），与"改一个字节是否仍被拒"
+不可互推——若 manifest 与产物本就对不上，任何副本都会被拒，篡改与否不影响判定。
+
+被测产物与 §9.1（release-hardening）登记的 2026-09-19 构建同一份：
+`teacher-agent.exe` 17,645,056 B / SHA-256 `dfd97b65c424…708438`。
+
+- [x] 未篡改的真实发布 sidecar（`code-worker.exe`，SHA-256 `95c1522c…ed1487`）+ release 策略 → 通过（正对照，证明 manifest 与产物一致）。
+- [x] 同一 sidecar 复制到临时目录、未篡改 → 先通过（排除"临时目录搬错"导致的假拒绝）。
+- [x] 副本正中一字节 XOR `0xFF` → release 策略拒绝，错误含"篡改"。
+- [x] 同一篡改副本 → 真实入口 `verify_sidecar_integrity` 拒绝。
+- [x] Release 下 `run_code` 入口在未授权时报闸门错误，**且不得报成"sidecar 未找到"**（闸门先于 sidecar 定位，错误归因不掩盖安全行为）。
+- [x] 两个绕过开关同时为 `1` 时，release 档闸门仍为 `false`；manifest 缺失时仍拒绝。
+- [x] 产物级双向取证：release 二进制里 Python 回退的两段字面量均为 0，同样两段在 debug 二进制里各命中 1（假阴性护栏）；闸门关闭文案与完整性校验四条文案在 release 里各命中 1。
+
+自动验证记录（2026-09-22）：
+
+- `python scripts/scan_release_code_runner.py`：PASS（8 探针 × release/debug 双目标，正对照成立）。
+- `cargo test --lib code_worker`：12 passed；`cargo test --release --lib code_worker`：13 passed。
+- `cargo test --lib sidecar_integrity`：8 passed；`cargo test --release --lib sidecar_integrity`：9 passed。
+- 两档计数之差各为 1，正是带 `#[cfg(not(debug_assertions))]` 的 release-only 用例被执行，
+  即对方档位确为 `debug_assertions = false`。
+- 原始归档：`experiments/release_verification/`（`code-runner-scan.json` + `README.md`）。
+
+未覆盖：安装到 Program Files 后的副本（本轮对象是 `target/release` 产物）、PyInstaller 载荷内部、
+`.msi`/NSIS 容器，以及 `run_code` 的端到端 UI 链路。详见
+`experiments/release_verification/README.md` §五。
+
 ## 15. 考试体系（ExamTaxonomy）验收（2026-08-07 新增）
 
 自动验证（本分支已执行）：
@@ -529,7 +591,7 @@ cargo test
 
 实机与真实 Provider 验收（待设备执行）：
 
-2026-08-11 无设备回放单命令入口（已由主 Agent 实际复跑）：Windows PowerShell 5.1 AST 解析通过；Node mirror 单测 7 项中 6 passed、1 skipped，跳过原因为 Windows 无符号链接权限且逻辑为明确拒绝；从 TeacherAgent 根目录执行 `npm run verify:alerttime-offline -- -AlertTimeRoot "C:\Users\Acer\Documents\AlertTime-teacheragent-json" -RustToolchainBin "D:\DevEnv\Caches\.rustup\toolchains\stable-x86_64-pc-windows-msvc\bin"` 完整 exit 0。Teacher canonical Vitest 10 passed，Rust `snapshot_route_` 2 passed，Android `LearningAnalysisOfflineReplayTest` JVM 类通过且 Gradle `BUILD SUCCESSFUL`；双端协议 10 files identical。
+2026-08-11 无设备回放单命令入口（已由主 Agent 实际复跑）：Windows PowerShell 5.1 AST 解析通过；Node mirror 单测 7 项中 6 passed、1 skipped，跳过原因为 Windows 无符号链接权限且逻辑为明确拒绝；从 TeacherAgent 根目录执行 `npm run verify:alerttime-offline -- -AlertTimeRoot "<ALERTTIME_ROOT>" -RustToolchainBin "<RUSTUP_HOME>\toolchains\stable-x86_64-pc-windows-msvc\bin"` 完整 exit 0。Teacher canonical Vitest 10 passed，Rust `snapshot_route_` 2 passed，Android `LearningAnalysisOfflineReplayTest` JVM 类通过且 Gradle `BUILD SUCCESSFUL`；双端协议 10 files identical。
 
 离线边界与守卫结果：无 ADB、无设备、无安装/卸载/清数据、无 connectedAndroidTest；`local.properties` 未创建或修改，脚本守卫通过；无 rustup 自动修复、无 Git 暂存/提交。该结果不替代 instrumentation、真实 Provider 或局域网手机—桌面真机闭环。
 
@@ -560,7 +622,7 @@ cargo test
 
 ```powershell
 npm run test:protocol-mirror
-npm run verify:alerttime-offline -- -AlertTimeRoot "C:\Users\Acer\Documents\AlertTime-teacheragent-json" -RustToolchainBin "D:\DevEnv\Caches\.rustup\toolchains\stable-x86_64-pc-windows-msvc\bin"
+npm run verify:alerttime-offline -- -AlertTimeRoot "<ALERTTIME_ROOT>" -RustToolchainBin "<RUSTUP_HOME>\toolchains\stable-x86_64-pc-windows-msvc\bin"
 ```
 
 ### 无设备项目
@@ -599,3 +661,18 @@ npm run verify:alerttime-offline -- -AlertTimeRoot "C:\Users\Acer\Documents\Aler
 - [x] canonical snapshot/proposal fixture 在 Rust 与 Android 侧均交叉验证设备、accepted、时间链、字段、任务类型和重复 claim；双端协议 10 文件与 Android JVM fixture 8 文件逐字一致。
 - [x] 自动门禁：Teacher 69 files / 1309 tests、Rust 283/283、Android 36 suites / 264 tests，生产构建、lint、APK/test APK、协议镜像与无设备离线跨仓闭环全部通过。
 - [ ] 真机：采纳一个建议后检查手机真实计划/周目标，再次同步并在 Teacher 查看待完成/完成变化；本项仍待用户在设备上验收，自动测试不得替代。
+
+## 18. 2026-10-03 Review 修复验证
+
+- [x] 第二节点写入故障：评估、知识快照和首节点更新全部回滚；解除故障后重试成功，同 ID 重复提交不再增加次数。
+- [x] 证据结构错误不留下评估行；迁移记录写入失败回滚 DDL 与版本，解除故障后从带数据 v12 升至 v18，重复升级保持幂等。
+- [x] 数字否定、多数值、算式与科学记数法；导师否定正确性与不确定反馈；部分正确不进入 FB 二元正确观测、冷启动 0.5。
+- [x] 同 remote ID 不同 owner、撤销、接收超时、学科 code/ID 匹配；前端使用后端状态并追加新节点。
+- [x] 会话乱序与学科初始化、渲染乱序/最终 streaming 状态/卸载清理；桌面保存失败可见、同 ID 重试、取消等待期间不启动后续记忆。
+- [x] 新版依赖实际安装后：75 files / 1563 frontend tests，构建通过；Rust 356 passed / 5 ignored，fmt 通过；npm 官方 audit 为 0，日志见根目录 `audit-fix-*20261003*`。
+- [x] 原生窗口打开及五页面基本导航，同步页已关闭；使用 `com.teacheragent.auditfix20261003` 独立数据目录，不接触真实学习库、Provider 或设备。
+- [x] 正常用户环境发布检查通过；漏扫基线仍是既有 aws-lc-sys 51 条长路径 / 32 条短路径受控例外，没有放宽基线。所检查 release exe 为历史产物。
+- [ ] 更新依赖及最终初始可见配置后的完整 GUI 检查：用户按 Esc 停止最后一次窗口操作，该次复验未完成；之后不再启动验证窗口。
+- [ ] 重建并验收当前源码安装包；真实 Provider、Ollama 和手机局域网闭环；历史异常记录经备份后专项修复。
+
+完整修复范围、边界与哈希记录见 `docs/audits/2026-10-03-review-fixes.md` 和 `docs/audits/fix-receipt-20261003.json`。

@@ -4,7 +4,7 @@
 
 - Selected target: Product Design option 2 with option 3's seven-day line chart.
 - Native surfaces: Home, Plan, Stats, Diary.
-- Reference target: `C:\Users\Acer\.codex\generated_images\019f94cd-44ef-7f32-b6de-56bd75818057\call_vEqMG7MJixvF36wpDi4Zfvr5.png`
+- Reference target: `<CODEX_DIR>\generated_images\019f94cd-44ef-7f32-b6de-56bd75818057\call_vEqMG7MJixvF36wpDi4Zfvr5.png`
 
 ## Automated checks
 

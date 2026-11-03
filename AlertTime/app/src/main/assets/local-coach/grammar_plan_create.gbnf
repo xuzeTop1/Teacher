@@ -1,0 +1,9 @@
+# GBNF Grammar for Task 2: plan_create_advice  (Synthesizer v2 — `conflict` removed)
+# `conflict` (calendar overlap) is intercepted upstream by the client SQLite
+# time-interval intersection engine, so the LLM's enum carries only none/overload/vague.
+root ::= "{" ws "\"task\":" ws "\"plan_create_advice\"," ws "\"risk\":" ws RiskType "," ws "\"commitment\":" ws Float01 "," ws "\"advice\":" ws JsonString ws "}"
+
+RiskType ::= ("\"none\"" | "\"overload\"" | "\"vague\"")
+Float01 ::= ("0." [0-9]+ | "1.0" | "0" | "1")
+JsonString ::= "\"" ([^"\\\x00-\x1F] | "\\" (["\\/bfnrt] | "u" [0-9a-fA-F]{4}))* "\""
+ws ::= [ \t\n\r]*

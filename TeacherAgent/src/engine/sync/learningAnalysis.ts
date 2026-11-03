@@ -4,6 +4,7 @@ import type {
   SyncLearningAnalysisGenerator,
   SyncPlanEvaluationVerdict
 } from "../../types/sync"
+import { validLocalInferences, factContainsInference } from "./localCoach"
 
 export interface TrustedLearningAnalysisModel {
   analysisId: string
@@ -12,7 +13,8 @@ export interface TrustedLearningAnalysisModel {
   promptVersion: string
   generator: SyncLearningAnalysisGenerator
   facts: Array<{ code: string; label: string; value: unknown; evidenceRefs: string[] }>
-  inferences: Array<{ statement: string; confidence: number; evidenceRefs: string[] }>
+  inferences: SyncLearningAnalysisDto["profile"]["inferences"]
+  localInferences: NonNullable<SyncLearningAnalysisDto["inferences"]>
   planEvaluation: {
     verdict: SyncPlanEvaluationVerdict
     score: number | null
@@ -109,7 +111,7 @@ export function toTrustedLearningAnalysisModel(
     isBoundedString(fact.code, 1, MAX_CODE_LENGTH) &&
     isBoundedString(fact.label, 1, MAX_LABEL_LENGTH) &&
     validEvidenceRefs(fact.evidenceRefs) &&
-    isValidFactValue(fact.value)
+    isValidFactValue(fact.value) && !factContainsInference(fact.code, fact.value)
   )) return null
   if (new Set(facts.map((fact) => fact.code)).size !== facts.length) return null
   if (!inferences.every((inference) =>
@@ -117,6 +119,9 @@ export function toTrustedLearningAnalysisModel(
     isFiniteInRange(inference.confidence, 0, 1) &&
     validEvidenceRefs(inference.evidenceRefs)
   )) return null
+
+  const localInferences = analysis.inferences ?? []
+  if (!validLocalInferences(localInferences)) return null
 
   const plan = analysis.planEvaluation
   if (!plan || !VERDICTS.has(plan.verdict) || !isNullableScore(plan.score) || !Array.isArray(plan.dimensions) || plan.dimensions.length > MAX_DIMENSIONS) return null
@@ -145,7 +150,8 @@ export function toTrustedLearningAnalysisModel(
     promptVersion: analysis.promptVersion,
     generator: analysis.generator,
     facts: facts.map((fact) => ({ ...fact, evidenceRefs: [...fact.evidenceRefs] })),
-    inferences: inferences.map((inference) => ({ ...inference, evidenceRefs: [...inference.evidenceRefs] })),
+    inferences: inferences.map((inference) => ({ statement: inference.statement, confidence: inference.confidence, evidenceRefs: [...inference.evidenceRefs] })),
+    localInferences: localInferences.map(record => ({ ...record })),
     planEvaluation: {
       verdict: plan.verdict,
       score: plan.score,

@@ -1,4 +1,4 @@
-use rusqlite::Connection;
+use rusqlite::{Connection, Transaction, TransactionBehavior};
 use std::fs;
 use tauri::{AppHandle, Manager};
 
@@ -17,6 +17,10 @@ const MIGRATION_0011: &str = include_str!("../migrations/0011_sync_learning_anal
 const MIGRATION_0012: &str = include_str!("../migrations/0012_sync_snapshot_received_at_ms.sql");
 const MIGRATION_0013: &str = include_str!("../migrations/0013_sync_proposal_source_ids.sql");
 const MIGRATION_0014: &str = include_str!("../migrations/0014_sync_owner_identity.sql");
+const MIGRATION_0015: &str = include_str!("../migrations/0015_fb_bkt.sql");
+const MIGRATION_0016: &str = include_str!("../migrations/0016_private_chunks_fts.sql");
+const MIGRATION_0017: &str = include_str!("../migrations/0017_sync_focus_aggregates.sql");
+const MIGRATION_0018: &str = include_str!("../migrations/0018_private_chunks_fts_rebuild.sql");
 pub(crate) const MIGRATION_0001_ID: &str = "0001_initial";
 pub(crate) const MIGRATION_0002_ID: &str = "0002_vector_embeddings";
 pub(crate) const MIGRATION_0003_ID: &str = "0003_private_documents";
@@ -31,6 +35,10 @@ pub(crate) const MIGRATION_0011_ID: &str = "0011_sync_learning_analysis";
 pub(crate) const MIGRATION_0012_ID: &str = "0012_sync_snapshot_received_at_ms";
 pub(crate) const MIGRATION_0013_ID: &str = "0013_sync_proposal_source_ids";
 pub(crate) const MIGRATION_0014_ID: &str = "0014_sync_owner_identity";
+pub(crate) const MIGRATION_0015_ID: &str = "0015_fb_bkt";
+pub(crate) const MIGRATION_0016_ID: &str = "0016_private_chunks_fts";
+pub(crate) const MIGRATION_0017_ID: &str = "0017_sync_focus_aggregates";
+pub(crate) const MIGRATION_0018_ID: &str = "0018_private_chunks_fts_rebuild";
 
 pub(crate) fn database_path(app: &AppHandle) -> Result<std::path::PathBuf, String> {
     Ok(app
@@ -75,6 +83,20 @@ fn migration_exists(connection: &Connection, version: &str) -> Result<bool, Stri
 }
 
 pub(crate) fn apply_migrations(connection: &Connection) -> Result<bool, String> {
+    // foreign_keys cannot be enabled inside an SQLite transaction.
+    connection
+        .pragma_update(None, "foreign_keys", true)
+        .map_err(|error| format!("failed to enable foreign keys: {error}"))?;
+    let transaction = Transaction::new_unchecked(connection, TransactionBehavior::Immediate)
+        .map_err(|error| format!("failed to start migration transaction: {error}"))?;
+    let applied = apply_migrations_in_transaction(&transaction)?;
+    transaction
+        .commit()
+        .map_err(|error| format!("failed to commit migration transaction: {error}"))?;
+    Ok(applied)
+}
+
+fn apply_migrations_in_transaction(connection: &Connection) -> Result<bool, String> {
     connection
         .execute_batch(
             "PRAGMA foreign_keys = ON;
@@ -269,9 +291,61 @@ pub(crate) fn apply_migrations(connection: &Connection) -> Result<bool, String> 
         applied_any = true;
     }
 
+    if !migration_exists(connection, MIGRATION_0015_ID)? {
+        connection
+            .execute_batch(MIGRATION_0015)
+            .map_err(|error| format!("failed to apply {MIGRATION_0015_ID}: {error}"))?;
+        connection
+            .execute(
+                "INSERT OR IGNORE INTO schema_migrations (version) VALUES (?1)",
+                [MIGRATION_0015_ID],
+            )
+            .map_err(|error| format!("failed to record {MIGRATION_0015_ID}: {error}"))?;
+        applied_any = true;
+    }
+
+    if !migration_exists(connection, MIGRATION_0016_ID)? {
+        connection
+            .execute_batch(MIGRATION_0016)
+            .map_err(|error| format!("failed to apply {MIGRATION_0016_ID}: {error}"))?;
+        connection
+            .execute(
+                "INSERT OR IGNORE INTO schema_migrations (version) VALUES (?1)",
+                [MIGRATION_0016_ID],
+            )
+            .map_err(|error| format!("failed to record {MIGRATION_0016_ID}: {error}"))?;
+        applied_any = true;
+    }
+
+    if !migration_exists(connection, MIGRATION_0017_ID)? {
+        connection
+            .execute_batch(MIGRATION_0017)
+            .map_err(|error| format!("failed to apply {MIGRATION_0017_ID}: {error}"))?;
+        connection
+            .execute(
+                "INSERT OR IGNORE INTO schema_migrations (version) VALUES (?1)",
+                [MIGRATION_0017_ID],
+            )
+            .map_err(|error| format!("failed to record {MIGRATION_0017_ID}: {error}"))?;
+        applied_any = true;
+    }
+
+    if !migration_exists(connection, MIGRATION_0018_ID)? {
+        connection
+            .execute_batch(MIGRATION_0018)
+            .map_err(|error| format!("failed to apply {MIGRATION_0018_ID}: {error}"))?;
+        connection
+            .execute(
+                "INSERT OR IGNORE INTO schema_migrations (version) VALUES (?1)",
+                [MIGRATION_0018_ID],
+            )
+            .map_err(|error| format!("failed to record {MIGRATION_0018_ID}: {error}"))?;
+        applied_any = true;
+    }
+
     if applied_any {
         connection
-            .execute_batch("PRAGMA user_version = 14;")
+            .execute_batch("PRAGMA user_version = 18;")
             .map_err(|error| format!("failed to update SQLite user_version: {error}"))?;
     }
 
@@ -297,6 +371,27 @@ pub(crate) fn load_applied_migrations(connection: &Connection) -> Result<Vec<Str
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn migration_record_failure_rolls_back_ddl_and_can_be_retried() {
+        let connection = v12_database_with_sync_rows();
+        connection.execute_batch("CREATE TRIGGER reject_migration BEFORE INSERT ON schema_migrations
+          WHEN NEW.version='0015_fb_bkt' BEGIN SELECT RAISE(ABORT,'injected migration failure'); END;").unwrap();
+        assert!(apply_migrations(&connection).is_err());
+        assert!(!migration_exists(&connection, MIGRATION_0013_ID).unwrap());
+        let has_column:i64=connection.query_row("SELECT COUNT(*) FROM pragma_table_info('student_knowledge') WHERE name='last_response_at'",[],|row|row.get(0)).unwrap();
+        assert_eq!(has_column, 0);
+        let version: i64 = connection
+            .query_row("PRAGMA user_version", [], |row| row.get(0))
+            .unwrap();
+        assert_eq!(version, 12);
+        connection
+            .execute_batch("DROP TRIGGER reject_migration;")
+            .unwrap();
+        assert!(apply_migrations(&connection).unwrap());
+        assert!(!apply_migrations(&connection).unwrap());
+        assert_v12_rows_survive_with_null_source(&connection);
+    }
 
     const V12_MIGRATIONS: [(&str, &str); 12] = [
         (MIGRATION_0001_ID, MIGRATION_0001),
@@ -441,20 +536,30 @@ mod tests {
         assert_eq!(task_source_columns, 1);
         assert_v12_rows_survive_with_null_source(&connection);
 
-        // apply_migrations 会把 v12 一路升到最新（含 0013、0014）
+        // apply_migrations 会把 v12 一路升到最新（含 0013、0014、0015）
         let mut expected_latest = expected_v12;
         expected_latest.push(MIGRATION_0013_ID.to_string());
         expected_latest.push(MIGRATION_0014_ID.to_string());
-        assert_eq!(load_applied_migrations(&connection).unwrap(), expected_latest);
+        expected_latest.push(MIGRATION_0015_ID.to_string());
+        expected_latest.push(MIGRATION_0016_ID.to_string());
+        expected_latest.push(MIGRATION_0017_ID.to_string());
+        expected_latest.push(MIGRATION_0018_ID.to_string());
+        assert_eq!(
+            load_applied_migrations(&connection).unwrap(),
+            expected_latest
+        );
         assert_eq!(
             connection
                 .query_row("PRAGMA user_version", [], |row| row.get::<_, i64>(0))
                 .unwrap(),
-            14
+            18
         );
 
         assert!(!apply_migrations(&connection).expect("migrations idempotent"));
-        assert_eq!(load_applied_migrations(&connection).unwrap(), expected_latest);
+        assert_eq!(
+            load_applied_migrations(&connection).unwrap(),
+            expected_latest
+        );
         assert_v12_rows_survive_with_null_source(&connection);
     }
 
@@ -511,7 +616,7 @@ mod tests {
             connection
                 .query_row("PRAGMA user_version", [], |row| row.get::<_, i64>(0))
                 .unwrap(),
-            14
+            18
         );
         // sync_devices 有 owner_identity 且 legacy 回填为自身 id
         let counts: (i64, i64) = connection

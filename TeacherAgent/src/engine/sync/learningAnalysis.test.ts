@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest"
 import { formatLearningFactValue, learningAnalysisWarningLabel, toTrustedLearningAnalysisModel } from "./learningAnalysis"
 import type { SyncLearningAnalysisDto } from "../../types/sync"
+import { readFileSync } from "node:fs"
 
 function validAnalysis(): SyncLearningAnalysisDto {
   return {
@@ -17,6 +18,17 @@ function validAnalysis(): SyncLearningAnalysisDto {
 }
 
 describe("toTrustedLearningAnalysisModel", () => {
+  it("projects B1 flat inferences separately from facts and rejects all shared negative fixtures", () => {
+    const load = (name: string) => JSON.parse(readFileSync(new URL(`../../../sync/protocol/fixtures/${name}.json`, import.meta.url), "utf8"))
+    const valid = load("snapshot-inferences-all-valid")
+    const model = toTrustedLearningAnalysisModel(valid.payload.learningAnalysis, valid.snapshotId)
+    expect(model?.localInferences).toHaveLength(3)
+    expect(model?.facts).toEqual(valid.payload.learningAnalysis.profile.facts)
+    for (const kind of ["evidence", "advice", "unexpected", "enum", "bkt-negative", "bkt-positive", "task3-fallback", "facts-promotion"]) {
+      const bad = load(`snapshot-inferences-${kind}-invalid`)
+      expect(toTrustedLearningAnalysisModel(bad.payload.learningAnalysis, bad.snapshotId)).toBeNull()
+    }
+  })
   it("accepts valid analysis and marks draft questions as non-mastery evidence", () => {
     const model = toTrustedLearningAnalysisModel(validAnalysis(), "snapshot-1")
     expect(model?.generator).toBe("deterministic_fallback")

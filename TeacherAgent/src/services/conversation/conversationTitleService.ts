@@ -6,6 +6,7 @@
  */
 
 import type { LlmProviderConfig } from "../llm/types"
+import { filterProviderHistory } from "../privacy/authorizationEpoch"
 import { createOpenAICompatibleProvider } from "../llm/openAiCompatibleProvider"
 
 const TITLE_PROMPT = `请根据下面学习对话生成一个 8-18 个中文字符的会话标题。
@@ -16,7 +17,7 @@ const TITLE_PROMPT = `请根据下面学习对话生成一个 8-18 个中文字�
 const DEFAULT_TITLE_RE = /默认对话|新对话|临时对话/
 
 export interface TitleGenerationInput {
-  messages: Array<{ role: string; content: string }>
+  messages: Array<{ role: string; content: string; createdAt?: string }>
   subjectCode: string
   providerConfig?: LlmProviderConfig
 }
@@ -40,7 +41,7 @@ export async function generateConversationTitle(input: TitleGenerationInput): Pr
   }
 
   // 取最近 6 条消息作为上下文
-  const recentMessages = messages
+  const recentMessages = filterProviderHistory(messages, providerConfig.isLocal)
     .filter((m) => m.role === "student" || m.role === "tutor")
     .slice(-6)
     .map((m) => `${m.role === "student" ? "学生" : "导师"}：${m.content.slice(0, 200)}`)

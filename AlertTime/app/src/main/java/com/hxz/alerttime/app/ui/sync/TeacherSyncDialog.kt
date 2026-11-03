@@ -6,27 +6,25 @@ import android.os.Build
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -44,6 +42,10 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.google.zxing.integration.android.IntentIntegrator
 import com.hxz.alerttime.app.data.local.AlertTimeDatabase
 import com.hxz.alerttime.app.data.sync.SyncProposalDto
+import com.hxz.alerttime.app.ui.components.FormButtonRow
+import com.hxz.alerttime.app.ui.components.FormCaption
+import com.hxz.alerttime.app.ui.components.FormScrollColumn
+import com.hxz.alerttime.app.ui.components.FormSection
 import com.journeyapps.barcodescanner.ScanContract
 import com.journeyapps.barcodescanner.ScanOptions
 import java.text.SimpleDateFormat
@@ -169,158 +171,136 @@ fun TeacherSyncDialog(
         onDismissRequest = onDismiss,
         title = { Text("Teacher 同步") },
         text = {
-            Column(
-                modifier = Modifier
-                    .verticalScroll(rememberScrollState())
-                    .heightIn(max = 520.dp)
-                    .padding(vertical = 4.dp)
-            ) {
+            // 不再叠加 heightIn(max = 520.dp)：那个上限会把底部说明裁掉且在窄屏上
+            // 只露出半行。高度交给 AlertDialog 自身约束，内容整体可滚动。
+            FormScrollColumn(modifier = Modifier.padding(vertical = 4.dp)) {
                 if (state.successMessage != null) {
-                    Text(
-                        text = state.successMessage,
-                        color = MaterialTheme.colorScheme.primary,
-                        style = MaterialTheme.typography.bodySmall
-                    )
-                    Spacer(Modifier.height(8.dp))
+                    FormCaption(state.successMessage, color = MaterialTheme.colorScheme.primary)
                 }
                 if (state.errorMessage != null) {
-                    Text(
-                        text = state.errorMessage,
-                        color = MaterialTheme.colorScheme.error,
-                        style = MaterialTheme.typography.bodySmall
-                    )
-                    Spacer(Modifier.height(8.dp))
+                    FormCaption(state.errorMessage, color = MaterialTheme.colorScheme.error)
                 }
 
                 if (!state.paired) {
-                    Text(
-                        "未配对：先在 TeacherAgent 打开「AlertTime 同步」并生成配对二维码，然后扫描配对。",
-                        style = MaterialTheme.typography.bodyMedium
-                    )
-                    Spacer(Modifier.height(12.dp))
-                    Button(onClick = onScanQr, enabled = !state.operationRunning) {
-                        Text("扫描二维码配对")
+                    FormSection(title = "配对") {
+                        Text(
+                            "未配对：先在 TeacherAgent 打开「AlertTime 同步」并生成配对二维码，然后扫描配对。",
+                            style = MaterialTheme.typography.bodyMedium
+                        )
+                        Button(onClick = onScanQr, enabled = !state.operationRunning) {
+                            Text("扫描二维码配对")
+                        }
                     }
                 } else {
-                    Text(
-                        "已连接：${state.serverInfo?.host ?: "—"}:${state.serverInfo?.port ?: "—"}",
-                        style = MaterialTheme.typography.bodyMedium,
-                        fontWeight = FontWeight.SemiBold
-                    )
-                    if (state.lastSyncAt != null) {
+                    FormSection(title = "连接状态") {
                         Text(
-                            "最后同步：${formatTime(state.lastSyncAt)}",
-                            style = MaterialTheme.typography.bodySmall
+                            "已连接：${state.serverInfo?.host ?: "—"}:${state.serverInfo?.port ?: "—"}",
+                            style = MaterialTheme.typography.bodyMedium,
+                            fontWeight = FontWeight.SemiBold
                         )
-                    }
-                    Spacer(Modifier.height(12.dp))
-                    Row {
-                        Button(onClick = onSyncNow, enabled = !state.operationRunning) {
-                            Text("立即同步")
+                        state.lastSyncAt?.let {
+                            FormCaption("最后同步：${formatTime(it)}")
                         }
-                        Spacer(Modifier.width(8.dp))
-                        OutlinedButton(onClick = onRequestUnpair, enabled = !state.operationRunning) {
-                            Text("解除配对")
+                        FormButtonRow {
+                            Button(
+                                onClick = onSyncNow,
+                                enabled = !state.operationRunning,
+                                modifier = Modifier.weight(1f)
+                            ) {
+                                Text("立即同步")
+                            }
+                            OutlinedButton(
+                                onClick = onRequestUnpair,
+                                enabled = !state.operationRunning,
+                                modifier = Modifier.weight(1f)
+                            ) {
+                                Text("解除配对")
+                            }
                         }
-                    }
-                    if (state.operationRunning) {
-                        Spacer(Modifier.height(8.dp))
-                        Row(verticalAlignment = Alignment.CenterVertically) {
-                            CircularProgressIndicator(
-                                modifier = Modifier.width(16.dp).height(16.dp),
-                                strokeWidth = 2.dp
-                            )
-                            Spacer(Modifier.width(8.dp))
-                            Text("处理中…", style = MaterialTheme.typography.bodySmall)
+                        if (state.operationRunning) {
+                            Row(verticalAlignment = Alignment.CenterVertically) {
+                                CircularProgressIndicator(
+                                    modifier = Modifier.width(16.dp).height(16.dp),
+                                    strokeWidth = 2.dp
+                                )
+                                Spacer(Modifier.width(8.dp))
+                                FormCaption("处理中…")
+                            }
                         }
                     }
                 }
-
-                Spacer(Modifier.height(12.dp))
-                HorizontalDivider()
-                Spacer(Modifier.height(12.dp))
 
                 // 考试体系标签（可选）：只影响同步上报的 subject 可选字段与 TeacherAgent 展示，
                 // 不参与本地统计与计时；空标签与旧版行为完全一致。
                 // 科目多时逐个展开编辑会把对话框拉得很长，默认折叠为一行摘要，点击展开。
                 var tagsExpanded by remember { mutableStateOf(false) }
                 val markedCount = state.subjectTags.count { it.tag != null }
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .clickable(enabled = state.subjectTags.isNotEmpty()) { tagsExpanded = !tagsExpanded },
-                    verticalAlignment = Alignment.CenterVertically
+                Column(
+                    modifier = Modifier.fillMaxWidth(),
+                    verticalArrangement = Arrangement.spacedBy(10.dp)
                 ) {
-                    Text(
-                        "考试体系标签（可选）",
-                        fontWeight = FontWeight.SemiBold,
-                        modifier = Modifier.weight(1f)
-                    )
-                    if (state.subjectTags.isNotEmpty()) {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .clickable(enabled = state.subjectTags.isNotEmpty()) { tagsExpanded = !tagsExpanded },
+                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
                         Text(
-                            "已标记 $markedCount/${state.subjectTags.size}",
-                            style = MaterialTheme.typography.bodySmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                            "考试体系标签（可选）",
+                            fontWeight = FontWeight.SemiBold,
+                            style = MaterialTheme.typography.titleSmall,
+                            modifier = Modifier.weight(1f)
                         )
-                        Icon(
-                            imageVector = if (tagsExpanded) Icons.Filled.ExpandLess
-                            else Icons.Filled.ExpandMore,
-                            contentDescription = if (tagsExpanded) "收起" else "展开"
-                        )
+                        if (state.subjectTags.isNotEmpty()) {
+                            FormCaption("已标记 $markedCount/${state.subjectTags.size}")
+                            Icon(
+                                imageVector = if (tagsExpanded) Icons.Filled.ExpandLess
+                                else Icons.Filled.ExpandMore,
+                                contentDescription = if (tagsExpanded) "收起" else "展开"
+                            )
+                        }
                     }
-                }
-                if (state.subjectTags.isEmpty()) {
-                    Text(
-                        "暂无科目。创建科目后，可给考研科目标记考试组与课程（如 408 / 计算机网络），" +
-                            "同步后 TeacherAgent 会展示这些信息并作为映射建议；标记与否不影响本机任何功能。",
-                        style = MaterialTheme.typography.bodySmall
-                    )
-                } else if (tagsExpanded) {
-                    Spacer(Modifier.height(8.dp))
-                    state.subjectTags.forEach { entry ->
-                        SubjectTagRow(
-                            entry = entry,
-                            enabled = !state.operationRunning,
-                            onSave = { trackId, subjectId, moduleId ->
-                                onSaveSubjectTag(entry.remoteId, trackId, subjectId, moduleId)
-                            }
+                    if (state.subjectTags.isEmpty()) {
+                        FormCaption(
+                            "暂无科目。创建科目后，可给考研科目标记考试组与课程（如 408 / 计算机网络），" +
+                                "同步后 TeacherAgent 会展示这些信息并作为映射建议；标记与否不影响本机任何功能。"
                         )
-                        Spacer(Modifier.height(6.dp))
-                    }
-                }
-
-                Spacer(Modifier.height(12.dp))
-                HorizontalDivider()
-                Spacer(Modifier.height(12.dp))
-
-                Text("Teacher 建议", fontWeight = FontWeight.SemiBold)
-                if (state.proposals.isEmpty()) {
-                    Text(
-                        "暂无建议。同步后，TeacherAgent 会基于诊断与执行情况生成计划建议稿。",
-                        style = MaterialTheme.typography.bodySmall
-                    )
-                } else {
-                    state.proposals.forEach { proposal ->
-                        ProposalCard(
-                            proposal = proposal,
-                            enabled = !state.operationRunning,
-                            onAccept = { onAccept(proposal) },
-                            onReject = { onReject(proposal) }
-                        )
-                        Spacer(Modifier.height(8.dp))
+                    } else if (tagsExpanded) {
+                        state.subjectTags.forEach { entry ->
+                            SubjectTagRow(
+                                entry = entry,
+                                enabled = !state.operationRunning,
+                                onSave = { trackId, subjectId, moduleId ->
+                                    onSaveSubjectTag(entry.remoteId, trackId, subjectId, moduleId)
+                                }
+                            )
+                        }
                     }
                 }
 
-                Spacer(Modifier.height(12.dp))
-                HorizontalDivider()
-                Spacer(Modifier.height(8.dp))
-                Text(
-                    "说明：建议只是建议稿，只有你点击「采纳」后才会创建周目标与计划；" +
-                        "TeacherAgent 不会直接修改你现有的计划。采纳/拒绝结果会在下次同步时上报。" +
-                        "局域网同步只在家庭 WiFi 或手机热点等同一私有局域网内可用；" +
-                        "学校、公司和公共 WiFi 可能存在 AP isolation、VLAN 或防火墙限制。",
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                FormSection(
+                    title = "Teacher 建议",
+                    caption = "建议只是建议稿，只有你点击「采纳」后才会创建周目标与计划；" +
+                        "TeacherAgent 不会直接修改你现有的计划。采纳/拒绝结果会在下次同步时上报。"
+                ) {
+                    if (state.proposals.isEmpty()) {
+                        FormCaption("暂无建议。同步后，TeacherAgent 会基于诊断与执行情况生成计划建议稿。")
+                    } else {
+                        state.proposals.forEach { proposal ->
+                            ProposalCard(
+                                proposal = proposal,
+                                enabled = !state.operationRunning,
+                                onAccept = { onAccept(proposal) },
+                                onReject = { onReject(proposal) }
+                            )
+                        }
+                    }
+                }
+
+                FormCaption(
+                    "局域网同步只在家庭 WiFi 或手机热点等同一私有局域网内可用；" +
+                        "学校、公司和公共 WiFi 可能存在 AP isolation、VLAN 或防火墙限制。"
                 )
             }
         },
@@ -361,46 +341,59 @@ private fun SubjectTagRowFields(
     var trackId by remember { mutableStateOf(entry.tag?.examTrackId ?: "") }
     var subjectId by remember { mutableStateOf(entry.tag?.examSubjectId ?: "") }
     var moduleId by remember { mutableStateOf(entry.tag?.examModuleId ?: "") }
-    Column(modifier = Modifier.fillMaxWidth()) {
-        Text(entry.name, style = MaterialTheme.typography.bodySmall, fontWeight = FontWeight.Medium)
-        Row(verticalAlignment = Alignment.CenterVertically) {
+    // 字段整行排布：两个长标签字段并排时标签会被压成两行盖住输入框。
+    Surface(
+        shape = MaterialTheme.shapes.medium,
+        color = MaterialTheme.colorScheme.surfaceContainerLow,
+        modifier = Modifier.fillMaxWidth()
+    ) {
+        Column(
+            modifier = Modifier.padding(12.dp),
+            verticalArrangement = Arrangement.spacedBy(10.dp)
+        ) {
+            Text(entry.name, style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Medium)
             OutlinedTextField(
                 value = trackId,
                 onValueChange = { trackId = it },
-                label = { Text("考试组（如 408）") },
+                label = { Text("考试组") },
+                supportingText = { Text("如 408") },
                 singleLine = true,
                 enabled = enabled,
-                modifier = Modifier.weight(1f).padding(end = 4.dp)
+                modifier = Modifier.fillMaxWidth()
             )
             OutlinedTextField(
                 value = subjectId,
                 onValueChange = { subjectId = it },
-                label = { Text("课程（如 计算机网络）") },
+                label = { Text("课程") },
+                supportingText = { Text("如 计算机网络") },
                 singleLine = true,
                 enabled = enabled,
-                modifier = Modifier.weight(1f).padding(start = 4.dp)
+                modifier = Modifier.fillMaxWidth()
             )
-        }
-        Row(verticalAlignment = Alignment.CenterVertically) {
             OutlinedTextField(
                 value = moduleId,
                 onValueChange = { moduleId = it },
-                label = { Text("模块（可选）") },
+                label = { Text("模块") },
+                supportingText = { Text("可选") },
                 singleLine = true,
                 enabled = enabled,
-                modifier = Modifier.weight(1f).padding(end = 8.dp)
+                modifier = Modifier.fillMaxWidth()
             )
-            TextButton(
-                onClick = { onSave(trackId, subjectId, moduleId) },
-                enabled = enabled
-            ) {
-                Text(if (entry.tag == null) "保存" else "更新")
-            }
-            TextButton(
-                onClick = { onSave("", "", null) },
-                enabled = enabled && entry.tag != null
-            ) {
-                Text("清除")
+            FormButtonRow {
+                OutlinedButton(
+                    onClick = { onSave(trackId, subjectId, moduleId) },
+                    enabled = enabled,
+                    modifier = Modifier.weight(1f)
+                ) {
+                    Text(if (entry.tag == null) "保存" else "更新")
+                }
+                OutlinedButton(
+                    onClick = { onSave("", "", null) },
+                    enabled = enabled && entry.tag != null,
+                    modifier = Modifier.weight(1f)
+                ) {
+                    Text("清除")
+                }
             }
         }
     }
@@ -413,43 +406,38 @@ private fun ProposalCard(
     onAccept: () -> Unit,
     onReject: () -> Unit
 ) {
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(vertical = 4.dp)
+    Surface(
+        shape = MaterialTheme.shapes.medium,
+        color = MaterialTheme.colorScheme.surfaceContainerLow,
+        modifier = Modifier.fillMaxWidth()
     ) {
-        Text(
-            "建议（${proposalStatusLabel(proposal.status)}）",
-            style = MaterialTheme.typography.labelMedium,
-            fontWeight = FontWeight.SemiBold
-        )
-        Text(
-            proposal.rationale,
-            style = MaterialTheme.typography.bodySmall
-        )
-        proposal.proposedWeeklyGoals.forEach { goal ->
+        Column(
+            modifier = Modifier.padding(12.dp),
+            verticalArrangement = Arrangement.spacedBy(4.dp)
+        ) {
             Text(
-                "· 周目标：${goal.title}",
-                style = MaterialTheme.typography.bodySmall
+                "建议（${proposalStatusLabel(proposal.status)}）",
+                style = MaterialTheme.typography.labelMedium,
+                fontWeight = FontWeight.SemiBold
             )
-        }
-        proposal.proposedTasks.forEach { task ->
-            Text(
-                "· 计划：${task.title}",
-                style = MaterialTheme.typography.bodySmall
-            )
-        }
-        if (proposal.status == "pending" && isProposalExpired(proposal)) {
-            Text(
-                "该建议已过期，无法采纳",
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.error
-            )
-        } else if (proposal.status == "pending") {
-            Row(Modifier.padding(top = 4.dp)) {
-                Button(onClick = onAccept, enabled = enabled) { Text("采纳") }
-                Spacer(Modifier.width(8.dp))
-                OutlinedButton(onClick = onReject, enabled = enabled) { Text("拒绝") }
+            FormCaption(proposal.rationale)
+            proposal.proposedWeeklyGoals.forEach { goal ->
+                FormCaption("· 周目标：${goal.title}")
+            }
+            proposal.proposedTasks.forEach { task ->
+                FormCaption("· 计划：${task.title}")
+            }
+            if (proposal.status == "pending" && isProposalExpired(proposal)) {
+                FormCaption("该建议已过期，无法采纳", color = MaterialTheme.colorScheme.error)
+            } else if (proposal.status == "pending") {
+                FormButtonRow(modifier = Modifier.padding(top = 4.dp)) {
+                    Button(onClick = onAccept, enabled = enabled, modifier = Modifier.weight(1f)) {
+                        Text("采纳")
+                    }
+                    OutlinedButton(onClick = onReject, enabled = enabled, modifier = Modifier.weight(1f)) {
+                        Text("拒绝")
+                    }
+                }
             }
         }
     }

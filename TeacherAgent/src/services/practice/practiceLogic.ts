@@ -17,14 +17,12 @@ export function evaluateAnswer(studentAnswer: string, correctAnswer: string | un
   // 数字答案做严格数值比较
   const correctNum = tryParseNumber(answer)
   if (correctNum !== null) {
-    // correctAnswer 是纯数字 → 从 studentAnswer 中提取数字做严格比较
-    const studentNum = tryParseNumber(normalized)
-    if (studentNum !== null) {
-      return studentNum === correctNum
-    }
-    // studentAnswer 包含文本，尝试提取嵌入的数字
-    const embeddedNums = extractNumbers(normalized)
-    return embeddedNums.some((n) => n === correctNum)
+    // Only a complete number, optionally preceded by an answer label, is
+    // assessable here. Negations, units and multi-number working need review.
+    const studentNum = tryParseNumber(normalized.replace(
+      /^(?:答案(?:是|为)?|(?:the\s+)?answer(?:\s+is)?)[：:=\s]*/i, "",
+    ))
+    return studentNum !== null && studentNum === correctNum
   }
 
   // Textual answers must match after only harmless answer-label punctuation is
@@ -40,16 +38,9 @@ export function evaluateAnswer(studentAnswer: string, correctAnswer: string | un
 function tryParseNumber(value: string): number | null {
   // 去掉常见的非数字前缀/后缀
   const cleaned = value.replace(/^[=＝:：\s]+/, "").replace(/[?？.。!！\s]+$/, "")
-  if (!cleaned) return null
+  if (!/^[+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:e[+-]?\d+)?$/i.test(cleaned)) return null
   const n = Number(cleaned)
   return Number.isFinite(n) ? n : null
-}
-
-/** 从文本中提取所有数字（整数、小数、负数） */
-function extractNumbers(value: string): number[] {
-  const matches = value.match(/-?\d+(?:\.\d+)?/g)
-  if (!matches) return []
-  return matches.map((m) => Number(m)).filter((n) => Number.isFinite(n))
 }
 
 /** 从题库题目构建知识节点快照，用于 saveAssessmentResult 的 knowledgeSnapshots 字段 */

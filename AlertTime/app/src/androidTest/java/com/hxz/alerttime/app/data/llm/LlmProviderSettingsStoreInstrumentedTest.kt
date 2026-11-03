@@ -90,7 +90,7 @@ class LlmProviderSettingsStoreInstrumentedTest {
         private const val DATABASE_NAME = "llm-provider-settings-instrumented.db"
         private const val TEST_KEY_ALIAS = "alerttime_learning_analysis_llm_instrumented_v1"
         private const val ANDROID_KEYSTORE = "AndroidKeyStore"
-        private const val BASE_URL = "http://192.168.43.1:8080/v1"
+        private const val BASE_URL = "https://api.moonshot.cn/v1"
         private const val MODEL = "user-selected-model"
         private const val API_KEY = "user-entered-secret"
     }

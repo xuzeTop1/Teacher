@@ -243,3 +243,6 @@ mod tests {
         );
     }
 }
+
+// 论文 §4.3 的 FB-BKT 实现（融合端侧专注行为的遗忘感知扩展）。
+pub(crate) mod fb_bkt;

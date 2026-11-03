@@ -234,8 +234,8 @@ UsageStats 外部 AI 使用统计是可选增强。构建同步快照时，Room 
 只有显式追加 `-ConfirmReplaceInstall` 才会继续。示例：
 
 ```powershell
-./scripts/verify-learning-analysis-device.ps1 -AdbPath D:/AndroidSDK/platform-tools/adb.exe
-./scripts/verify-learning-analysis-device.ps1 -AdbPath D:/AndroidSDK/platform-tools/adb.exe -ConfirmReplaceInstall
+./scripts/verify-learning-analysis-device.ps1 -AdbPath <ANDROID_SDK>/platform-tools/adb.exe
+./scripts/verify-learning-analysis-device.ps1 -AdbPath <ANDROID_SDK>/platform-tools/adb.exe -ConfirmReplaceInstall
 ```
 
 安全边界：

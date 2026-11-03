@@ -25,7 +25,7 @@ class FormFlowsScreenshotTest {
 
     @Test
     fun primaryFormFlows_areReachableAndResponsive() {
-        composeRule.onNodeWithContentDescription("计划").performClick()
+        composeRule.onNodeWithText("计划").performClick()
 
         composeRule.onNodeWithText("添加计划").performClick()
         composeRule.onNodeWithText("基本信息").assertExists()
@@ -50,7 +50,7 @@ class FormFlowsScreenshotTest {
         capture("form-subjects.png")
         composeRule.onNodeWithContentDescription("关闭").performClick()
 
-        composeRule.onNodeWithContentDescription("日记").performClick()
+        composeRule.onNodeWithText("日记").performClick()
         composeRule.onNodeWithText("新建").performClick()
         composeRule.onNodeWithText("复盘正文").assertExists()
         capture("form-diary.png")
@@ -58,13 +58,17 @@ class FormFlowsScreenshotTest {
 
     private fun capture(fileName: String) {
         composeRule.waitForIdle()
-        val context = ApplicationProvider.getApplicationContext<Context>()
-        val screenshot = File(requireNotNull(context.externalCacheDir), fileName)
-        FileOutputStream(screenshot).use { output ->
-            composeRule.onRoot()
-                .captureToImage()
-                .asAndroidBitmap()
-                .compress(Bitmap.CompressFormat.PNG, 100, output)
-        }
+        // 截图只是辅助证据：弹窗位于独立窗口，captureToImage 在部分机型/系统版本上
+        // 会抛 "Failed to capture a node to bitmap"。截图失败不应让流程断言失败。
+        runCatching {
+            val context = ApplicationProvider.getApplicationContext<Context>()
+            val screenshot = File(requireNotNull(context.externalCacheDir), fileName)
+            FileOutputStream(screenshot).use { output ->
+                composeRule.onRoot()
+                    .captureToImage()
+                    .asAndroidBitmap()
+                    .compress(Bitmap.CompressFormat.PNG, 100, output)
+            }
+        }.onFailure { println("screenshot skipped for $fileName: ${it.message}") }
     }
 }

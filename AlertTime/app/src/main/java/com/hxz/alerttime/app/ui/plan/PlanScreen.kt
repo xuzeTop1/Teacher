@@ -52,6 +52,9 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.hxz.alerttime.app.data.local.AlertTimeDatabase
 import com.hxz.alerttime.app.data.repository.PlanRepository
+import com.hxz.alerttime.app.ui.localcoach.LocalCoachDialog
+import com.hxz.alerttime.app.data.localmodel.CoachTask
+import androidx.compose.material3.OutlinedTextField
 import com.hxz.alerttime.app.ui.components.AppPageHeader
 import com.hxz.alerttime.app.ui.plan.components.AddPlanDialog
 import com.hxz.alerttime.app.ui.plan.components.EmptyPlanState
@@ -86,6 +89,8 @@ fun PlanScreen(
     var showSubjectDialog by rememberSaveable { mutableStateOf(false) }
     var editingTask by remember { mutableStateOf<PlanTaskUi?>(null) }
     var deletingTask by remember { mutableStateOf<PlanTaskUi?>(null) }
+    var deletionReason by remember { mutableStateOf("") }
+    var reviewingDeletion by remember { mutableStateOf<PlanTaskUi?>(null) }
     var selectedFilter by rememberSaveable { mutableStateOf(PlanFilter.Today) }
     var exportMenuExpanded by remember { mutableStateOf(false) }
     val visibleTasks = remember(uiState.tasks, selectedFilter) {
@@ -277,7 +282,7 @@ fun PlanScreen(
                                     onEdit = { editingTask = task },
                                     onToggleDone = { viewModel.toggleDone(task) },
                                     onDeferToTomorrow = { viewModel.deferToTomorrow(task) },
-                                    onDelete = { deletingTask = task }
+                                    onDelete = { deletionReason = ""; deletingTask = task }
                                 )
                             }
                         }
@@ -290,6 +295,7 @@ fun PlanScreen(
         AddPlanDialog(
             subjects = uiState.subjects,
             initialTask = null,
+            scheduledTasks = uiState.tasks,
             isSaving = uiState.isSavingPlan,
             onDismiss = { showAddDialog = false },
             onConfirm = { title, content, subjectId, customSubjectName, targetDurationSeconds, startDateMillis, mode, repeatCount ->
@@ -312,6 +318,7 @@ fun PlanScreen(
         AddPlanDialog(
             subjects = uiState.subjects,
             initialTask = task,
+            scheduledTasks = uiState.tasks,
             isSaving = uiState.isSavingPlan,
             onDismiss = { editingTask = null },
             onConfirm = { title, content, subjectId, customSubjectName, targetDurationSeconds, dueAt, _, _ ->
@@ -334,7 +341,18 @@ fun PlanScreen(
             onDismissRequest = { deletingTask = null },
             shape = MaterialTheme.shapes.large,
             title = { Text("删除计划", fontWeight = FontWeight.SemiBold) },
-            text = { Text("删除后将不再出现在计划列表，历史学习记录会保留。") },
+            text = {
+                Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Text("删除后将不再出现在计划列表，历史学习记录会保留。")
+                    OutlinedTextField(
+                        value = deletionReason,
+                        onValueChange = { deletionReason = it.take(600) },
+                        label = { Text("调整原因（可选，仅供本地分析）") },
+                        modifier = Modifier.fillMaxWidth()
+                    )
+                    TextButton(onClick = { reviewingDeletion = task }) { Text("先听听本地助手的建议") }
+                }
+            },
             confirmButton = {
                 TextButton(
                     onClick = {
@@ -354,6 +372,13 @@ fun PlanScreen(
         )
     }
 
+    reviewingDeletion?.let { task ->
+        LocalCoachDialog(
+            onDismiss = { reviewingDeletion = null },
+            initialTask = CoachTask.Delete,
+            initialText = "${task.title}\n上下文：${deletionReason.ifBlank { "未提供调整原因，请补充实际情况" }}"
+        )
+    }
     if (showSubjectDialog) {
         SubjectManageDialog(
             subjects = uiState.subjects,

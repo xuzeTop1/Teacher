@@ -4,6 +4,7 @@ import type { PlannerResult } from "../../types/planner"
 
 export interface StoredChatMessageSnapshot {
   id: string
+  createdAt?: string
   role: string
   content: string
   knowledgeRefsJson: string
@@ -43,6 +44,7 @@ export function restoreChatMessagesFromStoredMessages(storedMessages: StoredChat
     id: message.id,
     role: message.role,
     content: message.content,
+    ...(message.createdAt === undefined ? {} : { createdAt: message.createdAt }),
     plannerResult: parsePlannerResultFromToolRefs(message.toolRefsJson),
     knowledgeRefsJson: message.knowledgeRefsJson,
     toolRefsJson: message.toolRefsJson,

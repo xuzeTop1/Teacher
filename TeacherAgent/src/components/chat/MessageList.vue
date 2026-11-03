@@ -8,6 +8,11 @@ defineProps<{
   messages: ChatMessage[]
 }>()
 
+const emit = defineEmits<{
+  (e: "retry", prompt: string): void
+  (e: "retry-assessment", messageId: string): void
+}>()
+
 /** Parse provenance summary from toolRefsJson for verification display. */
 function getProvenanceSummary(message: ChatMessage): string | null {
   if (!message.toolRefsJson) return null
@@ -84,7 +89,33 @@ defineExpose({
         <div v-else-if="message.isStreaming" class="message-typing-indicator">
           正在接收...
         </div>
+        <div v-if="message.assessmentResult?.persistenceStatus === 'failed'" class="msg-error-actions" role="status">
+          <span>本轮学习评估未保存。</span>
+          <button class="msg-error-action-btn retry-btn" :disabled="message.isSavingAssessment"
+            @click="emit('retry-assessment', message.id)">
+            {{ message.isSavingAssessment ? '保存中…' : '重试保存' }}
+          </button>
+        </div>
         <PlannerSignalPanel v-if="message.plannerResult" :result="message.plannerResult" />
+        <div v-if="message.role === 'tutor' && message.isError" class="message-error-action-row">
+          <RouterLink
+            v-if="message.errorType === 'missing_provider' || message.errorType === 'llm_error'"
+            to="/settings"
+            class="msg-error-action-btn config-btn"
+          >
+            <v-icon icon="mdi-cog-outline" size="14" />
+            <span>{{ message.errorType === 'missing_provider' ? '前往设置配置模型' : '检查模型设置' }}</span>
+          </RouterLink>
+          <button
+            v-if="message.retryPrompt"
+            type="button"
+            class="msg-error-action-btn retry-btn"
+            @click="emit('retry', message.retryPrompt)"
+          >
+            <v-icon icon="mdi-refresh" size="14" />
+            <span>重试发送</span>
+          </button>
+        </div>
         <div v-if="message.role === 'tutor' && getProvenanceSummary(message)" class="message-provenance">
           {{ getProvenanceSummary(message) }}
         </div>
@@ -94,6 +125,47 @@ defineExpose({
 </template>
 
 <style scoped>
+.message-error-action-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.msg-error-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.msg-error-action-btn.config-btn {
+  color: #1d4ed8;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+}
+
+.msg-error-action-btn.config-btn:hover {
+  background: #dbeafe;
+}
+
+.msg-error-action-btn.retry-btn {
+  color: #047857;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+}
+
+.msg-error-action-btn.retry-btn:hover {
+  background: #d1fae5;
+}
+
 .message-provenance {
   margin-top: 4px;
   padding: 2px 6px;

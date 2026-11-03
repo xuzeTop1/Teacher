@@ -253,10 +253,13 @@ const selectedNodeIsColdStart = computed(() => {
 /** 让导师讲解当前节点 */
 function askTutorToExplain() {
   if (!selectedNode.value) return
-  const node = allPackNodes.value.find((n) => n.id === selectedNode.value)
-  if (!node) return
-  const title = node.title
+  const title =
+    selectedNodeData.value?.title ??
+    allPackNodes.value.find((n) => n.id === selectedNode.value)?.title ??
+    nodeIdToTitle.value.get(selectedNode.value) ??
+    selectedNode.value
   const subject = subjectLabel(subjectCode.value)
+  selectedNode.value = null
   router.push({
     path: "/chat",
     query: {
@@ -268,10 +271,13 @@ function askTutorToExplain() {
 /** 请求练习当前节点 */
 function askForPractice() {
   if (!selectedNode.value) return
-  const node = allPackNodes.value.find((n) => n.id === selectedNode.value)
-  if (!node) return
-  const title = node.title
+  const title =
+    selectedNodeData.value?.title ??
+    allPackNodes.value.find((n) => n.id === selectedNode.value)?.title ??
+    nodeIdToTitle.value.get(selectedNode.value) ??
+    selectedNode.value
   const subject = subjectLabel(subjectCode.value)
+  selectedNode.value = null
   router.push({
     path: "/chat",
     query: {
@@ -632,7 +638,9 @@ function getNodeVisualState(nodeId: string): string {
           <span class="node-list-title">{{ node.title }}</span>
           <span :class="['node-list-mastery', getNodeMasteryBadgeClass(node.id)]">{{ getNodeMasteryLabel(node.id) }}</span>
         </div>
-        <p class="node-list-summary">{{ node.summary?.slice(0, 100) }}{{ (node.summary?.length ?? 0) > 100 ? '…' : '' }}</p>
+        <div v-if="node.summary" class="node-list-summary">
+          <MessageRenderer :content="node.summary" />
+        </div>
         <div v-if="node.prerequisites && node.prerequisites.length" class="node-list-prereqs">
           前置：{{ node.prerequisites.map(id => nodeIdToTitle.get(id) ?? id).join('、') }}
         </div>
@@ -1259,9 +1267,20 @@ function getNodeVisualState(nodeId: string): string {
 
 .node-list-summary {
   margin: 0 0 4px;
+}
+
+.node-list-summary :deep(.rendered-message) {
   font-size: 0.8rem;
   color: #666;
-  line-height: 1.4;
+  line-height: 1.45;
+}
+
+.node-list-summary :deep(.rendered-message p) {
+  margin: 0;
+}
+
+.node-list-summary :deep(.katex) {
+  font-size: 0.95em;
 }
 
 .node-list-prereqs {

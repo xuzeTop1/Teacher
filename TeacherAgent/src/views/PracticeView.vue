@@ -286,7 +286,7 @@ function updateRecommendation() {
 }
 
 function viewSolution() {
-  showSolution.value = true
+  showSolution.value = !showSolution.value
 }
 
 function nextQuestion() {
@@ -430,6 +430,7 @@ function hintLevelLabel(level: string): string {
       <PracticeQuestionCard
         :question="currentQuestion"
         :revealed-hints="revealedHints"
+        :show-answer="showSolution"
         @reveal-hint="revealHint"
       />
 
@@ -453,7 +454,7 @@ function hintLevelLabel(level: string): string {
             class="action-button action-button-secondary"
             @click="viewSolution"
           >
-            查看解析
+            {{ showSolution ? '收起解析' : '查看解析' }}
           </button>
         </div>
       </div>
@@ -488,7 +489,7 @@ function hintLevelLabel(level: string): string {
       <PracticeFeedback
         :question="currentQuestion"
         :student-answer="studentAnswer"
-        :show-solution="showSolution"
+        :show-solution="false"
       />
 
       <!-- 保存状态提示 -->
@@ -536,7 +537,7 @@ function hintLevelLabel(level: string): string {
           class="action-button action-button-secondary"
           @click="viewSolution"
         >
-          查看完整解析
+          {{ showSolution ? '收起完整解析' : '查看完整解析' }}
         </button>
       </div>
     </div>

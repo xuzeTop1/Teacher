@@ -6,7 +6,7 @@
   * 两组均在同一 Python 进程内测量，消除跨语言/跨运行时差异；系统实际
     实现（Rust 标量循环）的绝对耗时见表 3（scripts 与 vector.rs bench）。
   * 向量：1536 维单位化伪随机高斯（Irwin–Hall 近似，固定种子可复现），
-    与 text-embedding-3-small 维度一致。
+    与生产嵌入模型 bge-m3 维度一致（1024）。
   * 指标：top-5 检索耗时（均值/最大/P95，30 查询，前 3 次预热不计入），
     以及 HNSW 相对暴力精确解的 recall@5（一致率）。
   * HNSW 参数：M=32，efSearch=128（FAISS 默认建库 efC=40）。
@@ -18,7 +18,7 @@ import statistics
 import numpy as np
 import faiss
 
-DIM = 1536
+DIM = 1024
 QUERIES = 30
 WARMUP = 3
 TOPK = 5

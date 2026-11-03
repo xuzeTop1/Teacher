@@ -1,0 +1,7 @@
+# GBNF Grammar for Task 1: extract_factors
+root ::= "{" ws "\"task\":" ws "\"extract_factors\"," ws "\"r_focus\":" ws Float01 "," ws "\"n_distract\":" ws Integer "," ws "\"perceived_difficulty\":" ws Float01 "," ws "\"confidence\":" ws Float01 "," ws "\"evidence\":" ws JsonString ws "}"
+
+Float01 ::= ("0." [0-9]+ | "1.0" | "0" | "1")
+Integer ::= [0-9]+
+JsonString ::= "\"" ([^"\\\x00-\x1F] | "\\" (["\\/bfnrt] | "u" [0-9a-fA-F]{4}))* "\""
+ws ::= [ \t\n\r]*

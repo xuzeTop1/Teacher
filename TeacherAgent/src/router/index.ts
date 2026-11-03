@@ -5,6 +5,7 @@ export const router = createRouter({
   routes: [
     {
       path: "/",
+      alias: "/chat",
       name: "chat",
       component: () => import("../views/ChatView.vue")
     },
@@ -32,6 +33,10 @@ export const router = createRouter({
       path: "/alerttime-sync",
       name: "alerttime-sync",
       component: () => import("../views/AlertTimeSyncView.vue")
+    },
+    {
+      path: "/:pathMatch(.*)*",
+      redirect: "/"
     }
   ]
 })

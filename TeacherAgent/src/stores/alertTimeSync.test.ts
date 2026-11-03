@@ -233,7 +233,7 @@ describe("alertTimeSync store device loading", () => {
     store.mappings = [
       { alertSubjectRemoteId: "subject-cn", teacherSubjectId: "cs408", examTrackId: "408", examSubjectId: "408.computer-networks" },
       { alertSubjectRemoteId: "subject-cn", teacherSubjectId: "cs408", examTrackId: "408", examSubjectId: "408.computer-networks" },
-      { alertSubjectRemoteId: "subject-os", teacherSubjectId: "cs408", examTrackId: "408", examSubjectId: "408.operating-systems" }
+      { alertSubjectRemoteId: "subject-cs", teacherSubjectId: "xingce", examTrackId: "civil-xingce", examSubjectId: "civil-xingce.common-sense" }
     ]
     loadStudentKnowledge
       .mockResolvedValueOnce([{ knowledgeNodeId: "cn-node", title: "计网", attemptsCount: 1, masteryProbability: 0.2 }])
@@ -246,7 +246,7 @@ describe("alertTimeSync store device loading", () => {
     expect(loadStudentKnowledge.mock.calls[0]?.[3]).toEqual(expect.arrayContaining([expect.any(String)]))
     expect(result).toEqual({
       "subject-cn": [{ nodeId: "cn-node", title: "计网", mastery: 0.2 }],
-      "subject-os": []
+      "subject-cs": []
     })
   })
 

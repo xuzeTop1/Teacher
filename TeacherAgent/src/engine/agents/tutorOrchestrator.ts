@@ -1,6 +1,8 @@
 import type { HintLevel } from "../../types/agent"
+import { createProviderMessageTimestamp, filterProviderHistory } from "../../services/privacy/authorizationEpoch"
 import type { AssessmentResult } from "../../types/assessment"
 import type { CloudPrivacyConfig } from "../../types/cloudPrivacy"
+import { persistAssessment } from "../../services/assessment/assessmentPersistence"
 import { isLocalProvider } from "../../types/cloudPrivacy"
 import type { KnowledgePrerequisite, StudentKnowledgeMastery, SubjectCode } from "../../types/learning"
 import type { PlannerResult } from "../../types/planner"
@@ -14,7 +16,7 @@ import {
   learningMemoryService,
   type LearningMemoryPromptContext
 } from "../../services/student/memoryService"
-import { loadKnowledgePrerequisites, loadStudentKnowledge, saveAssessmentResult } from "../../services/tauri/commands"
+import { loadKnowledgePrerequisites, loadStudentKnowledge } from "../../services/tauri/commands"
 import { assessTutorTurn } from "./assessmentAgent"
 import {
   mergeGuardrailReviews,
@@ -29,10 +31,11 @@ import {
 import { formatPlannerResult, planNextLearningStep, shouldTriggerPlanner } from "./plannerAgent"
 import { selectSocraticStrategy, type SocraticDecision } from "./socraticAgent"
 import { runToolAgent, type RecentPrivateDocumentRef, type ToolAgentResult, isToolDebugMode } from "./toolAgent"
-import { buildTutorPrompt, type TutorMode, type TutorPromptMessage } from "../prompts/tutorPromptBuilder"
+import { buildTutorPrompt, withoutPrivateDocuments, type TutorMode, type TutorPromptMessage } from "../prompts/tutorPromptBuilder"
 import type { ChatAttachment } from "../../types/chat"
 
 export interface TutorTurnInput {
+  createdAt?: string
   userMessage: string
   recentMessages: TutorPromptMessage[]
   subjectCode: SubjectCode
@@ -138,6 +141,7 @@ export class TutorOrchestrator {
    * final GuardrailResult, fallback and persistence semantics.
    */
   private async executeTurn(input: TutorTurnInput, kind: "complete" | "stream"): Promise<TutorTurnResult> {
+    input = { ...input, createdAt: input.createdAt ?? createProviderMessageTimestamp() }
     const stamp = createStamp(input.onTiming)
 
     stamp("start")
@@ -183,7 +187,7 @@ export class TutorOrchestrator {
     throwIfAborted(input.signal)
 
     // Post-LLM: assessment (returned) + memory (fire-and-forget)
-    const assessmentResult = this.runPostLlmPipeline(input, ctx, llmResult.content, stamp)
+    const assessmentResult = await this.runPostLlmPipeline(input, ctx, llmResult.content, stamp)
 
     stamp("done")
 
@@ -388,25 +392,25 @@ export class TutorOrchestrator {
     const shouldSendPrivateDocs = isLocal || privacy?.sendPrivateDocumentContextToCloud === true
 
     // Filter knowledge context to remove private document nodes if not authorized for cloud
+    // 扣留私有资料时连同 topic 与 notes 一起剥：只过滤 nodes 会把文档标题
+    // （topic 由全部节点标题拼成）和"本轮已检索到用户本地私有资料"这条 notes
+    // 原样发到云端。
     let knowledgeContext = ctx.toolAgentResult.knowledgeContext
     if (!shouldSendPrivateDocs && knowledgeContext) {
-      const filteredNodes = knowledgeContext.nodes.filter((n) => n.sourceType !== "private_document")
-      if (filteredNodes.length !== knowledgeContext.nodes.length) {
-        knowledgeContext = { ...knowledgeContext, nodes: filteredNodes }
-      }
+      knowledgeContext = withoutPrivateDocuments(knowledgeContext)
     }
 
     return buildTutorPrompt({
       subjectCode: input.subjectCode,
       mode: ctx.mode,
       maxHintLevel: ctx.maxHintLevel,
-      userMessage: input.userMessage,
-      recentMessages: input.recentMessages,
+      userMessage: filterProviderHistory([input], isLocal).length ? input.userMessage : "此前对话已省略",
+      recentMessages: filterProviderHistory(input.recentMessages, isLocal),
       knowledgeContext,
       toolContextNotes: ctx.toolAgentResult.toolContextNotes,
       studentContext: shouldSendStudentContext ? ctx.memoryContext?.studentContext : undefined,
       sessionMemory: shouldSendSessionMemory ? ctx.memoryContext?.sessionMemory : undefined,
-      attachments: input.attachments,
+      attachments: filterProviderHistory([input], isLocal).length ? input.attachments : undefined,
       teachingStrategy: {
         strategy: ctx.socraticDecision.strategy,
         shouldAskQuestion: ctx.socraticDecision.shouldAskQuestion,
@@ -440,6 +444,8 @@ export class TutorOrchestrator {
     throwIfAborted(input.signal)
 
     const guardrailResult = await applyGuardrail({
+      createdAt: input.createdAt,
+      isLocal: input.providerConfig?.isLocal,
       provider,
       studentMessage: input.userMessage,
       candidateReply: draft.content,
@@ -582,6 +588,8 @@ export class TutorOrchestrator {
       // Clean completion: run the exact same full guardrail pipeline as
       // non-stream turns (rule → LLM review if flagged → rewrite once → fallback).
       const guardrailResult = await applyGuardrail({
+        createdAt: input.createdAt,
+        isLocal: input.providerConfig?.isLocal,
         provider,
         studentMessage: input.userMessage,
         candidateReply: fullContent,
@@ -610,14 +618,14 @@ export class TutorOrchestrator {
     }
   }
 
-  // ── Post-LLM pipeline (assessment + memory, fire-and-forget) ──────────
+  // ── Post-LLM pipeline (await local assessment; memory is asynchronous) ─
 
-  private runPostLlmPipeline(
+  private async runPostLlmPipeline(
     input: TutorTurnInput,
     ctx: TurnContext,
     content: string,
     stamp: (step: string) => void
-  ): AssessmentResult {
+  ): Promise<AssessmentResult> {
     const assessmentResult = assessTutorTurn({
       studentId: ctx.studentId,
       conversationId: ctx.conversationId,
@@ -631,11 +639,19 @@ export class TutorOrchestrator {
     })
     stamp("assessment")
 
-    void persistAssessmentResult(assessmentResult).catch((e) => {
-      console.warn("[TeacherAgent] assessment persist failed:", e)
-    })
+    try {
+      assessmentResult.persistenceStatus = await persistAssessment(assessmentResult)
+    } catch (error) {
+      assessmentResult.persistenceStatus = "failed"
+      console.warn("[TeacherAgent] assessment persist failed:", error)
+    }
+
+    // An in-flight database commit cannot be cancelled, but a cancelled turn
+    // must not start another memory/reflection operation or publish a result.
+    throwIfAborted(input.signal)
 
     void learningMemoryService.recordTutorTurn({
+      createdAt: input.createdAt,
       studentId: input.studentId,
       conversationId: input.conversationId,
       subjectCode: input.subjectCode,
@@ -818,14 +834,6 @@ async function applyGuardrail(input: GuardrailInput & { provider: LlmProvider })
       rewriteRequired: true,
       rewriteAttempts: 1
     }
-  }
-}
-
-async function persistAssessmentResult(result: AssessmentResult): Promise<void> {
-  try {
-    await saveAssessmentResult(result)
-  } catch {
-    // Browser preview and early desktop setup can run without Tauri IPC; assessment still returns to callers.
   }
 }
 

@@ -56,6 +56,65 @@ const STREAM_PROVIDER_CONFIG = {
 } as const
 
 describe("TutorOrchestrator planner path", () => {
+  it("returns an explicit failed assessment status while preserving the tutor reply", async () => {
+    const commands = await import("../../services/tauri/commands")
+    vi.stubGlobal("isTauri", true)
+    const save = vi.spyOn(commands, "saveAssessmentResult").mockRejectedValue(new Error("simulated SQLITE_FULL"))
+    const warn = vi.spyOn(console, "warn").mockImplementation(() => {})
+    try {
+      const orchestrator = new TutorOrchestrator({
+        enableLearningMemory: false,
+        createProvider: () => makeStreamProvider("极限描述逐渐接近的过程。你能先说说直接代入会得到什么吗？")
+      })
+      const result = await orchestrator.handleTurn({
+        userMessage: "什么是极限？", recentMessages: [], subjectCode: "math", providerConfig: STREAM_PROVIDER_CONFIG
+      })
+      expect(result.content).toContain("极限")
+      expect(result.assessmentResult?.persistenceStatus).toBe("failed")
+      expect(save).toHaveBeenCalledOnce()
+    } finally {
+      save.mockRestore()
+      warn.mockRestore()
+      vi.unstubAllGlobals()
+    }
+  })
+  it("does not start memory or publish a turn cancelled during assessment persistence", async () => {
+    const commands = await import("../../services/tauri/commands")
+    const { learningMemoryService } = await import("../../services/student/memoryService")
+    vi.stubGlobal("isTauri", true)
+    let releaseSave!: () => void
+    let notifySaveStarted!: () => void
+    const saveStarted = new Promise<void>((resolve) => { notifySaveStarted = resolve })
+    const saveWait = new Promise<void>((resolve) => { releaseSave = resolve })
+    const save = vi.spyOn(commands, "saveAssessmentResult").mockImplementation(async () => {
+      notifySaveStarted()
+      await saveWait
+      return {} as Awaited<ReturnType<typeof commands.saveAssessmentResult>>
+    })
+    const memory = vi.spyOn(learningMemoryService, "recordTutorTurn").mockRejectedValue(new Error("Unexpected memory write"))
+    try {
+      const controller = new AbortController()
+      const orchestrator = new TutorOrchestrator({
+        enableLearningMemory: false,
+        createProvider: () => makeStreamProvider("极限描述逐渐接近的过程。你能先说说直接代入会得到什么吗？")
+      })
+      const pending = orchestrator.handleTurn({
+        userMessage: "什么是极限？", recentMessages: [], subjectCode: "math",
+        providerConfig: STREAM_PROVIDER_CONFIG, signal: controller.signal
+      })
+      const rejection = expect(pending).rejects.toThrow()
+      await saveStarted
+      controller.abort()
+      releaseSave()
+      await rejection
+      expect(memory).not.toHaveBeenCalled()
+    } finally {
+      releaseSave()
+      save.mockRestore()
+      memory.mockRestore()
+      vi.unstubAllGlobals()
+    }
+  })
   it("returns a rule-based planning turn without requiring an LLM provider", async () => {
     const orchestrator = new TutorOrchestrator({
       enableLearningMemory: false,

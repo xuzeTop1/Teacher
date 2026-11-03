@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref, watch } from "vue"
+import { onUnmounted, ref, watch } from "vue"
 import { renderMessageContent } from "../../services/rendering/messageRenderer"
 
 const props = withDefaults(defineProps<{
@@ -12,41 +12,52 @@ const props = withDefaults(defineProps<{
 const rendered = ref("")
 const isLoading = ref(true)
 
-const source = computed(() => props.content)
-
 let throttleTimer: ReturnType<typeof setTimeout> | null = null
-let pendingContent: string | null = null
+let renderVersion = 0
+const renderError = ref(false)
 
-async function doRender(content: string) {
+async function doRender(content: string, streaming: boolean, version: number) {
   if (!rendered.value) isLoading.value = true
-  rendered.value = await renderMessageContent(content, { streaming: props.streaming })
-  isLoading.value = false
+  try {
+    const html = await renderMessageContent(content, { streaming })
+    if (version !== renderVersion) return
+    rendered.value = html
+    renderError.value = false
+  } catch {
+    if (version !== renderVersion) return
+    renderError.value = true
+  } finally {
+    if (version === renderVersion) isLoading.value = false
+  }
 }
 
 watch(
-  source,
-  (nextContent) => {
-    if (props.streaming) {
-      pendingContent = nextContent
-      if (!throttleTimer) {
-        throttleTimer = setTimeout(async () => {
-          throttleTimer = null
-          if (pendingContent !== null) {
-            const toRender = pendingContent
-            pendingContent = null
-            await doRender(toRender)
-          }
-        }, 100)
-      }
+  [() => props.content, () => props.streaming],
+  ([nextContent, streaming]) => {
+    // Invalidate outstanding work as soon as props change, not when it settles.
+    const version = ++renderVersion
+    if (throttleTimer) clearTimeout(throttleTimer)
+    if (streaming) {
+      throttleTimer = setTimeout(() => {
+        throttleTimer = null
+        void doRender(nextContent, streaming ?? false, version)
+      }, 100)
     } else {
-      void doRender(nextContent)
+      throttleTimer = null
+      void doRender(nextContent, false, version)
     }
   },
   { immediate: true }
 )
+
+onUnmounted(() => {
+  ++renderVersion
+  if (throttleTimer) clearTimeout(throttleTimer)
+})
 </script>
 
 <template>
   <div v-if="isLoading" class="rendered-message rendered-message-loading">渲染中...</div>
+  <div v-else-if="renderError" class="rendered-message">{{ content }}</div>
   <div v-else class="rendered-message" v-html="rendered" />
 </template>

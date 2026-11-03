@@ -125,7 +125,17 @@ class LearningAnalysisViewModel(
         val current = state.provider
         validateLlmProviderForm(form, current.hasStoredApiKey)?.let {
             _uiState.update { state ->
-                state.copy(errorMessage = null, providerErrorMessage = it, successMessage = null)
+                state.copy(
+                    errorMessage = null,
+                    providerErrorMessage = it,
+                    successMessage = null,
+                    // 保存未成功：不把明文密钥留在输入框内。
+                    // 本项目不对模型服务发送密钥做校验（与论文的密钥不外发一致），
+                    // 因此拿不到"密钥是否有效"的结论，一律撤下明文。
+                    provider = state.provider.copy(
+                        apiKeyClearVersion = state.provider.apiKeyClearVersion + 1
+                    )
+                )
             }
             return
         }
@@ -155,7 +165,7 @@ class LearningAnalysisViewModel(
                                 authMode = summary.authMode,
                                 hasStoredApiKey = summary.hasStoredApiKey,
                                 saving = false,
-                                savedVersion = state.provider.savedVersion + 1
+                                apiKeyClearVersion = state.provider.apiKeyClearVersion + 1
                             ),
                             providerErrorMessage = null,
                             successMessage = "已启用你自己的模型服务；应用没有内置默认 Provider",
@@ -166,7 +176,11 @@ class LearningAnalysisViewModel(
                 .onFailure { error ->
                     _uiState.update {
                         it.copy(
-                            provider = it.provider.copy(saving = false),
+                            provider = it.provider.copy(
+                                saving = false,
+                                // 保存失败同样撤下明文密钥（见 apiKeyClearVersion 说明）
+                                apiKeyClearVersion = it.provider.apiKeyClearVersion + 1
+                            ),
                             errorMessage = null,
                             providerErrorMessage = providerSettingsErrorMessage(error),
                             successMessage = null
@@ -199,7 +213,7 @@ class LearningAnalysisViewModel(
                                 authMode = summary.authMode,
                                 hasStoredApiKey = summary.hasStoredApiKey,
                                 saving = false,
-                                savedVersion = state.provider.savedVersion + 1
+                                apiKeyClearVersion = state.provider.apiKeyClearVersion + 1
                             ),
                             providerErrorMessage = null,
                             successMessage = "模型服务已停用，API Key 已删除；仍可使用手机本地规则评估",

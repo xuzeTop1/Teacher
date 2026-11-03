@@ -39,7 +39,7 @@ function getHiddenSheetCount(previewId: number, sheets: Array<{ name: string; te
 }
 
 async function handleSelectFile() {
-  await store.selectAndPreviewFile()
+  await store.selectAndPreviewFile(appStore.selectedSubject || "math")
 }
 
 async function handleConfirmImport(previewId: number) {
@@ -63,11 +63,15 @@ onMounted(() => {
   store.loadImportedDocuments(subjectCode)
 })
 
-// 切换学科时重新加载已导入资料
+// 切换学科时：重新加载已导入资料，并丢弃其它学科的预览项。
+// 预览区是"待确认导入"的暂存区，不跟着学科走的话，在学科 A 导入后切到 B
+// 仍会看到 A 的预览（表现为"页面没刷新，要手动刷新"），且确认时会存进 B。
 watch(
   () => appStore.selectedSubject,
   (newSubject) => {
-    store.loadImportedDocuments(newSubject || "math")
+    const subjectCode = newSubject || "math"
+    store.dropPreviewsForOtherSubjects(subjectCode)
+    store.loadImportedDocuments(subjectCode)
   }
 )
 </script>

@@ -491,6 +491,40 @@ pub(crate) fn import_snapshot(
             .map_err(|error| format!("failed to record learning analysis: {error}"))?;
     }
 
+    // 协议 v2：端侧专注聚合特征随快照全量替换，供 FB-BKT 消费（论文 §4.3）。
+    transaction
+        .execute(
+            "DELETE FROM sync_focus_aggregates WHERE device_id = ?1",
+            [device_id],
+        )
+        .map_err(|error| format!("failed to clear old focus aggregates: {error}"))?;
+    if let Some(aggregates) = payload.focus_aggregates.as_ref() {
+        for entry in &aggregates.per_subject {
+            let subject_remote_id = usize::try_from(entry.subject_temp_id)
+                .ok()
+                .and_then(|index| payload.subjects.get(index))
+                .map(|subject| subject.remote_id.as_str());
+            transaction
+                .execute(
+                    "INSERT INTO sync_focus_aggregates
+                       (device_id, subject_temp_id, subject_remote_id, r_focus, n_distract,
+                        window_days, snapshot_id, received_at_ms)
+                     VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8)",
+                    params![
+                        device_id,
+                        entry.subject_temp_id,
+                        subject_remote_id,
+                        entry.r_focus,
+                        entry.n_distract,
+                        entry.window_days,
+                        snapshot_id,
+                        received_at_ms,
+                    ],
+                )
+                .map_err(|error| format!("failed to record focus aggregate: {error}"))?;
+        }
+    }
+
     touch_last_sync(&transaction, device_id)?;
 
     transaction
@@ -1272,6 +1306,23 @@ pub(crate) fn build_snapshot_ack(
 #[cfg(test)]
 mod tests {
     use super::*;
+    #[test]
+    fn b1_inferences_roundtrip_reopen_and_tamper_rejection_do_not_change_facts() {
+        let temporary = TempDatabase::new();
+        let envelope: super::super::protocol::Envelope<SnapshotPayload> = serde_json::from_str(include_str!("../../../sync/protocol/fixtures/snapshot-inferences-all-valid.json")).unwrap();
+        let snapshot_id = envelope.snapshot_id.unwrap(); let snapshot = envelope.payload; let device_id = envelope.device_id;
+        let expected = snapshot.learning_analysis.as_ref().unwrap();
+        let expected_facts = serde_json::to_value(&expected.profile.facts).unwrap();
+        let expected_inferences = expected.inferences.clone();
+        let mut connection = open_production_test_database(&temporary.path); seed_test_device(&connection, &device_id);
+        import_snapshot(&mut connection, &device_id, &snapshot_id, &snapshot, 1).unwrap(); drop(connection);
+        let connection = open_production_test_database(&temporary.path);
+        let analysis = load_read_model(&connection, &device_id).unwrap().latest_learning_analysis.unwrap();
+        assert_eq!(analysis.inferences, expected_inferences);
+        assert_eq!(serde_json::to_value(&analysis.profile.facts).unwrap(), expected_facts);
+        connection.execute("UPDATE sync_learning_analyses SET payload_json = json_set(payload_json, '$.inferences[0].evidence', 'PRIVATE_CANARY')", []).unwrap();
+        assert!(load_read_model(&connection, &device_id).unwrap().latest_learning_analysis.is_none());
+    }
     use std::fs;
     use std::path::{Path, PathBuf};
 
@@ -1305,8 +1356,15 @@ mod tests {
             ))
             .expect("proposal source id schema");
         connection
-            .execute_batch(include_str!("../../migrations/0014_sync_owner_identity.sql"))
+            .execute_batch(include_str!(
+                "../../migrations/0014_sync_owner_identity.sql"
+            ))
             .expect("owner identity schema");
+        connection
+            .execute_batch(include_str!(
+                "../../migrations/0017_sync_focus_aggregates.sql"
+            ))
+            .expect("focus aggregates schema");
         connection
     }
 
@@ -1544,7 +1602,7 @@ mod tests {
         let user_version: i64 = reopened
             .query_row("PRAGMA user_version", [], |row| row.get(0))
             .expect("SQLite user version");
-        assert_eq!(user_version, 14);
+        assert_eq!(user_version, 18);
         let reopened_snapshot_rows: i64 = reopened
             .query_row("SELECT COUNT(1) FROM sync_snapshots", [], |row| row.get(0))
             .expect("reopened snapshot row count");
@@ -1804,6 +1862,7 @@ mod tests {
 
         // A later snapshot with only one subject replaces the whole model.
         let smaller = SnapshotPayload {
+            focus_aggregates: None,
             subjects: vec![super::super::protocol::SubjectDto {
                 remote_id: "aaaaaaaa-bbbb-4ccc-8ddd-eeeeeeeeeeee".to_string(),
                 name: "新科目".to_string(),

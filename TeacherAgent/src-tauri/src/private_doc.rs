@@ -118,6 +118,103 @@ fn estimate_tokens(text: &str) -> i64 {
     (char_count as f64 / 2.0).ceil() as i64
 }
 
+/// 若标题为 PDF 十六进制转义字面量（如 `<4D696372...>`），尝试解码为 UTF-8、GBK 或 UTF-16BE 文本；
+/// 若为空或解码失败，回退到传入的默认标题或文件名；若包含多余空白字符则清理。
+pub(crate) fn sanitize_or_decode_title(title: Option<&str>, file_name: &str) -> String {
+    let raw = title.unwrap_or(file_name).trim();
+    if raw.is_empty() {
+        return file_name.to_string();
+    }
+
+    if raw.starts_with('<') && raw.ends_with('>') && raw.len() >= 4 {
+        let hex_body = &raw[1..raw.len() - 1];
+        if hex_body.len() % 2 == 0 && hex_body.chars().all(|c| c.is_ascii_hexdigit()) {
+            if let Ok(bytes) = hex::decode(hex_body) {
+                if let Some(decoded) = decode_bytes_to_string(&bytes) {
+                    let cleaned = decoded.trim();
+                    if !cleaned.is_empty() {
+                        return cleaned.to_string();
+                    }
+                }
+            }
+        }
+    }
+
+    raw.to_string()
+}
+
+fn decode_bytes_to_string(bytes: &[u8]) -> Option<String> {
+    if bytes.starts_with(&[0xFE, 0xFF]) {
+        let u16s: Vec<u16> = bytes[2..]
+            .chunks_exact(2)
+            .map(|chunk| u16::from_be_bytes([chunk[0], chunk[1]]))
+            .collect();
+        if let Ok(s) = String::from_utf16(&u16s) {
+            return Some(s);
+        }
+    }
+    if let Ok(s) = String::from_utf8(bytes.to_vec()) {
+        return Some(s);
+    }
+    #[cfg(windows)]
+    {
+        decode_gbk_windows(bytes)
+    }
+    #[cfg(not(windows))]
+    {
+        None
+    }
+}
+
+#[cfg(windows)]
+fn decode_gbk_windows(bytes: &[u8]) -> Option<String> {
+    if bytes.is_empty() {
+        return Some(String::new());
+    }
+    #[link(name = "kernel32")]
+    extern "system" {
+        fn MultiByteToWideChar(
+            CodePage: u32,
+            dwFlags: u32,
+            lpMultiByteStr: *const u8,
+            cbMultiByte: i32,
+            lpWideCharStr: *mut u16,
+            cchWideChar: i32,
+        ) -> i32;
+    }
+    const CP_GBK: u32 = 936;
+    const MB_ERR_INVALID_CHARS: u32 = 0x00000008;
+
+    let len = unsafe {
+        MultiByteToWideChar(
+            CP_GBK,
+            MB_ERR_INVALID_CHARS,
+            bytes.as_ptr(),
+            bytes.len() as i32,
+            std::ptr::null_mut(),
+            0,
+        )
+    };
+    if len <= 0 {
+        return None;
+    }
+    let mut wide: Vec<u16> = vec![0u16; len as usize];
+    let written = unsafe {
+        MultiByteToWideChar(
+            CP_GBK,
+            MB_ERR_INVALID_CHARS,
+            bytes.as_ptr(),
+            bytes.len() as i32,
+            wide.as_mut_ptr(),
+            len,
+        )
+    };
+    if written <= 0 {
+        return None;
+    }
+    String::from_utf16(&wide).ok()
+}
+
 // ── 保存 ───────────────────────────────────────────────────────────────────
 
 pub(crate) fn save_private_document_with_connection(
@@ -127,11 +224,7 @@ pub(crate) fn save_private_document_with_connection(
     let now = current_timestamp(connection)?;
     let doc_id = format!("privdoc-{}", uuid_v7());
     let student_id = DEFAULT_STUDENT_ID;
-    let title = input
-        .title
-        .as_deref()
-        .unwrap_or(&input.file_name)
-        .to_string();
+    let title = sanitize_or_decode_title(input.title.as_deref(), &input.file_name);
 
     let chunks = build_chunks(&input.pages_or_sheets, &input.plain_text);
     if chunks.is_empty() {
@@ -1544,6 +1637,72 @@ mod tests {
             result.is_err(),
             "bind to deleted conversation should be rejected"
         );
+
+        drop(conn);
+        cleanup(&path);
+    }
+
+    #[test]
+    fn sanitize_or_decode_hex_gbk_title_tests() {
+        // GBK hex encoded string from actual PDF metadata
+        let gbk_hex = "<4D6963726F736F667420576F7264202D2032303234BFBCD1D0CAFDD1A7D2BBB4F3B8D9>";
+        let decoded = sanitize_or_decode_title(Some(gbk_hex), "fallback.pdf");
+        assert_eq!(decoded, "Microsoft Word - 2024考研数学一大纲");
+
+        // UTF-8 hex encoded string
+        let utf8_hex = "<E695B0E5ADA6E5A4A7E7BAB2>";
+        let decoded_utf8 = sanitize_or_decode_title(Some(utf8_hex), "fallback.pdf");
+        assert_eq!(decoded_utf8, "数学大纲");
+
+        // Normal UTF-8 plain title
+        let plain = "2024考研政治复习笔记";
+        assert_eq!(
+            sanitize_or_decode_title(Some(plain), "fallback.pdf"),
+            "2024考研政治复习笔记"
+        );
+
+        // None falls back to file_name
+        assert_eq!(
+            sanitize_or_decode_title(None, "普通物理.pdf"),
+            "普通物理.pdf"
+        );
+
+        // Empty string falls back to file_name
+        assert_eq!(
+            sanitize_or_decode_title(Some("  "), "普通物理.pdf"),
+            "普通物理.pdf"
+        );
+    }
+
+    #[test]
+    fn save_private_document_with_non_ascii_file_name_and_title() {
+        let (mut conn, path) = setup_db();
+
+        let input = SavePrivateDocumentInput {
+            file_name: "2024考研数学一大纲.pdf".to_string(),
+            file_type: "pdf".to_string(),
+            title: Some(
+                "<4D6963726F736F667420576F7264202D2032303234BFBCD1D0CAFDD1A7D2BBB4F3B8D9>"
+                    .to_string(),
+            ),
+            subject_code: "math".to_string(),
+            pages_or_sheets: vec![PageOrSheetInput {
+                name: "第1页".to_string(),
+                text: "高等数学考查内容包括极限、连续、一元微积分...".to_string(),
+            }],
+            plain_text: "高等数学考查内容包括极限、连续、一元微积分...".to_string(),
+        };
+
+        let saved = save_private_document_with_connection(&mut conn, &input).unwrap();
+        assert_eq!(saved.title, "Microsoft Word - 2024考研数学一大纲");
+        assert_eq!(saved.file_name, "2024考研数学一大纲.pdf");
+        assert_eq!(saved.subject_code, "math");
+
+        let docs = list_private_documents_with_connection(&conn, None, 10).unwrap();
+        assert_eq!(docs.len(), 1);
+        assert_eq!(docs[0].title, "Microsoft Word - 2024考研数学一大纲");
+        assert_eq!(docs[0].file_name, "2024考研数学一大纲.pdf");
+        assert_eq!(docs[0].chunk_count, 1);
 
         drop(conn);
         cleanup(&path);

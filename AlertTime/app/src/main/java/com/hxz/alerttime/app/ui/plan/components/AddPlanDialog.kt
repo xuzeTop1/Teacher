@@ -43,6 +43,8 @@ import com.hxz.alerttime.app.data.repository.PlanRepository
 import com.hxz.alerttime.app.ui.components.FormBottomSheet
 import com.hxz.alerttime.app.ui.plan.PlanSubjectUi
 import com.hxz.alerttime.app.ui.plan.PlanTaskUi
+import com.hxz.alerttime.app.ui.localcoach.LocalCoachDialog
+import com.hxz.alerttime.app.data.localmodel.CoachTask
 import java.util.Calendar
 
 @OptIn(ExperimentalLayoutApi::class)
@@ -51,12 +53,14 @@ internal fun AddPlanDialog(
     subjects: List<PlanSubjectUi>,
     initialTask: PlanTaskUi?,
     isSaving: Boolean,
+    scheduledTasks: List<PlanTaskUi> = emptyList(),
     onDismiss: () -> Unit,
     onConfirm: (String, String?, Long?, String?, Long?, Long, PlanScheduleMode, Int) -> Unit
 ) {
     val context = LocalContext.current
     val isEditing = initialTask != null
     var title by rememberSaveable(initialTask?.id) { mutableStateOf(initialTask?.title.orEmpty()) }
+    var showLocalCoach by remember { mutableStateOf(false) }
     var content by rememberSaveable(initialTask?.id) { mutableStateOf(initialTask?.content.orEmpty()) }
     var selectedSubjectId by rememberSaveable(initialTask?.id, subjects) {
         mutableStateOf(initialTask?.subjectId ?: subjects.firstOrNull()?.id)
@@ -95,6 +99,20 @@ internal fun AddPlanDialog(
         onDispose { datePicker.dismiss() }
     }
 
+    if (showLocalCoach) {
+        val sameDay = scheduledTasks.filter {
+            it.id != initialTask?.id && it.dueAt?.let(PlanRepository::startOfDay) == PlanRepository.startOfDay(selectedDateMillis)
+        }
+        val requestedMinutes = targetMinutesText.toLongOrNull()?.takeIf { it > 0 }
+        val hours = if (requestedMinutes != null && sameDay.all { it.targetDurationSeconds != null }) {
+            "${(sameDay.sumOf { it.targetDurationSeconds ?: 0 } / 60.0 + requestedMinutes) / 60.0}小时（含本计划）"
+        } else "部分计划未填写时长，请补充"
+        LocalCoachDialog(
+            onDismiss = { showLocalCoach = false },
+            initialTask = CoachTask.Create,
+            initialText = "$title\n${content.takeIf { it.isNotBlank() } ?: ""}\n当日已排时长：$hours\n目标考试：请补充"
+        )
+    }
     FormBottomSheet(
         title = if (isEditing) "编辑计划" else "添加计划",
         subtitle = if (isEditing) "调整计划信息，保存后立即生效" else "先写清做什么、归属和执行日期",
@@ -115,6 +133,9 @@ internal fun AddPlanDialog(
             )
         }
     ) {
+        TextButton(onClick = { showLocalCoach = true }, enabled = title.isNotBlank() && !isSaving) {
+            Text("用本地模型看看这个计划")
+        }
         Text(
             text = "基本信息",
             style = MaterialTheme.typography.titleSmall,

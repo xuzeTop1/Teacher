@@ -89,6 +89,18 @@ class SyncSnapshotBuilder(
                     .eachCount()
             }
 
+            // 分心次数：按会话聚合 EVENT_DISTRACTION（不导出事件本身），供协议 v2 的
+            // focusAggregates 使用；无事件时为 0，不伪造。
+            val distractionCountBySession = if (sessions.isEmpty()) {
+                emptyMap()
+            } else {
+                database.studySessionDao()
+                    .getEventsForSessions(sessions.map { it.id })
+                    .filter { it.eventType == StatusCodes.EVENT_DISTRACTION }
+                    .groupingBy { it.sessionId }
+                    .eachCount()
+            }
+
             FrozenSnapshotEntities(
                 subjects = subjects,
                 weeklyGoals = weeklyGoals,
@@ -98,7 +110,8 @@ class SyncSnapshotBuilder(
                 taskRemoteOf = taskRemoteOf,
                 sourceIndexes = sourceIndexes,
                 examTags = examTags,
-                aiHelpCountBySession = aiHelpCountBySession
+                aiHelpCountBySession = aiHelpCountBySession,
+                distractionCountBySession = distractionCountBySession
             )
         }
 
@@ -122,7 +135,7 @@ class SyncSnapshotBuilder(
             }
         } ?: emptyMap()
 
-        return SyncSnapshotPayload(
+        val payload = SyncSnapshotPayload(
             subjects = frozen.subjects.map { toDto(it, frozen.examTags[it.remoteId]) },
             weeklyGoals = frozen.weeklyGoals.map {
                 toDto(it, frozen.sourceIndexes.weeklyGoalByLocalId[it.id])
@@ -140,6 +153,51 @@ class SyncSnapshotBuilder(
                 )
             }
         )
+        // 协议 v2：附带本窗口的端侧专注聚合特征（无可用会话的学科不出条目）。
+        return payload.copy(focusAggregates = buildFocusAggregates(frozen, payload))
+    }
+
+    /**
+     * 构建 focusAggregates（论文 §4.3）：按学科聚合窗口内已完成会话的有效专注率
+     * rFocus = Σduration / (Σduration + Σpause)，以及这些会话上的分心事件次数。
+     * 窗口内无会话或时长全为 0 的学科不出条目——缺失即"暂无可靠聚合"，
+     * 不用 0 冒充观测。
+     */
+    private fun buildFocusAggregates(
+        frozen: FrozenSnapshotEntities,
+        payload: SyncSnapshotPayload
+    ): SyncFocusAggregatesDto? {
+        val windowDays = SyncProtocol.FOCUS_AGGREGATE_WINDOW_DAYS
+        val since = System.currentTimeMillis() - windowDays * 24L * 3600_000L
+        val entries = mutableListOf<SyncFocusAggregateEntryDto>()
+
+        frozen.subjects.forEachIndexed { index, subject ->
+            val sessions = frozen.sessions.filter { session ->
+                session.deletedAt == null &&
+                    session.subjectId == subject.id &&
+                    (session.endTime ?: 0L) >= since
+            }
+            if (sessions.isEmpty()) return@forEachIndexed
+            val duration = sessions.sumOf { it.durationSeconds }
+            val pause = sessions.sumOf { it.pauseSeconds }
+            val total = duration + pause
+            if (total <= 0L) return@forEachIndexed
+
+            val sessionIds = sessions.map { it.id }.toSet()
+            val nDistract = frozen.distractionCountBySession
+                .filterKeys { it in sessionIds }
+                .values
+                .sum()
+
+            entries += SyncFocusAggregateEntryDto(
+                subjectTempId = index,
+                rFocus = (duration.toDouble() / total.toDouble()).coerceIn(0.0, 1.0),
+                nDistract = nDistract,
+                windowDays = windowDays
+            )
+        }
+
+        return entries.takeIf { it.isNotEmpty() }?.let { SyncFocusAggregatesDto(perSubject = it) }
     }
 
     private data class FrozenSnapshotEntities(
@@ -151,7 +209,8 @@ class SyncSnapshotBuilder(
         val taskRemoteOf: Map<Long, String?>,
         val sourceIndexes: ProposalSourceIndexes,
         val examTags: Map<String, SubjectExamTag>,
-        val aiHelpCountBySession: Map<Long, Int>
+        val aiHelpCountBySession: Map<Long, Int>,
+        val distractionCountBySession: Map<Long, Int>
     )
 
     private suspend fun ensureSubjectRemoteId(entity: SubjectEntity, now: Long): SubjectEntity {

@@ -2,7 +2,7 @@
 
 版本：v1.0  
 状态：项目内开发基线  
-最后更新：2026-06-30  
+最后更新：2026-10-03
 适用对象：Codex、Claude Code、项目维护者
 
 ## 0. 文档权威边界
@@ -251,6 +251,28 @@ Provider 请求日志只能记录事件名、Provider 名称、模型名、脱�
 - SymPy worker 的 expression、operation、variable 必须在 Rust command 边界完成长度、枚举和受控数学语法校验，不依赖前端校验。
 - worker 诊断进入前端或 LLM 上下文前必须在 Rust IPC 边界清洗 ANSI/控制字符、绝对路径及已知凭据形态，并限制长度；不得把原始 sidecar stderr 直接拼入用户可见错误。
 
+### 7.1.2 云端出站上下文契约（2026-09-22）
+
+实测依据见 `experiments/privacy_egress/README.md`；本节只写契约，数字以该归档记录的 commit 为准。
+
+- 三类上下文默认不进入云端请求，需逐条显式授权：会话记忆、学生画像、私有资料上下文
+  （`CloudPrivacyConfig` 默认全 `false`）。`cloudPrivacy` **缺失**时与显式默认值等价（fail-closed），
+  实现见 `tutorOrchestrator.ts` 的 `shouldSend*` 三个判定。
+- 授权判定是**按类别独立**的，不得实现成总闸：允许只关私有资料而保留画像与会话记忆。
+- 扣留私有资料必须连同其**派生表述**一起剥除：`knowledgeContext.topic` 由全部节点标题拼成、
+  `notes` 会追加"本轮已检索到用户本地私有资料"，只过滤 `nodes` 仍会把文档标题和
+  "用户持有私有资料"这一事实发到云端。统一走 `withoutPrivateDocuments()`，不得在调用点重写。
+- 本地 Provider（`isLocal=true`）始终拿全量上下文，这是设计而非例外。
+- **输出侧护栏不承担学情保密性**：`GuardrailInput` 只含学生消息、候选回复、模式与提示等级，
+  护栏拿不到授权上下文作参照；`PRIVACY_RISK_PATTERNS` 针对身份证号/银行卡/手机号/住址/
+  密码/API key 等第三方 PII 形态。因此学情数据的保密性**只有源头这一层**，
+  文档与论文不得声称输出护栏可防止学生数据回显。**不加输出侧关卡的定案与理由**见
+  `docs/open-decisions.md` D-409（2026-09-22 decided）：回复不出设备——同步协议两个方向都不含
+  对话消息，桌面→手机只有纯规则生成的 `proposal`；对"接收者即数据主体"的场景，输出侧过滤
+  没有可保护对象，且子串检测不可完备，加上它会让文档与论文能声称一个并不成立的控制。
+- 逐层字节计量与扣留清单由 `src/services/llm/outboundEgress.test.ts` 守护；任何 prompt 层
+  新增标签必须同步该文件的分类表，否则落入 `unclassified` 并直接失败。
+
 ### 7.2 数据类型
 
 | 数据 | 存储 | 说明 |
@@ -453,3 +475,21 @@ Codex 和 Claude Code 在本项目中应遵守：
 - `docs/open-decisions.md`：待确认问题和架构/产品决策池。
 - `AGENTS.md`：Codex 开发指令。
 - `CLAUDE.md`：Claude Code 开发指令入口。
+
+## 14. 2026-10-03 审计修复约束
+
+- 局域网同步默认关闭，根组件只读取状态；每次启动均须由用户在同步页主动开启，不自动恢复、不固定历史网卡 IP。
+- 评估、证据快照与掌握度更新在同一 SQLite 写事务内提交；保存失败不得留下部分生效数据，同评估 ID 重试只应用一次。
+- 数据库升级的版本检查、DDL、迁移记录与 `user_version` 在同一写事务内完成，外键在事务开始前开启。
+- 冷启动先验统一为 0.5。FB-BKT 仅消费 `correct` / `incorrect` 二元观测；部分正确保留原有小幅 delta 路径，不增加正确次数。
+- 同步专注特征的隐式读取按设备稳定 owner 和学科 code/ID 连接，只接受未撤销设备最近 24 小时内收到且非未来的聚合。保守时间窗与部分正确策略的决定见 `docs/open-decisions.md` D-410 / D-411。
+- 掌握度显示与下一题推荐使用保存命令返回的数据库最终状态；前端不得用本地估算覆盖该状态。
+- 正式桌面的评估保存失败必须显示未保存和重试入口；浏览器预览显式跳过持久化。重试复用同一评估 ID。
+- 主窗口初始可见，立即显示现有静态加载页；保留 show/focus 最小权限与 Rust 异常兜底，不依赖隐藏 WebView 的脚本来首次显窗。
+- 本轮不自动修复历史异常记录，不改变用户数据库、系统环境或真实设备数据。详见 `docs/audits/2026-10-03-review-fixes.md`。
+
+### 2026-10-19 AlertTime 本地推断 B1
+
+本地推断扩展 B1 由 AlertTime 并存测试工程实现，代码决策与字段边界见 `docs/decisions/2026-10-19-local-coach-provenance-b1.md` 及 `sync/protocol/protocol.md`。签名配置只读取忽略的 `keystore.properties`；用户自行生成和保管 release 密钥，未在本仓库生成密钥。
+本地结构化结果进入 `learningAnalysis.inferences[]` 独立区块，不进入 `profile.facts`；evidence/advice 不进快照、应用日志或崩溃报告。TeacherAgent 端只存储和展示，不调用 FB-BKT、不自动检索或发起建议。旧客户端缺少该区块仍兼容。
+该实现批仍为未冻结。工程构建和规则诊断不构成正式实验；120 条历史输入只用于资源、输出合规和降级测量，不得作为准确率主结果。手机端 120 条实测、正式包签名、冻结清单与实验登记尚未完成。

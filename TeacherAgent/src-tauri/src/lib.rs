@@ -19,6 +19,7 @@ mod models;
 mod ollama;
 mod private_doc;
 mod provider;
+mod rag;
 mod seed;
 mod shared;
 mod sidecar_integrity;
@@ -680,6 +681,26 @@ fn search_private_document_chunks(
 }
 
 #[tauri::command]
+fn search_hybrid_context(
+    app: AppHandle,
+    query: String,
+    embedding_model: String,
+    query_embedding: Option<Vec<f32>>,
+    subject_code: Option<String>,
+    limit: Option<i64>,
+) -> Result<Vec<rag::hybrid::HybridHit>, String> {
+    let connection = open_migrated_database(&app)?;
+    rag::hybrid::retrieve_context(
+        &connection,
+        &query,
+        &embedding_model,
+        query_embedding.as_deref(),
+        subject_code.as_deref(),
+        limit.unwrap_or(5).clamp(1, 20) as usize,
+    )
+}
+
+#[tauri::command]
 fn get_private_document(
     app: AppHandle,
     document_id: String,
@@ -865,6 +886,7 @@ pub fn run() {
             delete_private_document,
             load_private_document_chunks,
             search_private_document_chunks,
+            search_hybrid_context,
             get_private_document,
             bind_private_document_to_conversation,
             clear_private_document_binding,
@@ -1001,7 +1023,7 @@ mod tests {
 
         assert_eq!(created_memory_tables, 3);
         assert_eq!(created_vector_tables, 1);
-        assert_eq!(user_version, 14);
+        assert_eq!(user_version, 18);
 
         let created_private_doc_tables: i64 = connection
             .query_row(
@@ -1043,7 +1065,11 @@ mod tests {
                 MIGRATION_0011_ID.to_string(),
                 MIGRATION_0012_ID.to_string(),
                 MIGRATION_0013_ID.to_string(),
-                MIGRATION_0014_ID.to_string()
+                MIGRATION_0014_ID.to_string(),
+                MIGRATION_0015_ID.to_string(),
+                MIGRATION_0016_ID.to_string(),
+                MIGRATION_0017_ID.to_string(),
+                MIGRATION_0018_ID.to_string()
             ]
         );
 
@@ -1360,6 +1386,7 @@ mod tests {
         let saved = save_assessment_result_with_connection(
             &connection,
             SaveAssessmentResultInput {
+                focus_features: None,
                 id: "assessment-1".to_string(),
                 student_id: DEFAULT_STUDENT_ID.to_string(),
                 subject_code: "math".to_string(),
@@ -2016,6 +2043,7 @@ mod tests {
         save_assessment_result_with_connection(
             &connection,
             SaveAssessmentResultInput {
+                focus_features: None,
                 id: "assessment-unknown-1".to_string(),
                 student_id: DEFAULT_STUDENT_ID.to_string(),
                 subject_code: "math".to_string(),
@@ -2088,6 +2116,7 @@ mod tests {
         save_assessment_result_with_connection(
             &connection,
             SaveAssessmentResultInput {
+                focus_features: None,
                 id: "assessment-partially-1".to_string(),
                 student_id: DEFAULT_STUDENT_ID.to_string(),
                 subject_code: "math".to_string(),
@@ -2158,6 +2187,7 @@ mod tests {
         save_assessment_result_with_connection(
             &connection,
             SaveAssessmentResultInput {
+                focus_features: None,
                 id: "assessment-correct-1".to_string(),
                 student_id: DEFAULT_STUDENT_ID.to_string(),
                 subject_code: "math".to_string(),
@@ -2226,6 +2256,7 @@ mod tests {
             .expect("knowledge node should be seeded");
 
         let input = SaveAssessmentResultInput {
+            focus_features: None,
             id: "assessment-idempotent-1".to_string(),
             student_id: DEFAULT_STUDENT_ID.to_string(),
             subject_code: "math".to_string(),
@@ -2316,6 +2347,7 @@ mod tests {
         save_assessment_result_with_connection(
             &connection,
             SaveAssessmentResultInput {
+                focus_features: None,
                 id: "assessment-diff-1".to_string(),
                 student_id: DEFAULT_STUDENT_ID.to_string(),
                 subject_code: "math".to_string(),
@@ -2335,6 +2367,7 @@ mod tests {
         save_assessment_result_with_connection(
             &connection,
             SaveAssessmentResultInput {
+                focus_features: None,
                 id: "assessment-diff-2".to_string(),
                 student_id: DEFAULT_STUDENT_ID.to_string(),
                 subject_code: "math".to_string(),

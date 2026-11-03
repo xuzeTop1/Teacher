@@ -13,11 +13,10 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -32,6 +31,9 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.hxz.alerttime.app.data.backup.BackupTimerGate
 import com.hxz.alerttime.app.data.backup.toSummary
 import com.hxz.alerttime.app.data.local.AlertTimeDatabase
+import com.hxz.alerttime.app.ui.components.FormCaption
+import com.hxz.alerttime.app.ui.components.FormScrollColumn
+import com.hxz.alerttime.app.ui.components.FormSection
 import kotlinx.coroutines.delay
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -120,110 +122,73 @@ internal fun DataBackupDialog(
         containerColor = MaterialTheme.colorScheme.surface,
         title = { Text("数据与备份", fontWeight = FontWeight.SemiBold) },
         text = {
-            Column(
-                modifier = Modifier
-                    .verticalScroll(rememberScrollState())
-                    .padding(vertical = 4.dp),
-                verticalArrangement = Arrangement.spacedBy(12.dp)
-            ) {
+            FormScrollColumn(modifier = Modifier.padding(vertical = 4.dp)) {
                 if (timerBusy) {
-                    Text(
-                        text = "正在计时中（包含暂停与异常恢复），请先结束当前专注，再进行数据备份。",
-                        style = MaterialTheme.typography.bodySmall,
+                    FormCaption(
+                        "正在计时中（包含暂停与异常恢复），请先结束当前专注，再进行数据备份。",
                         color = MaterialTheme.colorScheme.error
                     )
                 }
 
-                RecentBackupCard(state = state)
+                RecentBackupSection(state)
 
-                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    OutlinedButton(
+                FormSection(title = "本机备份") {
+                    // 整行按钮：并排时「备份到手机文件夹」「合并最近手机备份」会按文字宽度
+                    // 各占一半，后者的 8 个字放不下就折成两行。
+                    Button(
                         onClick = onCreateRecent,
-                        enabled = actionsEnabled
+                        enabled = actionsEnabled,
+                        modifier = Modifier.fillMaxWidth()
                     ) {
                         Text("备份到手机文件夹")
                     }
                     OutlinedButton(
                         onClick = onInspectRecent,
-                        enabled = actionsEnabled && state.canRestoreRecent
+                        enabled = actionsEnabled && state.canRestoreRecent,
+                        modifier = Modifier.fillMaxWidth()
                     ) {
                         Text("合并最近手机备份")
                     }
-                }
-                if (state.hasRecentBackupFile && state.recentBackupUnreadable) {
-                    Text(
-                        text = "最近手机备份损坏或无法读取，恢复已禁用；可重新创建或从 JSON 文件恢复。",
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.error
-                    )
-                }
-
-                HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.55f))
-
-                OutlinedButton(
-                    onClick = onExportTo,
-                    enabled = actionsEnabled,
-                    modifier = Modifier.fillMaxWidth()
-                ) {
-                    Text("导出 JSON 备份")
-                }
-                Text(
-                    text = "保存到你选择的位置，用于跨卸载、换机或长期保存。",
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-
-                OutlinedButton(
-                    onClick = onInspectFile,
-                    enabled = actionsEnabled,
-                    modifier = Modifier.fillMaxWidth()
-                ) {
-                    Text("从 JSON 文件合并恢复")
+                    if (state.hasRecentBackupFile && state.recentBackupUnreadable) {
+                        FormCaption(
+                            "最近手机备份损坏或无法读取，恢复已禁用；可重新创建或从 JSON 文件恢复。",
+                            color = MaterialTheme.colorScheme.error
+                        )
+                    }
+                    FormCaption("「备份到手机文件夹」会保存到下载/AlertTime，卸载应用后仍保留。清除应用数据后，请从该 JSON 文件合并恢复。")
                 }
 
-                HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.55f))
-
-                Text(
-                    text = "备份文件包含日记、学习计划、专注记录及可能的分心应用信息。备份文件为明文，请妥善保管，不要发送给不可信的人。",
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-                Text(
-                    text = "「备份到手机文件夹」会保存到下载/AlertTime，卸载应用后仍保留。清除应用数据后，请从该 JSON 文件合并恢复。",
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-                Text(
-                    text = "备份保存在你选择的位置，应用不会自动上传。",
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
+                FormSection(title = "导出与恢复") {
+                    OutlinedButton(
+                        onClick = onExportTo,
+                        enabled = actionsEnabled,
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Text("导出 JSON 备份")
+                    }
+                    FormCaption("保存到你选择的位置，用于跨卸载、换机或长期保存。")
+                    OutlinedButton(
+                        onClick = onInspectFile,
+                        enabled = actionsEnabled,
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Text("从 JSON 文件合并恢复")
+                    }
+                    FormCaption("备份文件包含日记、学习计划、专注记录及可能的分心应用信息。备份文件为明文，请妥善保管，不要发送给不可信的人。")
+                    FormCaption("备份保存在你选择的位置，应用不会自动上传。")
+                }
 
                 if (busy) {
-                    Row(
-                        horizontalArrangement = Arrangement.spacedBy(8.dp),
-                        modifier = Modifier.padding(top = 4.dp)
-                    ) {
+                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                         CircularProgressIndicator(modifier = Modifier.size(16.dp), strokeWidth = 2.dp)
-                        Text(
-                            text = "正在处理，请稍候…",
-                            style = MaterialTheme.typography.bodySmall
-                        )
+                        FormCaption("正在处理，请稍候…")
                     }
                 }
                 state.successMessage?.let { message ->
-                    Text(
-                        text = message,
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = MaterialTheme.colorScheme.primary
-                    )
+                    FormCaption(message, color = MaterialTheme.colorScheme.primary)
                 }
                 state.errorMessage?.let { message ->
-                    Text(
-                        text = message,
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = MaterialTheme.colorScheme.error
-                    )
+                    FormCaption(message, color = MaterialTheme.colorScheme.error)
                 }
             }
         },
@@ -245,54 +210,20 @@ internal fun DataBackupDialog(
 }
 
 @Composable
-private fun RecentBackupCard(state: BackupUiState) {
-    Surface(
-        shape = RoundedCornerShape(16.dp),
-        color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.4f),
-        modifier = Modifier.fillMaxWidth()
-    ) {
-        Column(
-            modifier = Modifier.padding(12.dp),
-            verticalArrangement = Arrangement.spacedBy(4.dp)
-        ) {
-            Text(
-                text = "最近手机备份",
-                style = MaterialTheme.typography.labelLarge,
-                color = MaterialTheme.colorScheme.onSurface
-            )
-            val meta = state.recentBackup
-            when {
-                meta == null && !state.hasRecentBackupFile -> {
-                    Text(
-                        text = "还没有最近本地备份。备份保存在应用私有目录，卸载应用或清除数据后会丢失。",
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
-                meta != null -> {
-                    Text(
-                        text = "创建时间：${formatBackupTime(meta.exportedAt)}",
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                    Text(
-                        text = "大小：${formatBackupFileSize(meta.fileSizeBytes)}",
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                    Text(
-                        text = "内容：${formatBackupSummary(meta.dataSummary)}",
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
-                state.recentBackupUnreadable -> {
-                    Text(
-                        text = "备份文件损坏或无法读取。",
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.error
-                    )
-                }
+private fun RecentBackupSection(state: BackupUiState) {
+    FormSection(title = "最近手机备份") {
+        val meta = state.recentBackup
+        when {
+            meta == null && !state.hasRecentBackupFile -> {
+                FormCaption("还没有最近本地备份。备份保存在应用私有目录，卸载应用或清除数据后会丢失。")
+            }
+            meta != null -> {
+                FormCaption("创建时间：${formatBackupTime(meta.exportedAt)}")
+                FormCaption("大小：${formatBackupFileSize(meta.fileSizeBytes)}")
+                FormCaption("内容：${formatBackupSummary(meta.dataSummary)}")
+            }
+            state.recentBackupUnreadable -> {
+                FormCaption("备份文件损坏或无法读取。", color = MaterialTheme.colorScheme.error)
             }
         }
     }

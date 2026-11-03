@@ -142,7 +142,19 @@ export type SyncLearningAnalysisGenerator = "android_llm" | "deterministic_fallb
 export type SyncPlanEvaluationVerdict = "reasonable" | "needs_adjustment" | "insufficient_data"
 export type SyncAssessmentDraftQuestionType = "concept_check" | "diagnostic" | "reflection"
 
+export interface SyncLocalCoachResult {
+  task: "extract_factors" | "plan_create_advice" | "plan_delete_inference"
+  source: "model" | "fallback_rule" | "fallback_default"
+  fallback_reason: string
+  model_id: string
+  model_sha256: string
+  schema_version: number
+  created_at: number
+  [field: string]: string | number | null
+}
+
 export interface SyncLearningAnalysisDto {
+  inferences?: SyncLocalCoachResult[] | null
   analysisId: string
   sourceSnapshotId: string
   generatedAt: number

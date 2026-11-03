@@ -35,13 +35,13 @@ class HomeTimerFlowTest {
 
     @Test
     fun mainTabs_showRedesignedPrimaryActions() {
-        composeRule.onNodeWithContentDescription("计划").performClick()
+        composeRule.onNodeWithText("计划").performClick()
         composeRule.onNodeWithText("添加计划").assertExists()
 
-        composeRule.onNodeWithContentDescription("统计").performClick()
+        composeRule.onNodeWithText("统计").performClick()
         composeRule.onNodeWithText("今日专注").assertExists()
 
-        composeRule.onNodeWithContentDescription("日记").performClick()
+        composeRule.onNodeWithText("日记").performClick()
         composeRule.onNodeWithText("新建").assertExists()
     }
 }

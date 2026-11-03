@@ -133,18 +133,174 @@ impl ApprovedManifestRegistry {
 /// the authoritative sync must both derive from this one list, so a manifest
 /// promotion cannot make the UI and Rust runtime disagree about approved nodes.
 fn embedded_approved_knowledge_seeds() -> Vec<(&'static str, KnowledgeSeedFile)> {
-    let definitions: [(&str, &str, usize, &str); 11] = [
+    let definitions: [(&str, &str, usize, &str); 51] = [
         (
-            "math-limits",
-            "math",
-            35,
-            include_str!("../../data/knowledge/math-limits.seed.json"),
+            "civil-common-sense-scope",
+            "xingce",
+            2,
+            include_str!("../../data/knowledge/civil-common-sense-scope.seed.json"),
         ),
         (
-            "math-derivatives",
+            "civil-data-analysis",
+            "xingce",
+            5,
+            include_str!("../../data/knowledge/civil-data-analysis.seed.json"),
+        ),
+        (
+            "civil-logic",
+            "xingce",
+            5,
+            include_str!("../../data/knowledge/civil-logic.seed.json"),
+        ),
+        (
+            "civil-quant",
+            "xingce",
+            5,
+            include_str!("../../data/knowledge/civil-quant.seed.json"),
+        ),
+        (
+            "civil-shenlun-argument",
+            "shenlun",
+            5,
+            include_str!("../../data/knowledge/civil-shenlun-argument.seed.json"),
+        ),
+        (
+            "civil-shenlun-implementation",
+            "shenlun",
+            5,
+            include_str!("../../data/knowledge/civil-shenlun-implementation.seed.json"),
+        ),
+        (
+            "civil-shenlun-summary",
+            "shenlun",
+            5,
+            include_str!("../../data/knowledge/civil-shenlun-summary.seed.json"),
+        ),
+        (
+            "civil-shenlun-writing",
+            "shenlun",
+            5,
+            include_str!("../../data/knowledge/civil-shenlun-writing.seed.json"),
+        ),
+        (
+            "civil-verbal",
+            "xingce",
+            5,
+            include_str!("../../data/knowledge/civil-verbal.seed.json"),
+        ),
+        (
+            "cs408-computer-networks",
+            "cs408",
+            40,
+            include_str!("../../data/knowledge/cs408-computer-networks.seed.json"),
+        ),
+        (
+            "cs408-computer-organization",
+            "cs408",
+            40,
+            include_str!("../../data/knowledge/cs408-computer-organization.seed.json"),
+        ),
+        (
+            "cs408-data-structures",
+            "cs408",
+            40,
+            include_str!("../../data/knowledge/cs408-data-structures.seed.json"),
+        ),
+        (
+            "cs408-operating-systems",
+            "cs408",
+            40,
+            include_str!("../../data/knowledge/cs408-operating-systems.seed.json"),
+        ),
+        (
+            "education-history",
+            "education",
+            20,
+            include_str!("../../data/knowledge/education-history.seed.json"),
+        ),
+        (
+            "education-pedagogy",
+            "education",
+            20,
+            include_str!("../../data/knowledge/education-pedagogy.seed.json"),
+        ),
+        (
+            "education-psychology",
+            "education",
+            20,
+            include_str!("../../data/knowledge/education-psychology.seed.json"),
+        ),
+        (
+            "english-cloze",
+            "english",
+            20,
+            include_str!("../../data/knowledge/english-cloze.seed.json"),
+        ),
+        (
+            "english-grammar",
+            "english",
+            20,
+            include_str!("../../data/knowledge/english-grammar.seed.json"),
+        ),
+        (
+            "english-reading",
+            "english",
+            20,
+            include_str!("../../data/knowledge/english-reading.seed.json"),
+        ),
+        (
+            "english-translation",
+            "english",
+            20,
+            include_str!("../../data/knowledge/english-translation.seed.json"),
+        ),
+        (
+            "lawmaster-civil",
+            "lawmaster",
+            20,
+            include_str!("../../data/knowledge/lawmaster-civil.seed.json"),
+        ),
+        (
+            "lawmaster-criminal",
+            "lawmaster",
+            20,
+            include_str!("../../data/knowledge/lawmaster-criminal.seed.json"),
+        ),
+        (
+            "lawmaster-jurisprudence",
+            "lawmaster",
+            20,
+            include_str!("../../data/knowledge/lawmaster-jurisprudence.seed.json"),
+        ),
+        (
+            "linear-algebra-basics",
             "math",
-            12,
-            include_str!("../../data/knowledge/math-derivatives.seed.json"),
+            10,
+            include_str!("../../data/knowledge/linear-algebra-basics.seed.json"),
+        ),
+        (
+            "linear-algebra-expanded",
+            "math",
+            7,
+            include_str!("../../data/knowledge/linear-algebra-expanded.seed.json"),
+        ),
+        (
+            "management-logic",
+            "management",
+            20,
+            include_str!("../../data/knowledge/management-logic.seed.json"),
+        ),
+        (
+            "management-math",
+            "management",
+            20,
+            include_str!("../../data/knowledge/management-math.seed.json"),
+        ),
+        (
+            "management-writing",
+            "management",
+            20,
+            include_str!("../../data/knowledge/management-writing.seed.json"),
         ),
         (
             "math-applications-of-derivatives",
@@ -153,22 +309,34 @@ fn embedded_approved_knowledge_seeds() -> Vec<(&'static str, KnowledgeSeedFile)>
             include_str!("../../data/knowledge/math-applications-of-derivatives.seed.json"),
         ),
         (
-            "math-indefinite-integrals",
-            "math",
-            8,
-            include_str!("../../data/knowledge/math-indefinite-integrals.seed.json"),
-        ),
-        (
             "math-definite-integrals",
             "math",
             8,
             include_str!("../../data/knowledge/math-definite-integrals.seed.json"),
         ),
         (
+            "math-derivatives",
+            "math",
+            12,
+            include_str!("../../data/knowledge/math-derivatives.seed.json"),
+        ),
+        (
+            "math-indefinite-integrals",
+            "math",
+            8,
+            include_str!("../../data/knowledge/math-indefinite-integrals.seed.json"),
+        ),
+        (
             "math-integral-applications",
             "math",
             6,
             include_str!("../../data/knowledge/math-integral-applications.seed.json"),
+        ),
+        (
+            "math-limits",
+            "math",
+            35,
+            include_str!("../../data/knowledge/math-limits.seed.json"),
         ),
         (
             "math-mean-value-theorems",
@@ -183,22 +351,94 @@ fn embedded_approved_knowledge_seeds() -> Vec<(&'static str, KnowledgeSeedFile)>
             include_str!("../../data/knowledge/math-multivariable-calculus.seed.json"),
         ),
         (
+            "physics-electromagnetism",
+            "physics",
+            10,
+            include_str!("../../data/knowledge/physics-electromagnetism.seed.json"),
+        ),
+        (
+            "physics-mechanics",
+            "physics",
+            9,
+            include_str!("../../data/knowledge/physics-mechanics.seed.json"),
+        ),
+        (
+            "physics-modern",
+            "physics",
+            7,
+            include_str!("../../data/knowledge/physics-modern.seed.json"),
+        ),
+        (
+            "physics-thermodynamics",
+            "physics",
+            6,
+            include_str!("../../data/knowledge/physics-thermodynamics.seed.json"),
+        ),
+        (
+            "physics-waves-optics",
+            "physics",
+            9,
+            include_str!("../../data/knowledge/physics-waves-optics.seed.json"),
+        ),
+        (
+            "politics-history",
+            "politics",
+            20,
+            include_str!("../../data/knowledge/politics-history.seed.json"),
+        ),
+        (
+            "politics-maoism",
+            "politics",
+            20,
+            include_str!("../../data/knowledge/politics-maoism.seed.json"),
+        ),
+        (
+            "politics-marxism",
+            "politics",
+            20,
+            include_str!("../../data/knowledge/politics-marxism.seed.json"),
+        ),
+        (
+            "politics-morals",
+            "politics",
+            20,
+            include_str!("../../data/knowledge/politics-morals.seed.json"),
+        ),
+        (
+            "probability-basics",
+            "math",
+            8,
+            include_str!("../../data/knowledge/probability-basics.seed.json"),
+        ),
+        (
             "probability-distributions",
             "math",
             9,
             include_str!("../../data/knowledge/probability-distributions.seed.json"),
         ),
         (
+            "psychology-developmental",
+            "psychology",
+            20,
+            include_str!("../../data/knowledge/psychology-developmental.seed.json"),
+        ),
+        (
+            "psychology-experimental",
+            "psychology",
+            20,
+            include_str!("../../data/knowledge/psychology-experimental.seed.json"),
+        ),
+        (
+            "psychology-general",
+            "psychology",
+            20,
+            include_str!("../../data/knowledge/psychology-general.seed.json"),
+        ),
+        (
             "python-basics",
             "programming",
             8,
             include_str!("../../data/knowledge/python-basics.seed.json"),
-        ),
-        (
-            "cs408-computer-networks",
-            "cs408",
-            40,
-            include_str!("../../data/knowledge/cs408-computer-networks.seed.json"),
         ),
     ];
 
@@ -2905,7 +3145,7 @@ mod tests {
         ensure_subjects(&conn);
 
         let result = sync_approved_manifest(&mut conn).expect("sync");
-        assert_eq!(result.inserted, 145);
+        assert_eq!(result.inserted, 773);
         assert_eq!(result.updated, 0);
         assert_eq!(result.skipped, 0);
 
@@ -2916,7 +3156,7 @@ mod tests {
                 |row| row.get(0),
             )
             .unwrap();
-        assert_eq!(math_count, 97);
+        assert_eq!(math_count, 122);
         let prog_count: i64 = conn
             .query_row(
                 "SELECT COUNT(*) FROM knowledge_nodes WHERE subject_id = 'subject-programming'",
@@ -2933,12 +3173,12 @@ mod tests {
                 |row| row.get(0),
             )
             .unwrap();
-        assert_eq!(cs408_count, 40);
+        assert_eq!(cs408_count, 160);
 
         let total_count: i64 = conn
             .query_row("SELECT COUNT(*) FROM knowledge_nodes", [], |row| row.get(0))
             .unwrap();
-        assert_eq!(total_count, 145);
+        assert_eq!(total_count, 773);
 
         let registry = ApprovedManifestRegistry::current();
         let registry_ids = registry.all_approved_node_ids();
@@ -3020,7 +3260,7 @@ mod tests {
     fn approved_registry_exactly_matches_embedded_seeds() {
         let registry = ApprovedManifestRegistry::current();
         let seeds = embedded_approved_knowledge_seeds();
-        assert_eq!(seeds.len(), 11);
+        assert_eq!(seeds.len(), 51);
         let mut all_seed_ids = std::collections::HashSet::new();
         for (pack_id, seed) in seeds {
             assert_eq!(seed.status.as_deref(), Some("approved"));
@@ -3032,7 +3272,7 @@ mod tests {
                 );
             }
         }
-        assert_eq!(all_seed_ids.len(), 145);
+        assert_eq!(all_seed_ids.len(), 773);
 
         let registry_ids: std::collections::HashSet<String> = registry
             .all_approved_node_ids()

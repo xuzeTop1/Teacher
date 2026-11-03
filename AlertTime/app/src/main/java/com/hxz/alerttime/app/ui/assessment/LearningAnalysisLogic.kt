@@ -14,8 +14,17 @@ data class LlmProviderConfigUiState(
     val authMode: String = LlmProviderSettings.AUTH_MODE_BEARER,
     val hasStoredApiKey: Boolean = false,
     val saving: Boolean = false,
-    /** 仅作为 UI 清空密码输入框的信号；永远不携带明文 Key。 */
-    val savedVersion: Long = 0
+    /**
+     * 「清空密钥输入框」信号。任何一次密钥输入框不再需要保留明文的时刻都会递增：
+     * 成功落库、停用服务，以及**任何一次保存失败**。
+     *
+     * 失败也递增是有意的：本项目不向模型服务发送密钥做校验（论文《隐私优先…》
+     * 第 4.2/5.3 节：密钥类秘密不外发、不落明文），因此没有"密钥是否有效"的云端结论，
+     * 一旦保存未成功，就把明文从界面撤下，不留在输入框里。
+     *
+     * 永远不携带明文 Key。
+     */
+    val apiKeyClearVersion: Long = 0
 )
 
 /**
