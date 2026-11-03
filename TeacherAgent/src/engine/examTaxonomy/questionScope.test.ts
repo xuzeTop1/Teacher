@@ -75,6 +75,12 @@ const OS_FILTER: ExamScopeFilter = {
   moduleId: null
 }
 
+const COMMON_SENSE_FILTER: ExamScopeFilter = {
+  examTrackId: "civil-xingce",
+  subjectId: "civil-xingce.common-sense",
+  moduleId: null
+}
+
 describe("题目归属推导", () => {
   it("cs408-computer-networks pack 归属到 408.computer-networks 叶子", () => {
     const attributions = attributionsForPack("cs408-computer-networks")
@@ -85,16 +91,16 @@ describe("题目归属推导", () => {
     expect(network!.leafApproved).toBe(true)
   })
 
-  it("draft 叶子（操作系统）leafApproved=false", () => {
-    const attributions = attributionsForPack("cs408-operating-systems")
-    const os = attributions.find((a) => a.subjectId === "408.operating-systems")
-    expect(os).toBeDefined()
-    expect(os!.leafApproved).toBe(false)
+  it("draft 叶子（常识判断）leafApproved=false", () => {
+    const attributions = attributionsForPack("civil-common-sense")
+    const cs = attributions.find((a) => a.subjectId === "civil-xingce.common-sense")
+    expect(cs).toBeDefined()
+    expect(cs!.leafApproved).toBe(false)
   })
 
   it("isLeafApprovedForQuestions：只有 approved 叶子可以出题", () => {
     expect(isLeafApprovedForQuestions("408.computer-networks")).toBe(true)
-    expect(isLeafApprovedForQuestions("408.operating-systems")).toBe(false)
+    expect(isLeafApprovedForQuestions("civil-xingce.common-sense")).toBe(false)
     expect(isLeafApprovedForQuestions("408")).toBe(false)
     expect(isLeafApprovedForQuestions("not-exist")).toBe(false)
   })
@@ -109,28 +115,28 @@ describe("题目归属推导", () => {
 describe("approved 门禁（P1：防漂移硬校验）", () => {
   it("只有 PACK_MANIFEST approved 的 pack 通过白名单", () => {
     expect(isPackApproved("cs408-computer-networks")).toBe(true)
-    expect(isPackApproved("cs408-operating-systems")).toBe(false)
-    expect(isPackApproved("cs408-data-structures")).toBe(false)
+    expect(isPackApproved("cs408-operating-systems")).toBe(true)
+    expect(isPackApproved("civil-common-sense")).toBe(false)
     expect(isPackApproved("not-exist")).toBe(false)
   })
 
   it("叶子出题门禁：叶子 approved 且 questionScope 的 pack 全部 approved", () => {
     expect(isLeafApprovedForQuestions("408.computer-networks")).toBe(true)
-    expect(isLeafApprovedForQuestions("408.operating-systems")).toBe(false)
+    expect(isLeafApprovedForQuestions("civil-xingce.common-sense")).toBe(false)
     expect(isLeafApprovedForQuestions("408")).toBe(false)
   })
 
   it("Manifest 非 approved 的 pack 即使在请求范围内也被拒绝（白名单优先于归属）", () => {
-    // OS pack 属于 OS 请求范围，但 Manifest 是 draft → 拒绝（门禁 1 先行）。
-    const check = validateQuestionScope("cs408-operating-systems", makeQuestion("q-os"), OS_FILTER)
+    // civil-common-sense pack 属于 civil-xingce 请求范围，但 Manifest 是 draft → 拒绝（门禁 1 先行）。
+    const check = validateQuestionScope("civil-common-sense", makeQuestion("q-cs"), COMMON_SENSE_FILTER)
     expect(check.ok).toBe(false)
     expect(check.reason).toContain("不是 approved")
   })
 
   it("filterSeedsToScope 对 Manifest 非 approved 的 pack 直接过滤（不进结果）", () => {
     const { questions, rejected } = filterSeedsToScope(
-      [makeSeed("cs408-operating-systems", "approved", [makeQuestion("q-os-1")])],
-      OS_FILTER
+      [makeSeed("civil-common-sense", "approved", [makeQuestion("q-cs-1")])],
+      COMMON_SENSE_FILTER
     )
     // seed JSON 伪造为 approved 也不能绕过：Manifest 白名单为准。
     expect(questions).toHaveLength(0)
@@ -202,8 +208,8 @@ describe("结构化校验（五.1 硬约束）", () => {
     expect(check.attribution?.subjectId).toBe("408.computer-networks")
   })
 
-  it("操作系统 pack 的题在请求网络范围时被拒绝（draft pack 白名单拦截）", () => {
-    const check = validateQuestionScope("cs408-operating-systems", makeQuestion("q-os"), NETWORK_FILTER)
+  it("draft pack 的题在请求网络范围时被拒绝（draft pack 白名单拦截）", () => {
+    const check = validateQuestionScope("civil-common-sense", makeQuestion("q-cs"), NETWORK_FILTER)
     expect(check.ok).toBe(false)
     expect(check.reason).toContain("不是 approved")
   })
@@ -215,7 +221,7 @@ describe("结构化校验（五.1 硬约束）", () => {
   })
 
   it("draft 叶子的题即使归属正确也被拒绝（未审核不得出题）", () => {
-    const check = validateQuestionScope("cs408-operating-systems", makeQuestion("q-os"), OS_FILTER)
+    const check = validateQuestionScope("civil-common-sense", makeQuestion("q-cs"), COMMON_SENSE_FILTER)
     expect(check.ok).toBe(false)
     expect(check.reason).toContain("approved")
   })
@@ -233,18 +239,17 @@ describe("范围过滤（filterSeedsToScope）", () => {
         makeQuestion("q-net-1"),
         makeQuestion("q-net-2")
       ]),
-      makeSeed("cs408-operating-systems", "draft", [makeQuestion("q-os-1")]),
-      makeSeed("cs408-data-structures", "draft", [makeQuestion("q-ds-1")]),
-      makeSeed("cs408-computer-organization", "draft", [makeQuestion("q-co-1")])
+      makeSeed("civil-common-sense", "draft", [makeQuestion("q-cs-1")]),
+      makeSeed("cs408-operating-systems", "approved", [makeQuestion("q-os-1")]),
+      makeSeed("cs408-data-structures", "approved", [makeQuestion("q-ds-1")])
     ]
     const { questions, rejected } = filterSeedsToScope(seeds, NETWORK_FILTER)
     expect(questions.map((q) => q.id).sort()).toEqual(["q-net-1", "q-net-2"])
     expect(questions.every((q) => q.subjectId === "408.computer-networks")).toBe(true)
     expect(questions.every((q) => q.examTrackId === "408")).toBe(true)
-    // 操作系统/数据结构/组成原理：draft 直接被 approved 过滤（不计入 rejected 统计），
-    // 或者如果未来 approved 也会因范围不符被拒绝——总之绝不能进入结果。
-    expect(rejected.some((r) => r.includes("q-os-1"))).toBe(false) // draft 未加载即被过滤
-    expect(questions.some((q) => q.id.startsWith("q-os") || q.id.startsWith("q-ds") || q.id.startsWith("q-co"))).toBe(false)
+    expect(rejected.some((r) => r.includes("q-cs-1"))).toBe(false) // draft 未加载即被过滤
+    expect(rejected.some((r) => r.includes("q-os-1"))).toBe(true)
+    expect(questions.some((q) => q.id.startsWith("q-os") || q.id.startsWith("q-ds") || q.id.startsWith("q-cs"))).toBe(false)
   })
 
   it("请求操作系统范围时不会混入网络题", () => {
@@ -286,13 +291,13 @@ describe("范围过滤（filterSeedsToScope）", () => {
 })
 
 describe("掌握度查询范围白名单", () => {
-  it("approved 计网叶子返回自身知识点，draft 操作系统叶子返回空", async () => {
+  it("approved 计网叶子返回自身知识点，draft 常识判断叶子返回空", async () => {
     const networkIds = await collectApprovedKnowledgeNodeIdsForScope(NETWORK_FILTER)
     expect(networkIds.length).toBeGreaterThan(0)
     expect(new Set(networkIds).size).toBe(networkIds.length)
 
-    const operatingSystemIds = await collectApprovedKnowledgeNodeIdsForScope(OS_FILTER)
-    expect(operatingSystemIds).toEqual([])
+    const commonSenseIds = await collectApprovedKnowledgeNodeIdsForScope(COMMON_SENSE_FILTER)
+    expect(commonSenseIds).toEqual([])
   })
 
   it("无具体叶子范围返回空，不允许退回 teacherSubjectId 全学科", async () => {

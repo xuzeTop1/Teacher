@@ -2,7 +2,7 @@
   "subject": "education",
   "course": "history",
   "chapter": "education-history",
-  "status": "draft",
+  "status": "approved",
   "questions": [
     {
       "id": "education-history-q001",
@@ -38,7 +38,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 只教贵族",
         "B. 不论出身都可受教",
@@ -80,7 +80,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 都性善",
         "B. 都性恶",
@@ -122,7 +122,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 学—思—行",
         "B. 闻—见—知—行",
@@ -164,7 +164,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 启发诱导",
         "B. 预防性原则",
@@ -206,7 +206,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 管理学生",
         "B. 传道受业解惑",
@@ -248,7 +248,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 死记硬背",
         "B. 循序渐进、熟读精思",
@@ -290,7 +290,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 存天理灭人欲",
         "B. 知行合一、致良知",
@@ -332,7 +332,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 自由讲学",
         "B. 重论辩",
@@ -374,7 +374,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 1900",
         "B. 1905",
@@ -416,7 +416,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 《劝学篇》",
         "B. 《师说》",
@@ -458,7 +458,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 壬寅学制",
         "B. 癸卯学制",
@@ -500,7 +500,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 军国民教育",
         "B. 实利教育",
@@ -542,7 +542,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 生活即教育",
         "B. 社会即学校",
@@ -584,7 +584,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 衣食住行医",
         "B. 愚贫弱私",
@@ -626,7 +626,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft",
+      "status": "approved",
       "options": [
         "A. 蔡元培",
         "B. 杨贤江",
@@ -669,7 +669,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "education-history-q017",
@@ -706,7 +706,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "education-history-q018",
@@ -743,7 +743,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "education-history-q019",
@@ -780,7 +780,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft"
+      "status": "approved"
     },
     {
       "id": "education-history-q020",
@@ -817,7 +817,7 @@
         "sourceType": "human_authored_with_curriculum_reference",
         "note": "原创表述，考点来自公开大纲；不含任何真题原文、题干或选项。"
       },
-      "status": "draft"
+      "status": "approved"
     }
   ]
 }

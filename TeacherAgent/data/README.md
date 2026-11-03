@@ -72,7 +72,7 @@ CS408 小计：160 个知识节点，160 道题目。全部 status: draft，来�
 - `questions/english-translation.seed.json`：翻译得分点 20 道原创题目。
 - `questions/english-cloze.seed.json`：完形填空 20 道原创题目。
 
-英语小计：80 个知识节点，80 道题目。status=draft，来源为 WorkBuddy draft。
+英语小计：80 个知识节点，80 道题目。status=approved（2026-09-11 通过门禁晋升，见 `docs/knowledge-review/2026-09-11-approved-pack-promotion.md`）；内容为 WorkBuddy 原创撰写，包级 `approved` 不蕴含条目级事实复核已完成。
 
 ## Politics（考研政治）
 
@@ -85,13 +85,33 @@ CS408 小计：160 个知识节点，160 道题目。全部 status: draft，来�
 - `questions/politics-history.seed.json`：中国近现代史纲要 20 道原创题目。
 - `questions/politics-morals.seed.json`：思想道德与法治 20 道原创题目。
 
-政治小计：80 个知识节点，80 道题目。status=draft，来源为 WorkBuddy draft。
+政治小计：80 个知识节点，80 道题目。status=approved（2026-09-11 通过门禁晋升，见 `docs/knowledge-review/2026-09-11-approved-pack-promotion.md`）；内容为 WorkBuddy 原创撰写，包级 `approved` 不蕴含条目级事实复核已完成。
 
 ## 全库总计
 
-- 数学：122 个知识节点 / 91 道题
-- CS408：160 个知识节点 / 160 道题
-- 物理：41 个知识节点 / 75 道题
-- 英语：80 个知识节点 / 80 道题
-- 政治：80 个知识节点 / 80 道题
-- **总计：483 个知识节点 / 486 道题，29 个 Pack**
+上面五节只详列了 5 个学科，正式 catalog 实际有 **51 个 approved Pack / 12 个学科**。
+完整口径如下（按 approved 计）：
+
+| 学科代码 | Pack | 知识节点 | 题目 |
+| --- | --- | --- | --- |
+| `math` | 12 | 122 | 91 |
+| `cs408` | 4 | 160 | 160 |
+| `physics` | 5 | 41 | 75 |
+| `english` | 4 | 80 | 80 |
+| `politics` | 4 | 80 | 80 |
+| `xingce` | 5 | 22 | 18 |
+| `shenlun` | 4 | 20 | 12 |
+| `management` | 3 | 60 | 60 |
+| `education` | 3 | 60 | 60 |
+| `psychology` | 3 | 60 | 60 |
+| `lawmaster` | 3 | 60 | 60 |
+| `programming` | 1 | 8 | 8 |
+| **合计** | **51** | **773** | **764** |
+
+另有 1 个待审核 Pack：`xingce` 的 `civil-common-sense`（5 节点 / 4 题，`status=draft`），
+不进默认 Seed、Embedding、RAG 或正式统计。**全库合计 52 Pack / 778 节点 / 768 题。**
+
+`law` 与 `accounting` 已注册学科代码但尚无 pack。
+
+> 773 / 764 以及 5 / 4 这两组数由 `src/services/knowledge/manifestCountVerification.test.ts`
+> 逐条断言，改动 seed 或 manifest 时该测试会失败；本表若与它冲突，以测试与 manifest 为准。

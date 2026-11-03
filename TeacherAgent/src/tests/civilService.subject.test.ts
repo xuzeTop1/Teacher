@@ -12,7 +12,7 @@ import { PACK_MANIFEST } from "../services/knowledge/packManifest"
 import { resolveSubjectStyle } from "../engine/policies/subjectStyle"
 
 const CIVIL_PACK_IDS = [
-  "civil-verbal", "civil-logic", "civil-data-analysis", "civil-quant", "civil-common-sense",
+  "civil-verbal", "civil-logic", "civil-data-analysis", "civil-quant", "civil-common-sense-scope", "civil-common-sense",
   "civil-shenlun-summary", "civil-shenlun-argument", "civil-shenlun-implementation", "civil-shenlun-writing"
 ]
 
@@ -86,9 +86,9 @@ describe("考公学科接入：学科风格", () => {
 })
 
 describe("考公学科接入：Pack manifest 显示名 / shortTitle（IX.8）", () => {
-  it("9 个考公 pack 均在 manifest 中，且 title / shortTitle 完整为中文", () => {
+  it("10 个考公 pack 均在 manifest 中，且 title / shortTitle 完整为中文", () => {
     const civil = PACK_MANIFEST.filter((p) => CIVIL_PACK_IDS.includes(p.id))
-    expect(civil).toHaveLength(9)
+    expect(civil).toHaveLength(10)
 
     const byId = Object.fromEntries(civil.map((p) => [p.id, p]))
     expect(byId["civil-verbal"].title).toBe("言语理解与表达")
@@ -104,12 +104,12 @@ describe("考公学科接入：Pack manifest 显示名 / shortTitle（IX.8）", 
     }
   })
 
-  it("manifest 节点/题数之和与种子实测一致（行测 5/4，申论 5/3）", () => {
+  it("manifest 节点/题数之和与种子实测一致（行测 5/4 + 范围 2/2，申论 5/3）", () => {
     const civil = PACK_MANIFEST.filter((p) => CIVIL_PACK_IDS.includes(p.id))
     const nodes = civil.reduce((s, p) => s + p.expectedNodeCount, 0)
     const qs = civil.reduce((s, p) => s + p.expectedQuestionCount, 0)
-    expect(nodes).toBe(45)
-    expect(qs).toBe(32)
+    expect(nodes).toBe(47)
+    expect(qs).toBe(34)
   })
 })
 
@@ -121,8 +121,8 @@ describe("考公学科接入：知识图谱/练习/仪表盘/对话页可打开�
       const packs = PACK_MANIFEST.filter((p) => p.subject === s)
       expect(packs.length).toBeGreaterThan(0)
     }
-    // 行测 5 包、申论 4 包
-    expect(PACK_MANIFEST.filter((p) => p.subject === "xingce")).toHaveLength(5)
+    // 行测 6 包、申论 4 包
+    expect(PACK_MANIFEST.filter((p) => p.subject === "xingce")).toHaveLength(6)
     expect(PACK_MANIFEST.filter((p) => p.subject === "shenlun")).toHaveLength(4)
   })
 })

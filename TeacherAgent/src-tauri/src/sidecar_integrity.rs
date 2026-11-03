@@ -40,7 +40,11 @@ fn load_hash_manifest(dir: &Path) -> Result<Option<HashMap<String, String>>, Str
     }
     let content = std::fs::read_to_string(&manifest_path)
         .map_err(|_| "sidecar 完整性校验失败：manifest 无法读取。".to_string())?;
-    let manifest = serde_json::from_str(&content)
+    // Manifest 由 PowerShell 生成，而 Windows PowerShell 5.1 的
+    // `Set-Content -Encoding UTF8` 会写出**带 BOM** 的 UTF-8；serde_json 不接受
+    // 前导 BOM，会报"格式无效"。这里剥离 BOM —— 读取端容错比要求每个生成脚本各自小心更可靠。
+    let content = content.strip_prefix('\u{feff}').unwrap_or(&content);
+    let manifest = serde_json::from_str(content)
         .map_err(|_| "sidecar 完整性校验失败：manifest 格式无效。".to_string())?;
     Ok(Some(manifest))
 }
@@ -205,6 +209,29 @@ mod tests {
             verify_sidecar_integrity_with_policy(&sidecar_path, "worker.exe", true, true)
                 .unwrap_err()
                 .contains("格式无效")
+        );
+        let _ = std::fs::remove_dir_all(&dir);
+    }
+
+    #[test]
+    fn bom_prefixed_manifest_is_accepted() {
+        // 回归：PowerShell 5.1 的 `Set-Content -Encoding UTF8` 写出带 BOM 的 JSON，
+        // 读取端必须容忍——否则 App 导入文档时直接报"manifest 格式无效"（已实际发生）。
+        let dir = std::env::temp_dir().join(format!("sidecar-bom-manifest-{}", std::process::id()));
+        std::fs::create_dir_all(&dir).unwrap();
+        let sidecar_path = dir.join("worker.exe");
+        std::fs::write(&sidecar_path, b"content").unwrap();
+
+        let hash = compute_file_sha256(&sidecar_path).unwrap();
+        let manifest_json = format!("{{\"worker.exe\":\"{hash}\"}}");
+        std::fs::write(
+            dir.join("sidecar-hashes.json"),
+            format!("\u{feff}{manifest_json}"),
+        )
+        .unwrap();
+
+        assert!(
+            verify_sidecar_integrity_with_policy(&sidecar_path, "worker.exe", false, false).is_ok()
         );
         let _ = std::fs::remove_dir_all(&dir);
     }

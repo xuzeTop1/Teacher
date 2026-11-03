@@ -21,6 +21,24 @@ export interface KnowledgeNodeWithSource extends KnowledgeNodeRef {
   heading?: string | null
 }
 
+/**
+ * 扣留私有资料：只过滤 nodes 不够。topic 由全部节点标题拼成、notes 里有两条
+ * 明确宣布"本轮已检索到用户本地私有资料"，两者都会把文档标题和"用户持有私有
+ * 资料"这一事实带到云端。类型不变式收在这里，调用方只表达"要不要扣留"。
+ */
+export function withoutPrivateDocuments(context: TutorKnowledgeContext): TutorKnowledgeContext {
+  const nodes = context.nodes.filter((node) => node.sourceType !== "private_document")
+  if (nodes.length === context.nodes.length) return context
+  return {
+    ...context,
+    nodes,
+    topic: nodes.map((node) => node.title).join(" / "),
+    notes: context.notes?.filter((note) => !PRIVATE_NOTE_MARKER.test(note))
+  }
+}
+
+const PRIVATE_NOTE_MARKER = /私有资料|private_document/
+
 export interface TutorKnowledgeContext {
   retrievalPurpose?: string
   topic?: string

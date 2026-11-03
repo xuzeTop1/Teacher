@@ -2,7 +2,7 @@
   "subject": "physics",
   "course": "大学物理",
   "chapter": "近代物理",
-  "status": "draft",
+  "status": "approved",
   "nodes": [
     {
       "id": "physics-modern-relativity",
@@ -138,8 +138,8 @@
         "physics-modern-debroglie"
       ],
       "keyPoints": [
-        "海森堡不确定关系：$\\Delta x\\cdot\\Delta p_x \\ge ħ/2$",
-        "能量-时间不确定关系：$\\Delta E\\cdot\\Delta t \\ge ħ/2$",
+        "海森堡不确定关系：$\\Delta x\\cdot\\Delta p_x \\ge \\frac{\\hbar}{2}$",
+        "能量-时间不确定关系：$\\Delta E\\cdot\\Delta t \\ge \\frac{\\hbar}{2}$",
         "不确定关系的物理意义",
         "与经典力学的根本区别",
         "不确定关系对测量精度的限制"

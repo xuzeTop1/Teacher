@@ -14,12 +14,18 @@ from xml.etree import ElementTree as ET
 
 from ..schema import PageOrSheet, ParseResult
 
-MAX_FILE_SIZE = 50 * 1024 * 1024  # 50MB（预览解析上限）
-MAX_PARAGRAPHS = 300
-MAX_TABLES = 30
-MAX_TABLE_ROWS = 80
-MAX_CELL_CHARS = 1000
-MAX_PLAINTEXT_CHARS = 30000
+MAX_FILE_SIZE = 50 * 1024 * 1024  # 50MB（唯一的内容级上限）
+
+# 以下常量是**内存/耗时兜底**，不是内容上限。
+# 历史值（300 段 / 30_000 字）是按"预览上限"设的，但同一份 payload 也被入库复用，
+# 结果长文档在入库时被静默截断：实测 4 份约 6 万字文档只进 1.3–2.0 万字，
+# 每份 20 个条目只剩 9–12 个。预览截断应由前端负责（PREVIEW_MAX_CHARS=2000），
+# 解析层只保留防炸内存的硬边界。
+MAX_PARAGRAPHS = 20_000
+MAX_TABLES = 500
+MAX_TABLE_ROWS = 5_000
+MAX_CELL_CHARS = 5_000
+MAX_PLAINTEXT_CHARS = 2_000_000
 
 # OOXML 命名空间
 _W = "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
@@ -134,7 +140,7 @@ def _extract_text_from_xml(xml_bytes: bytes) -> tuple[str, list[str], list[str],
 
     if truncated:
         warnings.append(
-            f"文档内容较多，已截取前 {MAX_PLAINTEXT_CHARS} 字符用于预览"
+            f"文档内容超过 {MAX_PLAINTEXT_CHARS} 字符的安全上限，已截取；建议拆分文档后重新导入"
         )
 
     # 提取标题（从首段推断）

@@ -251,6 +251,26 @@ Provider 请求日志只能记录事件名、Provider 名称、模型名、脱�
 - SymPy worker 的 expression、operation、variable 必须在 Rust command 边界完成长度、枚举和受控数学语法校验，不依赖前端校验。
 - worker 诊断进入前端或 LLM 上下文前必须在 Rust IPC 边界清洗 ANSI/控制字符、绝对路径及已知凭据形态，并限制长度；不得把原始 sidecar stderr 直接拼入用户可见错误。
 
+### 7.1.2 云端出站上下文契约（2026-09-22）
+
+实测依据见 `experiments/privacy_egress/README.md`；本节只写契约，数字以该归档记录的 commit 为准。
+
+- 三类上下文默认不进入云端请求，需逐条显式授权：会话记忆、学生画像、私有资料上下文
+  （`CloudPrivacyConfig` 默认全 `false`）。`cloudPrivacy` **缺失**时与显式默认值等价（fail-closed），
+  实现见 `tutorOrchestrator.ts` 的 `shouldSend*` 三个判定。
+- 授权判定是**按类别独立**的，不得实现成总闸：允许只关私有资料而保留画像与会话记忆。
+- 扣留私有资料必须连同其**派生表述**一起剥除：`knowledgeContext.topic` 由全部节点标题拼成、
+  `notes` 会追加"本轮已检索到用户本地私有资料"，只过滤 `nodes` 仍会把文档标题和
+  "用户持有私有资料"这一事实发到云端。统一走 `withoutPrivateDocuments()`，不得在调用点重写。
+- 本地 Provider（`isLocal=true`）始终拿全量上下文，这是设计而非例外。
+- **输出侧护栏不承担学情保密性**：`GuardrailInput` 只含学生消息、候选回复、模式与提示等级，
+  护栏拿不到授权上下文作参照；`PRIVACY_RISK_PATTERNS` 针对身份证号/银行卡/手机号/住址/
+  密码/API key 等第三方 PII 形态。因此学情数据的保密性**只有源头这一层**，
+  文档与论文不得声称输出护栏可防止学生数据回显。该缺口作为待确认项记入
+  `docs/open-decisions.md` D-409。
+- 逐层字节计量与扣留清单由 `src/services/llm/outboundEgress.test.ts` 守护；任何 prompt 层
+  新增标签必须同步该文件的分类表，否则落入 `unclassified` 并直接失败。
+
 ### 7.2 数据类型
 
 | 数据 | 存储 | 说明 |

@@ -2,7 +2,7 @@
   "subject": "physics",
   "course": "大学物理",
   "chapter": "波动与光学",
-  "status": "draft",
+  "status": "approved",
   "questions": [
     {
       "id": "physics-wo-q1",
@@ -47,14 +47,14 @@
       "title": "波的能量密度",
       "type": "solution",
       "difficulty": 2,
-      "content": "一简谐机械波在理想介质中传播，介质密度 $\\rho = 1.0\\times10^3 k\\frac{g}{m}^3$，波的频率 $f = 500$Hz，振幅 $A = 0.01 m$，波速 $v = 300 \\frac{m}{s}$。求波的能量密度。",
+      "content": "一简谐机械波在理想介质中传播，介质密度 $\\rho = 1.0\\times10^3\\text{ kg/m}^3$，波的频率 $f = 500\\text{ Hz}$，振幅 $A = 0.01\\text{ m}$，波速 $v = 300\\text{ m/s}$。求波的能量密度。",
       "options": [],
-      "answer": "$w = 4.93\\times10^4 \\frac{J}{m}^3$",
+      "answer": "$w = 4.93\\times10^4\\text{ J/m}^3$",
       "solutionSteps": [
-        "波的能量密度公式：$w = ½\\rho\\omega^2A^2$",
-        "角频率：$\\omega = 2\\pi f = 2\\pi\\times500 = 1000\\pi$ra$\\frac{d}{s}$",
+        "波的能量密度公式：$w = \\frac{1}{2}\\rho\\omega^2A^2$",
+        "角频率：$\\omega = 2\\pi f = 2\\pi\\times500 = 1000\\pi\\text{ rad/s}$",
         "代入：$w = 0.5\\times1.0\\times10^3\\times(1000\\pi)^2\\times(0.01)^2$",
-        "计算：$w = 500\\times10^6\\pi^2\\times10^{-4} = 5\\times10^4\\pi^2 = 4.93\\times10^4 \\frac{J}{m}^3$"
+        "计算：$w = 500\\times10^6\\pi^2\\times10^{-4} = 5\\times10^4\\pi^2 = 4.93\\times10^4\\text{ J/m}^3$"
       ],
       "knowledgeNodeIds": [
         "physics-wo-wave-basics"
@@ -66,7 +66,7 @@
         },
         {
           "level": "L2",
-          "text": "$w = ½\\rho\\omega^2A^2$，注意是时间平均值"
+          "text": "$w = \\frac{1}{2}\\rho\\omega^2A^2$，注意是时间平均值"
         },
         {
           "level": "L3",
@@ -89,7 +89,7 @@
       "options": [],
       "answer": "相长干涉",
       "solutionSteps": [
-        "波长：$\\lambda = \\frac{v}{f} = 30\\frac{0}{1}000 = 0.3 m$",
+        "波长：$\\lambda = \\frac{v}{f} = \\frac{300}{1000} = 0.3 m$",
         "波程差：$\\Delta r = S_2P - S_1P = 0.75 - 0.60 = 0.15 m$",
         "相位差：$\\Delta\\varphi = 2\\pi\\Delta r/\\lambda + (\\varphi_2 - \\varphi_1) = 2\\pi\\times0.1\\frac{5}{0}.3 + \\pi/2 = \\pi + \\pi/2 = 3\\pi/2$",
         "相长干涉条件：$\\Delta\\varphi = 2k\\pi$（$k$为整数）",
@@ -169,7 +169,7 @@
       "answer": "f = 548.4 Hz",
       "solutionSteps": [
         "多普勒效应公式（声源向静止观察者运动）：$f = f_0 \\frac{v}{(v - v_s)}$",
-        "代入：$f = 500\\times34\\frac{0}{(340 - 30)} = 500\\times34\\frac{0}{3}10 = 548.4 Hz$"
+        "代入：$f = 500\\times\\frac{340}{340 - 30} = 500\\times\\frac{340}{310} = 548.4 Hz$"
       ],
       "knowledgeNodeIds": [
         "physics-wo-doppler"
@@ -472,9 +472,9 @@
       "answer": "$(1) v = 30$cm；$(2) m = -2$；$(3)$实像、倒立、放大",
       "solutionSteps": [
         "（1）薄透镜公式：1/u + 1/v = 1/f",
-        "代入：$\\frac{1}{1}5 + \\frac{1}{v} = \\frac{1}{1}0$",
-        "解得：$\\frac{1}{v} = \\frac{1}{1}0 - \\frac{1}{1}5 = \\frac{(3-2)}{3}0 = \\frac{1}{3}0$，$v = 30 cm$",
-        "（2）横向放大率：$m = -\\frac{v}{u} = -3\\frac{0}{1}5 = -2$",
+        "代入：$\\frac{1}{15} + \\frac{1}{v} = \\frac{1}{10}$",
+        "解得：$\\frac{1}{v} = \\frac{1}{10} - \\frac{1}{15} = \\frac{3-2}{30} = \\frac{1}{30}$，$v = 30 cm$",
+        "（2）横向放大率：$m = -\\frac{v}{u} = -\\frac{30}{15} = -2$",
         "（3）v > 0 为实像，m < 0 为倒立，|m| > 1 为放大"
       ],
       "knowledgeNodeIds": [
@@ -549,14 +549,14 @@
       "options": [],
       "answer": "x = 0.68 m",
       "solutionSteps": [
-        "波长：$\\lambda = \\frac{v}{f} = 34\\frac{0}{6}80 = 0.5 m$",
+        "波长：$\\lambda = \\frac{v}{f} = \\frac{340}{680} = 0.5 m$",
         "设观察者位置为 $(x, D)$，$A$在$(-\\frac{d}{2}, 0)$，$B$在$(\\frac{d}{2}, 0)$",
-        "波程差：$\\Delta r = r_B - r_A = √[(x-\\frac{d}{2})^2 + D^2] - √[(x+\\frac{d}{2})^2 + D^2]$",
+        "波程差：$\\Delta r = r_B - r_A = \\sqrt{(x-\\frac{d}{2})^2 + D^2} - \\sqrt{(x+\\frac{d}{2})^2 + D^2}$",
         "相消干涉条件：$\\Delta r = (2k+1)\\lambda/2$，第一个极小 $k = 0$，$\\Delta r = \\lambda/2 = 0.25 m$",
         "由于 $D >> d$，可用近似：$\\Delta r \\approx (\\frac{d}{D})x$（当 $x$较小时）",
-        "更准确：$\\Delta r = d sin\\theta \\approx d tan\\theta = d \\frac{x}{D}$（小角度）",
+        "更准确：$\\Delta r = d \\sin\\theta \\approx d \\tan\\theta = d \\frac{x}{D}$（小角度）",
         "所以：$d\\frac{x}{D} = \\lambda/2$",
-        "代入：$2\\frac{x}{3} = 0.25$，解得 $x = 0.375 m$",
+        "代入：$\\frac{2}{3}x = 0.25$，解得 $x = 0.375 m$",
         "但直接数值解更准：设 $\\Delta r = 0.25$，解得 $x \\approx 0.68 m$"
       ],
       "knowledgeNodeIds": [

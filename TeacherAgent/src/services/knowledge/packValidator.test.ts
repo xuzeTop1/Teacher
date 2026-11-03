@@ -96,6 +96,7 @@ import civilLogicKnowledge from "../../../data/knowledge/civil-logic.seed.json"
 import civilDataAnalysisKnowledge from "../../../data/knowledge/civil-data-analysis.seed.json"
 import civilQuantKnowledge from "../../../data/knowledge/civil-quant.seed.json"
 import civilCommonSenseKnowledge from "../../../data/knowledge/civil-common-sense.seed.json"
+import civilCommonSenseScopeKnowledge from "../../../data/knowledge/civil-common-sense-scope.seed.json"
 import civilShenlunSummaryKnowledge from "../../../data/knowledge/civil-shenlun-summary.seed.json"
 import civilShenlunArgumentKnowledge from "../../../data/knowledge/civil-shenlun-argument.seed.json"
 import civilShenlunImplementationKnowledge from "../../../data/knowledge/civil-shenlun-implementation.seed.json"
@@ -105,6 +106,7 @@ import civilLogicQuestions from "../../../data/questions/civil-logic.seed.json"
 import civilDataAnalysisQuestions from "../../../data/questions/civil-data-analysis.seed.json"
 import civilQuantQuestions from "../../../data/questions/civil-quant.seed.json"
 import civilCommonSenseQuestions from "../../../data/questions/civil-common-sense.seed.json"
+import civilCommonSenseScopeQuestions from "../../../data/questions/civil-common-sense-scope.seed.json"
 import civilShenlunSummaryQuestions from "../../../data/questions/civil-shenlun-summary.seed.json"
 import civilShenlunArgumentQuestions from "../../../data/questions/civil-shenlun-argument.seed.json"
 import civilShenlunImplementationQuestions from "../../../data/questions/civil-shenlun-implementation.seed.json"
@@ -160,6 +162,7 @@ const KNOWLEDGE_SEEDS: KnowledgeSeed[] = [
   withPackId(civilLogicKnowledge as KnowledgeSeed, "civil-logic"),
   withPackId(civilDataAnalysisKnowledge as KnowledgeSeed, "civil-data-analysis"),
   withPackId(civilQuantKnowledge as KnowledgeSeed, "civil-quant"),
+  withPackId(civilCommonSenseScopeKnowledge as KnowledgeSeed, "civil-common-sense-scope"),
   withPackId(civilCommonSenseKnowledge as KnowledgeSeed, "civil-common-sense"),
   withPackId(civilShenlunSummaryKnowledge as KnowledgeSeed, "civil-shenlun-summary"),
   withPackId(civilShenlunArgumentKnowledge as KnowledgeSeed, "civil-shenlun-argument"),
@@ -214,6 +217,7 @@ const QUESTION_SEEDS: QuestionSeed[] = [
   withPackId(civilLogicQuestions as QuestionSeed, "civil-logic"),
   withPackId(civilDataAnalysisQuestions as QuestionSeed, "civil-data-analysis"),
   withPackId(civilQuantQuestions as QuestionSeed, "civil-quant"),
+  withPackId(civilCommonSenseScopeQuestions as QuestionSeed, "civil-common-sense-scope"),
   withPackId(civilCommonSenseQuestions as QuestionSeed, "civil-common-sense"),
   withPackId(civilShenlunSummaryQuestions as QuestionSeed, "civil-shenlun-summary"),
   withPackId(civilShenlunArgumentQuestions as QuestionSeed, "civil-shenlun-argument"),
@@ -244,20 +248,20 @@ function getDsQuestionSeed(): QuestionSeed {
 // ── Happy path ───────────────────────────────────────────────────────────
 
 describe("validateKnowledgePacks — happy path", () => {
-  it("current 51 packs pass validation", async () => {
+  it("current 52 packs pass validation", async () => {
     const result = await validateKnowledgePacks(KNOWLEDGE_SEEDS, QUESTION_SEEDS)
     expect(result.errors).toEqual([])
     expect(result.ok).toBe(true)
   })
 
-  it("summary: 51 packs, 776 nodes, 766 questions", async () => {
+  it("summary: 52 packs, 778 nodes, 768 questions", async () => {
     const result = await validateKnowledgePacks(KNOWLEDGE_SEEDS, QUESTION_SEEDS)
-    expect(result.summary.packCount).toBe(51)
-    expect(result.summary.nodeCount).toBe(776)
-    expect(result.summary.questionCount).toBe(766)
+    expect(result.summary.packCount).toBe(52)
+    expect(result.summary.nodeCount).toBe(778)
+    expect(result.summary.questionCount).toBe(768)
   })
 
-  it("subjectCounts: math=122, cs408=160, physics=41, english=80, politics=80, xingce=25, shenlun=20, programming=8", async () => {
+  it("subjectCounts: math=122, cs408=160, physics=41, english=80, politics=80, xingce=27, shenlun=20, programming=8", async () => {
     const result = await validateKnowledgePacks(KNOWLEDGE_SEEDS, QUESTION_SEEDS)
     expect(result.summary.subjectCounts["math"]).toBe(122)
     expect(result.summary.subjectCounts["cs408"]).toBe(160)
@@ -268,7 +272,7 @@ describe("validateKnowledgePacks — happy path", () => {
     expect(result.summary.subjectCounts["education"]).toBe(60)
     expect(result.summary.subjectCounts["psychology"]).toBe(60)
     expect(result.summary.subjectCounts["lawmaster"]).toBe(60)
-    expect(result.summary.subjectCounts["xingce"]).toBe(25)
+    expect(result.summary.subjectCounts["xingce"]).toBe(27)
     expect(result.summary.subjectCounts["shenlun"]).toBe(20)
     expect(result.summary.subjectCounts["programming"]).toBe(8)
   })
@@ -345,11 +349,11 @@ describe("validateKnowledgePacks — per-pack count mismatch", () => {
   })
 
   it("missing pack seed reports PACK_KNOWLEDGE_SEED_NOT_FOUND error", async () => {
-    // Only pass cs408-ds, all other 50 packs get NOT_FOUND
+    // Only pass cs408-ds, all other 51 packs get NOT_FOUND
     const result = await validateKnowledgePacks([getDsKnowledgeSeed()], [getDsQuestionSeed()])
     const notFoundErrors = result.errors.filter((e) => e.code === "PACK_KNOWLEDGE_SEED_NOT_FOUND")
-    // 50 packs missing knowledge seed
-    expect(notFoundErrors.length).toBe(50)
+    // 51 packs missing knowledge seed
+    expect(notFoundErrors.length).toBe(51)
   })
 })
 

@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1750" viewBox="0 0 1920 1750" role="img" aria-labelledby="seqTitle seqDesc">
+  <title id="seqTitle">TeacherAgent × AlertTime 局域网配对与快照同步时序图</title>
+  <desc id="seqDesc">零信任扫码配对与快照同步、FB-BKT认知追踪、RRF混合检索及闭环自适应决策时序图 (Word完美兼容版)</desc>
+
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgSeqCanvas" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+
+    <!-- Lane Header Gradients -->
+    <linearGradient id="laneStudent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6b21a8"/>
+      <stop offset="100%" stop-color="#9333ea"/>
+    </linearGradient>
+
+    <linearGradient id="laneMobile" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#065f46"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+
+    <linearGradient id="laneDesktop" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+
+    <linearGradient id="laneEngine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c2d12"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+
+    <!-- Phase Headers -->
+    <linearGradient id="phase1Grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#eff6ff"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+
+    <linearGradient id="phase2Grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ecfdf5"/>
+      <stop offset="100%" stop-color="#d1fae5"/>
+    </linearGradient>
+
+    <!-- Marker arrows -->
+    <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M1,1 L7,4 L1,7 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M1,1 L7,4 L1,7 Z" fill="#059669"/>
+    </marker>
+    <marker id="arrowPurple" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M1,1 L7,4 L1,7 Z" fill="#7c3aed"/>
+    </marker>
+    <marker id="arrowAmber" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M1,1 L7,4 L1,7 Z" fill="#d97706"/>
+    </marker>
+
+    <style>
+      .font-main { font-family: "Segoe UI", "Microsoft YaHei", "PingFang SC", -apple-system, sans-serif; }
+      .seq-title { font-weight: 800; font-size: 24px; fill: #0f172a; letter-spacing: -0.5px; }
+      .seq-subtitle { font-weight: 500; font-size: 13px; fill: #475569; }
+      .seq-lane-title { font-weight: 700; font-size: 14.5px; fill: #ffffff; }
+      .seq-lane-sub { font-weight: 500; font-size: 11.5px; fill: #f1f5f9; }
+      .seq-phase-title { font-weight: 800; font-size: 14.5px; fill: #1e3a8a; }
+      .seq-msg-title { font-weight: 600; font-size: 12.5px; fill: #0f172a; }
+      .seq-badge { font-weight: 600; font-size: 11px; }
+      .seq-mono { font-family: Consolas, "Courier New", monospace; font-size: 11px; }
+      .seq-formula { font-family: "Cambria Math", "Times New Roman", serif; font-style: italic; font-size: 12px; fill: #b45309; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1750" fill="url(#bgSeqCanvas)"/>
+
+  <!-- Top Title Banner -->
+  <g transform="translate(60, 24)">
+    <text class="font-main seq-title" x="0" y="24">TeacherAgent × AlertTime 局域网配对与快照同步时序图</text>
+    <text class="font-main seq-subtitle" x="0" y="52">零信任扫码握手 (SPKI Pin) · Schema v2 快照幂等落库 · FB-BKT 认知建模 · RRF 混合检索 · 闭环自适应决策</text>
+    
+    <g transform="translate(1080, 14)">
+      <rect x="0" y="0" width="140" height="24" rx="12" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.2"/>
+      <text class="font-main seq-badge" x="70" y="16" fill="#1d4ed8" text-anchor="middle">TLS 1.2+ / SPKI Pin</text>
+
+      <rect x="150" y="0" width="150" height="24" rx="12" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1.2"/>
+      <text class="font-main seq-badge" x="225" y="16" fill="#047857" text-anchor="middle">10,021 实体 5.6s 落库</text>
+
+      <rect x="310" y="0" width="150" height="24" rx="12" fill="#faf5ff" stroke="#e9d5ff" stroke-width="1.2"/>
+      <text class="font-main seq-badge" x="385" y="16" fill="#6b21a8" text-anchor="middle">端侧单事务原子写</text>
+
+      <rect x="470" y="0" width="140" height="24" rx="12" fill="#fffbeb" stroke="#fde68a" stroke-width="1.2"/>
+      <text class="font-main seq-badge" x="540" y="16" fill="#b45309" text-anchor="middle">学生唯一裁决权</text>
+    </g>
+  </g>
+
+  <!-- ==================== PARTICIPANT LANES (4 LIFELINES) ==================== -->
+  <!-- Lane 1: Student (X=220) -->
+  <g transform="translate(100, 90)">
+    <rect width="240" height="66" rx="10" fill="url(#laneStudent)" stroke="#7c3aed" stroke-width="1.5"/>
+    <text class="font-main seq-lane-title" x="120" y="28" text-anchor="middle">学生 (学习者 / 唯一决策主体)</text>
+    <text class="font-main seq-lane-sub" x="120" y="48" text-anchor="middle">唯一决策主体 · 审阅与采纳</text>
+  </g>
+  <line x1="220" y1="156" x2="220" y2="1640" stroke="#a855f7" stroke-width="2" stroke-dasharray="8 6"/>
+
+  <!-- Lane 2: Mobile (X=650) -->
+  <g transform="translate(530, 90)">
+    <rect width="240" height="66" rx="10" fill="url(#laneMobile)" stroke="#059669" stroke-width="1.5"/>
+    <text class="font-main seq-lane-title" x="120" y="28" text-anchor="middle">AlertTime 手机端 (Android / Room)</text>
+    <text class="font-main seq-lane-sub" x="120" y="48" text-anchor="middle">Android / Room DB / Keystore</text>
+  </g>
+  <line x1="650" y1="156" x2="650" y2="1640" stroke="#10b981" stroke-width="2" stroke-dasharray="8 6"/>
+
+  <!-- Lane 3: Desktop Server (X=1220) -->
+  <g transform="translate(1100, 90)">
+    <rect width="240" height="66" rx="10" fill="url(#laneDesktop)" stroke="#2563eb" stroke-width="1.5"/>
+    <text class="font-main seq-lane-title" x="120" y="28" text-anchor="middle">TeacherAgent 桌面端 (Tauri / Axum)</text>
+    <text class="font-main seq-lane-sub" x="120" y="48" text-anchor="middle">Tauri 2.x / Axum :8787 / SQLite</text>
+  </g>
+  <line x1="1220" y1="156" x2="1220" y2="1640" stroke="#3b82f6" stroke-width="2" stroke-dasharray="8 6"/>
+
+  <!-- Lane 4: Engine (X=1680) -->
+  <g transform="translate(1560, 90)">
+    <rect width="240" height="66" rx="10" fill="url(#laneEngine)" stroke="#d97706" stroke-width="1.5"/>
+    <text class="font-main seq-lane-title" x="120" y="28" text-anchor="middle">密码与认知推理引擎 (Security &amp; AI)</text>
+    <text class="font-main seq-lane-sub" x="120" y="48" text-anchor="middle">Keychain / FB-BKT / RRF RAG</text>
+  </g>
+  <line x1="1680" y1="156" x2="1680" y2="1640" stroke="#f59e0b" stroke-width="2" stroke-dasharray="8 6"/>
+
+  <!-- ==================== PHASE 1: PAIRING (Y = 175 to 680) ==================== -->
+  <g transform="translate(50, 175)">
+    <!-- Phase Box -->
+    <rect width="1820" height="505" rx="12" fill="#ffffff" stroke="#93c5fd" stroke-width="1.8"/>
+    <rect width="1820" height="38" rx="12" fill="url(#phase1Grad)"/>
+    <rect y="24" width="1820" height="14" fill="url(#phase1Grad)"/>
+    <text class="font-main seq-phase-title" x="20" y="25">阶段一 · 局域网零信任扫码配对 (Zero-Trust QR Pairing via SPKI Pinning)</text>
+    <rect x="1560" y="8" width="240" height="22" rx="11" fill="#ffffff" stroke="#bfdbfe"/>
+    <text class="font-main seq-badge" x="1680" y="23" fill="#1d4ed8" text-anchor="middle">无中心 CA · 硬件 KeyStore 保护</text>
+
+    <!-- Step 1.1: Student starts sync service on Desktop -->
+    <g transform="translate(0, 52)">
+      <line x1="220" y1="16" x2="1220" y2="16" stroke="#2563eb" stroke-width="2.2" marker-end="url(#arrowBlue)"/>
+      <rect x="520" y="0" width="400" height="32" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+      <text class="font-main seq-msg-title" x="720" y="21" fill="#1e3a8a" text-anchor="middle">1. 学生在桌面端界面点击「启动同步服务」(Tauri Command)</text>
+    </g>
+
+    <!-- Step 1.2: Desktop asks Engine for Cert Identity -->
+    <g transform="translate(0, 104)">
+      <line x1="1220" y1="16" x2="1680" y2="16" stroke="#d97706" stroke-width="2.2" marker-end="url(#arrowAmber)"/>
+      <rect x="1260" y="0" width="380" height="32" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+      <text class="font-main seq-msg-title" x="1450" y="21" fill="#78350f" text-anchor="middle">2. 请求自签 TLS 1.2+ 证书与 SPKI SHA-256 指纹</text>
+    </g>
+
+    <!-- Step 1.3: Engine returns pin & token -->
+    <g transform="translate(0, 156)">
+      <line x1="1680" y1="16" x2="1220" y2="16" stroke="#d97706" stroke-width="2.2" stroke-dasharray="6 4" marker-end="url(#arrowAmber)"/>
+      <rect x="1235" y="0" width="430" height="32" rx="6" fill="#fefce8" stroke="#fde047" stroke-width="1.2"/>
+      <text class="font-main seq-msg-title" x="1450" y="21" fill="#854d0e" text-anchor="middle">3. 返回证书凭据 + 生成 10分钟一次性高熵 Token (仅存哈希)</text>
+    </g>
+
+    <!-- Step 1.4: Desktop shows QR Code to Student (Height: 52px for 2 lines) -->
+    <g transform="translate(0, 212)">
+      <line x1="1220" y1="26" x2="220" y2="26" stroke="#2563eb" stroke-width="2.2" marker-end="url(#arrowBlue)"/>
+      <rect x="410" y="0" width="620" height="52" rx="8" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+      <text class="font-main" x="720" y="20" font-size="12.5px" font-weight="700" fill="#1e40af" text-anchor="middle">4. 桌面屏幕渲染展示标准配对二维码 (QR Code)</text>
+      <text class="font-main seq-mono" x="720" y="40" fill="#2563eb" text-anchor="middle">ta-sync://v1?host=10.248.148.222&amp;port=8787&amp;pin=[SPKI_Pin]&amp;token=[Token]</text>
+    </g>
+
+    <!-- Step 1.5: Student scans QR with Mobile -->
+    <g transform="translate(0, 282)">
+      <line x1="220" y1="16" x2="650" y2="16" stroke="#7c3aed" stroke-width="2.2" marker-end="url(#arrowPurple)"/>
+      <rect x="245" y="0" width="380" height="32" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+      <text class="font-main seq-msg-title" x="435" y="21" fill="#581c87" text-anchor="middle">5. 学生使用 AlertTime 摄像头扫码解析服务地址与 Pin</text>
+    </g>
+
+    <!-- Step 1.6: Mobile initiates TLS Handshake with Pinning -->
+    <g transform="translate(0, 334)">
+      <rect x="480" y="0" width="340" height="32" rx="6" fill="#ecfdf5" stroke="#10b981" stroke-width="1.5"/>
+      <text class="font-main" x="650" y="21" font-size="12px" font-weight="700" fill="#065f46" text-anchor="middle">6. 注入 TrustManager: 仅信任二维码中的 SPKI Pin</text>
+    </g>
+
+    <!-- Step 1.7: Mobile sends POST /v1/pair -->
+    <g transform="translate(0, 386)">
+      <line x1="650" y1="16" x2="1220" y2="16" stroke="#059669" stroke-width="2.2" marker-end="url(#arrowTeal)"/>
+      <rect x="705" y="0" width="460" height="32" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1.2"/>
+      <text class="font-main seq-msg-title" x="935" y="21" fill="#14532d" text-anchor="middle">7. POST /v1/pair (TLS 加密传输一次性 Token + deviceId)</text>
+    </g>
+
+    <!-- Step 1.8: Desktop verifies and returns pairAck -->
+    <g transform="translate(0, 438)">
+      <line x1="1220" y1="16" x2="650" y2="16" stroke="#2563eb" stroke-width="2.2" marker-end="url(#arrowBlue)"/>
+      <rect x="690" y="0" width="490" height="32" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.2"/>
+      <text class="font-main seq-msg-title" x="935" y="21" fill="#1e3a8a" text-anchor="middle">8. 验签 Token 并登记 sync_devices，返回 200 OK pairAck (下发 Bearer)</text>
+    </g>
+
+    <!-- Step 1.9: Mobile saves credential in Keystore -->
+    <g transform="translate(0, 488)">
+      <rect x="470" y="-3" width="360" height="26" rx="4" fill="#dcfce7" stroke="#86efac" stroke-width="1.2"/>
+      <text class="font-main seq-mono" x="650" y="14" fill="#166534" text-anchor="middle">9. Bearer 凭据写入 Android Keystore 硬件保护，配对成功</text>
+    </g>
+  </g>
+
+  <!-- ==================== PHASE 2: SYNC & DECISION (Y = 705 to 1640) ==================== -->
+  <g transform="translate(50, 705)">
+    <!-- Phase Box -->
+    <rect width="1820" height="925" rx="12" fill="#ffffff" stroke="#6ee7b7" stroke-width="1.8"/>
+    <rect width="1820" height="38" rx="12" fill="url(#phase2Grad)"/>
+    <rect y="24" width="1820" height="14" fill="url(#phase2Grad)"/>
+    <text class="font-main seq-phase-title" x="20" y="25" fill="#065f46">阶段二 · 快照同步上报、认知模型更新与建议决策闭环 (Snapshot Sync, FB-BKT &amp; Closed-Loop)</text>
+    <rect x="1500" y="8" width="300" height="22" rx="11" fill="#ffffff" stroke="#a7f3d0"/>
+    <text class="font-main seq-badge" x="1650" y="23" fill="#047857" text-anchor="middle">快照重放幂等 · Keyset 分页 · Room 单事务原子写</text>
+
+    <!-- Step 2.1: Trigger Event -->
+    <g transform="translate(0, 48)">
+      <rect x="460" y="0" width="380" height="32" rx="6" fill="#fef3c7" stroke="#fde68a" stroke-width="1.2"/>
+      <text class="font-main seq-msg-title" x="650" y="21" fill="#92400e" text-anchor="middle">10. 触发同步：日常学习会话结束 或 捕获分心切屏事件</text>
+    </g>
+
+    <!-- Step 2.2: Mobile builds Schema v2 Snapshot (Height: 52px for 2 lines) -->
+    <g transform="translate(0, 96)">
+      <rect x="410" y="0" width="480" height="52" rx="6" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1.5"/>
+      <text class="font-main" x="650" y="20" font-size="12px" font-weight="700" fill="#065f46" text-anchor="middle">11. Room 只读事务导出 10,021 实体全量快照 (Schema v2)</text>
+      <text class="font-main seq-mono" x="650" y="40" fill="#047857" text-anchor="middle">端侧聚合计算有效专注率 R_focus 与分心计数 N_distract</text>
+    </g>
+
+    <!-- Step 2.3: POST /v1/snapshots -->
+    <g transform="translate(0, 164)">
+      <line x1="650" y1="16" x2="1220" y2="16" stroke="#059669" stroke-width="2.2" marker-end="url(#arrowTeal)"/>
+      <rect x="690" y="0" width="490" height="32" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1.2"/>
+      <text class="font-main seq-msg-title" x="935" y="21" fill="#14532d" text-anchor="middle">12. POST /v1/snapshots (带 Bearer 鉴权、snapshotId 与全量快照)</text>
+    </g>
+
+    <!-- Step 2.4: Desktop verifies idempotency & writes SQLite -->
+    <g transform="translate(0, 214)">
+      <rect x="990" y="0" width="460" height="32" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.2"/>
+      <text class="font-main seq-msg-title" x="1220" y="21" fill="#1e3a8a" text-anchor="middle">13. 校验 snapshotId 幂等性，开启 SQLite 事务原子落库 (实测 5.6s)</text>
+    </g>
+
+    <!-- Step 2.5: Desktop returns snapshotAck -->
+    <g transform="translate(0, 264)">
+      <line x1="1220" y1="16" x2="650" y2="16" stroke="#059669" stroke-width="2.2" marker-end="url(#arrowTeal)"/>
+      <rect x="735" y="0" width="400" height="32" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1.2"/>
+      <text class="font-main seq-msg-title" x="935" y="21" fill="#14532d" text-anchor="middle">14. 200 OK snapshotAck (回显 snapshotId 确认接收)</text>
+    </g>
+
+    <!-- Step 2.6: Background AI Pipeline (Desktop -> Engine) -->
+    <g transform="translate(0, 314)">
+      <line x1="1220" y1="16" x2="1680" y2="16" stroke="#d97706" stroke-width="2.2" marker-end="url(#arrowAmber)"/>
+      <rect x="1230" y="0" width="440" height="32" rx="6" fill="#fffbeb" stroke="#fde68a" stroke-width="1.2"/>
+      <text class="font-main seq-msg-title" x="1450" y="21" fill="#92400e" text-anchor="middle">15. 触发后台异步推理：传入聚合行为特征 R_focus 与 N_distract</text>
+    </g>
+
+    <!-- Step 2.7: Detailed Cognitive & RAG Box in Engine (Height: 180px, Spacious Line Deltas) -->
+    <g transform="translate(0, 362)">
+      <rect x="1465" y="0" width="430" height="180" rx="8" fill="#fffdfa" stroke="#f59e0b" stroke-width="1.8"/>
+      <text class="font-main" x="1480" y="24" font-size="12.5px" font-weight="700" fill="#92400e">[认知诊断与私有检索流水线内部执行]</text>
+      
+      <text class="font-main seq-formula" x="1480" y="52">16a. FB-BKT 先验衰减: P(L_t⁻) = P(L_{t-1}) · exp(-λ · Δt)</text>
+      <text class="font-main seq-formula" x="1480" y="78">16b. FB-BKT 专注调节: P_T' = P_T · (1 + α·R_focus / (1+β·N_distract))</text>
+      <text class="font-main" x="1480" y="104" font-size="11.5px" fill="#78350f">16c. 观测后验掌握度更新: P(L_t|Y_t) → P(L_t) 判定薄弱知识点</text>
+      <text class="font-main seq-formula" x="1480" y="130">16d. RRF 混合检索: RRF(d) = Σ [ 1 / (60 + rank_m(d)) ] 召回教辅材料</text>
+      <text class="font-main" x="1480" y="156" font-size="11.5px" font-weight="700" fill="#b45309">16e. PlannerAgent: 拟定自适应周目标与任务调整建议稿 (Proposal)</text>
+    </g>
+
+    <!-- Step 2.8: Engine returns proposal to Desktop -->
+    <g transform="translate(0, 560)">
+      <line x1="1680" y1="16" x2="1220" y2="16" stroke="#d97706" stroke-width="2.2" stroke-dasharray="6 4" marker-end="url(#arrowAmber)"/>
+      <rect x="1220" y="0" width="460" height="32" rx="6" fill="#fffbeb" stroke="#fde68a" stroke-width="1.2"/>
+      <text class="font-main seq-msg-title" x="1450" y="21" fill="#92400e" text-anchor="middle">17. 建议稿存入 SQLite sync_proposals 表 (桌面绝不越权强写手机)</text>
+    </g>
+
+    <!-- Step 2.9: Mobile pulls proposals via GET -->
+    <g transform="translate(0, 610)">
+      <line x1="650" y1="16" x2="1220" y2="16" stroke="#2563eb" stroke-width="2.2" marker-end="url(#arrowBlue)"/>
+      <rect x="745" y="0" width="380" height="32" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.2"/>
+      <text class="font-main seq-msg-title" x="935" y="21" fill="#1e40af" text-anchor="middle">18. GET /v1/proposals?cursor=... (基于 Keyset 游标拉取建议)</text>
+    </g>
+
+    <!-- Step 2.10: Desktop returns proposals -->
+    <g transform="translate(0, 660)">
+      <line x1="1220" y1="16" x2="650" y2="16" stroke="#2563eb" stroke-width="2.2" marker-end="url(#arrowBlue)"/>
+      <rect x="710" y="0" width="450" height="32" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.2"/>
+      <text class="font-main seq-msg-title" x="935" y="21" fill="#1e40af" text-anchor="middle">19. 200 OK 返回 proposal 建议列表与 nextCursor 分页游标</text>
+    </g>
+
+    <!-- Step 2.11: Mobile presents Proposal to Student -->
+    <g transform="translate(0, 710)">
+      <line x1="650" y1="16" x2="220" y2="16" stroke="#7c3aed" stroke-width="2.2" marker-end="url(#arrowPurple)"/>
+      <rect x="235" y="0" width="400" height="32" rx="6" fill="#faf5ff" stroke="#e9d5ff" stroke-width="1.2"/>
+      <text class="font-main seq-msg-title" x="435" y="21" fill="#581c87" text-anchor="middle">20. 弹出 TeacherSyncDialog 审阅对话框展示补弱建议</text>
+    </g>
+
+    <!-- Step 2.12: Student makes explicit decision -->
+    <g transform="translate(0, 760)">
+      <line x1="220" y1="16" x2="650" y2="16" stroke="#7c3aed" stroke-width="2.2" marker-end="url(#arrowPurple)"/>
+      <rect x="245" y="0" width="380" height="32" rx="6" fill="#faf5ff" stroke="#e9d5ff" stroke-width="1.2"/>
+      <text class="font-main seq-msg-title" x="435" y="21" fill="#581c87" text-anchor="middle">21. 学生行使唯一裁决权：明确点击「采纳 (Accept)」</text>
+    </g>
+
+    <!-- Step 2.13: Mobile writes Room in SINGLE ATOMIC TRANSACTION -->
+    <g transform="translate(0, 804)">
+      <rect x="420" y="0" width="460" height="30" rx="4" fill="#d1fae5" stroke="#10b981" stroke-width="1.5"/>
+      <text class="font-main" x="650" y="20" font-size="11.5px" font-weight="700" fill="#065f46" text-anchor="middle">[核心保障] 单 Room 事务原子创建周目标与全部关联任务 (ACID)</text>
+    </g>
+
+    <!-- Step 2.14: Mobile POST /v1/proposal-decisions -->
+    <g transform="translate(0, 846)">
+      <line x1="650" y1="16" x2="1220" y2="16" stroke="#059669" stroke-width="2.2" marker-end="url(#arrowTeal)"/>
+      <rect x="705" y="0" width="460" height="32" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1.2"/>
+      <text class="font-main seq-msg-title" x="935" y="21" fill="#14532d" text-anchor="middle">22. POST /v1/proposal-decisions (回传采纳决策与执行结果)</text>
+    </g>
+
+    <!-- Step 2.15: Desktop updates SQLite and acknowledges -->
+    <g transform="translate(0, 896)">
+      <line x1="1220" y1="16" x2="650" y2="16" stroke="#2563eb" stroke-width="2.2" marker-end="url(#arrowBlue)"/>
+      <rect x="735" y="0" width="400" height="32" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.2"/>
+      <text class="font-main seq-msg-title" x="935" y="21" fill="#1e3a8a" text-anchor="middle">23. 更新 SQLite 归档建议，返回 200 OK decisionAck (闭环完成)</text>
+    </g>
+  </g>
+
+  <!-- ==================== BOTTOM SECURITY & FAULT TOLERANCE FOOTER ==================== -->
+  <g transform="translate(50, 1650)">
+    <rect width="1820" height="74" rx="10" fill="#1e293b"/>
+    <text class="font-main" x="20" y="26" fill="#38bdf8" font-size="12px" font-weight="700">[生产级安全与容错底座]</text>
+    <text class="font-main" x="20" y="46" fill="#e2e8f0" font-size="11.5px">
+      ① 扫码一次性高熵 Token 防重放； ② 移动端公钥固定 (SPKI Pin) 抵御中间人劫持； ③ 长期 Bearer 凭据硬件级保存在 Android Keystore； ④ 桌面 TLS 私钥存系统 Keychain；
+    </text>
+    <text class="font-main" x="20" y="66" fill="#94a3b8" font-size="11.5px">
+      ⑤ 快照上报基于 snapshotId 保证完全幂等； ⑥ 移动端执行单事务写入保证 ACID 一致性； ⑦ 桌面端严守只读与建议边界，绝不越权篡改学生手机日常计划。
+    </text>
+  </g>
+
+</svg>

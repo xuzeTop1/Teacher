@@ -47,7 +47,7 @@ describe("documentImport store", () => {
     })
 
     const firstInstance = useDocumentImportStore()
-    await firstInstance.selectAndPreviewFile()
+    await firstInstance.selectAndPreviewFile("math")
 
     const remountedInstance = useDocumentImportStore()
     expect(remountedInstance.previews).toHaveLength(1)
@@ -78,8 +78,8 @@ describe("documentImport store", () => {
       })
 
     const store = useDocumentImportStore()
-    await store.selectAndPreviewFile()
-    await store.selectAndPreviewFile()
+    await store.selectAndPreviewFile("math")
+    await store.selectAndPreviewFile("math")
 
     expect(store.previews).toHaveLength(1)
     expect(store.previews[0].preview.fileName).toBe("first.pdf")
@@ -91,7 +91,7 @@ describe("documentImport store", () => {
     vi.mocked(pickDocumentFile).mockResolvedValue({ selected: false })
 
     const store = useDocumentImportStore()
-    await store.selectAndPreviewFile()
+    await store.selectAndPreviewFile("math")
 
     expect(store.previews).toHaveLength(0)
     expect(store.error).toBeNull()
@@ -100,8 +100,8 @@ describe("documentImport store", () => {
 
   it("removes and clears previews explicitly", () => {
     const store = useDocumentImportStore()
-    store.previews.push({ id: 1, preview: makePreview("first.pdf"), importStatus: "idle" })
-    store.previews.push({ id: 2, preview: makePreview("second.docx"), importStatus: "idle" })
+    store.previews.push({ id: 1, preview: makePreview("first.pdf"), subjectCode: "math", importStatus: "idle" })
+    store.previews.push({ id: 2, preview: makePreview("second.docx"), subjectCode: "math", importStatus: "idle" })
 
     store.removePreview(1)
     expect(store.previews.map((p) => p.id)).toEqual([2])
@@ -139,7 +139,7 @@ describe("documentImport store", () => {
     ])
 
     const store = useDocumentImportStore()
-    store.previews.push({ id: 1, preview: makePreview("test.pdf"), importStatus: "idle" })
+    store.previews.push({ id: 1, preview: makePreview("test.pdf"), subjectCode: "politics", importStatus: "idle" })
 
     const result = await store.confirmImport(1, "politics")
     expect(result).toBe(true)
@@ -252,6 +252,7 @@ describe("documentImport store", () => {
       store.previews.push({
         id: 1,
         preview: makePreview("test.pdf"),
+        subjectCode: "math",
         importStatus: "imported",
         importedDocId: "doc-del-001"
       })
@@ -260,6 +261,91 @@ describe("documentImport store", () => {
 
       expect(store.previews[0].importStatus).toBe("idle")
       expect(store.previews[0].importedDocId).toBeUndefined()
+    })
+  })
+
+  // 回归：预览区原先与学科无关，导致"在学科 A 导入后切到 B，预览仍在，
+  // 需要手动刷新"；更严重的是确认时按当前学科入库，同一份文档会落进两个学科。
+  describe("subject-scoped previews（切学科刷新）", () => {
+    const mockPick = async () => {
+      const { pickDocumentFile, importAndPreview } = await import(
+        "../services/document/documentImportService"
+      )
+      vi.mocked(pickDocumentFile).mockResolvedValue({
+        selected: true,
+        filePath: "D:\\docs\\math.pdf",
+        fileName: "math.pdf"
+      })
+      vi.mocked(importAndPreview).mockResolvedValue({
+        ok: true,
+        preview: makePreview("math.pdf")
+      })
+    }
+
+    it("tags each preview with the subject it was parsed under", async () => {
+      await mockPick()
+      const store = useDocumentImportStore()
+
+      await store.selectAndPreviewFile("math")
+
+      expect(store.previews).toHaveLength(1)
+      expect(store.previews[0].subjectCode).toBe("math")
+    })
+
+    it("drops previews that belong to another subject", async () => {
+      await mockPick()
+      const store = useDocumentImportStore()
+
+      await store.selectAndPreviewFile("math")
+      expect(store.previews).toHaveLength(1)
+
+      // 切到物理：数学的预览必须消失
+      store.dropPreviewsForOtherSubjects("physics")
+      expect(store.previews).toHaveLength(0)
+
+      // 切回来不应把已丢弃的预览找回来
+      store.dropPreviewsForOtherSubjects("math")
+      expect(store.previews).toHaveLength(0)
+    })
+
+    it("keeps previews of the current subject when switching back to it", async () => {
+      await mockPick()
+      const store = useDocumentImportStore()
+
+      await store.selectAndPreviewFile("math")
+      store.dropPreviewsForOtherSubjects("math")
+
+      expect(store.previews).toHaveLength(1)
+    })
+
+    it("imports a preview into its own subject even if the caller passes another one", async () => {
+      const { confirmImportToDraft } = await import("../services/document/privateDocumentService")
+      vi.mocked(confirmImportToDraft).mockResolvedValue({
+        id: "doc-math-1",
+        fileName: "math.pdf",
+        fileType: "pdf",
+        title: "math.pdf",
+        subjectCode: "math",
+        sourceType: "private_user_import",
+        status: "draft",
+        chunkCount: 3,
+        createdAt: "2026-09-15T00:00:00Z"
+      })
+      mockListImportedDocuments.mockResolvedValue([])
+
+      const store = useDocumentImportStore()
+      store.previews.push({
+        id: 1,
+        preview: makePreview("math.pdf"),
+        subjectCode: "math",
+        importStatus: "idle"
+      })
+
+      // 模拟"切学科后误点确认"：调用方传了别的学科，但必须按预览自身的学科入库
+      await store.confirmImport(1, "physics")
+
+      expect(confirmImportToDraft).toHaveBeenCalledWith(expect.anything(), "math")
+      expect(mockListImportedDocuments).toHaveBeenCalledWith("math")
     })
   })
 })

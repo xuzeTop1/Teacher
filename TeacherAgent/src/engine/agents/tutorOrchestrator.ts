@@ -29,7 +29,7 @@ import {
 import { formatPlannerResult, planNextLearningStep, shouldTriggerPlanner } from "./plannerAgent"
 import { selectSocraticStrategy, type SocraticDecision } from "./socraticAgent"
 import { runToolAgent, type RecentPrivateDocumentRef, type ToolAgentResult, isToolDebugMode } from "./toolAgent"
-import { buildTutorPrompt, type TutorMode, type TutorPromptMessage } from "../prompts/tutorPromptBuilder"
+import { buildTutorPrompt, withoutPrivateDocuments, type TutorMode, type TutorPromptMessage } from "../prompts/tutorPromptBuilder"
 import type { ChatAttachment } from "../../types/chat"
 
 export interface TutorTurnInput {
@@ -388,12 +388,12 @@ export class TutorOrchestrator {
     const shouldSendPrivateDocs = isLocal || privacy?.sendPrivateDocumentContextToCloud === true
 
     // Filter knowledge context to remove private document nodes if not authorized for cloud
+    // 扣留私有资料时连同 topic 与 notes 一起剥：只过滤 nodes 会把文档标题
+    // （topic 由全部节点标题拼成）和"本轮已检索到用户本地私有资料"这条 notes
+    // 原样发到云端。
     let knowledgeContext = ctx.toolAgentResult.knowledgeContext
     if (!shouldSendPrivateDocs && knowledgeContext) {
-      const filteredNodes = knowledgeContext.nodes.filter((n) => n.sourceType !== "private_document")
-      if (filteredNodes.length !== knowledgeContext.nodes.length) {
-        knowledgeContext = { ...knowledgeContext, nodes: filteredNodes }
-      }
+      knowledgeContext = withoutPrivateDocuments(knowledgeContext)
     }
 
     return buildTutorPrompt({

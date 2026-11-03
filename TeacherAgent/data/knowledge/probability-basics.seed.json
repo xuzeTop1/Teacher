@@ -1,7 +1,7 @@
 {
   "subject": "math",
   "course": "probability",
-  "status": "draft",
+  "status": "approved",
   "nodes": [
     {
       "id": "prob-sample-space",

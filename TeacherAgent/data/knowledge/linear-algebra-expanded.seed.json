@@ -2,7 +2,7 @@
   "subject": "math",
   "course": "linear_algebra",
   "chapter": "linear-algebra-expanded",
-  "status": "draft",
+  "status": "approved",
   "nodes": [
     {
       "id": "la-matrix-rank",
@@ -197,7 +197,7 @@
       ],
       "misconceptions": [
         "认为所有矩阵都可对角化——不是所有矩阵都有足够的线性无关特征向量",
-        "把 $P$和 $P^{-1}$的位置搞反$——A = PDP^{-1}$不是 $A = P^{-1}DP$",
+        "把 $P$和 $P^{-1}$的位置搞反——$A = PDP^{-1}$不是 $A = P^{-1}DP$",
         "忘记对角化后计算 $A^n$比直接计算容易得多"
       ],
       "socraticHints": [

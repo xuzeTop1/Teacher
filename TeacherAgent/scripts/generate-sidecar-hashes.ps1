@@ -71,9 +71,24 @@ if ($missing.Count -gt 0) {
 
 # Write the authoritative bundled manifest and its colocated development copy.
 # Runtime verification always finds a manifest beside the resolved executable.
-$manifestJson = $manifest | ConvertTo-Json
-$manifestJson | Set-Content -Path $outputPath -Encoding UTF8
-$manifestJson | Set-Content -Path $developmentManifestPath -Encoding UTF8
+#
+# IMPORTANT: must be UTF-8 **without BOM**. Windows PowerShell 5.1's
+# `Set-Content -Encoding UTF8` emits a BOM, and serde_json rejects a leading BOM,
+# which makes the app fail with "sidecar 完整性校验失败：manifest 格式无效".
+# Use the .NET API with an explicit non-BOM encoder instead.
+$manifestJson = ($manifest | ConvertTo-Json) + "`r`n"   # 末尾补换行，避免 diff 出现 "\ No newline at end of file"
+$utf8NoBom = New-Object System.Text.UTF8Encoding($false)
+[System.IO.File]::WriteAllText($outputPath, $manifestJson, $utf8NoBom)
+[System.IO.File]::WriteAllText($developmentManifestPath, $manifestJson, $utf8NoBom)
+
+# Defensive check: fail loudly if a BOM ever sneaks back in.
+foreach ($written in @($outputPath, $developmentManifestPath)) {
+    $bytes = [System.IO.File]::ReadAllBytes($written)
+    if ($bytes.Length -ge 3 -and $bytes[0] -eq 0xEF -and $bytes[1] -eq 0xBB -and $bytes[2] -eq 0xBF) {
+        Write-Error "BOM detected in $written - the runtime manifest parser will reject this file."
+        exit 1
+    }
+}
 Write-Host ""
 Write-Host "Manifest written to: $outputPath" -ForegroundColor Green
 Write-Host "Development manifest written to: $developmentManifestPath" -ForegroundColor Green

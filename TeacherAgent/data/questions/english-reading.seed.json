@@ -1,7 +1,7 @@
 {
   "subject": "english",
   "chapter": "english-reading",
-  "status": "draft",
+  "status": "approved",
   "questions": [
     {
       "id": "eng-reading-q-001",
@@ -37,7 +37,7 @@
         "sourceType": "practice",
         "note": "基于练习设计，考查作者态度题解题技巧。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "通读段落，识别作者评价性词汇：\"I believe it lacks...\"表明作者对在线教育持负面看法。",
         "排除A（supportive与lacks矛盾）；C（objective需要正反两面，此处只有批评）；D（indifferent漠不关心，但作者明确表态）。",
@@ -79,10 +79,10 @@
         "sourceType": "practice",
         "note": "基于练习设计，考查细节推理题的同义替换技巧。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "定位关键信息：\"profits increased by 20%\"和\"This growth is largely due to the new marketing strategy\"。",
-        "因果关系：利润增长$\\to$归功于新营销策略，选项$B$与此一致。",
+        "因果关系：利润增长→归功于新营销策略，选项B与此一致。",
         "排除A（profits decreased与原文increased矛盾）；C（CEO被解雇无依据）；D（definitely过度推断，原文只说去年）。"
       ],
       "content": "根据下面段落，可以推断什么？\n\n\"The company's profits increased by 20% last year. This growth is largely due to the new marketing strategy implemented by the CEO.\"\n\n(A) The company's profits decreased last year.\n(B) The new marketing strategy contributed to the profit increase.\n(C) The CEO was fired because of poor performance.\n(D) The company will definitely perform better next year."
@@ -121,7 +121,7 @@
         "sourceType": "practice",
         "note": "基于练习设计，考查段落主旨题提取方法。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "通读段落，识别结构：先讲优点（flexibility and convenience），再讲缺点（drawbacks），用However转折。",
         "标题应概括全文，不能只覆盖部分内容。",
@@ -163,7 +163,7 @@
         "sourceType": "practice",
         "note": "基于练习设计，考查词义猜测题的定义解释法。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "定位解释性信息：\"Anthropology, the study of human beings and their cultures\"，逗号后是同位语解释。",
         "同位语直接给出定义：研究人类及其文化的学科=人类学。",
@@ -205,7 +205,7 @@
         "sourceType": "practice",
         "note": "基于练习设计，考查例证题解题思路。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "识别例证关系：\"For example\"引出的例子服务于前面的论点句。",
         "论点句：\"Reading is essential for personal growth\"（阅读对个人成长至关重要）。",
@@ -247,7 +247,7 @@
         "sourceType": "practice",
         "note": "基于练习设计，考查句子理解题解题方法。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "理解句子含义：\"The river is not the same as it was\"=河流和以前不一样了。",
         "结合常识推断：河流\"不一样了\"最可能指环境变化（污染）。",
@@ -289,7 +289,7 @@
         "sourceType": "practice",
         "note": "基于练习设计，考查段落功能题解题方法。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "分析段落功能：Para 2引用研究数据（70% of students），为Para 1的论点提供证据支持。",
         "\"A recent study shows...\"是典型的论据引出方式。",
@@ -331,7 +331,7 @@
         "sourceType": "practice",
         "note": "基于练习设计，考查观点定位题解题方法。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "定位Nick Francis的观点：\"argues that businesses should prioritize social impact over profit\"。",
         "直接引用：\"Profit is not the only measure of success\"进一步支持其立场。",
@@ -353,7 +353,7 @@
       "hints": [
         {
           "level": "L1",
-          "text": "先读各段主题：Para 1是问题，Para $2-3$是分析，Para 4是解决"
+          "text": "先读各段主题：Para 1是问题，Para 2-3是分析，Para 4是解决"
         },
         {
           "level": "L2",
@@ -373,13 +373,13 @@
         "sourceType": "practice",
         "note": "基于练习设计，考查文章结构题解题方法。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
-        "分析文章结构：Para 1提出问题，Para $2-3$分析问题，Para 4解决问题。",
+        "分析文章结构：Para 1提出问题，Para 2-3分析问题，Para 4解决问题。",
         "对照选项：这是典型的\"问题-分析-解决\"结构。",
         "选B；A（现象-解释-评价）缺解决方案；C（对立观点）无正反对比；D（时间顺序）无时间线索。"
       ],
-      "content": "阅读下面文章结构，判断文章是如何组织的？Para 1:提出问题（Problem）Para $2-3:$分析问题（Analysis）Para 4:解决问题（Solution）$(A)$现象-解释-评价$(B)$提出问题-分析问题-解决问题$(C)$对立观点对比$(D)$时间顺序"
+      "content": "阅读下面文章结构，判断文章是如何组织的？Para 1:提出问题（Problem）Para 2-3:分析问题（Analysis）Para 4:解决问题（Solution）(A) 现象-解释-评价\n(B) 提出问题-分析问题-解决问题\n(C) 对立观点对比\n(D) 时间顺序"
     },
     {
       "id": "eng-reading-q-010",
@@ -415,7 +415,7 @@
         "sourceType": "practice",
         "note": "基于练习设计，考查因果关系题解题方法。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "定位因果关系：\"because it improves productivity\"直接给出原因。",
         "后文补充：\"leads to higher efficiency\"进一步印证。",
@@ -457,7 +457,7 @@
         "sourceType": "practice",
         "note": "基于练习设计，考查文章基调题解题方法。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "识别态度词：\"nothing but a disaster\"（完全是灾难）、\"fails to address\"（未能解决）、\"no idea what they are doing\"（毫无头绪）。",
         "这些词汇都是强烈的批评性表达。",
@@ -499,7 +499,7 @@
         "sourceType": "practice",
         "note": "基于练习设计，考查小标题匹配题解题方法。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "段落核心内容：improve vocabulary、enhances critical thinking and writing skills、broadens perspective。",
         "这三点都是阅读的好处，应选概括性标题。",
@@ -541,7 +541,7 @@
         "sourceType": "practice",
         "note": "基于练习设计，考查推理题的细分类型。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "分析推理过程：原文说\"losing money for 3 years\"和\"fired 100 employees\"，需要推导出\"financial trouble\"。",
         "原文没有直接说\"in financial trouble\"，需要通过两个事实间接推断。",
@@ -583,10 +583,10 @@
         "sourceType": "practice",
         "note": "基于练习设计，考查时间线索定位技巧。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "定位时间线索：\"In [year], it expanded to Europe\"中空缺处应填时间。",
-        "原文按时间顺序：1990年创立$\\to$某年扩展到欧洲$\\to$现在20个国家。",
+        "原文按时间顺序：1990年创立→某年扩展到欧洲→现在20个国家。",
         "选B（In [year]）；A（1990是创立时间）；C（Nowadays是现在状态）；D（原文有提及）。"
       ],
       "content": "阅读下面段落，找到时间线索：\n\n\"The company was founded in 1990. In , it expanded to Europe. Nowadays, it has offices in 20 countries.\"\n\n问：When did the company expand to Europe?\n\n(A) In 1990\n(B) In \n(C) Nowadays\n(D) Not mentioned"
@@ -625,7 +625,7 @@
         "sourceType": "practice",
         "note": "基于练习设计，考查数字信息定位技巧。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "定位数字信息：\"30% of students prefer online courses\"。",
         "直接从原文提取数据：30%。",
@@ -667,7 +667,7 @@
         "sourceType": "practice",
         "note": "基于练习设计，考查专有名词定位技巧。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "定位同位语解释：\"GDP, or Gross Domestic Product\"中or后面是全称。",
         "GDP= Gross Domestic Product（国内生产总值）。",
@@ -697,7 +697,7 @@
         },
         {
           "level": "L3",
-          "text": "$some \\to$all，这是以偏概全的干扰项"
+          "text": "some →all，这是以偏概全的干扰项"
         }
       ],
       "knowledgeNodeIds": [
@@ -709,13 +709,13 @@
         "sourceType": "practice",
         "note": "基于练习设计，考查干扰项特征分析。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "对比原文和选项：原文说\"Some students\"，选项说\"All students\"。",
-        "$some\\to$all是以偏概全的典型错误：部分$\\to$整体的不当推广。",
-        "选$B$（以偏概全）；$A$（some$\\neq$all不是同义替换）；$C$（偷换概念是替换关键词）；$D$（过度推断是夸大程度）。"
+        "some→all是以偏概全的典型错误：部分→整体的不当推广。",
+        "选B（以偏概全）；A（some≠all不是同义替换）；C（偷换概念是替换关键词）；D（过度推断是夸大程度）。"
       ],
-      "content": "阅读下面段落，识别干扰项（以偏概全）：原文：\"Some students like online education because of its flexibility.\"选项：\"All students like online education$.\"\n\n(A)$正确，是对原文的同义替换$(B)$错误，是以偏概全（some $\\to$all）$(C)$错误，是偷换概念$(D)$错误，是过度推断"
+      "content": "阅读下面段落，识别干扰项（以偏概全）：原文：\"Some students like online education because of its flexibility.\"选项：\"All students like online education.\"\n\n(A)正确，是对原文的同义替换\n(B) 错误，是以偏概全（some →all）\n(C) 错误，是偷换概念\n(D) 错误，是过度推断"
     },
     {
       "id": "eng-reading-q-018",
@@ -739,7 +739,7 @@
         },
         {
           "level": "L3",
-          "text": "$profits \\neq$sales，这是偷换概念"
+          "text": "profits ≠sales，这是偷换概念"
         }
       ],
       "knowledgeNodeIds": [
@@ -751,11 +751,11 @@
         "sourceType": "practice",
         "note": "基于练习设计，考查干扰项特征分析。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "对比原文和选项：原文说\"profits\"（利润），选项说\"sales\"（销售额）。",
         "profits和sales是不同概念：利润=收入-成本，销售额=总收入。",
-        "选$B$（偷换概念）；$A$（profits$\\neq$sales不是同义词）；$C$（以偏概全是数量词替换）；$D$（因果倒置是因果关系互换）。"
+        "选B（偷换概念）；A（profits≠sales不是同义词）；C（以偏概全是数量词替换）；D（因果倒置是因果关系互换）。"
       ],
       "content": "阅读下面段落，识别干扰项（偷换概念）：\n\n原文：\"The company increased its profits by 20%.\"\n选项：\"The company increased its sales by 20%.\"\n\n(A) 正确，profits和sales是同义词\n(B) 错误，是偷换概念（profits利润 vs sales销售额）\n(C) 错误，是以偏概全\n(D) 错误，是因果倒置"
     },
@@ -781,7 +781,7 @@
         },
         {
           "level": "L3",
-          "text": "$may \\to$definitely，这是过度推断"
+          "text": "may →definitely，这是过度推断"
         }
       ],
       "knowledgeNodeIds": [
@@ -793,13 +793,13 @@
         "sourceType": "practice",
         "note": "基于练习设计，考查干扰项特征分析。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "对比原文和选项：原文说\"suggests\"和\"may\"，选项说\"proves\"和\"definitely\"。",
-        "$suggests\\to$proves（推测$\\to$确证）和may$\\to$definitely（可能$\\to$一定）都是程度升级。",
-        "选$B$（过度推断）；$A$（may$\\neq$definitely不是同义替换）；$C$（以偏概全是数量问题）；$D$（偷换概念是替换关键词）。"
+        "suggests→proves（推测→确证）和may→definitely（可能→一定）都是程度升级。",
+        "选B（过度推断）；A（may≠definitely不是同义替换）；C（以偏概全是数量问题）；D（偷换概念是替换关键词）。"
       ],
-      "content": "阅读下面段落，识别干扰项（过度推断）：原文：\"The study suggests that exercise may improve mental health.\"选项：\"The study proves that exercise will definitely improve mental health$.\"\n\n(A)$正确，是对原文的同义替换$(B)$错误，是过度推断（may $\\to$definitely）$(C)$错误，是以偏概全$(D)$错误，是偷换概念"
+      "content": "阅读下面段落，识别干扰项（过度推断）：原文：\"The study suggests that exercise may improve mental health.\"选项：\"The study proves that exercise will definitely improve mental health.\"\n\n(A)正确，是对原文的同义替换\n(B) 错误，是过度推断（may →definitely）\n(C) 错误，是以偏概全\n(D) 错误，是偷换概念"
     },
     {
       "id": "eng-reading-q-020",
@@ -835,7 +835,7 @@
         "sourceType": "practice",
         "note": "基于练习设计，考查信息匹配题解题方法。"
       },
-      "status": "draft",
+      "status": "approved",
       "solutionSteps": [
         "分析段落内容：Paragraph A讲\"Online education is convenient\"=在线教育的好处。",
         "匹配选项：1. The benefits of online education与Paragraph A内容一致。",

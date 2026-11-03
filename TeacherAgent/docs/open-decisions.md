@@ -1,8 +1,8 @@
 # TeacherAgent 待决策清单
 
-版本：v1.1  
+版本：v1.2  
 状态：开放决策池  
-最后更新：2026-08-09
+最后更新：2026-09-22
 适用对象：产品负责人、Codex、Claude Code、项目维护者
 
 ## 1. 用途
@@ -62,6 +62,31 @@
 | D-404 | decided | TeacherAgent 如何写入手机计划？ | 只下发 proposal（建议稿）；手机用户明确采纳后才在单个 Room 事务中创建；proposalId 幂等，崩溃重试不重复创建 | 同上 |
 | D-405 | decided | 是否引入考试体系（ExamTaxonomy）层级模型？ | 是；数据驱动目录 `data/exam-taxonomy/catalog.json`（考试组→学科→模块，stableId/别名/状态/questionScope/来源许可），Registry 加载并与 PACK_MANIFEST 交叉校验；只有叶子 SUBJECT/MODULE 可出题，父级考试组只做聚合与综合复习；同名课程在不同考试组使用不同 stableId；同步协议 subject 增加可选 examTrackId/examSubjectId/examModuleId（旧版兼容）；手机科目按「用户映射表 + 精确别名匹配」解析，未映射保留 unresolved 不猜测 | `docs/exam-taxonomy.md`, `docs/data-model.md`, `docs/decisions/2026-08-07-exam-taxonomy.md` |
 | D-406 | decided | 是否允许 AlertTime Android 调用 LLM 生成学习分析？ | 用户明确授权对“手机端不做 LLM”的窄范围覆盖：Provider 地址/模型/Key 全部由用户在 Android 独立设置中填写，不内置默认；手机在未配对、桌面离线时也可生成并本地保存 profile、planEvaluation 与无答案 assessmentDraft，稍后同步再生成绑定新 snapshotId 的分析。用户填写的学习目的、考试/项目、科目和目标日期进入版本化最小 Prompt；API Key Keystore，失败 deterministic_fallback。学习时长不更新 mastery，draft 不进入 approved/assessment_results/student_knowledge；Teacher 按 untrusted sync-side data 校验后只读展示。云端数据库、账号和后台上传留待后续决策；自动验证已完成，真实 Provider 与实机仍待验收 | `docs/decisions/2026-08-09-alerttime-android-plan-assessment.md`, `docs/project-governance.md`, `docs/prompt-governance.md`, `docs/data-model.md` |
+
+## 4.6 检索链路缺陷与排序（2026-09-11 新增）
+
+背景：工作项 E 的检索质量评测（`experiments/hybrid_retrieval/`）暴露了倒排通道两处缺陷
+与融合层一处排序偏置，详见 `docs/decisions/2026-09-11-hybrid-retrieval-optimization.md`。
+其中"索引与主表脱节"已按 `0018_private_chunks_fts_rebuild.sql` 修复，以下两条改变
+检索返回结果，待拍板。
+
+| ID | 状态 | 决策问题 | 默认建议 | 影响文档 |
+| --- | --- | --- | --- | --- |
+| D-407 | decided | 【已实施 2026-09-11】无空格的自然问句（如"偏振光是什么意思"）应如何在倒排通道召回？现状是整串短语匹配，trigram 下等价于要求文档包含该整串，导致召回为空、混合检索静默退化为纯稠密（实测问句形态 BM25 Hit@3 仅 0.07，裸词形态 0.39） | 已按两步实施：三阶段召回 = OR 分词（原有）→ 剥离问句壳后的整串短语 → 3-gram OR 兜底（上限 32 窗口）。不引入分词依赖，保留"无 C++ 外部依赖"立论。接入 jieba-rs 真正分词留待后续版本。回归测试 `bm25_channel_recalls_question_form_query`、`trigram_fallback_recalls_when_phrase_misses`、`question_shell_stripping_keeps_core_term` | `docs/decisions/2026-09-11-hybrid-retrieval-optimization.md`, 论文 §4.2/§7.8 |
+| D-408 | decided | 【已实施 2026-09-11】RRF 融合在并列分时按 id 字典序排序，`knowledge_node:`/`question:` 恒排在 `private_chunk:` 之前，导致私有文档片段被系统性压低（实测片段金标 MRR 由纯 BM25 的 0.962 降到融合后 0.635，Hit@3 不变） | 已实施：① 去掉 `K+1` 平坦兜底改用标准 RRF（未入榜记 0，双通道命中者自然优先）；② 并列破局改为**按名次奇偶交替**（奇数名次倒排优先、偶数名次稠密优先），以全序排序键实现，保证比较器传递；③ `retrieve_context` 增加每源保底槽位 `PER_SOURCE_FLOOR=2` 抗饿死；④ `eval.rs` 输出补齐 `rrfScore`/`bm25Rank`/`denseRank`。不做通道加权。回归测试 `tied_ranks_alternate_between_sources`、`source_quota_reserves_slots_for_each_source`、`rrf_fusion_matches_hand_computed_scores` | `docs/decisions/2026-09-11-hybrid-retrieval-optimization.md`, 论文 §4.2 |
+
+## 4.7 学情回显与输出侧护栏（2026-09-22 新增）
+
+背景：`experiments/privacy_egress/` 的 D 组用植入私有资料正文的越权指令 + 写死的"已服从"回复
+测出：当学情数据**确实已随授权进入出站 payload** 时，把该数据原样回显给学生的回复
+4/4 全部通过护栏（0 项违规），而 PII 形态与内部组件名两个阳性对照都能被拦。根因是
+`GuardrailInput` 不含授权上下文，护栏在结构上无法判断"这条回复是否回显了学生数据"。
+同轮已修掉一个真实缺陷：扣留私有资料时 `topic`/`notes` 仍带出文档标题（见 §7.1.2）。
+
+| ID | 状态 | 决策问题 | 默认建议 | 影响文档 |
+| --- | --- | --- | --- | --- |
+| D-409 | open | 学情数据回显要不要加一道确定性输出侧关卡？候选做法是把本轮**已授权注入的字符串集合**（画像字段值、私有资料正文）随 `GuardrailInput` 传给护栏，对回复做原文重叠检测 | 暂不加。理由：回复的接收者是数据主体本人，回显自己的画像给学生本人不构成对其泄露；真正的暴露发生在**出站那一跳**，已由默认拒绝覆盖。且对话会落 SQLite 并经局域网同步到手机，所以回显确实会延长数据驻留——但这属于同步侧范围控制，用输出检测堵是错配的工具。若后续支持多学生/共享账号/家长查看，本项应重新评估并改为 decided | `docs/project-governance.md` §7.1.2, `experiments/privacy_egress/README.md` §五, 论文隐私小节 |
+| D-410 | open | 真实模型的指令遵循率是否要测？D 组刻意把回复写死，未测任何模型会不会服从注入 | 若要测，需要用户自行配置 Provider 与 Key、固定 N 次重复、人工判读，且不进无头闸门；论文当前措辞已限定为"系统分层验证"，不含遵循率主张，故可按 deferred 处理 | `experiments/privacy_egress/README.md` §六 |
 
 ## 5. 目录与工程结构
 
